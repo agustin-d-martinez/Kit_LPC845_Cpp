@@ -47,14 +47,14 @@ void SysTick_Handler( void )
 {
 	if (!g_Handler.empty())
 	{
-		for (swhandler* q : g_Handler )
+		for (Callback* q : g_Handler )
 			q->SWhandler();
 	}
 }
 /**
 	\fn uint32_t Inicializar_SysTick( uint32_t ticks )
 	\brief Inicializa el systick en la frecuencia asignada
-	\param  [in] ticks: ticks por segundo
+	\param  [in] freq: ticks por segundo
 	\return mensaje de error
 */
 uint32_t Inicializar_SysTick( uint32_t freq )
@@ -62,7 +62,7 @@ uint32_t Inicializar_SysTick( uint32_t freq )
 	uint32_t ticks = FREQ_PRINCIPAL/freq;
 	g_systick_freq = freq;
 	if (ticks > MAX_TICKS)
-		return 1 ;          	//* Reload value impossible
+		return 1 ;          	//* Reload value imp	ossible
 
 	SysTick->RELOAD = ticks - 1;  //* set reload register
 

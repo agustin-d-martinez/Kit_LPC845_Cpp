@@ -1,0 +1,61 @@
+\hypertarget{_h_c_s_r04_8h}{}\doxysection{E\+:/\+Agustin/\+Escritorio/\+M\+C\+Uexpresso/\+Kit\+L\+P\+C845-\/\+C++/src/\+Drivers/\+Hardware/07-\/hc-\/sr04/\+H\+C\+S\+R04.h File Reference}
+\label{_h_c_s_r04_8h}\index{E:/Agustin/Escritorio/MCUexpresso/KitLPC845-\/C++/src/Drivers/Hardware/07-\/hc-\/sr04/HCSR04.h@{E:/Agustin/Escritorio/MCUexpresso/KitLPC845-\/C++/src/Drivers/Hardware/07-\/hc-\/sr04/HCSR04.h}}
+
+
+Clase del sensor ultrasónico H\+C\+S\+R04.  
+
+
+{\ttfamily \#include $<$Hardware/05-\/\+P\+W\+M/\+Pwm.\+h$>$}\newline
+{\ttfamily \#include $<$Hardware/06-\/\+P\+W\+M\+\_\+\+Reader/\+P\+W\+M\+Reader.\+h$>$}\newline
+{\ttfamily \#include $<$Hardware/07-\/hc-\/sr04/distancia.\+h$>$}\newline
+Include dependency graph for H\+C\+S\+R04.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_h_c___s_r04}{H\+C\+\_\+\+S\+R04}}
+\begin{DoxyCompactList}\small\item\em Clase del objeto \mbox{\hyperlink{class_h_c___s_r04}{H\+C\+\_\+\+S\+R04}} El objeto \mbox{\hyperlink{class_h_c___s_r04}{H\+C\+\_\+\+S\+R04}} Mide distancia mediante el uso de un ultrasónico. Debido a los tiempos muy pequeños de uso, no se recomienda utilizar en grandes cantidades. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_h_c_s_r04_8h_a3085f4877388c18954b353865f58cd56}{P\+E\+R\+I\+O\+DO}}~80
+\item 
+\#define \mbox{\hyperlink{_h_c_s_r04_8h_a7a22f21fd74e935394618272508e0319}{C\+A\+L\+C\+\_\+\+D\+I\+S\+T\+A\+N\+C\+IA}}(a)~( ((a)$\ast$164) / 10000 )
+\item 
+\#define \mbox{\hyperlink{_h_c_s_r04_8h_a24f7f73d11f36cab5d17951df5ed5e83}{D\+I\+S\+T\+A\+N\+C\+I\+A\+\_\+\+M\+AX}}~400
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase del sensor ultrasónico H\+C\+S\+R04. 
+
+\begin{DoxyDate}{Date}
+22 jun. 2022 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Técnico. Martinez Agustin 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_h_c_s_r04_8h_a7a22f21fd74e935394618272508e0319}\label{_h_c_s_r04_8h_a7a22f21fd74e935394618272508e0319}} 
+\index{HCSR04.h@{HCSR04.h}!CALC\_DISTANCIA@{CALC\_DISTANCIA}}
+\index{CALC\_DISTANCIA@{CALC\_DISTANCIA}!HCSR04.h@{HCSR04.h}}
+\doxysubsubsection{\texorpdfstring{CALC\_DISTANCIA}{CALC\_DISTANCIA}}
+{\footnotesize\ttfamily \#define C\+A\+L\+C\+\_\+\+D\+I\+S\+T\+A\+N\+C\+IA(\begin{DoxyParamCaption}\item[{}]{a }\end{DoxyParamCaption})~( ((a)$\ast$164) / 10000 )}
+
+Fórmula de cálculo tiempo-\/$>$distancia \mbox{\Hypertarget{_h_c_s_r04_8h_a24f7f73d11f36cab5d17951df5ed5e83}\label{_h_c_s_r04_8h_a24f7f73d11f36cab5d17951df5ed5e83}} 
+\index{HCSR04.h@{HCSR04.h}!DISTANCIA\_MAX@{DISTANCIA\_MAX}}
+\index{DISTANCIA\_MAX@{DISTANCIA\_MAX}!HCSR04.h@{HCSR04.h}}
+\doxysubsubsection{\texorpdfstring{DISTANCIA\_MAX}{DISTANCIA\_MAX}}
+{\footnotesize\ttfamily \#define D\+I\+S\+T\+A\+N\+C\+I\+A\+\_\+\+M\+AX~400}
+
+Distancia máxima en centimetros \mbox{\Hypertarget{_h_c_s_r04_8h_a3085f4877388c18954b353865f58cd56}\label{_h_c_s_r04_8h_a3085f4877388c18954b353865f58cd56}} 
+\index{HCSR04.h@{HCSR04.h}!PERIODO@{PERIODO}}
+\index{PERIODO@{PERIODO}!HCSR04.h@{HCSR04.h}}
+\doxysubsubsection{\texorpdfstring{PERIODO}{PERIODO}}
+{\footnotesize\ttfamily \#define P\+E\+R\+I\+O\+DO~80}
+
+Perido del P\+WM En milisegundos 

@@ -1,0 +1,127 @@
+\hypertarget{class_pin_interrupt}{}\doxysection{Pin\+Interrupt Class Reference}
+\label{class_pin_interrupt}\index{PinInterrupt@{PinInterrupt}}
+
+
+Inheritance diagram for Pin\+Interrupt\+:
+% FIG 0
+
+
+Collaboration diagram for Pin\+Interrupt\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_pin_interrupt_aaacf12c07d171a1d52c0cf907d6e5d8e}\label{class_pin_interrupt_aaacf12c07d171a1d52c0cf907d6e5d8e}} 
+{\bfseries Pin\+Interrupt} (\mbox{\hyperlink{class_pin_a02483eba92e68e4230f8aa883e0a25fe}{port\+\_\+t}} port, uint8\+\_\+t bit, \mbox{\hyperlink{classgpio_aa105bc05ba99ed1b45a9cd8576d6c0ab}{mode\+\_\+t}} gpio\+\_\+mode, \mbox{\hyperlink{classgpio_a37b1bf950dfcff8f5a81431da1f690fa}{activity\+\_\+t}} activity, uint8\+\_\+t intrp\+\_\+mode)
+\item 
+void \mbox{\hyperlink{class_pin_interrupt_a8eadc7bd9d66ea7c227b264e3fb5f628}{Enable\+Interupt}} (void)
+\begin{DoxyCompactList}\small\item\em Habilito la interrupción. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pin_interrupt_aa8008149bcbe1427dfd8509eac856f01}{Disable\+Interupt}} (void)
+\begin{DoxyCompactList}\small\item\em Deshabilito la interrupción. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pin_interrupt_a596de8ae1a30f50a938a65d34a30615f}{Pin\+Interrupt\+\_\+\+Inicializar}} (void)
+\begin{DoxyCompactList}\small\item\em Inicializo la interrupción por pin. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_pin_interrupt_a908dfa3980a3751886423fc9a9638fa3}{Gpio\+Handler}} (void)=0
+\item 
+virtual \mbox{\hyperlink{class_pin_interrupt_ab4226fb5422b18c81980959fd54e9245}{$\sim$\+Pin\+Interrupt}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const uint8\+\_\+t \mbox{\hyperlink{class_pin_interrupt_ae6dd9d8d0bd09e29a54ab84a55844da2}{m\+\_\+interrupt\+\_\+number}}
+\item 
+const uint8\+\_\+t \mbox{\hyperlink{class_pin_interrupt_a27518a7476362354cf2eb9c75b58c956}{m\+\_\+interrput\+\_\+mode}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static uint8\+\_\+t \mbox{\hyperlink{class_pin_interrupt_a265ac1ca7627acf9bb5d187eb7fadbe1}{m\+\_\+cant}} = 0
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_pin_interrupt_ab4226fb5422b18c81980959fd54e9245}\label{class_pin_interrupt_ab4226fb5422b18c81980959fd54e9245}} 
+\index{PinInterrupt@{PinInterrupt}!````~PinInterrupt@{$\sim$PinInterrupt}}
+\index{````~PinInterrupt@{$\sim$PinInterrupt}!PinInterrupt@{PinInterrupt}}
+\doxysubsubsection{\texorpdfstring{$\sim$PinInterrupt()}{~PinInterrupt()}}
+{\footnotesize\ttfamily Pin\+Interrupt\+::$\sim$\+Pin\+Interrupt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Destructor por defecto 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_pin_interrupt_aa8008149bcbe1427dfd8509eac856f01}\label{class_pin_interrupt_aa8008149bcbe1427dfd8509eac856f01}} 
+\index{PinInterrupt@{PinInterrupt}!DisableInterupt@{DisableInterupt}}
+\index{DisableInterupt@{DisableInterupt}!PinInterrupt@{PinInterrupt}}
+\doxysubsubsection{\texorpdfstring{DisableInterupt()}{DisableInterupt()}}
+{\footnotesize\ttfamily void Pin\+Interrupt\+::\+Disable\+Interupt (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Deshabilito la interrupción. 
+
+Deshabilito la interrupción de la pata específica que estoy utilizando. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pin_interrupt_a8eadc7bd9d66ea7c227b264e3fb5f628}\label{class_pin_interrupt_a8eadc7bd9d66ea7c227b264e3fb5f628}} 
+\index{PinInterrupt@{PinInterrupt}!EnableInterupt@{EnableInterupt}}
+\index{EnableInterupt@{EnableInterupt}!PinInterrupt@{PinInterrupt}}
+\doxysubsubsection{\texorpdfstring{EnableInterupt()}{EnableInterupt()}}
+{\footnotesize\ttfamily void Pin\+Interrupt\+::\+Enable\+Interupt (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Habilito la interrupción. 
+
+Habilito la interrupción de la pata específica que estoy utilizando. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pin_interrupt_a908dfa3980a3751886423fc9a9638fa3}\label{class_pin_interrupt_a908dfa3980a3751886423fc9a9638fa3}} 
+\index{PinInterrupt@{PinInterrupt}!GpioHandler@{GpioHandler}}
+\index{GpioHandler@{GpioHandler}!PinInterrupt@{PinInterrupt}}
+\doxysubsubsection{\texorpdfstring{GpioHandler()}{GpioHandler()}}
+{\footnotesize\ttfamily virtual void Pin\+Interrupt\+::\+Gpio\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Funcion Handler que se ejecuta al realizarse la interrupcion 
+
+Implemented in \mbox{\hyperlink{class_p_w_m___reader_a1fcbe571c418f03cbe72f1ad680940c9}{P\+W\+M\+\_\+\+Reader}}.
+
+\mbox{\Hypertarget{class_pin_interrupt_a596de8ae1a30f50a938a65d34a30615f}\label{class_pin_interrupt_a596de8ae1a30f50a938a65d34a30615f}} 
+\index{PinInterrupt@{PinInterrupt}!PinInterrupt\_Inicializar@{PinInterrupt\_Inicializar}}
+\index{PinInterrupt\_Inicializar@{PinInterrupt\_Inicializar}!PinInterrupt@{PinInterrupt}}
+\doxysubsubsection{\texorpdfstring{PinInterrupt\_Inicializar()}{PinInterrupt\_Inicializar()}}
+{\footnotesize\ttfamily void Pin\+Interrupt\+::\+Pin\+Interrupt\+\_\+\+Inicializar (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Inicializo la interrupción por pin. 
+
+Modifico todos los registros para que la interrupción por pin esté configurada. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_pin_interrupt_a265ac1ca7627acf9bb5d187eb7fadbe1}\label{class_pin_interrupt_a265ac1ca7627acf9bb5d187eb7fadbe1}} 
+\index{PinInterrupt@{PinInterrupt}!m\_cant@{m\_cant}}
+\index{m\_cant@{m\_cant}!PinInterrupt@{PinInterrupt}}
+\doxysubsubsection{\texorpdfstring{m\_cant}{m\_cant}}
+{\footnotesize\ttfamily uint8\+\_\+t Pin\+Interrupt\+::m\+\_\+cant = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+Cantidad de P\+IN I\+N\+T\+E\+R\+R\+U\+PT creados globalmente \mbox{\Hypertarget{class_pin_interrupt_a27518a7476362354cf2eb9c75b58c956}\label{class_pin_interrupt_a27518a7476362354cf2eb9c75b58c956}} 
+\index{PinInterrupt@{PinInterrupt}!m\_interrput\_mode@{m\_interrput\_mode}}
+\index{m\_interrput\_mode@{m\_interrput\_mode}!PinInterrupt@{PinInterrupt}}
+\doxysubsubsection{\texorpdfstring{m\_interrput\_mode}{m\_interrput\_mode}}
+{\footnotesize\ttfamily const uint8\+\_\+t Pin\+Interrupt\+::m\+\_\+interrput\+\_\+mode}
+
+Tipo de interrupción del pin \mbox{\Hypertarget{class_pin_interrupt_ae6dd9d8d0bd09e29a54ab84a55844da2}\label{class_pin_interrupt_ae6dd9d8d0bd09e29a54ab84a55844da2}} 
+\index{PinInterrupt@{PinInterrupt}!m\_interrupt\_number@{m\_interrupt\_number}}
+\index{m\_interrupt\_number@{m\_interrupt\_number}!PinInterrupt@{PinInterrupt}}
+\doxysubsubsection{\texorpdfstring{m\_interrupt\_number}{m\_interrupt\_number}}
+{\footnotesize\ttfamily const uint8\+\_\+t Pin\+Interrupt\+::m\+\_\+interrupt\+\_\+number}
+
+Número de P\+IN I\+N\+T\+E\+R\+R\+U\+PT 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/\+Agustin/\+Escritorio/\+M\+C\+Uexpresso/\+Kit\+L\+P\+C845-\/\+C++/src/\+Drivers/\+Perifericos/03-\/\+Pin\+Interrupt/\mbox{\hyperlink{_pininterrupt_8h}{Pininterrupt.\+h}}\item 
+E\+:/\+Agustin/\+Escritorio/\+M\+C\+Uexpresso/\+Kit\+L\+P\+C845-\/\+C++/src/\+Drivers/\+Perifericos/03-\/\+Pin\+Interrupt/Pininterrupt.\+cpp\end{DoxyCompactItemize}

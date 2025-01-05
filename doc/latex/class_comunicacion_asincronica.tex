@@ -1,0 +1,127 @@
+\hypertarget{class_comunicacion_asincronica}{}\doxysection{Comunicacion\+Asincronica Class Reference}
+\label{class_comunicacion_asincronica}\index{ComunicacionAsincronica@{ComunicacionAsincronica}}
+
+
+Clase del objeto \mbox{\hyperlink{class_comunicacion_asincronica}{Comunicacion\+Asincronica}} Clase abstracta pura para la generación de U\+A\+RT.  
+
+
+
+
+{\ttfamily \#include $<$Comunicacion\+Asincronica.\+h$>$}
+
+
+
+Inheritance diagram for Comunicacion\+Asincronica\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_comunicacion_asincronica_a711e7bb16713a4ebfd7f71044090531a}{Comunicacion\+Asincronica}} ()=default
+\item 
+virtual void \mbox{\hyperlink{class_comunicacion_asincronica_a9d55be4bd6519f1e8b8d6954c75d45e1}{Transmit}} (const char $\ast$msg)=0
+\item 
+virtual void \mbox{\hyperlink{class_comunicacion_asincronica_a506361dd86d7300792b5cded1159506e}{Transmit}} (const void $\ast$msg, uint32\+\_\+t n)=0
+\item 
+virtual void $\ast$ \mbox{\hyperlink{class_comunicacion_asincronica_aea94bf3a2a45c2b8de83b7481a2c896f}{Message}} (void $\ast$msg, uint32\+\_\+t n)=0
+\item 
+virtual void \mbox{\hyperlink{class_comunicacion_asincronica_a03334adab3bab229a1709c721d25cde7}{U\+A\+R\+T\+\_\+\+I\+R\+Q\+Handler}} (void)=0
+\item 
+virtual \mbox{\hyperlink{class_comunicacion_asincronica_a96a3fc01767f456da0b5b177751a02f3}{$\sim$\+Comunicacion\+Asincronica}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_comunicacion_asincronica_a01a00859cfa12a971645325e7cfea6d1}{push\+Rx}} (uint8\+\_\+t dato)=0
+\item 
+virtual uint8\+\_\+t \mbox{\hyperlink{class_comunicacion_asincronica_a91b0600c6c99e3034d06ad2912594bf2}{pop\+Rx}} (uint8\+\_\+t $\ast$dato)=0
+\item 
+virtual void \mbox{\hyperlink{class_comunicacion_asincronica_af981e1ede12e7af2334eb6ae08948fbf}{push\+Tx}} (uint8\+\_\+t dato)=0
+\item 
+virtual uint8\+\_\+t \mbox{\hyperlink{class_comunicacion_asincronica_aef7119239e6601ca6d88d8226ec53f2f}{pop\+Tx}} (uint8\+\_\+t $\ast$dato)=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase del objeto \mbox{\hyperlink{class_comunicacion_asincronica}{Comunicacion\+Asincronica}} Clase abstracta pura para la generación de U\+A\+RT. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_comunicacion_asincronica_a711e7bb16713a4ebfd7f71044090531a}\label{class_comunicacion_asincronica_a711e7bb16713a4ebfd7f71044090531a}} 
+\index{ComunicacionAsincronica@{ComunicacionAsincronica}!ComunicacionAsincronica@{ComunicacionAsincronica}}
+\index{ComunicacionAsincronica@{ComunicacionAsincronica}!ComunicacionAsincronica@{ComunicacionAsincronica}}
+\doxysubsubsection{\texorpdfstring{ComunicacionAsincronica()}{ComunicacionAsincronica()}}
+{\footnotesize\ttfamily Comunicacion\+Asincronica\+::\+Comunicacion\+Asincronica (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Constructor por defecto \mbox{\Hypertarget{class_comunicacion_asincronica_a96a3fc01767f456da0b5b177751a02f3}\label{class_comunicacion_asincronica_a96a3fc01767f456da0b5b177751a02f3}} 
+\index{ComunicacionAsincronica@{ComunicacionAsincronica}!````~ComunicacionAsincronica@{$\sim$ComunicacionAsincronica}}
+\index{````~ComunicacionAsincronica@{$\sim$ComunicacionAsincronica}!ComunicacionAsincronica@{ComunicacionAsincronica}}
+\doxysubsubsection{\texorpdfstring{$\sim$ComunicacionAsincronica()}{~ComunicacionAsincronica()}}
+{\footnotesize\ttfamily virtual Comunicacion\+Asincronica\+::$\sim$\+Comunicacion\+Asincronica (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+Destructor por defecto 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_comunicacion_asincronica_aea94bf3a2a45c2b8de83b7481a2c896f}\label{class_comunicacion_asincronica_aea94bf3a2a45c2b8de83b7481a2c896f}} 
+\index{ComunicacionAsincronica@{ComunicacionAsincronica}!Message@{Message}}
+\index{Message@{Message}!ComunicacionAsincronica@{ComunicacionAsincronica}}
+\doxysubsubsection{\texorpdfstring{Message()}{Message()}}
+{\footnotesize\ttfamily virtual void$\ast$ Comunicacion\+Asincronica\+::\+Message (\begin{DoxyParamCaption}\item[{void $\ast$}]{msg,  }\item[{uint32\+\_\+t}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Funcion de lectura 
+
+Implemented in \mbox{\hyperlink{class_uart_a176f9ee7124f60f16b2c25d01fc5a4b1}{Uart}}, and \mbox{\hyperlink{class_e_s_p8266_a23180eda65a9e0d03adb197ba75b72b7}{E\+S\+P8266}}.
+
+\mbox{\Hypertarget{class_comunicacion_asincronica_a91b0600c6c99e3034d06ad2912594bf2}\label{class_comunicacion_asincronica_a91b0600c6c99e3034d06ad2912594bf2}} 
+\index{ComunicacionAsincronica@{ComunicacionAsincronica}!popRx@{popRx}}
+\index{popRx@{popRx}!ComunicacionAsincronica@{ComunicacionAsincronica}}
+\doxysubsubsection{\texorpdfstring{popRx()}{popRx()}}
+{\footnotesize\ttfamily virtual uint8\+\_\+t Comunicacion\+Asincronica\+::pop\+Rx (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{dato }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+Devuelve recepcion \mbox{\Hypertarget{class_comunicacion_asincronica_aef7119239e6601ca6d88d8226ec53f2f}\label{class_comunicacion_asincronica_aef7119239e6601ca6d88d8226ec53f2f}} 
+\index{ComunicacionAsincronica@{ComunicacionAsincronica}!popTx@{popTx}}
+\index{popTx@{popTx}!ComunicacionAsincronica@{ComunicacionAsincronica}}
+\doxysubsubsection{\texorpdfstring{popTx()}{popTx()}}
+{\footnotesize\ttfamily virtual uint8\+\_\+t Comunicacion\+Asincronica\+::pop\+Tx (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{dato }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+Devuelve transmision \mbox{\Hypertarget{class_comunicacion_asincronica_a01a00859cfa12a971645325e7cfea6d1}\label{class_comunicacion_asincronica_a01a00859cfa12a971645325e7cfea6d1}} 
+\index{ComunicacionAsincronica@{ComunicacionAsincronica}!pushRx@{pushRx}}
+\index{pushRx@{pushRx}!ComunicacionAsincronica@{ComunicacionAsincronica}}
+\doxysubsubsection{\texorpdfstring{pushRx()}{pushRx()}}
+{\footnotesize\ttfamily virtual void Comunicacion\+Asincronica\+::push\+Rx (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{dato }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+Envia recepcion \mbox{\Hypertarget{class_comunicacion_asincronica_af981e1ede12e7af2334eb6ae08948fbf}\label{class_comunicacion_asincronica_af981e1ede12e7af2334eb6ae08948fbf}} 
+\index{ComunicacionAsincronica@{ComunicacionAsincronica}!pushTx@{pushTx}}
+\index{pushTx@{pushTx}!ComunicacionAsincronica@{ComunicacionAsincronica}}
+\doxysubsubsection{\texorpdfstring{pushTx()}{pushTx()}}
+{\footnotesize\ttfamily virtual void Comunicacion\+Asincronica\+::push\+Tx (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{dato }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+Envia transmision \mbox{\Hypertarget{class_comunicacion_asincronica_a9d55be4bd6519f1e8b8d6954c75d45e1}\label{class_comunicacion_asincronica_a9d55be4bd6519f1e8b8d6954c75d45e1}} 
+\index{ComunicacionAsincronica@{ComunicacionAsincronica}!Transmit@{Transmit}}
+\index{Transmit@{Transmit}!ComunicacionAsincronica@{ComunicacionAsincronica}}
+\doxysubsubsection{\texorpdfstring{Transmit()}{Transmit()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual void Comunicacion\+Asincronica\+::\+Transmit (\begin{DoxyParamCaption}\item[{const char $\ast$}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Funcion de transmitir 
+
+Implemented in \mbox{\hyperlink{class_uart_aaada457bc4bee5bc605dd8d9c6589706}{Uart}}, and \mbox{\hyperlink{class_e_s_p8266_a4c62aa1edf1bd6638d181fa62123f852}{E\+S\+P8266}}.
+
+\mbox{\Hypertarget{class_comunicacion_asincronica_a506361dd86d7300792b5cded1159506e}\label{class_comunicacion_asincronica_a506361dd86d7300792b5cded1159506e}} 
+\index{ComunicacionAsincronica@{ComunicacionAsincronica}!Transmit@{Transmit}}
+\index{Transmit@{Transmit}!ComunicacionAsincronica@{ComunicacionAsincronica}}
+\doxysubsubsection{\texorpdfstring{Transmit()}{Transmit()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void Comunicacion\+Asincronica\+::\+Transmit (\begin{DoxyParamCaption}\item[{const void $\ast$}]{msg,  }\item[{uint32\+\_\+t}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Funcion de transmitir 
+
+Implemented in \mbox{\hyperlink{class_uart_ade4a6cd289f94350eb1bf3b29a9e1359}{Uart}}, and \mbox{\hyperlink{class_e_s_p8266_a77592436422707ace296d13fe5c262b9}{E\+S\+P8266}}.
+
+\mbox{\Hypertarget{class_comunicacion_asincronica_a03334adab3bab229a1709c721d25cde7}\label{class_comunicacion_asincronica_a03334adab3bab229a1709c721d25cde7}} 
+\index{ComunicacionAsincronica@{ComunicacionAsincronica}!UART\_IRQHandler@{UART\_IRQHandler}}
+\index{UART\_IRQHandler@{UART\_IRQHandler}!ComunicacionAsincronica@{ComunicacionAsincronica}}
+\doxysubsubsection{\texorpdfstring{UART\_IRQHandler()}{UART\_IRQHandler()}}
+{\footnotesize\ttfamily virtual void Comunicacion\+Asincronica\+::\+U\+A\+R\+T\+\_\+\+I\+R\+Q\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Funcion de interrupcion 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/\+Agustin/\+Escritorio/\+M\+C\+Uexpresso/\+Kit\+L\+P\+C845-\/\+C++/src/\+Drivers/\+Perifericos/13-\/\+U\+A\+R\+T/\mbox{\hyperlink{_comunicacion_asincronica_8h}{Comunicacion\+Asincronica.\+h}}\end{DoxyCompactItemize}

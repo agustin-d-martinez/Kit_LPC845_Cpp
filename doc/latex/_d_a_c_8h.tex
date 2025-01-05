@@ -1,0 +1,53 @@
+\hypertarget{_d_a_c_8h}{}\doxysection{E\+:/\+Agustin/\+Escritorio/\+M\+C\+Uexpresso/\+Kit\+L\+P\+C845-\/\+C++/src/\+Drivers/\+Perifericos/11-\/\+D\+A\+C/\+D\+AC.h File Reference}
+\label{_d_a_c_8h}\index{E:/Agustin/Escritorio/MCUexpresso/KitLPC845-\/C++/src/Drivers/Perifericos/11-\/DAC/DAC.h@{E:/Agustin/Escritorio/MCUexpresso/KitLPC845-\/C++/src/Drivers/Perifericos/11-\/DAC/DAC.h}}
+
+
+Objeto \mbox{\hyperlink{class_d_a_c}{D\+AC}}.  
+
+
+{\ttfamily \#include $<$Perifericos/01-\/\+Pin/\+Pin.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}L\+P\+C845.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tipos.\+h\char`\"{}}\newline
+Include dependency graph for D\+A\+C.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_d_a_c}{D\+AC}}
+\begin{DoxyCompactList}\small\item\em Clase del objeto \mbox{\hyperlink{class_d_a_c}{D\+AC}} F\+U\+N\+C\+I\+O\+N\+A\+M\+I\+E\+N\+TO\+: Realiza una conversion digital-\/$>$analógica en un rango desde 0 hasta max\+\_\+range. El rango real del L\+P\+C845 va de 0 hasta 1023. Se realiza una conversion lineal entre el rango del dispositivo y el utilizado por el usuario. NO U\+S\+AR EL C\+H\+A\+N\+N\+EL 1. El canal existe segun datasheet pero los registros son vagos y poco explicativos. Corresponde al P\+I\+N\+E\+N\+A\+B\+LE. Recomendado utilizar solo el C\+H\+A\+N\+N\+EL 0. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_d_a_c_8h_a63c0ef3037f78e6dd05190afde80f30e}{M\+A\+X\+\_\+\+D\+A\+C\+\_\+\+C\+H\+A\+N\+N\+EL}}~(2)
+\item 
+\#define \mbox{\hyperlink{_d_a_c_8h_ae191bd669b0350508de8f1066229c809}{M\+A\+X\+\_\+\+D\+A\+C\+\_\+\+V\+A\+L\+UE}}~(0x3\+FF)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Objeto \mbox{\hyperlink{class_d_a_c}{D\+AC}}. 
+
+\begin{DoxyDate}{Date}
+12 ene. 2023 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Técnico Martinez Agustin 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_d_a_c_8h_a63c0ef3037f78e6dd05190afde80f30e}\label{_d_a_c_8h_a63c0ef3037f78e6dd05190afde80f30e}} 
+\index{DAC.h@{DAC.h}!MAX\_DAC\_CHANNEL@{MAX\_DAC\_CHANNEL}}
+\index{MAX\_DAC\_CHANNEL@{MAX\_DAC\_CHANNEL}!DAC.h@{DAC.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_DAC\_CHANNEL}{MAX\_DAC\_CHANNEL}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+D\+A\+C\+\_\+\+C\+H\+A\+N\+N\+EL~(2)}
+
+Máximos canales del \mbox{\hyperlink{class_d_a_c}{D\+AC}} \mbox{\Hypertarget{_d_a_c_8h_ae191bd669b0350508de8f1066229c809}\label{_d_a_c_8h_ae191bd669b0350508de8f1066229c809}} 
+\index{DAC.h@{DAC.h}!MAX\_DAC\_VALUE@{MAX\_DAC\_VALUE}}
+\index{MAX\_DAC\_VALUE@{MAX\_DAC\_VALUE}!DAC.h@{DAC.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_DAC\_VALUE}{MAX\_DAC\_VALUE}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+D\+A\+C\+\_\+\+V\+A\+L\+UE~(0x3\+FF)}
+
+Máximo valor del \mbox{\hyperlink{class_d_a_c}{D\+AC}} por defecto 

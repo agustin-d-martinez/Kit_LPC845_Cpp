@@ -1,0 +1,23 @@
+digraph "Pin"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="Pin",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Clase del objeto Pin."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="ADC",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_a_d_c.html",tooltip="Clase del objeto ADC FUNCIONAMIENTO: La clase ADC utiliza el ADCGroup para poder ser manejada de form..."];
+  Node1 -> Node3 [dir="back",color="darkgreen",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="DAC",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_d_a_c.html",tooltip="Clase del objeto DAC FUNCIONAMIENTO: Realiza una conversion digital->analógica en un rango desde 0 ha..."];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="gpio",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgpio.html",tooltip="Clase del objeto gpio."];
+  Node4 -> Node5 [dir="back",color="darkgreen",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Input",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_input.html",tooltip="Clase del objeto Input."];
+  Node4 -> Node6 [dir="back",color="darkgreen",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Output",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_output.html",tooltip="Clase del objeto outputs."];
+  Node4 -> Node7 [dir="back",color="darkgreen",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="PinInterrupt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_pin_interrupt.html",tooltip=" "];
+  Node7 -> Node8 [dir="back",color="darkgreen",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="PWM_Reader",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_p_w_m___reader.html",tooltip="Clase del objeto PWM_Reader."];
+  Node1 -> Node9 [dir="back",color="darkgreen",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="Pwm",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_pwm.html",tooltip="Clase del objeto Pwm."];
+}

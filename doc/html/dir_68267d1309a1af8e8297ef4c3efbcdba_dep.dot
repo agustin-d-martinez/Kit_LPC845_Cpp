@@ -1,0 +1,13 @@
+digraph "E:/Agustin/Escritorio/MCUexpresso/KitLPC845-C++/src" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_68267d1309a1af8e8297ef4c3efbcdba {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_68267d1309a1af8e8297ef4c3efbcdba.html"];
+    dir_68267d1309a1af8e8297ef4c3efbcdba [shape=plaintext label="src"];
+    dir_6b6158ffc10bb67e6b7d62eced5c0155 [shape=box label="Drivers" color="red" fillcolor="white" style="filled" URL="dir_6b6158ffc10bb67e6b7d62eced5c0155.html"];
+    dir_096ebac6517dc1a98fd5318c47a7ccfa [shape=box label="Firmware" color="black" fillcolor="white" style="filled" URL="dir_096ebac6517dc1a98fd5318c47a7ccfa.html"];
+  }
+  dir_6b6158ffc10bb67e6b7d62eced5c0155->dir_096ebac6517dc1a98fd5318c47a7ccfa [headlabel="1", labeldistance=1.5 headhref="dir_000001_000032.html"];
+  dir_096ebac6517dc1a98fd5318c47a7ccfa->dir_6b6158ffc10bb67e6b7d62eced5c0155 [headlabel="1", labeldistance=1.5 headhref="dir_000032_000001.html"];
+}

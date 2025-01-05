@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['get_433',['Get',['../classteclado.html#a724b35fe0961ce7f08547d5685c7652d',1,'teclado::Get()'],['../classdigito.html#a1147bec264cc1a971f6247d96dc7066b',1,'digito::Get()'],['../class_d_a_c.html#a3f9efa0d5af1b6a308027a798be02a57',1,'DAC::Get()'],['../class_a_d_c.html#a37e2709d6d29e21021f2cc219511acf3',1,'ADC::Get()'],['../class_input.html#a06a49730d7c4edcf81380f04b6f950d1',1,'Input::get()']]],
+  ['getdistancia_434',['GetDistancia',['../classdistancia.html#ace8c9d65cfc3ccd732dec4047c6f7c78',1,'distancia::GetDistancia()'],['../class_h_c___s_r04.html#ab6e8079457c420f2d403c0921eea8e50',1,'HC_SR04::GetDistancia()']]],
+  ['gethour_435',['GetHour',['../class_reloj.html#a2963cb1ffc94ac525fb9ed928791565d',1,'Reloj']]],
+  ['getip_436',['GetIP',['../class_e_s_p8266.html#ac46d27d41a91b6e69a50135ff8775e42',1,'ESP8266']]],
+  ['getmaxrange_437',['GetMaxRange',['../class_d_a_c.html#a4d2ecd1ae0ae5866257018072d923ac3',1,'DAC']]],
+  ['getmin_438',['GetMin',['../class_reloj.html#a777744f4eb01420c11661b7f0d7889ca',1,'Reloj']]],
+  ['getmrstandby_439',['GetmrStandBy',['../class_timer.html#a3446cbde556eec707810feeb61575571',1,'Timer']]],
+  ['getpin_440',['GetPin',['../classgpio.html#ab3f6b81018ece79342e66612474679d4',1,'gpio::GetPin()'],['../class_in_out.html#a6a610b9ee8c4c095e783f3a3a25d1613',1,'InOut::GetPin()']]],
+  ['getpulseon_441',['GetPulseOn',['../class_p_w_m___reader.html#a803bd89a671639c9cd4885861e5311fc',1,'PWM_Reader']]],
+  ['getseg_442',['GetSeg',['../class_reloj.html#a04d950713551b9cd294392430a545022',1,'Reloj']]],
+  ['getstate_443',['GetState',['../class_i2_c.html#ab4d30ac9140fb1959ba849f437b6eacc',1,'I2C']]],
+  ['getstatus_444',['GetStatus',['../class_e_s_p8266.html#a2aad6c0565b8624a0d7ec18e865cf1c7',1,'ESP8266']]],
+  ['gettimer_445',['GetTimer',['../class_timer.html#a02d39c7351bc4960e1538c1610746c7b',1,'Timer']]],
+  ['gettmrevent_446',['GetTmrEvent',['../class_timer.html#ad4586720d311f0c66b400c2a40bab248',1,'Timer']]],
+  ['gettmrrun_447',['GetTmrRun',['../class_timer.html#a64b2ce2e82d2595ce35556cfccf478b5',1,'Timer']]],
+  ['getvalue_448',['GetValue',['../class_a_d_c___group.html#a2cd81e05842681e03f5d45e9d5ca5724',1,'ADC_Group']]],
+  ['girar_449',['Girar',['../class_l298_n.html#abf6f56bf7cbdf90808b485602340107d',1,'L298N::Girar()'],['../class_puente___h.html#ab1368aabff7b8756e7538dc96e0fa72a',1,'Puente_H::Girar()']]],
+  ['girarder_450',['GirarDer',['../class_l298_n.html#a88c211605d7606fe91768f729eedd556',1,'L298N::GirarDer()'],['../class_puente___h.html#a9e5e72418427f0c212623ee0cd2eeed8',1,'Puente_H::GirarDer()']]],
+  ['girarizq_451',['GirarIzq',['../class_l298_n.html#ad65f236f7c0315d1759fb2ac51215662',1,'L298N::GirarIzq()'],['../class_puente___h.html#a83036fbcc553763f5b1fa8953345518e',1,'Puente_H::GirarIzq()']]],
+  ['gpio_452',['gpio',['../classgpio.html#a91d8a585757112ada21e8c8b7570171a',1,'gpio']]],
+  ['gpiohandler_453',['GpioHandler',['../class_p_w_m___reader.html#a1fcbe571c418f03cbe72f1ad680940c9',1,'PWM_Reader::GpioHandler()'],['../class_pin_interrupt.html#a908dfa3980a3751886423fc9a9638fa3',1,'PinInterrupt::GpioHandler()']]],
+  ['gruposdedigitos_454',['gruposdedigitos',['../structgruposdedigitos.html#a1f30a2791bf70ca4b8043e97dbb4253f',1,'gruposdedigitos']]]
+];

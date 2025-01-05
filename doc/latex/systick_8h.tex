@@ -1,0 +1,57 @@
+\hypertarget{systick_8h}{}\doxysection{E\+:/\+Agustin/\+Escritorio/\+M\+C\+Uexpresso/\+Kit\+L\+P\+C845-\/\+C++/src/\+Firmware/systick.h File Reference}
+\label{systick_8h}\index{E:/Agustin/Escritorio/MCUexpresso/KitLPC845-\/C++/src/Firmware/systick.h@{E:/Agustin/Escritorio/MCUexpresso/KitLPC845-\/C++/src/Firmware/systick.h}}
+
+
+Firmware del systick.  
+
+
+{\ttfamily \#include $<$L\+P\+C845.\+h$>$}\newline
+{\ttfamily \#include $<$Perifericos/06-\/\+Callback/\+Callback.\+h$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+Include dependency graph for systick.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{systick_8h_a358827c0df41d4e5a22f7a44ffbb1f67}{Inicializar\+\_\+\+Sys\+Tick}} (uint32\+\_\+t freq)
+\begin{DoxyCompactList}\small\item\em Inicializa el systick en la frecuencia asignada. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{systick_8h_a32d8060eb5229ac54910ad385ec849fa}\label{systick_8h_a32d8060eb5229ac54910ad385ec849fa}} 
+uint32\+\_\+t {\bfseries g\+\_\+systick\+\_\+freq}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Firmware del systick. 
+
+\begin{DoxyDate}{Date}
+20 abr. 2022 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Marcelo 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{systick_8h_a358827c0df41d4e5a22f7a44ffbb1f67}\label{systick_8h_a358827c0df41d4e5a22f7a44ffbb1f67}} 
+\index{systick.h@{systick.h}!Inicializar\_SysTick@{Inicializar\_SysTick}}
+\index{Inicializar\_SysTick@{Inicializar\_SysTick}!systick.h@{systick.h}}
+\doxysubsubsection{\texorpdfstring{Inicializar\_SysTick()}{Inicializar\_SysTick()}}
+{\footnotesize\ttfamily uint32\+\_\+t Inicializar\+\_\+\+Sys\+Tick (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{freq }\end{DoxyParamCaption})}
+
+
+
+Inicializa el systick en la frecuencia asignada. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ticks} & ticks por segundo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mensaje de error 
+\end{DoxyReturn}

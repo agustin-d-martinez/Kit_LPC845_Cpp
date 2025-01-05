@@ -1,0 +1,102 @@
+\hypertarget{_l_c_d_8h}{}\doxysection{E\+:/\+Agustin/\+Escritorio/\+M\+C\+Uexpresso/\+Kit\+L\+P\+C845-\/\+C++/src/\+Drivers/\+Hardware/02-\/\+Displays/\+L\+C\+D/\+L\+CD.h File Reference}
+\label{_l_c_d_8h}\index{E:/Agustin/Escritorio/MCUexpresso/KitLPC845-\/C++/src/Drivers/Hardware/02-\/Displays/LCD/LCD.h@{E:/Agustin/Escritorio/MCUexpresso/KitLPC845-\/C++/src/Drivers/Hardware/02-\/Displays/LCD/LCD.h}}
+
+
+Clase para un \mbox{\hyperlink{class_l_c_d}{L\+CD}} con comunicación de 4 patas, solo escritura.  
+
+
+{\ttfamily \#include $<$Hardware/02-\/\+Displays/\+Display.\+h$>$}\newline
+{\ttfamily \#include $<$Perifericos/02-\/\+Gpio/gpio.\+h$>$}\newline
+{\ttfamily \#include $<$Perifericos/06-\/\+Callback/\+Callback.\+h$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+Include dependency graph for L\+C\+D.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_l_c_d}{L\+CD}}
+\begin{DoxyCompactList}\small\item\em Clase del objeto lcd El objeto lcd permite el manejo de displays digitales mediante comunicación de 4 bits. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_l_c_d_8h_a221b02b65527a670a158a9b1387e877c}{C\+L\+E\+A\+R\+\_\+\+D\+I\+S\+P\+L\+AY}}~0b00000001
+\item 
+\#define \mbox{\hyperlink{_l_c_d_8h_a132a90af728916a595bcf5a52cfac21c}{R\+E\+T\+U\+R\+N\+\_\+\+H\+O\+ME}}~0b00000010
+\item 
+\#define \mbox{\hyperlink{_l_c_d_8h_aa609aa58e71261c40627750bbaa1ca1c}{E\+N\+T\+R\+Y\+\_\+\+M\+O\+D\+E\+\_\+\+S\+ET}}~0b00000100	/$\ast$$\ast$ 1	I/D S$\ast$/
+\item 
+\#define \mbox{\hyperlink{_l_c_d_8h_a74c80ace5656e5bdca4af4c7233921f5}{D\+I\+S\+P\+L\+A\+Y\+\_\+\+C\+O\+N\+T\+R\+OL}}~0b00001000	/$\ast$$\ast$ 1	D 	C 	B$\ast$/
+\item 
+\#define \mbox{\hyperlink{_l_c_d_8h_aee44c28b3237b814efa557a2429023b8}{C\+U\+R\+S\+O\+R\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+S\+H\+I\+FT}}~0b00010000	/$\ast$$\ast$ 1	S/C R/L -\/ 	-\/$\ast$/
+\item 
+\#define \mbox{\hyperlink{_l_c_d_8h_a59f35c48e6411073b387a95fa81df8be}{F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+S\+ET}}~0b00100000	/$\ast$$\ast$ 1	DL 	N 	F 	-\/ 	-\/$\ast$/
+\item 
+\#define \mbox{\hyperlink{_l_c_d_8h_ad0a3aded4141050ead112e000f32d604}{S\+E\+T\+\_\+\+C\+G\+R\+AM}}~0b01000000	/$\ast$$\ast$ 1	A\+CG A\+CG A\+CG A\+CG A\+CG A\+CG$\ast$/
+\item 
+\#define \mbox{\hyperlink{_l_c_d_8h_af4ff91b63c9e285a685f9beb393ee426}{S\+E\+T\+\_\+\+D\+D\+R\+AM}}~0b10000000	/$\ast$$\ast$ 1	A\+DD	A\+DD	A\+DD	A\+DD	A\+DD	A\+DD	A\+DD$\ast$/
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase para un \mbox{\hyperlink{class_l_c_d}{L\+CD}} con comunicación de 4 patas, solo escritura. 
+
+\begin{DoxyDate}{Date}
+22 jun. 2022 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Técnico. Martinez Agustin 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_l_c_d_8h_a221b02b65527a670a158a9b1387e877c}\label{_l_c_d_8h_a221b02b65527a670a158a9b1387e877c}} 
+\index{LCD.h@{LCD.h}!CLEAR\_DISPLAY@{CLEAR\_DISPLAY}}
+\index{CLEAR\_DISPLAY@{CLEAR\_DISPLAY}!LCD.h@{LCD.h}}
+\doxysubsubsection{\texorpdfstring{CLEAR\_DISPLAY}{CLEAR\_DISPLAY}}
+{\footnotesize\ttfamily \#define C\+L\+E\+A\+R\+\_\+\+D\+I\+S\+P\+L\+AY~0b00000001}
+
+Instruccion de limpieza del display \mbox{\Hypertarget{_l_c_d_8h_aee44c28b3237b814efa557a2429023b8}\label{_l_c_d_8h_aee44c28b3237b814efa557a2429023b8}} 
+\index{LCD.h@{LCD.h}!CURSOR\_DISPLAY\_SHIFT@{CURSOR\_DISPLAY\_SHIFT}}
+\index{CURSOR\_DISPLAY\_SHIFT@{CURSOR\_DISPLAY\_SHIFT}!LCD.h@{LCD.h}}
+\doxysubsubsection{\texorpdfstring{CURSOR\_DISPLAY\_SHIFT}{CURSOR\_DISPLAY\_SHIFT}}
+{\footnotesize\ttfamily \#define C\+U\+R\+S\+O\+R\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+S\+H\+I\+FT~0b00010000	/$\ast$$\ast$ 1	S/C R/L -\/ 	-\/$\ast$/}
+
+Instruccion de cursor del display \mbox{\Hypertarget{_l_c_d_8h_a74c80ace5656e5bdca4af4c7233921f5}\label{_l_c_d_8h_a74c80ace5656e5bdca4af4c7233921f5}} 
+\index{LCD.h@{LCD.h}!DISPLAY\_CONTROL@{DISPLAY\_CONTROL}}
+\index{DISPLAY\_CONTROL@{DISPLAY\_CONTROL}!LCD.h@{LCD.h}}
+\doxysubsubsection{\texorpdfstring{DISPLAY\_CONTROL}{DISPLAY\_CONTROL}}
+{\footnotesize\ttfamily \#define D\+I\+S\+P\+L\+A\+Y\+\_\+\+C\+O\+N\+T\+R\+OL~0b00001000	/$\ast$$\ast$ 1	D 	C 	B$\ast$/}
+
+Instruccion de control del display \mbox{\Hypertarget{_l_c_d_8h_aa609aa58e71261c40627750bbaa1ca1c}\label{_l_c_d_8h_aa609aa58e71261c40627750bbaa1ca1c}} 
+\index{LCD.h@{LCD.h}!ENTRY\_MODE\_SET@{ENTRY\_MODE\_SET}}
+\index{ENTRY\_MODE\_SET@{ENTRY\_MODE\_SET}!LCD.h@{LCD.h}}
+\doxysubsubsection{\texorpdfstring{ENTRY\_MODE\_SET}{ENTRY\_MODE\_SET}}
+{\footnotesize\ttfamily \#define E\+N\+T\+R\+Y\+\_\+\+M\+O\+D\+E\+\_\+\+S\+ET~0b00000100	/$\ast$$\ast$ 1	I/D S$\ast$/}
+
+Instruccion de entrada de escritura del display \mbox{\Hypertarget{_l_c_d_8h_a59f35c48e6411073b387a95fa81df8be}\label{_l_c_d_8h_a59f35c48e6411073b387a95fa81df8be}} 
+\index{LCD.h@{LCD.h}!FUNCTION\_SET@{FUNCTION\_SET}}
+\index{FUNCTION\_SET@{FUNCTION\_SET}!LCD.h@{LCD.h}}
+\doxysubsubsection{\texorpdfstring{FUNCTION\_SET}{FUNCTION\_SET}}
+{\footnotesize\ttfamily \#define F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+S\+ET~0b00100000	/$\ast$$\ast$ 1	DL 	N 	F 	-\/ 	-\/$\ast$/}
+
+Instruccion de modo de funcionamiento del display \mbox{\Hypertarget{_l_c_d_8h_a132a90af728916a595bcf5a52cfac21c}\label{_l_c_d_8h_a132a90af728916a595bcf5a52cfac21c}} 
+\index{LCD.h@{LCD.h}!RETURN\_HOME@{RETURN\_HOME}}
+\index{RETURN\_HOME@{RETURN\_HOME}!LCD.h@{LCD.h}}
+\doxysubsubsection{\texorpdfstring{RETURN\_HOME}{RETURN\_HOME}}
+{\footnotesize\ttfamily \#define R\+E\+T\+U\+R\+N\+\_\+\+H\+O\+ME~0b00000010}
+
+Instruccion de regreso a posición 0 del display \mbox{\Hypertarget{_l_c_d_8h_ad0a3aded4141050ead112e000f32d604}\label{_l_c_d_8h_ad0a3aded4141050ead112e000f32d604}} 
+\index{LCD.h@{LCD.h}!SET\_CGRAM@{SET\_CGRAM}}
+\index{SET\_CGRAM@{SET\_CGRAM}!LCD.h@{LCD.h}}
+\doxysubsubsection{\texorpdfstring{SET\_CGRAM}{SET\_CGRAM}}
+{\footnotesize\ttfamily \#define S\+E\+T\+\_\+\+C\+G\+R\+AM~0b01000000	/$\ast$$\ast$ 1	A\+CG A\+CG A\+CG A\+CG A\+CG A\+CG$\ast$/}
+
+Instruccion de seteo de C\+G\+R\+AM del display \mbox{\Hypertarget{_l_c_d_8h_af4ff91b63c9e285a685f9beb393ee426}\label{_l_c_d_8h_af4ff91b63c9e285a685f9beb393ee426}} 
+\index{LCD.h@{LCD.h}!SET\_DDRAM@{SET\_DDRAM}}
+\index{SET\_DDRAM@{SET\_DDRAM}!LCD.h@{LCD.h}}
+\doxysubsubsection{\texorpdfstring{SET\_DDRAM}{SET\_DDRAM}}
+{\footnotesize\ttfamily \#define S\+E\+T\+\_\+\+D\+D\+R\+AM~0b10000000	/$\ast$$\ast$ 1	A\+DD	A\+DD	A\+DD	A\+DD	A\+DD	A\+DD	A\+DD$\ast$/}
+
+Instruccion de seteo de D\+D\+R\+AM del display 

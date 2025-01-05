@@ -1,0 +1,11 @@
+digraph "E:/Agustin/Escritorio/MCUexpresso/KitLPC845-C++/src/Drivers/Perifericos/14-ComSincronica/I2C" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_b15447bd7b17ec01771ea1f1ab974290 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="14-ComSincronica" fontname="Helvetica", fontsize="10", URL="dir_b15447bd7b17ec01771ea1f1ab974290.html"]
+  dir_4dea6ca1620db6ca65c036992cb487ae [shape=box, label="I2C", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_4dea6ca1620db6ca65c036992cb487ae.html"];
+  }
+  dir_76f9198a53cecf908dbffee67f946b13 [shape=box label="01-Pin" URL="dir_76f9198a53cecf908dbffee67f946b13.html"];
+  dir_4dea6ca1620db6ca65c036992cb487ae->dir_76f9198a53cecf908dbffee67f946b13 [headlabel="1", labeldistance=1.5 headhref="dir_000031_000017.html"];
+}

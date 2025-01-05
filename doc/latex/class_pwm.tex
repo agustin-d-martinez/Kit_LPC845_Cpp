@@ -1,0 +1,251 @@
+\hypertarget{class_pwm}{}\doxysection{Pwm Class Reference}
+\label{class_pwm}\index{Pwm@{Pwm}}
+
+
+Clase del objeto \mbox{\hyperlink{class_pwm}{Pwm}}.  
+
+
+
+
+{\ttfamily \#include $<$Pwm.\+h$>$}
+
+
+
+Inheritance diagram for Pwm\+:
+% FIG 0
+
+
+Collaboration diagram for Pwm\+:
+% FIG 1
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_pwm_a47d392440dacce1b8d73b8e49b60a63d}{pwm\+\_\+time\+\_\+unit\+\_\+t}} \{ {\bfseries S\+EG} = 0, 
+{\bfseries M\+I\+L\+I\+\_\+\+S\+EG}, 
+{\bfseries M\+I\+C\+R\+O\+\_\+\+S\+EG}
+ \}
+\item 
+enum \mbox{\hyperlink{class_pwm_a9413c20bb8b91b1cf39ddba8f44ac696}{pwm\+\_\+channel\+\_\+t}} \{ \newline
+{\bfseries C\+H\+A\+N\+N\+E\+L\+\_\+1} = 1, 
+{\bfseries C\+H\+A\+N\+N\+E\+L\+\_\+2}, 
+{\bfseries C\+H\+A\+N\+N\+E\+L\+\_\+3}, 
+{\bfseries C\+H\+A\+N\+N\+E\+L\+\_\+4}, 
+\newline
+{\bfseries C\+H\+A\+N\+N\+E\+L\+\_\+5}, 
+{\bfseries C\+H\+A\+N\+N\+E\+L\+\_\+6}
+ \}
+\item 
+enum \mbox{\hyperlink{class_pwm_a51055b0cae38b0fa09b2af23f8655ac7}{activity\+\_\+t}} \{ {\bfseries low}, 
+{\bfseries high}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pwm_a391b782477825d3629ef4379377869f3}{Pwm}} (\mbox{\hyperlink{class_pin_a02483eba92e68e4230f8aa883e0a25fe}{port\+\_\+t}} puerto, uint8\+\_\+t bit, uint8\+\_\+t actividad, \mbox{\hyperlink{class_pwm_a9413c20bb8b91b1cf39ddba8f44ac696}{pwm\+\_\+channel\+\_\+t}} number)
+\begin{DoxyCompactList}\small\item\em Constructor de clase \mbox{\hyperlink{class_pwm}{Pwm}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pwm_a609ff577697b9d85f8a20bb3a9e43275}{Inicializar}} (uint32\+\_\+t ton, uint32\+\_\+t toff, \mbox{\hyperlink{class_pwm_a47d392440dacce1b8d73b8e49b60a63d}{pwm\+\_\+time\+\_\+unit\+\_\+t}} t=M\+I\+C\+R\+O\+\_\+\+S\+EG)
+\begin{DoxyCompactList}\small\item\em Inicializo el P\+WM. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pwm_a3095508c1aaf8575bb56f5a0eea52412}{Set\+Ton}} (uint32\+\_\+t time, \mbox{\hyperlink{class_pwm_a47d392440dacce1b8d73b8e49b60a63d}{pwm\+\_\+time\+\_\+unit\+\_\+t}} t=M\+I\+C\+R\+O\+\_\+\+S\+EG)
+\begin{DoxyCompactList}\small\item\em Seteo el tiempo de encendido del P\+WM. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pwm_a403945d1bdd663b44ce6a4c58831c389}{Set\+Period}} (uint32\+\_\+t time, \mbox{\hyperlink{class_pwm_a47d392440dacce1b8d73b8e49b60a63d}{pwm\+\_\+time\+\_\+unit\+\_\+t}} t=M\+I\+C\+R\+O\+\_\+\+S\+EG)
+\begin{DoxyCompactList}\small\item\em Seteo el periodo del P\+WM. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pwm_a81464c17f277cf76fab08c1bcbee5537}{On}} ()
+\begin{DoxyCompactList}\small\item\em Enciende el P\+WM. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pwm_a674a3fa0da3f3a72475456da43ea6d06}{Off}} ()
+\begin{DoxyCompactList}\small\item\em Apaga el P\+WM. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_pwm_ac97d5b9a021ea218147206706e368a22}{$\sim$\+Pwm}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const uint8\+\_\+t \mbox{\hyperlink{class_pwm_a61d91e9d2c3902c4a6ca0c8dfc4bccc4}{m\+\_\+activity}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_pwm_a648d25e3579c9ceb012cb2f064c09c8f}{m\+\_\+ton}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_pwm_a1359220ae2526e29f0db12ba4ab048ff}{m\+\_\+toff}}
+\item 
+const uint8\+\_\+t \mbox{\hyperlink{class_pwm_a2c1735805b181d79c99eb815e7332a26}{m\+\_\+pwm\+\_\+channel}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Clase del objeto \mbox{\hyperlink{class_pwm}{Pwm}}. 
+
+F\+U\+N\+C\+I\+O\+N\+A\+M\+I\+E\+N\+TO\+: Genera un P\+WM realizando un Match entre distintos eventos y señales del S\+C\+Timer. Por cómo está configurado, todos los objetos P\+WM tendrán el mismo periodo. Esto se debe a que todos funcionan con el Evento 0 que los resetea. Debido a esto, solo se puede tener hasta 6 P\+WM al mismo tiempo y todos tendrán el mismo P\+E\+R\+I\+O\+DO. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_pwm_a51055b0cae38b0fa09b2af23f8655ac7}\label{class_pwm_a51055b0cae38b0fa09b2af23f8655ac7}} 
+\index{Pwm@{Pwm}!activity\_t@{activity\_t}}
+\index{activity\_t@{activity\_t}!Pwm@{Pwm}}
+\doxysubsubsection{\texorpdfstring{activity\_t}{activity\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_pwm_a51055b0cae38b0fa09b2af23f8655ac7}{Pwm\+::activity\+\_\+t}}}
+
+Enum de activo alto/bajo \mbox{\Hypertarget{class_pwm_a9413c20bb8b91b1cf39ddba8f44ac696}\label{class_pwm_a9413c20bb8b91b1cf39ddba8f44ac696}} 
+\index{Pwm@{Pwm}!pwm\_channel\_t@{pwm\_channel\_t}}
+\index{pwm\_channel\_t@{pwm\_channel\_t}!Pwm@{Pwm}}
+\doxysubsubsection{\texorpdfstring{pwm\_channel\_t}{pwm\_channel\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_pwm_a9413c20bb8b91b1cf39ddba8f44ac696}{Pwm\+::pwm\+\_\+channel\+\_\+t}}}
+
+Canales del P\+WM \mbox{\Hypertarget{class_pwm_a47d392440dacce1b8d73b8e49b60a63d}\label{class_pwm_a47d392440dacce1b8d73b8e49b60a63d}} 
+\index{Pwm@{Pwm}!pwm\_time\_unit\_t@{pwm\_time\_unit\_t}}
+\index{pwm\_time\_unit\_t@{pwm\_time\_unit\_t}!Pwm@{Pwm}}
+\doxysubsubsection{\texorpdfstring{pwm\_time\_unit\_t}{pwm\_time\_unit\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_pwm_a47d392440dacce1b8d73b8e49b60a63d}{Pwm\+::pwm\+\_\+time\+\_\+unit\+\_\+t}}}
+
+Unidad de tiempo del P\+WM 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_pwm_a391b782477825d3629ef4379377869f3}\label{class_pwm_a391b782477825d3629ef4379377869f3}} 
+\index{Pwm@{Pwm}!Pwm@{Pwm}}
+\index{Pwm@{Pwm}!Pwm@{Pwm}}
+\doxysubsubsection{\texorpdfstring{Pwm()}{Pwm()}}
+{\footnotesize\ttfamily Pwm\+::\+Pwm (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pin_a02483eba92e68e4230f8aa883e0a25fe}{port\+\_\+t}}}]{puerto,  }\item[{uint8\+\_\+t}]{bit,  }\item[{uint8\+\_\+t}]{actividad,  }\item[{\mbox{\hyperlink{class_pwm_a9413c20bb8b91b1cf39ddba8f44ac696}{pwm\+\_\+channel\+\_\+t}}}]{number }\end{DoxyParamCaption})}
+
+
+
+Constructor de clase \mbox{\hyperlink{class_pwm}{Pwm}}. 
+
+Crea un \mbox{\hyperlink{class_pwm}{Pwm}} con los parámetros correspondientes 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em puerto} & Puerto del P\+WM. \\
+\hline
+\mbox{\texttt{ in}}  & {\em bit} & Bit del P\+WM. \\
+\hline
+\mbox{\texttt{ in}}  & {\em actividad} & Activo alto/bajo. \\
+\hline
+\mbox{\texttt{ in}}  & {\em number} & Canal del \mbox{\hyperlink{class_s_ctimer}{S\+Ctimer}} a utilizar. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_pwm_ac97d5b9a021ea218147206706e368a22}\label{class_pwm_ac97d5b9a021ea218147206706e368a22}} 
+\index{Pwm@{Pwm}!````~Pwm@{$\sim$Pwm}}
+\index{````~Pwm@{$\sim$Pwm}!Pwm@{Pwm}}
+\doxysubsubsection{\texorpdfstring{$\sim$Pwm()}{~Pwm()}}
+{\footnotesize\ttfamily Pwm\+::$\sim$\+Pwm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Destructor por defecto 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_pwm_a609ff577697b9d85f8a20bb3a9e43275}\label{class_pwm_a609ff577697b9d85f8a20bb3a9e43275}} 
+\index{Pwm@{Pwm}!Inicializar@{Inicializar}}
+\index{Inicializar@{Inicializar}!Pwm@{Pwm}}
+\doxysubsubsection{\texorpdfstring{Inicializar()}{Inicializar()}}
+{\footnotesize\ttfamily void Pwm\+::\+Inicializar (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ton,  }\item[{uint32\+\_\+t}]{toff,  }\item[{\mbox{\hyperlink{class_pwm_a47d392440dacce1b8d73b8e49b60a63d}{pwm\+\_\+time\+\_\+unit\+\_\+t}}}]{t = {\ttfamily MICRO\+\_\+SEG} }\end{DoxyParamCaption})}
+
+
+
+Inicializo el P\+WM. 
+
+Utilizando los regristros configuro todo para la utilizacion del P\+WM. 
+\begin{DoxyParams}{Parameters}
+{\em ton} & Tiempo de encendido. \\
+\hline
+{\em toff} & Tiempo de apagado (no es el periodo. El periodo es la suma de ambos). \\
+\hline
+{\em t} & Unidad de medida de los tiempos de encendido y apagado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pwm_a674a3fa0da3f3a72475456da43ea6d06}\label{class_pwm_a674a3fa0da3f3a72475456da43ea6d06}} 
+\index{Pwm@{Pwm}!Off@{Off}}
+\index{Off@{Off}!Pwm@{Pwm}}
+\doxysubsubsection{\texorpdfstring{Off()}{Off()}}
+{\footnotesize\ttfamily void Pwm\+::\+Off (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Apaga el P\+WM. 
+
+Utiliza los registros con Stop\+Timer para deshabilitar la salida. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pwm_a81464c17f277cf76fab08c1bcbee5537}\label{class_pwm_a81464c17f277cf76fab08c1bcbee5537}} 
+\index{Pwm@{Pwm}!On@{On}}
+\index{On@{On}!Pwm@{Pwm}}
+\doxysubsubsection{\texorpdfstring{On()}{On()}}
+{\footnotesize\ttfamily void Pwm\+::\+On (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Enciende el P\+WM. 
+
+Utiliza los registros con Star\+Timer para habilitar la salida. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pwm_a403945d1bdd663b44ce6a4c58831c389}\label{class_pwm_a403945d1bdd663b44ce6a4c58831c389}} 
+\index{Pwm@{Pwm}!SetPeriod@{SetPeriod}}
+\index{SetPeriod@{SetPeriod}!Pwm@{Pwm}}
+\doxysubsubsection{\texorpdfstring{SetPeriod()}{SetPeriod()}}
+{\footnotesize\ttfamily void Pwm\+::\+Set\+Period (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{time,  }\item[{\mbox{\hyperlink{class_pwm_a47d392440dacce1b8d73b8e49b60a63d}{pwm\+\_\+time\+\_\+unit\+\_\+t}}}]{t = {\ttfamily MICRO\+\_\+SEG} }\end{DoxyParamCaption})}
+
+
+
+Seteo el periodo del P\+WM. 
+
+Utilizando los regristros con Set\+Time creo el tiempo de apagado de mi P\+WM. 
+\begin{DoxyParams}{Parameters}
+{\em time} & Tiempo del periodo. \\
+\hline
+{\em t} & Unidad de medida del tiempo de periodo. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pwm_a3095508c1aaf8575bb56f5a0eea52412}\label{class_pwm_a3095508c1aaf8575bb56f5a0eea52412}} 
+\index{Pwm@{Pwm}!SetTon@{SetTon}}
+\index{SetTon@{SetTon}!Pwm@{Pwm}}
+\doxysubsubsection{\texorpdfstring{SetTon()}{SetTon()}}
+{\footnotesize\ttfamily void Pwm\+::\+Set\+Ton (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{time,  }\item[{\mbox{\hyperlink{class_pwm_a47d392440dacce1b8d73b8e49b60a63d}{pwm\+\_\+time\+\_\+unit\+\_\+t}}}]{t = {\ttfamily MICRO\+\_\+SEG} }\end{DoxyParamCaption})}
+
+
+
+Seteo el tiempo de encendido del P\+WM. 
+
+Utilizando los regristros con Set\+Time creo el tiempo de encendido de mi P\+WM. 
+\begin{DoxyParams}{Parameters}
+{\em time} & Tiempo de encendido. \\
+\hline
+{\em t} & Unidad de medida del tiempo de encendido. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_pwm_a61d91e9d2c3902c4a6ca0c8dfc4bccc4}\label{class_pwm_a61d91e9d2c3902c4a6ca0c8dfc4bccc4}} 
+\index{Pwm@{Pwm}!m\_activity@{m\_activity}}
+\index{m\_activity@{m\_activity}!Pwm@{Pwm}}
+\doxysubsubsection{\texorpdfstring{m\_activity}{m\_activity}}
+{\footnotesize\ttfamily const uint8\+\_\+t Pwm\+::m\+\_\+activity\hspace{0.3cm}{\ttfamily [protected]}}
+
+Activo alto/bajo del P\+WM \mbox{\Hypertarget{class_pwm_a2c1735805b181d79c99eb815e7332a26}\label{class_pwm_a2c1735805b181d79c99eb815e7332a26}} 
+\index{Pwm@{Pwm}!m\_pwm\_channel@{m\_pwm\_channel}}
+\index{m\_pwm\_channel@{m\_pwm\_channel}!Pwm@{Pwm}}
+\doxysubsubsection{\texorpdfstring{m\_pwm\_channel}{m\_pwm\_channel}}
+{\footnotesize\ttfamily const uint8\+\_\+t Pwm\+::m\+\_\+pwm\+\_\+channel\hspace{0.3cm}{\ttfamily [protected]}}
+
+Canal del objeto P\+WM \mbox{\Hypertarget{class_pwm_a1359220ae2526e29f0db12ba4ab048ff}\label{class_pwm_a1359220ae2526e29f0db12ba4ab048ff}} 
+\index{Pwm@{Pwm}!m\_toff@{m\_toff}}
+\index{m\_toff@{m\_toff}!Pwm@{Pwm}}
+\doxysubsubsection{\texorpdfstring{m\_toff}{m\_toff}}
+{\footnotesize\ttfamily uint32\+\_\+t Pwm\+::m\+\_\+toff\hspace{0.3cm}{\ttfamily [protected]}}
+
+Tiempo de apagado del P\+WM en micro segundos \mbox{\Hypertarget{class_pwm_a648d25e3579c9ceb012cb2f064c09c8f}\label{class_pwm_a648d25e3579c9ceb012cb2f064c09c8f}} 
+\index{Pwm@{Pwm}!m\_ton@{m\_ton}}
+\index{m\_ton@{m\_ton}!Pwm@{Pwm}}
+\doxysubsubsection{\texorpdfstring{m\_ton}{m\_ton}}
+{\footnotesize\ttfamily uint32\+\_\+t Pwm\+::m\+\_\+ton\hspace{0.3cm}{\ttfamily [protected]}}
+
+Tiempo de encendido del P\+WM en micro segundos ~\newline
+ 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/\+Agustin/\+Escritorio/\+M\+C\+Uexpresso/\+Kit\+L\+P\+C845-\/\+C++/src/\+Drivers/\+Hardware/05-\/\+P\+W\+M/\mbox{\hyperlink{_pwm_8h}{Pwm.\+h}}\item 
+E\+:/\+Agustin/\+Escritorio/\+M\+C\+Uexpresso/\+Kit\+L\+P\+C845-\/\+C++/src/\+Drivers/\+Hardware/05-\/\+P\+W\+M/Pwm.\+cpp\end{DoxyCompactItemize}

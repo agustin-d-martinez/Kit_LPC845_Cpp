@@ -1,0 +1,78 @@
+\hypertarget{class_comunicacion_sincronica}{}\doxysection{Comunicacion\+Sincronica Class Reference}
+\label{class_comunicacion_sincronica}\index{ComunicacionSincronica@{ComunicacionSincronica}}
+
+
+Clase del objeto \mbox{\hyperlink{class_comunicacion_asincronica}{Comunicacion\+Asincronica}} Clase abstracta pura para la generación de comunicaciones sincrónicas como la \mbox{\hyperlink{class_i2_c}{I2C}} o la S\+PI.  
+
+
+
+
+{\ttfamily \#include $<$Comunicacion\+Sincronica.\+h$>$}
+
+
+
+Inheritance diagram for Comunicacion\+Sincronica\+:
+% FIG 0
+
+
+Collaboration diagram for Comunicacion\+Sincronica\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_comunicacion_sincronica_a2466717eadf1a0415f3ea369502620b1}{Comunicacion\+Sincronica}} ()=default
+\item 
+virtual void \mbox{\hyperlink{class_comunicacion_sincronica_add9b9c73ccac230a5a88b2031d546c34}{Write}} (uint8\+\_\+t data)=0
+\item 
+virtual \mbox{\hyperlink{class_comunicacion_sincronica_a4a557f4ff51a3d3298687750fb479aa6}{$\sim$\+Comunicacion\+Sincronica}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{class_pin}{Pin}} $\ast$ \mbox{\hyperlink{class_comunicacion_sincronica_a3a40f691cf66fa819a2b3e1c9c1f9240}{m\+\_\+scl}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase del objeto \mbox{\hyperlink{class_comunicacion_asincronica}{Comunicacion\+Asincronica}} Clase abstracta pura para la generación de comunicaciones sincrónicas como la \mbox{\hyperlink{class_i2_c}{I2C}} o la S\+PI. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_comunicacion_sincronica_a2466717eadf1a0415f3ea369502620b1}\label{class_comunicacion_sincronica_a2466717eadf1a0415f3ea369502620b1}} 
+\index{ComunicacionSincronica@{ComunicacionSincronica}!ComunicacionSincronica@{ComunicacionSincronica}}
+\index{ComunicacionSincronica@{ComunicacionSincronica}!ComunicacionSincronica@{ComunicacionSincronica}}
+\doxysubsubsection{\texorpdfstring{ComunicacionSincronica()}{ComunicacionSincronica()}}
+{\footnotesize\ttfamily Comunicacion\+Sincronica\+::\+Comunicacion\+Sincronica (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Constructor por defecto \mbox{\Hypertarget{class_comunicacion_sincronica_a4a557f4ff51a3d3298687750fb479aa6}\label{class_comunicacion_sincronica_a4a557f4ff51a3d3298687750fb479aa6}} 
+\index{ComunicacionSincronica@{ComunicacionSincronica}!````~ComunicacionSincronica@{$\sim$ComunicacionSincronica}}
+\index{````~ComunicacionSincronica@{$\sim$ComunicacionSincronica}!ComunicacionSincronica@{ComunicacionSincronica}}
+\doxysubsubsection{\texorpdfstring{$\sim$ComunicacionSincronica()}{~ComunicacionSincronica()}}
+{\footnotesize\ttfamily virtual Comunicacion\+Sincronica\+::$\sim$\+Comunicacion\+Sincronica (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+Destructor por defecto 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_comunicacion_sincronica_add9b9c73ccac230a5a88b2031d546c34}\label{class_comunicacion_sincronica_add9b9c73ccac230a5a88b2031d546c34}} 
+\index{ComunicacionSincronica@{ComunicacionSincronica}!Write@{Write}}
+\index{Write@{Write}!ComunicacionSincronica@{ComunicacionSincronica}}
+\doxysubsubsection{\texorpdfstring{Write()}{Write()}}
+{\footnotesize\ttfamily virtual void Comunicacion\+Sincronica\+::\+Write (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Funcion de escritura 
+
+Implemented in \mbox{\hyperlink{class_i2_c_a4fb70819fb5440055d5cadca5042d7de}{I2C}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_comunicacion_sincronica_a3a40f691cf66fa819a2b3e1c9c1f9240}\label{class_comunicacion_sincronica_a3a40f691cf66fa819a2b3e1c9c1f9240}} 
+\index{ComunicacionSincronica@{ComunicacionSincronica}!m\_scl@{m\_scl}}
+\index{m\_scl@{m\_scl}!ComunicacionSincronica@{ComunicacionSincronica}}
+\doxysubsubsection{\texorpdfstring{m\_scl}{m\_scl}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_pin}{Pin}}$\ast$ Comunicacion\+Sincronica\+::m\+\_\+scl\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\hyperlink{class_pin}{Pin}} de Clock. Debe existir en toda comunicacion sincronica 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/\+Agustin/\+Escritorio/\+M\+C\+Uexpresso/\+Kit\+L\+P\+C845-\/\+C++/src/\+Drivers/\+Perifericos/14-\/\+Com\+Sincronica/\mbox{\hyperlink{_comunicacion_sincronica_8h}{Comunicacion\+Sincronica.\+h}}\end{DoxyCompactItemize}

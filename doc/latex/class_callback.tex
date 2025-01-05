@@ -1,0 +1,75 @@
+\hypertarget{class_callback}{}\doxysection{Callback Class Reference}
+\label{class_callback}\index{Callback@{Callback}}
+
+
+Clase del objeto \mbox{\hyperlink{class_callback}{Callback}}.  
+
+
+
+
+{\ttfamily \#include $<$Callback.\+h$>$}
+
+
+
+Inheritance diagram for Callback\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_callback_a18c04c5cb1529d902a6c77dac2258e0a}{Set\+Interrupt}} ()
+\begin{DoxyCompactList}\small\item\em Activa la interrupción. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_callback_ace2a048d8fc6fdf88b67274fa730c410}{Un\+Set\+Interrupt}} ()
+\begin{DoxyCompactList}\small\item\em Desactiva la interrupción. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_callback_a24e8f5fec587299192f62b13a2e7eb42}{S\+Whandler}} (void)=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase del objeto \mbox{\hyperlink{class_callback}{Callback}}. 
+
+El objeto \mbox{\hyperlink{class_callback}{Callback}} debe ser heredado y otorga a los herederos la conexión al systick y a la interrupción temporizada 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_callback_a18c04c5cb1529d902a6c77dac2258e0a}\label{class_callback_a18c04c5cb1529d902a6c77dac2258e0a}} 
+\index{Callback@{Callback}!SetInterrupt@{SetInterrupt}}
+\index{SetInterrupt@{SetInterrupt}!Callback@{Callback}}
+\doxysubsubsection{\texorpdfstring{SetInterrupt()}{SetInterrupt()}}
+{\footnotesize\ttfamily void Callback\+::\+Set\+Interrupt (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Activa la interrupción. 
+
+Coloca al objeto dentro de la lista del handler systick \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_callback_a24e8f5fec587299192f62b13a2e7eb42}\label{class_callback_a24e8f5fec587299192f62b13a2e7eb42}} 
+\index{Callback@{Callback}!SWhandler@{SWhandler}}
+\index{SWhandler@{SWhandler}!Callback@{Callback}}
+\doxysubsubsection{\texorpdfstring{SWhandler()}{SWhandler()}}
+{\footnotesize\ttfamily virtual void Callback\+::\+S\+Whandler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Este método debe ser implementado por las clases derivadas cada una resolverá que hacer con su irq enganchada al systick del sistema ~\newline
+ 
+
+Implemented in \mbox{\hyperlink{class_l_c_d_a0051f7da149bd4e46c757668829bc68a}{L\+CD}}, \mbox{\hyperlink{class_timer_ab1b056629435b57ae6d31323507b9330}{Timer}}, \mbox{\hyperlink{classdisplay7_segmentos_a3af25f77c2b4f39be26235c55517541c}{display7\+Segmentos}}, \mbox{\hyperlink{class_reloj_a3d22e857ddd53a5da2217b8282cba209}{Reloj}}, \mbox{\hyperlink{classteclado_a5d259635da832fff0db13741e874c636}{teclado}}, \mbox{\hyperlink{class_input_a1dd7adf1710d97cbf24b8171caf445d4}{Input}}, and \mbox{\hyperlink{class_output_a4c87af433f34b1cc01cc6f73f24cfe19}{Output}}.
+
+\mbox{\Hypertarget{class_callback_ace2a048d8fc6fdf88b67274fa730c410}\label{class_callback_ace2a048d8fc6fdf88b67274fa730c410}} 
+\index{Callback@{Callback}!UnSetInterrupt@{UnSetInterrupt}}
+\index{UnSetInterrupt@{UnSetInterrupt}!Callback@{Callback}}
+\doxysubsubsection{\texorpdfstring{UnSetInterrupt()}{UnSetInterrupt()}}
+{\footnotesize\ttfamily void Callback\+::\+Un\+Set\+Interrupt (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Desactiva la interrupción. 
+
+Borra de la lista handler al objeto actual \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/\+Agustin/\+Escritorio/\+M\+C\+Uexpresso/\+Kit\+L\+P\+C845-\/\+C++/src/\+Drivers/\+Perifericos/06-\/\+Callback/\mbox{\hyperlink{_callback_8h}{Callback.\+h}}\item 
+E\+:/\+Agustin/\+Escritorio/\+M\+C\+Uexpresso/\+Kit\+L\+P\+C845-\/\+C++/src/\+Drivers/\+Perifericos/06-\/\+Callback/\mbox{\hyperlink{_callback_8cpp}{Callback.\+cpp}}\end{DoxyCompactItemize}

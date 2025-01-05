@@ -1,0 +1,323 @@
+\hypertarget{class_e_s_p8266}{}\doxysection{E\+S\+P8266 Class Reference}
+\label{class_e_s_p8266}\index{ESP8266@{ESP8266}}
+
+
+Clase del objeto \mbox{\hyperlink{class_e_s_p8266}{E\+S\+P8266}} El objeto \mbox{\hyperlink{class_e_s_p8266}{E\+S\+P8266}} permite la simple utilización del módulo arduino \mbox{\hyperlink{class_e_s_p8266}{E\+S\+P8266}} y el E\+S\+P01 mediante comandos AT. El módulo debe estar por defecto en la velocidad D\+E\+F\+A\+U\+L\+T\+\_\+\+E\+S\+P01\+\_\+\+B\+A\+U\+D\+R\+A\+TE. El módulo será conectado como cliente en modo T\+C\+P/\+U\+DP y con transmisión libre, sin filtros. La data llega y se envía cruda (como está). Por falta de material la clase no fue probada por completo. Sí se probó la inicialización y conección a internet, no se probó la conección a un servidor. Todas sus funciones son bloqueantes o poseen un timeout, debe ser tenido en cuenta a la hora de utilizar este driver.  
+
+
+
+
+{\ttfamily \#include $<$E\+S\+P8266.\+h$>$}
+
+
+
+Inheritance diagram for E\+S\+P8266\+:
+% FIG 0
+
+
+Collaboration diagram for E\+S\+P8266\+:
+% FIG 1
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_e_s_p8266_a93e1ea93fcb65ce8799a0f8a2285f65a}{conection\+\_\+type}} \{ {\bfseries T\+CP} = 0, 
+{\bfseries U\+DP} = 1
+ \}
+\item 
+enum \mbox{\hyperlink{class_e_s_p8266_af2dc0bcc5375ed2684dc7ca9d017519a}{status\+\_\+type}} \{ \newline
+{\bfseries E\+R\+R\+OR} = 0, 
+{\bfseries N\+O\+T\+H\+I\+NG}, 
+{\bfseries I\+N\+I\+T\+I\+A\+L\+I\+Z\+ED}, 
+{\bfseries C\+O\+N\+N\+E\+C\+T\+\_\+\+T\+O\+\_\+\+W\+I\+FI}, 
+\newline
+{\bfseries C\+O\+N\+N\+E\+C\+T\+\_\+\+T\+O\+\_\+\+S\+E\+R\+V\+ER}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_e_s_p8266_a81d2c32e66872ea3ea86af4589c82237}\label{class_e_s_p8266_a81d2c32e66872ea3ea86af4589c82237}} 
+\mbox{\hyperlink{class_e_s_p8266_a81d2c32e66872ea3ea86af4589c82237}{E\+S\+P8266}} (\mbox{\hyperlink{class_pin_a02483eba92e68e4230f8aa883e0a25fe}{Pin\+::port\+\_\+t}} \+\_\+port\+Tx, uint8\+\_\+t \+\_\+pin\+Tx, \mbox{\hyperlink{class_pin_a02483eba92e68e4230f8aa883e0a25fe}{Pin\+::port\+\_\+t}} \+\_\+port\+Rx, uint8\+\_\+t \+\_\+pin\+Rx, U\+S\+A\+R\+T\+\_\+\+Type $\ast$usart, uint32\+\_\+t baudrate)
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_s_p8266_a146e6bb065ba3d36819cf878ceee7cdb}{Inicializar}} (void)
+\begin{DoxyCompactList}\small\item\em Inicializa el E\+S\+P8266/ E\+S\+P01 con comandos AT en modo cliente. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_e_s_p8266_af2dc0bcc5375ed2684dc7ca9d017519a}{status\+\_\+type}} \mbox{\hyperlink{class_e_s_p8266_a2e2829adf335c4ae3e224f84ac97c015}{Connect\+To\+Wifi}} (const int8\+\_\+t $\ast$wifi\+\_\+address, const int8\+\_\+t $\ast$wifi\+\_\+password, uint32\+\_\+t seg\+\_\+timeout=\mbox{\hyperlink{_e_s_p8266_8h_a2fb5dfd3c315ae17147472c4058abccf}{S\+E\+G\+\_\+\+E\+S\+P01\+\_\+\+T\+I\+M\+E\+O\+UT}})
+\begin{DoxyCompactList}\small\item\em Se conecta al wifi indicado. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_s_p8266_a2ea8ccb7701111d43ee21ebb7a830d2d}{Disconnect\+To\+Wifi}} (void)
+\begin{DoxyCompactList}\small\item\em Se desconecta de la red wifi. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_s_p8266_a926693710d604d3edaf362087d164b6d}{Set\+IP}} (int8\+\_\+t $\ast$ip)
+\begin{DoxyCompactList}\small\item\em Setea la IP del dispositivo. \end{DoxyCompactList}\item 
+int8\+\_\+t $\ast$ \mbox{\hyperlink{class_e_s_p8266_ac46d27d41a91b6e69a50135ff8775e42}{Get\+IP}} (void) const
+\begin{DoxyCompactList}\small\item\em Devuelve la IP del dispositivo. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_e_s_p8266_a293dc206de0a2b9187a472d38cd16d65}{Connect\+To\+Server}} (\mbox{\hyperlink{class_e_s_p8266_a93e1ea93fcb65ce8799a0f8a2285f65a}{conection\+\_\+type}} \+\_\+mode, const int8\+\_\+t $\ast$server\+\_\+ip, const int8\+\_\+t $\ast$server\+\_\+port, uint32\+\_\+t seg\+\_\+timeout=\mbox{\hyperlink{_e_s_p8266_8h_a2fb5dfd3c315ae17147472c4058abccf}{S\+E\+G\+\_\+\+E\+S\+P01\+\_\+\+T\+I\+M\+E\+O\+UT}})
+\begin{DoxyCompactList}\small\item\em Intenta conectarse a un servidor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_s_p8266_a78b84f1f6e44faae9cca091530b9b7b5}{Disconnect\+To\+Server}} (void)
+\begin{DoxyCompactList}\small\item\em Se desconecta del server. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_s_p8266_a4c62aa1edf1bd6638d181fa62123f852}{Transmit}} (const char $\ast$msg)
+\begin{DoxyCompactList}\small\item\em Sobrecarga de Transmit de U\+A\+RT. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_s_p8266_a77592436422707ace296d13fe5c262b9}{Transmit}} (const void $\ast$msg, uint32\+\_\+t n)
+\begin{DoxyCompactList}\small\item\em Sobrecarga de Transmit de U\+A\+RT. \end{DoxyCompactList}\item 
+void $\ast$ \mbox{\hyperlink{class_e_s_p8266_a23180eda65a9e0d03adb197ba75b72b7}{Message}} (void $\ast$msg, uint32\+\_\+t n)
+\begin{DoxyCompactList}\small\item\em Sobrecarga de message de U\+A\+RT. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_e_s_p8266_af2dc0bcc5375ed2684dc7ca9d017519a}{status\+\_\+type}} \mbox{\hyperlink{class_e_s_p8266_a2aad6c0565b8624a0d7ec18e865cf1c7}{Get\+Status}} (void) const
+\begin{DoxyCompactList}\small\item\em Devuelve el estado del dispositivo. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_e_s_p8266_ad4e264f828be8b7c5ccbe4f02fe62325}{Is\+Connected\+To\+Wifi}} (void) const
+\begin{DoxyCompactList}\small\item\em Pregunta si está conectado a internet o no. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_e_s_p8266_a67625b0dd27d38e7bf425b1c09614a6c}{Is\+Connected\+To\+Server}} (void) const
+\begin{DoxyCompactList}\small\item\em Pregunta si está conectado al server o no. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_e_s_p8266_a00c860d5cccd1544bf3df1a886f4db3e}\label{class_e_s_p8266_a00c860d5cccd1544bf3df1a886f4db3e}} 
+virtual \mbox{\hyperlink{class_e_s_p8266_a00c860d5cccd1544bf3df1a886f4db3e}{$\sim$\+E\+S\+P8266}} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Clase del objeto \mbox{\hyperlink{class_e_s_p8266}{E\+S\+P8266}} El objeto \mbox{\hyperlink{class_e_s_p8266}{E\+S\+P8266}} permite la simple utilización del módulo arduino \mbox{\hyperlink{class_e_s_p8266}{E\+S\+P8266}} y el E\+S\+P01 mediante comandos AT. El módulo debe estar por defecto en la velocidad D\+E\+F\+A\+U\+L\+T\+\_\+\+E\+S\+P01\+\_\+\+B\+A\+U\+D\+R\+A\+TE. El módulo será conectado como cliente en modo T\+C\+P/\+U\+DP y con transmisión libre, sin filtros. La data llega y se envía cruda (como está). Por falta de material la clase no fue probada por completo. Sí se probó la inicialización y conección a internet, no se probó la conección a un servidor. Todas sus funciones son bloqueantes o poseen un timeout, debe ser tenido en cuenta a la hora de utilizar este driver. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_e_s_p8266_a93e1ea93fcb65ce8799a0f8a2285f65a}\label{class_e_s_p8266_a93e1ea93fcb65ce8799a0f8a2285f65a}} 
+\index{ESP8266@{ESP8266}!conection\_type@{conection\_type}}
+\index{conection\_type@{conection\_type}!ESP8266@{ESP8266}}
+\doxysubsubsection{\texorpdfstring{conection\_type}{conection\_type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_e_s_p8266_a93e1ea93fcb65ce8799a0f8a2285f65a}{E\+S\+P8266\+::conection\+\_\+type}}}
+
+Tipo de conexión del cliente wifi \mbox{\Hypertarget{class_e_s_p8266_af2dc0bcc5375ed2684dc7ca9d017519a}\label{class_e_s_p8266_af2dc0bcc5375ed2684dc7ca9d017519a}} 
+\index{ESP8266@{ESP8266}!status\_type@{status\_type}}
+\index{status\_type@{status\_type}!ESP8266@{ESP8266}}
+\doxysubsubsection{\texorpdfstring{status\_type}{status\_type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_e_s_p8266_af2dc0bcc5375ed2684dc7ca9d017519a}{E\+S\+P8266\+::status\+\_\+type}}}
+
+Enumeración con todos los estados posibles de la comunicación 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_e_s_p8266_a293dc206de0a2b9187a472d38cd16d65}\label{class_e_s_p8266_a293dc206de0a2b9187a472d38cd16d65}} 
+\index{ESP8266@{ESP8266}!ConnectToServer@{ConnectToServer}}
+\index{ConnectToServer@{ConnectToServer}!ESP8266@{ESP8266}}
+\doxysubsubsection{\texorpdfstring{ConnectToServer()}{ConnectToServer()}}
+{\footnotesize\ttfamily bool E\+S\+P8266\+::\+Connect\+To\+Server (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_e_s_p8266_a93e1ea93fcb65ce8799a0f8a2285f65a}{conection\+\_\+type}}}]{\+\_\+mode,  }\item[{const int8\+\_\+t $\ast$}]{server\+\_\+ip,  }\item[{const int8\+\_\+t $\ast$}]{server\+\_\+port,  }\item[{uint32\+\_\+t}]{seg\+\_\+timeout = {\ttfamily \mbox{\hyperlink{_e_s_p8266_8h_a2fb5dfd3c315ae17147472c4058abccf}{S\+E\+G\+\_\+\+E\+S\+P01\+\_\+\+T\+I\+M\+E\+O\+UT}}} }\end{DoxyParamCaption})}
+
+
+
+Intenta conectarse a un servidor. 
+
+Envía los comandos AT para conectarse a un servidor. Función bloqueante, tiene un time out en caso de fallar. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em \+\_\+mode} & Tipo de conección U\+D\+P/\+T\+CP. \\
+\hline
+\mbox{\texttt{ in}}  & {\em server\+\_\+ip} & I\+P/nombre del servidor. \\
+\hline
+\mbox{\texttt{ in}}  & {\em server\+\_\+port} & Puerto al que conectarse del servidor. \\
+\hline
+\mbox{\texttt{ in}}  & {\em seg\+\_\+timeout} & Tiempo del timeout. Default de 10 segundos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool\+: true si logró conectarse; false si no 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_e_s_p8266_a2e2829adf335c4ae3e224f84ac97c015}\label{class_e_s_p8266_a2e2829adf335c4ae3e224f84ac97c015}} 
+\index{ESP8266@{ESP8266}!ConnectToWifi@{ConnectToWifi}}
+\index{ConnectToWifi@{ConnectToWifi}!ESP8266@{ESP8266}}
+\doxysubsubsection{\texorpdfstring{ConnectToWifi()}{ConnectToWifi()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_e_s_p8266_af2dc0bcc5375ed2684dc7ca9d017519a}{E\+S\+P8266\+::status\+\_\+type}} E\+S\+P8266\+::\+Connect\+To\+Wifi (\begin{DoxyParamCaption}\item[{const int8\+\_\+t $\ast$}]{wifi\+\_\+address,  }\item[{const int8\+\_\+t $\ast$}]{wifi\+\_\+password,  }\item[{uint32\+\_\+t}]{seg\+\_\+timeout = {\ttfamily \mbox{\hyperlink{_e_s_p8266_8h_a2fb5dfd3c315ae17147472c4058abccf}{S\+E\+G\+\_\+\+E\+S\+P01\+\_\+\+T\+I\+M\+E\+O\+UT}}} }\end{DoxyParamCaption})}
+
+
+
+Se conecta al wifi indicado. 
+
+Explicacion detallada 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em wifi\+\_\+address} & Nombre de la red wifi. \\
+\hline
+\mbox{\texttt{ in}}  & {\em wifi\+\_\+password} & Nombre de la clave de la red wifi. \\
+\hline
+\mbox{\texttt{ in}}  & {\em seg\+\_\+timeout} & Tiempo hasta considerar fallo en la conexion. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status\+\_\+type = C\+O\+N\+N\+E\+C\+T\+\_\+\+T\+O\+\_\+\+W\+I\+FI (3) si funciono, E\+R\+R\+OR (0) sino 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_e_s_p8266_a78b84f1f6e44faae9cca091530b9b7b5}\label{class_e_s_p8266_a78b84f1f6e44faae9cca091530b9b7b5}} 
+\index{ESP8266@{ESP8266}!DisconnectToServer@{DisconnectToServer}}
+\index{DisconnectToServer@{DisconnectToServer}!ESP8266@{ESP8266}}
+\doxysubsubsection{\texorpdfstring{DisconnectToServer()}{DisconnectToServer()}}
+{\footnotesize\ttfamily void E\+S\+P8266\+::\+Disconnect\+To\+Server (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Se desconecta del server. 
+
+Envía los comandos AT para desconectarse del servidor en caso de estar conectado a uno. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_e_s_p8266_a2ea8ccb7701111d43ee21ebb7a830d2d}\label{class_e_s_p8266_a2ea8ccb7701111d43ee21ebb7a830d2d}} 
+\index{ESP8266@{ESP8266}!DisconnectToWifi@{DisconnectToWifi}}
+\index{DisconnectToWifi@{DisconnectToWifi}!ESP8266@{ESP8266}}
+\doxysubsubsection{\texorpdfstring{DisconnectToWifi()}{DisconnectToWifi()}}
+{\footnotesize\ttfamily void E\+S\+P8266\+::\+Disconnect\+To\+Wifi (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Se desconecta de la red wifi. 
+
+Envía los comandos AT para desconectarse de la red wifi en caso de estar conectada a una. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_e_s_p8266_ac46d27d41a91b6e69a50135ff8775e42}\label{class_e_s_p8266_ac46d27d41a91b6e69a50135ff8775e42}} 
+\index{ESP8266@{ESP8266}!GetIP@{GetIP}}
+\index{GetIP@{GetIP}!ESP8266@{ESP8266}}
+\doxysubsubsection{\texorpdfstring{GetIP()}{GetIP()}}
+{\footnotesize\ttfamily int8\+\_\+t $\ast$ E\+S\+P8266\+::\+Get\+IP (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Devuelve la IP del dispositivo. 
+
+\begin{DoxyReturn}{Returns}
+int8\+\_\+t$\ast$\+: IP del dispositivo en formato string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_e_s_p8266_a2aad6c0565b8624a0d7ec18e865cf1c7}\label{class_e_s_p8266_a2aad6c0565b8624a0d7ec18e865cf1c7}} 
+\index{ESP8266@{ESP8266}!GetStatus@{GetStatus}}
+\index{GetStatus@{GetStatus}!ESP8266@{ESP8266}}
+\doxysubsubsection{\texorpdfstring{GetStatus()}{GetStatus()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_e_s_p8266_af2dc0bcc5375ed2684dc7ca9d017519a}{E\+S\+P8266\+::status\+\_\+type}} E\+S\+P8266\+::\+Get\+Status (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Devuelve el estado del dispositivo. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_e_s_p8266_af2dc0bcc5375ed2684dc7ca9d017519a}{E\+S\+P8266\+::status\+\_\+type}}\+: Estado del dispositivo. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_e_s_p8266_a146e6bb065ba3d36819cf878ceee7cdb}\label{class_e_s_p8266_a146e6bb065ba3d36819cf878ceee7cdb}} 
+\index{ESP8266@{ESP8266}!Inicializar@{Inicializar}}
+\index{Inicializar@{Inicializar}!ESP8266@{ESP8266}}
+\doxysubsubsection{\texorpdfstring{Inicializar()}{Inicializar()}}
+{\footnotesize\ttfamily void E\+S\+P8266\+::\+Inicializar (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Inicializa el E\+S\+P8266/ E\+S\+P01 con comandos AT en modo cliente. 
+
+Configura los baudios y modo del dispositivo. F\+U\+N\+C\+I\+ON B\+L\+O\+Q\+U\+E\+A\+N\+TE \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_e_s_p8266_a67625b0dd27d38e7bf425b1c09614a6c}\label{class_e_s_p8266_a67625b0dd27d38e7bf425b1c09614a6c}} 
+\index{ESP8266@{ESP8266}!IsConnectedToServer@{IsConnectedToServer}}
+\index{IsConnectedToServer@{IsConnectedToServer}!ESP8266@{ESP8266}}
+\doxysubsubsection{\texorpdfstring{IsConnectedToServer()}{IsConnectedToServer()}}
+{\footnotesize\ttfamily bool E\+S\+P8266\+::\+Is\+Connected\+To\+Server (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Pregunta si está conectado al server o no. 
+
+\begin{DoxyReturn}{Returns}
+bool\+: true está conectado al server, false no lo esta. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_e_s_p8266_ad4e264f828be8b7c5ccbe4f02fe62325}\label{class_e_s_p8266_ad4e264f828be8b7c5ccbe4f02fe62325}} 
+\index{ESP8266@{ESP8266}!IsConnectedToWifi@{IsConnectedToWifi}}
+\index{IsConnectedToWifi@{IsConnectedToWifi}!ESP8266@{ESP8266}}
+\doxysubsubsection{\texorpdfstring{IsConnectedToWifi()}{IsConnectedToWifi()}}
+{\footnotesize\ttfamily bool E\+S\+P8266\+::\+Is\+Connected\+To\+Wifi (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Pregunta si está conectado a internet o no. 
+
+\begin{DoxyReturn}{Returns}
+bool\+: true está conectado a internet, false no lo esta. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_e_s_p8266_a23180eda65a9e0d03adb197ba75b72b7}\label{class_e_s_p8266_a23180eda65a9e0d03adb197ba75b72b7}} 
+\index{ESP8266@{ESP8266}!Message@{Message}}
+\index{Message@{Message}!ESP8266@{ESP8266}}
+\doxysubsubsection{\texorpdfstring{Message()}{Message()}}
+{\footnotesize\ttfamily void $\ast$ E\+S\+P8266\+::\+Message (\begin{DoxyParamCaption}\item[{void $\ast$}]{msg,  }\item[{uint32\+\_\+t}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Sobrecarga de message de U\+A\+RT. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em msg} & Mensaje a leer. \\
+\hline
+\mbox{\texttt{ in}}  & {\em n} & cantidad de caracteres a leer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void$\ast$\+: puntero al mensaje a leer. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_comunicacion_asincronica_aea94bf3a2a45c2b8de83b7481a2c896f}{Comunicacion\+Asincronica}}.
+
+\mbox{\Hypertarget{class_e_s_p8266_a926693710d604d3edaf362087d164b6d}\label{class_e_s_p8266_a926693710d604d3edaf362087d164b6d}} 
+\index{ESP8266@{ESP8266}!SetIP@{SetIP}}
+\index{SetIP@{SetIP}!ESP8266@{ESP8266}}
+\doxysubsubsection{\texorpdfstring{SetIP()}{SetIP()}}
+{\footnotesize\ttfamily void E\+S\+P8266\+::\+Set\+IP (\begin{DoxyParamCaption}\item[{int8\+\_\+t $\ast$}]{ip }\end{DoxyParamCaption})}
+
+
+
+Setea la IP del dispositivo. 
+
+Envía todos los comandos AT para setear una IP y espera su correcta respuesta 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ip} & ip a configurar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_e_s_p8266_a4c62aa1edf1bd6638d181fa62123f852}\label{class_e_s_p8266_a4c62aa1edf1bd6638d181fa62123f852}} 
+\index{ESP8266@{ESP8266}!Transmit@{Transmit}}
+\index{Transmit@{Transmit}!ESP8266@{ESP8266}}
+\doxysubsubsection{\texorpdfstring{Transmit()}{Transmit()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void E\+S\+P8266\+::\+Transmit (\begin{DoxyParamCaption}\item[{const char $\ast$}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Sobrecarga de Transmit de U\+A\+RT. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em msg} & Mensaje a enviar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_comunicacion_asincronica_a9d55be4bd6519f1e8b8d6954c75d45e1}{Comunicacion\+Asincronica}}.
+
+\mbox{\Hypertarget{class_e_s_p8266_a77592436422707ace296d13fe5c262b9}\label{class_e_s_p8266_a77592436422707ace296d13fe5c262b9}} 
+\index{ESP8266@{ESP8266}!Transmit@{Transmit}}
+\index{Transmit@{Transmit}!ESP8266@{ESP8266}}
+\doxysubsubsection{\texorpdfstring{Transmit()}{Transmit()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void E\+S\+P8266\+::\+Transmit (\begin{DoxyParamCaption}\item[{const void $\ast$}]{msg,  }\item[{uint32\+\_\+t}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Sobrecarga de Transmit de U\+A\+RT. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em msg} & Mensaje a enviar. \\
+\hline
+\mbox{\texttt{ in}}  & {\em n} & cantidad de caracteres a enviar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_comunicacion_asincronica_a506361dd86d7300792b5cded1159506e}{Comunicacion\+Asincronica}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/\+Agustin/\+Escritorio/\+M\+C\+Uexpresso/\+Kit\+L\+P\+C845-\/\+C++/src/\+Drivers/\+Hardware/08-\/\+Wi\+Fi/\mbox{\hyperlink{_e_s_p8266_8h}{E\+S\+P8266.\+h}}\item 
+E\+:/\+Agustin/\+Escritorio/\+M\+C\+Uexpresso/\+Kit\+L\+P\+C845-\/\+C++/src/\+Drivers/\+Hardware/08-\/\+Wi\+Fi/\mbox{\hyperlink{_e_s_p8266_8cpp}{E\+S\+P8266.\+cpp}}\end{DoxyCompactItemize}

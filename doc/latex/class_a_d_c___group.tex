@@ -1,0 +1,324 @@
+\hypertarget{class_a_d_c___group}{}\doxysection{A\+D\+C\+\_\+\+Group Class Reference}
+\label{class_a_d_c___group}\index{ADC\_Group@{ADC\_Group}}
+
+
+Clase del objeto \mbox{\hyperlink{class_a_d_c___group}{A\+D\+C\+\_\+\+Group}} F\+U\+N\+C\+I\+O\+N\+A\+M\+I\+E\+N\+TO\+: Solo debe crearse UN objeto \mbox{\hyperlink{class_a_d_c}{A\+DC}}. Todos los canales y distintos \mbox{\hyperlink{class_a_d_c}{A\+DC}} son manejados por el mismo objeto. Realiza un barrido y guarda a todos los \mbox{\hyperlink{class_a_d_c}{A\+DC}} en un vector de resultados.  
+
+
+
+
+{\ttfamily \#include $<$A\+D\+C\+Group.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_a_d_c___group_a699fdc6437dc203b9794017e046361dd}{adc\+\_\+isr}} \{ {\bfseries S\+E\+Q\+A\+\_\+\+I\+SR}, 
+{\bfseries S\+E\+Q\+B\+\_\+\+I\+SR}, 
+{\bfseries T\+H\+C\+M\+P\+\_\+\+I\+SR}, 
+{\bfseries O\+V\+R\+\_\+\+I\+SR}
+ \}
+\item 
+enum \mbox{\hyperlink{class_a_d_c___group_aecd39a785d1264e30406f6d9e994629d}{irq\+\_\+source\+\_\+inten}} \{ {\bfseries A\+D\+C\+\_\+\+S\+E\+Q\+A\+\_\+\+I\+R\+Q\+\_\+\+I\+N\+T\+EN} = 0, 
+{\bfseries A\+D\+C\+\_\+\+S\+E\+Q\+B\+\_\+\+I\+R\+Q\+\_\+\+I\+N\+T\+EN} = 1, 
+{\bfseries A\+D\+C\+\_\+\+O\+V\+R\+\_\+\+I\+R\+Q\+\_\+\+I\+N\+T\+EN} = 2, 
+{\bfseries I\+N\+V\+A\+L\+I\+D\+\_\+\+I\+R\+Q\+\_\+\+I\+N\+T\+EN} = 0x\+FF
+ \}
+\item 
+enum \mbox{\hyperlink{class_a_d_c___group_a22ff37b4ea82d5cae396775d16701dc0}{error\+\_\+t}} \{ {\bfseries OK} = 0, 
+{\bfseries E\+R\+R\+OR} = -\/1
+ \}
+\item 
+typedef enum \mbox{\hyperlink{class_a_d_c___group_a699fdc6437dc203b9794017e046361dd}{A\+D\+C\+\_\+\+Group\+::adc\+\_\+isr}} \mbox{\hyperlink{class_a_d_c___group_ab74f69065994e4918cdf3d4478a6717c}{adc\+\_\+isr}}
+\item 
+typedef enum \mbox{\hyperlink{class_a_d_c___group_aecd39a785d1264e30406f6d9e994629d}{A\+D\+C\+\_\+\+Group\+::irq\+\_\+source\+\_\+inten}} \mbox{\hyperlink{class_a_d_c___group_a0c3458f9985ac6f156e83733cb8efac8}{irq\+\_\+source\+\_\+inten}}
+\item 
+typedef enum \mbox{\hyperlink{class_a_d_c___group_a22ff37b4ea82d5cae396775d16701dc0}{A\+D\+C\+\_\+\+Group\+::error\+\_\+t}} \mbox{\hyperlink{class_a_d_c___group_a4b8b48df3637ea35a1ab5e2610a61150}{error\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_a_d_c___group_a27f2af1f7907d1c39ac92dc4dff6c248}{A\+D\+C\+\_\+\+Group}} (uint32\+\_\+t clk\+\_\+freq, uint32\+\_\+t sample\+\_\+rate, bool init\+\_\+channel0=false)
+\begin{DoxyCompactList}\small\item\em Constructor de clase \mbox{\hyperlink{class_a_d_c}{A\+DC}}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_a_d_c___group_abd94324d603e620de71e1bafa45b7c97}{$\sim$\+A\+D\+C\+\_\+\+Group}} ()=default
+\item 
+\mbox{\Hypertarget{class_a_d_c___group_a7e647fcb38a9deebd6e54bec0b7d4187}\label{class_a_d_c___group_a7e647fcb38a9deebd6e54bec0b7d4187}} 
+void {\bfseries Inicializar} (void)
+\item 
+void \mbox{\hyperlink{class_a_d_c___group_a883c19ba79117ef696065fc404a18132}{Set\+Low\+Power\+Mode}} (bool low\+\_\+power)
+\begin{DoxyCompactList}\small\item\em Activa/desactiva el modo de bajo consumo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_d_c___group_a8671a7fca8e2a3d952ee76a03c1de994}{Set\+Sample\+Rate}} (void)
+\begin{DoxyCompactList}\small\item\em Setea la frecuencia de muestreo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_d_c___group_a4602c63689b2edc1d7ed8cadfbe0dc27}{Enable\+Irq}} (\mbox{\hyperlink{class_a_d_c___group_aecd39a785d1264e30406f6d9e994629d}{irq\+\_\+source\+\_\+inten}} irq)
+\begin{DoxyCompactList}\small\item\em Habilita la interrupcion. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_d_c___group_ae8b772223a466a4f5007905256d122cf}{Disable\+Irq}} (\mbox{\hyperlink{class_a_d_c___group_aecd39a785d1264e30406f6d9e994629d}{irq\+\_\+source\+\_\+inten}} irq)
+\begin{DoxyCompactList}\small\item\em Deshabilita la interrupcion. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_a_d_c___group_a22ff37b4ea82d5cae396775d16701dc0}{A\+D\+C\+\_\+\+Group\+::error\+\_\+t}} \mbox{\hyperlink{class_a_d_c___group_a953933b08eccca160aee4aec00bbe339}{Init\+A\+D\+C\+Chanel}} (uint8\+\_\+t channel)
+\begin{DoxyCompactList}\small\item\em Inicializa el canal indicado con la secuencia A. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_a_d_c___group_a22ff37b4ea82d5cae396775d16701dc0}{A\+D\+C\+\_\+\+Group\+::error\+\_\+t}} \mbox{\hyperlink{class_a_d_c___group_a4f35121b3d1799918ac55d0918d54ba4}{Remove\+A\+D\+C\+Chanel}} (uint8\+\_\+t channel)
+\begin{DoxyCompactList}\small\item\em Desconfigura el canal indicado de la secuencia A del \mbox{\hyperlink{class_a_d_c}{A\+DC}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_d_c___group_a54ea07c288f761685e1fc694c54aac4a}{Trigger\+Start\+SeqA}} (void)
+\begin{DoxyCompactList}\small\item\em Inicia la conversión analógica -\/ digital de la secuencia A. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{class_a_d_c___group_a2cd81e05842681e03f5d45e9d5ca5724}{Get\+Value}} (uint8\+\_\+t channel)
+\begin{DoxyCompactList}\small\item\em Devuelve el valor de conversión guardado en el buffer. NO EL A\+C\+T\+U\+AL D\+EL R\+E\+G\+I\+S\+T\+RO. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_a_d_c___group_a2a621ca76d7f01ed13183ffc00007637}{Is\+Result\+Ready}} (uint8\+\_\+t channel) const
+\begin{DoxyCompactList}\small\item\em Indica si la conversión de channel está terminada o no. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_d_c___group_afdd4b7bf63f4a2b10b816e2f2153ee86}{Handler}} (\mbox{\hyperlink{class_a_d_c___group_a699fdc6437dc203b9794017e046361dd}{adc\+\_\+isr}} isr)
+\begin{DoxyCompactList}\small\item\em Handler del \mbox{\hyperlink{class_a_d_c}{A\+DC}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase del objeto \mbox{\hyperlink{class_a_d_c___group}{A\+D\+C\+\_\+\+Group}} F\+U\+N\+C\+I\+O\+N\+A\+M\+I\+E\+N\+TO\+: Solo debe crearse UN objeto \mbox{\hyperlink{class_a_d_c}{A\+DC}}. Todos los canales y distintos \mbox{\hyperlink{class_a_d_c}{A\+DC}} son manejados por el mismo objeto. Realiza un barrido y guarda a todos los \mbox{\hyperlink{class_a_d_c}{A\+DC}} en un vector de resultados. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_a_d_c___group_ab74f69065994e4918cdf3d4478a6717c}\label{class_a_d_c___group_ab74f69065994e4918cdf3d4478a6717c}} 
+\index{ADC\_Group@{ADC\_Group}!adc\_isr@{adc\_isr}}
+\index{adc\_isr@{adc\_isr}!ADC\_Group@{ADC\_Group}}
+\doxysubsubsection{\texorpdfstring{adc\_isr}{adc\_isr}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{class_a_d_c___group_a699fdc6437dc203b9794017e046361dd}{A\+D\+C\+\_\+\+Group\+::adc\+\_\+isr}}  \mbox{\hyperlink{class_a_d_c___group_a699fdc6437dc203b9794017e046361dd}{A\+D\+C\+\_\+\+Group\+::adc\+\_\+isr}}}
+
+Tipo de interrupciones del \mbox{\hyperlink{class_a_d_c}{A\+DC}} ~\newline
+ \mbox{\Hypertarget{class_a_d_c___group_a4b8b48df3637ea35a1ab5e2610a61150}\label{class_a_d_c___group_a4b8b48df3637ea35a1ab5e2610a61150}} 
+\index{ADC\_Group@{ADC\_Group}!error\_t@{error\_t}}
+\index{error\_t@{error\_t}!ADC\_Group@{ADC\_Group}}
+\doxysubsubsection{\texorpdfstring{error\_t}{error\_t}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{class_a_d_c___group_a22ff37b4ea82d5cae396775d16701dc0}{A\+D\+C\+\_\+\+Group\+::error\+\_\+t}}  \mbox{\hyperlink{class_a_d_c___group_a22ff37b4ea82d5cae396775d16701dc0}{A\+D\+C\+\_\+\+Group\+::error\+\_\+t}}}
+
+Error en la clase \mbox{\hyperlink{class_a_d_c}{A\+DC}} ~\newline
+ \mbox{\Hypertarget{class_a_d_c___group_a0c3458f9985ac6f156e83733cb8efac8}\label{class_a_d_c___group_a0c3458f9985ac6f156e83733cb8efac8}} 
+\index{ADC\_Group@{ADC\_Group}!irq\_source\_inten@{irq\_source\_inten}}
+\index{irq\_source\_inten@{irq\_source\_inten}!ADC\_Group@{ADC\_Group}}
+\doxysubsubsection{\texorpdfstring{irq\_source\_inten}{irq\_source\_inten}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{class_a_d_c___group_aecd39a785d1264e30406f6d9e994629d}{A\+D\+C\+\_\+\+Group\+::irq\+\_\+source\+\_\+inten}}  \mbox{\hyperlink{class_a_d_c___group_aecd39a785d1264e30406f6d9e994629d}{A\+D\+C\+\_\+\+Group\+::irq\+\_\+source\+\_\+inten}}}
+
+Fuente de la interrupcion del \mbox{\hyperlink{class_a_d_c}{A\+DC}} ~\newline
+ 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_a_d_c___group_a699fdc6437dc203b9794017e046361dd}\label{class_a_d_c___group_a699fdc6437dc203b9794017e046361dd}} 
+\index{ADC\_Group@{ADC\_Group}!adc\_isr@{adc\_isr}}
+\index{adc\_isr@{adc\_isr}!ADC\_Group@{ADC\_Group}}
+\doxysubsubsection{\texorpdfstring{adc\_isr}{adc\_isr}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_a_d_c___group_a699fdc6437dc203b9794017e046361dd}{A\+D\+C\+\_\+\+Group\+::adc\+\_\+isr}}}
+
+Tipo de interrupciones del \mbox{\hyperlink{class_a_d_c}{A\+DC}} ~\newline
+ \mbox{\Hypertarget{class_a_d_c___group_a22ff37b4ea82d5cae396775d16701dc0}\label{class_a_d_c___group_a22ff37b4ea82d5cae396775d16701dc0}} 
+\index{ADC\_Group@{ADC\_Group}!error\_t@{error\_t}}
+\index{error\_t@{error\_t}!ADC\_Group@{ADC\_Group}}
+\doxysubsubsection{\texorpdfstring{error\_t}{error\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_a_d_c___group_a22ff37b4ea82d5cae396775d16701dc0}{A\+D\+C\+\_\+\+Group\+::error\+\_\+t}}}
+
+Error en la clase \mbox{\hyperlink{class_a_d_c}{A\+DC}} ~\newline
+ \mbox{\Hypertarget{class_a_d_c___group_aecd39a785d1264e30406f6d9e994629d}\label{class_a_d_c___group_aecd39a785d1264e30406f6d9e994629d}} 
+\index{ADC\_Group@{ADC\_Group}!irq\_source\_inten@{irq\_source\_inten}}
+\index{irq\_source\_inten@{irq\_source\_inten}!ADC\_Group@{ADC\_Group}}
+\doxysubsubsection{\texorpdfstring{irq\_source\_inten}{irq\_source\_inten}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_a_d_c___group_aecd39a785d1264e30406f6d9e994629d}{A\+D\+C\+\_\+\+Group\+::irq\+\_\+source\+\_\+inten}}}
+
+Fuente de la interrupcion del \mbox{\hyperlink{class_a_d_c}{A\+DC}} ~\newline
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_a_d_c___group_a27f2af1f7907d1c39ac92dc4dff6c248}\label{class_a_d_c___group_a27f2af1f7907d1c39ac92dc4dff6c248}} 
+\index{ADC\_Group@{ADC\_Group}!ADC\_Group@{ADC\_Group}}
+\index{ADC\_Group@{ADC\_Group}!ADC\_Group@{ADC\_Group}}
+\doxysubsubsection{\texorpdfstring{ADC\_Group()}{ADC\_Group()}}
+{\footnotesize\ttfamily A\+D\+C\+\_\+\+Group\+::\+A\+D\+C\+\_\+\+Group (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{clk\+\_\+freq,  }\item[{uint32\+\_\+t}]{sample\+\_\+rate,  }\item[{bool}]{init\+\_\+channel0 = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Constructor de clase \mbox{\hyperlink{class_a_d_c}{A\+DC}}. 
+
+Crea un \mbox{\hyperlink{class_a_d_c}{A\+DC}} con los parámetros correspondientes 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em clk\+\_\+freq} & Frecuencia del periférico \mbox{\hyperlink{class_a_d_c}{A\+DC}}. \\
+\hline
+\mbox{\texttt{ in}}  & {\em sample\+\_\+rate} & Frecuencia de muestreo del \mbox{\hyperlink{class_a_d_c}{A\+DC}}. \\
+\hline
+\mbox{\texttt{ in}}  & {\em init\+\_\+channel0} & Si se inicia el canal 0 o no. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_a_d_c___group_abd94324d603e620de71e1bafa45b7c97}\label{class_a_d_c___group_abd94324d603e620de71e1bafa45b7c97}} 
+\index{ADC\_Group@{ADC\_Group}!````~ADC\_Group@{$\sim$ADC\_Group}}
+\index{````~ADC\_Group@{$\sim$ADC\_Group}!ADC\_Group@{ADC\_Group}}
+\doxysubsubsection{\texorpdfstring{$\sim$ADC\_Group()}{~ADC\_Group()}}
+{\footnotesize\ttfamily virtual A\+D\+C\+\_\+\+Group\+::$\sim$\+A\+D\+C\+\_\+\+Group (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+Destructor por defecto 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_a_d_c___group_ae8b772223a466a4f5007905256d122cf}\label{class_a_d_c___group_ae8b772223a466a4f5007905256d122cf}} 
+\index{ADC\_Group@{ADC\_Group}!DisableIrq@{DisableIrq}}
+\index{DisableIrq@{DisableIrq}!ADC\_Group@{ADC\_Group}}
+\doxysubsubsection{\texorpdfstring{DisableIrq()}{DisableIrq()}}
+{\footnotesize\ttfamily void A\+D\+C\+\_\+\+Group\+::\+Disable\+Irq (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_a_d_c___group_aecd39a785d1264e30406f6d9e994629d}{irq\+\_\+source\+\_\+inten}}}]{irq }\end{DoxyParamCaption})}
+
+
+
+Deshabilita la interrupcion. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em irq} & Interrupcion a deshabilitar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_a_d_c___group_a4602c63689b2edc1d7ed8cadfbe0dc27}\label{class_a_d_c___group_a4602c63689b2edc1d7ed8cadfbe0dc27}} 
+\index{ADC\_Group@{ADC\_Group}!EnableIrq@{EnableIrq}}
+\index{EnableIrq@{EnableIrq}!ADC\_Group@{ADC\_Group}}
+\doxysubsubsection{\texorpdfstring{EnableIrq()}{EnableIrq()}}
+{\footnotesize\ttfamily void A\+D\+C\+\_\+\+Group\+::\+Enable\+Irq (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_a_d_c___group_aecd39a785d1264e30406f6d9e994629d}{irq\+\_\+source\+\_\+inten}}}]{irq }\end{DoxyParamCaption})}
+
+
+
+Habilita la interrupcion. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em irq} & Interrupcion a habilitar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_a_d_c___group_a2cd81e05842681e03f5d45e9d5ca5724}\label{class_a_d_c___group_a2cd81e05842681e03f5d45e9d5ca5724}} 
+\index{ADC\_Group@{ADC\_Group}!GetValue@{GetValue}}
+\index{GetValue@{GetValue}!ADC\_Group@{ADC\_Group}}
+\doxysubsubsection{\texorpdfstring{GetValue()}{GetValue()}}
+{\footnotesize\ttfamily int32\+\_\+t A\+D\+C\+\_\+\+Group\+::\+Get\+Value (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{channel }\end{DoxyParamCaption})}
+
+
+
+Devuelve el valor de conversión guardado en el buffer. NO EL A\+C\+T\+U\+AL D\+EL R\+E\+G\+I\+S\+T\+RO. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em channel} & Canal a obtener la conversión \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+valor de la conversión 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_a_d_c___group_afdd4b7bf63f4a2b10b816e2f2153ee86}\label{class_a_d_c___group_afdd4b7bf63f4a2b10b816e2f2153ee86}} 
+\index{ADC\_Group@{ADC\_Group}!Handler@{Handler}}
+\index{Handler@{Handler}!ADC\_Group@{ADC\_Group}}
+\doxysubsubsection{\texorpdfstring{Handler()}{Handler()}}
+{\footnotesize\ttfamily void A\+D\+C\+\_\+\+Group\+::\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_a_d_c___group_a699fdc6437dc203b9794017e046361dd}{adc\+\_\+isr}}}]{isr }\end{DoxyParamCaption})}
+
+
+
+Handler del \mbox{\hyperlink{class_a_d_c}{A\+DC}}. 
+
+Funcion Handler de todas las interrupciones posibles del \mbox{\hyperlink{class_a_d_c}{A\+DC}}. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em isr} & Tipo de interrupción \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_a_d_c___group_a953933b08eccca160aee4aec00bbe339}\label{class_a_d_c___group_a953933b08eccca160aee4aec00bbe339}} 
+\index{ADC\_Group@{ADC\_Group}!InitADCChanel@{InitADCChanel}}
+\index{InitADCChanel@{InitADCChanel}!ADC\_Group@{ADC\_Group}}
+\doxysubsubsection{\texorpdfstring{InitADCChanel()}{InitADCChanel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_a_d_c___group_a22ff37b4ea82d5cae396775d16701dc0}{A\+D\+C\+\_\+\+Group\+::error\+\_\+t}} A\+D\+C\+\_\+\+Group\+::\+Init\+A\+D\+C\+Chanel (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{channel }\end{DoxyParamCaption})}
+
+
+
+Inicializa el canal indicado con la secuencia A. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em channel} & Canal a inicializar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mensaje de error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_a_d_c___group_a2a621ca76d7f01ed13183ffc00007637}\label{class_a_d_c___group_a2a621ca76d7f01ed13183ffc00007637}} 
+\index{ADC\_Group@{ADC\_Group}!IsResultReady@{IsResultReady}}
+\index{IsResultReady@{IsResultReady}!ADC\_Group@{ADC\_Group}}
+\doxysubsubsection{\texorpdfstring{IsResultReady()}{IsResultReady()}}
+{\footnotesize\ttfamily bool A\+D\+C\+\_\+\+Group\+::\+Is\+Result\+Ready (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{channel }\end{DoxyParamCaption}) const}
+
+
+
+Indica si la conversión de channel está terminada o no. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em channel} & Canal a preguntar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+verdadero = conversión lista. falso = conversión en proceso 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_a_d_c___group_a4f35121b3d1799918ac55d0918d54ba4}\label{class_a_d_c___group_a4f35121b3d1799918ac55d0918d54ba4}} 
+\index{ADC\_Group@{ADC\_Group}!RemoveADCChanel@{RemoveADCChanel}}
+\index{RemoveADCChanel@{RemoveADCChanel}!ADC\_Group@{ADC\_Group}}
+\doxysubsubsection{\texorpdfstring{RemoveADCChanel()}{RemoveADCChanel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_a_d_c___group_a22ff37b4ea82d5cae396775d16701dc0}{A\+D\+C\+\_\+\+Group\+::error\+\_\+t}} A\+D\+C\+\_\+\+Group\+::\+Remove\+A\+D\+C\+Chanel (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{channel }\end{DoxyParamCaption})}
+
+
+
+Desconfigura el canal indicado de la secuencia A del \mbox{\hyperlink{class_a_d_c}{A\+DC}}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em channel} & Canal a desconfigurar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mensaje de error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_a_d_c___group_a883c19ba79117ef696065fc404a18132}\label{class_a_d_c___group_a883c19ba79117ef696065fc404a18132}} 
+\index{ADC\_Group@{ADC\_Group}!SetLowPowerMode@{SetLowPowerMode}}
+\index{SetLowPowerMode@{SetLowPowerMode}!ADC\_Group@{ADC\_Group}}
+\doxysubsubsection{\texorpdfstring{SetLowPowerMode()}{SetLowPowerMode()}}
+{\footnotesize\ttfamily void A\+D\+C\+\_\+\+Group\+::\+Set\+Low\+Power\+Mode (\begin{DoxyParamCaption}\item[{bool}]{low\+\_\+power }\end{DoxyParamCaption})}
+
+
+
+Activa/desactiva el modo de bajo consumo. 
+
+Configura el \mbox{\hyperlink{class_a_d_c}{A\+DC}} para no consumir energia al no realizar acciones o sí consumir. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em low\+\_\+power} & Valor de seteo del bajo consumo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_a_d_c___group_a8671a7fca8e2a3d952ee76a03c1de994}\label{class_a_d_c___group_a8671a7fca8e2a3d952ee76a03c1de994}} 
+\index{ADC\_Group@{ADC\_Group}!SetSampleRate@{SetSampleRate}}
+\index{SetSampleRate@{SetSampleRate}!ADC\_Group@{ADC\_Group}}
+\doxysubsubsection{\texorpdfstring{SetSampleRate()}{SetSampleRate()}}
+{\footnotesize\ttfamily void A\+D\+C\+\_\+\+Group\+::\+Set\+Sample\+Rate (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Setea la frecuencia de muestreo. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_a_d_c___group_a54ea07c288f761685e1fc694c54aac4a}\label{class_a_d_c___group_a54ea07c288f761685e1fc694c54aac4a}} 
+\index{ADC\_Group@{ADC\_Group}!TriggerStartSeqA@{TriggerStartSeqA}}
+\index{TriggerStartSeqA@{TriggerStartSeqA}!ADC\_Group@{ADC\_Group}}
+\doxysubsubsection{\texorpdfstring{TriggerStartSeqA()}{TriggerStartSeqA()}}
+{\footnotesize\ttfamily void A\+D\+C\+\_\+\+Group\+::\+Trigger\+Start\+SeqA (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Inicia la conversión analógica -\/ digital de la secuencia A. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/\+Agustin/\+Escritorio/\+M\+C\+Uexpresso/\+Kit\+L\+P\+C845-\/\+C++/src/\+Drivers/\+Perifericos/12-\/\+A\+D\+C/A\+D\+C\+Group.\+h\item 
+E\+:/\+Agustin/\+Escritorio/\+M\+C\+Uexpresso/\+Kit\+L\+P\+C845-\/\+C++/src/\+Drivers/\+Perifericos/12-\/\+A\+D\+C/\mbox{\hyperlink{_a_d_c_group_8cpp}{A\+D\+C\+Group.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,122 @@
+\hypertarget{class_m_r_thandler}{}\doxysection{M\+R\+Thandler Class Reference}
+\label{class_m_r_thandler}\index{MRThandler@{MRThandler}}
+
+
+Clase del objeto \mbox{\hyperlink{class_m_r_thandler}{M\+R\+Thandler}} El objeto \mbox{\hyperlink{class_m_r_thandler}{M\+R\+Thandler}} debe ser heredado por cualquier objeto que desee estar conectado a las interrupciones del M\+RT timer.  
+
+
+
+
+{\ttfamily \#include $<$M\+R\+Thandler.\+h$>$}
+
+
+
+Inheritance diagram for M\+R\+Thandler\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_m_r_thandler_a405dfe71d543b8cf4f75a09cae53e6fc}{M\+R\+Thandler}} (M\+R\+T\+\_\+timer\+\_\+channels \+\_\+timer\+\_\+number, M\+R\+T\+\_\+\+M\+O\+D\+ES mode)
+\begin{DoxyCompactList}\small\item\em Constructor de clase \mbox{\hyperlink{class_m_r_thandler}{M\+R\+Thandler}}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_m_r_thandler_a9a0e1d2c7eb054758b516f581cf80e7f}{$\sim$\+M\+R\+Thandler}} ()=default
+\item 
+virtual void \mbox{\hyperlink{class_m_r_thandler_af0cab74c1b1842bb3ec1d9f7ac34cf5c}{Handler}} (void)=0
+\item 
+\mbox{\Hypertarget{class_m_r_thandler_a93bad50c900842aa212ef214b71d539e}\label{class_m_r_thandler_a93bad50c900842aa212ef214b71d539e}} 
+void \mbox{\hyperlink{class_m_r_thandler_a93bad50c900842aa212ef214b71d539e}{Eneable\+Interrupt}} (void)
+\begin{DoxyCompactList}\small\item\em Activa la interrupcion. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_m_r_thandler_a2f45f9123b8b9eb19ee4e676b545e304}\label{class_m_r_thandler_a2f45f9123b8b9eb19ee4e676b545e304}} 
+void \mbox{\hyperlink{class_m_r_thandler_a2f45f9123b8b9eb19ee4e676b545e304}{Disable\+Interrupt}} (void)
+\begin{DoxyCompactList}\small\item\em Desactiva la interrupcion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const M\+R\+T\+\_\+timer\+\_\+channels \mbox{\hyperlink{class_m_r_thandler_a08fe21399ff517aabf08fc7f83709329}{m\+\_\+timer\+\_\+channel}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_m_r_thandler_a8ec5143312e26a2ccf137ca5f007e46b}{M\+R\+T\+\_\+reset\+\_\+time}} (void)
+\begin{DoxyCompactList}\small\item\em Resetea el timer. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{class_m_r_thandler_a6ae80256f546424778e641da4926c9db}{M\+R\+T\+\_\+get\+\_\+time}} (void)
+\begin{DoxyCompactList}\small\item\em Devuelve el valor del timer en el momento actual. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase del objeto \mbox{\hyperlink{class_m_r_thandler}{M\+R\+Thandler}} El objeto \mbox{\hyperlink{class_m_r_thandler}{M\+R\+Thandler}} debe ser heredado por cualquier objeto que desee estar conectado a las interrupciones del M\+RT timer. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_m_r_thandler_a405dfe71d543b8cf4f75a09cae53e6fc}\label{class_m_r_thandler_a405dfe71d543b8cf4f75a09cae53e6fc}} 
+\index{MRThandler@{MRThandler}!MRThandler@{MRThandler}}
+\index{MRThandler@{MRThandler}!MRThandler@{MRThandler}}
+\doxysubsubsection{\texorpdfstring{MRThandler()}{MRThandler()}}
+{\footnotesize\ttfamily M\+R\+Thandler\+::\+M\+R\+Thandler (\begin{DoxyParamCaption}\item[{M\+R\+T\+\_\+timer\+\_\+channels}]{\+\_\+timer\+\_\+number,  }\item[{M\+R\+T\+\_\+\+M\+O\+D\+ES}]{mode }\end{DoxyParamCaption})}
+
+
+
+Constructor de clase \mbox{\hyperlink{class_m_r_thandler}{M\+R\+Thandler}}. 
+
+Crea un \mbox{\hyperlink{class_m_r_thandler}{M\+R\+Thandler}} con el canal correspondiente 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em \+\_\+timer\+\_\+number} & Canal del \mbox{\hyperlink{class_m_r_thandler}{M\+R\+Thandler}}. \\
+\hline
+\mbox{\texttt{ in}}  & {\em mode} & Modo del \mbox{\hyperlink{class_m_r_thandler}{M\+R\+Thandler}}. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_m_r_thandler_a9a0e1d2c7eb054758b516f581cf80e7f}\label{class_m_r_thandler_a9a0e1d2c7eb054758b516f581cf80e7f}} 
+\index{MRThandler@{MRThandler}!````~MRThandler@{$\sim$MRThandler}}
+\index{````~MRThandler@{$\sim$MRThandler}!MRThandler@{MRThandler}}
+\doxysubsubsection{\texorpdfstring{$\sim$MRThandler()}{~MRThandler()}}
+{\footnotesize\ttfamily virtual M\+R\+Thandler\+::$\sim$\+M\+R\+Thandler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+Destructor por defecto 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_m_r_thandler_af0cab74c1b1842bb3ec1d9f7ac34cf5c}\label{class_m_r_thandler_af0cab74c1b1842bb3ec1d9f7ac34cf5c}} 
+\index{MRThandler@{MRThandler}!Handler@{Handler}}
+\index{Handler@{Handler}!MRThandler@{MRThandler}}
+\doxysubsubsection{\texorpdfstring{Handler()}{Handler()}}
+{\footnotesize\ttfamily virtual void M\+R\+Thandler\+::\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Este método debe ser implementado por las clases derivadas cada una resolverá que hacer con su irq enganchada al systick del sistema ~\newline
+ \mbox{\Hypertarget{class_m_r_thandler_a6ae80256f546424778e641da4926c9db}\label{class_m_r_thandler_a6ae80256f546424778e641da4926c9db}} 
+\index{MRThandler@{MRThandler}!MRT\_get\_time@{MRT\_get\_time}}
+\index{MRT\_get\_time@{MRT\_get\_time}!MRThandler@{MRThandler}}
+\doxysubsubsection{\texorpdfstring{MRT\_get\_time()}{MRT\_get\_time()}}
+{\footnotesize\ttfamily uint32\+\_\+t M\+R\+Thandler\+::\+M\+R\+T\+\_\+get\+\_\+time (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Devuelve el valor del timer en el momento actual. 
+
+Lee el registro del contador M\+RT del canal correspondiente. \begin{DoxyReturn}{Returns}
+devuelve el valor del timer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_m_r_thandler_a8ec5143312e26a2ccf137ca5f007e46b}\label{class_m_r_thandler_a8ec5143312e26a2ccf137ca5f007e46b}} 
+\index{MRThandler@{MRThandler}!MRT\_reset\_time@{MRT\_reset\_time}}
+\index{MRT\_reset\_time@{MRT\_reset\_time}!MRThandler@{MRThandler}}
+\doxysubsubsection{\texorpdfstring{MRT\_reset\_time()}{MRT\_reset\_time()}}
+{\footnotesize\ttfamily void M\+R\+Thandler\+::\+M\+R\+T\+\_\+reset\+\_\+time (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Resetea el timer. 
+
+Vuelve a cargar el tiempo máximo en el registro. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_m_r_thandler_a08fe21399ff517aabf08fc7f83709329}\label{class_m_r_thandler_a08fe21399ff517aabf08fc7f83709329}} 
+\index{MRThandler@{MRThandler}!m\_timer\_channel@{m\_timer\_channel}}
+\index{m\_timer\_channel@{m\_timer\_channel}!MRThandler@{MRThandler}}
+\doxysubsubsection{\texorpdfstring{m\_timer\_channel}{m\_timer\_channel}}
+{\footnotesize\ttfamily const M\+R\+T\+\_\+timer\+\_\+channels M\+R\+Thandler\+::m\+\_\+timer\+\_\+channel}
+
+Canal del objeto M\+RT 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/\+Agustin/\+Escritorio/\+M\+C\+Uexpresso/\+Kit\+L\+P\+C845-\/\+C++/src/\+Drivers/\+Perifericos/09-\/\+Multi\+Rate\+Timer/M\+R\+Thandler.\+h\item 
+E\+:/\+Agustin/\+Escritorio/\+M\+C\+Uexpresso/\+Kit\+L\+P\+C845-\/\+C++/src/\+Drivers/\+Perifericos/09-\/\+Multi\+Rate\+Timer/\mbox{\hyperlink{_m_r_thandler_8cpp}{M\+R\+Thandler.\+cpp}}\end{DoxyCompactItemize}

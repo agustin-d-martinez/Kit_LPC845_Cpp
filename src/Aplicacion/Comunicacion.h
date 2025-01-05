@@ -17,8 +17,7 @@
  *** INCLUDES GLOBALES
  **********************************************************************************************************************************/
 #include "tipos.h"
-#include "uart.h"
-#include "Reloj.h"
+#include "Drivers.h"
 #include <vector>
 #include <stdlib.h>     /* atoi */
 #include "string.h"		/* strlen , strcmp , strchr */

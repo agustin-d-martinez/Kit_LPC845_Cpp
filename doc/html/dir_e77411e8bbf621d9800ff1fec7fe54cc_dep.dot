@@ -1,0 +1,11 @@
+digraph "E:/Agustin/Escritorio/MCUexpresso/KitLPC845-C++/src/Drivers/Perifericos/08-Timers" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_fddceb55b13f36ba841fc9095bbfed65 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="Perifericos" fontname="Helvetica", fontsize="10", URL="dir_fddceb55b13f36ba841fc9095bbfed65.html"]
+  dir_e77411e8bbf621d9800ff1fec7fe54cc [shape=box, label="08-Timers", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_e77411e8bbf621d9800ff1fec7fe54cc.html"];
+  }
+  dir_b0f89ed33f99852ed33a835d9d36116b [shape=box label="07-Timer" URL="dir_b0f89ed33f99852ed33a835d9d36116b.html"];
+  dir_e77411e8bbf621d9800ff1fec7fe54cc->dir_b0f89ed33f99852ed33a835d9d36116b [headlabel="1", labeldistance=1.5 headhref="dir_000024_000023.html"];
+}

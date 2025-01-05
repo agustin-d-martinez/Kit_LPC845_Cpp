@@ -1,0 +1,207 @@
+\hypertarget{class_l298_n}{}\doxysection{L298N Class Reference}
+\label{class_l298_n}\index{L298N@{L298N}}
+
+
+Clase del objeto \mbox{\hyperlink{class_l298_n}{L298N}} El objeto \mbox{\hyperlink{class_l298_n}{L298N}} realiza las acciones de control de dos motores controlados por el correspondiente periférico.  
+
+
+
+
+{\ttfamily \#include $<$L298\+N.\+h$>$}
+
+
+
+Inheritance diagram for L298N\+:
+% FIG 0
+
+
+Collaboration diagram for L298N\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_l298_n_a34832eec84905e8c8169649b6474d50c}{L298N}} (\mbox{\hyperlink{classgpio}{gpio}} $\ast$\&\+\_\+motor\+Der\+\_\+a, \mbox{\hyperlink{classgpio}{gpio}} $\ast$\&\+\_\+motor\+Der\+\_\+b, \mbox{\hyperlink{classgpio}{gpio}} $\ast$\&\+\_\+motor\+Izq\+\_\+a, \mbox{\hyperlink{classgpio}{gpio}} $\ast$\&\+\_\+motor\+Izq\+\_\+b)
+\begin{DoxyCompactList}\small\item\em Constructor de clase \mbox{\hyperlink{class_l298_n}{L298N}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_l298_n_a8a0addc8fe33a56bd2f69e674ef14994}{Inicializar}} (void)
+\begin{DoxyCompactList}\small\item\em Inicializa todas las salidas G\+P\+IO. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_l298_n_ad65f236f7c0315d1759fb2ac51215662}{Girar\+Izq}} (void)
+\begin{DoxyCompactList}\small\item\em Gira a la izquierda. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_l298_n_a88c211605d7606fe91768f729eedd556}{Girar\+Der}} (void)
+\begin{DoxyCompactList}\small\item\em Gira a la derecha. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_l298_n_abf6f56bf7cbdf90808b485602340107d}{Girar}} (const uint8\+\_\+t direccion)
+\begin{DoxyCompactList}\small\item\em Gira el motor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_l298_n_a024bfc6cad33539eb9e173d435c79534}{Frenar}} (void)
+\begin{DoxyCompactList}\small\item\em Frena el motor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_l298_n_aebf2a15e12f176381d8f290a9bd92527}{Avanzar}} (void)
+\begin{DoxyCompactList}\small\item\em Avanza los motores. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_l298_n_ae79a910c45837346ebca0eb2beb53653}{Retroceder}} (void)
+\begin{DoxyCompactList}\small\item\em Pone los motores marcha atrás. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_l298_n_a599d18e7d2147b567adb6030016b9093}{$\sim$\+L298N}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Clase del objeto \mbox{\hyperlink{class_l298_n}{L298N}} El objeto \mbox{\hyperlink{class_l298_n}{L298N}} realiza las acciones de control de dos motores controlados por el correspondiente periférico. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_l298_n_a34832eec84905e8c8169649b6474d50c}\label{class_l298_n_a34832eec84905e8c8169649b6474d50c}} 
+\index{L298N@{L298N}!L298N@{L298N}}
+\index{L298N@{L298N}!L298N@{L298N}}
+\doxysubsubsection{\texorpdfstring{L298N()}{L298N()}}
+{\footnotesize\ttfamily L298\+N\+::\+L298N (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgpio}{gpio}} $\ast$\&}]{\+\_\+motor\+Der\+\_\+a,  }\item[{\mbox{\hyperlink{classgpio}{gpio}} $\ast$\&}]{\+\_\+motor\+Der\+\_\+b,  }\item[{\mbox{\hyperlink{classgpio}{gpio}} $\ast$\&}]{\+\_\+motor\+Izq\+\_\+a,  }\item[{\mbox{\hyperlink{classgpio}{gpio}} $\ast$\&}]{\+\_\+motor\+Izq\+\_\+b }\end{DoxyParamCaption})}
+
+
+
+Constructor de clase \mbox{\hyperlink{class_l298_n}{L298N}}. 
+
+Crea un \mbox{\hyperlink{class_l298_n}{L298N}} con los parámetros correspondientes 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em \+\_\+motor\+Der\+\_\+a} & Puntero a gpio del motor derecho A. \\
+\hline
+\mbox{\texttt{ in}}  & {\em \+\_\+motor\+Der\+\_\+b} & Puntero a gpio del motor derecho B. \\
+\hline
+\mbox{\texttt{ in}}  & {\em \+\_\+motor\+Izq\+\_\+a} & Puntero a gpio del motor izquierdo A. \\
+\hline
+\mbox{\texttt{ in}}  & {\em \+\_\+motor\+Izq\+\_\+b} & Puntero a gpio del motor izquierdo B. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_l298_n_a599d18e7d2147b567adb6030016b9093}\label{class_l298_n_a599d18e7d2147b567adb6030016b9093}} 
+\index{L298N@{L298N}!````~L298N@{$\sim$L298N}}
+\index{````~L298N@{$\sim$L298N}!L298N@{L298N}}
+\doxysubsubsection{\texorpdfstring{$\sim$L298N()}{~L298N()}}
+{\footnotesize\ttfamily L298\+N\+::$\sim$\+L298N (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Destructor por defecto 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_l298_n_aebf2a15e12f176381d8f290a9bd92527}\label{class_l298_n_aebf2a15e12f176381d8f290a9bd92527}} 
+\index{L298N@{L298N}!Avanzar@{Avanzar}}
+\index{Avanzar@{Avanzar}!L298N@{L298N}}
+\doxysubsubsection{\texorpdfstring{Avanzar()}{Avanzar()}}
+{\footnotesize\ttfamily void L298\+N\+::\+Avanzar (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Avanza los motores. 
+
+Enciende los 2 motores con tensión en la pata A. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_puente___h_ad454ecc01a0b793104c88f83e34d2f86}{Puente\+\_\+H}}.
+
+\mbox{\Hypertarget{class_l298_n_a024bfc6cad33539eb9e173d435c79534}\label{class_l298_n_a024bfc6cad33539eb9e173d435c79534}} 
+\index{L298N@{L298N}!Frenar@{Frenar}}
+\index{Frenar@{Frenar}!L298N@{L298N}}
+\doxysubsubsection{\texorpdfstring{Frenar()}{Frenar()}}
+{\footnotesize\ttfamily void L298\+N\+::\+Frenar (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Frena el motor. 
+
+Deja las cuatro salidas en 0. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_puente___h_a5b32379b2b6be0013bb0f1a540b17180}{Puente\+\_\+H}}.
+
+\mbox{\Hypertarget{class_l298_n_abf6f56bf7cbdf90808b485602340107d}\label{class_l298_n_abf6f56bf7cbdf90808b485602340107d}} 
+\index{L298N@{L298N}!Girar@{Girar}}
+\index{Girar@{Girar}!L298N@{L298N}}
+\doxysubsubsection{\texorpdfstring{Girar()}{Girar()}}
+{\footnotesize\ttfamily void L298\+N\+::\+Girar (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t}]{direccion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gira el motor. 
+
+Utilizando la enumeración de PuenteH realiza el giro correspondiente. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em direccion} & Dirección del giro (I\+Z\+Q\+U\+I\+E\+R\+DA = 0 , D\+E\+R\+E\+C\+HA = 1) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_puente___h_ab1368aabff7b8756e7538dc96e0fa72a}{Puente\+\_\+H}}.
+
+\mbox{\Hypertarget{class_l298_n_a88c211605d7606fe91768f729eedd556}\label{class_l298_n_a88c211605d7606fe91768f729eedd556}} 
+\index{L298N@{L298N}!GirarDer@{GirarDer}}
+\index{GirarDer@{GirarDer}!L298N@{L298N}}
+\doxysubsubsection{\texorpdfstring{GirarDer()}{GirarDer()}}
+{\footnotesize\ttfamily void L298\+N\+::\+Girar\+Der (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gira a la derecha. 
+
+Energiza solamente el motor 2 de forma directa. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_puente___h_a9e5e72418427f0c212623ee0cd2eeed8}{Puente\+\_\+H}}.
+
+\mbox{\Hypertarget{class_l298_n_ad65f236f7c0315d1759fb2ac51215662}\label{class_l298_n_ad65f236f7c0315d1759fb2ac51215662}} 
+\index{L298N@{L298N}!GirarIzq@{GirarIzq}}
+\index{GirarIzq@{GirarIzq}!L298N@{L298N}}
+\doxysubsubsection{\texorpdfstring{GirarIzq()}{GirarIzq()}}
+{\footnotesize\ttfamily void L298\+N\+::\+Girar\+Izq (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gira a la izquierda. 
+
+Energiza solamente el motor 1 de forma directa. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_puente___h_a83036fbcc553763f5b1fa8953345518e}{Puente\+\_\+H}}.
+
+\mbox{\Hypertarget{class_l298_n_a8a0addc8fe33a56bd2f69e674ef14994}\label{class_l298_n_a8a0addc8fe33a56bd2f69e674ef14994}} 
+\index{L298N@{L298N}!Inicializar@{Inicializar}}
+\index{Inicializar@{Inicializar}!L298N@{L298N}}
+\doxysubsubsection{\texorpdfstring{Inicializar()}{Inicializar()}}
+{\footnotesize\ttfamily void L298\+N\+::\+Inicializar (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Inicializa todas las salidas G\+P\+IO. 
+
+Setea la dirección y apaga todas las G\+P\+IO que posee. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_puente___h_a5d4f34a1327223d982a83c8cd3c95dda}{Puente\+\_\+H}}.
+
+\mbox{\Hypertarget{class_l298_n_ae79a910c45837346ebca0eb2beb53653}\label{class_l298_n_ae79a910c45837346ebca0eb2beb53653}} 
+\index{L298N@{L298N}!Retroceder@{Retroceder}}
+\index{Retroceder@{Retroceder}!L298N@{L298N}}
+\doxysubsubsection{\texorpdfstring{Retroceder()}{Retroceder()}}
+{\footnotesize\ttfamily void L298\+N\+::\+Retroceder (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Pone los motores marcha atrás. 
+
+Enciende los motores en sentido contrario a \char`\"{}avanzar\char`\"{}. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_puente___h_a854c7a3b85fecbc02740c2175d498b49}{Puente\+\_\+H}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/\+Agustin/\+Escritorio/\+M\+C\+Uexpresso/\+Kit\+L\+P\+C845-\/\+C++/src/\+Drivers/\+Hardware/03-\/\+Puente\+\_\+\+H/\mbox{\hyperlink{_l298_n_8h}{L298\+N.\+h}}\item 
+E\+:/\+Agustin/\+Escritorio/\+M\+C\+Uexpresso/\+Kit\+L\+P\+C845-\/\+C++/src/\+Drivers/\+Hardware/03-\/\+Puente\+\_\+\+H/L298\+N.\+cpp\end{DoxyCompactItemize}

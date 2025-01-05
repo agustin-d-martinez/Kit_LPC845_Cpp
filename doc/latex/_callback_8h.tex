@@ -1,0 +1,66 @@
+\hypertarget{_callback_8h}{}\doxysection{E\+:/\+Agustin/\+Escritorio/\+M\+C\+Uexpresso/\+Kit\+L\+P\+C845-\/\+C++/src/\+Drivers/\+Perifericos/06-\/\+Callback/\+Callback.h File Reference}
+\label{_callback_8h}\index{E:/Agustin/Escritorio/MCUexpresso/KitLPC845-\/C++/src/Drivers/Perifericos/06-\/Callback/Callback.h@{E:/Agustin/Escritorio/MCUexpresso/KitLPC845-\/C++/src/Drivers/Perifericos/06-\/Callback/Callback.h}}
+
+
+Clase virtual pura. Esta clase debe ser heredada por las clases que se tienen que enganchar del Systick \mbox{\hyperlink{class_timer}{Timer}}.  
+
+
+{\ttfamily \#include $<$L\+P\+C845.\+h$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$systick.\+h$>$}\newline
+Include dependency graph for Callback.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_callback}{Callback}}
+\begin{DoxyCompactList}\small\item\em Clase del objeto \mbox{\hyperlink{class_callback}{Callback}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_callback_8h_a263c5d9f9ef90e360e7016ead1bb017c}{T\+I\+C\+K\+\_\+\+S\+E\+C\+O\+N\+DS}}(x)~((x) $\ast$ g\+\_\+systick\+\_\+freq)
+\item 
+\#define \mbox{\hyperlink{_callback_8h_aec80962290f5e767ca47664c54f1f5b7}{T\+I\+C\+K\+\_\+\+M\+I\+L\+I\+S\+E\+C\+O\+N\+DS}}(x)~((x) $\ast$ (g\+\_\+systick\+\_\+freq/1000))
+\item 
+\#define \mbox{\hyperlink{_callback_8h_a28417290afa606fda3926a6f5e794173}{T\+I\+C\+K\+\_\+\+M\+I\+C\+R\+O\+S\+E\+C\+O\+N\+DS}}(x)~((x) $\ast$ (g\+\_\+systick\+\_\+freq/1000000))
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \mbox{\hyperlink{class_callback}{Callback}} $\ast$ $>$ \mbox{\hyperlink{group___drivers_ga59b1079176c0f4559cc0a70aebd6aab4}{g\+\_\+\+Handler}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase virtual pura. Esta clase debe ser heredada por las clases que se tienen que enganchar del Systick \mbox{\hyperlink{class_timer}{Timer}}. 
+
+\begin{DoxyDate}{Date}
+4 may. 2022 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Ing. Marcelo Trujillo 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_callback_8h_a28417290afa606fda3926a6f5e794173}\label{_callback_8h_a28417290afa606fda3926a6f5e794173}} 
+\index{Callback.h@{Callback.h}!TICK\_MICROSECONDS@{TICK\_MICROSECONDS}}
+\index{TICK\_MICROSECONDS@{TICK\_MICROSECONDS}!Callback.h@{Callback.h}}
+\doxysubsubsection{\texorpdfstring{TICK\_MICROSECONDS}{TICK\_MICROSECONDS}}
+{\footnotesize\ttfamily \#define T\+I\+C\+K\+\_\+\+M\+I\+C\+R\+O\+S\+E\+C\+O\+N\+DS(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~((x) $\ast$ (g\+\_\+systick\+\_\+freq/1000000))}
+
+M\+A\+C\+RO expresion to obtain the corresponding T\+I\+C\+KS for \char`\"{}x\char`\"{} microseconds \mbox{\Hypertarget{_callback_8h_aec80962290f5e767ca47664c54f1f5b7}\label{_callback_8h_aec80962290f5e767ca47664c54f1f5b7}} 
+\index{Callback.h@{Callback.h}!TICK\_MILISECONDS@{TICK\_MILISECONDS}}
+\index{TICK\_MILISECONDS@{TICK\_MILISECONDS}!Callback.h@{Callback.h}}
+\doxysubsubsection{\texorpdfstring{TICK\_MILISECONDS}{TICK\_MILISECONDS}}
+{\footnotesize\ttfamily \#define T\+I\+C\+K\+\_\+\+M\+I\+L\+I\+S\+E\+C\+O\+N\+DS(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~((x) $\ast$ (g\+\_\+systick\+\_\+freq/1000))}
+
+M\+A\+C\+RO expresion to obtain the corresponding T\+I\+C\+KS for \char`\"{}x\char`\"{} miliseconds \mbox{\Hypertarget{_callback_8h_a263c5d9f9ef90e360e7016ead1bb017c}\label{_callback_8h_a263c5d9f9ef90e360e7016ead1bb017c}} 
+\index{Callback.h@{Callback.h}!TICK\_SECONDS@{TICK\_SECONDS}}
+\index{TICK\_SECONDS@{TICK\_SECONDS}!Callback.h@{Callback.h}}
+\doxysubsubsection{\texorpdfstring{TICK\_SECONDS}{TICK\_SECONDS}}
+{\footnotesize\ttfamily \#define T\+I\+C\+K\+\_\+\+S\+E\+C\+O\+N\+DS(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~((x) $\ast$ g\+\_\+systick\+\_\+freq)}
+
+M\+A\+C\+RO expresion to obtain the corresponding T\+I\+C\+KS for \char`\"{}x\char`\"{} Seconds 

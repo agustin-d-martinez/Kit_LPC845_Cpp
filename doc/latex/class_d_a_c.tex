@@ -1,0 +1,337 @@
+\hypertarget{class_d_a_c}{}\doxysection{D\+AC Class Reference}
+\label{class_d_a_c}\index{DAC@{DAC}}
+
+
+Clase del objeto \mbox{\hyperlink{class_d_a_c}{D\+AC}} F\+U\+N\+C\+I\+O\+N\+A\+M\+I\+E\+N\+TO\+: Realiza una conversion digital-\/$>$analógica en un rango desde 0 hasta max\+\_\+range. El rango real del L\+P\+C845 va de 0 hasta 1023. Se realiza una conversion lineal entre el rango del dispositivo y el utilizado por el usuario. NO U\+S\+AR EL C\+H\+A\+N\+N\+EL 1. El canal existe segun datasheet pero los registros son vagos y poco explicativos. Corresponde al P\+I\+N\+E\+N\+A\+B\+LE. Recomendado utilizar solo el C\+H\+A\+N\+N\+EL 0.  
+
+
+
+
+{\ttfamily \#include $<$D\+A\+C.\+h$>$}
+
+
+
+Inheritance diagram for D\+AC\+:
+% FIG 0
+
+
+Collaboration diagram for D\+AC\+:
+% FIG 1
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_d_a_c_a9560ddef55af03b248f1ee0a47075275}{dac\+\_\+channel}} \{ {\bfseries D\+A\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+0} = 0, 
+{\bfseries D\+A\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+1} = 1
+ \}
+\item 
+enum \mbox{\hyperlink{class_d_a_c_a5f499c13c400fb60572ce0b7d3a0be73}{dac\+\_\+error}} \{ {\bfseries E\+R\+R\+OR} = -\/1, 
+{\bfseries OK} = 0
+ \}
+\item 
+typedef enum \mbox{\hyperlink{class_d_a_c_a9560ddef55af03b248f1ee0a47075275}{D\+A\+C\+::dac\+\_\+channel}} \mbox{\hyperlink{class_d_a_c_ae96d9030e4e8203f0b4cbe8fb4f99222}{dac\+\_\+channel}}
+\item 
+typedef enum \mbox{\hyperlink{class_d_a_c_a5f499c13c400fb60572ce0b7d3a0be73}{D\+A\+C\+::dac\+\_\+error}} \mbox{\hyperlink{class_d_a_c_a3c38a1c9eaff9cec3f1a83d0112187f7}{dac\+\_\+error}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_d_a_c_a45d6108230365ffdd146518ba44f224f}{D\+AC}} (\mbox{\hyperlink{class_d_a_c_a9560ddef55af03b248f1ee0a47075275}{dac\+\_\+channel}} channel, uint32\+\_\+t max\+\_\+range=\mbox{\hyperlink{_d_a_c_8h_ae191bd669b0350508de8f1066229c809}{M\+A\+X\+\_\+\+D\+A\+C\+\_\+\+V\+A\+L\+UE}})
+\begin{DoxyCompactList}\small\item\em Constructor de clase \mbox{\hyperlink{class_d_a_c}{D\+AC}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_d_a_c_a5f499c13c400fb60572ce0b7d3a0be73}{D\+A\+C\+::dac\+\_\+error}} \mbox{\hyperlink{class_d_a_c_a3a8c6ad5c3035087787584c8054fc073}{Inicializar}} (void)
+\begin{DoxyCompactList}\small\item\em Inicializa el \mbox{\hyperlink{class_d_a_c}{D\+AC}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_d_a_c_a42cdf9cb502fc8234a0b9698acada507}{Set}} (uint32\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Setea el valor del \mbox{\hyperlink{class_d_a_c}{D\+AC}}. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{class_d_a_c_a3f9efa0d5af1b6a308027a798be02a57}{Get}} (void) const
+\begin{DoxyCompactList}\small\item\em Devuelve el valor analógico del \mbox{\hyperlink{class_d_a_c}{D\+AC}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_d_a_c_af0c5969c5ac8d8a10ab06e35f1b12c66}{Set\+Max\+Range}} (uint32\+\_\+t max\+\_\+range)
+\begin{DoxyCompactList}\small\item\em Setea el rango máximo. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{class_d_a_c_a4d2ecd1ae0ae5866257018072d923ac3}{Get\+Max\+Range}} (void) const
+\begin{DoxyCompactList}\small\item\em Devuelve el rango máximo que posee el \mbox{\hyperlink{class_d_a_c}{D\+AC}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_d_a_c}{D\+AC}} \& \mbox{\hyperlink{class_d_a_c_af3bcc3ecf987cc1a13520253e876155a}{operator=}} (uint32\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Sobrecarga del operador =. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_d_a_c_afdcebcde389be5087c67e90f22612ba3}{operator==}} (uint32\+\_\+t val) const
+\begin{DoxyCompactList}\small\item\em Sobrecarga del operador ==. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_d_a_c_a3d6022ab240c44446f15592056e5bf84}{operator$<$}} (uint32\+\_\+t val) const
+\begin{DoxyCompactList}\small\item\em Sobrecarga del operador $<$. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_d_a_c_a1208b1ed85f07f4521ca4edec1854dc6}{operator$<$=}} (uint32\+\_\+t val) const
+\begin{DoxyCompactList}\small\item\em Sobrecarga del operador $<$=. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_d_a_c_a7983314f92ba3c948c154269255cfbf9}{operator$>$}} (uint32\+\_\+t val) const
+\begin{DoxyCompactList}\small\item\em Sobrecarga del operador $>$ \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_d_a_c_a1c05f3c9ca7ceb8adb44c276e33ff31a}{operator$>$=}} (uint32\+\_\+t val) const
+\begin{DoxyCompactList}\small\item\em Sobrecarga del operador $>$=. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_d_a_c_a77a8287cdab41a4894d2693a77d1d6b9}{operator!=}} (uint32\+\_\+t val) const
+\begin{DoxyCompactList}\small\item\em Sobrecarga del operador !=. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_d_a_c_a2a8f4f13338b7020e63c1ea04874e8a1}{$\sim$\+D\+AC}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Clase del objeto \mbox{\hyperlink{class_d_a_c}{D\+AC}} F\+U\+N\+C\+I\+O\+N\+A\+M\+I\+E\+N\+TO\+: Realiza una conversion digital-\/$>$analógica en un rango desde 0 hasta max\+\_\+range. El rango real del L\+P\+C845 va de 0 hasta 1023. Se realiza una conversion lineal entre el rango del dispositivo y el utilizado por el usuario. NO U\+S\+AR EL C\+H\+A\+N\+N\+EL 1. El canal existe segun datasheet pero los registros son vagos y poco explicativos. Corresponde al P\+I\+N\+E\+N\+A\+B\+LE. Recomendado utilizar solo el C\+H\+A\+N\+N\+EL 0. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_d_a_c_ae96d9030e4e8203f0b4cbe8fb4f99222}\label{class_d_a_c_ae96d9030e4e8203f0b4cbe8fb4f99222}} 
+\index{DAC@{DAC}!dac\_channel@{dac\_channel}}
+\index{dac\_channel@{dac\_channel}!DAC@{DAC}}
+\doxysubsubsection{\texorpdfstring{dac\_channel}{dac\_channel}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{class_d_a_c_a9560ddef55af03b248f1ee0a47075275}{D\+A\+C\+::dac\+\_\+channel}}  \mbox{\hyperlink{class_d_a_c_a9560ddef55af03b248f1ee0a47075275}{D\+A\+C\+::dac\+\_\+channel}}}
+
+Canales del \mbox{\hyperlink{class_d_a_c}{D\+AC}} \mbox{\Hypertarget{class_d_a_c_a3c38a1c9eaff9cec3f1a83d0112187f7}\label{class_d_a_c_a3c38a1c9eaff9cec3f1a83d0112187f7}} 
+\index{DAC@{DAC}!dac\_error@{dac\_error}}
+\index{dac\_error@{dac\_error}!DAC@{DAC}}
+\doxysubsubsection{\texorpdfstring{dac\_error}{dac\_error}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{class_d_a_c_a5f499c13c400fb60572ce0b7d3a0be73}{D\+A\+C\+::dac\+\_\+error}}  \mbox{\hyperlink{class_d_a_c_a5f499c13c400fb60572ce0b7d3a0be73}{D\+A\+C\+::dac\+\_\+error}}}
+
+Error en la clase \mbox{\hyperlink{class_d_a_c}{D\+AC}} ~\newline
+ 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_d_a_c_a9560ddef55af03b248f1ee0a47075275}\label{class_d_a_c_a9560ddef55af03b248f1ee0a47075275}} 
+\index{DAC@{DAC}!dac\_channel@{dac\_channel}}
+\index{dac\_channel@{dac\_channel}!DAC@{DAC}}
+\doxysubsubsection{\texorpdfstring{dac\_channel}{dac\_channel}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_d_a_c_a9560ddef55af03b248f1ee0a47075275}{D\+A\+C\+::dac\+\_\+channel}}}
+
+Canales del \mbox{\hyperlink{class_d_a_c}{D\+AC}} \mbox{\Hypertarget{class_d_a_c_a5f499c13c400fb60572ce0b7d3a0be73}\label{class_d_a_c_a5f499c13c400fb60572ce0b7d3a0be73}} 
+\index{DAC@{DAC}!dac\_error@{dac\_error}}
+\index{dac\_error@{dac\_error}!DAC@{DAC}}
+\doxysubsubsection{\texorpdfstring{dac\_error}{dac\_error}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_d_a_c_a5f499c13c400fb60572ce0b7d3a0be73}{D\+A\+C\+::dac\+\_\+error}}}
+
+Error en la clase \mbox{\hyperlink{class_d_a_c}{D\+AC}} ~\newline
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_d_a_c_a45d6108230365ffdd146518ba44f224f}\label{class_d_a_c_a45d6108230365ffdd146518ba44f224f}} 
+\index{DAC@{DAC}!DAC@{DAC}}
+\index{DAC@{DAC}!DAC@{DAC}}
+\doxysubsubsection{\texorpdfstring{DAC()}{DAC()}}
+{\footnotesize\ttfamily D\+A\+C\+::\+D\+AC (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_d_a_c_a9560ddef55af03b248f1ee0a47075275}{dac\+\_\+channel}}}]{channel,  }\item[{uint32\+\_\+t}]{max\+\_\+range = {\ttfamily \mbox{\hyperlink{_d_a_c_8h_ae191bd669b0350508de8f1066229c809}{M\+A\+X\+\_\+\+D\+A\+C\+\_\+\+V\+A\+L\+UE}}} }\end{DoxyParamCaption})}
+
+
+
+Constructor de clase \mbox{\hyperlink{class_d_a_c}{D\+AC}}. 
+
+Crea un \mbox{\hyperlink{class_d_a_c}{D\+AC}} con los parámetros correspondientes 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em channel} & Canal del \mbox{\hyperlink{class_d_a_c}{D\+AC}} a utilizar. \\
+\hline
+\mbox{\texttt{ in}}  & {\em max\+\_\+range} & Rango máximo del usuario. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_a_c_a2a8f4f13338b7020e63c1ea04874e8a1}\label{class_d_a_c_a2a8f4f13338b7020e63c1ea04874e8a1}} 
+\index{DAC@{DAC}!````~DAC@{$\sim$DAC}}
+\index{````~DAC@{$\sim$DAC}!DAC@{DAC}}
+\doxysubsubsection{\texorpdfstring{$\sim$DAC()}{~DAC()}}
+{\footnotesize\ttfamily D\+A\+C\+::$\sim$\+D\+AC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Destructor por defecto 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_d_a_c_a3f9efa0d5af1b6a308027a798be02a57}\label{class_d_a_c_a3f9efa0d5af1b6a308027a798be02a57}} 
+\index{DAC@{DAC}!Get@{Get}}
+\index{Get@{Get}!DAC@{DAC}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily uint32\+\_\+t D\+A\+C\+::\+Get (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Devuelve el valor analógico del \mbox{\hyperlink{class_d_a_c}{D\+AC}}. 
+
+Devuelve el valor de la salida \mbox{\hyperlink{class_d_a_c}{D\+AC}} de acuerdo al rango del usuario \begin{DoxyReturn}{Returns}
+valor del \mbox{\hyperlink{class_d_a_c}{D\+AC}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_a_c_a4d2ecd1ae0ae5866257018072d923ac3}\label{class_d_a_c_a4d2ecd1ae0ae5866257018072d923ac3}} 
+\index{DAC@{DAC}!GetMaxRange@{GetMaxRange}}
+\index{GetMaxRange@{GetMaxRange}!DAC@{DAC}}
+\doxysubsubsection{\texorpdfstring{GetMaxRange()}{GetMaxRange()}}
+{\footnotesize\ttfamily uint32\+\_\+t D\+A\+C\+::\+Get\+Max\+Range (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Devuelve el rango máximo que posee el \mbox{\hyperlink{class_d_a_c}{D\+AC}}. 
+
+Devuelve el rango que el usuario se asignó para trabajar \begin{DoxyReturn}{Returns}
+rango máximo 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_a_c_a3a8c6ad5c3035087787584c8054fc073}\label{class_d_a_c_a3a8c6ad5c3035087787584c8054fc073}} 
+\index{DAC@{DAC}!Inicializar@{Inicializar}}
+\index{Inicializar@{Inicializar}!DAC@{DAC}}
+\doxysubsubsection{\texorpdfstring{Inicializar()}{Inicializar()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_d_a_c_a5f499c13c400fb60572ce0b7d3a0be73}{D\+A\+C\+::dac\+\_\+error}} D\+A\+C\+::\+Inicializar (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Inicializa el \mbox{\hyperlink{class_d_a_c}{D\+AC}}. 
+
+Configura todos los registros de dicho \mbox{\hyperlink{class_d_a_c}{D\+AC}} \begin{DoxyReturn}{Returns}
+Código de error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_a_c_a77a8287cdab41a4894d2693a77d1d6b9}\label{class_d_a_c_a77a8287cdab41a4894d2693a77d1d6b9}} 
+\index{DAC@{DAC}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!DAC@{DAC}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool D\+A\+C\+::operator!= (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{val }\end{DoxyParamCaption}) const}
+
+
+
+Sobrecarga del operador !=. 
+
+Devuelve verdadero o falso si el \mbox{\hyperlink{class_d_a_c}{D\+AC}} es distinto a val 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em val} & Valor de comparacion con la salida \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+verdadero o falso 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_a_c_a3d6022ab240c44446f15592056e5bf84}\label{class_d_a_c_a3d6022ab240c44446f15592056e5bf84}} 
+\index{DAC@{DAC}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!DAC@{DAC}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool D\+A\+C\+::operator$<$ (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{val }\end{DoxyParamCaption}) const}
+
+
+
+Sobrecarga del operador $<$. 
+
+Devuelve verdadero o falso si el \mbox{\hyperlink{class_d_a_c}{D\+AC}} es menor a val 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em val} & Valor de comparacion con la salida \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+verdadero o falso 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_a_c_a1208b1ed85f07f4521ca4edec1854dc6}\label{class_d_a_c_a1208b1ed85f07f4521ca4edec1854dc6}} 
+\index{DAC@{DAC}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!DAC@{DAC}}
+\doxysubsubsection{\texorpdfstring{operator$<$=()}{operator<=()}}
+{\footnotesize\ttfamily bool D\+A\+C\+::operator$<$= (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{val }\end{DoxyParamCaption}) const}
+
+
+
+Sobrecarga del operador $<$=. 
+
+Devuelve verdadero o falso si el \mbox{\hyperlink{class_d_a_c}{D\+AC}} es menor o igual a val 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em val} & Valor de comparacion con la salida \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+verdadero o falso 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_a_c_af3bcc3ecf987cc1a13520253e876155a}\label{class_d_a_c_af3bcc3ecf987cc1a13520253e876155a}} 
+\index{DAC@{DAC}!operator=@{operator=}}
+\index{operator=@{operator=}!DAC@{DAC}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_d_a_c}{D\+AC}} \& D\+A\+C\+::operator= (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+
+
+Sobrecarga del operador =. 
+
+Fija el valor analógico del \mbox{\hyperlink{class_d_a_c}{D\+AC}} a val. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em val} & Valor de seteo del \mbox{\hyperlink{class_d_a_c}{D\+AC}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Referencia a si mismo 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_a_c_afdcebcde389be5087c67e90f22612ba3}\label{class_d_a_c_afdcebcde389be5087c67e90f22612ba3}} 
+\index{DAC@{DAC}!operator==@{operator==}}
+\index{operator==@{operator==}!DAC@{DAC}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool D\+A\+C\+::operator== (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{val }\end{DoxyParamCaption}) const}
+
+
+
+Sobrecarga del operador ==. 
+
+Devuelve verdadero o falso si el \mbox{\hyperlink{class_d_a_c}{D\+AC}} es igual a val 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em val} & Valor de comparacion con la salida \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+verdadero o falso 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_a_c_a7983314f92ba3c948c154269255cfbf9}\label{class_d_a_c_a7983314f92ba3c948c154269255cfbf9}} 
+\index{DAC@{DAC}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!DAC@{DAC}}
+\doxysubsubsection{\texorpdfstring{operator$>$()}{operator>()}}
+{\footnotesize\ttfamily bool D\+A\+C\+::operator$>$ (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{val }\end{DoxyParamCaption}) const}
+
+
+
+Sobrecarga del operador $>$ 
+
+Devuelve verdadero o falso si el \mbox{\hyperlink{class_d_a_c}{D\+AC}} es mayor a val 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em val} & Valor de comparacion con la salida \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+verdadero o falso 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_a_c_a1c05f3c9ca7ceb8adb44c276e33ff31a}\label{class_d_a_c_a1c05f3c9ca7ceb8adb44c276e33ff31a}} 
+\index{DAC@{DAC}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!DAC@{DAC}}
+\doxysubsubsection{\texorpdfstring{operator$>$=()}{operator>=()}}
+{\footnotesize\ttfamily bool D\+A\+C\+::operator$>$= (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{val }\end{DoxyParamCaption}) const}
+
+
+
+Sobrecarga del operador $>$=. 
+
+Devuelve verdadero o falso si el \mbox{\hyperlink{class_d_a_c}{D\+AC}} es mayor o igual a val 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em val} & Valor de comparacion con la salida \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+verdadero o falso 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_a_c_a42cdf9cb502fc8234a0b9698acada507}\label{class_d_a_c_a42cdf9cb502fc8234a0b9698acada507}} 
+\index{DAC@{DAC}!Set@{Set}}
+\index{Set@{Set}!DAC@{DAC}}
+\doxysubsubsection{\texorpdfstring{Set()}{Set()}}
+{\footnotesize\ttfamily void D\+A\+C\+::\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+
+
+Setea el valor del \mbox{\hyperlink{class_d_a_c}{D\+AC}}. 
+
+Enciende la salida analógica con el valor en rango real de voltaje 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em val} & Valor de seteo de la salida \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_a_c_af0c5969c5ac8d8a10ab06e35f1b12c66}\label{class_d_a_c_af0c5969c5ac8d8a10ab06e35f1b12c66}} 
+\index{DAC@{DAC}!SetMaxRange@{SetMaxRange}}
+\index{SetMaxRange@{SetMaxRange}!DAC@{DAC}}
+\doxysubsubsection{\texorpdfstring{SetMaxRange()}{SetMaxRange()}}
+{\footnotesize\ttfamily void D\+A\+C\+::\+Set\+Max\+Range (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{max\+\_\+range }\end{DoxyParamCaption})}
+
+
+
+Setea el rango máximo. 
+
+Setea el rango de valores a utilizar por el usuario 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em max\+\_\+range} & Valor del rango \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/\+Agustin/\+Escritorio/\+M\+C\+Uexpresso/\+Kit\+L\+P\+C845-\/\+C++/src/\+Drivers/\+Perifericos/11-\/\+D\+A\+C/\mbox{\hyperlink{_d_a_c_8h}{D\+A\+C.\+h}}\item 
+E\+:/\+Agustin/\+Escritorio/\+M\+C\+Uexpresso/\+Kit\+L\+P\+C845-\/\+C++/src/\+Drivers/\+Perifericos/11-\/\+D\+A\+C/D\+A\+C.\+cpp\end{DoxyCompactItemize}

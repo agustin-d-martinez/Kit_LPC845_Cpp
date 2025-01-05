@@ -1,0 +1,11 @@
+digraph "E:/Agustin/Escritorio/MCUexpresso/KitLPC845-C++/src/Drivers/Perifericos/12-ADC" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_fddceb55b13f36ba841fc9095bbfed65 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="Perifericos" fontname="Helvetica", fontsize="10", URL="dir_fddceb55b13f36ba841fc9095bbfed65.html"]
+  dir_8a3bbce141062a44d3a436750454ec4f [shape=box, label="12-ADC", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_8a3bbce141062a44d3a436750454ec4f.html"];
+  }
+  dir_76f9198a53cecf908dbffee67f946b13 [shape=box label="01-Pin" URL="dir_76f9198a53cecf908dbffee67f946b13.html"];
+  dir_8a3bbce141062a44d3a436750454ec4f->dir_76f9198a53cecf908dbffee67f946b13 [headlabel="1", labeldistance=1.5 headhref="dir_000028_000017.html"];
+}

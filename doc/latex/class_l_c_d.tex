@@ -1,0 +1,228 @@
+\hypertarget{class_l_c_d}{}\doxysection{L\+CD Class Reference}
+\label{class_l_c_d}\index{LCD@{LCD}}
+
+
+Clase del objeto lcd El objeto lcd permite el manejo de displays digitales mediante comunicación de 4 bits.  
+
+
+
+
+{\ttfamily \#include $<$L\+C\+D.\+h$>$}
+
+
+
+Inheritance diagram for L\+CD\+:
+% FIG 0
+
+
+Collaboration diagram for L\+CD\+:
+% FIG 1
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \newline
+{\bfseries d7} = 0, 
+{\bfseries d6}, 
+{\bfseries d5}, 
+{\bfseries d4}, 
+\newline
+{\bfseries rs}, 
+{\bfseries enable}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_l_c_d_a82d2be39ae418a886021216a821e78bd}{L\+CD}} (vector$<$ \mbox{\hyperlink{classgpio}{gpio}} $\ast$ $>$ \&salidas)
+\begin{DoxyCompactList}\small\item\em Constructor de clase \mbox{\hyperlink{class_l_c_d}{L\+CD}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_l_c_d_ac01f0b0f7397dbcabf0b748a067d6259}{Inicializar}} (const uint8\+\_\+t filas, const uint8\+\_\+t columnas)
+\begin{DoxyCompactList}\small\item\em Inicializa el \mbox{\hyperlink{class_l_c_d}{L\+CD}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_l_c_d_af0f5a396c7845c5b7d7578d71c0bdf2a}\label{class_l_c_d_af0f5a396c7845c5b7d7578d71c0bdf2a}} 
+void {\bfseries Write} (const char $\ast$s)
+\item 
+void \mbox{\hyperlink{class_l_c_d_aaa2b2a69cf867a6bb5c69d700cb5e99a}{Write}} (const int32\+\_\+t n)
+\begin{DoxyCompactList}\small\item\em Escribe en el \mbox{\hyperlink{class_l_c_d}{L\+CD}} un número. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_l_c_d}{L\+CD}} \& \mbox{\hyperlink{class_l_c_d_ad170df02e0c3d282e0969237a27a0e24}{operator=}} (const char $\ast$s)
+\begin{DoxyCompactList}\small\item\em Escribe en el \mbox{\hyperlink{class_l_c_d}{L\+CD}}. Sobrecarga del operador =. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_l_c_d_a6390fd046beb94391ac3ed58eab235cf}{Write\+At}} (const int8\+\_\+t $\ast$a, const uint8\+\_\+t fila, const uint8\+\_\+t columna)
+\begin{DoxyCompactList}\small\item\em Escribe el \mbox{\hyperlink{class_l_c_d}{L\+CD}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_l_c_d_aee6c227ea34c80d23ebaa08b28591add}{Write\+At}} (const int32\+\_\+t n, const uint8\+\_\+t fila, const uint8\+\_\+t columna)
+\begin{DoxyCompactList}\small\item\em Escribe el \mbox{\hyperlink{class_l_c_d}{L\+CD}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_l_c_d_ac362e2901387f2688cc6dc7b34bc7a79}{Clear}} (void)
+\begin{DoxyCompactList}\small\item\em Limpia el \mbox{\hyperlink{class_l_c_d}{L\+CD}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_l_c_d_a0051f7da149bd4e46c757668829bc68a}{S\+Whandler}} (void)
+\begin{DoxyCompactList}\small\item\em Ejecuta la instrucción del \mbox{\hyperlink{class_l_c_d}{L\+CD}} periodicamente. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase del objeto lcd El objeto lcd permite el manejo de displays digitales mediante comunicación de 4 bits. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_l_c_d_a0c6219f060f814554afe507b59f3a1ca}\label{class_l_c_d_a0c6219f060f814554afe507b59f3a1ca}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+Posiciones del buffer 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_l_c_d_a82d2be39ae418a886021216a821e78bd}\label{class_l_c_d_a82d2be39ae418a886021216a821e78bd}} 
+\index{LCD@{LCD}!LCD@{LCD}}
+\index{LCD@{LCD}!LCD@{LCD}}
+\doxysubsubsection{\texorpdfstring{LCD()}{LCD()}}
+{\footnotesize\ttfamily L\+C\+D\+::\+L\+CD (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classgpio}{gpio}} $\ast$ $>$ \&}]{salidas }\end{DoxyParamCaption})}
+
+
+
+Constructor de clase \mbox{\hyperlink{class_l_c_d}{L\+CD}}. 
+
+Crea \mbox{\hyperlink{class_l_c_d}{L\+CD}} P\+IN con los parámetros correspondientes 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em salidas} & Vector de G\+P\+IO ordenado utilizadas para el \mbox{\hyperlink{class_l_c_d}{L\+CD}}. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_l_c_d_ac362e2901387f2688cc6dc7b34bc7a79}\label{class_l_c_d_ac362e2901387f2688cc6dc7b34bc7a79}} 
+\index{LCD@{LCD}!Clear@{Clear}}
+\index{Clear@{Clear}!LCD@{LCD}}
+\doxysubsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily void L\+C\+D\+::\+Clear (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Limpia el \mbox{\hyperlink{class_l_c_d}{L\+CD}}. 
+
+Deja el buffer como un string de caracteres E\+S\+P\+A\+C\+IO que imprimen en blanco. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_display_a90489617ce2fcbc4828f2a8e12af893e}{Display}}.
+
+\mbox{\Hypertarget{class_l_c_d_ac01f0b0f7397dbcabf0b748a067d6259}\label{class_l_c_d_ac01f0b0f7397dbcabf0b748a067d6259}} 
+\index{LCD@{LCD}!Inicializar@{Inicializar}}
+\index{Inicializar@{Inicializar}!LCD@{LCD}}
+\doxysubsubsection{\texorpdfstring{Inicializar()}{Inicializar()}}
+{\footnotesize\ttfamily void L\+C\+D\+::\+Inicializar (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t}]{filas,  }\item[{const uint8\+\_\+t}]{columnas }\end{DoxyParamCaption})}
+
+
+
+Inicializa el \mbox{\hyperlink{class_l_c_d}{L\+CD}}. 
+
+Crea el buffer y comienza a setear todas las salidas para comenzar a funcionar 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em filas} & Cantidad de filas del \mbox{\hyperlink{class_l_c_d}{L\+CD}}. \\
+\hline
+\mbox{\texttt{ in}}  & {\em columnas} & Cantidad de columnas del \mbox{\hyperlink{class_l_c_d}{L\+CD}}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_l_c_d_ad170df02e0c3d282e0969237a27a0e24}\label{class_l_c_d_ad170df02e0c3d282e0969237a27a0e24}} 
+\index{LCD@{LCD}!operator=@{operator=}}
+\index{operator=@{operator=}!LCD@{LCD}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_l_c_d}{L\+CD}} \& L\+C\+D\+::operator= (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+Escribe en el \mbox{\hyperlink{class_l_c_d}{L\+CD}}. Sobrecarga del operador =. 
+
+Escribe el buffer con el string indicado comenzando en la posición (0,0). 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em s} & String a escribir. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_l_c_d_a0051f7da149bd4e46c757668829bc68a}\label{class_l_c_d_a0051f7da149bd4e46c757668829bc68a}} 
+\index{LCD@{LCD}!SWhandler@{SWhandler}}
+\index{SWhandler@{SWhandler}!LCD@{LCD}}
+\doxysubsubsection{\texorpdfstring{SWhandler()}{SWhandler()}}
+{\footnotesize\ttfamily void L\+C\+D\+::\+S\+Whandler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Ejecuta la instrucción del \mbox{\hyperlink{class_l_c_d}{L\+CD}} periodicamente. 
+
+Inicializa y escribe el \mbox{\hyperlink{class_l_c_d}{L\+CD}} perdiódicamente utilizando el handler del systick. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_callback_a24e8f5fec587299192f62b13a2e7eb42}{Callback}}.
+
+\mbox{\Hypertarget{class_l_c_d_aaa2b2a69cf867a6bb5c69d700cb5e99a}\label{class_l_c_d_aaa2b2a69cf867a6bb5c69d700cb5e99a}} 
+\index{LCD@{LCD}!Write@{Write}}
+\index{Write@{Write}!LCD@{LCD}}
+\doxysubsubsection{\texorpdfstring{Write()}{Write()}}
+{\footnotesize\ttfamily void L\+C\+D\+::\+Write (\begin{DoxyParamCaption}\item[{const int32\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+
+
+Escribe en el \mbox{\hyperlink{class_l_c_d}{L\+CD}} un número. 
+
+Escribe el buffer con el string indicado comenzando en la posición (0,0). El número tendrá un máximo de 10 dígitos, sin contar el -\/ de signo 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em n} & Número a escribir. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_l_c_d_aee6c227ea34c80d23ebaa08b28591add}\label{class_l_c_d_aee6c227ea34c80d23ebaa08b28591add}} 
+\index{LCD@{LCD}!WriteAt@{WriteAt}}
+\index{WriteAt@{WriteAt}!LCD@{LCD}}
+\doxysubsubsection{\texorpdfstring{WriteAt()}{WriteAt()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void L\+C\+D\+::\+Write\+At (\begin{DoxyParamCaption}\item[{const int32\+\_\+t}]{n,  }\item[{const uint8\+\_\+t}]{fila,  }\item[{const uint8\+\_\+t}]{columna }\end{DoxyParamCaption})}
+
+
+
+Escribe el \mbox{\hyperlink{class_l_c_d}{L\+CD}}. 
+
+Escribe en el buffer un número del \mbox{\hyperlink{class_l_c_d}{L\+CD}} desde la posición indicada. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em n} & numero a escribir. \\
+\hline
+\mbox{\texttt{ in}}  & {\em fila} & Fila donde empezar a escribir. \\
+\hline
+\mbox{\texttt{ in}}  & {\em columna} & Columna donde empezar a escribir. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_l_c_d_a6390fd046beb94391ac3ed58eab235cf}\label{class_l_c_d_a6390fd046beb94391ac3ed58eab235cf}} 
+\index{LCD@{LCD}!WriteAt@{WriteAt}}
+\index{WriteAt@{WriteAt}!LCD@{LCD}}
+\doxysubsubsection{\texorpdfstring{WriteAt()}{WriteAt()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void L\+C\+D\+::\+Write\+At (\begin{DoxyParamCaption}\item[{const int8\+\_\+t $\ast$}]{a,  }\item[{const uint8\+\_\+t}]{fila,  }\item[{const uint8\+\_\+t}]{columna }\end{DoxyParamCaption})}
+
+
+
+Escribe el \mbox{\hyperlink{class_l_c_d}{L\+CD}}. 
+
+Escribe en el buffer del \mbox{\hyperlink{class_l_c_d}{L\+CD}} desde la posición indicada. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & string a escribir. \\
+\hline
+\mbox{\texttt{ in}}  & {\em fila} & Fila donde empezar a escribir. \\
+\hline
+\mbox{\texttt{ in}}  & {\em columna} & Columna donde empezar a escribir. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/\+Agustin/\+Escritorio/\+M\+C\+Uexpresso/\+Kit\+L\+P\+C845-\/\+C++/src/\+Drivers/\+Hardware/02-\/\+Displays/\+L\+C\+D/\mbox{\hyperlink{_l_c_d_8h}{L\+C\+D.\+h}}\item 
+E\+:/\+Agustin/\+Escritorio/\+M\+C\+Uexpresso/\+Kit\+L\+P\+C845-\/\+C++/src/\+Drivers/\+Hardware/02-\/\+Displays/\+L\+C\+D/L\+C\+D.\+cpp\end{DoxyCompactItemize}

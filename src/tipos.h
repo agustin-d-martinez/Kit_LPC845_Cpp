@@ -29,11 +29,11 @@
 /***********************************************************************************************************************************
  *** TIPO DE DATOS GLOBALES
  **********************************************************************************************************************************/
-/**Defines 'read only' permission */
+/**Defines 'read only' permission or 'Input' */
 #define  	__R    					volatile const
-/** Defines 'write only' permission */
+/** Defines 'write only' permission or 'Output' */
 #define  	__W    					volatile
-/** Defines 'read / write' permission */
+/** Defines 'read / write' permission or 'Input / Output' */
 #define  	__RW   					volatile
 
 typedef		unsigned char 			uint8_t;	/**< Definicion del uint8_t	*/

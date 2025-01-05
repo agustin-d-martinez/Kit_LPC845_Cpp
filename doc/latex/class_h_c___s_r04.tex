@@ -1,0 +1,227 @@
+\hypertarget{class_h_c___s_r04}{}\doxysection{H\+C\+\_\+\+S\+R04 Class Reference}
+\label{class_h_c___s_r04}\index{HC\_SR04@{HC\_SR04}}
+
+
+Clase del objeto \mbox{\hyperlink{class_h_c___s_r04}{H\+C\+\_\+\+S\+R04}} El objeto \mbox{\hyperlink{class_h_c___s_r04}{H\+C\+\_\+\+S\+R04}} Mide distancia mediante el uso de un ultrasónico. Debido a los tiempos muy pequeños de uso, no se recomienda utilizar en grandes cantidades.  
+
+
+
+
+{\ttfamily \#include $<$H\+C\+S\+R04.\+h$>$}
+
+
+
+Inheritance diagram for H\+C\+\_\+\+S\+R04\+:
+% FIG 0
+
+
+Collaboration diagram for H\+C\+\_\+\+S\+R04\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_h_c___s_r04_a03ff682e07bbbc9f5554790e98a59473}{H\+C\+\_\+\+S\+R04}} (\mbox{\hyperlink{class_p_w_m___reader}{P\+W\+M\+\_\+\+Reader}} $\ast$\&rx, \mbox{\hyperlink{class_pwm}{Pwm}} $\ast$\&tx)
+\begin{DoxyCompactList}\small\item\em Constructor de clase \mbox{\hyperlink{class_h_c___s_r04}{H\+C\+\_\+\+S\+R04}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_h_c___s_r04_a2d1eabe8372f65cc01ff78029940b151}{Inicializar}} (void)
+\begin{DoxyCompactList}\small\item\em Inicializa todas las patas del ultrasónico. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{class_h_c___s_r04_ab6e8079457c420f2d403c0921eea8e50}{Get\+Distancia}} (void)
+\begin{DoxyCompactList}\small\item\em Devuelve la distancia. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_h_c___s_r04_a8a2b0436db85de19f08c9500aaf87ca2}{Off}} (void)
+\begin{DoxyCompactList}\small\item\em Apago las patas del ultrasonico. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_h_c___s_r04_aa336ccf5e2ef45edbfe94e6900f32ccf}{On}} (void)
+\begin{DoxyCompactList}\small\item\em Enciendo las patas del ultrasonico. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_h_c___s_r04_ab01d798e50daf71f0f89164bdf962060}{operator==}} (const uint32\+\_\+t a)
+\begin{DoxyCompactList}\small\item\em Operador ==. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_h_c___s_r04_ae8f126feaff97d82e44f45ca7b874751}{operator$<$=}} (const uint32\+\_\+t a)
+\begin{DoxyCompactList}\small\item\em Verifica si la distancia es menor o igual que a. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_h_c___s_r04_ac74ee13b7df279a78e1cab13cb99e8ed}{operator$>$=}} (const uint32\+\_\+t a)
+\begin{DoxyCompactList}\small\item\em Verifica si la distancia es mayor o igual que a. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_h_c___s_r04_a5630dff5e0dee0fc86f04951d7a602a5}{operator$<$}} (const uint32\+\_\+t a)
+\begin{DoxyCompactList}\small\item\em Verifica si la distancia es menor que a. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_h_c___s_r04_a0efaa0b7f1d1f65ea900fe4578c0e3fa}{operator$>$}} (const uint32\+\_\+t a)
+\begin{DoxyCompactList}\small\item\em Verifica si la distancia es mayor que a. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Clase del objeto \mbox{\hyperlink{class_h_c___s_r04}{H\+C\+\_\+\+S\+R04}} El objeto \mbox{\hyperlink{class_h_c___s_r04}{H\+C\+\_\+\+S\+R04}} Mide distancia mediante el uso de un ultrasónico. Debido a los tiempos muy pequeños de uso, no se recomienda utilizar en grandes cantidades. 
+
+S\+E\+N\+S\+OR U\+L\+T\+R\+A\+SÓ\+N\+I\+CO H\+C-\/\+S\+R04\+: Se le debe enviar P\+WM de 60ms o más (recomendamos 80) con un tiempo de encendido de 10us. Recebirá otro pulso variable que debe ser leído por tx. Devuelve el valor de distancia en cm (centímetros) 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_h_c___s_r04_a03ff682e07bbbc9f5554790e98a59473}\label{class_h_c___s_r04_a03ff682e07bbbc9f5554790e98a59473}} 
+\index{HC\_SR04@{HC\_SR04}!HC\_SR04@{HC\_SR04}}
+\index{HC\_SR04@{HC\_SR04}!HC\_SR04@{HC\_SR04}}
+\doxysubsubsection{\texorpdfstring{HC\_SR04()}{HC\_SR04()}}
+{\footnotesize\ttfamily H\+C\+\_\+\+S\+R04\+::\+H\+C\+\_\+\+S\+R04 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_p_w_m___reader}{P\+W\+M\+\_\+\+Reader}} $\ast$\&}]{rx,  }\item[{\mbox{\hyperlink{class_pwm}{Pwm}} $\ast$\&}]{tx }\end{DoxyParamCaption})}
+
+
+
+Constructor de clase \mbox{\hyperlink{class_h_c___s_r04}{H\+C\+\_\+\+S\+R04}}. 
+
+Crea un \mbox{\hyperlink{class_h_c___s_r04}{H\+C\+\_\+\+S\+R04}} con los parámetros correspondientes 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em rx} & Lector de anchos de pulso utilizado en el pin E\+C\+HO. \\
+\hline
+\mbox{\texttt{ in}}  & {\em tx} & P\+WM utilizado como pin T\+R\+I\+GG. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_h_c___s_r04_ab6e8079457c420f2d403c0921eea8e50}\label{class_h_c___s_r04_ab6e8079457c420f2d403c0921eea8e50}} 
+\index{HC\_SR04@{HC\_SR04}!GetDistancia@{GetDistancia}}
+\index{GetDistancia@{GetDistancia}!HC\_SR04@{HC\_SR04}}
+\doxysubsubsection{\texorpdfstring{GetDistancia()}{GetDistancia()}}
+{\footnotesize\ttfamily uint32\+\_\+t H\+C\+\_\+\+S\+R04\+::\+Get\+Distancia (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Devuelve la distancia. 
+
+A menos que esté apagado, devuelve el valor de distancia obtenido. Para evitar overflow del Uint32, se verifica el valor censado. \begin{DoxyReturn}{Returns}
+m\+\_\+distancia 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classdistancia_ace8c9d65cfc3ccd732dec4047c6f7c78}{distancia}}.
+
+\mbox{\Hypertarget{class_h_c___s_r04_a2d1eabe8372f65cc01ff78029940b151}\label{class_h_c___s_r04_a2d1eabe8372f65cc01ff78029940b151}} 
+\index{HC\_SR04@{HC\_SR04}!Inicializar@{Inicializar}}
+\index{Inicializar@{Inicializar}!HC\_SR04@{HC\_SR04}}
+\doxysubsubsection{\texorpdfstring{Inicializar()}{Inicializar()}}
+{\footnotesize\ttfamily void H\+C\+\_\+\+S\+R04\+::\+Inicializar (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Inicializa todas las patas del ultrasónico. 
+
+Inicializa el P\+WM con el valor correspondiente y el contador de ancho ancho de pulso. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_h_c___s_r04_a8a2b0436db85de19f08c9500aaf87ca2}\label{class_h_c___s_r04_a8a2b0436db85de19f08c9500aaf87ca2}} 
+\index{HC\_SR04@{HC\_SR04}!Off@{Off}}
+\index{Off@{Off}!HC\_SR04@{HC\_SR04}}
+\doxysubsubsection{\texorpdfstring{Off()}{Off()}}
+{\footnotesize\ttfamily void H\+C\+\_\+\+S\+R04\+::\+Off (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Apago las patas del ultrasonico. 
+
+Llamo a las funciones de apagar y guardo en el buffer un valor imposible. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_h_c___s_r04_aa336ccf5e2ef45edbfe94e6900f32ccf}\label{class_h_c___s_r04_aa336ccf5e2ef45edbfe94e6900f32ccf}} 
+\index{HC\_SR04@{HC\_SR04}!On@{On}}
+\index{On@{On}!HC\_SR04@{HC\_SR04}}
+\doxysubsubsection{\texorpdfstring{On()}{On()}}
+{\footnotesize\ttfamily void H\+C\+\_\+\+S\+R04\+::\+On (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Enciendo las patas del ultrasonico. 
+
+Llamo a las funciones de encender de tx y rx. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_h_c___s_r04_a5630dff5e0dee0fc86f04951d7a602a5}\label{class_h_c___s_r04_a5630dff5e0dee0fc86f04951d7a602a5}} 
+\index{HC\_SR04@{HC\_SR04}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!HC\_SR04@{HC\_SR04}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool H\+C\+\_\+\+S\+R04\+::operator$<$ (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t}]{a }\end{DoxyParamCaption})}
+
+
+
+Verifica si la distancia es menor que a. 
+
+Realiza el cálculo de distancia actual y luego lo compara con a. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & Distancia a comparar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_h_c___s_r04_ae8f126feaff97d82e44f45ca7b874751}\label{class_h_c___s_r04_ae8f126feaff97d82e44f45ca7b874751}} 
+\index{HC\_SR04@{HC\_SR04}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!HC\_SR04@{HC\_SR04}}
+\doxysubsubsection{\texorpdfstring{operator$<$=()}{operator<=()}}
+{\footnotesize\ttfamily bool H\+C\+\_\+\+S\+R04\+::operator$<$= (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t}]{a }\end{DoxyParamCaption})}
+
+
+
+Verifica si la distancia es menor o igual que a. 
+
+Realiza el cálculo de distancia actual y luego lo compara con a. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & Distancia a comparar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_h_c___s_r04_ab01d798e50daf71f0f89164bdf962060}\label{class_h_c___s_r04_ab01d798e50daf71f0f89164bdf962060}} 
+\index{HC\_SR04@{HC\_SR04}!operator==@{operator==}}
+\index{operator==@{operator==}!HC\_SR04@{HC\_SR04}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool H\+C\+\_\+\+S\+R04\+::operator== (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Operador ==. 
+
+Consulta si la distancia es igual o no a la entregada. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & Valor de distancia. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classdistancia_ac3654e3099f97d7d6b8d6f68692f1898}{distancia}}.
+
+\mbox{\Hypertarget{class_h_c___s_r04_a0efaa0b7f1d1f65ea900fe4578c0e3fa}\label{class_h_c___s_r04_a0efaa0b7f1d1f65ea900fe4578c0e3fa}} 
+\index{HC\_SR04@{HC\_SR04}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!HC\_SR04@{HC\_SR04}}
+\doxysubsubsection{\texorpdfstring{operator$>$()}{operator>()}}
+{\footnotesize\ttfamily bool H\+C\+\_\+\+S\+R04\+::operator$>$ (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t}]{a }\end{DoxyParamCaption})}
+
+
+
+Verifica si la distancia es mayor que a. 
+
+Realiza el cálculo de distancia actual y luego lo compara con a. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & Distancia a comparar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_h_c___s_r04_ac74ee13b7df279a78e1cab13cb99e8ed}\label{class_h_c___s_r04_ac74ee13b7df279a78e1cab13cb99e8ed}} 
+\index{HC\_SR04@{HC\_SR04}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!HC\_SR04@{HC\_SR04}}
+\doxysubsubsection{\texorpdfstring{operator$>$=()}{operator>=()}}
+{\footnotesize\ttfamily bool H\+C\+\_\+\+S\+R04\+::operator$>$= (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t}]{a }\end{DoxyParamCaption})}
+
+
+
+Verifica si la distancia es mayor o igual que a. 
+
+Realiza el cálculo de distancia actual y luego lo compara con a. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & Distancia a comparar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/\+Agustin/\+Escritorio/\+M\+C\+Uexpresso/\+Kit\+L\+P\+C845-\/\+C++/src/\+Drivers/\+Hardware/07-\/hc-\/sr04/\mbox{\hyperlink{_h_c_s_r04_8h}{H\+C\+S\+R04.\+h}}\item 
+E\+:/\+Agustin/\+Escritorio/\+M\+C\+Uexpresso/\+Kit\+L\+P\+C845-\/\+C++/src/\+Drivers/\+Hardware/07-\/hc-\/sr04/H\+C\+S\+R04.\+cpp\end{DoxyCompactItemize}

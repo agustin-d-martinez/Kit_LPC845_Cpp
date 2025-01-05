@@ -1,0 +1,205 @@
+\hypertarget{class_uart}{}\doxysection{Uart Class Reference}
+\label{class_uart}\index{Uart@{Uart}}
+
+
+Clase del objeto uart El objeto uart genera una comunicación asincrónica de tipo U\+A\+RT.  
+
+
+
+
+{\ttfamily \#include $<$Uart.\+h$>$}
+
+
+
+Inheritance diagram for Uart\+:
+% FIG 0
+
+
+Collaboration diagram for Uart\+:
+% FIG 1
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_uart_a3dc1591dc4992045e0f14d8ac3ec4e48}{paridad\+\_\+t}} \{ {\bfseries No\+Paridad}, 
+{\bfseries par} = 2, 
+{\bfseries impar}
+ \}
+\item 
+enum \mbox{\hyperlink{class_uart_abe66c064727dbf25d0761c7e317a91e1}{bits\+\_\+de\+\_\+datos}} \{ {\bfseries siete\+\_\+bits}, 
+{\bfseries ocho\+\_\+bits}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_uart_afaef668de5b233cf011335741f26d6d3}{Uart}} (\mbox{\hyperlink{class_pin_a02483eba92e68e4230f8aa883e0a25fe}{Pin\+::port\+\_\+t}} port\+Tx, uint8\+\_\+t pin\+Tx, \mbox{\hyperlink{class_pin_a02483eba92e68e4230f8aa883e0a25fe}{Pin\+::port\+\_\+t}} port\+Rx, uint8\+\_\+t pin\+Rx, U\+S\+A\+R\+T\+\_\+\+Type $\ast$usart, uint32\+\_\+t baudrate, \mbox{\hyperlink{class_uart_abe66c064727dbf25d0761c7e317a91e1}{bits\+\_\+de\+\_\+datos}} Bits\+De\+Datos, \mbox{\hyperlink{class_uart_a3dc1591dc4992045e0f14d8ac3ec4e48}{paridad\+\_\+t}} paridad, uint32\+\_\+t max\+Rx, uint32\+\_\+t max\+Tx)
+\begin{DoxyCompactList}\small\item\em Constructor de la clase uart. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_uart_aaada457bc4bee5bc605dd8d9c6589706}{Transmit}} (const char $\ast$msg)
+\begin{DoxyCompactList}\small\item\em Transmite el mensaje indicado. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_uart_ade4a6cd289f94350eb1bf3b29a9e1359}{Transmit}} (const void $\ast$msg, uint32\+\_\+t n)
+\begin{DoxyCompactList}\small\item\em Transmite el mensaje indicado. \end{DoxyCompactList}\item 
+void $\ast$ \mbox{\hyperlink{class_uart_a176f9ee7124f60f16b2c25d01fc5a4b1}{Message}} (void $\ast$msg, uint32\+\_\+t n)
+\begin{DoxyCompactList}\small\item\em Devuelve el mensaje recibido. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_uart_aaba51d089c78ba71333e2ce332434423}{Set\+Baud\+Rate}} (uint32\+\_\+t baudrate)
+\begin{DoxyCompactList}\small\item\em Modifica el baudrate al vuelo. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_uart_a4199a240d764fc664ac44b9c170032b3}{$\sim$\+Uart}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Clase del objeto uart El objeto uart genera una comunicación asincrónica de tipo U\+A\+RT. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_uart_abe66c064727dbf25d0761c7e317a91e1}\label{class_uart_abe66c064727dbf25d0761c7e317a91e1}} 
+\index{Uart@{Uart}!bits\_de\_datos@{bits\_de\_datos}}
+\index{bits\_de\_datos@{bits\_de\_datos}!Uart@{Uart}}
+\doxysubsubsection{\texorpdfstring{bits\_de\_datos}{bits\_de\_datos}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_uart_abe66c064727dbf25d0761c7e317a91e1}{Uart\+::bits\+\_\+de\+\_\+datos}}}
+
+Cantidad de bits de la U\+A\+RT \mbox{\Hypertarget{class_uart_a3dc1591dc4992045e0f14d8ac3ec4e48}\label{class_uart_a3dc1591dc4992045e0f14d8ac3ec4e48}} 
+\index{Uart@{Uart}!paridad\_t@{paridad\_t}}
+\index{paridad\_t@{paridad\_t}!Uart@{Uart}}
+\doxysubsubsection{\texorpdfstring{paridad\_t}{paridad\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_uart_a3dc1591dc4992045e0f14d8ac3ec4e48}{Uart\+::paridad\+\_\+t}}}
+
+Tipo de paridad de la U\+A\+RT 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_uart_afaef668de5b233cf011335741f26d6d3}\label{class_uart_afaef668de5b233cf011335741f26d6d3}} 
+\index{Uart@{Uart}!Uart@{Uart}}
+\index{Uart@{Uart}!Uart@{Uart}}
+\doxysubsubsection{\texorpdfstring{Uart()}{Uart()}}
+{\footnotesize\ttfamily Uart\+::\+Uart (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pin_a02483eba92e68e4230f8aa883e0a25fe}{Pin\+::port\+\_\+t}}}]{port\+Tx,  }\item[{uint8\+\_\+t}]{pin\+Tx,  }\item[{\mbox{\hyperlink{class_pin_a02483eba92e68e4230f8aa883e0a25fe}{Pin\+::port\+\_\+t}}}]{port\+Rx,  }\item[{uint8\+\_\+t}]{pin\+Rx,  }\item[{U\+S\+A\+R\+T\+\_\+\+Type $\ast$}]{usart,  }\item[{uint32\+\_\+t}]{baudrate,  }\item[{\mbox{\hyperlink{class_uart_abe66c064727dbf25d0761c7e317a91e1}{bits\+\_\+de\+\_\+datos}}}]{Bits\+De\+Datos,  }\item[{\mbox{\hyperlink{class_uart_a3dc1591dc4992045e0f14d8ac3ec4e48}{paridad\+\_\+t}}}]{paridad,  }\item[{uint32\+\_\+t}]{max\+Rx,  }\item[{uint32\+\_\+t}]{max\+Tx }\end{DoxyParamCaption})}
+
+
+
+Constructor de la clase uart. 
+
+Genera un uart con los parametros indicados 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em port\+Tx} & Puerto de transmision \\
+\hline
+\mbox{\texttt{ in}}  & {\em pin\+Tx} & bit de transmision \\
+\hline
+\mbox{\texttt{ in}}  & {\em port\+Rx} & Puerto de recepcion \\
+\hline
+\mbox{\texttt{ in}}  & {\em pin\+Rx} & bit de recepcion \\
+\hline
+\mbox{\texttt{ in}}  & {\em usart} & Registro/usart a utilizar \\
+\hline
+\mbox{\texttt{ in}}  & {\em baudrate} & Baudios de la comunicacion \\
+\hline
+\mbox{\texttt{ in}}  & {\em Bits\+De\+Datos} & Cantidad de bits por dato \\
+\hline
+\mbox{\texttt{ in}}  & {\em paridad} & Tipo de paridad de la comunicacion \\
+\hline
+\mbox{\texttt{ in}}  & {\em max\+Rx} & Tamaño del buffer de recepcion \\
+\hline
+\mbox{\texttt{ in}}  & {\em max\+Tx} & Tamaño del buffer de transmision \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_uart_a4199a240d764fc664ac44b9c170032b3}\label{class_uart_a4199a240d764fc664ac44b9c170032b3}} 
+\index{Uart@{Uart}!````~Uart@{$\sim$Uart}}
+\index{````~Uart@{$\sim$Uart}!Uart@{Uart}}
+\doxysubsubsection{\texorpdfstring{$\sim$Uart()}{~Uart()}}
+{\footnotesize\ttfamily Uart\+::$\sim$\+Uart (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Destructor por defecto 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_uart_a176f9ee7124f60f16b2c25d01fc5a4b1}\label{class_uart_a176f9ee7124f60f16b2c25d01fc5a4b1}} 
+\index{Uart@{Uart}!Message@{Message}}
+\index{Message@{Message}!Uart@{Uart}}
+\doxysubsubsection{\texorpdfstring{Message()}{Message()}}
+{\footnotesize\ttfamily void $\ast$ Uart\+::\+Message (\begin{DoxyParamCaption}\item[{void $\ast$}]{msg,  }\item[{uint32\+\_\+t}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Devuelve el mensaje recibido. 
+
+Lee del buffer de recepcion n caracteres y los guarda en el mensaje 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em msg} & puntero donde devolverá el dato \\
+\hline
+\mbox{\texttt{ in}}  & {\em n} & Cantidad de caracteres a leer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Mensaje de error. nullptr = no hay nada para leer 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_comunicacion_asincronica_aea94bf3a2a45c2b8de83b7481a2c896f}{Comunicacion\+Asincronica}}.
+
+\mbox{\Hypertarget{class_uart_aaba51d089c78ba71333e2ce332434423}\label{class_uart_aaba51d089c78ba71333e2ce332434423}} 
+\index{Uart@{Uart}!SetBaudRate@{SetBaudRate}}
+\index{SetBaudRate@{SetBaudRate}!Uart@{Uart}}
+\doxysubsubsection{\texorpdfstring{SetBaudRate()}{SetBaudRate()}}
+{\footnotesize\ttfamily void Uart\+::\+Set\+Baud\+Rate (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{baudrate }\end{DoxyParamCaption})}
+
+
+
+Modifica el baudrate al vuelo. 
+
+Cambia la velocidad de transmisión de una uart ya funcional. Verificar que se haya enviado toda la información antes de realizar este proceso 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em baudrate} & Bauldrate a utilizar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_uart_aaada457bc4bee5bc605dd8d9c6589706}\label{class_uart_aaada457bc4bee5bc605dd8d9c6589706}} 
+\index{Uart@{Uart}!Transmit@{Transmit}}
+\index{Transmit@{Transmit}!Uart@{Uart}}
+\doxysubsubsection{\texorpdfstring{Transmit()}{Transmit()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Uart\+::\+Transmit (\begin{DoxyParamCaption}\item[{const char $\ast$}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Transmite el mensaje indicado. 
+
+Coloca el mensaje indicado en el buffer. Importante, el mensaje debe terminar en \textbackslash{}0 (String) 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em msg} & Mensaje a transmitir \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_comunicacion_asincronica_a9d55be4bd6519f1e8b8d6954c75d45e1}{Comunicacion\+Asincronica}}.
+
+\mbox{\Hypertarget{class_uart_ade4a6cd289f94350eb1bf3b29a9e1359}\label{class_uart_ade4a6cd289f94350eb1bf3b29a9e1359}} 
+\index{Uart@{Uart}!Transmit@{Transmit}}
+\index{Transmit@{Transmit}!Uart@{Uart}}
+\doxysubsubsection{\texorpdfstring{Transmit()}{Transmit()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Uart\+::\+Transmit (\begin{DoxyParamCaption}\item[{const void $\ast$}]{msg,  }\item[{uint32\+\_\+t}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Transmite el mensaje indicado. 
+
+Coloca n caracteres del mensaje indicado en el buffer. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em msg} & Mensaje a transmitir. \\
+\hline
+\mbox{\texttt{ in}}  & {\em n} & Cantidad de caracteres a enviar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_comunicacion_asincronica_a506361dd86d7300792b5cded1159506e}{Comunicacion\+Asincronica}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/\+Agustin/\+Escritorio/\+M\+C\+Uexpresso/\+Kit\+L\+P\+C845-\/\+C++/src/\+Drivers/\+Perifericos/13-\/\+U\+A\+R\+T/\mbox{\hyperlink{_uart_8h}{Uart.\+h}}\item 
+E\+:/\+Agustin/\+Escritorio/\+M\+C\+Uexpresso/\+Kit\+L\+P\+C845-\/\+C++/src/\+Drivers/\+Perifericos/13-\/\+U\+A\+R\+T/\mbox{\hyperlink{_uart_8cpp}{Uart.\+cpp}}\item 
+E\+:/\+Agustin/\+Escritorio/\+M\+C\+Uexpresso/\+Kit\+L\+P\+C845-\/\+C++/src/\+Drivers/\+Perifericos/14-\/\+Com\+Sincronica/\+I2\+C/\mbox{\hyperlink{_i2_c_8cpp}{I2\+C.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,88 @@
+\hypertarget{class_i4511}{}\doxysection{I4511 Class Reference}
+\label{class_i4511}\index{I4511@{I4511}}
+
+
+Clase del objeto \mbox{\hyperlink{class_i4511}{I4511}} El objeto \mbox{\hyperlink{class_i4511}{I4511}} permite el control del integrado del mismo nombre. Este integrado permite el control de un display 7 segmentos mediante una comunicación binaria en formato paralelo.  
+
+
+
+
+{\ttfamily \#include $<$I4511.\+h$>$}
+
+
+
+Inheritance diagram for I4511\+:
+% FIG 0
+
+
+Collaboration diagram for I4511\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_i4511_a2d4d5f3c8cc3a270e2cc542e1c043049}{I4511}} (const vector$<$ \mbox{\hyperlink{classgpio}{gpio}} $\ast$ $>$ \&bcd)
+\item 
+void \mbox{\hyperlink{class_i4511_a724201f1a5023afc0470ed22a49a6247}{Set\+Segmentos}} (uint16\+\_\+t)
+\begin{DoxyCompactList}\small\item\em Función de escritura del segmento. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i4511_a731e8085d9f8784ecca32e567ef86b0b}{Inicializar}} (void)
+\begin{DoxyCompactList}\small\item\em Función de Inicialización del \mbox{\hyperlink{class_i4511}{I4511}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase del objeto \mbox{\hyperlink{class_i4511}{I4511}} El objeto \mbox{\hyperlink{class_i4511}{I4511}} permite el control del integrado del mismo nombre. Este integrado permite el control de un display 7 segmentos mediante una comunicación binaria en formato paralelo. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_i4511_a2d4d5f3c8cc3a270e2cc542e1c043049}\label{class_i4511_a2d4d5f3c8cc3a270e2cc542e1c043049}} 
+\index{I4511@{I4511}!I4511@{I4511}}
+\index{I4511@{I4511}!I4511@{I4511}}
+\doxysubsubsection{\texorpdfstring{I4511()}{I4511()}}
+{\footnotesize\ttfamily I4511\+::\+I4511 (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classgpio}{gpio}} $\ast$ $>$ \&}]{bcd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+constructor por defecto 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_i4511_a731e8085d9f8784ecca32e567ef86b0b}\label{class_i4511_a731e8085d9f8784ecca32e567ef86b0b}} 
+\index{I4511@{I4511}!Inicializar@{Inicializar}}
+\index{Inicializar@{Inicializar}!I4511@{I4511}}
+\doxysubsubsection{\texorpdfstring{Inicializar()}{Inicializar()}}
+{\footnotesize\ttfamily void I4511\+::\+Inicializar (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Función de Inicialización del \mbox{\hyperlink{class_i4511}{I4511}}. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classsegmentos_a4c7ecb94555c52a927c63e6b48d4f543}{segmentos}}.
+
+\mbox{\Hypertarget{class_i4511_a724201f1a5023afc0470ed22a49a6247}\label{class_i4511_a724201f1a5023afc0470ed22a49a6247}} 
+\index{I4511@{I4511}!SetSegmentos@{SetSegmentos}}
+\index{SetSegmentos@{SetSegmentos}!I4511@{I4511}}
+\doxysubsubsection{\texorpdfstring{SetSegmentos()}{SetSegmentos()}}
+{\footnotesize\ttfamily void I4511\+::\+Set\+Segmentos (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{valor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Función de escritura del segmento. 
+
+Escribe el segmento en formato binario. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em valor} & valor a escribir. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classsegmentos_a871b7f7a682627a416a389567981a858}{segmentos}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/\+Agustin/\+Escritorio/\+M\+C\+Uexpresso/\+Kit\+L\+P\+C845-\/\+C++/src/\+Drivers/\+Hardware/02-\/\+Displays/7\+Segmentos/\+B-\/\+Segmentos/\mbox{\hyperlink{_i4511_8h}{I4511.\+h}}\item 
+E\+:/\+Agustin/\+Escritorio/\+M\+C\+Uexpresso/\+Kit\+L\+P\+C845-\/\+C++/src/\+Drivers/\+Hardware/02-\/\+Displays/7\+Segmentos/\+B-\/\+Segmentos/\mbox{\hyperlink{_i4511_8cpp}{I4511.\+cpp}}\end{DoxyCompactItemize}

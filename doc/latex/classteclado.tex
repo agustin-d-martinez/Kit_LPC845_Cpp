@@ -1,0 +1,113 @@
+\hypertarget{classteclado}{}\doxysection{teclado Class Reference}
+\label{classteclado}\index{teclado@{teclado}}
+
+
+Clase del objeto teclado F\+U\+N\+C\+I\+O\+N\+A\+M\+I\+E\+N\+TO\+: Este objeto permite controlar teclados matriciales cableados, eliminando el rebote mecánico. Teclado de tipo mono-\/usuario, mono-\/dedo con opción de mantener presionado una tecla.  
+
+
+
+
+{\ttfamily \#include $<$teclado.\+h$>$}
+
+
+
+Inheritance diagram for teclado\+:
+% FIG 0
+
+
+Collaboration diagram for teclado\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classteclado_a9f70a4cb9dfaa2266fb0a7c4f3910361}{teclado}} (vector$<$ \mbox{\hyperlink{classgpio}{gpio}} $\ast$ $>$ \&s, vector$<$ \mbox{\hyperlink{classgpio}{gpio}} $\ast$ $>$ \&r)
+\begin{DoxyCompactList}\small\item\em Constructor de un teclado. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteclado_a5d259635da832fff0db13741e874c636}{S\+Whandler}} (void)
+\begin{DoxyCompactList}\small\item\em Funcion handler/interrupcion del teclado. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteclado_ab490f2e16e242ea918cb2addfcf938d2}{Inicializar}} (void)
+\begin{DoxyCompactList}\small\item\em Inicializa el teclado. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{classteclado_a724b35fe0961ce7f08547d5685c7652d}{Get}} (void)
+\begin{DoxyCompactList}\small\item\em Devuelve el valor presionado en el teclado. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classteclado_a5aa8aeef81f4256f6850e8d6d866fdc0}{$\sim$teclado}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase del objeto teclado F\+U\+N\+C\+I\+O\+N\+A\+M\+I\+E\+N\+TO\+: Este objeto permite controlar teclados matriciales cableados, eliminando el rebote mecánico. Teclado de tipo mono-\/usuario, mono-\/dedo con opción de mantener presionado una tecla. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classteclado_a9f70a4cb9dfaa2266fb0a7c4f3910361}\label{classteclado_a9f70a4cb9dfaa2266fb0a7c4f3910361}} 
+\index{teclado@{teclado}!teclado@{teclado}}
+\index{teclado@{teclado}!teclado@{teclado}}
+\doxysubsubsection{\texorpdfstring{teclado()}{teclado()}}
+{\footnotesize\ttfamily teclado\+::teclado (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classgpio}{gpio}} $\ast$ $>$ \&}]{s,  }\item[{vector$<$ \mbox{\hyperlink{classgpio}{gpio}} $\ast$ $>$ \&}]{r }\end{DoxyParamCaption})}
+
+
+
+Constructor de un teclado. 
+
+Construye un objeto teclado con los parámetros indicados 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em s} & vector de filas \\
+\hline
+\mbox{\texttt{ in}}  & {\em r} & Vector de columnas \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteclado_a5aa8aeef81f4256f6850e8d6d866fdc0}\label{classteclado_a5aa8aeef81f4256f6850e8d6d866fdc0}} 
+\index{teclado@{teclado}!````~teclado@{$\sim$teclado}}
+\index{````~teclado@{$\sim$teclado}!teclado@{teclado}}
+\doxysubsubsection{\texorpdfstring{$\sim$teclado()}{~teclado()}}
+{\footnotesize\ttfamily teclado\+::$\sim$teclado (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Destructor por defecto 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classteclado_a724b35fe0961ce7f08547d5685c7652d}\label{classteclado_a724b35fe0961ce7f08547d5685c7652d}} 
+\index{teclado@{teclado}!Get@{Get}}
+\index{Get@{Get}!teclado@{teclado}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily uint8\+\_\+t teclado\+::\+Get (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Devuelve el valor presionado en el teclado. 
+
+Entrega el valor del buffer o N\+O\+\_\+\+K\+EY en caso de no entregar nada. La tecla va desde 0 hasta el (filas$\ast$columnas) \begin{DoxyReturn}{Returns}
+Tecla presionada 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteclado_ab490f2e16e242ea918cb2addfcf938d2}\label{classteclado_ab490f2e16e242ea918cb2addfcf938d2}} 
+\index{teclado@{teclado}!Inicializar@{Inicializar}}
+\index{Inicializar@{Inicializar}!teclado@{teclado}}
+\doxysubsubsection{\texorpdfstring{Inicializar()}{Inicializar()}}
+{\footnotesize\ttfamily void teclado\+::\+Inicializar (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Inicializa el teclado. 
+
+Setea las direcciones y resistencias de las distintas entradas y salidas G\+P\+IO \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteclado_a5d259635da832fff0db13741e874c636}\label{classteclado_a5d259635da832fff0db13741e874c636}} 
+\index{teclado@{teclado}!SWhandler@{SWhandler}}
+\index{SWhandler@{SWhandler}!teclado@{teclado}}
+\doxysubsubsection{\texorpdfstring{SWhandler()}{SWhandler()}}
+{\footnotesize\ttfamily void teclado\+::\+S\+Whandler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Funcion handler/interrupcion del teclado. 
+
+Ejecuta el barrido y la lectura del antirrebote \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_callback_a24e8f5fec587299192f62b13a2e7eb42}{Callback}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/\+Agustin/\+Escritorio/\+M\+C\+Uexpresso/\+Kit\+L\+P\+C845-\/\+C++/src/\+Drivers/\+Hardware/01-\/\+Teclado/\mbox{\hyperlink{teclado_8h}{teclado.\+h}}\item 
+E\+:/\+Agustin/\+Escritorio/\+M\+C\+Uexpresso/\+Kit\+L\+P\+C845-\/\+C++/src/\+Drivers/\+Hardware/01-\/\+Teclado/\mbox{\hyperlink{teclado_8cpp}{teclado.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,325 @@
+\hypertarget{classgpio}{}\doxysection{gpio Class Reference}
+\label{classgpio}\index{gpio@{gpio}}
+
+
+Clase del objeto gpio.  
+
+
+
+
+{\ttfamily \#include $<$gpio.\+h$>$}
+
+
+
+Inheritance diagram for gpio\+:
+% FIG 0
+
+
+Collaboration diagram for gpio\+:
+% FIG 1
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classgpio_abc2ecf3fc05b2faa58254aaaa7cbc5d5}\label{classgpio_abc2ecf3fc05b2faa58254aaaa7cbc5d5}} 
+enum \mbox{\hyperlink{classgpio_abc2ecf3fc05b2faa58254aaaa7cbc5d5}{direction\+\_\+t}} \{ {\bfseries input}, 
+{\bfseries output}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeracion de input/output. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgpio_a28000a49c5f635993116c68752fe6b4b}\label{classgpio_a28000a49c5f635993116c68752fe6b4b}} 
+enum \mbox{\hyperlink{classgpio_a28000a49c5f635993116c68752fe6b4b}{power\+\_\+t}} \{ {\bfseries off}, 
+{\bfseries on}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeracion de encendido/apagado. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgpio_aa105bc05ba99ed1b45a9cd8576d6c0ab}\label{classgpio_aa105bc05ba99ed1b45a9cd8576d6c0ab}} 
+enum \mbox{\hyperlink{classgpio_aa105bc05ba99ed1b45a9cd8576d6c0ab}{mode\+\_\+t}} \{ \newline
+{\bfseries pushpull} = 0, 
+{\bfseries opencolector}, 
+{\bfseries inactive} = 0, 
+{\bfseries pulldown}, 
+\newline
+{\bfseries pullup}, 
+{\bfseries repeater}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeracion con los modos de la salida. Resaltar que los primeros son de O\+U\+T\+P\+UT y los segundos de I\+N\+P\+UT ~\newline
+ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgpio_a37b1bf950dfcff8f5a81431da1f690fa}\label{classgpio_a37b1bf950dfcff8f5a81431da1f690fa}} 
+enum \mbox{\hyperlink{classgpio_a37b1bf950dfcff8f5a81431da1f690fa}{activity\+\_\+t}} \{ {\bfseries low}, 
+{\bfseries high}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeracion de activo bajo/alto. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgpio_a448130a00845ab7b4edda7ec12b35432}\label{classgpio_a448130a00845ab7b4edda7ec12b35432}} 
+enum \mbox{\hyperlink{classgpio_a448130a00845ab7b4edda7ec12b35432}{interrupt\+\_\+mode\+\_\+t}} \{ \newline
+{\bfseries rising\+\_\+edge} = 0, 
+{\bfseries falling\+\_\+edge}, 
+{\bfseries rising\+\_\+falling\+\_\+edge}, 
+{\bfseries low\+\_\+level}, 
+\newline
+{\bfseries high\+\_\+level}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeracion de interrupciones del pin. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgpio_a64ee05ebd47c2fc281fe71eb6efcb557}\label{classgpio_a64ee05ebd47c2fc281fe71eb6efcb557}} 
+typedef enum \mbox{\hyperlink{classgpio_abc2ecf3fc05b2faa58254aaaa7cbc5d5}{gpio\+::direction\+\_\+t}} \mbox{\hyperlink{classgpio_a64ee05ebd47c2fc281fe71eb6efcb557}{direction\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Enumeracion de input/output. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgpio_ab02ac93ab02ef1a96a5d287daef5e6a5}\label{classgpio_ab02ac93ab02ef1a96a5d287daef5e6a5}} 
+typedef enum \mbox{\hyperlink{classgpio_aa105bc05ba99ed1b45a9cd8576d6c0ab}{gpio\+::mode\+\_\+t}} \mbox{\hyperlink{classgpio_ab02ac93ab02ef1a96a5d287daef5e6a5}{mode\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Enumeracion con los modos de la salida. Resaltar que los primeros son de O\+U\+T\+P\+UT y los segundos de I\+N\+P\+UT ~\newline
+ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgpio_ad747cdd6a7343c9be1382eca648002c6}\label{classgpio_ad747cdd6a7343c9be1382eca648002c6}} 
+typedef enum \mbox{\hyperlink{classgpio_a37b1bf950dfcff8f5a81431da1f690fa}{gpio\+::activity\+\_\+t}} \mbox{\hyperlink{classgpio_ad747cdd6a7343c9be1382eca648002c6}{activity\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Enumeracion de activo bajo/alto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgpio_a91d8a585757112ada21e8c8b7570171a}{gpio}} (\mbox{\hyperlink{class_pin_a02483eba92e68e4230f8aa883e0a25fe}{port\+\_\+t}} port, uint8\+\_\+t bit, \mbox{\hyperlink{classgpio_aa105bc05ba99ed1b45a9cd8576d6c0ab}{mode\+\_\+t}} mode, \mbox{\hyperlink{classgpio_abc2ecf3fc05b2faa58254aaaa7cbc5d5}{direction\+\_\+t}} direction, \mbox{\hyperlink{classgpio_a37b1bf950dfcff8f5a81431da1f690fa}{activity\+\_\+t}} activity=high)
+\begin{DoxyCompactList}\small\item\em Constructor de clase G\+P\+IO. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{classgpio_a1569a339ad528cc49690f9967b80f19c}{Set\+Pin}} (void)
+\begin{DoxyCompactList}\small\item\em Enciende la salida. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{classgpio_ae0b1469a85228420f03c14d1c0095cd7}{Clr\+Pin}} (void)
+\begin{DoxyCompactList}\small\item\em Limpia el pin. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{classgpio_a87334b85b5a943f64539ff8bf400a3d4}{Set\+Toggle\+Pin}} (void)
+\begin{DoxyCompactList}\small\item\em Toggle del pin. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{classgpio_abc2283be63bb51cecb0c2c8916f5ab99}{Set\+Dir}} (void)
+\begin{DoxyCompactList}\small\item\em Setea la direccion. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{classgpio_ad93e980f89453dba315e161d23276339}{Set\+Toggle\+Dir}} (void)
+\begin{DoxyCompactList}\small\item\em Toggle de la dirección. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{classgpio_ab3f6b81018ece79342e66612474679d4}{Get\+Pin}} (void)
+\begin{DoxyCompactList}\small\item\em Devuelve el valor del pin. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{classgpio_a6c0dd0caac44cab906bb4d4e0bf43701}{Set\+Pin\+Mode}} (void)
+\begin{DoxyCompactList}\small\item\em Configura el modo del pin. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{classgpio_ac51ff7f9df003cdef2f8d2d09864bdd3}{Set\+Pin\+Resistor}} (void)
+\begin{DoxyCompactList}\small\item\em Setea la resistencia interna. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgpio}{gpio}} \& \mbox{\hyperlink{classgpio_a0e9fcb8c59eba9f0a28091cac7a34ba2}{operator=}} (uint8\+\_\+t a)
+\begin{DoxyCompactList}\small\item\em Sobrecarga del operador =. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classgpio_a115befd0ad74a2f911420b8673415bca}{$\sim$gpio}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{classgpio_aa105bc05ba99ed1b45a9cd8576d6c0ab}{mode\+\_\+t}} \mbox{\hyperlink{classgpio_a672ac1aa2fd7a3d39db9f3c7aa37d167}{m\+\_\+mode}}
+\item 
+\mbox{\hyperlink{classgpio_abc2ecf3fc05b2faa58254aaaa7cbc5d5}{direction\+\_\+t}} \mbox{\hyperlink{classgpio_ac4def73bdbedc9163facaf784f9b29bd}{m\+\_\+direction}}
+\item 
+const \mbox{\hyperlink{classgpio_a37b1bf950dfcff8f5a81431da1f690fa}{activity\+\_\+t}} \mbox{\hyperlink{classgpio_ac6259c170adf14b17c72d65fd388921b}{m\+\_\+activity}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Clase del objeto gpio. 
+
+El objeto gpio Permite el manejo de entradas y salidas de uso general 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgpio_a91d8a585757112ada21e8c8b7570171a}\label{classgpio_a91d8a585757112ada21e8c8b7570171a}} 
+\index{gpio@{gpio}!gpio@{gpio}}
+\index{gpio@{gpio}!gpio@{gpio}}
+\doxysubsubsection{\texorpdfstring{gpio()}{gpio()}}
+{\footnotesize\ttfamily gpio\+::gpio (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pin_a02483eba92e68e4230f8aa883e0a25fe}{port\+\_\+t}}}]{port,  }\item[{uint8\+\_\+t}]{bit,  }\item[{\mbox{\hyperlink{classgpio_aa105bc05ba99ed1b45a9cd8576d6c0ab}{mode\+\_\+t}}}]{mode,  }\item[{\mbox{\hyperlink{classgpio_abc2ecf3fc05b2faa58254aaaa7cbc5d5}{direction\+\_\+t}}}]{direction,  }\item[{\mbox{\hyperlink{classgpio_a37b1bf950dfcff8f5a81431da1f690fa}{activity\+\_\+t}}}]{activity = {\ttfamily high} }\end{DoxyParamCaption})}
+
+
+
+Constructor de clase G\+P\+IO. 
+
+Crea un G\+P\+IO con los parámetros correspondientes 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em port} & Puerto del objeto \\
+\hline
+\mbox{\texttt{ in}}  & {\em bit} & Bit del objeto \\
+\hline
+\mbox{\texttt{ in}}  & {\em mode} & Configuración eléctrica del pin \\
+\hline
+\mbox{\texttt{ in}}  & {\em direction} & Entrada/salida \\
+\hline
+\mbox{\texttt{ in}}  & {\em activity} & Activo alto/bajo \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgpio_a115befd0ad74a2f911420b8673415bca}\label{classgpio_a115befd0ad74a2f911420b8673415bca}} 
+\index{gpio@{gpio}!````~gpio@{$\sim$gpio}}
+\index{````~gpio@{$\sim$gpio}!gpio@{gpio}}
+\doxysubsubsection{\texorpdfstring{$\sim$gpio()}{~gpio()}}
+{\footnotesize\ttfamily virtual gpio\+::$\sim$gpio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+Destructor por defecto 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgpio_ae0b1469a85228420f03c14d1c0095cd7}\label{classgpio_ae0b1469a85228420f03c14d1c0095cd7}} 
+\index{gpio@{gpio}!ClrPin@{ClrPin}}
+\index{ClrPin@{ClrPin}!gpio@{gpio}}
+\doxysubsubsection{\texorpdfstring{ClrPin()}{ClrPin()}}
+{\footnotesize\ttfamily uint8\+\_\+t gpio\+::\+Clr\+Pin (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Limpia el pin. 
+
+Coloca la salida con un 0 lógico \begin{DoxyReturn}{Returns}
+Devuelve el error 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_in_out_a4db90619ce419d8228e77ad72188948d}{In\+Out}}.
+
+\mbox{\Hypertarget{classgpio_ab3f6b81018ece79342e66612474679d4}\label{classgpio_ab3f6b81018ece79342e66612474679d4}} 
+\index{gpio@{gpio}!GetPin@{GetPin}}
+\index{GetPin@{GetPin}!gpio@{gpio}}
+\doxysubsubsection{\texorpdfstring{GetPin()}{GetPin()}}
+{\footnotesize\ttfamily uint8\+\_\+t gpio\+::\+Get\+Pin (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Devuelve el valor del pin. 
+
+Entrega el valor lógico de encendido o apagado de la entrada \begin{DoxyReturn}{Returns}
+Devuelve el error 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_in_out_a6a610b9ee8c4c095e783f3a3a25d1613}{In\+Out}}.
+
+\mbox{\Hypertarget{classgpio_a0e9fcb8c59eba9f0a28091cac7a34ba2}\label{classgpio_a0e9fcb8c59eba9f0a28091cac7a34ba2}} 
+\index{gpio@{gpio}!operator=@{operator=}}
+\index{operator=@{operator=}!gpio@{gpio}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgpio}{gpio}} \& gpio\+::operator= (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{a }\end{DoxyParamCaption})}
+
+
+
+Sobrecarga del operador =. 
+
+Enciende o apaga la salida. Solo funciona en modo output 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & Valor de seteo de la salida \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Referencia a si mismo 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgpio_abc2283be63bb51cecb0c2c8916f5ab99}\label{classgpio_abc2283be63bb51cecb0c2c8916f5ab99}} 
+\index{gpio@{gpio}!SetDir@{SetDir}}
+\index{SetDir@{SetDir}!gpio@{gpio}}
+\doxysubsubsection{\texorpdfstring{SetDir()}{SetDir()}}
+{\footnotesize\ttfamily uint8\+\_\+t gpio\+::\+Set\+Dir (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Setea la direccion. 
+
+Configura la G\+P\+IO como entrada o como salida \begin{DoxyReturn}{Returns}
+Devuelve el error 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_in_out_ae51ca98866d8a80d41073ac87be5aa57}{In\+Out}}.
+
+\mbox{\Hypertarget{classgpio_a1569a339ad528cc49690f9967b80f19c}\label{classgpio_a1569a339ad528cc49690f9967b80f19c}} 
+\index{gpio@{gpio}!SetPin@{SetPin}}
+\index{SetPin@{SetPin}!gpio@{gpio}}
+\doxysubsubsection{\texorpdfstring{SetPin()}{SetPin()}}
+{\footnotesize\ttfamily uint8\+\_\+t gpio\+::\+Set\+Pin (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Enciende la salida. 
+
+Coloca la salida con un 1 lógico \begin{DoxyReturn}{Returns}
+Devuelve el error 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_in_out_ab9ba3b4eebf4fbc3d8af15da3d62f4a4}{In\+Out}}.
+
+\mbox{\Hypertarget{classgpio_a6c0dd0caac44cab906bb4d4e0bf43701}\label{classgpio_a6c0dd0caac44cab906bb4d4e0bf43701}} 
+\index{gpio@{gpio}!SetPinMode@{SetPinMode}}
+\index{SetPinMode@{SetPinMode}!gpio@{gpio}}
+\doxysubsubsection{\texorpdfstring{SetPinMode()}{SetPinMode()}}
+{\footnotesize\ttfamily uint8\+\_\+t gpio\+::\+Set\+Pin\+Mode (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Configura el modo del pin. 
+
+Activa el pin en modo Push\+Pull o Open\+Collector. S\+O\+LO P\+A\+RA O\+U\+T\+P\+U\+TS \begin{DoxyReturn}{Returns}
+Devuelve el error 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_in_out_a3ddb767a0ccd2d3ff1c4ad7b3dfec3a9}{In\+Out}}.
+
+\mbox{\Hypertarget{classgpio_ac51ff7f9df003cdef2f8d2d09864bdd3}\label{classgpio_ac51ff7f9df003cdef2f8d2d09864bdd3}} 
+\index{gpio@{gpio}!SetPinResistor@{SetPinResistor}}
+\index{SetPinResistor@{SetPinResistor}!gpio@{gpio}}
+\doxysubsubsection{\texorpdfstring{SetPinResistor()}{SetPinResistor()}}
+{\footnotesize\ttfamily uint8\+\_\+t gpio\+::\+Set\+Pin\+Resistor (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Setea la resistencia interna. 
+
+Activa el modo Inactive , Pull\+Up , Pull\+Down o Repeater. S\+O\+LO P\+A\+RA I\+N\+P\+U\+TS \begin{DoxyReturn}{Returns}
+Devuelve el error 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_in_out_a673b92237fa3727ace4b20dd4784c46c}{In\+Out}}.
+
+\mbox{\Hypertarget{classgpio_ad93e980f89453dba315e161d23276339}\label{classgpio_ad93e980f89453dba315e161d23276339}} 
+\index{gpio@{gpio}!SetToggleDir@{SetToggleDir}}
+\index{SetToggleDir@{SetToggleDir}!gpio@{gpio}}
+\doxysubsubsection{\texorpdfstring{SetToggleDir()}{SetToggleDir()}}
+{\footnotesize\ttfamily uint8\+\_\+t gpio\+::\+Set\+Toggle\+Dir (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Toggle de la dirección. 
+
+Pasa de output a input y viceversa \begin{DoxyReturn}{Returns}
+Devuelve el error 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_in_out_aaf2c02f298e2a2367e48ba1036409dd7}{In\+Out}}.
+
+\mbox{\Hypertarget{classgpio_a87334b85b5a943f64539ff8bf400a3d4}\label{classgpio_a87334b85b5a943f64539ff8bf400a3d4}} 
+\index{gpio@{gpio}!SetTogglePin@{SetTogglePin}}
+\index{SetTogglePin@{SetTogglePin}!gpio@{gpio}}
+\doxysubsubsection{\texorpdfstring{SetTogglePin()}{SetTogglePin()}}
+{\footnotesize\ttfamily uint8\+\_\+t gpio\+::\+Set\+Toggle\+Pin (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Toggle del pin. 
+
+En caso de ser salida. Pasa de encendido a apagado y viceversa. \begin{DoxyReturn}{Returns}
+Devuelve el error 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_in_out_a333b2af8d3b2df84f53b8b4eeac02841}{In\+Out}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classgpio_ac6259c170adf14b17c72d65fd388921b}\label{classgpio_ac6259c170adf14b17c72d65fd388921b}} 
+\index{gpio@{gpio}!m\_activity@{m\_activity}}
+\index{m\_activity@{m\_activity}!gpio@{gpio}}
+\doxysubsubsection{\texorpdfstring{m\_activity}{m\_activity}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classgpio_a37b1bf950dfcff8f5a81431da1f690fa}{activity\+\_\+t}} gpio\+::m\+\_\+activity\hspace{0.3cm}{\ttfamily [protected]}}
+
+Si es activo alto o activo bajo \mbox{\Hypertarget{classgpio_ac4def73bdbedc9163facaf784f9b29bd}\label{classgpio_ac4def73bdbedc9163facaf784f9b29bd}} 
+\index{gpio@{gpio}!m\_direction@{m\_direction}}
+\index{m\_direction@{m\_direction}!gpio@{gpio}}
+\doxysubsubsection{\texorpdfstring{m\_direction}{m\_direction}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgpio_abc2ecf3fc05b2faa58254aaaa7cbc5d5}{direction\+\_\+t}} gpio\+::m\+\_\+direction\hspace{0.3cm}{\ttfamily [protected]}}
+
+Si es input u output \mbox{\Hypertarget{classgpio_a672ac1aa2fd7a3d39db9f3c7aa37d167}\label{classgpio_a672ac1aa2fd7a3d39db9f3c7aa37d167}} 
+\index{gpio@{gpio}!m\_mode@{m\_mode}}
+\index{m\_mode@{m\_mode}!gpio@{gpio}}
+\doxysubsubsection{\texorpdfstring{m\_mode}{m\_mode}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classgpio_aa105bc05ba99ed1b45a9cd8576d6c0ab}{mode\+\_\+t}} gpio\+::m\+\_\+mode\hspace{0.3cm}{\ttfamily [protected]}}
+
+La config de resistencia y actividad 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/\+Agustin/\+Escritorio/\+M\+C\+Uexpresso/\+Kit\+L\+P\+C845-\/\+C++/src/\+Drivers/\+Perifericos/02-\/\+Gpio/\mbox{\hyperlink{gpio_8h}{gpio.\+h}}\item 
+E\+:/\+Agustin/\+Escritorio/\+M\+C\+Uexpresso/\+Kit\+L\+P\+C845-\/\+C++/src/\+Drivers/\+Perifericos/02-\/\+Gpio/\mbox{\hyperlink{gpio_8cpp}{gpio.\+cpp}}\end{DoxyCompactItemize}

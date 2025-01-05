@@ -1,0 +1,166 @@
+\hypertarget{class_p_w_m___reader}{}\doxysection{P\+W\+M\+\_\+\+Reader Class Reference}
+\label{class_p_w_m___reader}\index{PWM\_Reader@{PWM\_Reader}}
+
+
+Clase del objeto \mbox{\hyperlink{class_p_w_m___reader}{P\+W\+M\+\_\+\+Reader}}.  
+
+
+
+
+{\ttfamily \#include $<$P\+W\+M\+Reader.\+h$>$}
+
+
+
+Inheritance diagram for P\+W\+M\+\_\+\+Reader\+:
+% FIG 0
+
+
+Collaboration diagram for P\+W\+M\+\_\+\+Reader\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_p_w_m___reader_aef7f587b60c2333d3ade77e7d7dcc7d0}{P\+W\+M\+\_\+\+Reader}} (\mbox{\hyperlink{class_pin_a02483eba92e68e4230f8aa883e0a25fe}{port\+\_\+t}} puerto, uint8\+\_\+t bit, \mbox{\hyperlink{classgpio_aa105bc05ba99ed1b45a9cd8576d6c0ab}{mode\+\_\+t}} modo, \mbox{\hyperlink{classgpio_a37b1bf950dfcff8f5a81431da1f690fa}{activity\+\_\+t}} activity, M\+R\+T\+\_\+timer\+\_\+channels timer\+\_\+channel)
+\begin{DoxyCompactList}\small\item\em Constructor de clase \mbox{\hyperlink{class_p_w_m___reader}{P\+W\+M\+\_\+\+Reader}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_p_w_m___reader_a9fbf0e55b18bd71dcbc6521a2d4679fb}{Inicializar}} (void)
+\begin{DoxyCompactList}\small\item\em Inicializo el P\+W\+M\+\_\+\+In. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{class_p_w_m___reader_a803bd89a671639c9cd4885861e5311fc}{Get\+Pulse\+On}} (void) const
+\begin{DoxyCompactList}\small\item\em Obtengo el largo del pulso. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_p_w_m___reader_ac7b4aefcb0ee060cedff7103e2f10189}{Off}} (void)
+\begin{DoxyCompactList}\small\item\em Apago el P\+W\+M\+\_\+\+In. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_p_w_m___reader_a5ecd16f384ee39f084af481428df2843}{On}} (void)
+\begin{DoxyCompactList}\small\item\em Enciendo el P\+W\+M\+\_\+\+In. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_p_w_m___reader_a1fcbe571c418f03cbe72f1ad680940c9}{Gpio\+Handler}} (void)
+\begin{DoxyCompactList}\small\item\em Handler de la interrupción por flanco. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Clase del objeto \mbox{\hyperlink{class_p_w_m___reader}{P\+W\+M\+\_\+\+Reader}}. 
+
+Lee ancho de señal de una entrada en milisegundos. Solo lee pulsos completos. Si se queda en 0, no lo leerá hasta volver a 1. Lectura\+:
+
+\DoxyHorRuler
+ \tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ }\\\cline{1-2}
+\endhead
+&\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+   \\\cline{1-2}
+\end{longtabu}
+
+
+$\vert$-\/---m\+\_\+pulse\+\_\+on---$\vert$ $\vert$-\/---m\+\_\+pulse\+\_\+on-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_p_w_m___reader_aef7f587b60c2333d3ade77e7d7dcc7d0}\label{class_p_w_m___reader_aef7f587b60c2333d3ade77e7d7dcc7d0}} 
+\index{PWM\_Reader@{PWM\_Reader}!PWM\_Reader@{PWM\_Reader}}
+\index{PWM\_Reader@{PWM\_Reader}!PWM\_Reader@{PWM\_Reader}}
+\doxysubsubsection{\texorpdfstring{PWM\_Reader()}{PWM\_Reader()}}
+{\footnotesize\ttfamily P\+W\+M\+\_\+\+Reader\+::\+P\+W\+M\+\_\+\+Reader (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pin_a02483eba92e68e4230f8aa883e0a25fe}{port\+\_\+t}}}]{puerto,  }\item[{uint8\+\_\+t}]{bit,  }\item[{\mbox{\hyperlink{classgpio_aa105bc05ba99ed1b45a9cd8576d6c0ab}{mode\+\_\+t}}}]{modo,  }\item[{\mbox{\hyperlink{classgpio_a37b1bf950dfcff8f5a81431da1f690fa}{activity\+\_\+t}}}]{activity,  }\item[{M\+R\+T\+\_\+timer\+\_\+channels}]{timer\+\_\+channel }\end{DoxyParamCaption})}
+
+
+
+Constructor de clase \mbox{\hyperlink{class_p_w_m___reader}{P\+W\+M\+\_\+\+Reader}}. 
+
+Crea un \mbox{\hyperlink{class_p_w_m___reader}{P\+W\+M\+\_\+\+Reader}} con los parámetros correspondientes 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em puerto} & Puerto del \mbox{\hyperlink{class_p_w_m___reader}{P\+W\+M\+\_\+\+Reader}}. \\
+\hline
+\mbox{\texttt{ in}}  & {\em bit} & Bit del \mbox{\hyperlink{class_p_w_m___reader}{P\+W\+M\+\_\+\+Reader}}. \\
+\hline
+\mbox{\texttt{ in}}  & {\em modo} & Configuracion eléctrica de la entrada. \\
+\hline
+\mbox{\texttt{ in}}  & {\em activity} & activo alto/bajo. \\
+\hline
+\mbox{\texttt{ in}}  & {\em timer\+\_\+channel} & Canal del M\+R\+Ttimer a utilizar. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_p_w_m___reader_a803bd89a671639c9cd4885861e5311fc}\label{class_p_w_m___reader_a803bd89a671639c9cd4885861e5311fc}} 
+\index{PWM\_Reader@{PWM\_Reader}!GetPulseOn@{GetPulseOn}}
+\index{GetPulseOn@{GetPulseOn}!PWM\_Reader@{PWM\_Reader}}
+\doxysubsubsection{\texorpdfstring{GetPulseOn()}{GetPulseOn()}}
+{\footnotesize\ttfamily uint32\+\_\+t P\+W\+M\+\_\+\+Reader\+::\+Get\+Pulse\+On (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Obtengo el largo del pulso. 
+
+Realizo la cuenta del tiempo transcurrido entre el último flanco y este. \begin{DoxyReturn}{Returns}
+largo del pulso 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_p_w_m___reader_a1fcbe571c418f03cbe72f1ad680940c9}\label{class_p_w_m___reader_a1fcbe571c418f03cbe72f1ad680940c9}} 
+\index{PWM\_Reader@{PWM\_Reader}!GpioHandler@{GpioHandler}}
+\index{GpioHandler@{GpioHandler}!PWM\_Reader@{PWM\_Reader}}
+\doxysubsubsection{\texorpdfstring{GpioHandler()}{GpioHandler()}}
+{\footnotesize\ttfamily void P\+W\+M\+\_\+\+Reader\+::\+Gpio\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Handler de la interrupción por flanco. 
+
+Destructor por defecto
+
+Si el flanco es ascendente reseteo el contador. Si es desendente guado el valor del contador. La cuenta se realiza en otra función para ahorrar tiempo acá \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_pin_interrupt_a908dfa3980a3751886423fc9a9638fa3}{Pin\+Interrupt}}.
+
+\mbox{\Hypertarget{class_p_w_m___reader_a9fbf0e55b18bd71dcbc6521a2d4679fb}\label{class_p_w_m___reader_a9fbf0e55b18bd71dcbc6521a2d4679fb}} 
+\index{PWM\_Reader@{PWM\_Reader}!Inicializar@{Inicializar}}
+\index{Inicializar@{Inicializar}!PWM\_Reader@{PWM\_Reader}}
+\doxysubsubsection{\texorpdfstring{Inicializar()}{Inicializar()}}
+{\footnotesize\ttfamily void P\+W\+M\+\_\+\+Reader\+::\+Inicializar (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Inicializo el P\+W\+M\+\_\+\+In. 
+
+Seteo dirección resistencia y habilito la interrupción por flancos. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_p_w_m___reader_ac7b4aefcb0ee060cedff7103e2f10189}\label{class_p_w_m___reader_ac7b4aefcb0ee060cedff7103e2f10189}} 
+\index{PWM\_Reader@{PWM\_Reader}!Off@{Off}}
+\index{Off@{Off}!PWM\_Reader@{PWM\_Reader}}
+\doxysubsubsection{\texorpdfstring{Off()}{Off()}}
+{\footnotesize\ttfamily void P\+W\+M\+\_\+\+Reader\+::\+Off (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Apago el P\+W\+M\+\_\+\+In. 
+
+Deshabilito la interrupción y seteo el pulso a un valor gigante que no genere overflow. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_p_w_m___reader_a5ecd16f384ee39f084af481428df2843}\label{class_p_w_m___reader_a5ecd16f384ee39f084af481428df2843}} 
+\index{PWM\_Reader@{PWM\_Reader}!On@{On}}
+\index{On@{On}!PWM\_Reader@{PWM\_Reader}}
+\doxysubsubsection{\texorpdfstring{On()}{On()}}
+{\footnotesize\ttfamily void P\+W\+M\+\_\+\+Reader\+::\+On (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Enciendo el P\+W\+M\+\_\+\+In. 
+
+Habilito la interrupción. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/\+Agustin/\+Escritorio/\+M\+C\+Uexpresso/\+Kit\+L\+P\+C845-\/\+C++/src/\+Drivers/\+Hardware/06-\/\+P\+W\+M\+\_\+\+Reader/\mbox{\hyperlink{_p_w_m_reader_8h}{P\+W\+M\+Reader.\+h}}\item 
+E\+:/\+Agustin/\+Escritorio/\+M\+C\+Uexpresso/\+Kit\+L\+P\+C845-\/\+C++/src/\+Drivers/\+Hardware/06-\/\+P\+W\+M\+\_\+\+Reader/P\+W\+M\+Reader.\+cpp\end{DoxyCompactItemize}
