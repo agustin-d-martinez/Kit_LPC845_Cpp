@@ -1,0 +1,78 @@
+\doxysection{SPI.\+h}
+\hypertarget{_s_p_i_8h_source}{}\label{_s_p_i_8h_source}\index{E:/Agustin/Escritorio/MCUexpresso/KitLPC845-\/C++/src/Drivers/Perifericos/14-\/ComSincronica/SPI/SPI.h@{E:/Agustin/Escritorio/MCUexpresso/KitLPC845-\/C++/src/Drivers/Perifericos/14-\/ComSincronica/SPI/SPI.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*******************************************************************************************************************************/}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00038\ \textcolor{comment}{\ ***\ MODULO}}
+\DoxyCodeLine{00039\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#ifndef\ I2C\_H\_}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ I2C\_H\_}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00048\ \textcolor{comment}{\ ***\ INCLUDES\ GLOBALES}}
+\DoxyCodeLine{00049\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_pin_8h}{Perifericos/01-\/Pin/Pin.h}}>}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#include\ "{}LPC845.h"{}}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_comunicacion_sincronica_8h}{Perifericos/14-\/ComSincronica/ComunicacionSincronica.h}}>}}
+\DoxyCodeLine{00053\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00054\ \textcolor{comment}{\ ***\ DEFINES\ GLOBALES}}
+\DoxyCodeLine{00055\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#if\ defined\ (\_\_cplusplus)}}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ SPI0\_IRQHandler\ (\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00059\ \ \ \ \ \}}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ SPI1\_IRQHandler\ (\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00062\ \ \ \ \ \}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00064\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00065\ \textcolor{comment}{\ ***\ MACROS\ GLOBALES}}
+\DoxyCodeLine{00066\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00069\ \textcolor{comment}{\ ***\ TIPO\ DE\ DATOS\ GLOBALES}}
+\DoxyCodeLine{00070\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00073\ \textcolor{comment}{\ ***\ VARIABLES\ GLOBALES}}
+\DoxyCodeLine{00074\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00077\ \textcolor{comment}{\ ***\ IMPLANTACION\ DE\ UNA\ CLASE}}
+\DoxyCodeLine{00078\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_s_p_i_a2ba081c29fbdecc704c6bf00b24d5205}{SPI}}:\ \mbox{\hyperlink{class_comunicacion_sincronica_a2466717eadf1a0415f3ea369502620b1}{ComunicacionSincronica}}}
+\DoxyCodeLine{00086\ \{\ \ \ \ \ \ \ \textcolor{comment}{//La\ I2C1\ a\ I2C3\ no\ van\ a\ mas\ de\ 400khz}}
+\DoxyCodeLine{00087\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{master\ =\ 1\ ,\ slave\ =\ 2\}\ SPI\_mode\_t;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_s_p_i_a2ba081c29fbdecc704c6bf00b24d5205}{SPI}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ (\ );}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ Initialize\ \ \ \ \ \ (\ uint32\_t\ clk\_freq\ );}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ EnableInterupt\ \ (\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ DisableInterupt\ (\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_s_p_i_afc606c541ea7f80a0ae7b74450d68a73}{Write}}\ \ \ \ \ \ (\ uint8\_t\ data\ );}
+\DoxyCodeLine{00100\ \ \ \ \ int8\_t\ \ \ \ \ \ \ \ \ \ Read\ \ \ \ \ \ \ \ (\ uint8\_t*\ data\ ,\ \textcolor{keywordtype}{bool}\ continue\_reading\ );}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_s_p_i_af706f05c4b2eeef9ecc40626dd406604}{SPI\_IRQHandler}}\ (\ \textcolor{keywordtype}{void}\ )\ \{\ \}\ \ \ \ \ \ \ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keyword}{virtual}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_s_p_i}{\string~SPI}}();}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ config\ \ \ \ \ \ \ \ \ \ (\ uint8\_t\&\ register\_number\ );}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ EnableSWM\ \ \ \ \ \ \ (\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ ConfigClock\ \ \ \ \ (\ uint8\_t\&\ clk\_offset\ ,\ uint8\_t\&\ rst\_offset\ );}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ configBaudRate\ \ (\ uint32\_t\ clk\_freq\ );}
+\DoxyCodeLine{00111\ \};}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ I2C\_H\_\ */}\textcolor{preprocessor}{}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

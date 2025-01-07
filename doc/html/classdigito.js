@@ -27,7 +27,6 @@ var classdigito =
       [ "u", "classdigito.html#a9ca4533ad058f09c87644f3eb8b497a8a19b62f3e616bbc51b725dafa58709bf1", null ]
     ] ],
     [ "digito", "classdigito.html#ad87b6a6ef9b67e0ec9d16ef093f1eff0", null ],
-    [ "~digito", "classdigito.html#a94a3bc86918dbad9b062920a4bfb5e9a", null ],
     [ "Clr", "classdigito.html#a0c040b3ea2fe853a71a835656f21bb68", null ],
     [ "Get", "classdigito.html#a1147bec264cc1a971f6247d96dc7066b", null ],
     [ "Set", "classdigito.html#af66378ee328c8e5b756b72c348080c16", null ]

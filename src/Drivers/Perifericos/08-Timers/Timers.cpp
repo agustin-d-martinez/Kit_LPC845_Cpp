@@ -41,16 +41,16 @@
  **********************************************************************************************************************************/
 /**
 	\fn timers::timers()
-	\brief Constructor de clase timers
-	\details Crea un timers con los parámetros correspondientes
+	\brief Constructor de clase timers.
+	\details Crea un timers con los parámetros correspondientes.
 */
 timers::timers() { }
 /**
 	\fn timers & timers::operator<<( timer *t )
-	\brief Sobrecarga de del operador <<
-	\details Agrega a la lista de timers el timer pasado
-	\param  [in] t: timer a agregar a la lista
-	\return Referencia a si mismo
+	\brief Sobrecarga de del operador <<.
+	\details Agrega a la lista de timers el timer pasado.
+	\param  [in] t: timer a agregar a la lista.
+	\return Referencia a si mismo.
 */
 timers & timers::operator<<( Timer *t )
 {
@@ -59,9 +59,8 @@ timers & timers::operator<<( Timer *t )
 }
 /**
 	\fn void timers::TmrEvent( void )
-	\brief Funcion que revisa si los timer vencieron y los enciende
-	\details Esta función debe colocarse en el while(1) para que permita revisar los timers vencidos y ejecutar sus funciones asignadas. SOLO USAR SI TIENEN FUNCIONES ASIGNADAS
-	\return void
+	\brief Funcion que revisa si los timer vencieron y los enciende.
+	\details Esta función debe colocarse en el while(1) para que permita revisar los timers vencidos y ejecutar sus funciones asignadas. SOLO USAR SI TIENEN FUNCIONES ASIGNADAS.
 */
 void timers::TmrEvent( void )
 {

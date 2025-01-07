@@ -1,119 +1,147 @@
-\hypertarget{class_a_d_c}{}\doxysection{A\+DC Class Reference}
-\label{class_a_d_c}\index{ADC@{ADC}}
+\doxysection{ADC Class Reference}
+\hypertarget{class_a_d_c}{}\label{class_a_d_c}\index{ADC@{ADC}}
 
 
-Clase del objeto \mbox{\hyperlink{class_a_d_c}{A\+DC}} F\+U\+N\+C\+I\+O\+N\+A\+M\+I\+E\+N\+TO\+: La clase \mbox{\hyperlink{class_a_d_c}{A\+DC}} utiliza el A\+D\+C\+Group para poder ser manejada de forma individual por cada pata. Se pueden crear tantos objetos como canales del \mbox{\hyperlink{class_a_d_c}{A\+DC}} existen. La configuración de conversión se realiza automáticamente con el primer objeto \mbox{\hyperlink{class_a_d_c}{A\+DC}} creado, el resto no necesita recibir ninguna frecuencia de clock o muestreo.  
-
-
-
-
-{\ttfamily \#include $<$A\+D\+C.\+h$>$}
+Clase del objeto \doxylink{class_a_d_c}{ADC} FUNCIONAMIENTO\+: La clase \doxylink{class_a_d_c}{ADC} utiliza el ADCGroup para poder ser manejada de forma individual por cada pata. Se pueden crear tantos objetos como canales del \doxylink{class_a_d_c}{ADC} existen. La configuración de conversión se realiza automáticamente con el primer objeto \doxylink{class_a_d_c}{ADC} creado, el resto no necesita recibir ninguna frecuencia de clock o muestreo.  
 
 
 
-Inheritance diagram for A\+DC\+:
+
+{\ttfamily \#include $<$ADC.\+h$>$}
+
+
+
+Inheritance diagram for ADC\+:
 % FIG 0
 
 
-Collaboration diagram for A\+DC\+:
+Collaboration diagram for ADC\+:
 % FIG 1
-\doxysubsection*{Public Member Functions}
+\doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_a_d_c_a11d7d9534765e1427c6753226fa4b91e}{A\+DC}} (uint8\+\_\+t \+\_\+channel, uint32\+\_\+t \+\_\+clk\+\_\+freq=0, uint32\+\_\+t \+\_\+sample\+\_\+rate=0)
-\begin{DoxyCompactList}\small\item\em Default constructor of an \mbox{\hyperlink{class_a_d_c}{A\+DC}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_a_d_c_a11d7d9534765e1427c6753226fa4b91e}{ADC}} (uint8\+\_\+t \+\_\+channel, uint32\+\_\+t \+\_\+clk\+\_\+freq=0, uint32\+\_\+t \+\_\+sample\+\_\+rate=0)
+\begin{DoxyCompactList}\small\item\em Default constructor of an \doxylink{class_a_d_c}{ADC}. \end{DoxyCompactList}\item 
 int32\+\_\+t \mbox{\hyperlink{class_a_d_c_a37e2709d6d29e21021f2cc219511acf3}{Get}} (void)
-\begin{DoxyCompactList}\small\item\em Devuelve el valor del \mbox{\hyperlink{class_a_d_c}{A\+DC}}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Devuelve el valor del \doxylink{class_a_d_c}{ADC}. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_a_d_c_a39f98de3449fbc46f7aa69c656c15f61}{Is\+Result\+Ready}} (void)
-\begin{DoxyCompactList}\small\item\em Indica si la conversión análoga-\/$>$digital fue terminada. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Indica si la conversión análoga-\/\texorpdfstring{$>$}{>}digital fue terminada. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_a_d_c_a0321a2e27899f01e2acd1f743e41b85d}{Trigger}} (void)
-\begin{DoxyCompactList}\small\item\em Ejecuta una conversión analógica-\/$>$digital. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Ejecuta una conversión analógica-\/\texorpdfstring{$>$}{>}digital. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_a_d_c_a1f30ebf6f8dce0fca06650812eb7775d}{Inicializar}} (void)
-\begin{DoxyCompactList}\small\item\em Inicializador del \mbox{\hyperlink{class_a_d_c}{A\+DC}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Additional Inherited Members}
+\begin{DoxyCompactList}\small\item\em Inicializador del \doxylink{class_a_d_c}{ADC}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_pin}{Pin}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pin_a063b07c7607e031318ca024b75a6f0cf}{Pin}} (\mbox{\hyperlink{class_pin_a02483eba92e68e4230f8aa883e0a25fe}{port\+\_\+t}} port, uint8\+\_\+t bit)
+\begin{DoxyCompactList}\small\item\em Constructor de clase PIN. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{class_pin}{Pin}}}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_pin_a02483eba92e68e4230f8aa883e0a25fe}{port\+\_\+t}} \{ {\bfseries port0}
+, {\bfseries port1}
+ \}
+\item 
+\Hypertarget{class_pin_a14d326b4dbd92efffb57d27ea6b914d7}\label{class_pin_a14d326b4dbd92efffb57d27ea6b914d7} 
+enum \mbox{\hyperlink{class_pin_a14d326b4dbd92efffb57d27ea6b914d7}{max\+\_\+bits\+\_\+port\+\_\+t}} \{ {\bfseries b\+\_\+port0} = 31
+, {\bfseries b\+\_\+port1} = 9
+ \}
+\begin{DoxyCompactList}\small\item\em máximos pines por puerto \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_pin_a769192ed18c015e200739593f02b22db}{error\+\_\+t}} \{ {\bfseries error} = 2
+, {\bfseries ok}
+ \}
+\item 
+typedef enum \mbox{\hyperlink{class_pin_a02483eba92e68e4230f8aa883e0a25fe}{Pin\+::port\+\_\+t}} \mbox{\hyperlink{class_pin_a4ab61a1ba0455431c9a7addaaf66c8c8}{port\+\_\+t}}
+\item 
+typedef enum \mbox{\hyperlink{class_pin_a769192ed18c015e200739593f02b22db}{Pin\+::error\+\_\+t}} \mbox{\hyperlink{class_pin_a61c56e71b812002f25577142438629d2}{error\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_pin}{Pin}}}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{class_pin_a02483eba92e68e4230f8aa883e0a25fe}{port\+\_\+t}} \mbox{\hyperlink{class_pin_a2660d84228a8ca714d61f4752eb4c4fb}{m\+\_\+port}}
+\item 
+const uint8\+\_\+t \mbox{\hyperlink{class_pin_ace5aec3417e8217310a82244b1a17db5}{m\+\_\+bit}}
+\item 
+int8\+\_\+t \mbox{\hyperlink{class_pin_a4a1dd37e2f8dbe13fe4121d88dd2bab5}{m\+\_\+error}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Clase del objeto \mbox{\hyperlink{class_a_d_c}{A\+DC}} F\+U\+N\+C\+I\+O\+N\+A\+M\+I\+E\+N\+TO\+: La clase \mbox{\hyperlink{class_a_d_c}{A\+DC}} utiliza el A\+D\+C\+Group para poder ser manejada de forma individual por cada pata. Se pueden crear tantos objetos como canales del \mbox{\hyperlink{class_a_d_c}{A\+DC}} existen. La configuración de conversión se realiza automáticamente con el primer objeto \mbox{\hyperlink{class_a_d_c}{A\+DC}} creado, el resto no necesita recibir ninguna frecuencia de clock o muestreo. 
+Clase del objeto \doxylink{class_a_d_c}{ADC} FUNCIONAMIENTO\+: La clase \doxylink{class_a_d_c}{ADC} utiliza el ADCGroup para poder ser manejada de forma individual por cada pata. Se pueden crear tantos objetos como canales del \doxylink{class_a_d_c}{ADC} existen. La configuración de conversión se realiza automáticamente con el primer objeto \doxylink{class_a_d_c}{ADC} creado, el resto no necesita recibir ninguna frecuencia de clock o muestreo. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_a_d_c_a11d7d9534765e1427c6753226fa4b91e}\label{class_a_d_c_a11d7d9534765e1427c6753226fa4b91e}} 
-\index{ADC@{ADC}!ADC@{ADC}}
+\Hypertarget{class_a_d_c_a11d7d9534765e1427c6753226fa4b91e}\index{ADC@{ADC}!ADC@{ADC}}
 \index{ADC@{ADC}!ADC@{ADC}}
 \doxysubsubsection{\texorpdfstring{ADC()}{ADC()}}
-{\footnotesize\ttfamily A\+D\+C\+::\+A\+DC (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{\+\_\+channel,  }\item[{uint32\+\_\+t}]{\+\_\+clk\+\_\+freq = {\ttfamily 0},  }\item[{uint32\+\_\+t}]{\+\_\+sample\+\_\+rate = {\ttfamily 0} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_a_d_c_a11d7d9534765e1427c6753226fa4b91e} 
+ADC\+::\+ADC (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{\+\_\+channel}{, }\item[{uint32\+\_\+t}]{\+\_\+clk\+\_\+freq}{ = {\ttfamily 0}, }\item[{uint32\+\_\+t}]{\+\_\+sample\+\_\+rate}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
 
 
 
-Default constructor of an \mbox{\hyperlink{class_a_d_c}{A\+DC}}. 
+Default constructor of an \doxylink{class_a_d_c}{ADC}. 
 
-Crea un \mbox{\hyperlink{class_a_d_c}{A\+DC}} en el canal correspondiente. La frecuencia y muestreo solo son necesarios de colocar en el primer \mbox{\hyperlink{class_a_d_c}{A\+DC}} construido ya que el periférico utiliza todos con la misma configuracion 
+Crea un \doxylink{class_a_d_c}{ADC} en el canal correspondiente. La frecuencia y muestreo solo son necesarios de colocar en el primer \doxylink{class_a_d_c}{ADC} construido ya que el periférico utiliza todos con la misma configuracion 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em \+\_\+channel} & Canal del \mbox{\hyperlink{class_a_d_c}{A\+DC}}. \\
+\mbox{\texttt{ in}}  & {\em \+\_\+channel} & Canal del \doxylink{class_a_d_c}{ADC}. \\
 \hline
-\mbox{\texttt{ in}}  & {\em \+\_\+clk\+\_\+freq} & Frecuencia de clock del periférico \mbox{\hyperlink{class_a_d_c}{A\+DC}}. \\
+\mbox{\texttt{ in}}  & {\em \+\_\+clk\+\_\+freq} & Frecuencia de clock del periférico \doxylink{class_a_d_c}{ADC}. \\
 \hline
-\mbox{\texttt{ in}}  & {\em \+\_\+sample\+\_\+rate} & Frecuencia de muestreo del periférico \mbox{\hyperlink{class_a_d_c}{A\+DC}}. \\
+\mbox{\texttt{ in}}  & {\em \+\_\+sample\+\_\+rate} & Frecuencia de muestreo del periférico \doxylink{class_a_d_c}{ADC}. \\
 \hline
 \end{DoxyParams}
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_a_d_c_a37e2709d6d29e21021f2cc219511acf3}\label{class_a_d_c_a37e2709d6d29e21021f2cc219511acf3}} 
-\index{ADC@{ADC}!Get@{Get}}
+\Hypertarget{class_a_d_c_a37e2709d6d29e21021f2cc219511acf3}\index{ADC@{ADC}!Get@{Get}}
 \index{Get@{Get}!ADC@{ADC}}
 \doxysubsubsection{\texorpdfstring{Get()}{Get()}}
-{\footnotesize\ttfamily int32\+\_\+t A\+D\+C\+::\+Get (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_a_d_c_a37e2709d6d29e21021f2cc219511acf3} 
+int32\+\_\+t ADC\+::\+Get (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
 
 
-Devuelve el valor del \mbox{\hyperlink{class_a_d_c}{A\+DC}}. 
+Devuelve el valor del \doxylink{class_a_d_c}{ADC}. 
 
 \begin{DoxyReturn}{Returns}
-Valor convertido del \mbox{\hyperlink{class_a_d_c}{A\+DC}}. 
+Valor convertido del \doxylink{class_a_d_c}{ADC}. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_a_d_c_a1f30ebf6f8dce0fca06650812eb7775d}\label{class_a_d_c_a1f30ebf6f8dce0fca06650812eb7775d}} 
-\index{ADC@{ADC}!Inicializar@{Inicializar}}
+\Hypertarget{class_a_d_c_a1f30ebf6f8dce0fca06650812eb7775d}\index{ADC@{ADC}!Inicializar@{Inicializar}}
 \index{Inicializar@{Inicializar}!ADC@{ADC}}
 \doxysubsubsection{\texorpdfstring{Inicializar()}{Inicializar()}}
-{\footnotesize\ttfamily void A\+D\+C\+::\+Inicializar (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_a_d_c_a1f30ebf6f8dce0fca06650812eb7775d} 
+void ADC\+::\+Inicializar (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
 
 
-Inicializador del \mbox{\hyperlink{class_a_d_c}{A\+DC}}. 
+Inicializador del \doxylink{class_a_d_c}{ADC}. 
 
-Agrega el canal al barrido de lecturas del \mbox{\hyperlink{class_a_d_c}{A\+DC}}. \begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
-\mbox{\Hypertarget{class_a_d_c_a39f98de3449fbc46f7aa69c656c15f61}\label{class_a_d_c_a39f98de3449fbc46f7aa69c656c15f61}} 
-\index{ADC@{ADC}!IsResultReady@{IsResultReady}}
+Agrega el canal al barrido de lecturas del \doxylink{class_a_d_c}{ADC}. \Hypertarget{class_a_d_c_a39f98de3449fbc46f7aa69c656c15f61}\index{ADC@{ADC}!IsResultReady@{IsResultReady}}
 \index{IsResultReady@{IsResultReady}!ADC@{ADC}}
 \doxysubsubsection{\texorpdfstring{IsResultReady()}{IsResultReady()}}
-{\footnotesize\ttfamily bool A\+D\+C\+::\+Is\+Result\+Ready (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_a_d_c_a39f98de3449fbc46f7aa69c656c15f61} 
+bool ADC\+::\+Is\+Result\+Ready (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
 
 
-Indica si la conversión análoga-\/$>$digital fue terminada. 
+Indica si la conversión análoga-\/\texorpdfstring{$>$}{>}digital fue terminada. 
 
 \begin{DoxyReturn}{Returns}
 bool\+: verdadero si el resultado se encuentra, falso sino. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_a_d_c_a0321a2e27899f01e2acd1f743e41b85d}\label{class_a_d_c_a0321a2e27899f01e2acd1f743e41b85d}} 
-\index{ADC@{ADC}!Trigger@{Trigger}}
+\Hypertarget{class_a_d_c_a0321a2e27899f01e2acd1f743e41b85d}\index{ADC@{ADC}!Trigger@{Trigger}}
 \index{Trigger@{Trigger}!ADC@{ADC}}
 \doxysubsubsection{\texorpdfstring{Trigger()}{Trigger()}}
-{\footnotesize\ttfamily void A\+D\+C\+::\+Trigger (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_a_d_c_a0321a2e27899f01e2acd1f743e41b85d} 
+void ADC\+::\+Trigger (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
 
 
-Ejecuta una conversión analógica-\/$>$digital. 
+Ejecuta una conversión analógica-\/\texorpdfstring{$>$}{>}digital. 
 
-El \mbox{\hyperlink{class_a_d_c}{A\+DC}} empieza la conversión de todos los canales activos. \begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
-
+El \doxylink{class_a_d_c}{ADC} empieza la conversión de todos los canales activos. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-E\+:/\+Agustin/\+Escritorio/\+M\+C\+Uexpresso/\+Kit\+L\+P\+C845-\/\+C++/src/\+Drivers/\+Perifericos/12-\/\+A\+D\+C/\mbox{\hyperlink{_a_d_c_8h}{A\+D\+C.\+h}}\item 
-E\+:/\+Agustin/\+Escritorio/\+M\+C\+Uexpresso/\+Kit\+L\+P\+C845-\/\+C++/src/\+Drivers/\+Perifericos/12-\/\+A\+D\+C/\mbox{\hyperlink{_a_d_c_8cpp}{A\+D\+C.\+cpp}}\end{DoxyCompactItemize}
+E\+:/\+Agustin/\+Escritorio/\+MCUexpresso/\+Kit\+LPC845-\/\+C++/src/\+Drivers/\+Perifericos/12-\/\+ADC/\mbox{\hyperlink{_a_d_c_8h}{ADC.\+h}}\item 
+E\+:/\+Agustin/\+Escritorio/\+MCUexpresso/\+Kit\+LPC845-\/\+C++/src/\+Drivers/\+Perifericos/12-\/\+ADC/\mbox{\hyperlink{_a_d_c_8cpp}{ADC.\+cpp}}\end{DoxyCompactItemize}

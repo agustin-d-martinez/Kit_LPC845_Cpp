@@ -1,0 +1,58 @@
+\doxysection{I4017.\+h}
+\hypertarget{_i4017_8h_source}{}\label{_i4017_8h_source}\index{E:/Agustin/Escritorio/MCUexpresso/KitLPC845-\/C++/src/Drivers/Hardware/02-\/Displays/7Segmentos/A-\/Barrido/I4017.h@{E:/Agustin/Escritorio/MCUexpresso/KitLPC845-\/C++/src/Drivers/Hardware/02-\/Displays/7Segmentos/A-\/Barrido/I4017.h}}
+\mbox{\hyperlink{_i4017_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*******************************************************************************************************************************/}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ ***\ MODULO}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#ifndef\ I4017\_H\_}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ I4017\_H\_}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00018\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ ***\ INCLUDES\ GLOBALES}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_barrido_8h}{Hardware/02-\/Displays/7Segmentos/A-\/Barrido/Barrido.h}}>}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{gpio_8h}{Perifericos/02-\/Gpio/gpio.h}}>}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00024\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00027\ \textcolor{comment}{\ ***\ DEFINES\ GLOBALES}}
+\DoxyCodeLine{00028\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00031\ \textcolor{comment}{\ ***\ MACROS\ GLOBALES}}
+\DoxyCodeLine{00032\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00035\ \textcolor{comment}{\ ***\ TIPO\ DE\ DATOS\ GLOBALES}}
+\DoxyCodeLine{00036\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00039\ \textcolor{comment}{\ ***\ VARIABLES\ GLOBALES}}
+\DoxyCodeLine{00040\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00043\ \textcolor{comment}{\ ***\ IMPLANTACION\ DE\ UNA\ CLASE}}
+\DoxyCodeLine{00044\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00050\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_i4017_ab05d7c7180f54dab5727d45b2ce9e00d}{I4017}}\ :\ \textcolor{keyword}{public}\ barrido}
+\DoxyCodeLine{00051\ \{}
+\DoxyCodeLine{00052\ \ \ \ \ uint8\_t\ m\_indice\ ;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{const}\ vector\ <gpio\ *\ >\ \&m\_pins4017;\ \ \ \ \ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{const}\ uint8\_t\ m\_maxsalidas\ ;\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{comment}{//\ tiene\ que\ recibir\ los\ gpio\ clk\ y\ reset}}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_i4017_ab05d7c7180f54dab5727d45b2ce9e00d}{I4017}}(\ \textcolor{keyword}{const}\ vector\ <gpio\ *\ >\ \&pins4017\ ,\ uint8\_t\ maxsalidas\ )\ :\ m\_indice\ (0)\ ,\ m\_pins4017\ (pins4017\ )\ ,\ m\_maxsalidas\ (\ (maxsalidas\ <=\ 10\ )\ ?\ maxsalidas:10)\ \{\}\ }
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_i4017_a03716526d0002f3a093d027f9dfd326a}{SetDigito}}\ (\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_i4017_a856597bb8a3162d8dda7ff0680b67cb6}{SetReset}}(\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_i4017_a0cf539466a31c1e38fb3c290a2d4b984}{SetClock}}(\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_i4017_a49b92c0109ebecf4d1155e983f1f320b}{Inicializar}}\ (\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_i4017}{\string~I4017}}()\ \{\};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00065\ \};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ I4017\_H\_\ */}\textcolor{preprocessor}{}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

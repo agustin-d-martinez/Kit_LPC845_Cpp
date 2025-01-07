@@ -1,27 +1,27 @@
-\hypertarget{_e_s_p8266_8h}{}\doxysection{E\+:/\+Agustin/\+Escritorio/\+M\+C\+Uexpresso/\+Kit\+L\+P\+C845-\/\+C++/src/\+Drivers/\+Hardware/08-\/\+Wi\+Fi/\+E\+S\+P8266.h File Reference}
-\label{_e_s_p8266_8h}\index{E:/Agustin/Escritorio/MCUexpresso/KitLPC845-\/C++/src/Drivers/Hardware/08-\/WiFi/ESP8266.h@{E:/Agustin/Escritorio/MCUexpresso/KitLPC845-\/C++/src/Drivers/Hardware/08-\/WiFi/ESP8266.h}}
+\doxysection{E\+:/\+Agustin/\+Escritorio/\+MCUexpresso/\+Kit\+LPC845-\/\+C++/src/\+Drivers/\+Hardware/08-\/\+Wi\+Fi/\+ESP8266.h File Reference}
+\hypertarget{_e_s_p8266_8h}{}\label{_e_s_p8266_8h}\index{E:/Agustin/Escritorio/MCUexpresso/KitLPC845-\/C++/src/Drivers/Hardware/08-\/WiFi/ESP8266.h@{E:/Agustin/Escritorio/MCUexpresso/KitLPC845-\/C++/src/Drivers/Hardware/08-\/WiFi/ESP8266.h}}
 
 
 Breve descripción del Módulo.  
 
 
-{\ttfamily \#include $<$Drivers/\+Perifericos/13-\/\+U\+A\+R\+T/\+Uart.\+h$>$}\newline
+{\ttfamily \#include $<$Drivers/\+Perifericos/13-\/\+UART/\+Uart.\+h$>$}\newline
 {\ttfamily \#include $<$Perifericos/07-\/\+Timer/\+Timer.\+h$>$}\newline
-Include dependency graph for E\+S\+P8266.\+h\+:
+Include dependency graph for ESP8266.\+h\+:
 % FIG 0
 This graph shows which files directly or indirectly include this file\+:
 % FIG 1
-\doxysubsection*{Classes}
+\doxysubsubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-class \mbox{\hyperlink{class_e_s_p8266}{E\+S\+P8266}}
-\begin{DoxyCompactList}\small\item\em Clase del objeto \mbox{\hyperlink{class_e_s_p8266}{E\+S\+P8266}} El objeto \mbox{\hyperlink{class_e_s_p8266}{E\+S\+P8266}} permite la simple utilización del módulo arduino \mbox{\hyperlink{class_e_s_p8266}{E\+S\+P8266}} y el E\+S\+P01 mediante comandos AT. El módulo debe estar por defecto en la velocidad D\+E\+F\+A\+U\+L\+T\+\_\+\+E\+S\+P01\+\_\+\+B\+A\+U\+D\+R\+A\+TE. El módulo será conectado como cliente en modo T\+C\+P/\+U\+DP y con transmisión libre, sin filtros. La data llega y se envía cruda (como está). Por falta de material la clase no fue probada por completo. Sí se probó la inicialización y conección a internet, no se probó la conección a un servidor. Todas sus funciones son bloqueantes o poseen un timeout, debe ser tenido en cuenta a la hora de utilizar este driver. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Macros}
+class \mbox{\hyperlink{class_e_s_p8266}{ESP8266}}
+\begin{DoxyCompactList}\small\item\em Clase del objeto \doxylink{class_e_s_p8266}{ESP8266} El objeto \doxylink{class_e_s_p8266}{ESP8266} permite la simple utilización del módulo arduino \doxylink{class_e_s_p8266}{ESP8266} y el ESP01 mediante comandos AT. El módulo debe estar por defecto en la velocidad DEFAULT\+\_\+\+ESP01\+\_\+\+BAUDRATE. El módulo será conectado como cliente en modo TCP/\+UDP y con transmisión libre, sin filtros. La data llega y se envía cruda (como está). Por falta de material la clase no fue probada por completo. Sí se probó la inicialización y conección a internet, no se probó la conección a un servidor. Todas sus funciones son bloqueantes o poseen un timeout, debe ser tenido en cuenta a la hora de utilizar este driver. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{_e_s_p8266_8h_a03ec3dfc7049e6977eaf2f38176ef4a3}{D\+E\+F\+A\+U\+L\+T\+\_\+\+E\+S\+P01\+\_\+\+B\+A\+U\+D\+R\+A\+TE}}~115200
+\#define \mbox{\hyperlink{_e_s_p8266_8h_a03ec3dfc7049e6977eaf2f38176ef4a3}{DEFAULT\+\_\+\+ESP01\+\_\+\+BAUDRATE}}~115200
 \item 
-\#define \mbox{\hyperlink{_e_s_p8266_8h_a2fb5dfd3c315ae17147472c4058abccf}{S\+E\+G\+\_\+\+E\+S\+P01\+\_\+\+T\+I\+M\+E\+O\+UT}}~20
+\#define \mbox{\hyperlink{_e_s_p8266_8h_a2fb5dfd3c315ae17147472c4058abccf}{SEG\+\_\+\+ESP01\+\_\+\+TIMEOUT}}~20
 \end{DoxyCompactItemize}
 
 
@@ -40,16 +40,16 @@ v1.\+0
 
 
 \doxysubsection{Macro Definition Documentation}
-\mbox{\Hypertarget{_e_s_p8266_8h_a03ec3dfc7049e6977eaf2f38176ef4a3}\label{_e_s_p8266_8h_a03ec3dfc7049e6977eaf2f38176ef4a3}} 
-\index{ESP8266.h@{ESP8266.h}!DEFAULT\_ESP01\_BAUDRATE@{DEFAULT\_ESP01\_BAUDRATE}}
+\Hypertarget{_e_s_p8266_8h_a03ec3dfc7049e6977eaf2f38176ef4a3}\index{ESP8266.h@{ESP8266.h}!DEFAULT\_ESP01\_BAUDRATE@{DEFAULT\_ESP01\_BAUDRATE}}
 \index{DEFAULT\_ESP01\_BAUDRATE@{DEFAULT\_ESP01\_BAUDRATE}!ESP8266.h@{ESP8266.h}}
 \doxysubsubsection{\texorpdfstring{DEFAULT\_ESP01\_BAUDRATE}{DEFAULT\_ESP01\_BAUDRATE}}
-{\footnotesize\ttfamily \#define D\+E\+F\+A\+U\+L\+T\+\_\+\+E\+S\+P01\+\_\+\+B\+A\+U\+D\+R\+A\+TE~115200}
+{\footnotesize\ttfamily \label{_e_s_p8266_8h_a03ec3dfc7049e6977eaf2f38176ef4a3} 
+\#define DEFAULT\+\_\+\+ESP01\+\_\+\+BAUDRATE~115200}
 
-Velocidad de transmision del E\+SP por defecto, antes de haber sido modificado \mbox{\Hypertarget{_e_s_p8266_8h_a2fb5dfd3c315ae17147472c4058abccf}\label{_e_s_p8266_8h_a2fb5dfd3c315ae17147472c4058abccf}} 
-\index{ESP8266.h@{ESP8266.h}!SEG\_ESP01\_TIMEOUT@{SEG\_ESP01\_TIMEOUT}}
+Velocidad de transmision del ESP por defecto, antes de haber sido modificado \Hypertarget{_e_s_p8266_8h_a2fb5dfd3c315ae17147472c4058abccf}\index{ESP8266.h@{ESP8266.h}!SEG\_ESP01\_TIMEOUT@{SEG\_ESP01\_TIMEOUT}}
 \index{SEG\_ESP01\_TIMEOUT@{SEG\_ESP01\_TIMEOUT}!ESP8266.h@{ESP8266.h}}
 \doxysubsubsection{\texorpdfstring{SEG\_ESP01\_TIMEOUT}{SEG\_ESP01\_TIMEOUT}}
-{\footnotesize\ttfamily \#define S\+E\+G\+\_\+\+E\+S\+P01\+\_\+\+T\+I\+M\+E\+O\+UT~20}
+{\footnotesize\ttfamily \label{_e_s_p8266_8h_a2fb5dfd3c315ae17147472c4058abccf} 
+\#define SEG\+\_\+\+ESP01\+\_\+\+TIMEOUT~20}
 
 Tiempo por default de espera para la realización de los comandos AT 

@@ -2,7 +2,7 @@ var class_comunicacion_asincronica =
 [
     [ "ComunicacionAsincronica", "class_comunicacion_asincronica.html#a711e7bb16713a4ebfd7f71044090531a", null ],
     [ "~ComunicacionAsincronica", "class_comunicacion_asincronica.html#a96a3fc01767f456da0b5b177751a02f3", null ],
-    [ "Message", "class_comunicacion_asincronica.html#aea94bf3a2a45c2b8de83b7481a2c896f", null ],
+    [ "Message", "class_comunicacion_asincronica.html#af260972f1da109c6ab2c2e8d3ef1c559", null ],
     [ "popRx", "class_comunicacion_asincronica.html#a91b0600c6c99e3034d06ad2912594bf2", null ],
     [ "popTx", "class_comunicacion_asincronica.html#aef7119239e6601ca6d88d8226ec53f2f", null ],
     [ "pushRx", "class_comunicacion_asincronica.html#a01a00859cfa12a971645325e7cfea6d1", null ],

@@ -40,13 +40,13 @@
  **********************************************************************************************************************************/
 /**
  * \fn Input::Input( port_t puerto , uint8_t bit , uint8_t modo , activity_t actividad , uint8_t MaxBounce )
- * \brief Constructor de clase Input
- * \details Crea un Input con los parámetros correspondientes
- * \param [in] puerto: Puerto del objeto
- * \param [in] bit: Bit del objeto
- * \param [in] modo: Configuracion eléctrica del pin
- * \param [in] actividad: Activo alto/bajo
- * \param [in] MaxBounce: Cantidad de rebotes permitidos
+ * \brief Constructor de clase Input.
+ * \details Crea un Input con los parámetros correspondientes.
+ * \param [in] puerto: Puerto del objeto.
+ * \param [in] bit: Bit del objeto.
+ * \param [in] modo: Configuracion eléctrica del pin.
+ * \param [in] actividad: Activo alto/bajo.
+ * \param [in] MaxBounce: Cantidad de rebotes permitidos.
 */
 Input::Input( port_t puerto , uint8_t bit , mode_t modo , activity_t actividad , uint8_t MaxBounce )
  : gpio( puerto , bit , modo , gpio::input , actividad ), m_MaxBounce(MaxBounce)
@@ -62,9 +62,8 @@ Input::~Input()
 }
 /**
  * \fn void Input::SWhandler( void )
- * \brief Funcion de interrupcion del systick
- * \details Guarda en el buffer el valor de la entrada en caso de haber pasado el antirrebote
- * \return void
+ * \brief Funcion de interrupcion del systick.
+ * \details Guarda en el buffer el valor de la entrada en caso de haber pasado el antirrebote.
 */
 void Input::SWhandler ( void )
 {
@@ -83,9 +82,8 @@ void Input::SWhandler ( void )
 }
 /**
  * \fn void Input::Inicializar( void )
- * \brief Inicializa la entrada
- * \details Configura el GPIO y el buffer
- * \return void
+ * \brief Inicializa la entrada.
+ * \details Configura el GPIO y el buffer.
 */
 void Input::Inicializar ( void )
 {
@@ -95,9 +93,8 @@ void Input::Inicializar ( void )
 }
 /**
  * \fn void Input::SetBuffer( void )
- * \brief Set del buffer
- * \details Guarda el valor inicial del buffer
- * \return void
+ * \brief Set del buffer.
+ * \details Guarda el valor inicial del buffer.
 */
 void Input::SetBuffer ( void )
 {
@@ -106,9 +103,9 @@ void Input::SetBuffer ( void )
 }
 /**
  * \fn bool Input::operator== ( uint8_t val )
- * \brief Sobrecarga de del operador de igualdad
- * \param  [in] val: Valor a comparar con el buffer
- * \return true si la entrada esta en val
+ * \brief Sobrecarga de del operador de igualdad.
+ * \param  [in] val: Valor a comparar con el buffer.
+ * \return true si la entrada esta en val.
 */
 bool Input::operator== ( uint8_t val )
 {
@@ -116,9 +113,9 @@ bool Input::operator== ( uint8_t val )
 }
 /**
  * \fn bool Input::operator!= ( uint8_t val )
- * \brief Sobrecarga de del operador de desigualdad
- * \param  [in] val: Valor a comparar con el buffer
- * \return true si la entrada no esta en val
+ * \brief Sobrecarga de del operador de desigualdad.
+ * \param  [in] val: Valor a comparar con el buffer.
+ * \return true si la entrada no esta en val.
 */
 bool Input::operator!= ( uint8_t val )
 {
@@ -126,10 +123,10 @@ bool Input::operator!= ( uint8_t val )
 }
 /**
 	\fn friend bool operator==( uint32_t val , Input &I )
-	\brief Sobrecarga de del operador de asignacion
-	\param  [in] val: Valor a comparar con el buffer
-	\param  [in] I: Entrada a comparar
-	\return true si la entrada esta en val
+	\brief Sobrecarga de del operador de asignacion.
+	\param  [in] val: Valor a comparar con el buffer.
+	\param  [in] I: Entrada a comparar.
+	\return true si la entrada esta en val.
 */
 bool operator==( uint32_t val , Input &I )
 {
@@ -137,9 +134,9 @@ bool operator==( uint32_t val , Input &I )
 }
 /**
  * \fn uint8_t Input::get ( void )
- * \brief Devuelve el valor de la input
+ * \brief Devuelve el valor de la input.
  * \details Entrega el valor "real" de la entrada sin su rebote.
- * \return void
+ * \return uint32_t: Valor de la entrada.
 */
 uint8_t Input::get ( void )
 {

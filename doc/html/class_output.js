@@ -7,5 +7,5 @@ var class_output =
     [ "operator=", "class_output.html#a7316de8af89d5895a518e28bdc33604a", null ],
     [ "operator==", "class_output.html#ab6d1108e56550b917ad977d0316ba0d2", null ],
     [ "SetUp", "class_output.html#a9c720d4f49501d48b36c00e8ddda0f5c", null ],
-    [ "SWhandler", "class_output.html#a4c87af433f34b1cc01cc6f73f24cfe19", null ]
+    [ "SWhandler", "class_output.html#aa06a9b759b47a4ab70704ae51ce7ce3f", null ]
 ];

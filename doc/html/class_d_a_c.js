@@ -1,7 +1,7 @@
 var class_d_a_c =
 [
-    [ "dac_channel", "class_d_a_c.html#ae96d9030e4e8203f0b4cbe8fb4f99222", null ],
-    [ "dac_error", "class_d_a_c.html#a3c38a1c9eaff9cec3f1a83d0112187f7", null ],
+    [ "dac_channel", "class_d_a_c.html#a7331e83609887350183026b302f38f6e", null ],
+    [ "dac_error", "class_d_a_c.html#a0539f563e721e0b1ff229d9ae4c48ce0", null ],
     [ "dac_channel", "class_d_a_c.html#a9560ddef55af03b248f1ee0a47075275", [
       [ "DAC_CHANNEL_0", "class_d_a_c.html#a9560ddef55af03b248f1ee0a47075275a58642b317beabd451ec0d0b69c0b936f", null ],
       [ "DAC_CHANNEL_1", "class_d_a_c.html#a9560ddef55af03b248f1ee0a47075275a1b91ce5a65be10e275eb09ebb7addc65", null ]

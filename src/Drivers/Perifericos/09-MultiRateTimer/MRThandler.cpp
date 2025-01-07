@@ -67,7 +67,6 @@ MRThandler::MRThandler( MRT_timer_channels _timer_number , MRT_MODES mode ) : m_
 	\fn void MRThandler::MRT_reset_time ( void )
 	\brief Resetea el timer.
  	\details Vuelve a cargar el tiempo máximo en el registro.
-	\return void
 */
 void MRThandler::MRT_reset_time ( void )
 {
@@ -79,7 +78,7 @@ void MRThandler::MRT_reset_time ( void )
 	\fn uint32_t MRThandler::MRT_get_time ( void )
 	\brief Devuelve el valor del timer en el momento actual.
  	\details Lee el registro del contador MRT del canal correspondiente.
-	\return devuelve el valor del timer
+	\return devuelve el valor del timer.
 */
 uint32_t MRThandler::MRT_get_time ( void )
 {
@@ -121,8 +120,8 @@ void MRThandler::DisableInterrupt( void )
 
 /**
  * \fn void MRThandler::MRT_Reset( void )
- * \brief Resetea el MRT
- * \return void
+ * \brief Resetea el MRT.
+ * \details
 */
 void MRThandler::MRT_Reset( void )
 {
@@ -130,10 +129,9 @@ void MRThandler::MRT_Reset( void )
 }
 /**
 	\fn void MRThandler::MRT_Inicializar (  MRT_timer_channels timer , MRT_MODES mode  )
-	\brief Inicializa el el canal del MRT en el modo asignado
-	\param  [in] timer: canal a iniciar
-	\param  [in] mode: modo de inicializacion
-	\return void
+	\brief Inicializa el el canal del MRT en el modo asignado.
+	\param  [in] timer: canal a iniciar.
+	\param  [in] mode: modo de inicializacion.
 */
 void MRThandler::MRT_Inicializar (  MRT_timer_channels timer , MRT_MODES mode  )
 {

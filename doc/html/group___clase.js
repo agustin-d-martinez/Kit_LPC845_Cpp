@@ -1,14 +1,10 @@
 var group___clase =
 [
     [ "barrido", "classbarrido.html", [
-      [ "barrido", "classbarrido.html#a09063da9efce8e53739cc2d17152032c", null ],
-      [ "~barrido", "classbarrido.html#aa6d1973512c363fd6f4064d5378016f9", null ],
       [ "Inicializar", "classbarrido.html#aeea8bd45cd9f31760ffd8190c78f2030", null ],
       [ "SetDigito", "classbarrido.html#ad2fe464d7237752f1403c6bee9aa755e", null ]
     ] ],
     [ "segmentos", "classsegmentos.html", [
-      [ "segmentos", "classsegmentos.html#ac4f7c3332b781f33b8f22e93a1fbfeaa", null ],
-      [ "~segmentos", "classsegmentos.html#a417866b6994de92010973a4e143bd6ba", null ],
       [ "Inicializar", "classsegmentos.html#a4c7ecb94555c52a927c63e6b48d4f543", null ],
       [ "SetSegmentos", "classsegmentos.html#a871b7f7a682627a416a389567981a858", null ]
     ] ],
@@ -19,8 +15,6 @@ var group___clase =
       [ "Write", "class_display.html#ab2f2e09703379cc181fa298707542995", null ]
     ] ],
     [ "Puente_H", "class_puente___h.html", [
-      [ "IZQUIERDA", "class_puente___h.html#a9fd09f2b11391082adc4d1687eb2a234a696939cff04fb4396f01bd29e2d33356", null ],
-      [ "DERECHA", "class_puente___h.html#a9fd09f2b11391082adc4d1687eb2a234ae0f98a9d5e5617f9f4dd92e940d031d8", null ],
       [ "Puente_H", "class_puente___h.html#aeb820ee4e2e819643634743249f9bb71", null ],
       [ "~Puente_H", "class_puente___h.html#ac67b8c0e5d97686bf52b4c1dc8b31b2b", null ],
       [ "Avanzar", "class_puente___h.html#ad454ecc01a0b793104c88f83e34d2f86", null ],
@@ -52,7 +46,7 @@ var group___clase =
     [ "ComunicacionAsincronica", "class_comunicacion_asincronica.html", [
       [ "ComunicacionAsincronica", "class_comunicacion_asincronica.html#a711e7bb16713a4ebfd7f71044090531a", null ],
       [ "~ComunicacionAsincronica", "class_comunicacion_asincronica.html#a96a3fc01767f456da0b5b177751a02f3", null ],
-      [ "Message", "class_comunicacion_asincronica.html#aea94bf3a2a45c2b8de83b7481a2c896f", null ],
+      [ "Message", "class_comunicacion_asincronica.html#af260972f1da109c6ab2c2e8d3ef1c559", null ],
       [ "popRx", "class_comunicacion_asincronica.html#a91b0600c6c99e3034d06ad2912594bf2", null ],
       [ "popTx", "class_comunicacion_asincronica.html#aef7119239e6601ca6d88d8226ec53f2f", null ],
       [ "pushRx", "class_comunicacion_asincronica.html#a01a00859cfa12a971645325e7cfea6d1", null ],

@@ -59,7 +59,7 @@
  *** IMPLANTACION DE LA CLASE
  **********************************************************************************************************************************/
 /**
- * \class Pin_interrupt
+ * \class PinInterrupt
  * \brief Clase del objeto Pin_interrupt
  * El objeto Pin_interrupt debe ser heredado por cualquier objeto que desee tener interupciones por pin.
  */
@@ -80,7 +80,7 @@ public:
 	void 			DisableInterupt ( void );
 	void 			PinInterrupt_Inicializar( void );
 	virtual void 	GpioHandler(void) = 0;		/**< Funcion Handler que se ejecuta al realizarse la interrupcion */
-	virtual 		~PinInterrupt();		/**< Destructor por defecto */
+	virtual 		~PinInterrupt();			/**< Destructor por defecto */
 private:
 	void 			PinInterrupt_Enable_clock( void );
 

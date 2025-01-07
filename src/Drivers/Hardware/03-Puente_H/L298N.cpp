@@ -55,7 +55,6 @@ L298N::L298N( gpio* &_motorDer_a , gpio* &_motorDer_b , gpio* &_motorIzq_a , gpi
 	\fn void L298N::Inicializar( void )
 	\brief Inicializa todas las salidas GPIO.
  	\details Setea la dirección y apaga todas las GPIO que posee.
-	\return void
 */
 void L298N::Inicializar( void )
 {
@@ -75,7 +74,6 @@ void L298N::Inicializar( void )
 	\fn void L298N::GirarIzq( void )
 	\brief Gira a la izquierda.
  	\details Energiza solamente el motor 1 de forma directa.
-	\return void
 */
 void L298N::GirarIzq( void )
 {
@@ -88,7 +86,6 @@ void L298N::GirarIzq( void )
 	\fn void L298N::GirarDer( void )
 	\brief Gira a la derecha.
  	\details Energiza solamente el motor 2 de forma directa.
-	\return void
 */
 void L298N::GirarDer( void )
 {
@@ -102,7 +99,6 @@ void L298N::GirarDer( void )
 	\brief Gira el motor.
  	\details Utilizando la enumeración de PuenteH realiza el giro correspondiente.
  	\param [in] direccion: Dirección del giro (IZQUIERDA = 0 , DERECHA = 1)
-	\return void
 */
 void L298N::Girar ( const uint8_t direccion )
 {
@@ -115,7 +111,6 @@ void L298N::Girar ( const uint8_t direccion )
 	\fn void L298N::Frenar ( void )
 	\brief Frena el motor.
  	\details Deja las cuatro salidas en 0.
-	\return void
 */
 void L298N::Frenar ( void )
 {
@@ -128,7 +123,6 @@ void L298N::Frenar ( void )
 	\fn void L298N::Avanzar ( void )
 	\brief Avanza los motores.
  	\details Enciende los 2 motores con tensión en la pata A.
-	\return void
 */
 void L298N::Avanzar ( void )
 {
@@ -142,7 +136,6 @@ void L298N::Avanzar ( void )
 	\fn void L298N::Retroceder( void )
 	\brief Pone los motores marcha atrás.
  	\details Enciende los motores en sentido contrario a "avanzar".
-	\return void
 */
 void L298N::Retroceder(void)
 {

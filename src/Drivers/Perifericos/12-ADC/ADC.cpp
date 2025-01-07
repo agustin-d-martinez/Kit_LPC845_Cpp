@@ -63,9 +63,8 @@ ADC::ADC( uint8_t _channel , uint32_t _clk_freq , uint32_t _sample_rate ) : Pin(
 }
 /**
  * 	\fn  void ADC::Inicializar( void )
- * 	\brief Inicializador del ADC
+ * 	\brief Inicializador del ADC.
  * 	\details Agrega el canal al barrido de lecturas del ADC.
- * 	\return void
  */
 void ADC::Inicializar( void )
 {
@@ -83,9 +82,8 @@ int32_t ADC::Get ( void )
 }
 /**
  * 	\fn  void ADC::Trigger ( void )
- * 	\brief Ejecuta una conversión analógica->digital
+ * 	\brief Ejecuta una conversión analógica->digital.
  * 	\details El ADC empieza la conversión de todos los canales activos.
- * 	\return void
  */
 void ADC::Trigger ( void )
 {

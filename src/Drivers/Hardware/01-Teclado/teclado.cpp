@@ -62,7 +62,6 @@ teclado::~teclado()
  * \fn void teclado::SWhandler ( void )
  * \brief Funcion handler/interrupcion del teclado
  * \details Ejecuta el barrido y la lectura del antirrebote
- * \return void
 */
 void teclado::SWhandler ( void )
 {
@@ -142,7 +141,6 @@ void teclado::TecladoSW ( uint8_t TeclaEstadoActual )
  * \fn void teclado::Inicializar ( void )
  * \brief Inicializa el teclado
  * \details Setea las direcciones y resistencias de las distintas entradas y salidas GPIO
- * \return void
 */
 void teclado::Inicializar ( void )
 {

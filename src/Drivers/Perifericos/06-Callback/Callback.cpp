@@ -42,9 +42,8 @@ vector <Callback*> g_Handler;
  **********************************************************************************************************************************/
 /**
  * \fn uint8_t Callback::SetInterrupt ( void )
- * \brief Activa la interrupción
- * \details Coloca al objeto dentro de la lista del handler systick
- * \return void
+ * \brief Activa la interrupción.
+ * \details Coloca al objeto dentro de la lista del handler systick.
 */
 void Callback::SetInterrupt( void )
 {
@@ -59,9 +58,8 @@ void Callback::SetInterrupt( void )
 }
 /**
  * \fn uint8_t Callback::UnSetInterrupt ( void )
- * \brief Desactiva la interrupción
- * \details Borra de la lista handler al objeto actual
- * \return void
+ * \brief Desactiva la interrupción.
+ * \details Borra de la lista handler al objeto actual.
 */
 void Callback::UnSetInterrupt( void )
 {

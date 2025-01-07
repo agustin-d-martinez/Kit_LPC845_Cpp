@@ -9,7 +9,6 @@ var group___drivers =
     ] ],
     [ "I4017", "class_i4017.html", [
       [ "I4017", "class_i4017.html#ab05d7c7180f54dab5727d45b2ce9e00d", null ],
-      [ "~I4017", "class_i4017.html#ad53e2c3ed277ba7efbf7a2e090820a91", null ],
       [ "Inicializar", "class_i4017.html#a49b92c0109ebecf4d1155e983f1f320b", null ],
       [ "SetClock", "class_i4017.html#a0cf539466a31c1e38fb3c290a2d4b984", null ],
       [ "SetDigito", "class_i4017.html#a03716526d0002f3a093d027f9dfd326a", null ],
@@ -17,7 +16,6 @@ var group___drivers =
     ] ],
     [ "I4511", "class_i4511.html", [
       [ "I4511", "class_i4511.html#a2d4d5f3c8cc3a270e2cc542e1c043049", null ],
-      [ "~I4511", "class_i4511.html#a2bc7b2932fe586f78f5ea147770919be", null ],
       [ "Inicializar", "class_i4511.html#a731e8085d9f8784ecca32e567ef86b0b", null ],
       [ "SetSegmentos", "class_i4511.html#a724201f1a5023afc0470ed22a49a6247", null ]
     ] ],
@@ -49,7 +47,6 @@ var group___drivers =
         [ "u", "classdigito.html#a9ca4533ad058f09c87644f3eb8b497a8a19b62f3e616bbc51b725dafa58709bf1", null ]
       ] ],
       [ "digito", "classdigito.html#ad87b6a6ef9b67e0ec9d16ef093f1eff0", null ],
-      [ "~digito", "classdigito.html#a94a3bc86918dbad9b062920a4bfb5e9a", null ],
       [ "Clr", "classdigito.html#a0c040b3ea2fe853a71a835656f21bb68", null ],
       [ "Get", "classdigito.html#a1147bec264cc1a971f6247d96dc7066b", null ],
       [ "Set", "classdigito.html#af66378ee328c8e5b756b72c348080c16", null ]
@@ -64,19 +61,11 @@ var group___drivers =
     ] ],
     [ "gruposdedigitos", "structgruposdedigitos.html", [
       [ "gruposdedigitos", "structgruposdedigitos.html#a1f30a2791bf70ca4b8043e97dbb4253f", null ],
-      [ "~gruposdedigitos", "structgruposdedigitos.html#a410b9648e25040c67321ffefe1c95fb1", null ],
       [ "m_cantidad", "structgruposdedigitos.html#a10d6d00a78e69362a715478655cf8cf2", null ],
       [ "m_comienzo", "structgruposdedigitos.html#a283917ba79ddef62d7283f420d0db2a8", null ]
     ] ],
     [ "LCD", "class_l_c_d.html", [
-      [ "d7", "class_l_c_d.html#a0c6219f060f814554afe507b59f3a1caae7f2b605f06beddbd3d87000bbb4e7d3", null ],
-      [ "d6", "class_l_c_d.html#a0c6219f060f814554afe507b59f3a1caa743256ef38167fb26f91486af3c6bdd2", null ],
-      [ "d5", "class_l_c_d.html#a0c6219f060f814554afe507b59f3a1caa3547a15eed2c3fa7256940eb3497099e", null ],
-      [ "d4", "class_l_c_d.html#a0c6219f060f814554afe507b59f3a1caa067c8477efe3b476515bf6d0a0d29e7c", null ],
-      [ "rs", "class_l_c_d.html#a0c6219f060f814554afe507b59f3a1caad97d86b39fd3e54caf4b3d54d569354d", null ],
-      [ "enable", "class_l_c_d.html#a0c6219f060f814554afe507b59f3a1caa4ec39c4892b9bf7261725f628d00b1ad", null ],
       [ "LCD", "class_l_c_d.html#a82d2be39ae418a886021216a821e78bd", null ],
-      [ "~LCD", "class_l_c_d.html#a5ac2667d164486b73b35dce3fd76bd95", null ],
       [ "Clear", "class_l_c_d.html#ac362e2901387f2688cc6dc7b34bc7a79", null ],
       [ "Inicializar", "class_l_c_d.html#ac01f0b0f7397dbcabf0b748a067d6259", null ],
       [ "operator=", "class_l_c_d.html#ad170df02e0c3d282e0969237a27a0e24", null ],
@@ -99,7 +88,6 @@ var group___drivers =
     ] ],
     [ "Reloj", "class_reloj.html", [
       [ "Reloj", "class_reloj.html#a0966eaa7e7079419049e683bafa7dbc0", null ],
-      [ "~Reloj", "class_reloj.html#a6ede940f0e9302f0eb15d1a2fe37ab6e", null ],
       [ "GetHour", "class_reloj.html#a2963cb1ffc94ac525fb9ed928791565d", null ],
       [ "GetMin", "class_reloj.html#a777744f4eb01420c11661b7f0d7889ca", null ],
       [ "GetSeg", "class_reloj.html#a04d950713551b9cd294392430a545022", null ],
@@ -139,7 +127,6 @@ var group___drivers =
     ] ],
     [ "PWM_Reader", "class_p_w_m___reader.html", [
       [ "PWM_Reader", "class_p_w_m___reader.html#aef7f587b60c2333d3ade77e7d7dcc7d0", null ],
-      [ "~PWM_Reader", "class_p_w_m___reader.html#ae135811961d2a51b5b028d47aa2e18f5", null ],
       [ "GetPulseOn", "class_p_w_m___reader.html#a803bd89a671639c9cd4885861e5311fc", null ],
       [ "GpioHandler", "class_p_w_m___reader.html#a1fcbe571c418f03cbe72f1ad680940c9", null ],
       [ "Inicializar", "class_p_w_m___reader.html#a9fbf0e55b18bd71dcbc6521a2d4679fb", null ],
@@ -148,7 +135,6 @@ var group___drivers =
     ] ],
     [ "HC_SR04", "class_h_c___s_r04.html", [
       [ "HC_SR04", "class_h_c___s_r04.html#a03ff682e07bbbc9f5554790e98a59473", null ],
-      [ "~HC_SR04", "class_h_c___s_r04.html#a3bd7b9ed0f928d60391b336f40325655", null ],
       [ "GetDistancia", "class_h_c___s_r04.html#ab6e8079457c420f2d403c0921eea8e50", null ],
       [ "Inicializar", "class_h_c___s_r04.html#a2d1eabe8372f65cc01ff78029940b151", null ],
       [ "Off", "class_h_c___s_r04.html#a8a2b0436db85de19f08c9500aaf87ca2", null ],
@@ -160,8 +146,8 @@ var group___drivers =
       [ "operator>=", "class_h_c___s_r04.html#ac74ee13b7df279a78e1cab13cb99e8ed", null ]
     ] ],
     [ "Pin", "class_pin.html", [
-      [ "error_t", "class_pin.html#a4602d6cf34a50bc3387f7a5abbc8a0cd", null ],
-      [ "port_t", "class_pin.html#aa904847fa083300f96285b07c0a29a4c", null ],
+      [ "error_t", "class_pin.html#a61c56e71b812002f25577142438629d2", null ],
+      [ "port_t", "class_pin.html#a4ab61a1ba0455431c9a7addaaf66c8c8", null ],
       [ "error_t", "class_pin.html#a769192ed18c015e200739593f02b22db", [
         [ "error", "class_pin.html#a769192ed18c015e200739593f02b22dbaad2584260f96fc335200e2c75ba4b4f5", null ],
         [ "ok", "class_pin.html#a769192ed18c015e200739593f02b22dba07c84491a37b6d8d82042f9a1d0bf72f", null ]
@@ -175,15 +161,14 @@ var group___drivers =
         [ "port1", "class_pin.html#a02483eba92e68e4230f8aa883e0a25fea631197f960ffc7a9baacc3d8a6ba4ebe", null ]
       ] ],
       [ "Pin", "class_pin.html#a063b07c7607e031318ca024b75a6f0cf", null ],
-      [ "~Pin", "class_pin.html#ab86af668f577dc4c39d7e191f9c157bd", null ],
       [ "m_bit", "class_pin.html#ace5aec3417e8217310a82244b1a17db5", null ],
       [ "m_error", "class_pin.html#a4a1dd37e2f8dbe13fe4121d88dd2bab5", null ],
       [ "m_port", "class_pin.html#a2660d84228a8ca714d61f4752eb4c4fb", null ]
     ] ],
     [ "gpio", "classgpio.html", [
-      [ "activity_t", "classgpio.html#ad747cdd6a7343c9be1382eca648002c6", null ],
-      [ "direction_t", "classgpio.html#a64ee05ebd47c2fc281fe71eb6efcb557", null ],
-      [ "mode_t", "classgpio.html#ab02ac93ab02ef1a96a5d287daef5e6a5", null ],
+      [ "activity_t", "classgpio.html#ace0f4d73975aa25a7629d7a719e3bda8", null ],
+      [ "direction_t", "classgpio.html#aa7b9347bb89381a3296ac65d97179a73", null ],
+      [ "mode_t", "classgpio.html#a47824ce7b5b807417ba04e2262324d21", null ],
       [ "activity_t", "classgpio.html#a37b1bf950dfcff8f5a81431da1f690fa", [
         [ "low", "classgpio.html#a37b1bf950dfcff8f5a81431da1f690faad4844ed7391a008a25919cc33ce34050", null ],
         [ "high", "classgpio.html#a37b1bf950dfcff8f5a81431da1f690faa71650c118c0101c0bca436293386c719", null ]
@@ -213,15 +198,15 @@ var group___drivers =
       ] ],
       [ "gpio", "classgpio.html#a91d8a585757112ada21e8c8b7570171a", null ],
       [ "~gpio", "classgpio.html#a115befd0ad74a2f911420b8673415bca", null ],
-      [ "ClrPin", "classgpio.html#ae0b1469a85228420f03c14d1c0095cd7", null ],
-      [ "GetPin", "classgpio.html#ab3f6b81018ece79342e66612474679d4", null ],
+      [ "ClrPin", "classgpio.html#a7db0e2fb53f026b00943b1960114efcd", null ],
+      [ "GetPin", "classgpio.html#a053408949f14088921e56ffb85c2efc3", null ],
       [ "operator=", "classgpio.html#a0e9fcb8c59eba9f0a28091cac7a34ba2", null ],
-      [ "SetDir", "classgpio.html#abc2283be63bb51cecb0c2c8916f5ab99", null ],
-      [ "SetPin", "classgpio.html#a1569a339ad528cc49690f9967b80f19c", null ],
-      [ "SetPinMode", "classgpio.html#a6c0dd0caac44cab906bb4d4e0bf43701", null ],
-      [ "SetPinResistor", "classgpio.html#ac51ff7f9df003cdef2f8d2d09864bdd3", null ],
-      [ "SetToggleDir", "classgpio.html#ad93e980f89453dba315e161d23276339", null ],
-      [ "SetTogglePin", "classgpio.html#a87334b85b5a943f64539ff8bf400a3d4", null ],
+      [ "SetDir", "classgpio.html#a00191106112b46d6a81161bad09774d9", null ],
+      [ "SetPin", "classgpio.html#abababed56790f941ce7c449c2bb0585f", null ],
+      [ "SetPinMode", "classgpio.html#a5307bd248fcf6487491ba93c7e3ec9d7", null ],
+      [ "SetPinResistor", "classgpio.html#a834f570ae01fd90ae9128a2a00f34552", null ],
+      [ "SetToggleDir", "classgpio.html#a75dbe3d751fdd5c577cd8cf9b2e7cc1a", null ],
+      [ "SetTogglePin", "classgpio.html#a9c89224e21dcd66520f400981a6714c5", null ],
       [ "m_activity", "classgpio.html#ac6259c170adf14b17c72d65fd388921b", null ],
       [ "m_direction", "classgpio.html#ac4def73bdbedc9163facaf784f9b29bd", null ],
       [ "m_mode", "classgpio.html#a672ac1aa2fd7a3d39db9f3c7aa37d167", null ]
@@ -243,7 +228,7 @@ var group___drivers =
       [ "Inicializar", "class_input.html#a0cfce2905cb697753650c8b5913f7ab7", null ],
       [ "operator!=", "class_input.html#a197f42e9a14c89d8074491d11b5b358a", null ],
       [ "operator==", "class_input.html#a6c0a414d05293eb3b4b9d7c421cb0b3d", null ],
-      [ "SWhandler", "class_input.html#a1dd7adf1710d97cbf24b8171caf445d4", null ],
+      [ "SWhandler", "class_input.html#a62a46b2660bcaba3fed66dc90b837091", null ],
       [ "operator==", "class_input.html#ab92bca1b6d4281590516714eaeb3a510", null ]
     ] ],
     [ "Output", "class_output.html", [
@@ -254,17 +239,15 @@ var group___drivers =
       [ "operator=", "class_output.html#a7316de8af89d5895a518e28bdc33604a", null ],
       [ "operator==", "class_output.html#ab6d1108e56550b917ad977d0316ba0d2", null ],
       [ "SetUp", "class_output.html#a9c720d4f49501d48b36c00e8ddda0f5c", null ],
-      [ "SWhandler", "class_output.html#a4c87af433f34b1cc01cc6f73f24cfe19", null ]
+      [ "SWhandler", "class_output.html#aa06a9b759b47a4ab70704ae51ce7ce3f", null ]
     ] ],
     [ "Callback", "class_callback.html", [
-      [ "Callback", "class_callback.html#a4db1b006297fc41e966845642e648a22", null ],
-      [ "~Callback", "class_callback.html#a0186e2dbebe31f1d1db6fb4cf7b54867", null ],
       [ "SetInterrupt", "class_callback.html#a18c04c5cb1529d902a6c77dac2258e0a", null ],
       [ "SWhandler", "class_callback.html#a24e8f5fec587299192f62b13a2e7eb42", null ],
       [ "UnSetInterrupt", "class_callback.html#ace2a048d8fc6fdf88b67274fa730c410", null ]
     ] ],
     [ "Timer", "class_timer.html", [
-      [ "bases_t", "class_timer.html#a2275dff55f3dd4ddddf3b2404769ceec", null ],
+      [ "bases_t", "class_timer.html#acdc55034d21f5b88115abf0cc17b6773", null ],
       [ "bases_t", "class_timer.html#a9cec0a44d98f2898630bb03951269195", [
         [ "DEC", "class_timer.html#a9cec0a44d98f2898630bb03951269195a69e7733d38b3bf598fcda6d265f82863", null ],
         [ "SEG", "class_timer.html#a9cec0a44d98f2898630bb03951269195aff198ec8bfa0fc6c7200017bab37af9d", null ],
@@ -281,7 +264,6 @@ var group___drivers =
       ] ],
       [ "Timer", "class_timer.html#a5f16e8da27d2a5a5242dead46de05d97", null ],
       [ "Timer", "class_timer.html#a2682e0c8a8bbc50b22fbceda92903eb7", null ],
-      [ "~Timer", "class_timer.html#a14fa469c4c295c5fa6e66a4ad1092146", null ],
       [ "ClrTmrEvent", "class_timer.html#a18a28d253b6bc7190c5e133290120c22", null ],
       [ "GetmrStandBy", "class_timer.html#a3446cbde556eec707810feeb61575571", null ],
       [ "GetTimer", "class_timer.html#a02d39c7351bc4960e1538c1610746c7b", null ],
@@ -302,10 +284,10 @@ var group___drivers =
       [ "TimerStart", "class_timer.html#a4de6cf13b879de73abc9421fd9fab60d", null ],
       [ "TimerStop", "class_timer.html#a4a8fdd11e028684a8b770dd375278462", null ],
       [ "TmrEvent", "class_timer.html#ae6215d19df6293b3ed67ee8e796e9724", null ],
-      [ "operator==", "class_timer.html#a16cc66e5d235553e600fd84be5dc5013", null ],
+      [ "operator==", "class_timer.html#a67d3ea263ca5e63494bed1596a9b4a59", null ],
       [ "m_TmrBase", "class_timer.html#ac615667eecadfa52523f296c6b197553", null ],
       [ "m_TmrEvent", "class_timer.html#a4d3f6474c67de284a77c4f69fb36067d", null ],
-      [ "m_TmrHandler", "class_timer.html#ab57d5308f7d8759573bfa077bf05d531", null ],
+      [ "m_TmrHandler", "class_timer.html#ab4db941b5d3a3ecde10d9302e6db0edc", null ],
       [ "m_TmrRun", "class_timer.html#a2dd85f439d172418dc50d36a1ead5fda", null ],
       [ "m_TmrStandBy", "class_timer.html#a8b6f6f49d9eba6daea47132c8a314e5b", null ]
     ] ],
@@ -336,8 +318,8 @@ var group___drivers =
       [ "StopTimer", "class_s_ctimer.html#a03f060aa278f85b541c045760d892ccb", null ]
     ] ],
     [ "DAC", "class_d_a_c.html", [
-      [ "dac_channel", "class_d_a_c.html#ae96d9030e4e8203f0b4cbe8fb4f99222", null ],
-      [ "dac_error", "class_d_a_c.html#a3c38a1c9eaff9cec3f1a83d0112187f7", null ],
+      [ "dac_channel", "class_d_a_c.html#a7331e83609887350183026b302f38f6e", null ],
+      [ "dac_error", "class_d_a_c.html#a0539f563e721e0b1ff229d9ae4c48ce0", null ],
       [ "dac_channel", "class_d_a_c.html#a9560ddef55af03b248f1ee0a47075275", [
         [ "DAC_CHANNEL_0", "class_d_a_c.html#a9560ddef55af03b248f1ee0a47075275a58642b317beabd451ec0d0b69c0b936f", null ],
         [ "DAC_CHANNEL_1", "class_d_a_c.html#a9560ddef55af03b248f1ee0a47075275a1b91ce5a65be10e275eb09ebb7addc65", null ]
@@ -363,16 +345,15 @@ var group___drivers =
     ] ],
     [ "ADC", "class_a_d_c.html", [
       [ "ADC", "class_a_d_c.html#a11d7d9534765e1427c6753226fa4b91e", null ],
-      [ "~ADC", "class_a_d_c.html#adfa919e52dbed4f9c4b704894d19a1bd", null ],
       [ "Get", "class_a_d_c.html#a37e2709d6d29e21021f2cc219511acf3", null ],
       [ "Inicializar", "class_a_d_c.html#a1f30ebf6f8dce0fca06650812eb7775d", null ],
       [ "IsResultReady", "class_a_d_c.html#a39f98de3449fbc46f7aa69c656c15f61", null ],
       [ "Trigger", "class_a_d_c.html#a0321a2e27899f01e2acd1f743e41b85d", null ]
     ] ],
     [ "ADC_Group", "class_a_d_c___group.html", [
-      [ "adc_isr", "class_a_d_c___group.html#ab74f69065994e4918cdf3d4478a6717c", null ],
-      [ "error_t", "class_a_d_c___group.html#a4b8b48df3637ea35a1ab5e2610a61150", null ],
-      [ "irq_source_inten", "class_a_d_c___group.html#a0c3458f9985ac6f156e83733cb8efac8", null ],
+      [ "adc_isr", "class_a_d_c___group.html#a64d918a4b1b313ca3d121ec11ce743fb", null ],
+      [ "error_t", "class_a_d_c___group.html#a679acfe95e4162a3b1f356c8563b861d", null ],
+      [ "irq_source_inten", "class_a_d_c___group.html#a7e544ba930963d8108b4c347db2d0e66", null ],
       [ "adc_isr", "class_a_d_c___group.html#a699fdc6437dc203b9794017e046361dd", [
         [ "SEQA_ISR", "class_a_d_c___group.html#a699fdc6437dc203b9794017e046361dda3fe3231b020eb2d57d5b7158804a52a2", null ],
         [ "SEQB_ISR", "class_a_d_c___group.html#a699fdc6437dc203b9794017e046361ddaefadf69135e570b04bcb64477dab4a7f", null ],
@@ -414,11 +395,10 @@ var group___drivers =
         [ "impar", "class_uart.html#a3dc1591dc4992045e0f14d8ac3ec4e48a8f6fb544e8b0b40583d19e61f7f95034", null ]
       ] ],
       [ "Uart", "class_uart.html#afaef668de5b233cf011335741f26d6d3", null ],
-      [ "~Uart", "class_uart.html#a4199a240d764fc664ac44b9c170032b3", null ],
-      [ "Message", "class_uart.html#a176f9ee7124f60f16b2c25d01fc5a4b1", null ],
+      [ "Message", "class_uart.html#a9839f4adce7570038475de7a872d681e", null ],
       [ "SetBaudRate", "class_uart.html#aaba51d089c78ba71333e2ce332434423", null ],
-      [ "Transmit", "class_uart.html#aaada457bc4bee5bc605dd8d9c6589706", null ],
-      [ "Transmit", "class_uart.html#ade4a6cd289f94350eb1bf3b29a9e1359", null ]
+      [ "Transmit", "class_uart.html#a7620a6c08f6cb73c38aa2510ac8e21e8", null ],
+      [ "Transmit", "class_uart.html#a57580732de50eed46114d06d0cf35859", null ]
     ] ],
     [ "I2C", "class_i2_c.html", [
       [ "I2C_action_t", "class_i2_c.html#ac5c17ddab3b8696527f355def36e1d07", [
@@ -440,8 +420,7 @@ var group___drivers =
         [ "slvst_tx", "class_i2_c.html#a927222878c117a4278938c82da47e2e6a7528aac945548162dfea957363c22e5f", null ],
         [ "busy", "class_i2_c.html#a927222878c117a4278938c82da47e2e6a644981e52b7e687f7da99fd797cd008f", null ]
       ] ],
-      [ "I2C", "class_i2_c.html#a32d33a0e34f1cec1ffb4e21b32bb90af", null ],
-      [ "~I2C", "class_i2_c.html#afaad09fa9bdd23623bddbdcd7585a9fe", null ],
+      [ "I2C", "class_i2_c.html#a3f31d647484dfd3cad1aab0be0a5d94b", null ],
       [ "ACK", "class_i2_c.html#a11319f49316d58882041059ce765f5e5", null ],
       [ "ACKaddr", "class_i2_c.html#a23ed9d7e6162b81f42559767e7f668ca", null ],
       [ "DisableInterupt", "class_i2_c.html#aaef51594d197af2a031592e890b6daba", null ],
@@ -453,11 +432,10 @@ var group___drivers =
       [ "Read", "class_i2_c.html#a2e56aa888fba64968af2ab08382c76af", null ],
       [ "Start", "class_i2_c.html#a2dc26ca2bde6fa9896cbe31d3909412e", null ],
       [ "Stop", "class_i2_c.html#a5d3e0b1de395932284e2e010a0160b5f", null ],
-      [ "Write", "class_i2_c.html#a4fb70819fb5440055d5cadca5042d7de", null ]
+      [ "Write", "class_i2_c.html#a01998f88940804c81ca1c528b724a365", null ]
     ] ],
     [ "I2CMaster", "class_i2_c_master.html", [
       [ "I2CMaster", "class_i2_c_master.html#a792c821f9991226075a0c0c7cf1777ff", null ],
-      [ "~I2CMaster", "class_i2_c_master.html#aedcbfc9681e1d1ad11b853fc3ecf5556", null ],
       [ "Initialize", "class_i2_c_master.html#a42db0ac922d2fc92c3d95c0686092da6", null ],
       [ "isIdle", "class_i2_c_master.html#a4348ec84cb2e5f13f73e7221064610d8", null ],
       [ "Read", "class_i2_c_master.html#ae67a0de07945cb771102ce7c3896205f", null ],
@@ -465,7 +443,11 @@ var group___drivers =
       [ "Write", "class_i2_c_master.html#a064675ae9b7a357cba81870eddfc8bec", null ],
       [ "Write", "class_i2_c_master.html#a21fdb2737b7101948fded5c61afe3dfd", null ]
     ] ],
-    [ "Pin_interrupt", "class_pin__interrupt.html", null ],
+    [ "SPI", "class_s_p_i.html", [
+      [ "SPI", "class_s_p_i.html#a2ba081c29fbdecc704c6bf00b24d5205", null ],
+      [ "SPI_IRQHandler", "class_s_p_i.html#af706f05c4b2eeef9ecc40626dd406604", null ],
+      [ "Write", "class_s_p_i.html#afc606c541ea7f80a0ae7b74450d68a73", null ]
+    ] ],
     [ "Timer_Handler", "group___drivers.html#gad8c2afd48cc8eb5c42aacf5d7b9f38dc", null ],
     [ "g_gpiohandler", "group___drivers.html#ga9de420664563e9b16b113a3bea4e967f", null ],
     [ "g_Handler", "group___drivers.html#ga59b1079176c0f4559cc0a70aebd6aab4", null ],

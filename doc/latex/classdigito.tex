@@ -1,5 +1,5 @@
-\hypertarget{classdigito}{}\doxysection{digito Class Reference}
-\label{classdigito}\index{digito@{digito}}
+\doxysection{digito Class Reference}
+\hypertarget{classdigito}{}\label{classdigito}\index{digito@{digito}}
 
 
 Clase del objeto digito El objeto digito posee todas las funcionalidades y propiedades de forma que pueda ser la representación en código de un dígito. Un ejemplo de esto sería un display de 7 segmentos.  
@@ -9,43 +9,43 @@ Clase del objeto digito El objeto digito posee todas las funcionalidades y propi
 
 {\ttfamily \#include $<$Digito.\+h$>$}
 
-\doxysubsection*{Public Types}
+\doxysubsubsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-enum \mbox{\hyperlink{classdigito_a8302b770b9c2c86edb02394fd9ffc4f9}{codigo\+\_\+t}} \{ {\bfseries B\+CD}, 
-{\bfseries S\+E\+G\+M\+E\+N\+T\+OS}, 
-{\bfseries A\+S\+C\+H\+II}
+enum \mbox{\hyperlink{classdigito_a8302b770b9c2c86edb02394fd9ffc4f9}{codigo\+\_\+t}} \{ {\bfseries BCD}
+, {\bfseries SEGMENTOS}
+, {\bfseries ASCHII}
  \}
 \item 
-enum \mbox{\hyperlink{classdigito_ae1fa2c32b396542633f1bac557e56fb0}{modo\+\_\+t}} \{ {\bfseries A\+P\+A\+G\+AR} = 0xff, 
-{\bfseries P\+A\+R\+P\+A\+D\+E\+AR} = 1
+enum \mbox{\hyperlink{classdigito_ae1fa2c32b396542633f1bac557e56fb0}{modo\+\_\+t}} \{ {\bfseries APAGAR} = 0xff
+, {\bfseries PARPADEAR} = 1
  \}
 \item 
-enum \mbox{\hyperlink{classdigito_a9ca4533ad058f09c87644f3eb8b497a8}{S\+I\+M\+B\+O\+L\+OS}} \{ \newline
-{\bfseries menos} = 10, 
-{\bfseries a}, 
-{\bfseries b}, 
-{\bfseries c}, 
-\newline
-{\bfseries d}, 
-{\bfseries e}, 
-{\bfseries f}, 
-{\bfseries g}, 
-\newline
-{\bfseries h}, 
-{\bfseries n}, 
-{\bfseries o}, 
-{\bfseries p}, 
-\newline
-{\bfseries r}, 
-{\bfseries t}, 
-{\bfseries u}
+enum \mbox{\hyperlink{classdigito_a9ca4533ad058f09c87644f3eb8b497a8}{SIMBOLOS}} \{ \newline
+{\bfseries menos} = 10
+, {\bfseries a}
+, {\bfseries b}
+, {\bfseries c}
+, \newline
+{\bfseries d}
+, {\bfseries e}
+, {\bfseries f}
+, {\bfseries g}
+, \newline
+{\bfseries h}
+, {\bfseries n}
+, {\bfseries o}
+, {\bfseries p}
+, \newline
+{\bfseries r}
+, {\bfseries t}
+, {\bfseries u}
  \}
 \end{DoxyCompactItemize}
-\doxysubsection*{Public Member Functions}
+\doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classdigito_ad87b6a6ef9b67e0ec9d16ef093f1eff0}{digito}} (\mbox{\hyperlink{classdigito_a8302b770b9c2c86edb02394fd9ffc4f9}{codigo\+\_\+t}} Sistema=B\+CD, uint8\+\_\+t Valor=A\+P\+A\+G\+AR)
+\mbox{\hyperlink{classdigito_ad87b6a6ef9b67e0ec9d16ef093f1eff0}{digito}} (\mbox{\hyperlink{classdigito_a8302b770b9c2c86edb02394fd9ffc4f9}{codigo\+\_\+t}} Sistema=BCD, uint8\+\_\+t Valor=APAGAR)
 \item 
 bool \mbox{\hyperlink{classdigito_af66378ee328c8e5b756b72c348080c16}{Set}} (uint16\+\_\+t valor)
 \begin{DoxyCompactList}\small\item\em Función de escritura del dígito. \end{DoxyCompactList}\item 
@@ -59,54 +59,51 @@ void \mbox{\hyperlink{classdigito_a0c040b3ea2fe853a71a835656f21bb68}{Clr}} (void
 Clase del objeto digito El objeto digito posee todas las funcionalidades y propiedades de forma que pueda ser la representación en código de un dígito. Un ejemplo de esto sería un display de 7 segmentos. 
 
 \doxysubsection{Member Enumeration Documentation}
-\mbox{\Hypertarget{classdigito_a8302b770b9c2c86edb02394fd9ffc4f9}\label{classdigito_a8302b770b9c2c86edb02394fd9ffc4f9}} 
-\index{digito@{digito}!codigo\_t@{codigo\_t}}
+\Hypertarget{classdigito_a8302b770b9c2c86edb02394fd9ffc4f9}\index{digito@{digito}!codigo\_t@{codigo\_t}}
 \index{codigo\_t@{codigo\_t}!digito@{digito}}
 \doxysubsubsection{\texorpdfstring{codigo\_t}{codigo\_t}}
-{\footnotesize\ttfamily enum \mbox{\hyperlink{classdigito_a8302b770b9c2c86edb02394fd9ffc4f9}{digito\+::codigo\+\_\+t}}}
+{\footnotesize\ttfamily \label{classdigito_a8302b770b9c2c86edb02394fd9ffc4f9} 
+enum \mbox{\hyperlink{classdigito_a8302b770b9c2c86edb02394fd9ffc4f9}{digito\+::codigo\+\_\+t}}}
 
-Tipos de dígitos \mbox{\Hypertarget{classdigito_ae1fa2c32b396542633f1bac557e56fb0}\label{classdigito_ae1fa2c32b396542633f1bac557e56fb0}} 
-\index{digito@{digito}!modo\_t@{modo\_t}}
+Tipos de dígitos \Hypertarget{classdigito_ae1fa2c32b396542633f1bac557e56fb0}\index{digito@{digito}!modo\_t@{modo\_t}}
 \index{modo\_t@{modo\_t}!digito@{digito}}
 \doxysubsubsection{\texorpdfstring{modo\_t}{modo\_t}}
-{\footnotesize\ttfamily enum \mbox{\hyperlink{classdigito_ae1fa2c32b396542633f1bac557e56fb0}{digito\+::modo\+\_\+t}}}
+{\footnotesize\ttfamily \label{classdigito_ae1fa2c32b396542633f1bac557e56fb0} 
+enum \mbox{\hyperlink{classdigito_ae1fa2c32b396542633f1bac557e56fb0}{digito\+::modo\+\_\+t}}}
 
-Modos de uso \mbox{\Hypertarget{classdigito_a9ca4533ad058f09c87644f3eb8b497a8}\label{classdigito_a9ca4533ad058f09c87644f3eb8b497a8}} 
-\index{digito@{digito}!SIMBOLOS@{SIMBOLOS}}
+Modos de uso \Hypertarget{classdigito_a9ca4533ad058f09c87644f3eb8b497a8}\index{digito@{digito}!SIMBOLOS@{SIMBOLOS}}
 \index{SIMBOLOS@{SIMBOLOS}!digito@{digito}}
 \doxysubsubsection{\texorpdfstring{SIMBOLOS}{SIMBOLOS}}
-{\footnotesize\ttfamily enum \mbox{\hyperlink{classdigito_a9ca4533ad058f09c87644f3eb8b497a8}{digito\+::\+S\+I\+M\+B\+O\+L\+OS}}}
+{\footnotesize\ttfamily \label{classdigito_a9ca4533ad058f09c87644f3eb8b497a8} 
+enum \mbox{\hyperlink{classdigito_a9ca4533ad058f09c87644f3eb8b497a8}{digito\+::\+SIMBOLOS}}}
 
 Simbolos a escribir 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classdigito_ad87b6a6ef9b67e0ec9d16ef093f1eff0}\label{classdigito_ad87b6a6ef9b67e0ec9d16ef093f1eff0}} 
-\index{digito@{digito}!digito@{digito}}
+\Hypertarget{classdigito_ad87b6a6ef9b67e0ec9d16ef093f1eff0}\index{digito@{digito}!digito@{digito}}
 \index{digito@{digito}!digito@{digito}}
 \doxysubsubsection{\texorpdfstring{digito()}{digito()}}
-{\footnotesize\ttfamily digito\+::digito (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdigito_a8302b770b9c2c86edb02394fd9ffc4f9}{codigo\+\_\+t}}}]{Sistema = {\ttfamily BCD},  }\item[{uint8\+\_\+t}]{Valor = {\ttfamily APAGAR} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \label{classdigito_ad87b6a6ef9b67e0ec9d16ef093f1eff0} 
+digito\+::digito (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdigito_a8302b770b9c2c86edb02394fd9ffc4f9}{codigo\+\_\+t}}}]{Sistema}{ = {\ttfamily BCD}, }\item[{uint8\+\_\+t}]{Valor}{ = {\ttfamily APAGAR}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 constructor por defecto 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classdigito_a0c040b3ea2fe853a71a835656f21bb68}\label{classdigito_a0c040b3ea2fe853a71a835656f21bb68}} 
-\index{digito@{digito}!Clr@{Clr}}
+\Hypertarget{classdigito_a0c040b3ea2fe853a71a835656f21bb68}\index{digito@{digito}!Clr@{Clr}}
 \index{Clr@{Clr}!digito@{digito}}
 \doxysubsubsection{\texorpdfstring{Clr()}{Clr()}}
-{\footnotesize\ttfamily void digito\+::\+Clr (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{classdigito_a0c040b3ea2fe853a71a835656f21bb68} 
+void digito\+::\+Clr (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
 
 
 Función de limpieza del dígito. 
 
-Deja el dígito apagado del todo. No confundir con escribir un 0, apagado representa sin energía \begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
-\mbox{\Hypertarget{classdigito_a1147bec264cc1a971f6247d96dc7066b}\label{classdigito_a1147bec264cc1a971f6247d96dc7066b}} 
-\index{digito@{digito}!Get@{Get}}
+Deja el dígito apagado del todo. No confundir con escribir un 0, apagado representa sin energía \Hypertarget{classdigito_a1147bec264cc1a971f6247d96dc7066b}\index{digito@{digito}!Get@{Get}}
 \index{Get@{Get}!digito@{digito}}
 \doxysubsubsection{\texorpdfstring{Get()}{Get()}}
-{\footnotesize\ttfamily uint8\+\_\+t digito\+::\+Get (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{classdigito_a1147bec264cc1a971f6247d96dc7066b} 
+uint8\+\_\+t digito\+::\+Get (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
 
 
@@ -115,11 +112,11 @@ Devuelve el valor del dígito.
 \begin{DoxyReturn}{Returns}
 valor del dígito. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classdigito_af66378ee328c8e5b756b72c348080c16}\label{classdigito_af66378ee328c8e5b756b72c348080c16}} 
-\index{digito@{digito}!Set@{Set}}
+\Hypertarget{classdigito_af66378ee328c8e5b756b72c348080c16}\index{digito@{digito}!Set@{Set}}
 \index{Set@{Set}!digito@{digito}}
 \doxysubsubsection{\texorpdfstring{Set()}{Set()}}
-{\footnotesize\ttfamily bool digito\+::\+Set (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{valor }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{classdigito_af66378ee328c8e5b756b72c348080c16} 
+bool digito\+::\+Set (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{valor}{}\end{DoxyParamCaption})}
 
 
 
@@ -137,5 +134,5 @@ bool. True si tuvo éxito, false sino.
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-E\+:/\+Agustin/\+Escritorio/\+M\+C\+Uexpresso/\+Kit\+L\+P\+C845-\/\+C++/src/\+Drivers/\+Hardware/02-\/\+Displays/7\+Segmentos/\+C-\/\+Display/\mbox{\hyperlink{_digito_8h}{Digito.\+h}}\item 
-E\+:/\+Agustin/\+Escritorio/\+M\+C\+Uexpresso/\+Kit\+L\+P\+C845-\/\+C++/src/\+Drivers/\+Hardware/02-\/\+Displays/7\+Segmentos/\+C-\/\+Display/\mbox{\hyperlink{_digito_8cpp}{Digito.\+cpp}}\end{DoxyCompactItemize}
+E\+:/\+Agustin/\+Escritorio/\+MCUexpresso/\+Kit\+LPC845-\/\+C++/src/\+Drivers/\+Hardware/02-\/\+Displays/7\+Segmentos/\+C-\/\+Display/\mbox{\hyperlink{_digito_8h}{Digito.\+h}}\item 
+E\+:/\+Agustin/\+Escritorio/\+MCUexpresso/\+Kit\+LPC845-\/\+C++/src/\+Drivers/\+Hardware/02-\/\+Displays/7\+Segmentos/\+C-\/\+Display/\mbox{\hyperlink{_digito_8cpp}{Digito.\+cpp}}\end{DoxyCompactItemize}

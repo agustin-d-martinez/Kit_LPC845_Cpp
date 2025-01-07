@@ -58,7 +58,6 @@ Uart(_portTx, _pinTx, _portRx, _pinRx, usart, DEFAULT_ESP01_BAUDRATE, Uart::ocho
  * 	\fn  void ESP8266::Inicializar( void )
  * 	\brief Inicializa el ESP8266/ ESP01 con comandos AT en modo cliente
  * 	\details Configura los baudios y modo del dispositivo. FUNCION BLOQUEANTE
- * 	\return void
  */
 void ESP8266::Inicializar( void )
 {
@@ -168,7 +167,6 @@ bool ESP8266::LeerOk ( void )
  * 	\brief Setea la IP del dispositivo
  * 	\details Envía todos los comandos AT para setear una IP y espera su correcta respuesta
  * 	\param [in] ip: ip a configurar
- * 	\return void
  */
 void ESP8266::SetIP( int8_t *ip )
 {
@@ -235,7 +233,6 @@ bool ESP8266::ConnectToServer ( conection_type _mode , const int8_t* server_ip ,
  * 	\fn  void ESP8266::DisconnectToServer ( void )
  * 	\brief Se desconecta del server.
  * 	\details Envía los comandos AT para desconectarse del servidor en caso de estar conectado a uno.
- * 	\return void
  */
 void ESP8266::DisconnectToServer ( void )
 {
@@ -250,7 +247,6 @@ void ESP8266::DisconnectToServer ( void )
  * 	\fn  void ESP8266::DisconnectToWifi ( void )
  * 	\brief Se desconecta de la red wifi.
  * 	\details Envía los comandos AT para desconectarse de la red wifi en caso de estar conectada a una.
- * 	\return void
  */
 void ESP8266::DisconnectToWifi ( void )
 {
@@ -331,7 +327,6 @@ uint32_t ESP8266::Strlen ( const int8_t * a )
  * 	\brief Sobrecarga de Transmit de UART
  * 	\details
  * 	\param [in] msg: Mensaje a enviar.
- * 	\return void
  */
 void ESP8266::Transmit ( const char * msg)
 {
@@ -344,7 +339,6 @@ void ESP8266::Transmit ( const char * msg)
  * 	\details
  * 	\param [in] msg: Mensaje a enviar.
  * 	\param [in] n: cantidad de caracteres a enviar.
- * 	\return void
  */
 void ESP8266::Transmit ( const void * msg , uint32_t n )
 {

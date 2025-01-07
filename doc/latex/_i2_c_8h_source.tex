@@ -1,0 +1,100 @@
+\doxysection{I2\+C.\+h}
+\hypertarget{_i2_c_8h_source}{}\label{_i2_c_8h_source}\index{E:/Agustin/Escritorio/MCUexpresso/KitLPC845-\/C++/src/Drivers/Perifericos/14-\/ComSincronica/I2C/I2C.h@{E:/Agustin/Escritorio/MCUexpresso/KitLPC845-\/C++/src/Drivers/Perifericos/14-\/ComSincronica/I2C/I2C.h}}
+\mbox{\hyperlink{_i2_c_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*******************************************************************************************************************************/}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00038\ \textcolor{comment}{\ ***\ MODULO}}
+\DoxyCodeLine{00039\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#ifndef\ I2C\_H\_}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ I2C\_H\_}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00048\ \textcolor{comment}{\ ***\ INCLUDES\ GLOBALES}}
+\DoxyCodeLine{00049\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_pin_8h}{Perifericos/01-\/Pin/Pin.h}}>}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#include\ "{}LPC845.h"{}}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_comunicacion_sincronica_8h}{Perifericos/14-\/ComSincronica/ComunicacionSincronica.h}}>}}
+\DoxyCodeLine{00053\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00054\ \textcolor{comment}{\ ***\ DEFINES\ GLOBALES}}
+\DoxyCodeLine{00055\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#if\ defined\ (\_\_cplusplus)}}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ I2C0\_IRQHandler\ (\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00059\ \ \ \ \ \}}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ I2C1\_IRQHandler\ (\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00062\ \ \ \ \ \}}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ I2C2\_IRQHandler\ (\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00065\ \ \ \ \ \}}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ I2C3\_IRQHandler\ (\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00068\ \ \ \ \ \}}
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00070\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00071\ \textcolor{comment}{\ ***\ MACROS\ GLOBALES}}
+\DoxyCodeLine{00072\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00075\ \textcolor{comment}{\ ***\ TIPO\ DE\ DATOS\ GLOBALES}}
+\DoxyCodeLine{00076\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00079\ \textcolor{comment}{\ ***\ VARIABLES\ GLOBALES}}
+\DoxyCodeLine{00080\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00083\ \textcolor{comment}{\ ***\ IMPLANTACION\ DE\ UNA\ CLASE}}
+\DoxyCodeLine{00084\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_i2_c_a3f31d647484dfd3cad1aab0be0a5d94b}{I2C}}:\ \mbox{\hyperlink{class_comunicacion_sincronica_a2466717eadf1a0415f3ea369502620b1}{ComunicacionSincronica}}}
+\DoxyCodeLine{00092\ \{\ \ \ \ \ \ \ \textcolor{comment}{//La\ I2C1\ a\ I2C3\ no\ van\ a\ mas\ de\ 400khz}}
+\DoxyCodeLine{00093\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00095\ \textcolor{preprocessor}{\ \ \ \ \#define\ \ \ \ \ I2C\_MAX\_FREQ\ \ \ \ 400}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{master\ =\ 1\ ,\ slave\ =\ 2\}\ \mbox{\hyperlink{class_i2_c_a338cf62e8394d98481d5c646750902fd}{I2C\_mode\_t}};}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{write\ =\ 0\ ,\ read\ =\ 1\ \}\ \mbox{\hyperlink{class_i2_c_ac5c17ddab3b8696527f355def36e1d07}{I2C\_action\_t}};}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{idle\ =\ 0\ ,\ rx\_data\ =\ 1\ ,\ tx\_ready\ ,\ NACK\_addr\ ,\ NACK\_tx\ ,}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ slvst\_addr\ =\ 0\ ,\ slvst\_rx\ ,\ slvst\_tx\ ,}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ busy\ =\ 10\}\ \mbox{\hyperlink{class_i2_c_a927222878c117a4278938c82da47e2e6}{I2C\_states\_t}};}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ I2C\_Type*\ \ \ m\_I2C\_register\ ;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keyword}{const}\ \ \ \mbox{\hyperlink{class_pin}{Pin}}*\ \ \ \ \ \ \ \ \ m\_sda;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_i2_c_a338cf62e8394d98481d5c646750902fd}{I2C\_mode\_t}}\ \ \ \ m\_mode\ ;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keyword}{const}\ \ \ uint8\_t\ \ \ \ \ m\_slv\_addr;\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keyword}{static}\ \ uint8\_t\ \ \ \ \ m\_cant\_created;\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_i2_c_a3f31d647484dfd3cad1aab0be0a5d94b}{I2C}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ (\ I2C\_Type*\ I2C\_register\ ,\ \mbox{\hyperlink{class_pin}{Pin}}*\ sda\ ,\ \mbox{\hyperlink{class_pin}{Pin}}*\ scl\ ,\ \mbox{\hyperlink{class_i2_c_a338cf62e8394d98481d5c646750902fd}{I2C\_mode\_t}}\ mode\ =\ master,\ \ uint8\_t\ slv\_addr\ =\ 0);}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_i2_c_acdae33cb48da5060e31d28e6610c6eb1}{Initialize}}\ \ \ \ \ \ \ \ (\ uint32\_t\ clk\_freq\ );}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_i2_c_a1d2d734fcdce3d81f6ddab30d2e53a43}{EnableInterupt}}\ \ \ \ (\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_i2_c_aaef51594d197af2a031592e890b6daba}{DisableInterupt}}\ (\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_i2_c_a2dc26ca2bde6fa9896cbe31d3909412e}{Start}}\ \ \ \ \ \ (\ uint8\_t\ addr\ ,\ \mbox{\hyperlink{class_i2_c_ac5c17ddab3b8696527f355def36e1d07}{I2C\_action\_t}}\ action\ );}
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_i2_c_a5d3e0b1de395932284e2e010a0160b5f}{Stop}}\ \ \ \ \ \ \ \ (\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_i2_c_a01998f88940804c81ca1c528b724a365}{Write}}\ \ \ \ \ \ (\ uint8\_t\ data\ )\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00125\ \ \ \ \ \mbox{\hyperlink{class_i2_c}{I2C}}\&\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_i2_c_a8471212350221fb2a58a3cfbc469c67a}{operator=\ \ \ }}(\ uint8\_t\ data\ );\ \ \ \ \ \ \ \ \textcolor{comment}{//Sobrecarga\ de\ escritura}}
+\DoxyCodeLine{00126\ \ \ \ \ int8\_t\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_i2_c_a2e56aa888fba64968af2ab08382c76af}{Read}}\ \ \ \ \ \ \ \ (\ uint8\_t*\ data\ ,\ \textcolor{keywordtype}{bool}\ continue\_reading\ );}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_i2_c_a11319f49316d58882041059ce765f5e5}{ACK}}\ \ \ \ \ \ \ \ \ \ (\ \textcolor{keywordtype}{bool}\ a\ );}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_i2_c_a23ed9d7e6162b81f42559767e7f668ca}{ACKaddr}}\ \ \ \ \ \ (\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00130\ \ \ \ \ \mbox{\hyperlink{class_i2_c_a927222878c117a4278938c82da47e2e6}{I2C\_states\_t}}\ \ \ \ \mbox{\hyperlink{class_i2_c_ab4d30ac9140fb1959ba849f437b6eacc}{GetState}}\ \ \ \ (\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_i2_c_a1879bb8afe99b37e59256a575872a1a6}{I2C\_IRQHandler}}\ (\ \textcolor{keywordtype}{void}\ )\ \{\ \}\ \ \ \ \ \ \ }
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keyword}{virtual}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_i2_c}{\string~I2C}}();}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ config\ \ \ \ \ \ \ \ \ \ (\ uint8\_t\&\ register\_number\ );}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ EnableSWM\ \ \ \ \ \ \ (\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ ConfigClock\ \ \ \ \ (\ uint8\_t\&\ clk\_offset\ ,\ uint8\_t\&\ rst\_offset\ );}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ configBaudRate\ \ (\ uint32\_t\ clk\_freq\ );}
+\DoxyCodeLine{00140\ \};}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ I2C\_H\_\ */}\textcolor{preprocessor}{}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

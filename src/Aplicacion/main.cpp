@@ -11,10 +11,20 @@
 int main(void)
 {
 	inicializarApp(  );
+
+	Pin* sda = new Pin(Pin::port0, 11);
+	Pin* scl = new Pin(Pin::port0, 10);
+	I2CMaster comunicacion_i2c(I2C0, sda, scl);
+	comunicacion_i2c.Initialize(400);
+
+	int8_t mensaje[13] = "Hola mundo!\n";
+
 	while ( 1 )
 	{
 		maquina_com->MaquinaDeEstados();
 		Semaforo1->MaquinaDeEstados();
+		if (comunicacion_i2c.isIdle())
+			comunicacion_i2c.Write(4, mensaje);
 	}
 }
 

@@ -1,11 +1,14 @@
-digraph "E:/Agustin/Escritorio/MCUexpresso/KitLPC845-C++/src/Drivers/Hardware/02-Displays/LCD" {
+digraph "E:/Agustin/Escritorio/MCUexpresso/KitLPC845-C++/src/Drivers/Hardware/02-Displays/LCD"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
   subgraph clusterdir_c4fcbf4036a59f61a759d54182057cf5 {
-    graph [ bgcolor="#ddddee", pencolor="black", label="02-Displays" fontname="Helvetica", fontsize="10", URL="dir_c4fcbf4036a59f61a759d54182057cf5.html"]
-  dir_2f449dc5e2866a9f79afd0ccbdd9edb5 [shape=box, label="LCD", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_2f449dc5e2866a9f79afd0ccbdd9edb5.html"];
+    graph [ bgcolor="#edf0f7", pencolor="grey50", label="02-Displays", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_c4fcbf4036a59f61a759d54182057cf5.html",tooltip=""]
+  dir_2f449dc5e2866a9f79afd0ccbdd9edb5 [label="LCD", fillcolor="#edf0f7", color="grey25", style="filled,bold", URL="dir_2f449dc5e2866a9f79afd0ccbdd9edb5.html",tooltip=""];
   }
-  dir_fddceb55b13f36ba841fc9095bbfed65 [shape=box label="Perifericos" fillcolor="white" style="filled" color="red" URL="dir_fddceb55b13f36ba841fc9095bbfed65.html"];
-  dir_2f449dc5e2866a9f79afd0ccbdd9edb5->dir_fddceb55b13f36ba841fc9095bbfed65 [headlabel="2", labeldistance=1.5 headhref="dir_000009_000016.html"];
+  dir_fddceb55b13f36ba841fc9095bbfed65 [label="Perifericos", fillcolor="#edf0f7", color="red", style="filled,dashed", URL="dir_fddceb55b13f36ba841fc9095bbfed65.html",tooltip=""];
+  dir_2f449dc5e2866a9f79afd0ccbdd9edb5->dir_fddceb55b13f36ba841fc9095bbfed65 [headlabel="2", labeldistance=1.5 headhref="dir_000030_000031.html" href="dir_000030_000031.html" color="steelblue1" fontcolor="steelblue1"];
 }

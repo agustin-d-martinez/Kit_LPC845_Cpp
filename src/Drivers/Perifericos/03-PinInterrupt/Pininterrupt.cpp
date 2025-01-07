@@ -53,7 +53,6 @@ void PinInterrupt::PinInterrupt_Enable_clock( void )
 	\fn void PinInterrupt::EnableInterupt( void )
 	\brief Habilito la interrupción.
  	\details Habilito la interrupción de la pata específica que estoy utilizando.
-	\return void
 */
 void PinInterrupt::EnableInterupt ( void )
 {
@@ -63,14 +62,13 @@ void PinInterrupt::EnableInterupt ( void )
 	\fn void PinInterrupt::DisableInterupt( void )
 	\brief Deshabilito la interrupción.
  	\details Deshabilito la interrupción de la pata específica que estoy utilizando.
-	\return void
 */
 void PinInterrupt::DisableInterupt ( void )
 {
 	SYSCON->PINTSEL[m_interrupt_number] = 0 ;
 }
 /**
-	\fn PinInterrupt::Pin_interrupt( port_t port , uint8_t bit , uint8_t gpio_mode , activity_t activity , uint8_t intrp_mode )
+	\fn PinInterrupt::PinInterrupt( port_t port , uint8_t bit , mode_t gpio_mode , activity_t activity , uint8_t intrp_mode )
 	\brief Constructor de clase Pin_interrupt
 	\details Crea un Pin_interrupt con los parámetros correspondientes
 	\param [in] port: Puerto del pin interrutp.
@@ -93,7 +91,6 @@ PinInterrupt::PinInterrupt( port_t port , uint8_t bit , mode_t gpio_mode , activ
 	\fn void PinInterrupt::PinInterrupt_Inicializar( void )
 	\brief Inicializo la interrupción por pin.
  	\details Modifico todos los registros para que la interrupción por pin esté configurada.
-	\return void
 */
 void PinInterrupt::PinInterrupt_Inicializar( void )
 {

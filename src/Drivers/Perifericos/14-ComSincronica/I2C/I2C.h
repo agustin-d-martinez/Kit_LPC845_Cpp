@@ -85,7 +85,7 @@
 /**
  * \class I2C
  * \brief Clase del objeto I2C
- * El objeto uart genera una comunicación asincrónica de tipo UART.
+ * El objeto I2C genera una comunicación sincrónica de tipo I2C. Posee las funciones basicas como start, stop, write y read.
  */
 
 class I2C: ComunicacionSincronica
@@ -93,11 +93,17 @@ class I2C: ComunicacionSincronica
 public:
 	/** Maxima frecuencia del I2C. Solo valida para I2C1 a I2C3 */
 	#define 	I2C_MAX_FREQ 	400
-	typedef enum {master = 1 , slave = 2} I2C_mode_t;							/**< Enumeracion. Modo del I2C. Puede ser master o slave. */
-	typedef enum {write = 0 , read = 1 } I2C_action_t;							/**< Enumeracion. Modo del I2C. Puede ser master o slave. */
+	/** \brief Enumeracion. Modo del I2C. Puede ser master o slave. */
+	typedef enum {master = 1 , slave = 2} I2C_mode_t;
+	/** \brief Enumeracion. Acciones del I2C. Pueden ser leer o escribir (write o read). */
+	typedef enum {write = 0 , read = 1 } I2C_action_t;
+	/** \brief Enumeracion. Estados del I2C.
+	 * \details Un master puede encontrarse listo para transmitir o recibir (rx_data y tx_ready) o recibiendo un NACK (NACK_addr y NCK_tx).
+	 * 			Un slave puede encontrarse listo para transmitir o recibir (slvst_tx y slvst_rx) o recibiendo un addres para iniciar (slvst_addr)
+	 * 			Todos los modos pueden estar en idle si no hacen nada o busy si estan en mitad de un procesamiento. */
 	typedef enum {idle = 0 , rx_data = 1 , tx_ready , NACK_addr , NACK_tx ,
 				slvst_addr = 0 , slvst_rx , slvst_tx ,
-				busy = 10} I2C_states_t;										/**< Enumeracion. Modo del I2C. Puede ser master o slave. */
+				busy = 10} I2C_states_t;
 
 private:
 			I2C_Type* 	m_I2C_register ;		/**< Registro a leer para configurar I2C. */
@@ -108,14 +114,14 @@ private:
 	static 	uint8_t 	m_cant_created;			/**< Cantidad de I2C creados. */
 
 public:
-			I2C				( I2C_Type* I2C_register , Pin* sda , Pin* scl , I2C_mode_t mode , uint8_t slv_addr = 0);
+			I2C				( I2C_Type* I2C_register , Pin* sda , Pin* scl , I2C_mode_t mode = master,  uint8_t slv_addr = 0);
 	void 	Initialize 		( uint32_t clk_freq );
 	void 	EnableInterupt 	( void );
 	void 	DisableInterupt ( void );
 
 	void			Start		( uint8_t addr , I2C_action_t action );
 	void			Stop		( void );
-	void 			Write 		( uint8_t data );
+	void 			Write 		( uint8_t data ) override;
 	I2C& 			operator= 	( uint8_t data );		//Sobrecarga de escritura
 	int8_t 			Read 		( uint8_t* data , bool continue_reading );
 
@@ -130,7 +136,7 @@ private:
 	void 	config 			( uint8_t& register_number );
 	void 	EnableSWM 		( void );
 	void 	ConfigClock 	( uint8_t& clk_offset , uint8_t& rst_offset );
-	void 	configBaudRate 	( uint32_t CLK_FREQ );
+	void 	configBaudRate 	( uint32_t clk_freq );
 };
 
 #endif /* I2C_H_ */

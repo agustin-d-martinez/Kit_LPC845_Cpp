@@ -10,9 +10,8 @@ var class_uart =
       [ "impar", "class_uart.html#a3dc1591dc4992045e0f14d8ac3ec4e48a8f6fb544e8b0b40583d19e61f7f95034", null ]
     ] ],
     [ "Uart", "class_uart.html#afaef668de5b233cf011335741f26d6d3", null ],
-    [ "~Uart", "class_uart.html#a4199a240d764fc664ac44b9c170032b3", null ],
-    [ "Message", "class_uart.html#a176f9ee7124f60f16b2c25d01fc5a4b1", null ],
+    [ "Message", "class_uart.html#a9839f4adce7570038475de7a872d681e", null ],
     [ "SetBaudRate", "class_uart.html#aaba51d089c78ba71333e2ce332434423", null ],
-    [ "Transmit", "class_uart.html#aaada457bc4bee5bc605dd8d9c6589706", null ],
-    [ "Transmit", "class_uart.html#ade4a6cd289f94350eb1bf3b29a9e1359", null ]
+    [ "Transmit", "class_uart.html#a7620a6c08f6cb73c38aa2510ac8e21e8", null ],
+    [ "Transmit", "class_uart.html#a57580732de50eed46114d06d0cf35859", null ]
 ];

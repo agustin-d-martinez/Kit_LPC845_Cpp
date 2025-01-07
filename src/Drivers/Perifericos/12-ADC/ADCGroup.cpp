@@ -162,7 +162,6 @@ void ADC_Group::SetADCVoltage( trm_voltage_config config )
 	\fn void ADC_Group::CalibrateADC( void )
 	\brief Calibra el ADC
 	\details Realiza la calibración de los registros para el correcto funcionamiento del ADC
-	\return void
 */
 void ADC_Group::CalibrateADC( void )
 {
@@ -180,7 +179,6 @@ void ADC_Group::CalibrateADC( void )
 	\brief Activa/desactiva el modo de bajo consumo
 	\details Configura el ADC para no consumir energia al no realizar acciones o sí consumir.
 	\param [in] low_power: Valor de seteo del bajo consumo
-	\return void
 */
 void ADC_Group::SetLowPowerMode( bool low_power )
 {
@@ -193,7 +191,6 @@ void ADC_Group::SetLowPowerMode( bool low_power )
 	\fn void ADC_Group::SetSampleRate( void )
 	\brief Setea la frecuencia de muestreo.
 	\details
-	\return void
 */
 void ADC_Group::SetSampleRate( void )
 {
@@ -206,7 +203,6 @@ void ADC_Group::SetSampleRate( void )
 	\fn void ADC_Group::ADCConfig( void )
 	\brief Configura el ADC.
 	\details Apaga el modo de bajo consumo y setea el tiempo de muestreo
-	\return void
 */
 void ADC_Group::ADCConfig( void )
 {
@@ -219,7 +215,6 @@ void ADC_Group::ADCConfig( void )
 	\brief Agrega un canal a la secuencia A
 	\details
 	\param [in] channel: Canal a agregar
-	\return void
 */
 void ADC_Group::AddChannel_to_SequenceA(uint8_t channel)
 {
@@ -230,7 +225,6 @@ void ADC_Group::AddChannel_to_SequenceA(uint8_t channel)
 	\brief Agrega un canal a la secuencia B
 	\details
 	\param [in] channel: Canal a agregar
-	\return void
 */
 void ADC_Group::AddChannel_to_SequenceB(uint8_t channel)
 {
@@ -241,7 +235,6 @@ void ADC_Group::AddChannel_to_SequenceB(uint8_t channel)
 	\brief Elimina un canal de la secuencia A
 	\details
 	\param [in] channel: Canal a eliminar
-	\return void
 */
 void ADC_Group::RemoveChannelOfSequenceA(uint8_t channel)
 {
@@ -252,7 +245,6 @@ void ADC_Group::RemoveChannelOfSequenceA(uint8_t channel)
 	\brief Elimina un canal de la secuencia B
 	\details
 	\param [in] channel: Canal a eliminar
-	\return void
 */
 void ADC_Group::RemoveChannelOfSequenceB(uint8_t channel)
 {
@@ -263,7 +255,6 @@ void ADC_Group::RemoveChannelOfSequenceB(uint8_t channel)
 	\brief Configura el tipo de interrupción de la secuencia A.
 	\details
 	\param [in] mode: Tipo de conversión (secuencia entera o uno por uno)
-	\return void
 */
 void ADC_Group::SetSeqAMode( conversion_mode mode )
 {
@@ -277,7 +268,6 @@ void ADC_Group::SetSeqAMode( conversion_mode mode )
 	\brief Configura el tipo de interrupción de la secuencia B.
 	\details
 	\param [in] mode: Tipo de conversión (secuencia entera o uno por uno)
-	\return void
 */
 void ADC_Group::SetSeqBMode(conversion_mode mode)
 {
@@ -290,7 +280,6 @@ void ADC_Group::SetSeqBMode(conversion_mode mode)
 	\fn void ADC_Group::EnableSeqA( void )
 	\brief Habilita la secuencia A
 	\details
-	\return void
 */
 void ADC_Group::EnableSeqA( void )
 {
@@ -300,7 +289,6 @@ void ADC_Group::EnableSeqA( void )
 	\fn void ADC_Group::EnableSeqB( void )
 	\brief Habilita la secuencia B
 	\details
-	\return void
 */
 void ADC_Group::EnableSeqB()
 {
@@ -320,7 +308,6 @@ void ADC_Group::DisableSeqA( void )
 	\fn void ADC_Group::DisableSeqB( void )
 	\brief Deshabilita la secuencia B
 	\details
-	\return void
 */
 void ADC_Group::DisableSeqB()
 {
@@ -352,7 +339,6 @@ ADC_Group::irq_source_nvic ADC_Group::GetNvicIrq( irq_source_inten irq )
 	\brief Habilita la interrupcion
 	\details
 	\param [in] irq: Interrupcion a habilitar
-	\return void
 */
 void ADC_Group::EnableIrq( irq_source_inten irq )
 {
@@ -368,7 +354,6 @@ void ADC_Group::EnableIrq( irq_source_inten irq )
 	\brief Deshabilita la interrupcion
 	\details
 	\param [in] irq: Interrupcion a deshabilitar
-	\return void
 */
 void ADC_Group::DisableIrq( irq_source_inten irq )
 {
@@ -383,7 +368,6 @@ void ADC_Group::DisableIrq( irq_source_inten irq )
 	\fn void ADC_Group::InitADC( void )
 	\brief Inicializa el ADC
 	\details Realiza todas las configuraciones para poder usar el ADC.
-	\return void
 */
 void ADC_Group::InitADC( void )
 {
@@ -397,7 +381,6 @@ void ADC_Group::InitADC( void )
 	\fn void ADC_Group::SetUpSeqA( void )
 	\brief Setea el la secuencia A para funcionar por interrupción.
 	\details Configura la interrupción al terminar la secuencia completa
-	\return void
 */
 void ADC_Group::SetUpSeqA( void )
 {
@@ -450,7 +433,6 @@ ADC_Group::error_t ADC_Group::RemoveADCChanel( uint8_t channel )
 	\fn void ADC_Group::TriggerStartSeqA ( void )
 	\brief Inicia la conversión analógica - digital de la secuencia A
 	\details
-	\return void
 */
 void ADC_Group::TriggerStartSeqA( void )
 {
@@ -502,7 +484,6 @@ bool ADC_Group::IsResultReady( uint8_t channel ) const
 	\fn void ADC_Group::handlerSeqA( void )
 	\brief Handler de la secuencia A.
 	\details Función que se ejecuta al terminar de convertir una secuencia. Guarda todos los valores en el buffer
-	\return void
 */
 void ADC_Group::handlerSeqA( void )
 {
@@ -522,7 +503,6 @@ void ADC_Group::handlerSeqA( void )
 	\brief Handler del ADC
 	\details Funcion Handler de todas las interrupciones posibles del ADC.
 	\param [in] isr: Tipo de interrupción
-	\return void
 */
 void ADC_Group::Handler( adc_isr isr )
 {

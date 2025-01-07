@@ -1,0 +1,56 @@
+\doxysection{Pin.\+h}
+\hypertarget{_pin_8h_source}{}\label{_pin_8h_source}\index{E:/Agustin/Escritorio/MCUexpresso/KitLPC845-\/C++/src/Drivers/Perifericos/01-\/Pin/Pin.h@{E:/Agustin/Escritorio/MCUexpresso/KitLPC845-\/C++/src/Drivers/Perifericos/01-\/Pin/Pin.h}}
+\mbox{\hyperlink{_pin_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*******************************************************************************************************************************/}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ ***\ MODULO}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#ifndef\ PIN\_H\_}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ PIN\_H\_}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ ***\ INCLUDES\ GLOBALES}}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ "{}tipos.h"{}}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ ***\ DEFINES\ GLOBALES}}
+\DoxyCodeLine{00026\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00029\ \textcolor{comment}{\ ***\ MACROS\ GLOBALES}}
+\DoxyCodeLine{00030\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00033\ \textcolor{comment}{\ ***\ TIPO\ DE\ DATOS\ GLOBALES}}
+\DoxyCodeLine{00034\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00037\ \textcolor{comment}{\ ***\ VARIABLES\ GLOBALES}}
+\DoxyCodeLine{00038\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00040\ \textcolor{keyword}{const}\ uint8\_t\ \mbox{\hyperlink{group___drivers_ga16a7876a14c399435b2e39a6a17b706e}{IOCON\_INDEX\_PIO0}}[]\ =\ \{\ 17,11,6,5,4,3,16,15,4,13,8,7,2,1,18,10,9,0,30,29,28,27,26,25,24,23,22,21,20,0,0,35\};}
+\DoxyCodeLine{00042\ \textcolor{keyword}{const}\ uint8\_t\ \mbox{\hyperlink{group___drivers_ga385e9f350e5fda53b8db675da440c670}{IOCON\_INDEX\_PIO1}}[]\ =\ \{\ 36,37,3,41,42,43,46,49,31,32,55,54,33,34,39,40,44,45,47,48,52,53,0,0,0,0,0,0,0,50,51\};}
+\DoxyCodeLine{00043\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00044\ \textcolor{comment}{\ ***\ IMPLANTACION\ DE\ LA\ CLASE}}
+\DoxyCodeLine{00045\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00052\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_pin_a063b07c7607e031318ca024b75a6f0cf}{Pin}}}
+\DoxyCodeLine{00053\ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{class_pin_a02483eba92e68e4230f8aa883e0a25fe}{port\_t}}\ \ \ \ \ \ \ \ \ \ \ \{\ port0\ ,\ port1\ \}\ \mbox{\hyperlink{class_pin_a02483eba92e68e4230f8aa883e0a25fe}{port\_t}};}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{class_pin_a14d326b4dbd92efffb57d27ea6b914d7}{max\_bits\_port\_t}}\{\ b\_port0\ =\ 31\ ,\ b\_port1\ =\ 9\ \};}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{class_pin_a769192ed18c015e200739593f02b22db}{error\_t}}\ \ \ \ \ \{\ error\ =\ 2\ ,\ ok\ \}\ \mbox{\hyperlink{class_pin_a769192ed18c015e200739593f02b22db}{error\_t}};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \ \ \mbox{\hyperlink{class_pin_a02483eba92e68e4230f8aa883e0a25fe}{port\_t}}\ \mbox{\hyperlink{class_pin_a2660d84228a8ca714d61f4752eb4c4fb}{m\_port}}\ ;\ \ \ \ \ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \ \ uint8\_t\ \mbox{\hyperlink{class_pin_ace5aec3417e8217310a82244b1a17db5}{m\_bit}}\ ;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ int8\_t\ \ \mbox{\hyperlink{class_pin_a4a1dd37e2f8dbe13fe4121d88dd2bab5}{m\_error}}\ ;\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_pin_a063b07c7607e031318ca024b75a6f0cf}{Pin}}(\ \mbox{\hyperlink{class_pin_a02483eba92e68e4230f8aa883e0a25fe}{port\_t}}\ port\ ,\ uint8\_t\ bit\ );}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_pin_a063b07c7607e031318ca024b75a6f0cf}{\string~Pin}}()\ \{\};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00069\ \};}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ PIN\_H\_\ */}\textcolor{preprocessor}{}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

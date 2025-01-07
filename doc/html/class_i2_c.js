@@ -19,8 +19,7 @@ var class_i2_c =
       [ "slvst_tx", "class_i2_c.html#a927222878c117a4278938c82da47e2e6a7528aac945548162dfea957363c22e5f", null ],
       [ "busy", "class_i2_c.html#a927222878c117a4278938c82da47e2e6a644981e52b7e687f7da99fd797cd008f", null ]
     ] ],
-    [ "I2C", "class_i2_c.html#a32d33a0e34f1cec1ffb4e21b32bb90af", null ],
-    [ "~I2C", "class_i2_c.html#afaad09fa9bdd23623bddbdcd7585a9fe", null ],
+    [ "I2C", "class_i2_c.html#a3f31d647484dfd3cad1aab0be0a5d94b", null ],
     [ "ACK", "class_i2_c.html#a11319f49316d58882041059ce765f5e5", null ],
     [ "ACKaddr", "class_i2_c.html#a23ed9d7e6162b81f42559767e7f668ca", null ],
     [ "DisableInterupt", "class_i2_c.html#aaef51594d197af2a031592e890b6daba", null ],
@@ -32,5 +31,5 @@ var class_i2_c =
     [ "Read", "class_i2_c.html#a2e56aa888fba64968af2ab08382c76af", null ],
     [ "Start", "class_i2_c.html#a2dc26ca2bde6fa9896cbe31d3909412e", null ],
     [ "Stop", "class_i2_c.html#a5d3e0b1de395932284e2e010a0160b5f", null ],
-    [ "Write", "class_i2_c.html#a4fb70819fb5440055d5cadca5042d7de", null ]
+    [ "Write", "class_i2_c.html#a01998f88940804c81ca1c528b724a365", null ]
 ];

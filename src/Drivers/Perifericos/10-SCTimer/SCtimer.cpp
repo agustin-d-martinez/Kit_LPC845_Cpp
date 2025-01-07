@@ -53,7 +53,6 @@ SCtimer::SCtimer()
  	\details Configura un canal para que active dentro de determinado tiempo.
  	\param [in] time: tiempo de la acción.
  	\param [in] channel: canal a configurar.
-	\return void
 */
 void SCtimer::SetTime( uint32_t time , uint32_t channel )
 {
@@ -68,7 +67,6 @@ void SCtimer::SetTime( uint32_t time , uint32_t channel )
 	\fn void SCtimer::StartTimer( void )
 	\brief Habilita el timer.
  	\details Enciende el clock del timer.
-	\return void
 */
 void SCtimer::StartTimer( void )
 {
@@ -78,7 +76,6 @@ void SCtimer::StartTimer( void )
 	\fn void SCtimer::StopTimer( void )
 	\brief Deshabilita el timer.
  	\details Apaga el clock del timer.
-	\return void
 */
 void SCtimer::StopTimer( void )
 {
@@ -89,7 +86,6 @@ void SCtimer::StopTimer( void )
 	\brief Unifica los dos registros del SCT.
  	\details Elije si trabajar con registros high y low o con uno solo.
  	\param [in] a: bool que indica si la unificación es cierta o falsa.
-	\return void
 */
 void SCtimer::SetUnify( bool a )
 {
@@ -103,7 +99,6 @@ void SCtimer::SetUnify( bool a )
 	\brief Setea el autolimite.
  	\details Determina si se resetea todos los canales al activar el canal 0 o no.
  	\param [in] a: bool que indica si el autolimite es cierto o falso.
-	\return void
 */
 void SCtimer::SetAutoLimit( bool a )
 {
@@ -119,7 +114,6 @@ void SCtimer::SetAutoLimit( bool a )
  	\param [in] bit: bit de la salida a programar.
  	\param [in] port: puerto de la salida a programar.
  	\param [in] out_number: número de evento al que corresponderán el bit y puerto.
-	\return void
 */
 void SCtimer::SetSwitchMatrizSCTOUT( uint8_t bit , uint8_t port , uint8_t out_number )
 {
@@ -155,7 +149,6 @@ void SCtimer::SetSwitchMatrizSCTOUT( uint8_t bit , uint8_t port , uint8_t out_nu
 		SYSCON->SYSAHBCLKCTRL0 &= ~(1 << 7);
 
 }
-
 
 SCtimer::~SCtimer()	/*TODO Nota importante: el objeto no se destruirá nunca, pero en caso de hacerlo, este driver NO resetea los registros de SCTimer */
 { }

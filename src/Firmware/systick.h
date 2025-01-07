@@ -17,6 +17,7 @@
  *** INCLUDES GLOBALES
  **********************************************************************************************************************************/
 #include <LPC845.h>
+#include <tipos.h>
 #include <Perifericos/06-Callback/Callback.h>
 #include <vector>
 using namespace std;

@@ -74,7 +74,6 @@ DAC::dac_error DAC::Inicializar ( void )
 	\brief Setea el valor del DAC
 	\details Enciende la salida analógica con el valor en rango real de voltaje
 	\param [in] val: Valor de seteo de la salida
-	\return void
 */
 void DAC::Set ( uint32_t val )
 {/*$$$$ PODRÍA HACERLO CON SYSTICK */
@@ -106,7 +105,6 @@ uint32_t DAC::Get ( void ) const
 	\brief Setea el rango máximo
 	\details Setea el rango de valores a utilizar por el usuario
 	\param [in] max_range: Valor del rango
-	\return void
 */
 void DAC::SetMaxRange ( uint32_t max_range )
 {
@@ -240,7 +238,6 @@ void DAC::EnableClock ( void )
 	\fn gpio& DAC::EnableSWM( void )
 	\brief Habilita la switch matrix del periferico
 	\details
-	\return void
 */
 void DAC::EnableSWM ( void )		/*$$$$ QUIZÁ TAMBIEN HAY QUE INICIALIZAR EL ADC QUE SE ENCUENTRE EN EL MISMO PIN ???? */
 {
@@ -255,7 +252,6 @@ void DAC::EnableSWM ( void )		/*$$$$ QUIZÁ TAMBIEN HAY QUE INICIALIZAR EL ADC Q
 	\fn gpio& DAC::EnableIOCONDAC( void )
 	\brief Habilita el IOCON del periférico
 	\details
-	\return void
 */
 void DAC::EnableIOCONDAC( void )
 {
@@ -265,7 +261,6 @@ void DAC::EnableIOCONDAC( void )
 	\fn gpio& DAC::UnPowerDAC( void )
 	\brief Apaga la alimentacion del el periférico
 	\details
-	\return void
 */
 void DAC::UnPowerDAC ( void )
 {
@@ -275,7 +270,6 @@ void DAC::UnPowerDAC ( void )
 	\fn gpio& DAC::DisableClock( void )
 	\brief Deshabilita el clock del periférico
 	\details
-	\return void
 */
 void DAC::DisableClock ( void )
 {
@@ -288,7 +282,6 @@ void DAC::DisableClock ( void )
 	\fn gpio& DAC::DisableSWM( void )
 	\brief Deshabilita la switch matrix del periferico
 	\details
-	\return void
 */
 void DAC::DisableSWM ( void )
 {
@@ -303,7 +296,6 @@ void DAC::DisableSWM ( void )
 	\fn gpio& DAC::DisableIOCONDAC( void )
 	\brief Deshabilita el IOCON
 	\details
-	\return void
 */
 void DAC::DisableIOCONDAC( void )
 {

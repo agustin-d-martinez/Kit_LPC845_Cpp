@@ -1,8 +1,11 @@
 digraph "Graphical Class Hierarchy"
 {
  // LATEX_PDF_SIZE
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [label="gruposdedigitos",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structgruposdedigitos.html",tooltip="Estructura de grupo de dígitos."];
+  Node0 [id="Node000000",label="distancia",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classdistancia.html",tooltip="Clase del objeto distancia Clase abstracta pura para la generación de HCS-R04."];
+  Node0 -> Node1 [id="edge27_Node000000_Node000001",dir="back",color="darkgreen",style="solid",tooltip=" "];
+  Node1 [id="Node000001",label="HC_SR04",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_h_c___s_r04.html",tooltip="Clase del objeto HC_SR04 El objeto HC_SR04 Mide distancia mediante el uso de un ultrasónico...."];
 }

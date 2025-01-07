@@ -1,8 +1,8 @@
-\hypertarget{class_input}{}\doxysection{Input Class Reference}
-\label{class_input}\index{Input@{Input}}
+\doxysection{Input Class Reference}
+\hypertarget{class_input}{}\label{class_input}\index{Input@{Input}}
 
 
-Clase del objeto \mbox{\hyperlink{class_input}{Input}}.  
+Clase del objeto \doxylink{class_input}{Input}.  
 
 
 
@@ -17,100 +17,231 @@ Inheritance diagram for Input\+:
 
 Collaboration diagram for Input\+:
 % FIG 1
-\doxysubsection*{Public Member Functions}
+\doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_input_ab5c10161819d31e541238ece853f742e}{Input}} (\mbox{\hyperlink{class_pin_a02483eba92e68e4230f8aa883e0a25fe}{port\+\_\+t}} puerto, uint8\+\_\+t bit, \mbox{\hyperlink{classgpio_aa105bc05ba99ed1b45a9cd8576d6c0ab}{mode\+\_\+t}} modo, \mbox{\hyperlink{classgpio_a37b1bf950dfcff8f5a81431da1f690fa}{activity\+\_\+t}} actividad=high, uint8\+\_\+t Max\+Bounce=\mbox{\hyperlink{_input_8h_a7ccdd4b2547aa72e5d4b9beabdcbe35c}{M\+A\+X\+\_\+\+B\+O\+U\+N\+CE}})
-\begin{DoxyCompactList}\small\item\em Constructor de clase \mbox{\hyperlink{class_input}{Input}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_input_ab5c10161819d31e541238ece853f742e}{Input}} (\mbox{\hyperlink{class_pin_a02483eba92e68e4230f8aa883e0a25fe}{port\+\_\+t}} puerto, uint8\+\_\+t bit, \mbox{\hyperlink{classgpio_aa105bc05ba99ed1b45a9cd8576d6c0ab}{mode\+\_\+t}} modo, \mbox{\hyperlink{classgpio_a37b1bf950dfcff8f5a81431da1f690fa}{activity\+\_\+t}} actividad=high, uint8\+\_\+t Max\+Bounce=\mbox{\hyperlink{_input_8h_a7ccdd4b2547aa72e5d4b9beabdcbe35c}{MAX\+\_\+\+BOUNCE}})
+\begin{DoxyCompactList}\small\item\em Constructor de clase \doxylink{class_input}{Input}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_input_a0cfce2905cb697753650c8b5913f7ab7}{Inicializar}} (void)
 \begin{DoxyCompactList}\small\item\em Inicializa la entrada. \end{DoxyCompactList}\item 
 uint8\+\_\+t \mbox{\hyperlink{class_input_a06a49730d7c4edcf81380f04b6f950d1}{get}} (void)
 \begin{DoxyCompactList}\small\item\em Devuelve el valor de la input. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_input_a1dd7adf1710d97cbf24b8171caf445d4}{S\+Whandler}} (void)
+void \mbox{\hyperlink{class_input_a62a46b2660bcaba3fed66dc90b837091}{SWhandler}} (void) override
 \begin{DoxyCompactList}\small\item\em Funcion de interrupcion del systick. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_input_a6c0a414d05293eb3b4b9d7c421cb0b3d}{operator==}} (uint8\+\_\+t val)
 \begin{DoxyCompactList}\small\item\em Sobrecarga de del operador de igualdad. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_input_a197f42e9a14c89d8074491d11b5b358a}{operator!=}} (uint8\+\_\+t val)
 \begin{DoxyCompactList}\small\item\em Sobrecarga de del operador de desigualdad. \end{DoxyCompactList}\item 
-virtual \mbox{\hyperlink{class_input_af2db35ba67c8a8ccd23bef6a482fc291}{$\sim$\+Input}} ()
+virtual \mbox{\hyperlink{class_input_af2db35ba67c8a8ccd23bef6a482fc291}{\texorpdfstring{$\sim$}{\string~}\+Input}} ()
 \end{DoxyCompactItemize}
-\doxysubsection*{Friends}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_callback}{Callback}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_callback_a18c04c5cb1529d902a6c77dac2258e0a}{Set\+Interrupt}} ()
+\begin{DoxyCompactList}\small\item\em Activa la interrupción. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_callback_ace2a048d8fc6fdf88b67274fa730c410}{Un\+Set\+Interrupt}} ()
+\begin{DoxyCompactList}\small\item\em Desactiva la interrupción. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
 bool \mbox{\hyperlink{class_input_ab92bca1b6d4281590516714eaeb3a510}{operator==}} (uint32\+\_\+t val, \mbox{\hyperlink{class_input}{Input}} \&I)
 \begin{DoxyCompactList}\small\item\em Sobrecarga de del operador de asignacion. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Additional Inherited Members}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Types inherited from \mbox{\hyperlink{classgpio}{gpio}}}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classgpio_abc2ecf3fc05b2faa58254aaaa7cbc5d5}\label{classgpio_abc2ecf3fc05b2faa58254aaaa7cbc5d5} 
+enum \mbox{\hyperlink{classgpio_abc2ecf3fc05b2faa58254aaaa7cbc5d5}{direction\+\_\+t}} \{ {\bfseries input}
+, {\bfseries output}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeracion de input/output. \end{DoxyCompactList}\item 
+\Hypertarget{classgpio_a28000a49c5f635993116c68752fe6b4b}\label{classgpio_a28000a49c5f635993116c68752fe6b4b} 
+enum \mbox{\hyperlink{classgpio_a28000a49c5f635993116c68752fe6b4b}{power\+\_\+t}} \{ {\bfseries off}
+, {\bfseries on}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeracion de encendido/apagado. \end{DoxyCompactList}\item 
+\Hypertarget{classgpio_aa105bc05ba99ed1b45a9cd8576d6c0ab}\label{classgpio_aa105bc05ba99ed1b45a9cd8576d6c0ab} 
+enum \mbox{\hyperlink{classgpio_aa105bc05ba99ed1b45a9cd8576d6c0ab}{mode\+\_\+t}} \{ \newline
+{\bfseries pushpull} = 0
+, {\bfseries opencolector}
+, {\bfseries inactive} = 0
+, {\bfseries pulldown}
+, \newline
+{\bfseries pullup}
+, {\bfseries repeater}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeracion con los modos de la salida. Resaltar que los primeros son de OUTPUT y los segundos de INPUT. \end{DoxyCompactList}\item 
+\Hypertarget{classgpio_a37b1bf950dfcff8f5a81431da1f690fa}\label{classgpio_a37b1bf950dfcff8f5a81431da1f690fa} 
+enum \mbox{\hyperlink{classgpio_a37b1bf950dfcff8f5a81431da1f690fa}{activity\+\_\+t}} \{ {\bfseries low}
+, {\bfseries high}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeracion de activo bajo/alto. \end{DoxyCompactList}\item 
+\Hypertarget{classgpio_a448130a00845ab7b4edda7ec12b35432}\label{classgpio_a448130a00845ab7b4edda7ec12b35432} 
+enum \mbox{\hyperlink{classgpio_a448130a00845ab7b4edda7ec12b35432}{interrupt\+\_\+mode\+\_\+t}} \{ \newline
+{\bfseries rising\+\_\+edge} = 0
+, {\bfseries falling\+\_\+edge}
+, {\bfseries rising\+\_\+falling\+\_\+edge}
+, {\bfseries low\+\_\+level}
+, \newline
+{\bfseries high\+\_\+level}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeracion de interrupciones del pin. \end{DoxyCompactList}\item 
+typedef enum \mbox{\hyperlink{classgpio_abc2ecf3fc05b2faa58254aaaa7cbc5d5}{gpio\+::direction\+\_\+t}} {\bfseries direction\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Enumeracion de input/output. \end{DoxyCompactList}\item 
+typedef enum \mbox{\hyperlink{classgpio_aa105bc05ba99ed1b45a9cd8576d6c0ab}{gpio\+::mode\+\_\+t}} {\bfseries mode\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Enumeracion con los modos de la salida. Resaltar que los primeros son de OUTPUT y los segundos de INPUT. \end{DoxyCompactList}\item 
+typedef enum \mbox{\hyperlink{classgpio_a37b1bf950dfcff8f5a81431da1f690fa}{gpio\+::activity\+\_\+t}} {\bfseries activity\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Enumeracion de activo bajo/alto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Types inherited from \mbox{\hyperlink{class_pin}{Pin}}}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_pin_a02483eba92e68e4230f8aa883e0a25fe}{port\+\_\+t}} \{ {\bfseries port0}
+, {\bfseries port1}
+ \}
+\item 
+\Hypertarget{class_pin_a14d326b4dbd92efffb57d27ea6b914d7}\label{class_pin_a14d326b4dbd92efffb57d27ea6b914d7} 
+enum \mbox{\hyperlink{class_pin_a14d326b4dbd92efffb57d27ea6b914d7}{max\+\_\+bits\+\_\+port\+\_\+t}} \{ {\bfseries b\+\_\+port0} = 31
+, {\bfseries b\+\_\+port1} = 9
+ \}
+\begin{DoxyCompactList}\small\item\em máximos pines por puerto \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_pin_a769192ed18c015e200739593f02b22db}{error\+\_\+t}} \{ {\bfseries error} = 2
+, {\bfseries ok}
+ \}
+\item 
+typedef enum \mbox{\hyperlink{class_pin_a02483eba92e68e4230f8aa883e0a25fe}{Pin\+::port\+\_\+t}} \mbox{\hyperlink{class_pin_a4ab61a1ba0455431c9a7addaaf66c8c8}{port\+\_\+t}}
+\item 
+typedef enum \mbox{\hyperlink{class_pin_a769192ed18c015e200739593f02b22db}{Pin\+::error\+\_\+t}} \mbox{\hyperlink{class_pin_a61c56e71b812002f25577142438629d2}{error\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classgpio}{gpio}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgpio_a91d8a585757112ada21e8c8b7570171a}{gpio}} (\mbox{\hyperlink{class_pin_a02483eba92e68e4230f8aa883e0a25fe}{port\+\_\+t}} port, uint8\+\_\+t bit, \mbox{\hyperlink{classgpio_aa105bc05ba99ed1b45a9cd8576d6c0ab}{mode\+\_\+t}} mode, \mbox{\hyperlink{classgpio_abc2ecf3fc05b2faa58254aaaa7cbc5d5}{direction\+\_\+t}} direction, \mbox{\hyperlink{classgpio_a37b1bf950dfcff8f5a81431da1f690fa}{activity\+\_\+t}} activity=high)
+\begin{DoxyCompactList}\small\item\em Constructor de clase GPIO. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{classgpio_abababed56790f941ce7c449c2bb0585f}{Set\+Pin}} (void) override
+\begin{DoxyCompactList}\small\item\em Enciende la salida. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{classgpio_a7db0e2fb53f026b00943b1960114efcd}{Clr\+Pin}} (void) override
+\begin{DoxyCompactList}\small\item\em Limpia el pin. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{classgpio_a9c89224e21dcd66520f400981a6714c5}{Set\+Toggle\+Pin}} (void) override
+\begin{DoxyCompactList}\small\item\em Toggle del pin. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{classgpio_a00191106112b46d6a81161bad09774d9}{Set\+Dir}} (void) override
+\begin{DoxyCompactList}\small\item\em Setea la direccion. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{classgpio_a75dbe3d751fdd5c577cd8cf9b2e7cc1a}{Set\+Toggle\+Dir}} (void) override
+\begin{DoxyCompactList}\small\item\em Toggle de la dirección. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{classgpio_a053408949f14088921e56ffb85c2efc3}{Get\+Pin}} (void) override
+\begin{DoxyCompactList}\small\item\em Devuelve el valor del pin. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{classgpio_a5307bd248fcf6487491ba93c7e3ec9d7}{Set\+Pin\+Mode}} (void) override
+\begin{DoxyCompactList}\small\item\em Configura el modo del pin. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{classgpio_a834f570ae01fd90ae9128a2a00f34552}{Set\+Pin\+Resistor}} (void) override
+\begin{DoxyCompactList}\small\item\em Setea la resistencia interna. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgpio}{gpio}} \& \mbox{\hyperlink{classgpio_a0e9fcb8c59eba9f0a28091cac7a34ba2}{operator=}} (uint8\+\_\+t a)
+\begin{DoxyCompactList}\small\item\em Sobrecarga del operador =. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classgpio_a115befd0ad74a2f911420b8673415bca}{\texorpdfstring{$\sim$}{\string~}gpio}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_in_out}{In\+Out}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_in_out_a1d549347d4bd7f354066d984c2dace58}{In\+Out}} ()=default
+\item 
+virtual \mbox{\hyperlink{class_in_out_a9ecba0f8b6ccbc538a5aa7b52429bc7f}{\texorpdfstring{$\sim$}{\string~}\+In\+Out}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_pin}{Pin}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pin_a063b07c7607e031318ca024b75a6f0cf}{Pin}} (\mbox{\hyperlink{class_pin_a02483eba92e68e4230f8aa883e0a25fe}{port\+\_\+t}} port, uint8\+\_\+t bit)
+\begin{DoxyCompactList}\small\item\em Constructor de clase PIN. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_callback}{Callback}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_callback_a18c04c5cb1529d902a6c77dac2258e0a}{Set\+Interrupt}} ()
+\begin{DoxyCompactList}\small\item\em Activa la interrupción. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_callback_ace2a048d8fc6fdf88b67274fa730c410}{Un\+Set\+Interrupt}} ()
+\begin{DoxyCompactList}\small\item\em Desactiva la interrupción. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classgpio}{gpio}}}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{classgpio_aa105bc05ba99ed1b45a9cd8576d6c0ab}{mode\+\_\+t}} \mbox{\hyperlink{classgpio_a672ac1aa2fd7a3d39db9f3c7aa37d167}{m\+\_\+mode}}
+\item 
+\mbox{\hyperlink{classgpio_abc2ecf3fc05b2faa58254aaaa7cbc5d5}{direction\+\_\+t}} \mbox{\hyperlink{classgpio_ac4def73bdbedc9163facaf784f9b29bd}{m\+\_\+direction}}
+\item 
+const \mbox{\hyperlink{classgpio_a37b1bf950dfcff8f5a81431da1f690fa}{activity\+\_\+t}} \mbox{\hyperlink{classgpio_ac6259c170adf14b17c72d65fd388921b}{m\+\_\+activity}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_pin}{Pin}}}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{class_pin_a02483eba92e68e4230f8aa883e0a25fe}{port\+\_\+t}} \mbox{\hyperlink{class_pin_a2660d84228a8ca714d61f4752eb4c4fb}{m\+\_\+port}}
+\item 
+const uint8\+\_\+t \mbox{\hyperlink{class_pin_ace5aec3417e8217310a82244b1a17db5}{m\+\_\+bit}}
+\item 
+int8\+\_\+t \mbox{\hyperlink{class_pin_a4a1dd37e2f8dbe13fe4121d88dd2bab5}{m\+\_\+error}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Clase del objeto \mbox{\hyperlink{class_input}{Input}}. 
+Clase del objeto \doxylink{class_input}{Input}. 
 
-El objeto \mbox{\hyperlink{class_input}{Input}} Permite el manejo de entradas digitales con un antirrebote propio por software. 
+El objeto \doxylink{class_input}{Input} Permite el manejo de entradas digitales con un antirrebote propio por software. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_input_ab5c10161819d31e541238ece853f742e}\label{class_input_ab5c10161819d31e541238ece853f742e}} 
-\index{Input@{Input}!Input@{Input}}
+\Hypertarget{class_input_ab5c10161819d31e541238ece853f742e}\index{Input@{Input}!Input@{Input}}
 \index{Input@{Input}!Input@{Input}}
 \doxysubsubsection{\texorpdfstring{Input()}{Input()}}
-{\footnotesize\ttfamily Input\+::\+Input (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pin_a02483eba92e68e4230f8aa883e0a25fe}{port\+\_\+t}}}]{puerto,  }\item[{uint8\+\_\+t}]{bit,  }\item[{\mbox{\hyperlink{classgpio_aa105bc05ba99ed1b45a9cd8576d6c0ab}{mode\+\_\+t}}}]{modo,  }\item[{\mbox{\hyperlink{classgpio_a37b1bf950dfcff8f5a81431da1f690fa}{activity\+\_\+t}}}]{actividad = {\ttfamily high},  }\item[{uint8\+\_\+t}]{Max\+Bounce = {\ttfamily \mbox{\hyperlink{_input_8h_a7ccdd4b2547aa72e5d4b9beabdcbe35c}{M\+A\+X\+\_\+\+B\+O\+U\+N\+CE}}} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_input_ab5c10161819d31e541238ece853f742e} 
+Input\+::\+Input (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pin_a02483eba92e68e4230f8aa883e0a25fe}{port\+\_\+t}}}]{puerto}{, }\item[{uint8\+\_\+t}]{bit}{, }\item[{\mbox{\hyperlink{classgpio_aa105bc05ba99ed1b45a9cd8576d6c0ab}{mode\+\_\+t}}}]{modo}{, }\item[{\mbox{\hyperlink{classgpio_a37b1bf950dfcff8f5a81431da1f690fa}{activity\+\_\+t}}}]{actividad}{ = {\ttfamily high}, }\item[{uint8\+\_\+t}]{Max\+Bounce}{ = {\ttfamily \mbox{\hyperlink{_input_8h_a7ccdd4b2547aa72e5d4b9beabdcbe35c}{MAX\+\_\+\+BOUNCE}}}}\end{DoxyParamCaption})}
 
 
 
-Constructor de clase \mbox{\hyperlink{class_input}{Input}}. 
+Constructor de clase \doxylink{class_input}{Input}. 
 
-Crea un \mbox{\hyperlink{class_input}{Input}} con los parámetros correspondientes 
+Crea un \doxylink{class_input}{Input} con los parámetros correspondientes. 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em puerto} & Puerto del objeto \\
+\mbox{\texttt{ in}}  & {\em puerto} & Puerto del objeto. \\
 \hline
-\mbox{\texttt{ in}}  & {\em bit} & Bit del objeto \\
+\mbox{\texttt{ in}}  & {\em bit} & Bit del objeto. \\
 \hline
-\mbox{\texttt{ in}}  & {\em modo} & Configuracion eléctrica del pin \\
+\mbox{\texttt{ in}}  & {\em modo} & Configuracion eléctrica del pin. \\
 \hline
-\mbox{\texttt{ in}}  & {\em actividad} & Activo alto/bajo \\
+\mbox{\texttt{ in}}  & {\em actividad} & Activo alto/bajo. \\
 \hline
-\mbox{\texttt{ in}}  & {\em Max\+Bounce} & Cantidad de rebotes permitidos \\
+\mbox{\texttt{ in}}  & {\em Max\+Bounce} & Cantidad de rebotes permitidos. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{class_input_af2db35ba67c8a8ccd23bef6a482fc291}\label{class_input_af2db35ba67c8a8ccd23bef6a482fc291}} 
-\index{Input@{Input}!````~Input@{$\sim$Input}}
-\index{````~Input@{$\sim$Input}!Input@{Input}}
-\doxysubsubsection{\texorpdfstring{$\sim$Input()}{~Input()}}
-{\footnotesize\ttfamily Input\+::$\sim$\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+\Hypertarget{class_input_af2db35ba67c8a8ccd23bef6a482fc291}\index{Input@{Input}!````~Input@{\texorpdfstring{$\sim$}{\string~}Input}}
+\index{````~Input@{\texorpdfstring{$\sim$}{\string~}Input}!Input@{Input}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Input()}{\string~Input()}}
+{\footnotesize\ttfamily \label{class_input_af2db35ba67c8a8ccd23bef6a482fc291} 
+Input\+::\texorpdfstring{$\sim$}{\string~}\+Input (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 Destructor por defecto 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_input_a06a49730d7c4edcf81380f04b6f950d1}\label{class_input_a06a49730d7c4edcf81380f04b6f950d1}} 
-\index{Input@{Input}!get@{get}}
+\Hypertarget{class_input_a06a49730d7c4edcf81380f04b6f950d1}\index{Input@{Input}!get@{get}}
 \index{get@{get}!Input@{Input}}
 \doxysubsubsection{\texorpdfstring{get()}{get()}}
-{\footnotesize\ttfamily uint8\+\_\+t Input\+::get (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_input_a06a49730d7c4edcf81380f04b6f950d1} 
+uint8\+\_\+t Input\+::get (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
 
 
 Devuelve el valor de la input. 
 
-Entrega el valor \char`\"{}real\char`\"{} de la entrada sin su rebote. \begin{DoxyReturn}{Returns}
-void 
+Entrega el valor "{}real"{} de la entrada sin su rebote. \begin{DoxyReturn}{Returns}
+uint32\+\_\+t\+: Valor de la entrada. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_input_a0cfce2905cb697753650c8b5913f7ab7}\label{class_input_a0cfce2905cb697753650c8b5913f7ab7}} 
-\index{Input@{Input}!Inicializar@{Inicializar}}
+\Hypertarget{class_input_a0cfce2905cb697753650c8b5913f7ab7}\index{Input@{Input}!Inicializar@{Inicializar}}
 \index{Inicializar@{Inicializar}!Input@{Input}}
 \doxysubsubsection{\texorpdfstring{Inicializar()}{Inicializar()}}
-{\footnotesize\ttfamily void Input\+::\+Inicializar (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_input_a0cfce2905cb697753650c8b5913f7ab7} 
+void Input\+::\+Inicializar (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
 
 
 Inicializa la entrada. 
 
-Configura el G\+P\+IO y el buffer \begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
-\mbox{\Hypertarget{class_input_a197f42e9a14c89d8074491d11b5b358a}\label{class_input_a197f42e9a14c89d8074491d11b5b358a}} 
-\index{Input@{Input}!operator"!=@{operator"!=}}
+Configura el GPIO y el buffer. \Hypertarget{class_input_a197f42e9a14c89d8074491d11b5b358a}\index{Input@{Input}!operator"!=@{operator"!=}}
 \index{operator"!=@{operator"!=}!Input@{Input}}
 \doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
-{\footnotesize\ttfamily bool Input\+::operator!= (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{val }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_input_a197f42e9a14c89d8074491d11b5b358a} 
+bool Input\+::operator!= (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{val}{}\end{DoxyParamCaption})}
 
 
 
@@ -118,17 +249,17 @@ Sobrecarga de del operador de desigualdad.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em val} & Valor a comparar con el buffer \\
+\mbox{\texttt{ in}}  & {\em val} & Valor a comparar con el buffer. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-true si la entrada no esta en val 
+true si la entrada no esta en val. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_input_a6c0a414d05293eb3b4b9d7c421cb0b3d}\label{class_input_a6c0a414d05293eb3b4b9d7c421cb0b3d}} 
-\index{Input@{Input}!operator==@{operator==}}
+\Hypertarget{class_input_a6c0a414d05293eb3b4b9d7c421cb0b3d}\index{Input@{Input}!operator==@{operator==}}
 \index{operator==@{operator==}!Input@{Input}}
 \doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
-{\footnotesize\ttfamily bool Input\+::operator== (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{val }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_input_a6c0a414d05293eb3b4b9d7c421cb0b3d} 
+bool Input\+::operator== (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{val}{}\end{DoxyParamCaption})}
 
 
 
@@ -136,37 +267,34 @@ Sobrecarga de del operador de igualdad.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em val} & Valor a comparar con el buffer \\
+\mbox{\texttt{ in}}  & {\em val} & Valor a comparar con el buffer. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-true si la entrada esta en val 
+true si la entrada esta en val. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_input_a1dd7adf1710d97cbf24b8171caf445d4}\label{class_input_a1dd7adf1710d97cbf24b8171caf445d4}} 
-\index{Input@{Input}!SWhandler@{SWhandler}}
+\Hypertarget{class_input_a62a46b2660bcaba3fed66dc90b837091}\index{Input@{Input}!SWhandler@{SWhandler}}
 \index{SWhandler@{SWhandler}!Input@{Input}}
 \doxysubsubsection{\texorpdfstring{SWhandler()}{SWhandler()}}
-{\footnotesize\ttfamily void Input\+::\+S\+Whandler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily \label{class_input_a62a46b2660bcaba3fed66dc90b837091} 
+void Input\+::\+SWhandler (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
 Funcion de interrupcion del systick. 
 
-Guarda en el buffer el valor de la entrada en caso de haber pasado el antirrebote \begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
-
+Guarda en el buffer el valor de la entrada en caso de haber pasado el antirrebote. 
 
 Implements \mbox{\hyperlink{class_callback_a24e8f5fec587299192f62b13a2e7eb42}{Callback}}.
 
 
 
-\doxysubsection{Friends And Related Function Documentation}
-\mbox{\Hypertarget{class_input_ab92bca1b6d4281590516714eaeb3a510}\label{class_input_ab92bca1b6d4281590516714eaeb3a510}} 
-\index{Input@{Input}!operator==@{operator==}}
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{class_input_ab92bca1b6d4281590516714eaeb3a510}\index{Input@{Input}!operator==@{operator==}}
 \index{operator==@{operator==}!Input@{Input}}
 \doxysubsubsection{\texorpdfstring{operator==}{operator==}}
-{\footnotesize\ttfamily bool operator== (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{val,  }\item[{\mbox{\hyperlink{class_input}{Input}} \&}]{I }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+{\footnotesize\ttfamily \label{class_input_ab92bca1b6d4281590516714eaeb3a510} 
+bool operator== (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{val}{, }\item[{\mbox{\hyperlink{class_input}{Input}} \&}]{I}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
 
 
 
@@ -186,5 +314,5 @@ true si la entrada esta en val
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-E\+:/\+Agustin/\+Escritorio/\+M\+C\+Uexpresso/\+Kit\+L\+P\+C845-\/\+C++/src/\+Drivers/\+Perifericos/04-\/\+Input/\mbox{\hyperlink{_input_8h}{Input.\+h}}\item 
-E\+:/\+Agustin/\+Escritorio/\+M\+C\+Uexpresso/\+Kit\+L\+P\+C845-\/\+C++/src/\+Drivers/\+Perifericos/04-\/\+Input/\mbox{\hyperlink{_input_8cpp}{Input.\+cpp}}\end{DoxyCompactItemize}
+E\+:/\+Agustin/\+Escritorio/\+MCUexpresso/\+Kit\+LPC845-\/\+C++/src/\+Drivers/\+Perifericos/04-\/\+Input/\mbox{\hyperlink{_input_8h}{Input.\+h}}\item 
+E\+:/\+Agustin/\+Escritorio/\+MCUexpresso/\+Kit\+LPC845-\/\+C++/src/\+Drivers/\+Perifericos/04-\/\+Input/\mbox{\hyperlink{_input_8cpp}{Input.\+cpp}}\end{DoxyCompactItemize}

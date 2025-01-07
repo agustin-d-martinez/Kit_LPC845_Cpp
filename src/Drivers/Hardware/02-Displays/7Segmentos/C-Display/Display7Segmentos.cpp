@@ -74,7 +74,6 @@ display7Segmentos::~display7Segmentos()
  * \fn void display7Segmentos::SWhandler( void )
  * \brief Handler del display de 7 segmentos.
  * \details Funcion interrupción del display de 7 segmentos.
- * \return void
 */
 void display7Segmentos::SWhandler( void )
 {
@@ -94,7 +93,6 @@ void display7Segmentos::SWhandler( void )
  * \details
  * \param [in] valor: valor a escribir.
  * \param [in] dsp: posición a escibir el valor.
- * \return void
 */
 void display7Segmentos::Set( uint32_t valor , uint8_t dsp )
 {
@@ -111,7 +109,6 @@ void display7Segmentos::Set( uint32_t valor , uint8_t dsp )
  * \brief Función de escritura del display de 7 segmentos.
  * \details Escribe el display 7 segmentos desde la posicion 0.
  * \param [in] valor: valor a escribir.
- * \return void
 */
 void display7Segmentos::Write ( const uint32_t valor )
 {
@@ -121,7 +118,6 @@ void display7Segmentos::Write ( const uint32_t valor )
  * \fn void display7Segmentos::Clear ( void )
  * \brief Función de limpieza del display de 7 segmentos.
  * \details Coloca en 0 todos los displays.
- * \return void
 */
 void display7Segmentos::Clear ( void )
 {

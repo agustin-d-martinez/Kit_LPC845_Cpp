@@ -6,6 +6,6 @@ var class_input =
     [ "Inicializar", "class_input.html#a0cfce2905cb697753650c8b5913f7ab7", null ],
     [ "operator!=", "class_input.html#a197f42e9a14c89d8074491d11b5b358a", null ],
     [ "operator==", "class_input.html#a6c0a414d05293eb3b4b9d7c421cb0b3d", null ],
-    [ "SWhandler", "class_input.html#a1dd7adf1710d97cbf24b8171caf445d4", null ],
+    [ "SWhandler", "class_input.html#a62a46b2660bcaba3fed66dc90b837091", null ],
     [ "operator==", "class_input.html#ab92bca1b6d4281590516714eaeb3a510", null ]
 ];

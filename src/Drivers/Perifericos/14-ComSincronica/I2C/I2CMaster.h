@@ -16,6 +16,7 @@
  * Read(): Lee el buffer de recepcion. Puede leerse en cualquier momento y por partes.
  * isIdle(): Indica si el I2C esta en reposo. Solo cuando esto sea cierto se podra leer y escribir al slave.
  *
+ * Aun no soporta timeout, ni NACKs recibidos. I2C posee los metodos para agregar la funcion de NACK.
  */
 
 /***********************************************************************************************************************************
@@ -56,7 +57,6 @@
  * \brief Clase del objeto I2CMaster
  * El objeto I2CMaster genera una comunicación tipo master de I2C utilizando buffers de recepcion y transmision con interrupciones.
  */
-
 class I2CMaster : protected I2C
 {
 private:
@@ -79,7 +79,7 @@ public:
 	virtual ~I2CMaster();
 
 private:
-	void 	I2C_IRQHandler 	( void );
+	void 	I2C_IRQHandler 	( void ) override;
 	void 	pushRx 			( uint8_t dato );
 	uint8_t	popRx 			( uint8_t * dato );
 	void 	pushTx 			( uint8_t dato );

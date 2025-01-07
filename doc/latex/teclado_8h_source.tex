@@ -1,0 +1,67 @@
+\doxysection{teclado.\+h}
+\hypertarget{teclado_8h_source}{}\label{teclado_8h_source}\index{E:/Agustin/Escritorio/MCUexpresso/KitLPC845-\/C++/src/Drivers/Hardware/01-\/Teclado/teclado.h@{E:/Agustin/Escritorio/MCUexpresso/KitLPC845-\/C++/src/Drivers/Hardware/01-\/Teclado/teclado.h}}
+\mbox{\hyperlink{teclado_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*******************************************************************************************************************************/}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ ***\ MODULO}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#ifndef\ TECLADO\_H\_}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ TECLADO\_H\_}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00019\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ ***\ INCLUDES\ GLOBALES}}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{gpio_8h}{Perifericos/02-\/Gpio/gpio.h}}>}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_callback_8h}{Perifericos/06-\/Callback/Callback.h}}>}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00027\ \textcolor{comment}{\ ***\ DEFINES\ GLOBALES}}
+\DoxyCodeLine{00028\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00031\ \textcolor{comment}{\ ***\ MACROS\ GLOBALES}}
+\DoxyCodeLine{00032\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00035\ \textcolor{comment}{\ ***\ TIPO\ DE\ DATOS\ GLOBALES}}
+\DoxyCodeLine{00036\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00039\ \textcolor{comment}{\ ***\ VARIABLES\ GLOBALES}}
+\DoxyCodeLine{00040\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00043\ \textcolor{comment}{\ ***\ IMPLANTACION\ DE\ UNA\ CLASE}}
+\DoxyCodeLine{00044\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00052\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classteclado_a9f70a4cb9dfaa2266fb0a7c4f3910361}{teclado}}\ :\ \textcolor{keyword}{public}\ Callback}
+\DoxyCodeLine{00053\ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ NO\_KEY\ \ \ \ \ \ 0xff}}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ vector\ <gpio\ *>\ \&m\_scn;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ vector\ <gpio\ *>\ \&m\_ret;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ uint8\_t\ \ \ \ \ \ \ \ \ m\_TeclaEstadoInicial\ ;\ \ \ \ \ \ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ uint32\_t\ \ \ \ \ \ \ \ m\_TeclaCantidadDeRebotes\ ;\ \ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ uint8\_t\ \ \ \ \ \ \ \ \ m\_BufferTeclado\ ;\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ uint8\_t\ \ \ m\_MaxRebotes;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ uint32\_t\ \ m\_RebotesHold\ ;\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classteclado_a9f70a4cb9dfaa2266fb0a7c4f3910361}{teclado}}\ (\ vector\ <gpio\ *>\ \&s\ ,\ vector\ <gpio\ *>\ \&r);}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classteclado_a5d259635da832fff0db13741e874c636}{SWhandler}}\ (\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classteclado_ab490f2e16e242ea918cb2addfcf938d2}{Inicializar}}\ (\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ uint8\_t\ \mbox{\hyperlink{classteclado_a724b35fe0961ce7f08547d5685c7652d}{Get}}(\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classteclado_a5aa8aeef81f4256f6850e8d6d866fdc0}{\string~teclado}}();\ \ \ \ \ }
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ uint8\_t\ TecladoHW\ (\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ TecladoSW\ (\ uint8\_t\ TeclaEstadoActual\ );}
+\DoxyCodeLine{00077\ \};}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ TECLADO\_H\_\ */}\textcolor{preprocessor}{}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

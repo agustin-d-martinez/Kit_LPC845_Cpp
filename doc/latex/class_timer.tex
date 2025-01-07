@@ -1,5 +1,5 @@
-\hypertarget{class_timer}{}\doxysection{Timer Class Reference}
-\label{class_timer}\index{Timer@{Timer}}
+\doxysection{Timer Class Reference}
+\hypertarget{class_timer}{}\label{class_timer}\index{Timer@{Timer}}
 
 
 Clase del objeto timer.  
@@ -17,28 +17,28 @@ Inheritance diagram for Timer\+:
 
 Collaboration diagram for Timer\+:
 % FIG 1
-\doxysubsection*{Public Types}
+\doxysubsubsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-enum \mbox{\hyperlink{class_timer_a9cec0a44d98f2898630bb03951269195}{bases\+\_\+t}} \{ {\bfseries D\+EC}, 
-{\bfseries S\+EG}, 
-{\bfseries M\+IN}, 
-{\bfseries H\+OR}
+enum \mbox{\hyperlink{class_timer_a9cec0a44d98f2898630bb03951269195}{bases\+\_\+t}} \{ {\bfseries DEC}
+, {\bfseries SEG}
+, {\bfseries MIN}
+, {\bfseries HOR}
  \}
 \item 
-\mbox{\Hypertarget{class_timer_aa7b50436c0c7f6f9b16d7f456af91f25}\label{class_timer_aa7b50436c0c7f6f9b16d7f456af91f25}} 
-enum \mbox{\hyperlink{class_timer_aa7b50436c0c7f6f9b16d7f456af91f25}{errores\+Timers\+\_\+t}} \{ {\bfseries error\+Timer}, 
-{\bfseries O\+Ktimers}
+\Hypertarget{class_timer_aa7b50436c0c7f6f9b16d7f456af91f25}\label{class_timer_aa7b50436c0c7f6f9b16d7f456af91f25} 
+enum \mbox{\hyperlink{class_timer_aa7b50436c0c7f6f9b16d7f456af91f25}{errores\+Timers\+\_\+t}} \{ {\bfseries error\+Timer}
+, {\bfseries OKtimers}
  \}
 \begin{DoxyCompactList}\small\item\em Enumeración de error del timer. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_timer_a83c5a2b9f40a5207f619f42dff3fc80d}\label{class_timer_a83c5a2b9f40a5207f619f42dff3fc80d}} 
-enum \mbox{\hyperlink{class_timer_a83c5a2b9f40a5207f619f42dff3fc80d}{standby\+\_\+t}} \{ {\bfseries R\+UN}, 
-{\bfseries P\+A\+U\+SE}
+\Hypertarget{class_timer_a83c5a2b9f40a5207f619f42dff3fc80d}\label{class_timer_a83c5a2b9f40a5207f619f42dff3fc80d} 
+enum \mbox{\hyperlink{class_timer_a83c5a2b9f40a5207f619f42dff3fc80d}{standby\+\_\+t}} \{ {\bfseries RUN}
+, {\bfseries PAUSE}
  \}
 \begin{DoxyCompactList}\small\item\em Enumeracion de stand By. \end{DoxyCompactList}\item 
-typedef enum \mbox{\hyperlink{class_timer_a9cec0a44d98f2898630bb03951269195}{Timer\+::bases\+\_\+t}} \mbox{\hyperlink{class_timer_a2275dff55f3dd4ddddf3b2404769ceec}{bases\+\_\+t}}
+typedef enum \mbox{\hyperlink{class_timer_a9cec0a44d98f2898630bb03951269195}{Timer\+::bases\+\_\+t}} \mbox{\hyperlink{class_timer_acdc55034d21f5b88115abf0cc17b6773}{bases\+\_\+t}}
 \end{DoxyCompactItemize}
-\doxysubsection*{Public Member Functions}
+\doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_timer_a5f16e8da27d2a5a5242dead46de05d97}{Timer}} ()
@@ -55,13 +55,16 @@ void \mbox{\hyperlink{class_timer_a17c2200e5ebceab3cb70f53dea2da135}{Stand\+By\+
 \begin{DoxyCompactList}\small\item\em Detiene/\+Arranca el timer, NO lo resetea. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_timer_a4d6351689c2a827edcd3ed3a1bb4f971}{Set\+Timer\+Base}} (const \mbox{\hyperlink{class_timer_a9cec0a44d98f2898630bb03951269195}{bases\+\_\+t}} base)
 \begin{DoxyCompactList}\small\item\em Setea la base de tiempo. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_timer_a4a8fdd11e028684a8b770dd375278462}{Timer\+Stop}} (void)
+\Hypertarget{class_timer_a4a8fdd11e028684a8b770dd375278462}\label{class_timer_a4a8fdd11e028684a8b770dd375278462} 
+void {\bfseries Timer\+Stop} (void)
 \begin{DoxyCompactList}\small\item\em Detiene el timer. \end{DoxyCompactList}\item 
 uint32\+\_\+t \mbox{\hyperlink{class_timer_a64b2ce2e82d2595ce35556cfccf478b5}{Get\+Tmr\+Run}} (void)
 \begin{DoxyCompactList}\small\item\em Obtiene el valor del timer. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_timer_a7528e58c272cf861d7cf86651c7eb3e5}{Set\+Tmr\+Event}} (void)
+\Hypertarget{class_timer_a7528e58c272cf861d7cf86651c7eb3e5}\label{class_timer_a7528e58c272cf861d7cf86651c7eb3e5} 
+void {\bfseries Set\+Tmr\+Event} (void)
 \begin{DoxyCompactList}\small\item\em Setea el evento del timer. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_timer_a18a28d253b6bc7190c5e133290120c22}{Clr\+Tmr\+Event}} (void)
+\Hypertarget{class_timer_a18a28d253b6bc7190c5e133290120c22}\label{class_timer_a18a28d253b6bc7190c5e133290120c22} 
+void {\bfseries Clr\+Tmr\+Event} (void)
 \begin{DoxyCompactList}\small\item\em Limpia el evento del timer. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_timer_ad4586720d311f0c66b400c2a40bab248}{Get\+Tmr\+Event}} (void)
 \begin{DoxyCompactList}\small\item\em Indica si el timer venció o no. \end{DoxyCompactList}\item 
@@ -81,102 +84,96 @@ bool \mbox{\hyperlink{class_timer_abe02ae6e11a3e5946da7cb7c29cec971}{operator!}}
 \begin{DoxyCompactList}\small\item\em Sobrecarga de del operador de contenido. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_timer_a4fc62c4a640fe2f1a93029fedcd64ca7}{operator==}} (uint32\+\_\+t t)
 \begin{DoxyCompactList}\small\item\em Sobrecarga de del operador de comparacion. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_timer_ab1b056629435b57ae6d31323507b9330}{S\+Whandler}} (void)
+void \mbox{\hyperlink{class_timer_ab1b056629435b57ae6d31323507b9330}{SWhandler}} (void)
 \begin{DoxyCompactList}\small\item\em Decremento periodico del timer. Debe ser llamada periodicamente con la base de tiempos. \end{DoxyCompactList}\item 
 int8\+\_\+t \mbox{\hyperlink{class_timer_ae6215d19df6293b3ed67ee8e796e9724}{Tmr\+Event}} (void)
 \begin{DoxyCompactList}\small\item\em Función encargada de revisar si los timer vencieron y ejecuta automáticamente su función asignada. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Protected Attributes}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_callback}{Callback}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_callback_a18c04c5cb1529d902a6c77dac2258e0a}{Set\+Interrupt}} ()
+\begin{DoxyCompactList}\small\item\em Activa la interrupción. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_callback_ace2a048d8fc6fdf88b67274fa730c410}{Un\+Set\+Interrupt}} ()
+\begin{DoxyCompactList}\small\item\em Desactiva la interrupción. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
 volatile uint32\+\_\+t \mbox{\hyperlink{class_timer_a2dd85f439d172418dc50d36a1ead5fda}{m\+\_\+\+Tmr\+Run}}
 \item 
 volatile bool \mbox{\hyperlink{class_timer_a4d3f6474c67de284a77c4f69fb36067d}{m\+\_\+\+Tmr\+Event}}
 \item 
-void($\ast$ \mbox{\hyperlink{class_timer_ab57d5308f7d8759573bfa077bf05d531}{m\+\_\+\+Tmr\+Handler}} )(void)
+void(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_timer_ab4db941b5d3a3ecde10d9302e6db0edc}{m\+\_\+\+Tmr\+Handler}} )(void)
 \item 
 volatile bool \mbox{\hyperlink{class_timer_a8b6f6f49d9eba6daea47132c8a314e5b}{m\+\_\+\+Tmr\+Stand\+By}}
 \item 
 volatile \mbox{\hyperlink{class_timer_a9cec0a44d98f2898630bb03951269195}{bases\+\_\+t}} \mbox{\hyperlink{class_timer_ac615667eecadfa52523f296c6b197553}{m\+\_\+\+Tmr\+Base}}
 \end{DoxyCompactItemize}
-\doxysubsection*{Friends}
+\doxysubsubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
-bool \mbox{\hyperlink{class_timer_a16cc66e5d235553e600fd84be5dc5013}{operator==}} (uint32\+\_\+t t, \mbox{\hyperlink{class_timer}{Timer}} \&T)
+bool \mbox{\hyperlink{class_timer_a67d3ea263ca5e63494bed1596a9b4a59}{operator==}} (uint32\+\_\+t t, \mbox{\hyperlink{class_timer}{Timer}} \&T)
 \begin{DoxyCompactList}\small\item\em Sobrecarga de del operador de comparacion. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Clase del objeto timer. 
 
-El objeto timer se conecta al systick y ejecuta una \char`\"{}alarma\char`\"{} al terminar el tiempo. Se comporta como un cronómetro o contador de microondas. 
+El objeto timer se conecta al systick y ejecuta una "{}alarma"{} al terminar el tiempo. Se comporta como un cronómetro o contador de microondas. 
 
 \doxysubsection{Member Typedef Documentation}
-\mbox{\Hypertarget{class_timer_a2275dff55f3dd4ddddf3b2404769ceec}\label{class_timer_a2275dff55f3dd4ddddf3b2404769ceec}} 
-\index{Timer@{Timer}!bases\_t@{bases\_t}}
+\Hypertarget{class_timer_acdc55034d21f5b88115abf0cc17b6773}\index{Timer@{Timer}!bases\_t@{bases\_t}}
 \index{bases\_t@{bases\_t}!Timer@{Timer}}
 \doxysubsubsection{\texorpdfstring{bases\_t}{bases\_t}}
-{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{class_timer_a9cec0a44d98f2898630bb03951269195}{Timer\+::bases\+\_\+t}}  \mbox{\hyperlink{class_timer_a9cec0a44d98f2898630bb03951269195}{Timer\+::bases\+\_\+t}}}
+{\footnotesize\ttfamily \label{class_timer_acdc55034d21f5b88115abf0cc17b6773} 
+typedef enum \mbox{\hyperlink{class_timer_a9cec0a44d98f2898630bb03951269195}{Timer\+::bases\+\_\+t}} \mbox{\hyperlink{class_timer_a9cec0a44d98f2898630bb03951269195}{Timer\+::bases\+\_\+t}}}
 
 Base de tiempo del timer 
 
 \doxysubsection{Member Enumeration Documentation}
-\mbox{\Hypertarget{class_timer_a9cec0a44d98f2898630bb03951269195}\label{class_timer_a9cec0a44d98f2898630bb03951269195}} 
-\index{Timer@{Timer}!bases\_t@{bases\_t}}
+\Hypertarget{class_timer_a9cec0a44d98f2898630bb03951269195}\index{Timer@{Timer}!bases\_t@{bases\_t}}
 \index{bases\_t@{bases\_t}!Timer@{Timer}}
 \doxysubsubsection{\texorpdfstring{bases\_t}{bases\_t}}
-{\footnotesize\ttfamily enum \mbox{\hyperlink{class_timer_a9cec0a44d98f2898630bb03951269195}{Timer\+::bases\+\_\+t}}}
+{\footnotesize\ttfamily \label{class_timer_a9cec0a44d98f2898630bb03951269195} 
+enum \mbox{\hyperlink{class_timer_a9cec0a44d98f2898630bb03951269195}{Timer\+::bases\+\_\+t}}}
 
 Base de tiempo del timer 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_timer_a5f16e8da27d2a5a5242dead46de05d97}\label{class_timer_a5f16e8da27d2a5a5242dead46de05d97}} 
-\index{Timer@{Timer}!Timer@{Timer}}
+\Hypertarget{class_timer_a5f16e8da27d2a5a5242dead46de05d97}\index{Timer@{Timer}!Timer@{Timer}}
 \index{Timer@{Timer}!Timer@{Timer}}
 \doxysubsubsection{\texorpdfstring{Timer()}{Timer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily Timer\+::\+Timer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_timer_a5f16e8da27d2a5a5242dead46de05d97} 
+Timer\+::\+Timer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 
 Constructor de clase timer. 
 
-Crea un timer por defecto \mbox{\Hypertarget{class_timer_a2682e0c8a8bbc50b22fbceda92903eb7}\label{class_timer_a2682e0c8a8bbc50b22fbceda92903eb7}} 
-\index{Timer@{Timer}!Timer@{Timer}}
+Crea un timer por defecto \Hypertarget{class_timer_a2682e0c8a8bbc50b22fbceda92903eb7}\index{Timer@{Timer}!Timer@{Timer}}
 \index{Timer@{Timer}!Timer@{Timer}}
 \doxysubsubsection{\texorpdfstring{Timer()}{Timer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily Timer\+::\+Timer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_timer_a9cec0a44d98f2898630bb03951269195}{bases\+\_\+t}}}]{base,  }\item[{const \mbox{\hyperlink{group___drivers_gad8c2afd48cc8eb5c42aacf5d7b9f38dc}{Timer\+\_\+\+Handler}}}]{handler = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_timer_a2682e0c8a8bbc50b22fbceda92903eb7} 
+Timer\+::\+Timer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_timer_a9cec0a44d98f2898630bb03951269195}{bases\+\_\+t}}}]{base}{, }\item[{const \mbox{\hyperlink{group___drivers_gad8c2afd48cc8eb5c42aacf5d7b9f38dc}{Timer\+\_\+\+Handler}}}]{handler}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})}
 
 
 
 Constructor de clase timer. 
 
-Crea un timer con los parámetros correspondientes 
+Crea un timer con los parámetros correspondientes. 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em handler} & Funcion a ejecutar en caso de expirar \\
+\mbox{\texttt{ in}}  & {\em handler} & Funcion a ejecutar en caso de expirar. \\
 \hline
-\mbox{\texttt{ in}}  & {\em base} & Base de tiempo del timer \\
+\mbox{\texttt{ in}}  & {\em base} & Base de tiempo del timer. \\
 \hline
 \end{DoxyParams}
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_timer_a18a28d253b6bc7190c5e133290120c22}\label{class_timer_a18a28d253b6bc7190c5e133290120c22}} 
-\index{Timer@{Timer}!ClrTmrEvent@{ClrTmrEvent}}
-\index{ClrTmrEvent@{ClrTmrEvent}!Timer@{Timer}}
-\doxysubsubsection{\texorpdfstring{ClrTmrEvent()}{ClrTmrEvent()}}
-{\footnotesize\ttfamily void Timer\+::\+Clr\+Tmr\+Event (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
-
-
-
-Limpia el evento del timer. 
-
-\begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
-\mbox{\Hypertarget{class_timer_a3446cbde556eec707810feeb61575571}\label{class_timer_a3446cbde556eec707810feeb61575571}} 
-\index{Timer@{Timer}!GetmrStandBy@{GetmrStandBy}}
+\Hypertarget{class_timer_a3446cbde556eec707810feeb61575571}\index{Timer@{Timer}!GetmrStandBy@{GetmrStandBy}}
 \index{GetmrStandBy@{GetmrStandBy}!Timer@{Timer}}
 \doxysubsubsection{\texorpdfstring{GetmrStandBy()}{GetmrStandBy()}}
-{\footnotesize\ttfamily bool Timer\+::\+Getmr\+Stand\+By (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_timer_a3446cbde556eec707810feeb61575571} 
+bool Timer\+::\+Getmr\+Stand\+By (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
 
 
@@ -185,24 +182,24 @@ Informa si el timer está detenido o no.
 \begin{DoxyReturn}{Returns}
 True si el timer esta detenido. False si no. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_timer_a02d39c7351bc4960e1538c1610746c7b}\label{class_timer_a02d39c7351bc4960e1538c1610746c7b}} 
-\index{Timer@{Timer}!GetTimer@{GetTimer}}
+\Hypertarget{class_timer_a02d39c7351bc4960e1538c1610746c7b}\index{Timer@{Timer}!GetTimer@{GetTimer}}
 \index{GetTimer@{GetTimer}!Timer@{Timer}}
 \doxysubsubsection{\texorpdfstring{GetTimer()}{GetTimer()}}
-{\footnotesize\ttfamily uint32\+\_\+t Timer\+::\+Get\+Timer (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily \label{class_timer_a02d39c7351bc4960e1538c1610746c7b} 
+uint32\+\_\+t Timer\+::\+Get\+Timer (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption}) const}
 
 
 
 Toma el valor al vuelo del timer en cuestion. 
 
-Lee el timer al vuelo \begin{DoxyReturn}{Returns}
-void 
+Lee el timer al vuelo. \begin{DoxyReturn}{Returns}
+uint32\+\_\+t\+: valor del timer. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_timer_ad4586720d311f0c66b400c2a40bab248}\label{class_timer_ad4586720d311f0c66b400c2a40bab248}} 
-\index{Timer@{Timer}!GetTmrEvent@{GetTmrEvent}}
+\Hypertarget{class_timer_ad4586720d311f0c66b400c2a40bab248}\index{Timer@{Timer}!GetTmrEvent@{GetTmrEvent}}
 \index{GetTmrEvent@{GetTmrEvent}!Timer@{Timer}}
 \doxysubsubsection{\texorpdfstring{GetTmrEvent()}{GetTmrEvent()}}
-{\footnotesize\ttfamily bool Timer\+::\+Get\+Tmr\+Event (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_timer_ad4586720d311f0c66b400c2a40bab248} 
+bool Timer\+::\+Get\+Tmr\+Event (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
 
 
@@ -211,11 +208,11 @@ Indica si el timer venció o no.
 \begin{DoxyReturn}{Returns}
 True si venció. False si no. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_timer_a64b2ce2e82d2595ce35556cfccf478b5}\label{class_timer_a64b2ce2e82d2595ce35556cfccf478b5}} 
-\index{Timer@{Timer}!GetTmrRun@{GetTmrRun}}
+\Hypertarget{class_timer_a64b2ce2e82d2595ce35556cfccf478b5}\index{Timer@{Timer}!GetTmrRun@{GetTmrRun}}
 \index{GetTmrRun@{GetTmrRun}!Timer@{Timer}}
 \doxysubsubsection{\texorpdfstring{GetTmrRun()}{GetTmrRun()}}
-{\footnotesize\ttfamily uint32\+\_\+t Timer\+::\+Get\+Tmr\+Run (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_timer_a64b2ce2e82d2595ce35556cfccf478b5} 
+uint32\+\_\+t Timer\+::\+Get\+Tmr\+Run (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
 
 
@@ -224,37 +221,37 @@ Obtiene el valor del timer.
 \begin{DoxyReturn}{Returns}
 Valor del timer. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_timer_a828ab6dfce2ecf28f963f23991056223}\label{class_timer_a828ab6dfce2ecf28f963f23991056223}} 
-\index{Timer@{Timer}!operator bool@{operator bool}}
+\Hypertarget{class_timer_a828ab6dfce2ecf28f963f23991056223}\index{Timer@{Timer}!operator bool@{operator bool}}
 \index{operator bool@{operator bool}!Timer@{Timer}}
 \doxysubsubsection{\texorpdfstring{operator bool()}{operator bool()}}
-{\footnotesize\ttfamily Timer\+::operator bool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+{\footnotesize\ttfamily \label{class_timer_a828ab6dfce2ecf28f963f23991056223} 
+Timer\+::operator bool (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
 
 
 
 Sobrecarga de del operador de contenido. 
 
 \begin{DoxyReturn}{Returns}
-true por timer vencido y false por no vencido 
+true por timer vencido y false por no vencido. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_timer_abe02ae6e11a3e5946da7cb7c29cec971}\label{class_timer_abe02ae6e11a3e5946da7cb7c29cec971}} 
-\index{Timer@{Timer}!operator"!@{operator"!}}
+\Hypertarget{class_timer_abe02ae6e11a3e5946da7cb7c29cec971}\index{Timer@{Timer}!operator"!@{operator"!}}
 \index{operator"!@{operator"!}!Timer@{Timer}}
 \doxysubsubsection{\texorpdfstring{operator"!()}{operator!()}}
-{\footnotesize\ttfamily bool Timer\+::operator! (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_timer_abe02ae6e11a3e5946da7cb7c29cec971} 
+bool Timer\+::operator! (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 
 Sobrecarga de del operador de negacion. 
 
 \begin{DoxyReturn}{Returns}
-true por timer no vencido y false por vencido 
+true por timer no vencido y false por vencido. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_timer_a1f49f895454389919e813ce5bef0d31b}\label{class_timer_a1f49f895454389919e813ce5bef0d31b}} 
-\index{Timer@{Timer}!operator=@{operator=}}
+\Hypertarget{class_timer_a1f49f895454389919e813ce5bef0d31b}\index{Timer@{Timer}!operator=@{operator=}}
 \index{operator=@{operator=}!Timer@{Timer}}
 \doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_timer}{Timer}} \& Timer\+::operator= (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{time }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_timer_a1f49f895454389919e813ce5bef0d31b} 
+\mbox{\hyperlink{class_timer}{Timer}} \& Timer\+::operator= (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{time}{}\end{DoxyParamCaption})}
 
 
 
@@ -262,35 +259,35 @@ Sobrecarga de del operador de asignacion.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em time} & Valor a asignar a la variable de teporizacion \\
+\mbox{\texttt{ in}}  & {\em time} & Valor a asignar a la variable de teporizacion. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-una referencia al propio objeto 
+una referencia al propio objeto. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_timer_a4fc62c4a640fe2f1a93029fedcd64ca7}\label{class_timer_a4fc62c4a640fe2f1a93029fedcd64ca7}} 
-\index{Timer@{Timer}!operator==@{operator==}}
+\Hypertarget{class_timer_a4fc62c4a640fe2f1a93029fedcd64ca7}\index{Timer@{Timer}!operator==@{operator==}}
 \index{operator==@{operator==}!Timer@{Timer}}
 \doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
-{\footnotesize\ttfamily bool Timer\+::operator== (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ev }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_timer_a4fc62c4a640fe2f1a93029fedcd64ca7} 
+bool Timer\+::operator== (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ev}{}\end{DoxyParamCaption})}
 
 
 
 Sobrecarga de del operador de comparacion. 
 
-compara un valor numerico contra el flag de finalizacion del timer 
+compara un valor numerico contra el flag de finalizacion del timer. 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em ev} & valor de comparacion (para verificar si vencio el timer) \\
+\mbox{\texttt{ in}}  & {\em ev} & valor de comparacion (para verificar si vencio el timer). \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-bool\+: true por coincidencia, false por no coincidencia 
+bool\+: true por coincidencia, false por no coincidencia. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_timer_a3a01861fc3c838d08d4c783970ae299d}\label{class_timer_a3a01861fc3c838d08d4c783970ae299d}} 
-\index{Timer@{Timer}!SetmrStandBy@{SetmrStandBy}}
+\Hypertarget{class_timer_a3a01861fc3c838d08d4c783970ae299d}\index{Timer@{Timer}!SetmrStandBy@{SetmrStandBy}}
 \index{SetmrStandBy@{SetmrStandBy}!Timer@{Timer}}
 \doxysubsubsection{\texorpdfstring{SetmrStandBy()}{SetmrStandBy()}}
-{\footnotesize\ttfamily void Timer\+::\+Setmr\+Stand\+By (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{accion }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_timer_a3a01861fc3c838d08d4c783970ae299d} 
+void Timer\+::\+Setmr\+Stand\+By (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{accion}{}\end{DoxyParamCaption})}
 
 
 
@@ -301,180 +298,130 @@ Detiene el timer sin apagarlo.
 \mbox{\texttt{ in}}  & {\em accion} & si lo detiene o no. \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-void. 
-\end{DoxyReturn}
-\mbox{\Hypertarget{class_timer_a84b5908afad064ed57c12707da8143b7}\label{class_timer_a84b5908afad064ed57c12707da8143b7}} 
-\index{Timer@{Timer}!SetTimer@{SetTimer}}
+\Hypertarget{class_timer_a84b5908afad064ed57c12707da8143b7}\index{Timer@{Timer}!SetTimer@{SetTimer}}
 \index{SetTimer@{SetTimer}!Timer@{Timer}}
 \doxysubsubsection{\texorpdfstring{SetTimer()}{SetTimer()}}
-{\footnotesize\ttfamily void Timer\+::\+Set\+Timer (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{time }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_timer_a84b5908afad064ed57c12707da8143b7} 
+void Timer\+::\+Set\+Timer (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{time}{}\end{DoxyParamCaption})}
 
 
 
 Inicia un timer. 
 
-Reinicia el timer con el valor t (no lo resetea) 
+Reinicia el timer con el valor t (no lo resetea). 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em time} & time Tiempo del evento. Dependiente de la base de tiempos \\
+\mbox{\texttt{ in}}  & {\em time} & time Tiempo del evento. Dependiente de la base de tiempos. \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
-\mbox{\Hypertarget{class_timer_a4d6351689c2a827edcd3ed3a1bb4f971}\label{class_timer_a4d6351689c2a827edcd3ed3a1bb4f971}} 
-\index{Timer@{Timer}!SetTimerBase@{SetTimerBase}}
+\Hypertarget{class_timer_a4d6351689c2a827edcd3ed3a1bb4f971}\index{Timer@{Timer}!SetTimerBase@{SetTimerBase}}
 \index{SetTimerBase@{SetTimerBase}!Timer@{Timer}}
 \doxysubsubsection{\texorpdfstring{SetTimerBase()}{SetTimerBase()}}
-{\footnotesize\ttfamily void Timer\+::\+Set\+Timer\+Base (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_timer_a9cec0a44d98f2898630bb03951269195}{bases\+\_\+t}}}]{base }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_timer_a4d6351689c2a827edcd3ed3a1bb4f971} 
+void Timer\+::\+Set\+Timer\+Base (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_timer_a9cec0a44d98f2898630bb03951269195}{bases\+\_\+t}}}]{base}{}\end{DoxyParamCaption})}
 
 
 
 Setea la base de tiempo. 
 
-Fija la base de tiempo entre todos los posibles de bases\+\_\+t 
+Fija la base de tiempo entre todos los posibles de \doxylink{class_timer_a9cec0a44d98f2898630bb03951269195}{bases\+\_\+t}. 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em base} & Base de tiempo a tulizar \\
+\mbox{\texttt{ in}}  & {\em base} & Base de tiempo a utilizar. \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
-\mbox{\Hypertarget{class_timer_a7528e58c272cf861d7cf86651c7eb3e5}\label{class_timer_a7528e58c272cf861d7cf86651c7eb3e5}} 
-\index{Timer@{Timer}!SetTmrEvent@{SetTmrEvent}}
-\index{SetTmrEvent@{SetTmrEvent}!Timer@{Timer}}
-\doxysubsubsection{\texorpdfstring{SetTmrEvent()}{SetTmrEvent()}}
-{\footnotesize\ttfamily void Timer\+::\+Set\+Tmr\+Event (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
-
-
-
-Setea el evento del timer. 
-
-\begin{DoxyReturn}{Returns}
-void. 
-\end{DoxyReturn}
-\mbox{\Hypertarget{class_timer_a2d1ff5791164f492ceb0efe4873bcc37}\label{class_timer_a2d1ff5791164f492ceb0efe4873bcc37}} 
-\index{Timer@{Timer}!SetTmrHandler@{SetTmrHandler}}
+\Hypertarget{class_timer_a2d1ff5791164f492ceb0efe4873bcc37}\index{Timer@{Timer}!SetTmrHandler@{SetTmrHandler}}
 \index{SetTmrHandler@{SetTmrHandler}!Timer@{Timer}}
 \doxysubsubsection{\texorpdfstring{SetTmrHandler()}{SetTmrHandler()}}
-{\footnotesize\ttfamily void Timer\+::\+Set\+Tmr\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_timer_a2d1ff5791164f492ceb0efe4873bcc37} 
+void Timer\+::\+Set\+Tmr\+Handler (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
 
 
 Ejecuta el timer Handler. 
 
-Llama a la función handler entregada por el constructor (siempe que no sea nullptr). \begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
-\mbox{\Hypertarget{class_timer_a17c2200e5ebceab3cb70f53dea2da135}\label{class_timer_a17c2200e5ebceab3cb70f53dea2da135}} 
-\index{Timer@{Timer}!StandByTimer@{StandByTimer}}
+Llama a la función handler entregada por el constructor (siempe que no sea nullptr). \Hypertarget{class_timer_a17c2200e5ebceab3cb70f53dea2da135}\index{Timer@{Timer}!StandByTimer@{StandByTimer}}
 \index{StandByTimer@{StandByTimer}!Timer@{Timer}}
 \doxysubsubsection{\texorpdfstring{StandByTimer()}{StandByTimer()}}
-{\footnotesize\ttfamily void Timer\+::\+Stand\+By\+Timer (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t}]{accion }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_timer_a17c2200e5ebceab3cb70f53dea2da135} 
+void Timer\+::\+Stand\+By\+Timer (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t}]{accion}{}\end{DoxyParamCaption})}
 
 
 
 Detiene/\+Arranca el timer, NO lo resetea. 
 
-lo pone o lo saca de stand by 
+lo pone o lo saca de stand-\/by. 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em accion} & R\+UN lo arranca, P\+A\+U\+SE lo pone en stand by \\
+\mbox{\texttt{ in}}  & {\em accion} & RUN lo arranca, PAUSE lo pone en stand-\/by. \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
-\mbox{\Hypertarget{class_timer_ab1b056629435b57ae6d31323507b9330}\label{class_timer_ab1b056629435b57ae6d31323507b9330}} 
-\index{Timer@{Timer}!SWhandler@{SWhandler}}
+\Hypertarget{class_timer_ab1b056629435b57ae6d31323507b9330}\index{Timer@{Timer}!SWhandler@{SWhandler}}
 \index{SWhandler@{SWhandler}!Timer@{Timer}}
 \doxysubsubsection{\texorpdfstring{SWhandler()}{SWhandler()}}
-{\footnotesize\ttfamily void Timer\+::\+S\+Whandler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily \label{class_timer_ab1b056629435b57ae6d31323507b9330} 
+void Timer\+::\+SWhandler (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
 Decremento periodico del timer. Debe ser llamada periodicamente con la base de tiempos. 
 
-\begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
 
 
 Implements \mbox{\hyperlink{class_callback_a24e8f5fec587299192f62b13a2e7eb42}{Callback}}.
 
-\mbox{\Hypertarget{class_timer_a6f687e19b52d89e602030ed046ed5212}\label{class_timer_a6f687e19b52d89e602030ed046ed5212}} 
-\index{Timer@{Timer}!TimerStart@{TimerStart}}
+\Hypertarget{class_timer_a6f687e19b52d89e602030ed046ed5212}\index{Timer@{Timer}!TimerStart@{TimerStart}}
 \index{TimerStart@{TimerStart}!Timer@{Timer}}
 \doxysubsubsection{\texorpdfstring{TimerStart()}{TimerStart()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily void Timer\+::\+Timer\+Start (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{time }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_timer_a6f687e19b52d89e602030ed046ed5212} 
+void Timer\+::\+Timer\+Start (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{time}{}\end{DoxyParamCaption})}
 
 
 
 Inicia un timer. 
 
-Inicia el timer y al transcurrir el tiempo especificado se llama a la funcion apuntada por handler 
+Inicia el timer y al transcurrir el tiempo especificado se llama a la funcion apuntada por handler. 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em time} & Tiempo del evento. Dependiente de la base de tiempos \\
+\mbox{\texttt{ in}}  & {\em time} & Tiempo del evento. Dependiente de la base de tiempos. \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
-\mbox{\Hypertarget{class_timer_a4de6cf13b879de73abc9421fd9fab60d}\label{class_timer_a4de6cf13b879de73abc9421fd9fab60d}} 
-\index{Timer@{Timer}!TimerStart@{TimerStart}}
+\Hypertarget{class_timer_a4de6cf13b879de73abc9421fd9fab60d}\index{Timer@{Timer}!TimerStart@{TimerStart}}
 \index{TimerStart@{TimerStart}!Timer@{Timer}}
 \doxysubsubsection{\texorpdfstring{TimerStart()}{TimerStart()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily void Timer\+::\+Timer\+Start (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{time,  }\item[{const \mbox{\hyperlink{group___drivers_gad8c2afd48cc8eb5c42aacf5d7b9f38dc}{Timer\+\_\+\+Handler}}}]{handler,  }\item[{const \mbox{\hyperlink{class_timer_a9cec0a44d98f2898630bb03951269195}{bases\+\_\+t}}}]{base }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_timer_a4de6cf13b879de73abc9421fd9fab60d} 
+void Timer\+::\+Timer\+Start (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{time}{, }\item[{const \mbox{\hyperlink{group___drivers_gad8c2afd48cc8eb5c42aacf5d7b9f38dc}{Timer\+\_\+\+Handler}}}]{handler}{, }\item[{const \mbox{\hyperlink{class_timer_a9cec0a44d98f2898630bb03951269195}{bases\+\_\+t}}}]{base}{}\end{DoxyParamCaption})}
 
 
 
 Inicia un timer. 
 
-Inicia el timer y al transcurrir el tiempo especificado por y time se llama a la funcion apuntada por handler 
+Inicia el timer y al transcurrir el tiempo especificado por y time se llama a la funcion apuntada por handler. 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em time} & Tiempo del evento. Dependiente de la base de tiempos \\
+\mbox{\texttt{ in}}  & {\em time} & Tiempo del evento. Dependiente de la base de tiempos. \\
 \hline
-\mbox{\texttt{ in}}  & {\em handler} & \mbox{\hyperlink{class_callback}{Callback}} del evento \\
+\mbox{\texttt{ in}}  & {\em handler} & \doxylink{class_callback}{Callback} del evento. \\
 \hline
-\mbox{\texttt{ in}}  & {\em base} & de tiempo \\
+\mbox{\texttt{ in}}  & {\em base} & de tiempo. \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
-\mbox{\Hypertarget{class_timer_a4a8fdd11e028684a8b770dd375278462}\label{class_timer_a4a8fdd11e028684a8b770dd375278462}} 
-\index{Timer@{Timer}!TimerStop@{TimerStop}}
-\index{TimerStop@{TimerStop}!Timer@{Timer}}
-\doxysubsubsection{\texorpdfstring{TimerStop()}{TimerStop()}}
-{\footnotesize\ttfamily void Timer\+::\+Timer\+Stop (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
-
-
-
-Detiene el timer. 
-
-\begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
-\mbox{\Hypertarget{class_timer_ae6215d19df6293b3ed67ee8e796e9724}\label{class_timer_ae6215d19df6293b3ed67ee8e796e9724}} 
-\index{Timer@{Timer}!TmrEvent@{TmrEvent}}
+\Hypertarget{class_timer_ae6215d19df6293b3ed67ee8e796e9724}\index{Timer@{Timer}!TmrEvent@{TmrEvent}}
 \index{TmrEvent@{TmrEvent}!Timer@{Timer}}
 \doxysubsubsection{\texorpdfstring{TmrEvent()}{TmrEvent()}}
-{\footnotesize\ttfamily int8\+\_\+t Timer\+::\+Tmr\+Event (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_timer_ae6215d19df6293b3ed67ee8e796e9724} 
+int8\+\_\+t Timer\+::\+Tmr\+Event (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
 
 
 Función encargada de revisar si los timer vencieron y ejecuta automáticamente su función asignada. 
 
 Si el timer tiene una funcion asignada, debe colocarse en el while(1) para que se ejecuten automáticamente. \begin{DoxyReturn}{Returns}
-O\+Ktimers si el timer venció. error\+Timer si el timer no venció. 
+OKtimers si el timer venció. error\+Timer si el timer no venció. 
 \end{DoxyReturn}
 
 
-\doxysubsection{Friends And Related Function Documentation}
-\mbox{\Hypertarget{class_timer_a16cc66e5d235553e600fd84be5dc5013}\label{class_timer_a16cc66e5d235553e600fd84be5dc5013}} 
-\index{Timer@{Timer}!operator==@{operator==}}
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{class_timer_a67d3ea263ca5e63494bed1596a9b4a59}\index{Timer@{Timer}!operator==@{operator==}}
 \index{operator==@{operator==}!Timer@{Timer}}
 \doxysubsubsection{\texorpdfstring{operator==}{operator==}}
-{\footnotesize\ttfamily bool Timer\+::operator== (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{t,  }\item[{\mbox{\hyperlink{class_timer}{Timer}} \&}]{T }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+{\footnotesize\ttfamily \label{class_timer_a67d3ea263ca5e63494bed1596a9b4a59} 
+bool operator== (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{t}{, }\item[{\mbox{\hyperlink{class_timer}{Timer}} \&}]{T}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
 
 
 
@@ -486,43 +433,39 @@ bool\+: true por coincidencia, false por no coincidencia
 
 
 \doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{class_timer_ac615667eecadfa52523f296c6b197553}\label{class_timer_ac615667eecadfa52523f296c6b197553}} 
-\index{Timer@{Timer}!m\_TmrBase@{m\_TmrBase}}
+\Hypertarget{class_timer_ac615667eecadfa52523f296c6b197553}\index{Timer@{Timer}!m\_TmrBase@{m\_TmrBase}}
 \index{m\_TmrBase@{m\_TmrBase}!Timer@{Timer}}
 \doxysubsubsection{\texorpdfstring{m\_TmrBase}{m\_TmrBase}}
-{\footnotesize\ttfamily volatile \mbox{\hyperlink{class_timer_a9cec0a44d98f2898630bb03951269195}{bases\+\_\+t}} Timer\+::m\+\_\+\+Tmr\+Base\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily \label{class_timer_ac615667eecadfa52523f296c6b197553} 
+volatile \mbox{\hyperlink{class_timer_a9cec0a44d98f2898630bb03951269195}{bases\+\_\+t}} Timer\+::m\+\_\+\+Tmr\+Base\hspace{0.3cm}{\ttfamily [protected]}}
 
-Base de tiempo del timer \mbox{\Hypertarget{class_timer_a4d3f6474c67de284a77c4f69fb36067d}\label{class_timer_a4d3f6474c67de284a77c4f69fb36067d}} 
-\index{Timer@{Timer}!m\_TmrEvent@{m\_TmrEvent}}
+Base de tiempo del timer \Hypertarget{class_timer_a4d3f6474c67de284a77c4f69fb36067d}\index{Timer@{Timer}!m\_TmrEvent@{m\_TmrEvent}}
 \index{m\_TmrEvent@{m\_TmrEvent}!Timer@{Timer}}
 \doxysubsubsection{\texorpdfstring{m\_TmrEvent}{m\_TmrEvent}}
-{\footnotesize\ttfamily volatile bool Timer\+::m\+\_\+\+Tmr\+Event\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily \label{class_timer_a4d3f6474c67de284a77c4f69fb36067d} 
+volatile bool Timer\+::m\+\_\+\+Tmr\+Event\hspace{0.3cm}{\ttfamily [protected]}}
 
-True si el timer venció. False si el timer no venció ~\newline
- \mbox{\Hypertarget{class_timer_ab57d5308f7d8759573bfa077bf05d531}\label{class_timer_ab57d5308f7d8759573bfa077bf05d531}} 
-\index{Timer@{Timer}!m\_TmrHandler@{m\_TmrHandler}}
+True si el timer venció. False si el timer no venció \Hypertarget{class_timer_ab4db941b5d3a3ecde10d9302e6db0edc}\index{Timer@{Timer}!m\_TmrHandler@{m\_TmrHandler}}
 \index{m\_TmrHandler@{m\_TmrHandler}!Timer@{Timer}}
 \doxysubsubsection{\texorpdfstring{m\_TmrHandler}{m\_TmrHandler}}
-{\footnotesize\ttfamily void($\ast$  Timer\+::m\+\_\+\+Tmr\+Handler) (void)\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily \label{class_timer_ab4db941b5d3a3ecde10d9302e6db0edc} 
+void(\texorpdfstring{$\ast$}{*} Timer\+::m\+\_\+\+Tmr\+Handler) (void)\hspace{0.3cm}{\ttfamily [protected]}}
 
-Función a ejecutar al terminar ~\newline
- \mbox{\Hypertarget{class_timer_a2dd85f439d172418dc50d36a1ead5fda}\label{class_timer_a2dd85f439d172418dc50d36a1ead5fda}} 
-\index{Timer@{Timer}!m\_TmrRun@{m\_TmrRun}}
+Función a ejecutar al terminar \Hypertarget{class_timer_a2dd85f439d172418dc50d36a1ead5fda}\index{Timer@{Timer}!m\_TmrRun@{m\_TmrRun}}
 \index{m\_TmrRun@{m\_TmrRun}!Timer@{Timer}}
 \doxysubsubsection{\texorpdfstring{m\_TmrRun}{m\_TmrRun}}
-{\footnotesize\ttfamily volatile uint32\+\_\+t Timer\+::m\+\_\+\+Tmr\+Run\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily \label{class_timer_a2dd85f439d172418dc50d36a1ead5fda} 
+volatile uint32\+\_\+t Timer\+::m\+\_\+\+Tmr\+Run\hspace{0.3cm}{\ttfamily [protected]}}
 
-Tiempo de encendido del timer ~\newline
- \mbox{\Hypertarget{class_timer_a8b6f6f49d9eba6daea47132c8a314e5b}\label{class_timer_a8b6f6f49d9eba6daea47132c8a314e5b}} 
-\index{Timer@{Timer}!m\_TmrStandBy@{m\_TmrStandBy}}
+Tiempo de encendido del timer \Hypertarget{class_timer_a8b6f6f49d9eba6daea47132c8a314e5b}\index{Timer@{Timer}!m\_TmrStandBy@{m\_TmrStandBy}}
 \index{m\_TmrStandBy@{m\_TmrStandBy}!Timer@{Timer}}
 \doxysubsubsection{\texorpdfstring{m\_TmrStandBy}{m\_TmrStandBy}}
-{\footnotesize\ttfamily volatile bool Timer\+::m\+\_\+\+Tmr\+Stand\+By\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily \label{class_timer_a8b6f6f49d9eba6daea47132c8a314e5b} 
+volatile bool Timer\+::m\+\_\+\+Tmr\+Stand\+By\hspace{0.3cm}{\ttfamily [protected]}}
 
-True si el timer está detenido. False si el timer no lo está ~\newline
- 
+True si el timer está detenido. False si el timer no lo está 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-E\+:/\+Agustin/\+Escritorio/\+M\+C\+Uexpresso/\+Kit\+L\+P\+C845-\/\+C++/src/\+Drivers/\+Perifericos/07-\/\+Timer/\mbox{\hyperlink{_timer_8h}{Timer.\+h}}\item 
-E\+:/\+Agustin/\+Escritorio/\+M\+C\+Uexpresso/\+Kit\+L\+P\+C845-\/\+C++/src/\+Drivers/\+Perifericos/07-\/\+Timer/Timer.\+cpp\end{DoxyCompactItemize}
+E\+:/\+Agustin/\+Escritorio/\+MCUexpresso/\+Kit\+LPC845-\/\+C++/src/\+Drivers/\+Perifericos/07-\/\+Timer/\mbox{\hyperlink{_timer_8h}{Timer.\+h}}\item 
+E\+:/\+Agustin/\+Escritorio/\+MCUexpresso/\+Kit\+LPC845-\/\+C++/src/\+Drivers/\+Perifericos/07-\/\+Timer/Timer.\+cpp\end{DoxyCompactItemize}

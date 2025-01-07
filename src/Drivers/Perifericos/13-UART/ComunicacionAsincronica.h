@@ -48,16 +48,16 @@
 class ComunicacionAsincronica
 {
 	public:	
-		ComunicacionAsincronica() = default;							/**< Constructor por defecto */
-		virtual void Transmit ( const char * msg) = 0;			/**< Funcion de transmitir */
-		virtual void Transmit ( const void * msg , uint32_t n ) = 0;	/**< Funcion de transmitir */
-		virtual void* Message ( void * msg , uint32_t n ) = 0;	/**< Funcion de lectura */
-		virtual void UART_IRQHandler (void) = 0;				/**< Funcion de interrupcion */
-		virtual ~ComunicacionAsincronica() = default;					/**< Destructor por defecto */
+						ComunicacionAsincronica() = default;			/**< Constructor por defecto */
+		virtual void 	Transmit ( const char * msg) = 0;				/**< Funcion de transmitir */
+		virtual void 	Transmit ( const void * msg , uint32_t n ) = 0;	/**< Funcion de transmitir */
+		virtual void* 	Message ( void * msg , uint32_t n ) = 0;		/**< Funcion de lectura */
+		virtual void 	UART_IRQHandler (void) = 0;						/**< Funcion de interrupcion */
+		virtual 		~ComunicacionAsincronica() = default;			/**< Destructor por defecto */
 	protected:
-		virtual void pushRx ( uint8_t dato ) = 0 ;				/**< Envia recepcion */
+		virtual void 	pushRx ( uint8_t dato ) = 0 ;			/**< Envia recepcion */
 		virtual uint8_t popRx (uint8_t * dato ) = 0 ;			/**< Devuelve recepcion */
-		virtual void pushTx ( uint8_t dato ) = 0 ;				/**< Envia transmision*/
+		virtual void 	pushTx ( uint8_t dato ) = 0 ;			/**< Envia transmision*/
 		virtual uint8_t popTx (uint8_t * dato ) = 0 ;			/**< Devuelve transmision */
 };
 

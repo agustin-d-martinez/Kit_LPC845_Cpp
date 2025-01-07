@@ -1,0 +1,54 @@
+\doxysection{Pwm.\+h}
+\hypertarget{_pwm_8h_source}{}\label{_pwm_8h_source}\index{E:/Agustin/Escritorio/MCUexpresso/KitLPC845-\/C++/src/Drivers/Hardware/05-\/PWM/Pwm.h@{E:/Agustin/Escritorio/MCUexpresso/KitLPC845-\/C++/src/Drivers/Hardware/05-\/PWM/Pwm.h}}
+\mbox{\hyperlink{_pwm_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*******************************************************************************************************************************/}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ PWM\_H\_}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ PWM\_H\_}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00015\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ ***\ INCLUDES\ GLOBALES}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_s_ctimer_8h}{Drivers/Perifericos/10-\/SCTimer/SCtimer.h}}>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_pin_8h}{Perifericos/01-\/Pin/Pin.h}}>}}
+\DoxyCodeLine{00020\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ ***\ DEFINES\ GLOBALES}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ ***\ MACROS\ GLOBALES}}
+\DoxyCodeLine{00026\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00029\ \textcolor{comment}{\ ***\ TIPO\ DE\ DATOS\ GLOBALES}}
+\DoxyCodeLine{00030\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00033\ \textcolor{comment}{\ ***\ IMPLANTACION\ DE\ LA\ CLASE}}
+\DoxyCodeLine{00034\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00045\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_pwm_a391b782477825d3629ef4379377869f3}{Pwm}}\ :\ \textcolor{keyword}{protected}\ \mbox{\hyperlink{class_s_ctimer_a6e8c3a892ff1630836064e2b4e12cbd8}{SCtimer}}\ ,\ \textcolor{keyword}{protected}\ \mbox{\hyperlink{class_pin_a063b07c7607e031318ca024b75a6f0cf}{Pin}}}
+\DoxyCodeLine{00046\ \{}
+\DoxyCodeLine{00047\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{\ SEG\ =\ 0,\ MILI\_SEG\ ,\ MICRO\_SEG\ \}\ \mbox{\hyperlink{class_pwm_a47d392440dacce1b8d73b8e49b60a63d}{pwm\_time\_unit\_t}};}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{\ CHANNEL\_1\ =\ 1\ ,\ CHANNEL\_2\ ,\ CHANNEL\_3\ ,\ CHANNEL\_4\ ,\ CHANNEL\_5\ ,\ CHANNEL\_6\ \}\ \mbox{\hyperlink{class_pwm_a9413c20bb8b91b1cf39ddba8f44ac696}{pwm\_channel\_t}};}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{class_pwm_a51055b0cae38b0fa09b2af23f8655ac7}{activity\_t}}\ \ \ \ \ \ \ \{\ low\ ,\ high\ \};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{const}\ \ \ uint8\_t\ \ \ \ \ \mbox{\hyperlink{class_pwm_a61d91e9d2c3902c4a6ca0c8dfc4bccc4}{m\_activity}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ \ \ \ \mbox{\hyperlink{class_pwm_a648d25e3579c9ceb012cb2f064c09c8f}{m\_ton}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ \ \ \ \mbox{\hyperlink{class_pwm_a1359220ae2526e29f0db12ba4ab048ff}{m\_toff}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{const}\ \ \ uint8\_t\ \ \ \ \ \mbox{\hyperlink{class_pwm_a2c1735805b181d79c99eb815e7332a26}{m\_pwm\_channel}};\ }
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_pwm_a391b782477825d3629ef4379377869f3}{Pwm}}(\ \mbox{\hyperlink{class_pin_a02483eba92e68e4230f8aa883e0a25fe}{port\_t}}\ puerto\ ,\ uint8\_t\ bit\ ,\ uint8\_t\ actividad\ ,\ \mbox{\hyperlink{class_pwm_a9413c20bb8b91b1cf39ddba8f44ac696}{pwm\_channel\_t}}\ number\ );}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_pwm_a609ff577697b9d85f8a20bb3a9e43275}{Inicializar}}(\ uint32\_t\ ton\ ,\ uint32\_t\ toff\ ,\ \mbox{\hyperlink{class_pwm_a47d392440dacce1b8d73b8e49b60a63d}{pwm\_time\_unit\_t}}\ t\ =\ MICRO\_SEG\ );}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_pwm_a3095508c1aaf8575bb56f5a0eea52412}{SetTon}}(\ uint32\_t\ time\ ,\ \mbox{\hyperlink{class_pwm_a47d392440dacce1b8d73b8e49b60a63d}{pwm\_time\_unit\_t}}\ t\ =\ MICRO\_SEG\ );}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_pwm_a403945d1bdd663b44ce6a4c58831c389}{SetPeriod}}(\ uint32\_t\ time\ ,\ \mbox{\hyperlink{class_pwm_a47d392440dacce1b8d73b8e49b60a63d}{pwm\_time\_unit\_t}}\ t\ =\ MICRO\_SEG\ );}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_pwm_a81464c17f277cf76fab08c1bcbee5537}{On}}();}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_pwm_a674a3fa0da3f3a72475456da43ea6d06}{Off}}();}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_pwm_ac97d5b9a021ea218147206706e368a22}{\string~Pwm}}();\ \ \ \ \ }
+\DoxyCodeLine{00069\ \};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ PWM\_H\_\ */}\textcolor{preprocessor}{}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

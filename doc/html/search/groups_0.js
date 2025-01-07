@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['abstracta_666',['Abstracta',['../group___clase.html',1,'']]]
+  ['abstracta_0',['Abstracta',['../group___clase.html',1,'']]]
 ];

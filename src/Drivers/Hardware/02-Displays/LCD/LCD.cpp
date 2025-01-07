@@ -61,7 +61,6 @@ LCD::~LCD()
  	\details Crea el buffer y comienza a setear todas las salidas para comenzar a funcionar
  	\param [in] filas: Cantidad de filas del LCD.
  	\param [in] columnas: Cantidad de columnas del LCD.
-	\return void
 */
 void LCD::Inicializar( const uint8_t filas , const uint8_t columnas )
 {
@@ -87,9 +86,8 @@ void LCD::Inicializar( const uint8_t filas , const uint8_t columnas )
 }
 /**
 	\fn void LCD::SWhandler ( void  )
-	\brief Ejecuta la instrucción del LCD periodicamente
+	\brief Ejecuta la instrucción del LCD periodicamente.
  	\details Inicializa y escribe el LCD perdiódicamente utilizando el handler del systick.
-	\return void
 */
 void LCD::SWhandler ( void )
 {
@@ -153,7 +151,6 @@ void LCD::SWhandler ( void )
  	\details Envía la información a los pines correspondientes utilizando un modo de 4 bits.
  	\param [in] data: Byte a escribir.
  	\param [in] mode: Modo a escribir (0 = comando , 1 = letra).
-	\return void
 */
 void LCD::WriteInstruction( const uint8_t data , const uint8_t mode )
 {
@@ -191,7 +188,6 @@ LCD& LCD::operator= ( const char *s )
 	\brief Escribe en el LCD.
  	\details Escribe el buffer con el string indicado comenzando en la posición (0,0).
  	\param [in] s: String a escribir.
-	\return void
 */
 void LCD::Write( const char *s )
 {
@@ -208,7 +204,6 @@ void LCD::Write( const char *s )
 	\brief Escribe en el LCD un número.
  	\details Escribe el buffer con el string indicado comenzando en la posición (0,0). El número tendrá un máximo de 10 dígitos, sin contar el - de signo
  	\param [in] n: Número a escribir.
-	\return void
 */
 void LCD::Write( const int32_t n )
 {
@@ -224,7 +219,6 @@ void LCD::Write( const int32_t n )
  	\param [in] a: string a escribir.
  	\param [in] fila: Fila donde empezar a escribir.
  	\param [in] columna: Columna donde empezar a escribir.
-	\return void
 */
 void LCD::WriteAt( const int8_t *a , uint8_t fila , uint8_t columna )
 {
@@ -241,7 +235,6 @@ void LCD::WriteAt( const int8_t *a , uint8_t fila , uint8_t columna )
  	\param [in] n: numero a escribir.
  	\param [in] fila: Fila donde empezar a escribir.
  	\param [in] columna: Columna donde empezar a escribir.
-	\return void
 */
 void LCD::WriteAt ( const int32_t n , const uint8_t fila , const uint8_t columna)
 {
@@ -255,7 +248,6 @@ void LCD::WriteAt ( const int32_t n , const uint8_t fila , const uint8_t columna
 	\fn void LCD::Clear( void )
 	\brief Limpia el LCD
  	\details Deja el buffer como un string de caracteres ESPACIO que imprimen en blanco.
-	\return void
 */
 void LCD::Clear( void )
 {
@@ -269,7 +261,7 @@ void LCD::Clear( void )
  	\details Devuelve la base elevada al exponente indicado.
  	\param [in] base: Base de la potencia.
  	\param [in] exp: Exponente de la potencia.
-	\return Resultado de la cuenta o 0 por overflow
+	\return Resultado de la cuenta o 0 por overflow.
 */
 uint32_t LCD::Pow ( uint32_t base , uint32_t exp )
 {

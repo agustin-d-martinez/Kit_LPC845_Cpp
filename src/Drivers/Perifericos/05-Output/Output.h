@@ -58,7 +58,7 @@ class Output : protected gpio , public Callback
 
 		Output& operator= ( uint8_t estado );
 		bool operator== ( uint8_t a );
-		void SWhandler ( void );
+		void SWhandler ( void ) override;
 
 		virtual ~Output();		/**< Destructor por defecto */
 };

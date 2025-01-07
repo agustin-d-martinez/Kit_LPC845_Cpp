@@ -15,7 +15,7 @@
 /***********************************************************************************************************************************
  *** DEFINES PRIVADOS AL MODULO
  **********************************************************************************************************************************/
-/** Cantidad maxima de I2C que presenta el microcontrolador. No se utiliza. */
+/** Cantidad maxima de I2C que presenta el microcontrolador. */
 #define MAX_IC2 				4
 
 /***********************************************************************************************************************************
@@ -53,7 +53,7 @@ I2C::I2C( I2C_Type* I2C_register , Pin* sda , Pin* scl , I2C_mode_t mode , uint8
 {
 	m_scl = scl;
 	if ( I2C_register == I2C0 )
-		g_i2c[ 0 ] = this;
+		g_i2c[ 0 ] = this;		// El I2C0 solo puede colocarse en un lugar.
 	if ( I2C_register == I2C1 )
 		g_i2c[ 1 ] = this;
 	if ( I2C_register == I2C2 )
@@ -75,16 +75,16 @@ I2C::~I2C()
 		offset = 21;
 	if ( m_I2C_register == I2C3 )
 		offset = 22;
-	NVIC->ICER[0] |= (1 << offset);		//Deshabilito las interrupciones en el NVIC
-
+	if (m_cant_created == 1)
+		NVIC->ICER[0] |= (1 << offset);		//Deshabilito las interrupciones en el NVIC
+	m_cant_created--;
 	DisableInterupt();
 }
 /**
  * \fn void I2C::Initialize ( uint32_t clk_freq )
  * \brief Inicializa el I2C.
  * \details Configura todos los registros para el uso del I2C. Configura los clocks, resetea, configura la SWM, configura los registros y las interrupciones.
- * \param clk_freq: frecuencia del clock de transmision a utilizar.
- * \return void
+ * \param [in] clk_freq: frecuencia del clock de transmision a utilizar. En KHz
 */
 void I2C::Initialize ( uint32_t clk_freq )
 {
@@ -128,17 +128,15 @@ void I2C::Initialize ( uint32_t clk_freq )
 	}
 
 	ConfigClock( clk_offset , rst_offset );		//Habilita el clock del I2Cx
-	if ( m_cant_created == 1 )
-	{
-		SYSCON->PRESETCTRL0 &= ~(1 << rst_offset);	//Reset the I2Cx
-		SYSCON->PRESETCTRL0 |= (1 << rst_offset);	//Reset the I2Cx
-	}
+
+	configBaudRate(clk_freq);	//Configuro el baudrate del I2Cx
+
+	SYSCON->FCLKSEL[clk_offset] = 1; 				//Set main clk as I2C clock
 
 	EnableSWM();				//Habilito SWM del I2Cx
-	configBaudRate(clk_freq);	//Configuro el baudrate del I2Cx
+	NVIC->ISER[0] |= (1 << interrupt_offset);		//Habilito las interrupciones en el NVIC
 	config( register_number );	//Configuro los registros del I2Cx
 
-	NVIC->ISER[0] |= (1 << interrupt_offset);		//Habilito las interrupciones en el NVIC
 }
 /**
  * \fn void I2C::config ( uint8_t& register_number )
@@ -164,15 +162,20 @@ void I2C::config ( uint8_t& register_number )
 }
 
 /**
- * \fn void Uart::EnableSWM ( void )
+ * \fn void I2C::EnableSWM ( void )
  * \brief Activa la switch matrix.
  * \details Configura todos los registros para el uso de la I2C segun la switch matrix.
- * \return void
 */
 void I2C::EnableSWM ( void )
 {		//Las I2C 1 , 2 Y 3 pueden estar en cualquier pin presentes.
+	SYSCON->SYSAHBCLKCTRL0 |= (1 << 7); // Habilito la switch matrix. 7 = SWM
 	if ( m_I2C_register == I2C0 )
-		SWM->PINENABLE0 |= (0b11 << 12) ;
+	{
+		IOCON->PIO[IOCON_INDEX_PIO0[11]] = (0x2 << 8);	//fastmode plus.
+		IOCON->PIO[IOCON_INDEX_PIO0[10]] = (0x2 << 8);
+
+		SWM->PINENABLE0 &= ~(0b11 << 12) ;
+	}
 	if ( m_I2C_register == I2C1 )
 	{
 		SWM->PINASSIGN.PINASSIGN9 |= (m_sda->m_port * 0x20 + m_sda->m_bit) << 16;
@@ -188,6 +191,8 @@ void I2C::EnableSWM ( void )
 		SWM->PINASSIGN.PINASSIGN10 |= (m_sda->m_port * 0x20 + m_sda->m_bit) << 16;
 		SWM->PINASSIGN.PINASSIGN10 |= (m_scl->m_port * 0x20 + m_scl->m_bit) << 24;
 	}
+	SYSCON->SYSAHBCLKCTRL0 &= ~(1 << 7);
+
 }
 /**
  * \fn void I2C::ConfigClock ( uint8_t& clk_offset , uint8_t& rst_offset )
@@ -197,56 +202,50 @@ void I2C::EnableSWM ( void )
 */
 void I2C::ConfigClock ( uint8_t& clk_offset , uint8_t& rst_offset )
 {
-	SYSCON->FCLKSEL[clk_offset] = 1; 				//Set main clk as I2C clock
 	SYSCON->SYSAHBCLKCTRL0 |= (1 << rst_offset);	//Enable I2CX clock
+
+	SYSCON->PRESETCTRL0 &= ~(1 << rst_offset);	//Reset the I2Cx
+	SYSCON->PRESETCTRL0 |= (1 << rst_offset);	//Reset the I2Cx
 }
 /**
  * \fn void I2C::configBaudRate ( uint32_t clk_freq )
  * \brief Configura los baudios del I2C.
  * \details Configura la velocidad de transmision del I2C a utilizar.
- * \return void
+ * \param [in] clk_freq: Frecuencia a la que se configura el baudRate. En KHz
 */
-void I2C::configBaudRate ( uint32_t clk_freq )		//CLK FREQ expressed in KHz
-{	// CLK_FREQ en KHz
-	// No se utiliarán los valores MSTSCLHIGH ni MSTSCLLOW, dejando por default 2 clocks para high y low. Las cuentas se realizan en base a eso
-	//HIGH FREQ = (CLKDIV + 1) * (2 + MSTSCLHIGH)
-	//LOW FREQ = (CLKDIV + 1) * (2 + MSTSCLLOW)
-	//FREQ CLK = FREQ_PRINCIPAL/[HIGH FREQ + LOW FREQ]
+void I2C::configBaudRate(uint32_t clk_freq)
+{
+/*	HIGH FREQ = (CLKDIV + 1) * MSTSCLHIGH y LOW FREQ = (CLKDIV + 1) * MSTSCLLOW
+	FREQ CLK = FREQ_PRINCIPAL/[HIGH FREQ + LOW FREQ] ====>  CLKDIV = FREQ_PRINCIPAL/(2*MSTSCLHIGH) - 1*/
+	uint32_t clocks = 5;
+	uint32_t div = 0;
+	div = (FREQ_PRINCIPAL / (clocks * 2));
+	div /= (clk_freq * 1000);	// 2 clocks low + 2 clocks high. 4 clocks = period.
+	div = (div > 0x10000) ? 0x10000 : div;	// Máximo valor permitido por CLKDIV
 
-	//HIGH FREQ = 2*(CLKDIV + 1)
-	//LOW  FREQ = 2*(CLKDIV + 1)
-	//FREQ CLK = FREQ_PRINCIPAL/(4*(CLKDIV + 1))
-	//CLKDIV = FREQ_PRINCIPAL/(4*FREQ CLK) - 1
+	if (div == 0)
+		div = 1;          // Evitar valores cero
+	div -= 1;
 
-	if ( m_I2C_register != I2C0 && clk_freq > I2C_MAX_FREQ )	//Caso especial de frecuencia maxima del I2C0
-		clk_freq = I2C_MAX_FREQ;
-
-	uint32_t div = FREQ_PRINCIPAL/(4000 * clk_freq);
-	if ( div <= 0x00010000 )		//Max div + 1
-		div -= 1;
-
-	m_I2C_register->MSTTIME &= ~(0b11);			// set MSTSCLHIGH to 2
-	m_I2C_register->MSTTIME &= ~(0b11 << 4);	// set MSTSCLLOW to 2
-	m_I2C_register->CLKDIV = div;				// Set Clock divider to the most aproximate result
+	m_I2C_register->MSTTIME &= I2C_MSTTIME_MSTSCLHIGH(clocks - 2) | I2C_MSTTIME_MSTSCLLOW( clocks - 2); // set MSTSCLHIGH y MSTSCLLOW to clocks
+	m_I2C_register->CLKDIV = I2C_CLKDIV_DIVVAL(div);// Set Clock divider to the most aproximate result
 }
 /**
  * \fn void I2C::EnableInterupt ( void )
  * \brief Habilita la interrupcion.
  * \details
- * \return void
 */
-void I2C::EnableInterupt ( void )
+void I2C::EnableInterupt(void)
 {
-		if ( m_mode == master)
-			m_I2C_register->INTENSET |= I2C_INTENSET_MSTPENDINGEN(1);		// Interrupt de master
-		if ( m_mode == slave)
-			m_I2C_register->INTENSET |= I2C_INTENSET_SLVPENDINGEN(1);		// Interrupt de slave
+	if (m_mode == master)
+		m_I2C_register->INTENSET |= I2C_INTENSET_MSTPENDINGEN(1);// Interrupt de master
+	if (m_mode == slave)
+		m_I2C_register->INTENSET |= I2C_INTENSET_SLVPENDINGEN(1);// Interrupt de slave
 }
 /**
  * \fn void I2C::DisableInterupt ( void )
  * \brief Deshabilita la interrupcion.
  * \details
- * \return void
 */
 void I2C::DisableInterupt ( void )
 {
@@ -260,7 +259,6 @@ void I2C::DisableInterupt ( void )
  * 			Un master puede estar rx_data si se recibio data, tx_ready si esta listo para transmitir, NACK_addr o NACK_tx si recibio un NACK.
  * 			Un slave puede estar en slvst_addr si recibio un start, slvst_tx si recibio un pedido a transmitir o slvst_rx si recibio un pedido a leer.
  * 			Ambos pueden estar en idle si no se encuentran haciendo nada o busy si estan en mitad de un envio de informacion.
- * \return void
 */
 I2C::I2C_states_t I2C::GetState( void )
 {
@@ -289,9 +287,8 @@ I2C::I2C_states_t I2C::GetState( void )
  * \fn void I2C::Start	( uint8_t addr , I2C_action_t action )
  * \brief Inicia una comunicacion I2C.
  * \details Envia el start a un slave. La funcion solo puede ser llamada por un master si este no se encuentra ocupado.
- * \param addr: address del slave al que se comunicara.
- * \param action: accion a realizar. Puede ser read o write.
- * \return void
+ * \param [in] addr: address del slave al que se comunicara.
+ * \param [in] action: accion a realizar. Puede ser read o write.
 */
 void I2C::Start	( uint8_t addr , I2C_action_t action )
 {
@@ -300,15 +297,13 @@ void I2C::Start	( uint8_t addr , I2C_action_t action )
 	{
 		m_I2C_register->MSTDAT &= ~(0xFF);		//Limpio el registro
 		m_I2C_register->MSTDAT = (uint8_t) ((addr << 1) | action);		//addr + bit de lectura/escritura
-		m_I2C_register->MSTCTL = I2C_MSTCTL_MSTSTART(1);	//arranco la comunicacion
+		m_I2C_register->MSTCTL = I2C_MSTCTL_MSTSTART(1) | I2C_MSTCTL_MSTCONTINUE(1);	//arranco la comunicacion
 	}
-	return;
 }
 /**
  * \fn void I2C::Stop ( void )
  * \brief Detiene la comunicacion.
  * \details Envia una señal de stop para detener la comunicacion. Solo puede ser llamada por un master que no se encuentre ocupado.
- * \return void
 */
 void I2C::Stop ( void )
 {
@@ -320,8 +315,7 @@ void I2C::Stop ( void )
  * \fn void I2C::Write ( uint8_t data )
  * \brief Escribe un valor a un slave.
  * \details Envia un dato. Solo puede ser llamada por un master que previamente haya pedido transmitir informacion o un slave que este en modo recibir transmision.
- * \param data: byte a enviar.
- * \return void
+ * \param [in] data: byte a enviar.
 */
 void I2C::Write ( uint8_t data )
 {
@@ -341,8 +335,8 @@ void I2C::Write ( uint8_t data )
  * \fn int8_t I2C::Read (uint8_t* data , bool continue_reading )
  * \brief Lee un valor recibido.
  * \details Lee el valor recibido por un slave. Solo puede ser llamado por un master que previamente haya pedido recibir y o un slave al que le llego un valor.
- * \param data: puntero a char donde se guardara el valor recibido.
- * \param continue_reading: bool que indica si se va a seguir leyendo o no.
+ * \param [in] data: puntero a char donde se guardara el valor recibido.
+ * \param [in] continue_reading: bool que indica si se va a seguir leyendo o no.
  * 			Si es true, se envia un "continue" y el slave volvera a transmitir informacion. Si es false no se realiza ninguna accion.
  * 			Si el I2C es slave, continue_reading no tiene proposito.
  * \return int8_t: valor de error. 0 no hubo problemas. -1 no se puede leer aun.
@@ -380,8 +374,7 @@ I2C& I2C::operator= ( uint8_t data )
  * \fn void I2C::ACK ( bool a )
  * \brief Envia un Acknowledge.
  * \details Para un I2C en modo slave, envia un Acknowledge que permite continuar la comunicacion.
- * \param a: bool que indica si la recepcion es exitosa o no. Si es true se envia un ACK. Si es false se envia NACK.
- * \return void
+ * \param [in] a: bool que indica si la recepcion es exitosa o no. Si es true se envia un ACK. Si es false se envia NACK.
 */
 void I2C::ACK ( bool a )
 {
@@ -394,7 +387,6 @@ void I2C::ACK ( bool a )
  * \fn bool I2C::ACKaddr ( void )
  * \brief Acknowledge especial del address.
  * \details Envia un acknowledge solo si el address que se recibio coindide con el propio.
- * \return void
 */
 bool I2C::ACKaddr ( void )
 {

@@ -16,7 +16,6 @@
 /***********************************************************************************************************************************
  *** DEFINES PRIVADOS AL MODULO
  **********************************************************************************************************************************/
-#define SYSPLLCTRL_VALUE  ((M & 0x1F) | (((P == 1 ? 0 : (P == 2 ? 1 : (P == 4 ? 2 : 3))) & 0x03) << 6))
 
 /***********************************************************************************************************************************
  *** MACROS PRIVADAS AL MODULO
@@ -51,12 +50,9 @@
  **********************************************************************************************************************************/
 /**
 	\fn  void Inicializar_PLL( void )
-	\brief Inicializa el PLL en FREQ_PRINCIPAL MHz,. Por default el FRO interno tiene 12Mhz
+	\brief Inicializa el PLL en FREQ_PRINCIPAL MHz,. Por default el FRO interno tiene 12Mhz.
  	\author Ing. Gustavo Fresno
  	\date 5 feb. 2020
- 	\param [in] void
- 	\param [out] void
-	\return void
 */
 void Inicializar_PLL( void )
 {
@@ -72,10 +68,17 @@ void Inicializar_PLL( void )
 	SYSCON->SYSPLLCLKUEN             |= 1;   		//write a one to SYSPLLUEN register (sec. 3.5.10), necessary for SYSPLLCLKSEL to update
 
 	SYSCON->PDRUNCFG                 |= (1<<7);		//power down the PLL before changing divider values (sec 3.5.35)
-	SYSCON->SYSPLLCTRL               = SYSPLLCTRL_VALUE;  		// M=3 P=1
 
-	//main_clk = fro * (M + 1) / P
-	//main_clk = 24Mhz
+#if FREQ_PRINCIPAL == 12000000UL
+	SYSCON->SYSPLLCTRL = 0x40;		// P = 4, M = 0. P_result = 8 (2 * P), M_result = 1 (M + 1)
+#elif FREQ_PRINCIPAL == 24000000UL
+	SYSCON->SYSPLLCTRL = 0x21;      // P = 2, M = 1. P_result = 4 and M_result = 2
+#elif FREQ_PRINCIPAL == 48000000UL
+	SYSCON->SYSPLLCTRL = 0x23;      // P = 2, M = 2. P_result = 4 and M_result = 3
+#endif
+
+	//FREQ_PRINCIPAL = M_result * FCLKIN. 	FCLKIN = 12MHz.
+	//La frecuencia intermedia FCCO = 2 * M_result * P_result * FCLKIN debe estar entre 156 a 320MHz.
 
 	SYSCON->PDRUNCFG 				&= ~(1<<7); 	//power up PLL after divider values changed (sec. 3.5.35)
 	while((SYSCON->SYSPLLSTAT & 1) == 0);         	//wait for PLL to lock

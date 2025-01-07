@@ -1,0 +1,83 @@
+\doxysection{Timer.\+h}
+\hypertarget{_timer_8h_source}{}\label{_timer_8h_source}\index{E:/Agustin/Escritorio/MCUexpresso/KitLPC845-\/C++/src/Drivers/Perifericos/07-\/Timer/Timer.h@{E:/Agustin/Escritorio/MCUexpresso/KitLPC845-\/C++/src/Drivers/Perifericos/07-\/Timer/Timer.h}}
+\mbox{\hyperlink{_timer_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*******************************************************************************************************************************/}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ TIMER\_H}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ TIMER\_H}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00014\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ ***\ INCLUDES\ GLOBALES}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_callback_8h}{Perifericos/06-\/Callback/Callback.h}}>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}tipos.h"{}}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ ***\ DEFINES\ GLOBALES}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ ***\ MACROS\ GLOBALES}}
+\DoxyCodeLine{00026\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00029\ \textcolor{comment}{\ ***\ TIPO\ DE\ DATOS\ GLOBALES}}
+\DoxyCodeLine{00030\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00031\ \textcolor{keyword}{typedef}\ void\ (*\mbox{\hyperlink{group___drivers_gad8c2afd48cc8eb5c42aacf5d7b9f38dc}{Timer\_Handler}})(void);\ \ \ \ \ \ \ }
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00034\ \textcolor{comment}{\ ***\ IMPLANTACION\ DE\ LA\ CLASE}}
+\DoxyCodeLine{00035\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00042\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_timer_a5f16e8da27d2a5a5242dead46de05d97}{Timer}}\ :\ \textcolor{keyword}{public}\ Callback}
+\DoxyCodeLine{00043\ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum}\ \ \ \ \ \ \ \ ticks\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ DECIMAS\ =\ 100\ ,\ SEGUNDOS\ =\ 10\ ,\ MINUTOS\ \ =\ 60\ \};}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_timer_a9cec0a44d98f2898630bb03951269195}{bases\_t}}\ \ \{\ DEC\ ,\ SEG\ ,\ MIN\ ,\ HOR\ \}\ \mbox{\hyperlink{class_timer_a9cec0a44d98f2898630bb03951269195}{bases\_t}};}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_timer_aa7b50436c0c7f6f9b16d7f456af91f25}{erroresTimers\_t}}\ \ \{\ errorTimer\ ,\ OKtimers\ \};}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_timer_a83c5a2b9f40a5207f619f42dff3fc80d}{standby\_t}}\ \ \ \ \ \ \ \ \ \ \{\ RUN\ ,\ PAUSE\ \};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keyword}{volatile}\ uint32\_t\ \ \ \mbox{\hyperlink{class_timer_a2dd85f439d172418dc50d36a1ead5fda}{m\_TmrRun}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keyword}{volatile}\ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \mbox{\hyperlink{class_timer_a4d3f6474c67de284a77c4f69fb36067d}{m\_TmrEvent}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ void\ \ \ \ \ \ \ \ (*\ \mbox{\hyperlink{class_timer_ab4db941b5d3a3ecde10d9302e6db0edc}{m\_TmrHandler}}\ )\ (void);\ \ \ \ \ \ \ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keyword}{volatile}\ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \mbox{\hyperlink{class_timer_a8b6f6f49d9eba6daea47132c8a314e5b}{m\_TmrStandBy}}\ ;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keyword}{volatile}\ \mbox{\hyperlink{class_timer_a9cec0a44d98f2898630bb03951269195}{bases\_t}}\ \ \ \ \ \mbox{\hyperlink{class_timer_ac615667eecadfa52523f296c6b197553}{m\_TmrBase}}\ ;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_timer_a5f16e8da27d2a5a5242dead46de05d97}{Timer}}(\ )\ ;}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_timer_a5f16e8da27d2a5a5242dead46de05d97}{Timer}}\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_timer_a9cec0a44d98f2898630bb03951269195}{bases\_t}}\ base\ ,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{group___drivers_gad8c2afd48cc8eb5c42aacf5d7b9f38dc}{Timer\_Handler}}\ handler\ =\ \textcolor{keyword}{nullptr}\ );}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_timer_a4de6cf13b879de73abc9421fd9fab60d}{TimerStart}}\ (\ uint32\_t\ time,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{group___drivers_gad8c2afd48cc8eb5c42aacf5d7b9f38dc}{Timer\_Handler}}\ handler\ ,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_timer_a9cec0a44d98f2898630bb03951269195}{bases\_t}}\ base\ );}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_timer_a84b5908afad064ed57c12707da8143b7}{SetTimer}}(\ \ uint32\_t\ time\ );}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ uint32\_t\ \ \ \ \mbox{\hyperlink{class_timer_a02d39c7351bc4960e1538c1610746c7b}{GetTimer}}(\ \textcolor{keywordtype}{void}\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_timer_a17c2200e5ebceab3cb70f53dea2da135}{StandByTimer}}(\ \textcolor{keyword}{const}\ uint8\_t\ accion\ );}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_timer_a4d6351689c2a827edcd3ed3a1bb4f971}{SetTimerBase}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_timer_a9cec0a44d98f2898630bb03951269195}{bases\_t}}\ base\ );}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_timer_a4a8fdd11e028684a8b770dd375278462}{TimerStop}}(\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ uint32\_t\ \ \ \ \mbox{\hyperlink{class_timer_a64b2ce2e82d2595ce35556cfccf478b5}{GetTmrRun}}(\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_timer_a7528e58c272cf861d7cf86651c7eb3e5}{SetTmrEvent}}(\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_timer_a18a28d253b6bc7190c5e133290120c22}{ClrTmrEvent}}(\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_timer_ad4586720d311f0c66b400c2a40bab248}{GetTmrEvent}}(\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_timer_a3446cbde556eec707810feeb61575571}{GetmrStandBy}}(\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_timer_a3a01861fc3c838d08d4c783970ae299d}{SetmrStandBy}}(\ uint8\_t\ accion);}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_timer_a2d1ff5791164f492ceb0efe4873bcc37}{SetTmrHandler}}(\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_timer_a4de6cf13b879de73abc9421fd9fab60d}{TimerStart}}(\ uint32\_t\ time\ );}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_timer_a5f16e8da27d2a5a5242dead46de05d97}{Timer}}\&\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_timer_a1f49f895454389919e813ce5bef0d31b}{operator=}}(\ uint32\_t\ t\ );}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_timer_abe02ae6e11a3e5946da7cb7c29cec971}{operator!}}(\ );}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \ \ \ \textcolor{keyword}{operator}\ bool\ ()\ ;}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_timer_a4fc62c4a640fe2f1a93029fedcd64ca7}{operator==}}(\ uint32\_t\ t\ );}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ por\ el\ hecho\ de\ haber\ convertido\ el\ operador\ bool\ como\ explicit}}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ me\ obligo\ a\ realizar\ las\ funciones\ amigas\ del\ operador==}}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ con\ sus\ dos\ prototipos,\ porque\ dejo\ de\ aceptar}}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ la\ promocion\ automatica\ de\ tipos}}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{bool}\ \ \ \ \ \mbox{\hyperlink{class_timer_a4fc62c4a640fe2f1a93029fedcd64ca7}{operator==}}(\ uint32\_t\ t\ ,\ \mbox{\hyperlink{class_timer_a5f16e8da27d2a5a5242dead46de05d97}{Timer}}\ \&T\ );}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Implementacion\ de\ funcion\ virtual\ pura\ heredada}}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_timer_ab1b056629435b57ae6d31323507b9330}{SWhandler}}(\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ int8\_t\ \mbox{\hyperlink{class_timer_ae6215d19df6293b3ed67ee8e796e9724}{TmrEvent}}\ (\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_timer_a5f16e8da27d2a5a5242dead46de05d97}{\string~Timer}}();}
+\DoxyCodeLine{00098\ \};}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ TIMER\_H\ */}\textcolor{preprocessor}{}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

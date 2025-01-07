@@ -51,7 +51,6 @@ I2CMaster::I2CMaster(I2C_Type *I2C_register, Pin *sda, Pin *scl, uint32_t maxRx,
  * \brief Inicializa el I2C.
  * \details Configura todos los registros para el uso del I2C. Configura los clocks, resetea, configura la SWM, configura los registros y las interrupciones.
  * \param clk_freq: frecuencia del clock de transmision a utilizar.
- * \return void
 */
 void I2CMaster::Initialize(uint32_t clk_freq)
 {
@@ -63,7 +62,6 @@ void I2CMaster::Initialize(uint32_t clk_freq)
  * \details Coloca el mensaje indicado en el buffer. Importante, el mensaje debe terminar en \0 (String).
  * \param [in] addr: address del slave al que se comunicara.
  * \param [in] msg: Mensaje a transmitir.
- * \return void
 */
 void I2CMaster::Write(uint8_t addr, const char *msg)
 {
@@ -86,7 +84,6 @@ void I2CMaster::Write(uint8_t addr, const char *msg)
  * \param [in] addr: address del slave al que se comunicara.
  * \param [in] msg: Mensaje a transmitir.
  * \param [in] length: cantidad de bytes a transmitir.
- * \return void
 */
 void I2CMaster::Write(uint8_t addr, const void *msg , uint32_t length)
 {
@@ -108,7 +105,6 @@ void I2CMaster::Write(uint8_t addr, const void *msg , uint32_t length)
  * \details Comienza una comunicacion en modo lectura que no se detiene hasta recibir cant_read bytes. Los bytes leidos se guardaran en el buffer.
  * \param [in] addr: address del slave al que se comunicara.
  * \param [in] cant_read: cantidad de bytes a transmitir.
- * \return void
 */
 void I2CMaster::RequestRead(uint8_t addr , uint32_t cant_read)
 {
@@ -222,7 +218,7 @@ uint8_t I2CMaster::popTx(uint8_t *dato)
 */
 void I2CMaster::I2C_IRQHandler ( void )
 {
-	uint8_t aux;
+	uint8_t aux = '\0';
 	if ( m_cant_rw == 0 )
 	{
 		I2C::Stop();

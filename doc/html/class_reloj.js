@@ -1,7 +1,6 @@
 var class_reloj =
 [
     [ "Reloj", "class_reloj.html#a0966eaa7e7079419049e683bafa7dbc0", null ],
-    [ "~Reloj", "class_reloj.html#a6ede940f0e9302f0eb15d1a2fe37ab6e", null ],
     [ "GetHour", "class_reloj.html#a2963cb1ffc94ac525fb9ed928791565d", null ],
     [ "GetMin", "class_reloj.html#a777744f4eb01420c11661b7f0d7889ca", null ],
     [ "GetSeg", "class_reloj.html#a04d950713551b9cd294392430a545022", null ],

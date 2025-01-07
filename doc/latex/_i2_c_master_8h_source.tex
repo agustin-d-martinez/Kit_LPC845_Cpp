@@ -1,0 +1,69 @@
+\doxysection{I2\+CMaster.\+h}
+\hypertarget{_i2_c_master_8h_source}{}\label{_i2_c_master_8h_source}\index{E:/Agustin/Escritorio/MCUexpresso/KitLPC845-\/C++/src/Drivers/Perifericos/14-\/ComSincronica/I2C/I2CMaster.h@{E:/Agustin/Escritorio/MCUexpresso/KitLPC845-\/C++/src/Drivers/Perifericos/14-\/ComSincronica/I2C/I2CMaster.h}}
+\mbox{\hyperlink{_i2_c_master_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*******************************************************************************************************************************/}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ ***\ MODULO}}
+\DoxyCodeLine{00024\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#ifndef\ I2CMASTER\_H\_}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ I2CMASTER\_H\_}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00033\ \textcolor{comment}{\ ***\ INCLUDES\ GLOBALES}}
+\DoxyCodeLine{00034\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_i2_c_8h}{Perifericos/14-\/ComSincronica/I2C/I2C.h}}>}}
+\DoxyCodeLine{00036\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00037\ \textcolor{comment}{\ ***\ DEFINES\ GLOBALES}}
+\DoxyCodeLine{00038\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00041\ \textcolor{comment}{\ ***\ MACROS\ GLOBALES}}
+\DoxyCodeLine{00042\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00045\ \textcolor{comment}{\ ***\ TIPO\ DE\ DATOS\ GLOBALES}}
+\DoxyCodeLine{00046\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00049\ \textcolor{comment}{\ ***\ VARIABLES\ GLOBALES}}
+\DoxyCodeLine{00050\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00053\ \textcolor{comment}{\ ***\ IMPLANTACION\ DE\ UNA\ CLASE}}
+\DoxyCodeLine{00054\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00060\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_i2_c_master_a792c821f9991226075a0c0c7cf1777ff}{I2CMaster}}\ :\ \textcolor{keyword}{protected}\ \mbox{\hyperlink{class_i2_c_a3f31d647484dfd3cad1aab0be0a5d94b}{I2C}}}
+\DoxyCodeLine{00061\ \{}
+\DoxyCodeLine{00062\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00063\ \ \ \ \ uint8\_t*\ \ \ \ m\_bufferRX;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00064\ \ \ \ \ uint32\_t\ \ \ \ m\_idxRxIn\ ,\ m\_idxRxOut\ ,\ m\_maxRx;\ \ \ \ \ }
+\DoxyCodeLine{00065\ \ \ \ \ uint8\_t*\ \ \ \ m\_bufferTX;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00066\ \ \ \ \ uint32\_t\ \ \ \ m\_idxTxIn\ ,\ m\_idxTxOut\ ,\ m\_maxTx;\ \ \ \ \ }
+\DoxyCodeLine{00067\ \ \ \ \ uint32\_t\ \ \ \ m\_cant\_rw;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \mbox{\hyperlink{class_i2_c_ac5c17ddab3b8696527f355def36e1d07}{I2C\_action\_t}}\ m\_action;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_i2_c_master_a792c821f9991226075a0c0c7cf1777ff}{I2CMaster}}\ \ \ \ \ \ (I2C\_Type*\ I2C\_register\ ,\ \mbox{\hyperlink{class_pin}{Pin}}*\ sda\ ,\ \mbox{\hyperlink{class_pin}{Pin}}*\ scl\ ,\ uint32\_t\ maxRx\ =\ 15,\ uint32\_t\ maxTx\ =\ 15);}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_i2_c_master_a42db0ac922d2fc92c3d95c0686092da6}{Initialize}}\ \ \ \ \ \ \ \ (\ uint32\_t\ clk\_freq\ );}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_i2_c_master_a064675ae9b7a357cba81870eddfc8bec}{Write}}\ \ \ \ \ \ \ \ \ \ (\ uint8\_t\ addr,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\ msg\ );}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_i2_c_master_a064675ae9b7a357cba81870eddfc8bec}{Write}}\ \ \ \ \ \ \ \ \ \ (\ uint8\_t\ addr,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *\ msg\ ,\ uint32\_t\ n\ );}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_i2_c_master_a8f681b870a88c318cd73a1cb9f1caa17}{RequestRead}}\ \ \ \ \ \ (\ uint8\_t\ addr,\ uint32\_t\ cant\_read\ =\ 1\ );}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}*\ \ \ \mbox{\hyperlink{class_i2_c_master_ae67a0de07945cb771102ce7c3896205f}{Read}}\ \ \ \ \ \ \ \ \ \ \ \ (\ \textcolor{keywordtype}{void}\ *\ msg\ ,\ uint32\_t\ n\ );}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_i2_c_master_a4348ec84cb2e5f13f73e7221064610d8}{isIdle}}\ \ \ \ \ \ \ \ \ \ \ \ (\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_i2_c_master_a792c821f9991226075a0c0c7cf1777ff}{\string~I2CMaster}}();}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ I2C\_IRQHandler\ \ (\ \textcolor{keywordtype}{void}\ )\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ pushRx\ \ \ \ \ \ \ \ \ \ (\ uint8\_t\ dato\ );}
+\DoxyCodeLine{00084\ \ \ \ \ uint8\_t\ popRx\ \ \ \ \ \ \ \ \ \ \ (\ uint8\_t\ *\ dato\ );}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ pushTx\ \ \ \ \ \ \ \ \ \ (\ uint8\_t\ dato\ );}
+\DoxyCodeLine{00086\ \ \ \ \ uint8\_t\ popTx\ \ \ \ \ \ \ \ \ \ \ (\ uint8\_t\ *\ dato\ );}
+\DoxyCodeLine{00087\ \};}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ I2CMASTER\_H\_\ */}\textcolor{preprocessor}{}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

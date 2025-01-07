@@ -1,0 +1,55 @@
+\doxysection{Comunicacion\+Asincronica.\+h}
+\hypertarget{_comunicacion_asincronica_8h_source}{}\label{_comunicacion_asincronica_8h_source}\index{E:/Agustin/Escritorio/MCUexpresso/KitLPC845-\/C++/src/Drivers/Perifericos/13-\/UART/ComunicacionAsincronica.h@{E:/Agustin/Escritorio/MCUexpresso/KitLPC845-\/C++/src/Drivers/Perifericos/13-\/UART/ComunicacionAsincronica.h}}
+\mbox{\hyperlink{_comunicacion_asincronica_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*******************************************************************************************************************************/}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ ***\ MODULO}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#ifndef\ COMUNICACIONASINCRONICA\_H\_}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ COMUNICACIONASINCRONICA\_H\_}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00019\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ ***\ INCLUDES\ GLOBALES}}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ "{}tipos.h"{}}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ ***\ DEFINES\ GLOBALES}}
+\DoxyCodeLine{00026\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00029\ \textcolor{comment}{\ ***\ MACROS\ GLOBALES}}
+\DoxyCodeLine{00030\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00033\ \textcolor{comment}{\ ***\ TIPO\ DE\ DATOS\ GLOBALES}}
+\DoxyCodeLine{00034\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00037\ \textcolor{comment}{\ ***\ VARIABLES\ GLOBALES}}
+\DoxyCodeLine{00038\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00041\ \textcolor{comment}{\ ***\ IMPLANTACION\ DE\ UNA\ CLASE}}
+\DoxyCodeLine{00042\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00048\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_comunicacion_asincronica_a711e7bb16713a4ebfd7f71044090531a}{ComunicacionAsincronica}}}
+\DoxyCodeLine{00049\ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{public}:\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_comunicacion_asincronica_a711e7bb16713a4ebfd7f71044090531a}{ComunicacionAsincronica}}()\ =\ \textcolor{keywordflow}{default};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_comunicacion_asincronica_a9d55be4bd6519f1e8b8d6954c75d45e1}{Transmit}}\ (\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\ msg)\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_comunicacion_asincronica_a506361dd86d7300792b5cded1159506e}{Transmit}}\ (\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *\ msg\ ,\ uint32\_t\ n\ )\ =\ 0;\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}*\ \ \ \mbox{\hyperlink{class_comunicacion_asincronica_af260972f1da109c6ab2c2e8d3ef1c559}{Message}}\ (\ \textcolor{keywordtype}{void}\ *\ msg\ ,\ uint32\_t\ n\ )\ =\ 0;\ \ \ \ \ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_comunicacion_asincronica_a03334adab3bab229a1709c721d25cde7}{UART\_IRQHandler}}\ (\textcolor{keywordtype}{void})\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_comunicacion_asincronica_a96a3fc01767f456da0b5b177751a02f3}{\string~ComunicacionAsincronica}}()\ =\ \textcolor{keywordflow}{default};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_comunicacion_asincronica_a01a00859cfa12a971645325e7cfea6d1}{pushRx}}\ (\ uint8\_t\ dato\ )\ =\ 0\ ;\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ uint8\_t\ \mbox{\hyperlink{class_comunicacion_asincronica_a91b0600c6c99e3034d06ad2912594bf2}{popRx}}\ (uint8\_t\ *\ dato\ )\ =\ 0\ ;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_comunicacion_asincronica_af981e1ede12e7af2334eb6ae08948fbf}{pushTx}}\ (\ uint8\_t\ dato\ )\ =\ 0\ ;\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ uint8\_t\ \mbox{\hyperlink{class_comunicacion_asincronica_aef7119239e6601ca6d88d8226ec53f2f}{popTx}}\ (uint8\_t\ *\ dato\ )\ =\ 0\ ;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00062\ \};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ COMUNICACIONASINCRONICA\_H\_\ */}\textcolor{preprocessor}{}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

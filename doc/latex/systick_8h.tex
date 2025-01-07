@@ -1,27 +1,27 @@
-\hypertarget{systick_8h}{}\doxysection{E\+:/\+Agustin/\+Escritorio/\+M\+C\+Uexpresso/\+Kit\+L\+P\+C845-\/\+C++/src/\+Firmware/systick.h File Reference}
-\label{systick_8h}\index{E:/Agustin/Escritorio/MCUexpresso/KitLPC845-\/C++/src/Firmware/systick.h@{E:/Agustin/Escritorio/MCUexpresso/KitLPC845-\/C++/src/Firmware/systick.h}}
+\doxysection{E\+:/\+Agustin/\+Escritorio/\+MCUexpresso/\+Kit\+LPC845-\/\+C++/src/\+Firmware/systick.h File Reference}
+\hypertarget{systick_8h}{}\label{systick_8h}\index{E:/Agustin/Escritorio/MCUexpresso/KitLPC845-\/C++/src/Firmware/systick.h@{E:/Agustin/Escritorio/MCUexpresso/KitLPC845-\/C++/src/Firmware/systick.h}}
 
 
 Firmware del systick.  
 
 
-{\ttfamily \#include $<$L\+P\+C845.\+h$>$}\newline
+{\ttfamily \#include $<$LPC845.\+h$>$}\newline
+{\ttfamily \#include $<$tipos.\+h$>$}\newline
 {\ttfamily \#include $<$Perifericos/06-\/\+Callback/\+Callback.\+h$>$}\newline
 {\ttfamily \#include $<$vector$>$}\newline
 Include dependency graph for systick.\+h\+:
 % FIG 0
 This graph shows which files directly or indirectly include this file\+:
 % FIG 1
-\doxysubsection*{Functions}
+\doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 uint32\+\_\+t \mbox{\hyperlink{systick_8h_a358827c0df41d4e5a22f7a44ffbb1f67}{Inicializar\+\_\+\+Sys\+Tick}} (uint32\+\_\+t freq)
 \begin{DoxyCompactList}\small\item\em Inicializa el systick en la frecuencia asignada. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Variables}
+\doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{systick_8h_a32d8060eb5229ac54910ad385ec849fa}\label{systick_8h_a32d8060eb5229ac54910ad385ec849fa}} 
-uint32\+\_\+t {\bfseries g\+\_\+systick\+\_\+freq}
+uint32\+\_\+t \mbox{\hyperlink{systick_8h_a32d8060eb5229ac54910ad385ec849fa}{g\+\_\+systick\+\_\+freq}}
 \end{DoxyCompactItemize}
 
 
@@ -37,11 +37,11 @@ Marcelo
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{systick_8h_a358827c0df41d4e5a22f7a44ffbb1f67}\label{systick_8h_a358827c0df41d4e5a22f7a44ffbb1f67}} 
-\index{systick.h@{systick.h}!Inicializar\_SysTick@{Inicializar\_SysTick}}
+\Hypertarget{systick_8h_a358827c0df41d4e5a22f7a44ffbb1f67}\index{systick.h@{systick.h}!Inicializar\_SysTick@{Inicializar\_SysTick}}
 \index{Inicializar\_SysTick@{Inicializar\_SysTick}!systick.h@{systick.h}}
 \doxysubsubsection{\texorpdfstring{Inicializar\_SysTick()}{Inicializar\_SysTick()}}
-{\footnotesize\ttfamily uint32\+\_\+t Inicializar\+\_\+\+Sys\+Tick (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{freq }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{systick_8h_a358827c0df41d4e5a22f7a44ffbb1f67} 
+uint32\+\_\+t Inicializar\+\_\+\+Sys\+Tick (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{freq}{}\end{DoxyParamCaption})}
 
 
 
@@ -49,9 +49,19 @@ Inicializa el systick en la frecuencia asignada.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em ticks} & ticks por segundo \\
+\mbox{\texttt{ in}}  & {\em freq} & ticks por segundo \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 mensaje de error 
 \end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{systick_8h_a32d8060eb5229ac54910ad385ec849fa}\index{systick.h@{systick.h}!g\_systick\_freq@{g\_systick\_freq}}
+\index{g\_systick\_freq@{g\_systick\_freq}!systick.h@{systick.h}}
+\doxysubsubsection{\texorpdfstring{g\_systick\_freq}{g\_systick\_freq}}
+{\footnotesize\ttfamily \label{systick_8h_a32d8060eb5229ac54910ad385ec849fa} 
+uint32\+\_\+t g\+\_\+systick\+\_\+freq\hspace{0.3cm}{\ttfamily [extern]}}
+
+Variable global. Posee la frecuencia del systick configurada. 

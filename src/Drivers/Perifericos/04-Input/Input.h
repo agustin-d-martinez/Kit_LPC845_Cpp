@@ -58,7 +58,7 @@
 		Input( port_t puerto , uint8_t bit , mode_t modo , activity_t actividad = high , uint8_t MaxBounce = MAX_BOUNCE );
 		void Inicializar ( void );
 		uint8_t get ( void );
-		void SWhandler ( void );
+		void SWhandler ( void ) override;
 		bool operator== ( uint8_t val );
 		bool operator!= ( uint8_t val );
 		/**

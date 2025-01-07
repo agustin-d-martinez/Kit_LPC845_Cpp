@@ -43,7 +43,6 @@
  * \fn void I4017::SetReset( void )
  * \brief Resetea el I4017.
  * \details El I4017 vuelve al valor 0 de salida por enviar un pulso a la pata de Reset.
- * \return void
 */
 void I4017::SetReset( void )
 {
@@ -56,7 +55,6 @@ void I4017::SetReset( void )
  * \fn void I4017::SetClock( void )
  * \brief Enciende la pata clock.
  * \details El I4017 aumenta en 1 la salida al recibir un pulso de clock.
- * \return void
 */
 void I4017::SetClock( void )
 {
@@ -70,7 +68,6 @@ void I4017::SetClock( void )
  * \fn void I4017::SetDigito( void )
  * \brief Función de cambio en el barrido.
  * \details Se mueve 1 en el barrido de bits.
- * \return void
 */
 void I4017::SetDigito( void )
 {
@@ -85,7 +82,6 @@ void I4017::SetDigito( void )
  * \fn void I4017::Inicializar ( void )
  * \brief Función de Inicialización del I4017.
  * \details
- * \return void
 */
 void I4017::Inicializar ( void )
 {

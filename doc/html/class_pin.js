@@ -1,7 +1,7 @@
 var class_pin =
 [
-    [ "error_t", "class_pin.html#a4602d6cf34a50bc3387f7a5abbc8a0cd", null ],
-    [ "port_t", "class_pin.html#aa904847fa083300f96285b07c0a29a4c", null ],
+    [ "error_t", "class_pin.html#a61c56e71b812002f25577142438629d2", null ],
+    [ "port_t", "class_pin.html#a4ab61a1ba0455431c9a7addaaf66c8c8", null ],
     [ "error_t", "class_pin.html#a769192ed18c015e200739593f02b22db", [
       [ "error", "class_pin.html#a769192ed18c015e200739593f02b22dbaad2584260f96fc335200e2c75ba4b4f5", null ],
       [ "ok", "class_pin.html#a769192ed18c015e200739593f02b22dba07c84491a37b6d8d82042f9a1d0bf72f", null ]
@@ -15,7 +15,6 @@ var class_pin =
       [ "port1", "class_pin.html#a02483eba92e68e4230f8aa883e0a25fea631197f960ffc7a9baacc3d8a6ba4ebe", null ]
     ] ],
     [ "Pin", "class_pin.html#a063b07c7607e031318ca024b75a6f0cf", null ],
-    [ "~Pin", "class_pin.html#ab86af668f577dc4c39d7e191f9c157bd", null ],
     [ "m_bit", "class_pin.html#ace5aec3417e8217310a82244b1a17db5", null ],
     [ "m_error", "class_pin.html#a4a1dd37e2f8dbe13fe4121d88dd2bab5", null ],
     [ "m_port", "class_pin.html#a2660d84228a8ca714d61f4752eb4c4fb", null ]

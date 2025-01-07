@@ -61,10 +61,10 @@ Timer::Timer()
 }
 /**
  * \fn Timer::Timer( const bases_t base , const Timer_Handler handler )
- * \brief Constructor de clase timer
- * \details Crea un timer con los parámetros correspondientes
- * \param [in] handler: Funcion a ejecutar en caso de expirar
- * \param [in] base: Base de tiempo del timer
+ * \brief Constructor de clase timer.
+ * \details Crea un timer con los parámetros correspondientes.
+ * \param [in] handler: Funcion a ejecutar en caso de expirar.
+ * \param [in] base: Base de tiempo del timer.
 */
 Timer::Timer( const bases_t base , const Timer_Handler handler  )
 {
@@ -83,9 +83,8 @@ Timer::~Timer()
 }
 /**
  * \fn void Timer::SetTmrHandler( void )
- * \brief Ejecuta el timer Handler
+ * \brief Ejecuta el timer Handler.
  * \details Llama a la función handler entregada por el constructor (siempe que no sea nullptr).
- * \return void
 */
 void Timer::SetTmrHandler()
 {
@@ -95,10 +94,9 @@ void Timer::SetTmrHandler()
 
 /**
  * \fn void Timer::SetTimerBase( const bases_t_t base )
- * \brief Setea la base de tiempo
- * \details Fija la base de tiempo entre todos los posibles de bases_t
- * \param [in] base: Base de tiempo a tulizar
- * \return void
+ * \brief Setea la base de tiempo.
+ * \details Fija la base de tiempo entre todos los posibles de bases_t.
+ * \param [in] base: Base de tiempo a utilizar.
 */
 void Timer::SetTimerBase( const bases_t base )
 {
@@ -108,12 +106,11 @@ void Timer::SetTimerBase( const bases_t base )
 
 /**
  * \fn void Timer::TimerStart( uint32_t time, const Timer_Handler handler , const bases_t base )
- * \brief Inicia un timer
- * \details Inicia el timer y al transcurrir el tiempo especificado por y time se llama a la funcion apuntada por handler
- * \param [in] time: Tiempo del evento. Dependiente de la base de tiempos
- * \param [in] handler: Callback del evento
- * \param [in] base: de tiempo
- * \return void
+ * \brief Inicia un timer.
+ * \details Inicia el timer y al transcurrir el tiempo especificado por y time se llama a la funcion apuntada por handler.
+ * \param [in] time: Tiempo del evento. Dependiente de la base de tiempos.
+ * \param [in] handler: Callback del evento.
+ * \param [in] base: de tiempo.
 */
 void Timer::TimerStart( uint32_t time, const Timer_Handler handler , const bases_t base )
 {
@@ -150,10 +147,9 @@ void Timer::TimerStart( uint32_t time, const Timer_Handler handler , const bases
 }
 /**
  * \fn void Timer::TimerStart( uint32_t time )
- * \brief Inicia un timer
- * \details Inicia el timer y al transcurrir el tiempo especificado se llama a la funcion apuntada por handler
- * \param [in] time: Tiempo del evento. Dependiente de la base de tiempos
- * \return void
+ * \brief Inicia un timer.
+ * \details Inicia el timer y al transcurrir el tiempo especificado se llama a la funcion apuntada por handler.
+ * \param [in] time: Tiempo del evento. Dependiente de la base de tiempos.
 */
 void Timer::TimerStart( uint32_t time )
 {
@@ -189,10 +185,9 @@ void Timer::TimerStart( uint32_t time )
 
 /**
  * \fn void Timer::SetTimer( timer_t time )
- * \brief Inicia un timer
- * \details Reinicia el timer con el valor t (no lo resetea)
- * \param [in] time: time Tiempo del evento. Dependiente de la base de tiempos
- * \return void
+ * \brief Inicia un timer.
+ * \details Reinicia el timer con el valor t (no lo resetea).
+ * \param [in] time: time Tiempo del evento. Dependiente de la base de tiempos.
 */
 void Timer::SetTimer( uint32_t time )
 {
@@ -218,9 +213,9 @@ void Timer::SetTimer( uint32_t time )
 
 /**
  * \fn  Timer::GetTimer( void ) const
- * \brief Toma el valor al vuelo del timer en cuestion
- * \details Lee el timer al vuelo
- * \return void
+ * \brief Toma el valor al vuelo del timer en cuestion.
+ * \details Lee el timer al vuelo.
+ * \return uint32_t: valor del timer.
 */
 uint32_t Timer::GetTimer( void ) const
 {
@@ -247,10 +242,9 @@ uint32_t Timer::GetTimer( void ) const
 
 /**
  * \fn  Timer::StandByTimer( uint8_t accion )
- * \brief Detiene/Arranca el timer, NO lo resetea
- * \details lo pone o lo saca de stand by
- * \param [in] accion: RUN lo arranca, PAUSE lo pone en stand by
- * \return void
+ * \brief Detiene/Arranca el timer, NO lo resetea.
+ * \details lo pone o lo saca de stand-by.
+ * \param [in] accion: RUN lo arranca, PAUSE lo pone en stand-by.
 */
 void Timer::StandByTimer( const uint8_t accion )
 {
@@ -261,8 +255,8 @@ void Timer::StandByTimer( const uint8_t accion )
 
 /**
  * \fn void Timer::TimerStop( void )
- * \brief Detiene el timer
- * \return void
+ * \brief Detiene el timer.
+ * \details
 */
 void Timer::TimerStop( void )
 {
@@ -274,8 +268,8 @@ void Timer::TimerStop( void )
 }
 /**
  * \fn void Timer::SWhandler( void )
- * \brief Decremento periodico del timer. Debe ser llamada periodicamente con la base de tiempos
- * \return void
+ * \brief Decremento periodico del timer. Debe ser llamada periodicamente con la base de tiempos.
+ * \details
 */
 void Timer::SWhandler( void )
 {
@@ -292,10 +286,10 @@ void Timer::SWhandler( void )
 
 /**
  * \fn bool Timer::operator==( uint32_t ev )
- * \brief Sobrecarga de del operador de comparacion
- * \details compara un valor numerico contra el flag de finalizacion del timer
- * \param [in] ev: valor de comparacion (para verificar si vencio el timer)
- * \return bool: true por coincidencia, false por no coincidencia
+ * \brief Sobrecarga de del operador de comparacion.
+ * \details compara un valor numerico contra el flag de finalizacion del timer.
+ * \param [in] ev: valor de comparacion (para verificar si vencio el timer).
+ * \return bool: true por coincidencia, false por no coincidencia.
 */
 bool Timer::operator==( uint32_t ev )
 {
@@ -321,9 +315,9 @@ bool operator==( uint32_t t , Timer &T  )
 }
 /**
  * \fn Timer& Timer::operator=( uint32_t time )
- * \brief Sobrecarga de del operador de asignacion
- * \param  [in] time: Valor a asignar a la variable de teporizacion
- * \return una referencia al propio objeto
+ * \brief Sobrecarga de del operador de asignacion.
+ * \param  [in] time: Valor a asignar a la variable de teporizacion.
+ * \return una referencia al propio objeto.
 */
 Timer& Timer::operator=( uint32_t time )
 {
@@ -339,9 +333,9 @@ Timer& Timer::operator=( uint32_t time )
 
 /**
  * \fn bool  Timer::operator!( )
- * \brief Sobrecarga de del operador de negacion
+ * \brief Sobrecarga de del operador de negacion.
  * \details
- * \return true por timer no vencido y false por vencido
+ * \return true por timer no vencido y false por vencido.
 */
 bool  Timer::operator!( )
 {
@@ -349,9 +343,9 @@ bool  Timer::operator!( )
 }
 /**
  * \fn bool  Timer::operator bool ()
- * \brief Sobrecarga de del operador de contenido
+ * \brief Sobrecarga de del operador de contenido.
  * \details
- * \return true por timer vencido y false por no vencido
+ * \return true por timer vencido y false por no vencido.
 */
 Timer::operator bool ()
 {
@@ -390,7 +384,6 @@ Timer::operator bool ()
  * \fn  void Timer::SetTmrEvent( void )
  * \brief Setea el evento del timer.
  * \details
- * \return void.
  */
  void Timer::SetTmrEvent( void )
  {
@@ -400,7 +393,6 @@ Timer::operator bool ()
  * \fn void Timer::ClrTmrEvent( void )
  * \brief Limpia el evento del timer.
  * \details
- * \return void
  */
  void Timer::ClrTmrEvent( void )
  {
@@ -431,7 +423,6 @@ Timer::operator bool ()
  * \brief Detiene el timer sin apagarlo.
  * \details
  * \param [in] accion: si lo detiene o no.
- * \return void.
  */
  void Timer::SetmrStandBy( uint8_t accion)
  {

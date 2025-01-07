@@ -1,0 +1,87 @@
+\doxysection{DAC.\+h}
+\hypertarget{_d_a_c_8h_source}{}\label{_d_a_c_8h_source}\index{E:/Agustin/Escritorio/MCUexpresso/KitLPC845-\/C++/src/Drivers/Perifericos/11-\/DAC/DAC.h@{E:/Agustin/Escritorio/MCUexpresso/KitLPC845-\/C++/src/Drivers/Perifericos/11-\/DAC/DAC.h}}
+\mbox{\hyperlink{_d_a_c_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*******************************************************************************************************************************/}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ ***\ MODULO}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#ifndef\ DAC\_H\_}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ DAC\_H\_}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00018\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ ***\ INCLUDES\ GLOBALES}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_pin_8h}{Perifericos/01-\/Pin/Pin.h}}>}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ "{}LPC845.h"{}}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ "{}tipos.h"{}}}
+\DoxyCodeLine{00024\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ ***\ DEFINES\ GLOBALES}}
+\DoxyCodeLine{00026\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00029\ \textcolor{comment}{\ ***\ MACROS\ GLOBALES}}
+\DoxyCodeLine{00030\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00033\ \textcolor{comment}{\ ***\ TIPO\ DE\ DATOS\ GLOBALES}}
+\DoxyCodeLine{00034\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00037\ \textcolor{comment}{\ ***\ VARIABLES\ GLOBALES}}
+\DoxyCodeLine{00038\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00041\ \textcolor{comment}{\ ***\ IMPLANTACION\ DE\ LA\ CLASE}}
+\DoxyCodeLine{00042\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00052\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_d_a_c_a45d6108230365ffdd146518ba44f224f}{DAC}}\ :\ \textcolor{keyword}{protected}\ \mbox{\hyperlink{class_pin_a063b07c7607e031318ca024b75a6f0cf}{Pin}}}
+\DoxyCodeLine{00053\ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ MAX\_DAC\_CHANNEL\ \ \ \ \ (2)}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ MAX\_DAC\_VALUE\ \ \ \ \ \ \ \ \ \ \ (0x3FF)}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{class_d_a_c_a9560ddef55af03b248f1ee0a47075275}{dac\_channel}}\ \{\ DAC\_CHANNEL\_0\ =\ 0\ ,\ DAC\_CHANNEL\_1\ =\ 1\ \}\ \mbox{\hyperlink{class_d_a_c_a9560ddef55af03b248f1ee0a47075275}{dac\_channel}};}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{class_d_a_c_a5f499c13c400fb60572ce0b7d3a0be73}{dac\_error}}\ \{\ ERROR\ =\ -\/1\ ,\ OK\ =\ 0\ \}\ \mbox{\hyperlink{class_d_a_c_a5f499c13c400fb60572ce0b7d3a0be73}{dac\_error}};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum}\ OFFSET\ \{\ SWM\_DACOUT0\ =\ 26\ ,\ SWM\_DACOUT1\ =\ 27\ ,\ SYS\_DACOUT0\ =\ 27\ ,\ SYS\_DACOUT1\ =\ 1\ ,\ IOCON\_DAC\ =\ 16\};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_d_a_c_a9560ddef55af03b248f1ee0a47075275}{dac\_channel}}\ m\_dac\_channel;\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ uint32\_t\ m\_buffer;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ uint32\_t\ m\_max\_range;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_d_a_c_a5f499c13c400fb60572ce0b7d3a0be73}{dac\_error}}\ m\_error;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_d_a_c_a45d6108230365ffdd146518ba44f224f}{DAC}}(\ \mbox{\hyperlink{class_d_a_c_a9560ddef55af03b248f1ee0a47075275}{dac\_channel}}\ channel\ ,\ uint32\_t\ max\_range\ =\ \mbox{\hyperlink{_d_a_c_8h_ae191bd669b0350508de8f1066229c809}{MAX\_DAC\_VALUE}}\ );}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_d_a_c_a5f499c13c400fb60572ce0b7d3a0be73}{DAC::dac\_error}}\ \mbox{\hyperlink{class_d_a_c_a3a8c6ad5c3035087787584c8054fc073}{Inicializar}}\ (\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_d_a_c_a42cdf9cb502fc8234a0b9698acada507}{Set}}\ (\ uint32\_t\ val\ );}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ uint32\_t\ \mbox{\hyperlink{class_d_a_c_a3f9efa0d5af1b6a308027a798be02a57}{Get}}\ (\ \textcolor{keywordtype}{void}\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_d_a_c_af0c5969c5ac8d8a10ab06e35f1b12c66}{SetMaxRange}}\ (\ uint32\_t\ max\_range\ );}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ uint32\_t\ \mbox{\hyperlink{class_d_a_c_a4d2ecd1ae0ae5866257018072d923ac3}{GetMaxRange}}\ (\ \textcolor{keywordtype}{void}\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_d_a_c_a45d6108230365ffdd146518ba44f224f}{DAC}}\&\ \mbox{\hyperlink{class_d_a_c_af3bcc3ecf987cc1a13520253e876155a}{operator=\ }}(\ uint32\_t\ val\ );}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_d_a_c_afdcebcde389be5087c67e90f22612ba3}{operator==\ }}(\ uint32\_t\ val\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_d_a_c_a3d6022ab240c44446f15592056e5bf84}{operator<\ }}(\ uint32\_t\ val\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_d_a_c_a1208b1ed85f07f4521ca4edec1854dc6}{operator<=\ }}(\ uint32\_t\ val\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_d_a_c_a7983314f92ba3c948c154269255cfbf9}{operator>\ }}(\ uint32\_t\ val\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_d_a_c_a1c05f3c9ca7ceb8adb44c276e33ff31a}{operator>=\ }}(\ uint32\_t\ val\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_d_a_c_a77a8287cdab41a4894d2693a77d1d6b9}{operator!=\ }}(\ uint32\_t\ val\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_d_a_c_a2a8f4f13338b7020e63c1ea04874e8a1}{\string~DAC}}();\ \ \ \ \ }
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ PowerDAC(\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ EnableClock\ (\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ EnableSWM\ (\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ EnableIOCONDAC(\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ UnPowerDAC\ (\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ DisableClock\ (\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ DisableSWM\ (\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ DisableIOCONDAC(\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00103\ \};}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ DAC\_H\_\ */}\textcolor{preprocessor}{}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

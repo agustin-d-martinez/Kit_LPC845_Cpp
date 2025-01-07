@@ -68,15 +68,15 @@ class gpio : public InOut , public Pin
 	public:
 		gpio ( port_t port , uint8_t bit , mode_t mode , direction_t direction , activity_t activity = high );
 
-		uint8_t SetPin ( void );
-		uint8_t ClrPin ( void );
-		uint8_t SetTogglePin ( void ) ;
-		uint8_t SetDir ( void );
-		uint8_t SetToggleDir ( void ) ;
-		uint8_t GetPin ( void );
-		uint8_t SetPinMode ( void ) ;
-		uint8_t SetPinResistor ( void ) ;
-		gpio& operator= ( uint8_t a );
+		uint8_t SetPin ( void ) override;
+		uint8_t ClrPin ( void ) override;
+		uint8_t SetTogglePin ( void ) override;
+		uint8_t SetDir ( void ) override;
+		uint8_t SetToggleDir ( void ) override;
+		uint8_t GetPin ( void ) override;
+		uint8_t SetPinMode ( void ) override;
+		uint8_t SetPinResistor ( void ) override;
+		gpio& 	operator= ( uint8_t a );
 
 		virtual ~gpio() = default;		/**< Destructor por defecto */
 };

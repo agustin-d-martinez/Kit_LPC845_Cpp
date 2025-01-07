@@ -1,64 +1,117 @@
-\hypertarget{class_i2_c_master}{}\doxysection{I2\+C\+Master Class Reference}
-\label{class_i2_c_master}\index{I2CMaster@{I2CMaster}}
+\doxysection{I2\+CMaster Class Reference}
+\hypertarget{class_i2_c_master}{}\label{class_i2_c_master}\index{I2CMaster@{I2CMaster}}
 
 
-Clase del objeto \mbox{\hyperlink{class_i2_c_master}{I2\+C\+Master}} El objeto \mbox{\hyperlink{class_i2_c_master}{I2\+C\+Master}} genera una comunicación tipo master de \mbox{\hyperlink{class_i2_c}{I2C}} utilizando buffers de recepcion y transmision con interrupciones.  
-
-
-
-
-{\ttfamily \#include $<$I2\+C\+Master.\+h$>$}
+Clase del objeto \doxylink{class_i2_c_master}{I2\+CMaster} El objeto \doxylink{class_i2_c_master}{I2\+CMaster} genera una comunicación tipo master de \doxylink{class_i2_c}{I2C} utilizando buffers de recepcion y transmision con interrupciones.  
 
 
 
-Inheritance diagram for I2\+C\+Master\+:
+
+{\ttfamily \#include $<$I2\+CMaster.\+h$>$}
+
+
+
+Inheritance diagram for I2\+CMaster\+:
 % FIG 0
 
 
-Collaboration diagram for I2\+C\+Master\+:
+Collaboration diagram for I2\+CMaster\+:
 % FIG 1
-\doxysubsection*{Public Member Functions}
+\doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_i2_c_master_a792c821f9991226075a0c0c7cf1777ff}{I2\+C\+Master}} (I2\+C\+\_\+\+Type $\ast$I2\+C\+\_\+register, \mbox{\hyperlink{class_pin}{Pin}} $\ast$sda, \mbox{\hyperlink{class_pin}{Pin}} $\ast$scl, uint32\+\_\+t max\+Rx=15, uint32\+\_\+t max\+Tx=15)
-\begin{DoxyCompactList}\small\item\em Constructor de la clase \mbox{\hyperlink{class_i2_c_master}{I2\+C\+Master}}. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_i2_c_master_a42db0ac922d2fc92c3d95c0686092da6}\label{class_i2_c_master_a42db0ac922d2fc92c3d95c0686092da6}} 
-void {\bfseries Initialize} (uint32\+\_\+t clk\+\_\+freq)
-\item 
-void \mbox{\hyperlink{class_i2_c_master_a064675ae9b7a357cba81870eddfc8bec}{Write}} (uint8\+\_\+t addr, const char $\ast$msg)
+\mbox{\hyperlink{class_i2_c_master_a792c821f9991226075a0c0c7cf1777ff}{I2\+CMaster}} (I2\+C\+\_\+\+Type \texorpdfstring{$\ast$}{*}I2\+C\+\_\+register, \mbox{\hyperlink{class_pin}{Pin}} \texorpdfstring{$\ast$}{*}sda, \mbox{\hyperlink{class_pin}{Pin}} \texorpdfstring{$\ast$}{*}scl, uint32\+\_\+t max\+Rx=15, uint32\+\_\+t max\+Tx=15)
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxylink{class_i2_c_master}{I2\+CMaster}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i2_c_master_a42db0ac922d2fc92c3d95c0686092da6}{Initialize}} (uint32\+\_\+t clk\+\_\+freq)
+\begin{DoxyCompactList}\small\item\em Inicializa el \doxylink{class_i2_c}{I2C}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i2_c_master_a064675ae9b7a357cba81870eddfc8bec}{Write}} (uint8\+\_\+t addr, const char \texorpdfstring{$\ast$}{*}msg)
 \begin{DoxyCompactList}\small\item\em Transmite el mensaje indicado. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_i2_c_master_a21fdb2737b7101948fded5c61afe3dfd}{Write}} (uint8\+\_\+t addr, const void $\ast$msg, uint32\+\_\+t n)
+void \mbox{\hyperlink{class_i2_c_master_a21fdb2737b7101948fded5c61afe3dfd}{Write}} (uint8\+\_\+t addr, const void \texorpdfstring{$\ast$}{*}msg, uint32\+\_\+t n)
 \begin{DoxyCompactList}\small\item\em Transmite length cantidad de bytes del mensaje indicado. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_i2_c_master_a8f681b870a88c318cd73a1cb9f1caa17}{Request\+Read}} (uint8\+\_\+t addr, uint32\+\_\+t cant\+\_\+read=1)
 \begin{DoxyCompactList}\small\item\em Inicia una comunicacion de lectura. \end{DoxyCompactList}\item 
-void $\ast$ \mbox{\hyperlink{class_i2_c_master_ae67a0de07945cb771102ce7c3896205f}{Read}} (void $\ast$msg, uint32\+\_\+t n)
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_i2_c_master_ae67a0de07945cb771102ce7c3896205f}{Read}} (void \texorpdfstring{$\ast$}{*}msg, uint32\+\_\+t n)
 \begin{DoxyCompactList}\small\item\em Lee el buffer de recepcion. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_i2_c_master_a4348ec84cb2e5f13f73e7221064610d8}{is\+Idle}} (void)
-\begin{DoxyCompactList}\small\item\em Indica si el \mbox{\hyperlink{class_i2_c}{I2C}} esta en reposo o no. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Additional Inherited Members}
+\begin{DoxyCompactList}\small\item\em Indica si el \doxylink{class_i2_c}{I2C} esta en reposo o no. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Types inherited from \mbox{\hyperlink{class_i2_c}{I2C}}}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_i2_c_a338cf62e8394d98481d5c646750902fd}\label{class_i2_c_a338cf62e8394d98481d5c646750902fd} 
+enum \mbox{\hyperlink{class_i2_c_a338cf62e8394d98481d5c646750902fd}{I2\+C\+\_\+mode\+\_\+t}} \{ {\bfseries master} = 1
+, {\bfseries slave} = 2
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeracion. Modo del \doxylink{class_i2_c}{I2C}. Puede ser master o slave. \end{DoxyCompactList}\item 
+\Hypertarget{class_i2_c_ac5c17ddab3b8696527f355def36e1d07}\label{class_i2_c_ac5c17ddab3b8696527f355def36e1d07} 
+enum \mbox{\hyperlink{class_i2_c_ac5c17ddab3b8696527f355def36e1d07}{I2\+C\+\_\+action\+\_\+t}} \{ {\bfseries write} = 0
+, {\bfseries read} = 1
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeracion. Acciones del \doxylink{class_i2_c}{I2C}. Pueden ser leer o escribir (write o read). \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_i2_c_a927222878c117a4278938c82da47e2e6}{I2\+C\+\_\+states\+\_\+t}} \{ \newline
+{\bfseries idle} = 0
+, {\bfseries rx\+\_\+data} = 1
+, {\bfseries tx\+\_\+ready}
+, {\bfseries NACK\+\_\+addr}
+, \newline
+{\bfseries NACK\+\_\+tx}
+, {\bfseries slvst\+\_\+addr} = 0
+, {\bfseries slvst\+\_\+rx}
+, {\bfseries slvst\+\_\+tx}
+, \newline
+{\bfseries busy} = 10
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeracion. Estados del \doxylink{class_i2_c}{I2C}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_i2_c}{I2C}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_i2_c_a3f31d647484dfd3cad1aab0be0a5d94b}{I2C}} (I2\+C\+\_\+\+Type \texorpdfstring{$\ast$}{*}I2\+C\+\_\+register, \mbox{\hyperlink{class_pin}{Pin}} \texorpdfstring{$\ast$}{*}sda, \mbox{\hyperlink{class_pin}{Pin}} \texorpdfstring{$\ast$}{*}scl, \mbox{\hyperlink{class_i2_c_a338cf62e8394d98481d5c646750902fd}{I2\+C\+\_\+mode\+\_\+t}} mode=master, uint8\+\_\+t slv\+\_\+addr=0)
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxylink{class_i2_c}{I2C}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i2_c_acdae33cb48da5060e31d28e6610c6eb1}{Initialize}} (uint32\+\_\+t clk\+\_\+freq)
+\begin{DoxyCompactList}\small\item\em Inicializa el \doxylink{class_i2_c}{I2C}. \end{DoxyCompactList}\item 
+void {\bfseries Enable\+Interupt} (void)
+\begin{DoxyCompactList}\small\item\em Habilita la interrupcion. \end{DoxyCompactList}\item 
+void {\bfseries Disable\+Interupt} (void)
+\begin{DoxyCompactList}\small\item\em Deshabilita la interrupcion. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i2_c_a2dc26ca2bde6fa9896cbe31d3909412e}{Start}} (uint8\+\_\+t addr, \mbox{\hyperlink{class_i2_c_ac5c17ddab3b8696527f355def36e1d07}{I2\+C\+\_\+action\+\_\+t}} action)
+\begin{DoxyCompactList}\small\item\em Inicia una comunicacion \doxylink{class_i2_c}{I2C}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i2_c_a5d3e0b1de395932284e2e010a0160b5f}{Stop}} (void)
+\begin{DoxyCompactList}\small\item\em Detiene la comunicacion. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i2_c_a01998f88940804c81ca1c528b724a365}{Write}} (uint8\+\_\+t data) override
+\begin{DoxyCompactList}\small\item\em Escribe un valor a un slave. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_i2_c}{I2C}} \& \mbox{\hyperlink{class_i2_c_a8471212350221fb2a58a3cfbc469c67a}{operator=}} (uint8\+\_\+t data)
+\begin{DoxyCompactList}\small\item\em Sobrecarga del operador = (igual). \end{DoxyCompactList}\item 
+int8\+\_\+t \mbox{\hyperlink{class_i2_c_a2e56aa888fba64968af2ab08382c76af}{Read}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}data, bool continue\+\_\+reading)
+\begin{DoxyCompactList}\small\item\em Lee un valor recibido. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i2_c_a11319f49316d58882041059ce765f5e5}{ACK}} (bool a)
+\begin{DoxyCompactList}\small\item\em Envia un Acknowledge. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_i2_c_a23ed9d7e6162b81f42559767e7f668ca}{ACKaddr}} (void)
+\begin{DoxyCompactList}\small\item\em Acknowledge especial del address. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_i2_c_a927222878c117a4278938c82da47e2e6}{I2\+C\+\_\+states\+\_\+t}} \mbox{\hyperlink{class_i2_c_ab4d30ac9140fb1959ba849f437b6eacc}{Get\+State}} (void)
+\begin{DoxyCompactList}\small\item\em Regresa el estado del \doxylink{class_i2_c}{I2C}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Clase del objeto \mbox{\hyperlink{class_i2_c_master}{I2\+C\+Master}} El objeto \mbox{\hyperlink{class_i2_c_master}{I2\+C\+Master}} genera una comunicación tipo master de \mbox{\hyperlink{class_i2_c}{I2C}} utilizando buffers de recepcion y transmision con interrupciones. 
+Clase del objeto \doxylink{class_i2_c_master}{I2\+CMaster} El objeto \doxylink{class_i2_c_master}{I2\+CMaster} genera una comunicación tipo master de \doxylink{class_i2_c}{I2C} utilizando buffers de recepcion y transmision con interrupciones. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_i2_c_master_a792c821f9991226075a0c0c7cf1777ff}\label{class_i2_c_master_a792c821f9991226075a0c0c7cf1777ff}} 
-\index{I2CMaster@{I2CMaster}!I2CMaster@{I2CMaster}}
+\Hypertarget{class_i2_c_master_a792c821f9991226075a0c0c7cf1777ff}\index{I2CMaster@{I2CMaster}!I2CMaster@{I2CMaster}}
 \index{I2CMaster@{I2CMaster}!I2CMaster@{I2CMaster}}
 \doxysubsubsection{\texorpdfstring{I2CMaster()}{I2CMaster()}}
-{\footnotesize\ttfamily I2\+C\+Master\+::\+I2\+C\+Master (\begin{DoxyParamCaption}\item[{I2\+C\+\_\+\+Type $\ast$}]{I2\+C\+\_\+register,  }\item[{\mbox{\hyperlink{class_pin}{Pin}} $\ast$}]{sda,  }\item[{\mbox{\hyperlink{class_pin}{Pin}} $\ast$}]{scl,  }\item[{uint32\+\_\+t}]{max\+Rx = {\ttfamily 15},  }\item[{uint32\+\_\+t}]{max\+Tx = {\ttfamily 15} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_i2_c_master_a792c821f9991226075a0c0c7cf1777ff} 
+I2\+CMaster\+::\+I2\+CMaster (\begin{DoxyParamCaption}\item[{I2\+C\+\_\+\+Type \texorpdfstring{$\ast$}{*}}]{I2\+C\+\_\+register}{, }\item[{\mbox{\hyperlink{class_pin}{Pin}} \texorpdfstring{$\ast$}{*}}]{sda}{, }\item[{\mbox{\hyperlink{class_pin}{Pin}} \texorpdfstring{$\ast$}{*}}]{scl}{, }\item[{uint32\+\_\+t}]{max\+Rx}{ = {\ttfamily 15}, }\item[{uint32\+\_\+t}]{max\+Tx}{ = {\ttfamily 15}}\end{DoxyParamCaption})}
 
 
 
-Constructor de la clase \mbox{\hyperlink{class_i2_c_master}{I2\+C\+Master}}. 
+Constructor de la clase \doxylink{class_i2_c_master}{I2\+CMaster}. 
 
-Genera un master \mbox{\hyperlink{class_i2_c}{I2C}} con buffers de transmision y recepcion para envio de strings. 
+Genera un master \doxylink{class_i2_c}{I2C} con buffers de transmision y recepcion para envio de strings. 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em I2\+C\+\_\+register} & Registro del \mbox{\hyperlink{class_i2_c}{I2C}} a utilizar. Puede valer I2\+C0, I2\+C1, I2\+C2 o I2\+C3. \\
+\mbox{\texttt{ in}}  & {\em I2\+C\+\_\+register} & Registro del \doxylink{class_i2_c}{I2C} a utilizar. Puede valer I2\+C0, I2\+C1, I2\+C2 o I2\+C3. \\
 \hline
-\mbox{\texttt{ in}}  & {\em sda} & \mbox{\hyperlink{class_pin}{Pin}} de transmision de datos. \\
+\mbox{\texttt{ in}}  & {\em sda} & \doxylink{class_pin}{Pin} de transmision de datos. \\
 \hline
-\mbox{\texttt{ in}}  & {\em scl} & \mbox{\hyperlink{class_pin}{Pin}} de clock. \\
+\mbox{\texttt{ in}}  & {\em scl} & \doxylink{class_pin}{Pin} de clock. \\
 \hline
 \mbox{\texttt{ in}}  & {\em max\+Rx} & Valor maximo del registro de recepcion. Por default 15. \\
 \hline
@@ -68,24 +121,39 @@ Genera un master \mbox{\hyperlink{class_i2_c}{I2C}} con buffers de transmision y
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_i2_c_master_a4348ec84cb2e5f13f73e7221064610d8}\label{class_i2_c_master_a4348ec84cb2e5f13f73e7221064610d8}} 
-\index{I2CMaster@{I2CMaster}!isIdle@{isIdle}}
+\Hypertarget{class_i2_c_master_a42db0ac922d2fc92c3d95c0686092da6}\index{I2CMaster@{I2CMaster}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!I2CMaster@{I2CMaster}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily \label{class_i2_c_master_a42db0ac922d2fc92c3d95c0686092da6} 
+void I2\+CMaster\+::\+Initialize (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{clk\+\_\+freq}{}\end{DoxyParamCaption})}
+
+
+
+Inicializa el \doxylink{class_i2_c}{I2C}. 
+
+Configura todos los registros para el uso del \doxylink{class_i2_c}{I2C}. Configura los clocks, resetea, configura la SWM, configura los registros y las interrupciones. 
+\begin{DoxyParams}{Parameters}
+{\em clk\+\_\+freq} & frecuencia del clock de transmision a utilizar. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_i2_c_master_a4348ec84cb2e5f13f73e7221064610d8}\index{I2CMaster@{I2CMaster}!isIdle@{isIdle}}
 \index{isIdle@{isIdle}!I2CMaster@{I2CMaster}}
 \doxysubsubsection{\texorpdfstring{isIdle()}{isIdle()}}
-{\footnotesize\ttfamily bool I2\+C\+Master\+::is\+Idle (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_i2_c_master_a4348ec84cb2e5f13f73e7221064610d8} 
+bool I2\+CMaster\+::is\+Idle (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
 
 
-Indica si el \mbox{\hyperlink{class_i2_c}{I2C}} esta en reposo o no. 
+Indica si el \doxylink{class_i2_c}{I2C} esta en reposo o no. 
 
-Indica si el estado del \mbox{\hyperlink{class_i2_c}{I2C}} es idle. Solo se puede enviar y recibir informacion si se encuentra en idle. \begin{DoxyReturn}{Returns}
+Indica si el estado del \doxylink{class_i2_c}{I2C} es idle. Solo se puede enviar y recibir informacion si se encuentra en idle. \begin{DoxyReturn}{Returns}
 bool\+: true si esta en idle, false si no lo esta. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_i2_c_master_ae67a0de07945cb771102ce7c3896205f}\label{class_i2_c_master_ae67a0de07945cb771102ce7c3896205f}} 
-\index{I2CMaster@{I2CMaster}!Read@{Read}}
+\Hypertarget{class_i2_c_master_ae67a0de07945cb771102ce7c3896205f}\index{I2CMaster@{I2CMaster}!Read@{Read}}
 \index{Read@{Read}!I2CMaster@{I2CMaster}}
 \doxysubsubsection{\texorpdfstring{Read()}{Read()}}
-{\footnotesize\ttfamily void $\ast$ I2\+C\+Master\+::\+Read (\begin{DoxyParamCaption}\item[{void $\ast$}]{msg,  }\item[{uint32\+\_\+t}]{length }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_i2_c_master_ae67a0de07945cb771102ce7c3896205f} 
+void \texorpdfstring{$\ast$}{*} I2\+CMaster\+::\+Read (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{msg}{, }\item[{uint32\+\_\+t}]{length}{}\end{DoxyParamCaption})}
 
 
 
@@ -99,13 +167,13 @@ Lee una cantidad fija de bytes dentro del buffer de recepcion.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-void$\ast$\+: Puntero a los valores leidos. Si hubo error se envia nullptr. 
+void\texorpdfstring{$\ast$}{*}\+: Puntero a los valores leidos. Si hubo error se envia nullptr. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_i2_c_master_a8f681b870a88c318cd73a1cb9f1caa17}\label{class_i2_c_master_a8f681b870a88c318cd73a1cb9f1caa17}} 
-\index{I2CMaster@{I2CMaster}!RequestRead@{RequestRead}}
+\Hypertarget{class_i2_c_master_a8f681b870a88c318cd73a1cb9f1caa17}\index{I2CMaster@{I2CMaster}!RequestRead@{RequestRead}}
 \index{RequestRead@{RequestRead}!I2CMaster@{I2CMaster}}
 \doxysubsubsection{\texorpdfstring{RequestRead()}{RequestRead()}}
-{\footnotesize\ttfamily void I2\+C\+Master\+::\+Request\+Read (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{addr,  }\item[{uint32\+\_\+t}]{cant\+\_\+read = {\ttfamily 1} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_i2_c_master_a8f681b870a88c318cd73a1cb9f1caa17} 
+void I2\+CMaster\+::\+Request\+Read (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{addr}{, }\item[{uint32\+\_\+t}]{cant\+\_\+read}{ = {\ttfamily 1}}\end{DoxyParamCaption})}
 
 
 
@@ -118,14 +186,11 @@ Comienza una comunicacion en modo lectura que no se detiene hasta recibir cant\+
 \mbox{\texttt{ in}}  & {\em cant\+\_\+read} & cantidad de bytes a transmitir. \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
-\mbox{\Hypertarget{class_i2_c_master_a064675ae9b7a357cba81870eddfc8bec}\label{class_i2_c_master_a064675ae9b7a357cba81870eddfc8bec}} 
-\index{I2CMaster@{I2CMaster}!Write@{Write}}
+\Hypertarget{class_i2_c_master_a064675ae9b7a357cba81870eddfc8bec}\index{I2CMaster@{I2CMaster}!Write@{Write}}
 \index{Write@{Write}!I2CMaster@{I2CMaster}}
 \doxysubsubsection{\texorpdfstring{Write()}{Write()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily void I2\+C\+Master\+::\+Write (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{addr,  }\item[{const char $\ast$}]{msg }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_i2_c_master_a064675ae9b7a357cba81870eddfc8bec} 
+void I2\+CMaster\+::\+Write (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{addr}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{msg}{}\end{DoxyParamCaption})}
 
 
 
@@ -138,14 +203,11 @@ Coloca el mensaje indicado en el buffer. Importante, el mensaje debe terminar en
 \mbox{\texttt{ in}}  & {\em msg} & Mensaje a transmitir. \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
-\mbox{\Hypertarget{class_i2_c_master_a21fdb2737b7101948fded5c61afe3dfd}\label{class_i2_c_master_a21fdb2737b7101948fded5c61afe3dfd}} 
-\index{I2CMaster@{I2CMaster}!Write@{Write}}
+\Hypertarget{class_i2_c_master_a21fdb2737b7101948fded5c61afe3dfd}\index{I2CMaster@{I2CMaster}!Write@{Write}}
 \index{Write@{Write}!I2CMaster@{I2CMaster}}
 \doxysubsubsection{\texorpdfstring{Write()}{Write()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily void I2\+C\+Master\+::\+Write (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{addr,  }\item[{const void $\ast$}]{msg,  }\item[{uint32\+\_\+t}]{length }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_i2_c_master_a21fdb2737b7101948fded5c61afe3dfd} 
+void I2\+CMaster\+::\+Write (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{addr}{, }\item[{const void \texorpdfstring{$\ast$}{*}}]{msg}{, }\item[{uint32\+\_\+t}]{length}{}\end{DoxyParamCaption})}
 
 
 
@@ -160,12 +222,9 @@ Coloca una cantidad fija del mensaje indicado en el buffer.
 \mbox{\texttt{ in}}  & {\em length} & cantidad de bytes a transmitir. \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-E\+:/\+Agustin/\+Escritorio/\+M\+C\+Uexpresso/\+Kit\+L\+P\+C845-\/\+C++/src/\+Drivers/\+Perifericos/14-\/\+Com\+Sincronica/\+I2\+C/\mbox{\hyperlink{_i2_c_master_8h}{I2\+C\+Master.\+h}}\item 
-E\+:/\+Agustin/\+Escritorio/\+M\+C\+Uexpresso/\+Kit\+L\+P\+C845-\/\+C++/src/\+Drivers/\+Perifericos/14-\/\+Com\+Sincronica/\+I2\+C/I2\+C\+Master.\+cpp\end{DoxyCompactItemize}
+E\+:/\+Agustin/\+Escritorio/\+MCUexpresso/\+Kit\+LPC845-\/\+C++/src/\+Drivers/\+Perifericos/14-\/\+Com\+Sincronica/\+I2\+C/\mbox{\hyperlink{_i2_c_master_8h}{I2\+CMaster.\+h}}\item 
+E\+:/\+Agustin/\+Escritorio/\+MCUexpresso/\+Kit\+LPC845-\/\+C++/src/\+Drivers/\+Perifericos/14-\/\+Com\+Sincronica/\+I2\+C/I2\+CMaster.\+cpp\end{DoxyCompactItemize}

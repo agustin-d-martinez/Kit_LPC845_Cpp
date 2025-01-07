@@ -56,7 +56,6 @@ m_pulse_on(2000000000)
 	\fn void PWM_Reader::Inicializar(void)
 	\brief Inicializo el PWM_In.
  	\details Seteo dirección resistencia y habilito la interrupción por flancos.
-	\return void
 */
 void PWM_Reader::Inicializar(void)
 {
@@ -78,7 +77,6 @@ uint32_t PWM_Reader::GetPulseOn( void ) const
 	\fn void PWM_Reader::Off(void)
 	\brief Apago el PWM_In.
  	\details Deshabilito la interrupción y seteo el pulso a un valor gigante que no genere overflow.
-	\return void
 */
 void PWM_Reader::Off(void)
 {
@@ -89,7 +87,6 @@ void PWM_Reader::Off(void)
 	\fn void PWM_Reader::On(void)
 	\brief Enciendo el PWM_In.
  	\details Habilito la interrupción.
-	\return void
 */
 void PWM_Reader::On(void)
 {
@@ -99,7 +96,6 @@ void PWM_Reader::On(void)
 	\fn void PWM_Reader::GpioHandler(void)
 	\brief Handler de la interrupción por flanco.
  	\details Si el flanco es ascendente reseteo el contador. Si es desendente guado el valor del contador. La cuenta se realiza en otra función para ahorrar tiempo acá
-	\return void
 */
 void PWM_Reader::GpioHandler(void)
 {

@@ -5,13 +5,13 @@ var hierarchy =
       [ "I4017", "class_i4017.html", null ]
     ] ],
     [ "Callback", "class_callback.html", [
-      [ "display7Segmentos", "classdisplay7_segmentos.html", null ],
       [ "Input", "class_input.html", null ],
       [ "LCD", "class_l_c_d.html", null ],
       [ "Output", "class_output.html", null ],
       [ "Reloj", "class_reloj.html", null ],
-      [ "teclado", "classteclado.html", null ],
-      [ "Timer", "class_timer.html", null ]
+      [ "Timer", "class_timer.html", null ],
+      [ "display7Segmentos", "classdisplay7_segmentos.html", null ],
+      [ "teclado", "classteclado.html", null ]
     ] ],
     [ "ComunicacionAsincronica", "class_comunicacion_asincronica.html", [
       [ "Uart", "class_uart.html", [
@@ -21,12 +21,13 @@ var hierarchy =
     [ "ComunicacionSincronica", "class_comunicacion_sincronica.html", [
       [ "I2C", "class_i2_c.html", [
         [ "I2CMaster", "class_i2_c_master.html", null ]
-      ] ]
+      ] ],
+      [ "SPI", "class_s_p_i.html", null ]
     ] ],
     [ "digito", "classdigito.html", null ],
     [ "Display", "class_display.html", [
-      [ "display7Segmentos", "classdisplay7_segmentos.html", null ],
-      [ "LCD", "class_l_c_d.html", null ]
+      [ "LCD", "class_l_c_d.html", null ],
+      [ "display7Segmentos", "classdisplay7_segmentos.html", null ]
     ] ],
     [ "distancia", "classdistancia.html", [
       [ "HC_SR04", "class_h_c___s_r04.html", null ]
@@ -47,10 +48,9 @@ var hierarchy =
     [ "Pin", "class_pin.html", [
       [ "ADC", "class_a_d_c.html", null ],
       [ "DAC", "class_d_a_c.html", null ],
-      [ "gpio", "classgpio.html", null ],
-      [ "Pwm", "class_pwm.html", null ]
+      [ "Pwm", "class_pwm.html", null ],
+      [ "gpio", "classgpio.html", null ]
     ] ],
-    [ "Pin_interrupt", "class_pin__interrupt.html", null ],
     [ "Puente_H", "class_puente___h.html", [
       [ "L298N", "class_l298_n.html", null ]
     ] ],

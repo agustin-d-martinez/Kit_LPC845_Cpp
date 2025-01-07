@@ -1,8 +1,8 @@
-\hypertarget{class_reloj}{}\doxysection{Reloj Class Reference}
-\label{class_reloj}\index{Reloj@{Reloj}}
+\doxysection{Reloj Class Reference}
+\hypertarget{class_reloj}{}\label{class_reloj}\index{Reloj@{Reloj}}
 
 
-Clase del objeto \mbox{\hyperlink{class_reloj}{Reloj}}.  
+Clase del objeto \doxylink{class_reloj}{Reloj}.  
 
 
 
@@ -17,11 +17,11 @@ Inheritance diagram for Reloj\+:
 
 Collaboration diagram for Reloj\+:
 % FIG 1
-\doxysubsection*{Public Member Functions}
+\doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_reloj_a0966eaa7e7079419049e683bafa7dbc0}{Reloj}} ()
-\begin{DoxyCompactList}\small\item\em Constructor de clase \mbox{\hyperlink{class_reloj}{Reloj}}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Constructor de clase \doxylink{class_reloj}{Reloj}. \end{DoxyCompactList}\item 
 int32\+\_\+t \mbox{\hyperlink{class_reloj_a2963cb1ffc94ac525fb9ed928791565d}{Get\+Hour}} (void) const
 \begin{DoxyCompactList}\small\item\em Devuelve el valor de hora. \end{DoxyCompactList}\item 
 int32\+\_\+t \mbox{\hyperlink{class_reloj_a777744f4eb01420c11661b7f0d7889ca}{Get\+Min}} (void) const
@@ -32,37 +32,44 @@ void \mbox{\hyperlink{class_reloj_a3c4d56c2bfe85821f33849888e04e891}{Reset}} (vo
 \begin{DoxyCompactList}\small\item\em Resetea el reloj. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_reloj_af88aa19fbc3a9421e2a89fd5402d0cb7}{Set\+Time}} (const int32\+\_\+t \+\_\+hour, const int32\+\_\+t \+\_\+min=-\/1, const int32\+\_\+t \+\_\+seg=-\/1)
 \begin{DoxyCompactList}\small\item\em Setea el reloj. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Protected Member Functions}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_callback}{Callback}}}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_reloj_a3d22e857ddd53a5da2217b8282cba209}{S\+Whandler}} (void)
+void \mbox{\hyperlink{class_callback_a18c04c5cb1529d902a6c77dac2258e0a}{Set\+Interrupt}} ()
+\begin{DoxyCompactList}\small\item\em Activa la interrupción. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_callback_ace2a048d8fc6fdf88b67274fa730c410}{Un\+Set\+Interrupt}} ()
+\begin{DoxyCompactList}\small\item\em Desactiva la interrupción. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_reloj_a3d22e857ddd53a5da2217b8282cba209}{SWhandler}} (void)
 \begin{DoxyCompactList}\small\item\em Actualiza el reloj. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Clase del objeto \mbox{\hyperlink{class_reloj}{Reloj}}. 
+Clase del objeto \doxylink{class_reloj}{Reloj}. 
 
-El objeto \mbox{\hyperlink{class_reloj}{Reloj}} se comportará como un reloj que iniciará a contar desde 0hs o desde el valor asignado por el usuario. 
+El objeto \doxylink{class_reloj}{Reloj} se comportará como un reloj que iniciará a contar desde 0hs o desde el valor asignado por el usuario. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_reloj_a0966eaa7e7079419049e683bafa7dbc0}\label{class_reloj_a0966eaa7e7079419049e683bafa7dbc0}} 
-\index{Reloj@{Reloj}!Reloj@{Reloj}}
+\Hypertarget{class_reloj_a0966eaa7e7079419049e683bafa7dbc0}\index{Reloj@{Reloj}!Reloj@{Reloj}}
 \index{Reloj@{Reloj}!Reloj@{Reloj}}
 \doxysubsubsection{\texorpdfstring{Reloj()}{Reloj()}}
-{\footnotesize\ttfamily Reloj\+::\+Reloj (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_reloj_a0966eaa7e7079419049e683bafa7dbc0} 
+Reloj\+::\+Reloj (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 
-Constructor de clase \mbox{\hyperlink{class_reloj}{Reloj}}. 
+Constructor de clase \doxylink{class_reloj}{Reloj}. 
 
-Crea un \mbox{\hyperlink{class_reloj}{Reloj}} por defecto 
+Crea un \doxylink{class_reloj}{Reloj} por defecto 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_reloj_a2963cb1ffc94ac525fb9ed928791565d}\label{class_reloj_a2963cb1ffc94ac525fb9ed928791565d}} 
-\index{Reloj@{Reloj}!GetHour@{GetHour}}
+\Hypertarget{class_reloj_a2963cb1ffc94ac525fb9ed928791565d}\index{Reloj@{Reloj}!GetHour@{GetHour}}
 \index{GetHour@{GetHour}!Reloj@{Reloj}}
 \doxysubsubsection{\texorpdfstring{GetHour()}{GetHour()}}
-{\footnotesize\ttfamily int32\+\_\+t Reloj\+::\+Get\+Hour (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily \label{class_reloj_a2963cb1ffc94ac525fb9ed928791565d} 
+int32\+\_\+t Reloj\+::\+Get\+Hour (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption}) const}
 
 
 
@@ -71,11 +78,11 @@ Devuelve el valor de hora.
 Entrega la variable m\+\_\+hora. \begin{DoxyReturn}{Returns}
 m\+\_\+hora 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_reloj_a777744f4eb01420c11661b7f0d7889ca}\label{class_reloj_a777744f4eb01420c11661b7f0d7889ca}} 
-\index{Reloj@{Reloj}!GetMin@{GetMin}}
+\Hypertarget{class_reloj_a777744f4eb01420c11661b7f0d7889ca}\index{Reloj@{Reloj}!GetMin@{GetMin}}
 \index{GetMin@{GetMin}!Reloj@{Reloj}}
 \doxysubsubsection{\texorpdfstring{GetMin()}{GetMin()}}
-{\footnotesize\ttfamily int32\+\_\+t Reloj\+::\+Get\+Min (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily \label{class_reloj_a777744f4eb01420c11661b7f0d7889ca} 
+int32\+\_\+t Reloj\+::\+Get\+Min (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption}) const}
 
 
 
@@ -84,11 +91,11 @@ Devuelve el valor de minutos.
 Entrega la variable m\+\_\+minutos. \begin{DoxyReturn}{Returns}
 m\+\_\+minutos 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_reloj_a04d950713551b9cd294392430a545022}\label{class_reloj_a04d950713551b9cd294392430a545022}} 
-\index{Reloj@{Reloj}!GetSeg@{GetSeg}}
+\Hypertarget{class_reloj_a04d950713551b9cd294392430a545022}\index{Reloj@{Reloj}!GetSeg@{GetSeg}}
 \index{GetSeg@{GetSeg}!Reloj@{Reloj}}
 \doxysubsubsection{\texorpdfstring{GetSeg()}{GetSeg()}}
-{\footnotesize\ttfamily int32\+\_\+t Reloj\+::\+Get\+Seg (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily \label{class_reloj_a04d950713551b9cd294392430a545022} 
+int32\+\_\+t Reloj\+::\+Get\+Seg (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption}) const}
 
 
 
@@ -97,21 +104,21 @@ Devuelve el valor de segundos.
 Entrega la variable m\+\_\+segundos. \begin{DoxyReturn}{Returns}
 m\+\_\+segundos 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_reloj_a3c4d56c2bfe85821f33849888e04e891}\label{class_reloj_a3c4d56c2bfe85821f33849888e04e891}} 
-\index{Reloj@{Reloj}!Reset@{Reset}}
+\Hypertarget{class_reloj_a3c4d56c2bfe85821f33849888e04e891}\index{Reloj@{Reloj}!Reset@{Reset}}
 \index{Reset@{Reset}!Reloj@{Reloj}}
 \doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
-{\footnotesize\ttfamily void Reloj\+::\+Reset (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_reloj_a3c4d56c2bfe85821f33849888e04e891} 
+void Reloj\+::\+Reset (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
 
 
 Resetea el reloj. 
 
-Coloca todas las variables en 0. \mbox{\Hypertarget{class_reloj_af88aa19fbc3a9421e2a89fd5402d0cb7}\label{class_reloj_af88aa19fbc3a9421e2a89fd5402d0cb7}} 
-\index{Reloj@{Reloj}!SetTime@{SetTime}}
+Coloca todas las variables en 0. \Hypertarget{class_reloj_af88aa19fbc3a9421e2a89fd5402d0cb7}\index{Reloj@{Reloj}!SetTime@{SetTime}}
 \index{SetTime@{SetTime}!Reloj@{Reloj}}
 \doxysubsubsection{\texorpdfstring{SetTime()}{SetTime()}}
-{\footnotesize\ttfamily void Reloj\+::\+Set\+Time (\begin{DoxyParamCaption}\item[{const int32\+\_\+t}]{\+\_\+hour,  }\item[{const int32\+\_\+t}]{\+\_\+min = {\ttfamily -\/1},  }\item[{const int32\+\_\+t}]{\+\_\+seg = {\ttfamily -\/1} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_reloj_af88aa19fbc3a9421e2a89fd5402d0cb7} 
+void Reloj\+::\+Set\+Time (\begin{DoxyParamCaption}\item[{const int32\+\_\+t}]{\+\_\+hour}{, }\item[{const int32\+\_\+t}]{\+\_\+min}{ = {\ttfamily -\/1}, }\item[{const int32\+\_\+t}]{\+\_\+seg}{ = {\ttfamily -\/1}}\end{DoxyParamCaption})}
 
 
 
@@ -126,11 +133,11 @@ Setea el reloj.
 \mbox{\texttt{ in}}  & {\em \+\_\+seg} & segundos a setear.\\
 \hline
 \end{DoxyParams}
-Configura el valor actual de horas, minutos y segundos. \mbox{\Hypertarget{class_reloj_a3d22e857ddd53a5da2217b8282cba209}\label{class_reloj_a3d22e857ddd53a5da2217b8282cba209}} 
-\index{Reloj@{Reloj}!SWhandler@{SWhandler}}
+Configura el valor actual de horas, minutos y segundos. \Hypertarget{class_reloj_a3d22e857ddd53a5da2217b8282cba209}\index{Reloj@{Reloj}!SWhandler@{SWhandler}}
 \index{SWhandler@{SWhandler}!Reloj@{Reloj}}
 \doxysubsubsection{\texorpdfstring{SWhandler()}{SWhandler()}}
-{\footnotesize\ttfamily void Reloj\+::\+S\+Whandler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily \label{class_reloj_a3d22e857ddd53a5da2217b8282cba209} 
+void Reloj\+::\+SWhandler (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
 
 
 
@@ -144,5 +151,5 @@ Implements \mbox{\hyperlink{class_callback_a24e8f5fec587299192f62b13a2e7eb42}{Ca
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-E\+:/\+Agustin/\+Escritorio/\+M\+C\+Uexpresso/\+Kit\+L\+P\+C845-\/\+C++/src/\+Drivers/\+Hardware/04-\/\+Reloj/\mbox{\hyperlink{_reloj_8h}{Reloj.\+h}}\item 
-E\+:/\+Agustin/\+Escritorio/\+M\+C\+Uexpresso/\+Kit\+L\+P\+C845-\/\+C++/src/\+Drivers/\+Hardware/04-\/\+Reloj/Reloj.\+cpp\end{DoxyCompactItemize}
+E\+:/\+Agustin/\+Escritorio/\+MCUexpresso/\+Kit\+LPC845-\/\+C++/src/\+Drivers/\+Hardware/04-\/\+Reloj/\mbox{\hyperlink{_reloj_8h}{Reloj.\+h}}\item 
+E\+:/\+Agustin/\+Escritorio/\+MCUexpresso/\+Kit\+LPC845-\/\+C++/src/\+Drivers/\+Hardware/04-\/\+Reloj/Reloj.\+cpp\end{DoxyCompactItemize}

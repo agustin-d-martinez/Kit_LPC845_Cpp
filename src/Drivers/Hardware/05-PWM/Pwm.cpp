@@ -57,9 +57,8 @@ Pwm::Pwm( port_t puerto , uint8_t bit , uint8_t actividad , pwm_channel_t number
 	\fn void Pwm::SetTon( uint32_t time , pwm_time_unit_t t )
 	\brief Seteo el tiempo de encendido del PWM.
  	\details Utilizando los regristros con SetTime creo el tiempo de encendido de mi PWM.
- 	\param	time: Tiempo de encendido.
- 	\param	t: Unidad de medida del tiempo de encendido.
-	\return void
+ 	\param	[in] time: Tiempo de encendido.
+ 	\param	[in] t: Unidad de medida del tiempo de encendido.
 */
 void Pwm::SetTon( uint32_t time , pwm_time_unit_t t )
 {
@@ -75,9 +74,8 @@ void Pwm::SetTon( uint32_t time , pwm_time_unit_t t )
 	\fn void Pwm::SetPeriod( uint32_t time , pwm_time_unit_t t)
 	\brief Seteo el periodo del PWM.
  	\details Utilizando los regristros con SetTime creo el tiempo de apagado de mi PWM.
- 	\param	time: Tiempo del periodo.
- 	\param	t: Unidad de medida del tiempo de periodo.
-	\return void
+ 	\param	[in] time: Tiempo del periodo.
+ 	\param	[in] t: Unidad de medida del tiempo de periodo.
 */
 void Pwm::SetPeriod( uint32_t time , pwm_time_unit_t t)
 {
@@ -94,10 +92,9 @@ void Pwm::SetPeriod( uint32_t time , pwm_time_unit_t t)
 	\fn void Pwm::Inicializar( uint32_t ton , uint32_t toff , pwm_time_unit_t t )
 	\brief Inicializo el PWM.
  	\details Utilizando los regristros configuro todo para la utilizacion del PWM.
- 	\param	ton: Tiempo de encendido.
- 	\param	toff: Tiempo de apagado (no es el periodo. El periodo es la suma de ambos).
- 	\param	t: Unidad de medida de los tiempos de encendido y apagado.
-	\return void
+ 	\param	[in] ton: Tiempo de encendido.
+ 	\param	[in] toff: Tiempo de apagado (no es el periodo. El periodo es la suma de ambos).
+ 	\param	[in] t: Unidad de medida de los tiempos de encendido y apagado.
 */
 void Pwm::Inicializar( uint32_t ton , uint32_t toff , pwm_time_unit_t t )
 {
@@ -145,7 +142,6 @@ void Pwm::Inicializar( uint32_t ton , uint32_t toff , pwm_time_unit_t t )
 	\fn void Pwm::On( void )
 	\brief Enciende el PWM.
  	\details Utiliza los registros con StarTimer para habilitar la salida.
-	\return void
 */
 void Pwm::On( void )
 {
@@ -155,13 +151,11 @@ void Pwm::On( void )
 	\fn void Pwm::Off( void )
 	\brief Apaga el PWM.
  	\details Utiliza los registros con StopTimer para deshabilitar la salida.
-	\return void
 */
 void Pwm::Off( void )
 {
 	StopTimer();
 }
-
 
 Pwm::~Pwm()
 { }

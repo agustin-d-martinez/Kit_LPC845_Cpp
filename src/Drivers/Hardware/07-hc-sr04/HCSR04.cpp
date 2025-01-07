@@ -52,7 +52,6 @@ HC_SR04::HC_SR04( PWM_Reader*  &rx , Pwm* &tx ) : m_rx(rx) , m_tx(tx) , m_distan
 	\fn void HC_SR04::Inicializar(void)
 	\brief Inicializa todas las patas del ultrasónico.
  	\details Inicializa el PWM con el valor correspondiente y el contador de ancho ancho de pulso.
-	\return void
 */
 void HC_SR04::Inicializar(void)
 {
@@ -161,7 +160,6 @@ bool HC_SR04::operator>( const uint32_t a )
 	\fn void HC_SR04::Off(void)
 	\brief Apago las patas del ultrasonico.
  	\details Llamo a las funciones de apagar y guardo en el buffer un valor imposible.
-	\return void
 */
 void HC_SR04::Off(void)
 {
@@ -174,7 +172,6 @@ void HC_SR04::Off(void)
 	\fn void HC_SR04::On(void)
 	\brief Enciendo las patas del ultrasonico.
  	\details Llamo a las funciones de encender de tx y rx.
-	\return void
 */
 void HC_SR04::On(void)
 {

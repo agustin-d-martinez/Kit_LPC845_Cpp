@@ -1,7 +1,6 @@
 var class_h_c___s_r04 =
 [
     [ "HC_SR04", "class_h_c___s_r04.html#a03ff682e07bbbc9f5554790e98a59473", null ],
-    [ "~HC_SR04", "class_h_c___s_r04.html#a3bd7b9ed0f928d60391b336f40325655", null ],
     [ "GetDistancia", "class_h_c___s_r04.html#ab6e8079457c420f2d403c0921eea8e50", null ],
     [ "Inicializar", "class_h_c___s_r04.html#a2d1eabe8372f65cc01ff78029940b151", null ],
     [ "Off", "class_h_c___s_r04.html#a8a2b0436db85de19f08c9500aaf87ca2", null ],

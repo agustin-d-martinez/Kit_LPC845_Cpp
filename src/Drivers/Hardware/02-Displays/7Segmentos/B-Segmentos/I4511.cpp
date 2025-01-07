@@ -44,7 +44,6 @@
  * \brief Función de escritura del segmento.
  * \details Escribe el segmento en formato binario.
  * \param [in] valor: valor a escribir.
- * \return void
 */
 void I4511::SetSegmentos( uint16_t valor )
 {
@@ -72,7 +71,6 @@ void I4511::SetSegmentos( uint16_t valor )
  * \fn void I4511::Inicializar ( void )
  * \brief Función de Inicialización del I4511.
  * \details
- * \return void
 */
 void I4511::Inicializar ( void )
 {

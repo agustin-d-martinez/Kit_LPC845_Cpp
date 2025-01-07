@@ -1,7 +1,5 @@
 var class_puente___h =
 [
-    [ "IZQUIERDA", "class_puente___h.html#a9fd09f2b11391082adc4d1687eb2a234a696939cff04fb4396f01bd29e2d33356", null ],
-    [ "DERECHA", "class_puente___h.html#a9fd09f2b11391082adc4d1687eb2a234ae0f98a9d5e5617f9f4dd92e940d031d8", null ],
     [ "Puente_H", "class_puente___h.html#aeb820ee4e2e819643634743249f9bb71", null ],
     [ "~Puente_H", "class_puente___h.html#ac67b8c0e5d97686bf52b4c1dc8b31b2b", null ],
     [ "Avanzar", "class_puente___h.html#ad454ecc01a0b793104c88f83e34d2f86", null ],

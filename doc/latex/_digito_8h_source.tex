@@ -1,0 +1,59 @@
+\doxysection{Digito.\+h}
+\hypertarget{_digito_8h_source}{}\label{_digito_8h_source}\index{E:/Agustin/Escritorio/MCUexpresso/KitLPC845-\/C++/src/Drivers/Hardware/02-\/Displays/7Segmentos/C-\/Display/Digito.h@{E:/Agustin/Escritorio/MCUexpresso/KitLPC845-\/C++/src/Drivers/Hardware/02-\/Displays/7Segmentos/C-\/Display/Digito.h}}
+\mbox{\hyperlink{_digito_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*******************************************************************************************************************************/}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ ***\ MODULO}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#ifndef\ DIGITO\_H\_}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ DIGITO\_H\_}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00018\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ ***\ INCLUDES\ GLOBALES}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}tipos.h"{}}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00024\ \textcolor{comment}{\ ***\ DEFINES\ GLOBALES}}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00028\ \textcolor{comment}{\ ***\ MACROS\ GLOBALES}}
+\DoxyCodeLine{00029\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00032\ \textcolor{comment}{\ ***\ TIPO\ DE\ DATOS\ GLOBALES}}
+\DoxyCodeLine{00033\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00036\ \textcolor{comment}{\ ***\ VARIABLES\ GLOBALES}}
+\DoxyCodeLine{00037\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00040\ \textcolor{comment}{\ ***\ IMPLANTACION\ DE\ UNA\ CLASE}}
+\DoxyCodeLine{00041\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00048\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classdigito_ad87b6a6ef9b67e0ec9d16ef093f1eff0}{digito}}}
+\DoxyCodeLine{00049\ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{\ BCD\ ,\ SEGMENTOS\ ,\ ASCHII\ \}\ \mbox{\hyperlink{classdigito_a8302b770b9c2c86edb02394fd9ffc4f9}{codigo\_t}};}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{\ APAGAR\ =\ 0xff,\ PARPADEAR\ =\ 1\}\ \mbox{\hyperlink{classdigito_ae1fa2c32b396542633f1bac557e56fb0}{modo\_t}};}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{\ menos\ =\ 10\ ,\ \ a\ ,\ b\ ,\ c\ ,\ d\ ,\ e\ ,\ f\ ,\ g\ ,\ h\ ,\ n\ ,\ o\ ,\ p\ ,\ r,\ t\ ,\ u\ \}\ \mbox{\hyperlink{classdigito_a9ca4533ad058f09c87644f3eb8b497a8}{SIMBOLOS}};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ uint16\_t\ m\_Valor;\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classdigito_a8302b770b9c2c86edb02394fd9ffc4f9}{codigo\_t}}\ m\_Sistema;\ \ \ }
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classdigito_ad87b6a6ef9b67e0ec9d16ef093f1eff0}{digito}}(\ \mbox{\hyperlink{classdigito_a8302b770b9c2c86edb02394fd9ffc4f9}{codigo\_t}}\ Sistema\ =\ BCD\ ,\ uint8\_t\ Valor\ =\ APAGAR\ )\ :\ m\_Valor(\ Valor\ )\ ,\ m\_Sistema\ (\ Sistema\ )\{\};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classdigito_af66378ee328c8e5b756b72c348080c16}{Set}}(uint16\_t\ valor);}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ uint8\_t\ \mbox{\hyperlink{classdigito_a1147bec264cc1a971f6247d96dc7066b}{Get}}(\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdigito_a0c040b3ea2fe853a71a835656f21bb68}{Clr}}(\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classdigito}{\string~digito}}()\ \{\};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00071\ \};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ DIGITO\_H\_\ */}\textcolor{preprocessor}{}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

@@ -20,8 +20,8 @@
  *** INCLUDES GLOBALES
  **********************************************************************************************************************************/
 #include <Drivers/Perifericos/13-UART/ComunicacionAsincronica.h>
-#include <Perifericos/01-Pin/Pin.h>
 #include "LPC845.h"
+#include <Drivers/Perifericos/01-Pin/Pin.h>
 /***********************************************************************************************************************************
  *** DEFINES GLOBALES
  **********************************************************************************************************************************/
@@ -79,37 +79,37 @@ class Uart : public ComunicacionAsincronica
 		/** \endcond */
 
 	private:
-		const Pin 	m_tx;					/**< Pin de transmision */
-		const Pin 	m_rx;					/**< Pin de recepcion */
+		const Pin m_tx;
+		const Pin m_rx;
 		USART_Type*	m_usart;				/**< Registro a utilizar */
 		uint8_t*	m_bufferRX;				/**< Buffer de recepcion */
-		uint32_t	m_idxRxIn , m_idxRxOut , m_maxRx;	/**< Posicion de entrada del buffer RX */ /**< Posicion de salida del buffer RX */ /**< Tamaño buffer RX */
+		uint32_t	m_inxRxIn , m_inxRxOut , m_maxRx;	/**< Posicion de entrada del buffer RX */ /**< Posicion de salida del buffer RX */ /**< Tamaño buffer RX */
 		uint8_t*	m_bufferTX;				/**< Buffer de transmision */
-		uint32_t	m_idxTxIn , m_idxTxOut , m_maxTx;	/**< Posicion de entrada del buffer TX */ /**< Posicion de salida del buffer TX */ /**< Tamaño buffer TX */
+		uint32_t	m_inxTxIn , m_inxTxOut , m_maxTx;	/**< Posicion de entrada del buffer TX */ /**< Posicion de salida del buffer TX */ /**< Tamaño buffer TX */
 		bool 		m_flagTx;				/**< error en el envio de datos. Buffer sobrepasado */
 
 	public:
 		Uart( Pin::port_t portTx , uint8_t pinTx , Pin::port_t portRx , uint8_t pinRx ,
 				USART_Type * usart , uint32_t baudrate , bits_de_datos BitsDeDatos, paridad_t paridad ,
 				uint32_t maxRx , uint32_t maxTx);
-		void 	Transmit ( const char * msg) ;
-		void 	Transmit ( const void * msg , uint32_t n );
-		void* 	Message ( void * msg , uint32_t n );
-		void 	SetBaudRate ( uint32_t baudrate );
-				~Uart() = default;		/**< Destructor por defecto */
+		void Transmit ( const char * msg) override;
+		void Transmit ( const void * msg , uint32_t n ) override;
+		void* Message ( void * msg , uint32_t n ) override;
+		void SetBaudRate ( uint32_t baudrate );
+
+		~Uart() { };		/**< Destructor por defecto */
 	private:
-		void 	EnableSWM 		( void );
-		void 	EnableClock 	( void );
-		void 	Config 			( uint32_t baudrate , bits_de_datos BitsDeDatos , paridad_t paridad );
+		void EnableSW ( void );
+		void EnableClock ( void );
+		void Config ( uint32_t baudrate , bits_de_datos BitsDeDatos , paridad_t paridad );
+		void UART_IRQHandler ( void ) override;
 
-		void 	UART_IRQHandler ( void );
-		void 	EnableInterupt 	( void );
-		void 	DisableInterupt ( void );
-
-		void 	pushRx 			( uint8_t dato );
-		uint8_t popRx 			( uint8_t * dato );
-		void 	pushTx 			( uint8_t dato );
-		uint8_t popTx 			( uint8_t * dato );
+		void pushRx ( uint8_t dato ) override;
+		uint8_t popRx ( uint8_t * dato ) override;
+		void pushTx ( uint8_t dato ) override;
+		uint8_t popTx ( uint8_t * dato ) override;
+		void EnableInterupt ( void );
+		void DisableInterupt ( void );
 };
 
 #endif /* UART_H_ */

@@ -1,8 +1,8 @@
 var classgpio =
 [
-    [ "activity_t", "classgpio.html#ad747cdd6a7343c9be1382eca648002c6", null ],
-    [ "direction_t", "classgpio.html#a64ee05ebd47c2fc281fe71eb6efcb557", null ],
-    [ "mode_t", "classgpio.html#ab02ac93ab02ef1a96a5d287daef5e6a5", null ],
+    [ "activity_t", "classgpio.html#ace0f4d73975aa25a7629d7a719e3bda8", null ],
+    [ "direction_t", "classgpio.html#aa7b9347bb89381a3296ac65d97179a73", null ],
+    [ "mode_t", "classgpio.html#a47824ce7b5b807417ba04e2262324d21", null ],
     [ "activity_t", "classgpio.html#a37b1bf950dfcff8f5a81431da1f690fa", [
       [ "low", "classgpio.html#a37b1bf950dfcff8f5a81431da1f690faad4844ed7391a008a25919cc33ce34050", null ],
       [ "high", "classgpio.html#a37b1bf950dfcff8f5a81431da1f690faa71650c118c0101c0bca436293386c719", null ]
@@ -32,15 +32,15 @@ var classgpio =
     ] ],
     [ "gpio", "classgpio.html#a91d8a585757112ada21e8c8b7570171a", null ],
     [ "~gpio", "classgpio.html#a115befd0ad74a2f911420b8673415bca", null ],
-    [ "ClrPin", "classgpio.html#ae0b1469a85228420f03c14d1c0095cd7", null ],
-    [ "GetPin", "classgpio.html#ab3f6b81018ece79342e66612474679d4", null ],
+    [ "ClrPin", "classgpio.html#a7db0e2fb53f026b00943b1960114efcd", null ],
+    [ "GetPin", "classgpio.html#a053408949f14088921e56ffb85c2efc3", null ],
     [ "operator=", "classgpio.html#a0e9fcb8c59eba9f0a28091cac7a34ba2", null ],
-    [ "SetDir", "classgpio.html#abc2283be63bb51cecb0c2c8916f5ab99", null ],
-    [ "SetPin", "classgpio.html#a1569a339ad528cc49690f9967b80f19c", null ],
-    [ "SetPinMode", "classgpio.html#a6c0dd0caac44cab906bb4d4e0bf43701", null ],
-    [ "SetPinResistor", "classgpio.html#ac51ff7f9df003cdef2f8d2d09864bdd3", null ],
-    [ "SetToggleDir", "classgpio.html#ad93e980f89453dba315e161d23276339", null ],
-    [ "SetTogglePin", "classgpio.html#a87334b85b5a943f64539ff8bf400a3d4", null ],
+    [ "SetDir", "classgpio.html#a00191106112b46d6a81161bad09774d9", null ],
+    [ "SetPin", "classgpio.html#abababed56790f941ce7c449c2bb0585f", null ],
+    [ "SetPinMode", "classgpio.html#a5307bd248fcf6487491ba93c7e3ec9d7", null ],
+    [ "SetPinResistor", "classgpio.html#a834f570ae01fd90ae9128a2a00f34552", null ],
+    [ "SetToggleDir", "classgpio.html#a75dbe3d751fdd5c577cd8cf9b2e7cc1a", null ],
+    [ "SetTogglePin", "classgpio.html#a9c89224e21dcd66520f400981a6714c5", null ],
     [ "m_activity", "classgpio.html#ac6259c170adf14b17c72d65fd388921b", null ],
     [ "m_direction", "classgpio.html#ac4def73bdbedc9163facaf784f9b29bd", null ],
     [ "m_mode", "classgpio.html#a672ac1aa2fd7a3d39db9f3c7aa37d167", null ]

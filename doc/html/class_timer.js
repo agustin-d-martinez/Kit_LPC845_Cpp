@@ -1,6 +1,6 @@
 var class_timer =
 [
-    [ "bases_t", "class_timer.html#a2275dff55f3dd4ddddf3b2404769ceec", null ],
+    [ "bases_t", "class_timer.html#acdc55034d21f5b88115abf0cc17b6773", null ],
     [ "bases_t", "class_timer.html#a9cec0a44d98f2898630bb03951269195", [
       [ "DEC", "class_timer.html#a9cec0a44d98f2898630bb03951269195a69e7733d38b3bf598fcda6d265f82863", null ],
       [ "SEG", "class_timer.html#a9cec0a44d98f2898630bb03951269195aff198ec8bfa0fc6c7200017bab37af9d", null ],
@@ -17,7 +17,6 @@ var class_timer =
     ] ],
     [ "Timer", "class_timer.html#a5f16e8da27d2a5a5242dead46de05d97", null ],
     [ "Timer", "class_timer.html#a2682e0c8a8bbc50b22fbceda92903eb7", null ],
-    [ "~Timer", "class_timer.html#a14fa469c4c295c5fa6e66a4ad1092146", null ],
     [ "ClrTmrEvent", "class_timer.html#a18a28d253b6bc7190c5e133290120c22", null ],
     [ "GetmrStandBy", "class_timer.html#a3446cbde556eec707810feeb61575571", null ],
     [ "GetTimer", "class_timer.html#a02d39c7351bc4960e1538c1610746c7b", null ],
@@ -38,10 +37,10 @@ var class_timer =
     [ "TimerStart", "class_timer.html#a4de6cf13b879de73abc9421fd9fab60d", null ],
     [ "TimerStop", "class_timer.html#a4a8fdd11e028684a8b770dd375278462", null ],
     [ "TmrEvent", "class_timer.html#ae6215d19df6293b3ed67ee8e796e9724", null ],
-    [ "operator==", "class_timer.html#a16cc66e5d235553e600fd84be5dc5013", null ],
+    [ "operator==", "class_timer.html#a67d3ea263ca5e63494bed1596a9b4a59", null ],
     [ "m_TmrBase", "class_timer.html#ac615667eecadfa52523f296c6b197553", null ],
     [ "m_TmrEvent", "class_timer.html#a4d3f6474c67de284a77c4f69fb36067d", null ],
-    [ "m_TmrHandler", "class_timer.html#ab57d5308f7d8759573bfa077bf05d531", null ],
+    [ "m_TmrHandler", "class_timer.html#ab4db941b5d3a3ecde10d9302e6db0edc", null ],
     [ "m_TmrRun", "class_timer.html#a2dd85f439d172418dc50d36a1ead5fda", null ],
     [ "m_TmrStandBy", "class_timer.html#a8b6f6f49d9eba6daea47132c8a314e5b", null ]
 ];

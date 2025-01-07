@@ -1,0 +1,61 @@
+\doxysection{Input.\+h}
+\hypertarget{_input_8h_source}{}\label{_input_8h_source}\index{E:/Agustin/Escritorio/MCUexpresso/KitLPC845-\/C++/src/Drivers/Perifericos/04-\/Input/Input.h@{E:/Agustin/Escritorio/MCUexpresso/KitLPC845-\/C++/src/Drivers/Perifericos/04-\/Input/Input.h}}
+\mbox{\hyperlink{_input_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*******************************************************************************************************************************/}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ ***\ MODULO}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#ifndef\ INPUTS\_H\_}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ INPUTS\_H\_}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00018\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ ***\ INCLUDES\ GLOBALES}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{gpio_8h}{Perifericos/02-\/Gpio/gpio.h}}>}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_callback_8h}{Perifericos/06-\/Callback/Callback.h}}>}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ ***\ DEFINES\ GLOBALES}}
+\DoxyCodeLine{00026\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00029\ \textcolor{comment}{\ ***\ MACROS\ GLOBALES}}
+\DoxyCodeLine{00030\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00033\ \textcolor{comment}{\ ***\ TIPO\ DE\ DATOS\ GLOBALES}}
+\DoxyCodeLine{00034\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00037\ \textcolor{comment}{\ ***\ VARIABLES\ GLOBALES}}
+\DoxyCodeLine{00038\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00041\ \textcolor{comment}{\ ***\ IMPLANTACION\ DE\ LA\ CLASE}}
+\DoxyCodeLine{00042\ \textcolor{comment}{\ **********************************************************************************************************************************/}\textcolor{keyword}{class\ }\mbox{\hyperlink{class_input_ab5c10161819d31e541238ece853f742e}{Input}}\ :\ \textcolor{keyword}{protected}\ \mbox{\hyperlink{classgpio_a91d8a585757112ada21e8c8b7570171a}{gpio}}\ ,\ \textcolor{keyword}{public}\ Callback}
+\DoxyCodeLine{00049\ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ uint8\_t\ m\_BufferEntrada\ ;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ uint8\_t\ m\_MaxBounce;\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ uint8\_t\ m\_CountBounce\ ;\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ MAX\_BOUNCE\ \ \ \ \ \ 4}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_input_ab5c10161819d31e541238ece853f742e}{Input}}(\ \mbox{\hyperlink{class_pin_a02483eba92e68e4230f8aa883e0a25fe}{port\_t}}\ puerto\ ,\ uint8\_t\ bit\ ,\ \mbox{\hyperlink{classgpio_aa105bc05ba99ed1b45a9cd8576d6c0ab}{mode\_t}}\ modo\ ,\ \mbox{\hyperlink{classgpio_a37b1bf950dfcff8f5a81431da1f690fa}{activity\_t}}\ actividad\ =\ high\ ,\ uint8\_t\ MaxBounce\ =\ \mbox{\hyperlink{_input_8h_a7ccdd4b2547aa72e5d4b9beabdcbe35c}{MAX\_BOUNCE}}\ );}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_input_a0cfce2905cb697753650c8b5913f7ab7}{Inicializar}}\ (\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ uint8\_t\ \mbox{\hyperlink{class_input_a06a49730d7c4edcf81380f04b6f950d1}{get}}\ (\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_input_a62a46b2660bcaba3fed66dc90b837091}{SWhandler}}\ (\ \textcolor{keywordtype}{void}\ )\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_input_a6c0a414d05293eb3b4b9d7c421cb0b3d}{operator==\ }}(\ uint8\_t\ val\ );}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_input_a197f42e9a14c89d8074491d11b5b358a}{operator!=\ }}(\ uint8\_t\ val\ );}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_input_a6c0a414d05293eb3b4b9d7c421cb0b3d}{operator==}}(\ uint32\_t\ val\ ,\ \mbox{\hyperlink{class_input}{Input}}\ \&I\ );}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_input_af2db35ba67c8a8ccd23bef6a482fc291}{\string~Input}}();\ \ \ \ \ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ SetBuffer\ (\ \textcolor{keywordtype}{void}\ );\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00076\ \};}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ INPUTS\_H\_\ */}\textcolor{preprocessor}{}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

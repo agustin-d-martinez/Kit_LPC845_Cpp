@@ -1,12 +1,47 @@
 digraph "Graphical Class Hierarchy"
 {
  // LATEX_PDF_SIZE
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [label="ComunicacionAsincronica",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_comunicacion_asincronica.html",tooltip="Clase del objeto ComunicacionAsincronica Clase abstracta pura para la generación de UART."];
-  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node1 [label="Uart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_uart.html",tooltip="Clase del objeto uart El objeto uart genera una comunicación asincrónica de tipo UART."];
-  Node1 -> Node2 [dir="back",color="darkgreen",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="ESP8266",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_e_s_p8266.html",tooltip="Clase del objeto ESP8266 El objeto ESP8266 permite la simple utilización del módulo arduino ESP8266 y..."];
+  Node0 [id="Node000000",label="Callback",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_callback.html",tooltip="Clase del objeto Callback."];
+  Node0 -> Node1 [id="edge2_Node000000_Node000001",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 [id="Node000001",label="Input",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_input.html",tooltip="Clase del objeto Input."];
+  Node0 -> Node13 [id="edge3_Node000000_Node000013",dir="back",color="firebrick4",style="solid",tooltip=" "];
+  Node13 [id="Node000013",label="LCD",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_l_c_d.html",tooltip="Clase del objeto lcd El objeto lcd permite el manejo de displays digitales mediante comunicación de 4..."];
+  Node0 -> Node3 [id="edge4_Node000000_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="Output",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_output.html",tooltip="Clase del objeto outputs."];
+  Node0 -> Node16 [id="edge5_Node000000_Node000016",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node16 [id="Node000016",label="Reloj",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_reloj.html",tooltip="Clase del objeto Reloj."];
+  Node0 -> Node17 [id="edge6_Node000000_Node000017",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node17 [id="Node000017",label="Timer",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_timer.html",tooltip="Clase del objeto timer."];
+  Node0 -> Node15 [id="edge7_Node000000_Node000015",dir="back",color="firebrick4",style="solid",tooltip=" "];
+  Node15 [id="Node000015",label="display7Segmentos",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classdisplay7_segmentos.html",tooltip="Clase del objeto display7Segmentos El objeto display7Segmentos permite el control de un display con d..."];
+  Node0 -> Node18 [id="edge8_Node000000_Node000018",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node18 [id="Node000018",label="teclado",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classteclado.html",tooltip="Clase del objeto teclado FUNCIONAMIENTO: Este objeto permite controlar teclados matriciales cableados..."];
+  Node14 [id="Node000014",label="Display",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_display.html",tooltip="Clase del objeto display Clase abstracta pura para la generación de displays."];
+  Node14 -> Node13 [id="edge9_Node000014_Node000013",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node14 -> Node15 [id="edge10_Node000014_Node000015",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="InOut",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_in_out.html",tooltip="Clase del objeto InOut."];
+  Node7 -> Node2 [id="edge11_Node000007_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="gpio",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classgpio.html",tooltip="Clase del objeto gpio."];
+  Node2 -> Node1 [id="edge12_Node000002_Node000001",dir="back",color="darkgreen",style="solid",tooltip=" "];
+  Node2 -> Node3 [id="edge13_Node000002_Node000003",dir="back",color="darkgreen",style="solid",tooltip=" "];
+  Node2 -> Node4 [id="edge14_Node000002_Node000004",dir="back",color="darkgreen",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="PinInterrupt",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_pin_interrupt.html",tooltip="Clase del objeto Pin_interrupt El objeto Pin_interrupt debe ser heredado por cualquier objeto que des..."];
+  Node4 -> Node5 [id="edge15_Node000004_Node000005",dir="back",color="darkgreen",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="PWM_Reader",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_p_w_m___reader.html",tooltip="Clase del objeto PWM_Reader."];
+  Node6 [id="Node000006",label="MRThandler",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_m_r_thandler.html",tooltip="Clase del objeto MRThandler El objeto MRThandler debe ser heredado por cualquier objeto que desee est..."];
+  Node6 -> Node5 [id="edge16_Node000006_Node000005",dir="back",color="darkgreen",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="Pin",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_pin.html",tooltip="Clase del objeto Pin."];
+  Node8 -> Node9 [id="edge17_Node000008_Node000009",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node9 [id="Node000009",label="ADC",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_a_d_c.html",tooltip="Clase del objeto ADC FUNCIONAMIENTO: La clase ADC utiliza el ADCGroup para poder ser manejada de form..."];
+  Node8 -> Node10 [id="edge18_Node000008_Node000010",dir="back",color="darkgreen",style="solid",tooltip=" "];
+  Node10 [id="Node000010",label="DAC",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_d_a_c.html",tooltip="Clase del objeto DAC FUNCIONAMIENTO: Realiza una conversion digital->analógica en un rango desde 0 ha..."];
+  Node8 -> Node11 [id="edge19_Node000008_Node000011",dir="back",color="darkgreen",style="solid",tooltip=" "];
+  Node11 [id="Node000011",label="Pwm",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_pwm.html",tooltip="Clase del objeto Pwm."];
+  Node8 -> Node2 [id="edge20_Node000008_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node12 [id="Node000012",label="SCtimer",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_s_ctimer.html",tooltip="Clase del objeto SCtimer El objeto SCtimer debe ser heredado por quienes desen utilizar las interrucp..."];
+  Node12 -> Node11 [id="edge21_Node000012_Node000011",dir="back",color="darkgreen",style="solid",tooltip=" "];
 }

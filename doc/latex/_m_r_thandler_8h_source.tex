@@ -1,0 +1,73 @@
+\doxysection{MRThandler.\+h}
+\hypertarget{_m_r_thandler_8h_source}{}\label{_m_r_thandler_8h_source}\index{E:/Agustin/Escritorio/MCUexpresso/KitLPC845-\/C++/src/Drivers/Perifericos/09-\/MultiRateTimer/MRThandler.h@{E:/Agustin/Escritorio/MCUexpresso/KitLPC845-\/C++/src/Drivers/Perifericos/09-\/MultiRateTimer/MRThandler.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*******************************************************************************************************************************/}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ ***\ MODULO}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#ifndef\ MRTHANDLER\_H\_}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ MRTHANDLER\_H\_}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00018\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ ***\ INCLUDES}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}tipos.h"{}}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ "{}LPC845.h"{}}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ "{}vector"{}}}
+\DoxyCodeLine{00024\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ ***\ DEFINES\ GLOBALES}}
+\DoxyCodeLine{00026\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#if\ defined\ (\_\_cplusplus)}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ MRT\_IRQHandler(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00030\ \ \ \ \ \}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00032\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00033\ \textcolor{comment}{\ ***\ MACROS\ GLOBALES}}
+\DoxyCodeLine{00034\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00035\ \textcolor{keyword}{namespace\ }type\_MRT}
+\DoxyCodeLine{00036\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{\ CHANNEL\_0\ =\ 0,\ CHANNEL\_1,\ CHANNEL\_2,\ CHANNEL\_3\ \}\ MRT\_timer\_channels;\ \ \ \ \ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{\ REPEAT\ =\ 0,\ ONE\_SHOT,\ ONE\_SHOT\_BUS,\ COUNTER\ \}\ MRT\_MODES\ ;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\ \ \ \ \#define\ MAX\_MRT\_CHANNEL\ \ \ \ \ 4}}
+\DoxyCodeLine{00041\ \}}
+\DoxyCodeLine{00042\ \textcolor{keyword}{using\ namespace\ }type\_MRT;}
+\DoxyCodeLine{00043\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00044\ \textcolor{comment}{\ ***\ TIPO\ DE\ DATOS\ GLOBALES}}
+\DoxyCodeLine{00045\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00048\ \textcolor{comment}{\ ***\ VARIABLES\ GLOBALES}}
+\DoxyCodeLine{00049\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{comment}{/***********************************************************************************************************************************}}
+\DoxyCodeLine{00052\ \textcolor{comment}{\ ***\ IMPLANTACION\ DE\ LA\ CLASE}}
+\DoxyCodeLine{00053\ \textcolor{comment}{\ **********************************************************************************************************************************/}}
+\DoxyCodeLine{00059\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_m_r_thandler_a405dfe71d543b8cf4f75a09cae53e6fc}{MRThandler}}}
+\DoxyCodeLine{00060\ \{}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ m\_first[MAX\_MRT\_CHANNEL];\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ MRT\_timer\_channels\ \mbox{\hyperlink{class_m_r_thandler_a08fe21399ff517aabf08fc7f83709329}{m\_timer\_channel}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_m_r_thandler_a405dfe71d543b8cf4f75a09cae53e6fc}{MRThandler}}(\ MRT\_timer\_channels\ \_timer\_number\ ,\ MRT\_MODES\ mode\ );}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_m_r_thandler_a9a0e1d2c7eb054758b516f581cf80e7f}{\string~MRThandler}}()\ =\ \textcolor{keywordflow}{default};\ \ \ \ \ }
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_m_r_thandler_af0cab74c1b1842bb3ec1d9f7ac34cf5c}{Handler}}\ (\ \textcolor{keywordtype}{void}\ )\ =\ 0;}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_m_r_thandler_a93bad50c900842aa212ef214b71d539e}{EneableInterrupt}}\ (\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_m_r_thandler_a2f45f9123b8b9eb19ee4e676b545e304}{DisableInterrupt}}\ (\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_m_r_thandler_a8ec5143312e26a2ccf137ca5f007e46b}{MRT\_reset\_time}}\ (\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ uint32\_t\ \ \ \ \mbox{\hyperlink{class_m_r_thandler_a6ae80256f546424778e641da4926c9db}{MRT\_get\_time}}\ (\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ MRT\_Inicializar\ (\ MRT\_timer\_channels\ timer\ ,\ MRT\_MODES\ mode\ \ );}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ MRT\_Reset\ (\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00082\ \};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00085\ \textcolor{keyword}{extern}\ std::vector\ <MRThandler\ *>\ \mbox{\hyperlink{group___drivers_gac70ea05332635bdb19f56dcd3274513d}{g\_MRThandler}};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ MRTHANDLER\_H\_\ */}\textcolor{preprocessor}{}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}
