@@ -1,7 +1,7 @@
 /*******************************************************************************************************************************//**
  *
  * @file		Output.cpp
- * @brief		Clase del tipo Output o salida digital
+ * @brief		Clase del tipo Output o salida digital.
  * @date		12 jul. 2022
  * @author		Ing. Marcelo Trujillo
  *
@@ -83,12 +83,12 @@ int8_t Output::Off ( void )
 	return m_error;
 }
 /**
- * \fn int8_t Output::SetUp( void )
+ * \fn int8_t Output::Initialize( void )
  * \brief Funcion de configuracion del output.
  * \details Setea la direccion y resistencia de la salida.
  * \return devuelve el error.
 */
-int8_t Output::SetUp( void )
+int8_t Output::Initialize( void )
 {
 	SetDir();
 	SetPinMode();

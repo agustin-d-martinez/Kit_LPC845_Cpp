@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>KITLPC845-C++: E:/Agustin/Escritorio/MCUexpresso/KitLPC845-C++/src/Drivers/Perifericos/11-DAC/DAC.h Source File</title>
+<title>LPC845-C++: DAC.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -18,6 +18,11 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,10 +32,22 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">KITLPC845-C++<span id="projectnumber">&#160;2.0</span>
+   <div id="projectname">LPC845-C++<span id="projectnumber">&#160;2.0</span>
    </div>
-   <div id="projectbrief">KitdelibreriascustomenC++paralaplacadedesarrolloLPC845</div>
+   <div id="projectbrief">Kit de librerias propias de la placa de desarrollo LPC845</div>
   </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -47,17 +64,6 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 $(function() { codefold.init(0); });
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('',true,false,'search.php','Search',true);
-  $(function() { init_search(); });
-});
-/* @license-end */
-</script>
-<div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -101,107 +107,109 @@ $(function(){initNavTree('_d_a_c_8h_source.html',''); initResizable(true); });
 </div><!--header-->
 <div class="contents">
 <a href="_d_a_c_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*******************************************************************************************************************************/</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">/***********************************************************************************************************************************</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> *** MODULO</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> **********************************************************************************************************************************/</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#ifndef DAC_H_</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#define DAC_H_</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">/***********************************************************************************************************************************</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> *** INCLUDES GLOBALES</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> **********************************************************************************************************************************/</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;<a class="code" href="_pin_8h.html">Perifericos/01-Pin/Pin.h</a>&gt;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;LPC845.h&quot;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;tipos.h&quot;</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">/***********************************************************************************************************************************</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment"> *** DEFINES GLOBALES</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment"> **********************************************************************************************************************************/</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">/***********************************************************************************************************************************</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment"> *** MACROS GLOBALES</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment"> **********************************************************************************************************************************/</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">/***********************************************************************************************************************************</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment"> *** TIPO DE DATOS GLOBALES</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment"> **********************************************************************************************************************************/</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">/***********************************************************************************************************************************</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment"> *** VARIABLES GLOBALES</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment"> **********************************************************************************************************************************/</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">/***********************************************************************************************************************************</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment"> *** IMPLANTACION DE LA CLASE</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment"> **********************************************************************************************************************************/</span></div>
-<div class="foldopen" id="foldopen00052" data-start="{" data-end="};">
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_d_a_c.html">   52</a></span><span class="keyword">class </span><a class="code hl_function" href="class_d_a_c.html#a45d6108230365ffdd146518ba44f224f">DAC</a> : <span class="keyword">protected</span> <a class="code hl_function" href="class_pin.html#a063b07c7607e031318ca024b75a6f0cf">Pin</a></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>{</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="_d_a_c_8h.html#a63c0ef3037f78e6dd05190afde80f30e">   56</a></span><span class="preprocessor">        #define MAX_DAC_CHANNEL     (2)</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="_d_a_c_8h.html#ae191bd669b0350508de8f1066229c809">   58</a></span><span class="preprocessor">        #define MAX_DAC_VALUE           (0x3FF)</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_d_a_c.html#a9560ddef55af03b248f1ee0a47075275">   60</a></span>        <span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code hl_enumeration" href="class_d_a_c.html#a9560ddef55af03b248f1ee0a47075275">dac_channel</a> { DAC_CHANNEL_0 = 0 , DAC_CHANNEL_1 = 1 } <a class="code hl_enumeration" href="class_d_a_c.html#a9560ddef55af03b248f1ee0a47075275">dac_channel</a>;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_d_a_c.html#a5f499c13c400fb60572ce0b7d3a0be73">   62</a></span>        <span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code hl_enumeration" href="class_d_a_c.html#a5f499c13c400fb60572ce0b7d3a0be73">dac_error</a> { ERROR = -1 , OK = 0 } <a class="code hl_enumeration" href="class_d_a_c.html#a5f499c13c400fb60572ce0b7d3a0be73">dac_error</a>;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keyword">enum</span> OFFSET { SWM_DACOUT0 = 26 , SWM_DACOUT1 = 27 , SYS_DACOUT0 = 27 , SYS_DACOUT1 = 1 , IOCON_DAC = 16};</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keyword">const</span> <a class="code hl_enumeration" href="class_d_a_c.html#a9560ddef55af03b248f1ee0a47075275">dac_channel</a> m_dac_channel; </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        uint32_t m_buffer;                  </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        uint32_t m_max_range;               </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <a class="code hl_enumeration" href="class_d_a_c.html#a5f499c13c400fb60572ce0b7d3a0be73">dac_error</a> m_error;                 </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <a class="code hl_function" href="class_d_a_c.html#a45d6108230365ffdd146518ba44f224f">DAC</a>( <a class="code hl_enumeration" href="class_d_a_c.html#a9560ddef55af03b248f1ee0a47075275">dac_channel</a> channel , uint32_t max_range = <a class="code hl_define" href="_d_a_c_8h.html#ae191bd669b0350508de8f1066229c809">MAX_DAC_VALUE</a> );</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <a class="code hl_enumeration" href="class_d_a_c.html#a5f499c13c400fb60572ce0b7d3a0be73">DAC::dac_error</a> <a class="code hl_function" href="class_d_a_c.html#a3a8c6ad5c3035087787584c8054fc073">Inicializar</a> ( <span class="keywordtype">void</span> );</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_d_a_c.html#a42cdf9cb502fc8234a0b9698acada507">Set</a> ( uint32_t val );</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        uint32_t <a class="code hl_function" href="class_d_a_c.html#a3f9efa0d5af1b6a308027a798be02a57">Get</a> ( <span class="keywordtype">void</span> ) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_d_a_c.html#af0c5969c5ac8d8a10ab06e35f1b12c66">SetMaxRange</a> ( uint32_t max_range );</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        uint32_t <a class="code hl_function" href="class_d_a_c.html#a4d2ecd1ae0ae5866257018072d923ac3">GetMaxRange</a> ( <span class="keywordtype">void</span> ) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <a class="code hl_function" href="class_d_a_c.html#a45d6108230365ffdd146518ba44f224f">DAC</a>&amp; <a class="code hl_function" href="class_d_a_c.html#af3bcc3ecf987cc1a13520253e876155a">operator= </a>( uint32_t val );</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_d_a_c.html#afdcebcde389be5087c67e90f22612ba3">operator== </a>( uint32_t val ) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_d_a_c.html#a3d6022ab240c44446f15592056e5bf84">operator&lt; </a>( uint32_t val ) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_d_a_c.html#a1208b1ed85f07f4521ca4edec1854dc6">operator&lt;= </a>( uint32_t val ) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_d_a_c.html#a7983314f92ba3c948c154269255cfbf9">operator&gt; </a>( uint32_t val ) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_d_a_c.html#a1c05f3c9ca7ceb8adb44c276e33ff31a">operator&gt;= </a>( uint32_t val ) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_d_a_c.html#a77a8287cdab41a4894d2693a77d1d6b9">operator!= </a>( uint32_t val ) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <span class="keyword">virtual</span> <a class="code hl_function" href="class_d_a_c.html#a2a8f4f13338b7020e63c1ea04874e8a1">~DAC</a>();     </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">/***********************************************************************************************************************************</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> *** MODULO</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> **********************************************************************************************************************************/</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#ifndef DAC_H_</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#define DAC_H_</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/***********************************************************************************************************************************</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> *** INCLUDES GLOBALES</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment"> **********************************************************************************************************************************/</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;<a class="code" href="_pin_8h.html">Perifericos/01-Pin/Pin.h</a>&gt;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &quot;<a class="code" href="_l_p_c845_8h.html">LPC845.h</a>&quot;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &quot;<a class="code" href="tipos_8h.html">tipos.h</a>&quot;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">/***********************************************************************************************************************************</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment"> *** DEFINES GLOBALES</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment"> **********************************************************************************************************************************/</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">/***********************************************************************************************************************************</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment"> *** MACROS GLOBALES</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment"> **********************************************************************************************************************************/</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">/***********************************************************************************************************************************</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment"> *** TIPO DE DATOS GLOBALES</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment"> **********************************************************************************************************************************/</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">/***********************************************************************************************************************************</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment"> *** VARIABLES GLOBALES</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment"> **********************************************************************************************************************************/</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">/***********************************************************************************************************************************</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment"> *** IMPLANTACION DE LA CLASE</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment"> **********************************************************************************************************************************/</span></div>
+<div class="foldopen" id="foldopen00054" data-start="{" data-end="};">
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_d_a_c.html">   54</a></span><span class="keyword">class </span><a class="code hl_function" href="class_d_a_c.html#a45d6108230365ffdd146518ba44f224f">DAC</a> : <span class="keyword">protected</span> <a class="code hl_function" href="class_pin.html#a063b07c7607e031318ca024b75a6f0cf">Pin</a></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>{</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="_d_a_c_8h.html#a63c0ef3037f78e6dd05190afde80f30e">   58</a></span><span class="preprocessor">        #define MAX_DAC_CHANNEL     (2)</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="_d_a_c_8h.html#ae191bd669b0350508de8f1066229c809">   60</a></span><span class="preprocessor">        #define MAX_DAC_VALUE           (0x3FF)</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_d_a_c.html#a9560ddef55af03b248f1ee0a47075275">   62</a></span>        <span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code hl_enumeration" href="class_d_a_c.html#a9560ddef55af03b248f1ee0a47075275">dac_channel</a> { DAC_CHANNEL_0 = 0 , DAC_CHANNEL_1 = 1 } <a class="code hl_enumeration" href="class_d_a_c.html#a9560ddef55af03b248f1ee0a47075275">dac_channel</a>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_d_a_c.html#a5f499c13c400fb60572ce0b7d3a0be73">   64</a></span>        <span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code hl_enumeration" href="class_d_a_c.html#a5f499c13c400fb60572ce0b7d3a0be73">dac_error</a> { ERROR = -1 , OK = 0 } <a class="code hl_enumeration" href="class_d_a_c.html#a5f499c13c400fb60572ce0b7d3a0be73">dac_error</a>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keyword">enum</span> OFFSET { SWM_DACOUT0 = 26 , SWM_DACOUT1 = 27 , SYS_DACOUT0 = 27 , SYS_DACOUT1 = 1 , IOCON_DAC = 16};</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="keyword">const</span> <a class="code hl_enumeration" href="class_d_a_c.html#a9560ddef55af03b248f1ee0a47075275">dac_channel</a> m_dac_channel; </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <a class="code hl_typedef" href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> m_buffer;                  </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <a class="code hl_typedef" href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> m_max_range;               </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <a class="code hl_enumeration" href="class_d_a_c.html#a5f499c13c400fb60572ce0b7d3a0be73">dac_error</a> m_error;                 </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <a class="code hl_function" href="class_d_a_c.html#a45d6108230365ffdd146518ba44f224f">DAC</a>( <a class="code hl_enumeration" href="class_d_a_c.html#a9560ddef55af03b248f1ee0a47075275">dac_channel</a> channel , <a class="code hl_typedef" href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> max_range = <a class="code hl_define" href="_d_a_c_8h.html#ae191bd669b0350508de8f1066229c809">MAX_DAC_VALUE</a> );</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <a class="code hl_enumeration" href="class_d_a_c.html#a5f499c13c400fb60572ce0b7d3a0be73">DAC::dac_error</a> <a class="code hl_function" href="class_d_a_c.html#ae89b63d5dfe3ea4149a79c1a8a858fd1">Initialize</a> ( <span class="keywordtype">void</span> );</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_d_a_c.html#a42cdf9cb502fc8234a0b9698acada507">Set</a> ( <a class="code hl_typedef" href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> val );</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <a class="code hl_typedef" href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code hl_function" href="class_d_a_c.html#a3f9efa0d5af1b6a308027a798be02a57">Get</a> ( <span class="keywordtype">void</span> ) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_d_a_c.html#af0c5969c5ac8d8a10ab06e35f1b12c66">SetMaxRange</a> ( <a class="code hl_typedef" href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> max_range );</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <a class="code hl_typedef" href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code hl_function" href="class_d_a_c.html#a4d2ecd1ae0ae5866257018072d923ac3">GetMaxRange</a> ( <span class="keywordtype">void</span> ) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <a class="code hl_function" href="class_d_a_c.html#a45d6108230365ffdd146518ba44f224f">DAC</a>&amp; <a class="code hl_function" href="class_d_a_c.html#af3bcc3ecf987cc1a13520253e876155a">operator= </a>( <a class="code hl_typedef" href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> val );</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_d_a_c.html#afdcebcde389be5087c67e90f22612ba3">operator== </a>( <a class="code hl_typedef" href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> val ) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_d_a_c.html#a3d6022ab240c44446f15592056e5bf84">operator&lt; </a>( <a class="code hl_typedef" href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> val ) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_d_a_c.html#a1208b1ed85f07f4521ca4edec1854dc6">operator&lt;= </a>( <a class="code hl_typedef" href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> val ) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_d_a_c.html#a7983314f92ba3c948c154269255cfbf9">operator&gt; </a>( <a class="code hl_typedef" href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> val ) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_d_a_c.html#a1c05f3c9ca7ceb8adb44c276e33ff31a">operator&gt;= </a>( <a class="code hl_typedef" href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> val ) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_d_a_c.html#a77a8287cdab41a4894d2693a77d1d6b9">operator!= </a>( <a class="code hl_typedef" href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> val ) <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <span class="keywordtype">void</span> PowerDAC( <span class="keywordtype">void</span> );</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="keywordtype">void</span> EnableClock ( <span class="keywordtype">void</span> );</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <span class="keywordtype">void</span> EnableSWM ( <span class="keywordtype">void</span> );</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keywordtype">void</span> EnableIOCONDAC( <span class="keywordtype">void</span> );</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <span class="keywordtype">void</span> UnPowerDAC ( <span class="keywordtype">void</span> );</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <span class="keywordtype">void</span> DisableClock ( <span class="keywordtype">void</span> );</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <span class="keywordtype">void</span> DisableSWM ( <span class="keywordtype">void</span> );</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <span class="keywordtype">void</span> DisableIOCONDAC( <span class="keywordtype">void</span> );</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>};</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="keyword">virtual</span> <a class="code hl_function" href="class_d_a_c.html#a2a8f4f13338b7020e63c1ea04874e8a1">~DAC</a>();     </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <span class="keywordtype">void</span> PowerDAC( <span class="keywordtype">void</span> );</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keywordtype">void</span> EnableClock ( <span class="keywordtype">void</span> );</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <span class="keywordtype">void</span> EnableSWM ( <span class="keywordtype">void</span> );</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <span class="keywordtype">void</span> EnableIOCONDAC( <span class="keywordtype">void</span> );</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <span class="keywordtype">void</span> UnPowerDAC ( <span class="keywordtype">void</span> );</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <span class="keywordtype">void</span> DisableClock ( <span class="keywordtype">void</span> );</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <span class="keywordtype">void</span> DisableSWM ( <span class="keywordtype">void</span> );</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        <span class="keywordtype">void</span> DisableIOCONDAC( <span class="keywordtype">void</span> );</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>};</div>
 </div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="preprocessor">#endif </span><span class="comment">/* DAC_H_ */</span><span class="preprocessor"></span><span class="preprocessor"></span></div>
-<div class="ttc" id="a_d_a_c_8h_html_ae191bd669b0350508de8f1066229c809"><div class="ttname"><a href="_d_a_c_8h.html#ae191bd669b0350508de8f1066229c809">MAX_DAC_VALUE</a></div><div class="ttdeci">#define MAX_DAC_VALUE</div><div class="ttdef"><b>Definition</b> DAC.h:58</div></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="preprocessor">#endif </span><span class="comment">/* DAC_H_ */</span><span class="preprocessor"></span><span class="preprocessor"></span></div>
+<div class="ttc" id="a_d_a_c_8h_html_ae191bd669b0350508de8f1066229c809"><div class="ttname"><a href="_d_a_c_8h.html#ae191bd669b0350508de8f1066229c809">MAX_DAC_VALUE</a></div><div class="ttdeci">#define MAX_DAC_VALUE</div><div class="ttdef"><b>Definition</b> DAC.h:60</div></div>
+<div class="ttc" id="a_l_p_c845_8h_html"><div class="ttname"><a href="_l_p_c845_8h.html">LPC845.h</a></div><div class="ttdoc">Registros del LPC845.</div></div>
 <div class="ttc" id="a_pin_8h_html"><div class="ttname"><a href="_pin_8h.html">Pin.h</a></div><div class="ttdoc">Clase Abstracta de cualquier pin del microcontrolador.</div></div>
-<div class="ttc" id="aclass_d_a_c_html_a1208b1ed85f07f4521ca4edec1854dc6"><div class="ttname"><a href="class_d_a_c.html#a1208b1ed85f07f4521ca4edec1854dc6">DAC::operator&lt;=</a></div><div class="ttdeci">bool operator&lt;=(uint32_t val) const</div><div class="ttdoc">Sobrecarga del operador &lt;=.</div><div class="ttdef"><b>Definition</b> DAC.cpp:167</div></div>
-<div class="ttc" id="aclass_d_a_c_html_a1c05f3c9ca7ceb8adb44c276e33ff31a"><div class="ttname"><a href="class_d_a_c.html#a1c05f3c9ca7ceb8adb44c276e33ff31a">DAC::operator&gt;=</a></div><div class="ttdeci">bool operator&gt;=(uint32_t val) const</div><div class="ttdoc">Sobrecarga del operador &gt;=.</div><div class="ttdef"><b>Definition</b> DAC.cpp:189</div></div>
-<div class="ttc" id="aclass_d_a_c_html_a2a8f4f13338b7020e63c1ea04874e8a1"><div class="ttname"><a href="class_d_a_c.html#a2a8f4f13338b7020e63c1ea04874e8a1">DAC::~DAC</a></div><div class="ttdeci">virtual ~DAC()</div><div class="ttdef"><b>Definition</b> DAC.cpp:205</div></div>
-<div class="ttc" id="aclass_d_a_c_html_a3a8c6ad5c3035087787584c8054fc073"><div class="ttname"><a href="class_d_a_c.html#a3a8c6ad5c3035087787584c8054fc073">DAC::Inicializar</a></div><div class="ttdeci">DAC::dac_error Inicializar(void)</div><div class="ttdoc">Inicializa el DAC.</div><div class="ttdef"><b>Definition</b> DAC.cpp:61</div></div>
-<div class="ttc" id="aclass_d_a_c_html_a3d6022ab240c44446f15592056e5bf84"><div class="ttname"><a href="class_d_a_c.html#a3d6022ab240c44446f15592056e5bf84">DAC::operator&lt;</a></div><div class="ttdeci">bool operator&lt;(uint32_t val) const</div><div class="ttdoc">Sobrecarga del operador &lt;.</div><div class="ttdef"><b>Definition</b> DAC.cpp:156</div></div>
-<div class="ttc" id="aclass_d_a_c_html_a3f9efa0d5af1b6a308027a798be02a57"><div class="ttname"><a href="class_d_a_c.html#a3f9efa0d5af1b6a308027a798be02a57">DAC::Get</a></div><div class="ttdeci">uint32_t Get(void) const</div><div class="ttdoc">Devuelve el valor analógico del DAC.</div><div class="ttdef"><b>Definition</b> DAC.cpp:99</div></div>
-<div class="ttc" id="aclass_d_a_c_html_a42cdf9cb502fc8234a0b9698acada507"><div class="ttname"><a href="class_d_a_c.html#a42cdf9cb502fc8234a0b9698acada507">DAC::Set</a></div><div class="ttdeci">void Set(uint32_t val)</div><div class="ttdoc">Setea el valor del DAC.</div><div class="ttdef"><b>Definition</b> DAC.cpp:78</div></div>
-<div class="ttc" id="aclass_d_a_c_html_a45d6108230365ffdd146518ba44f224f"><div class="ttname"><a href="class_d_a_c.html#a45d6108230365ffdd146518ba44f224f">DAC::DAC</a></div><div class="ttdeci">DAC(dac_channel channel, uint32_t max_range=MAX_DAC_VALUE)</div><div class="ttdoc">Constructor de clase DAC.</div><div class="ttdef"><b>Definition</b> DAC.cpp:49</div></div>
-<div class="ttc" id="aclass_d_a_c_html_a4d2ecd1ae0ae5866257018072d923ac3"><div class="ttname"><a href="class_d_a_c.html#a4d2ecd1ae0ae5866257018072d923ac3">DAC::GetMaxRange</a></div><div class="ttdeci">uint32_t GetMaxRange(void) const</div><div class="ttdoc">Devuelve el rango máximo que posee el DAC.</div><div class="ttdef"><b>Definition</b> DAC.cpp:122</div></div>
-<div class="ttc" id="aclass_d_a_c_html_a5f499c13c400fb60572ce0b7d3a0be73"><div class="ttname"><a href="class_d_a_c.html#a5f499c13c400fb60572ce0b7d3a0be73">DAC::dac_error</a></div><div class="ttdeci">dac_error</div><div class="ttdef"><b>Definition</b> DAC.h:62</div></div>
-<div class="ttc" id="aclass_d_a_c_html_a77a8287cdab41a4894d2693a77d1d6b9"><div class="ttname"><a href="class_d_a_c.html#a77a8287cdab41a4894d2693a77d1d6b9">DAC::operator!=</a></div><div class="ttdeci">bool operator!=(uint32_t val) const</div><div class="ttdoc">Sobrecarga del operador !=.</div><div class="ttdef"><b>Definition</b> DAC.cpp:200</div></div>
-<div class="ttc" id="aclass_d_a_c_html_a7983314f92ba3c948c154269255cfbf9"><div class="ttname"><a href="class_d_a_c.html#a7983314f92ba3c948c154269255cfbf9">DAC::operator&gt;</a></div><div class="ttdeci">bool operator&gt;(uint32_t val) const</div><div class="ttdoc">Sobrecarga del operador &gt;</div><div class="ttdef"><b>Definition</b> DAC.cpp:178</div></div>
-<div class="ttc" id="aclass_d_a_c_html_a9560ddef55af03b248f1ee0a47075275"><div class="ttname"><a href="class_d_a_c.html#a9560ddef55af03b248f1ee0a47075275">DAC::dac_channel</a></div><div class="ttdeci">dac_channel</div><div class="ttdef"><b>Definition</b> DAC.h:60</div></div>
-<div class="ttc" id="aclass_d_a_c_html_af0c5969c5ac8d8a10ab06e35f1b12c66"><div class="ttname"><a href="class_d_a_c.html#af0c5969c5ac8d8a10ab06e35f1b12c66">DAC::SetMaxRange</a></div><div class="ttdeci">void SetMaxRange(uint32_t max_range)</div><div class="ttdoc">Setea el rango máximo.</div><div class="ttdef"><b>Definition</b> DAC.cpp:109</div></div>
-<div class="ttc" id="aclass_d_a_c_html_af3bcc3ecf987cc1a13520253e876155a"><div class="ttname"><a href="class_d_a_c.html#af3bcc3ecf987cc1a13520253e876155a">DAC::operator=</a></div><div class="ttdeci">DAC &amp; operator=(uint32_t val)</div><div class="ttdoc">Sobrecarga del operador =.</div><div class="ttdef"><b>Definition</b> DAC.cpp:133</div></div>
-<div class="ttc" id="aclass_d_a_c_html_afdcebcde389be5087c67e90f22612ba3"><div class="ttname"><a href="class_d_a_c.html#afdcebcde389be5087c67e90f22612ba3">DAC::operator==</a></div><div class="ttdeci">bool operator==(uint32_t val) const</div><div class="ttdoc">Sobrecarga del operador ==.</div><div class="ttdef"><b>Definition</b> DAC.cpp:145</div></div>
-<div class="ttc" id="aclass_pin_html_a063b07c7607e031318ca024b75a6f0cf"><div class="ttname"><a href="class_pin.html#a063b07c7607e031318ca024b75a6f0cf">Pin::Pin</a></div><div class="ttdeci">Pin(port_t port, uint8_t bit)</div><div class="ttdoc">Constructor de clase PIN.</div><div class="ttdef"><b>Definition</b> Pin.cpp:49</div></div>
+<div class="ttc" id="aclass_d_a_c_html_a1208b1ed85f07f4521ca4edec1854dc6"><div class="ttname"><a href="class_d_a_c.html#a1208b1ed85f07f4521ca4edec1854dc6">DAC::operator&lt;=</a></div><div class="ttdeci">bool operator&lt;=(uint32_t val) const</div><div class="ttdoc">Sobrecarga del operador &lt;=.</div><div class="ttdef"><b>Definition</b> DAC.cpp:169</div></div>
+<div class="ttc" id="aclass_d_a_c_html_a1c05f3c9ca7ceb8adb44c276e33ff31a"><div class="ttname"><a href="class_d_a_c.html#a1c05f3c9ca7ceb8adb44c276e33ff31a">DAC::operator&gt;=</a></div><div class="ttdeci">bool operator&gt;=(uint32_t val) const</div><div class="ttdoc">Sobrecarga del operador &gt;=.</div><div class="ttdef"><b>Definition</b> DAC.cpp:191</div></div>
+<div class="ttc" id="aclass_d_a_c_html_a2a8f4f13338b7020e63c1ea04874e8a1"><div class="ttname"><a href="class_d_a_c.html#a2a8f4f13338b7020e63c1ea04874e8a1">DAC::~DAC</a></div><div class="ttdeci">virtual ~DAC()</div><div class="ttdef"><b>Definition</b> DAC.cpp:207</div></div>
+<div class="ttc" id="aclass_d_a_c_html_a3d6022ab240c44446f15592056e5bf84"><div class="ttname"><a href="class_d_a_c.html#a3d6022ab240c44446f15592056e5bf84">DAC::operator&lt;</a></div><div class="ttdeci">bool operator&lt;(uint32_t val) const</div><div class="ttdoc">Sobrecarga del operador &lt;.</div><div class="ttdef"><b>Definition</b> DAC.cpp:158</div></div>
+<div class="ttc" id="aclass_d_a_c_html_a3f9efa0d5af1b6a308027a798be02a57"><div class="ttname"><a href="class_d_a_c.html#a3f9efa0d5af1b6a308027a798be02a57">DAC::Get</a></div><div class="ttdeci">uint32_t Get(void) const</div><div class="ttdoc">Devuelve el valor analógico del DAC.</div><div class="ttdef"><b>Definition</b> DAC.cpp:101</div></div>
+<div class="ttc" id="aclass_d_a_c_html_a42cdf9cb502fc8234a0b9698acada507"><div class="ttname"><a href="class_d_a_c.html#a42cdf9cb502fc8234a0b9698acada507">DAC::Set</a></div><div class="ttdeci">void Set(uint32_t val)</div><div class="ttdoc">Setea el valor del DAC.</div><div class="ttdef"><b>Definition</b> DAC.cpp:80</div></div>
+<div class="ttc" id="aclass_d_a_c_html_a45d6108230365ffdd146518ba44f224f"><div class="ttname"><a href="class_d_a_c.html#a45d6108230365ffdd146518ba44f224f">DAC::DAC</a></div><div class="ttdeci">DAC(dac_channel channel, uint32_t max_range=MAX_DAC_VALUE)</div><div class="ttdoc">Constructor de clase DAC.</div><div class="ttdef"><b>Definition</b> DAC.cpp:51</div></div>
+<div class="ttc" id="aclass_d_a_c_html_a4d2ecd1ae0ae5866257018072d923ac3"><div class="ttname"><a href="class_d_a_c.html#a4d2ecd1ae0ae5866257018072d923ac3">DAC::GetMaxRange</a></div><div class="ttdeci">uint32_t GetMaxRange(void) const</div><div class="ttdoc">Devuelve el rango máximo que posee el DAC.</div><div class="ttdef"><b>Definition</b> DAC.cpp:124</div></div>
+<div class="ttc" id="aclass_d_a_c_html_a5f499c13c400fb60572ce0b7d3a0be73"><div class="ttname"><a href="class_d_a_c.html#a5f499c13c400fb60572ce0b7d3a0be73">DAC::dac_error</a></div><div class="ttdeci">dac_error</div><div class="ttdef"><b>Definition</b> DAC.h:64</div></div>
+<div class="ttc" id="aclass_d_a_c_html_a77a8287cdab41a4894d2693a77d1d6b9"><div class="ttname"><a href="class_d_a_c.html#a77a8287cdab41a4894d2693a77d1d6b9">DAC::operator!=</a></div><div class="ttdeci">bool operator!=(uint32_t val) const</div><div class="ttdoc">Sobrecarga del operador !=.</div><div class="ttdef"><b>Definition</b> DAC.cpp:202</div></div>
+<div class="ttc" id="aclass_d_a_c_html_a7983314f92ba3c948c154269255cfbf9"><div class="ttname"><a href="class_d_a_c.html#a7983314f92ba3c948c154269255cfbf9">DAC::operator&gt;</a></div><div class="ttdeci">bool operator&gt;(uint32_t val) const</div><div class="ttdoc">Sobrecarga del operador &gt;</div><div class="ttdef"><b>Definition</b> DAC.cpp:180</div></div>
+<div class="ttc" id="aclass_d_a_c_html_a9560ddef55af03b248f1ee0a47075275"><div class="ttname"><a href="class_d_a_c.html#a9560ddef55af03b248f1ee0a47075275">DAC::dac_channel</a></div><div class="ttdeci">dac_channel</div><div class="ttdef"><b>Definition</b> DAC.h:62</div></div>
+<div class="ttc" id="aclass_d_a_c_html_ae89b63d5dfe3ea4149a79c1a8a858fd1"><div class="ttname"><a href="class_d_a_c.html#ae89b63d5dfe3ea4149a79c1a8a858fd1">DAC::Initialize</a></div><div class="ttdeci">DAC::dac_error Initialize(void)</div><div class="ttdoc">Inicializa el DAC.</div><div class="ttdef"><b>Definition</b> DAC.cpp:63</div></div>
+<div class="ttc" id="aclass_d_a_c_html_af0c5969c5ac8d8a10ab06e35f1b12c66"><div class="ttname"><a href="class_d_a_c.html#af0c5969c5ac8d8a10ab06e35f1b12c66">DAC::SetMaxRange</a></div><div class="ttdeci">void SetMaxRange(uint32_t max_range)</div><div class="ttdoc">Setea el rango máximo.</div><div class="ttdef"><b>Definition</b> DAC.cpp:111</div></div>
+<div class="ttc" id="aclass_d_a_c_html_af3bcc3ecf987cc1a13520253e876155a"><div class="ttname"><a href="class_d_a_c.html#af3bcc3ecf987cc1a13520253e876155a">DAC::operator=</a></div><div class="ttdeci">DAC &amp; operator=(uint32_t val)</div><div class="ttdoc">Sobrecarga del operador =.</div><div class="ttdef"><b>Definition</b> DAC.cpp:135</div></div>
+<div class="ttc" id="aclass_d_a_c_html_afdcebcde389be5087c67e90f22612ba3"><div class="ttname"><a href="class_d_a_c.html#afdcebcde389be5087c67e90f22612ba3">DAC::operator==</a></div><div class="ttdeci">bool operator==(uint32_t val) const</div><div class="ttdoc">Sobrecarga del operador ==.</div><div class="ttdef"><b>Definition</b> DAC.cpp:147</div></div>
+<div class="ttc" id="aclass_pin_html_a063b07c7607e031318ca024b75a6f0cf"><div class="ttname"><a href="class_pin.html#a063b07c7607e031318ca024b75a6f0cf">Pin::Pin</a></div><div class="ttdeci">Pin(port_t port, uint8_t bit)</div><div class="ttdoc">Constructor de clase PIN.</div><div class="ttdef"><b>Definition</b> Pin.cpp:51</div></div>
+<div class="ttc" id="atipos_8h_html"><div class="ttname"><a href="tipos_8h.html">tipos.h</a></div><div class="ttdoc">Definiciones de tipos de variables.</div></div>
+<div class="ttc" id="atipos_8h_html_a435d1572bf3f880d55459d9805097f62"><div class="ttname"><a href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></div><div class="ttdeci">unsigned int uint32_t</div><div class="ttdef"><b>Definition</b> tipos.h:45</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

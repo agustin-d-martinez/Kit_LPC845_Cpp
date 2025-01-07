@@ -1,0 +1,9 @@
+<map id="Semaforo.h" name="Semaforo.h">
+<area shape="rect" id="Node000001" title="Clases semaforo de ejemplo utilizando led tricolor propio de la placa." alt="" coords="71,5,159,32"/>
+<area shape="rect" id="Node000002" href="$_semaforo_8cpp.html" title="Clases semaforo de ejemplo utilizando led tricolor propio de la placa." alt="" coords="5,80,108,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="97,46,69,81,65,78,93,43"/>
+<area shape="rect" id="Node000003" href="$inicializar_8h.html" title="Archivo inicializador de la placa." alt="" coords="132,80,218,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="137,42,167,78,163,81,133,46"/>
+<area shape="rect" id="Node000004" href="$inicializar_8cpp.html" title="Archivo inicializador de la placa." alt="" coords="125,155,225,181"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="178,122,178,154,172,154,172,122"/>
+</map>

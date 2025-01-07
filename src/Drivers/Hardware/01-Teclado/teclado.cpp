@@ -1,7 +1,7 @@
 /*******************************************************************************************************************************//**
  *
  * @file		teclado.cpp
- * @brief		Descripcion del modulo
+ * @brief		Modulo de teclado matricial.
  * @date		24 jul. 2022
  * @author		Ing. Marcelo Trujillo
  *
@@ -138,11 +138,11 @@ void teclado::TecladoSW ( uint8_t TeclaEstadoActual )
 	return ;
 }
 /**
- * \fn void teclado::Inicializar ( void )
+ * \fn void teclado::Initialize ( void )
  * \brief Inicializa el teclado
  * \details Setea las direcciones y resistencias de las distintas entradas y salidas GPIO
 */
-void teclado::Inicializar ( void )
+void teclado::Initialize ( void )
 {
 	for ( auto s : m_scn )
 	{

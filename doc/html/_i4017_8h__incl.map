@@ -1,0 +1,19 @@
+<map id="I4017.h" name="I4017.h">
+<area shape="rect" id="Node000001" title="Objeto de control del integrado I4017." alt="" coords="219,5,284,32"/>
+<area shape="rect" id="Node000002" href="$_barrido_8h.html" title="Clase abstracta de manejo barridos de datos." alt="" coords="5,80,162,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="229,35,153,75,150,70,226,30"/>
+<area shape="rect" id="Node000003" href="$gpio_8h.html" title="Módulo con clase de manejo de GPIO." alt="" coords="185,88,318,131"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="254,33,254,72,249,72,249,33"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="342,96,399,123"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="270,30,342,84,339,88,267,35"/>
+<area shape="rect" id="Node000004" href="$_l_p_c845_8h.html" title="Registros del LPC845." alt="" coords="161,285,240,312"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="249,132,211,271,206,269,243,130"/>
+<area shape="rect" id="Node000006" href="$_pin_8h.html" title="Clase Abstracta de cualquier pin del microcontrolador." alt="" coords="264,277,388,320"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="256,131,263,177,279,228,301,264,296,266,274,230,258,178,251,132"/>
+<area shape="rect" id="Node000007" href="$_in_out_8h.html" title="Clase Abstracta Pura de las GPIO." alt="" coords="289,187,422,229"/>
+<area shape="poly" id="edge7_Node000003_Node000007" title=" " alt="" coords="275,129,324,174,320,178,272,133"/>
+<area shape="rect" id="Node000005" href="$tipos_8h.html" title="Definiciones de tipos de variables." alt="" coords="233,368,294,395"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="213,311,247,354,243,358,209,314"/>
+<area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="312,322,285,357,281,354,308,319"/>
+<area shape="poly" id="edge8_Node000007_Node000006" title=" " alt="" coords="351,231,340,263,335,262,346,229"/>
+</map>

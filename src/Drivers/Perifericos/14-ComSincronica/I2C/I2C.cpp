@@ -1,12 +1,14 @@
 /*******************************************************************************************************************************//**
  *
  * @file		I2C.cpp
- * @brief		Descripcion del modulo
- * @date		5 oct. 2022
- * @author		Martinez Agustin
+ * @brief		Funciones miembro de I2C.
+ * @details
+ *
+ * @date		3 ene. 2025
+ * @version		1.0
+ * @author     	Técnico. Martinez Agustin (masteragus365@gmail.com)
  *
  **********************************************************************************************************************************/
-
 /***********************************************************************************************************************************
  *** INCLUDES
  **********************************************************************************************************************************/
@@ -49,9 +51,8 @@ I2C *g_i2c[ MAX_IC2 ];
  * \param [in] slv_addr: Address propio del I2C. Solo util cuando se lo configura como slave.
 */
 I2C::I2C( I2C_Type* I2C_register , Pin* sda , Pin* scl , I2C_mode_t mode , uint8_t slv_addr) :
-		m_I2C_register (I2C_register) , m_sda(sda) , m_mode(mode) , m_slv_addr(slv_addr)
+		m_I2C_register (I2C_register) , m_sda(sda) , m_scl(scl) , m_mode(mode) , m_slv_addr(slv_addr)
 {
-	m_scl = scl;
 	if ( I2C_register == I2C0 )
 		g_i2c[ 0 ] = this;		// El I2C0 solo puede colocarse en un lugar.
 	if ( I2C_register == I2C1 )
@@ -177,20 +178,12 @@ void I2C::EnableSWM ( void )
 		SWM->PINENABLE0 &= ~(0b11 << 12) ;
 	}
 	if ( m_I2C_register == I2C1 )
-	{
-		SWM->PINASSIGN.PINASSIGN9 |= (m_sda->m_port * 0x20 + m_sda->m_bit) << 16;
-		SWM->PINASSIGN.PINASSIGN9 |= (m_scl->m_port * 0x20 + m_scl->m_bit) << 24;
-	}
+		SWM->PINASSIGN.PINASSIGN9 = ((m_scl->m_port * 0x20 + m_scl->m_bit) << 24) | ((m_sda->m_port * 0x20 + m_sda->m_bit) << 16) | (0xFF);
 	if ( m_I2C_register == I2C2 )
-	{
-		SWM->PINASSIGN.PINASSIGN10 |= (m_sda->m_port * 0x20 + m_sda->m_bit) << 0;
-		SWM->PINASSIGN.PINASSIGN10 |= (m_scl->m_port * 0x20 + m_scl->m_bit) << 8;
-	}
+		SWM->PINASSIGN.PINASSIGN10 = (0xFF << 16) | ((m_scl->m_port * 0x20 + m_scl->m_bit) << 8) | ((m_sda->m_port * 0x20 + m_sda->m_bit));
 	if ( m_I2C_register == I2C3 )
-	{
-		SWM->PINASSIGN.PINASSIGN10 |= (m_sda->m_port * 0x20 + m_sda->m_bit) << 16;
-		SWM->PINASSIGN.PINASSIGN10 |= (m_scl->m_port * 0x20 + m_scl->m_bit) << 24;
-	}
+		SWM->PINASSIGN.PINASSIGN10 = ((m_scl->m_port * 0x20 + m_scl->m_bit) << 24) | ((m_sda->m_port * 0x20 + m_sda->m_bit) << 16) | (0xFF);
+
 	SYSCON->SYSAHBCLKCTRL0 &= ~(1 << 7);
 
 }
@@ -343,12 +336,24 @@ void I2C::Write ( uint8_t data )
 */
 int8_t I2C::Read (uint8_t* data , bool continue_reading )
 {
+	int8_t aux = Read(data);
+	if (continue_reading)
+		Continue();
+	return aux;
+}
+/**
+ * \fn int8_t I2C::Read (uint8_t* data )
+ * \brief Lee un valor recibido.
+ * \details Lee el valor recibido por un slave. Solo puede ser llamado por un master que previamente haya pedido recibir y o un slave al que le llego un valor.
+ * \param [in] data: puntero a char donde se guardara el valor recibido.
+ * \return int8_t: valor de error. 0 no hubo problemas. -1 no se puede leer aun.
+*/
+int8_t I2C::Read(uint8_t *data)
+{
 	I2C_states_t aux = GetState();
 	if (aux == rx_data)
 	{
 		*data = (uint8_t) (m_I2C_register->MSTDAT | 0xFF);
-		if( continue_reading )
-			m_I2C_register->MSTCTL = I2C_MSTCTL_MSTCONTINUE(1);
 		return 0;
 	}
 	else if (aux == slvst_rx)
@@ -357,6 +362,16 @@ int8_t I2C::Read (uint8_t* data , bool continue_reading )
 		return 0;
 	}
 	return -1;
+}
+/**
+ * \fn void I2C::Continue( void )
+ * \brief Envia una señal para continuar.
+ * \details Carga el registro de continuar. Debe hacerse al usarse la funcion Read() sin continue_reading.
+*/
+void I2C::Continue( void )
+{
+	m_I2C_register->MSTCTL = I2C_MSTCTL_MSTCONTINUE(1);
+	m_I2C_register->SLVCTL = I2C_SLVCTL_SLVCONTINUE(1);
 }
 /**
  * \fn I2C& I2C::operator= ( uint8_t data )

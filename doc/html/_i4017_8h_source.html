@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>KITLPC845-C++: E:/Agustin/Escritorio/MCUexpresso/KitLPC845-C++/src/Drivers/Hardware/02-Displays/7Segmentos/A-Barrido/I4017.h Source File</title>
+<title>LPC845-C++: I4017.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -18,6 +18,11 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,10 +32,22 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">KITLPC845-C++<span id="projectnumber">&#160;2.0</span>
+   <div id="projectname">LPC845-C++<span id="projectnumber">&#160;2.0</span>
    </div>
-   <div id="projectbrief">KitdelibreriascustomenC++paralaplacadedesarrolloLPC845</div>
+   <div id="projectbrief">Kit de librerias propias de la placa de desarrollo LPC845</div>
   </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -47,17 +64,6 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 $(function() { codefold.init(0); });
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('',true,false,'search.php','Search',true);
-  $(function() { init_search(); });
-});
-/* @license-end */
-</script>
-<div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -137,18 +143,18 @@ $(function(){initNavTree('_i4017_8h_source.html',''); initResizable(true); });
 <div class="foldopen" id="foldopen00050" data-start="{" data-end="};">
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_i4017.html">   50</a></span><span class="keyword">class </span><a class="code hl_function" href="class_i4017.html#ab05d7c7180f54dab5727d45b2ce9e00d">I4017</a> : <span class="keyword">public</span> barrido</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>{</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    uint8_t m_indice ;                      </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <a class="code hl_typedef" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> m_indice ;                       </div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keyword">const</span> vector &lt;gpio * &gt; &amp;m_pins4017;     </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keyword">const</span> uint8_t m_maxsalidas ;            </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keyword">const</span> <a class="code hl_typedef" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> m_maxsalidas ;         </div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="comment">// tiene que recibir los gpio clk y reset</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_i4017.html#ab05d7c7180f54dab5727d45b2ce9e00d">   58</a></span>        <a class="code hl_function" href="class_i4017.html#ab05d7c7180f54dab5727d45b2ce9e00d">I4017</a>( <span class="keyword">const</span> vector &lt;gpio * &gt; &amp;pins4017 , uint8_t maxsalidas ) : m_indice (0) , m_pins4017 (pins4017 ) , m_maxsalidas ( (maxsalidas &lt;= 10 ) ? maxsalidas:10) {} </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_i4017.html#ab05d7c7180f54dab5727d45b2ce9e00d">   58</a></span>        <a class="code hl_function" href="class_i4017.html#ab05d7c7180f54dab5727d45b2ce9e00d">I4017</a>( <span class="keyword">const</span> vector &lt;gpio * &gt; &amp;pins4017 , <a class="code hl_typedef" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> maxsalidas ) : m_indice (0) , m_pins4017 (pins4017 ) , m_maxsalidas ( (maxsalidas &lt;= 10 ) ? maxsalidas:10) {} </div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_i4017.html#a03716526d0002f3a093d027f9dfd326a">SetDigito</a> ( <span class="keywordtype">void</span> );</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_i4017.html#ab4876ff5b2e8387026e339d26aa7e984">SetDigito</a> ( <span class="keywordtype">void</span> ) <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_i4017.html#a856597bb8a3162d8dda7ff0680b67cb6">SetReset</a>( <span class="keywordtype">void</span> );</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_i4017.html#a0cf539466a31c1e38fb3c290a2d4b984">SetClock</a>( <span class="keywordtype">void</span> );</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_i4017.html#a49b92c0109ebecf4d1155e983f1f320b">Inicializar</a> ( <span class="keywordtype">void</span> );</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_i4017.html#a21f3de366a7a38deb69fe209142b10d4">Initialize</a> ( <span class="keywordtype">void</span> ) <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keyword">virtual</span> <a class="code hl_class" href="class_i4017.html">~I4017</a>() {};          </div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>};</div>
 </div>
@@ -156,12 +162,13 @@ $(function(){initNavTree('_i4017_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">#endif </span><span class="comment">/* I4017_H_ */</span><span class="preprocessor"></span><span class="preprocessor"></span></div>
 <div class="ttc" id="a_barrido_8h_html"><div class="ttname"><a href="_barrido_8h.html">Barrido.h</a></div><div class="ttdoc">Clase abstracta de manejo barridos de datos.</div></div>
 <div class="ttc" id="aclass_i4017_html"><div class="ttname"><a href="class_i4017.html">I4017</a></div><div class="ttdoc">Clase del objeto I4017 El objeto I4017 permite el control del integrado del mismo nombre....</div><div class="ttdef"><b>Definition</b> I4017.h:51</div></div>
-<div class="ttc" id="aclass_i4017_html_a03716526d0002f3a093d027f9dfd326a"><div class="ttname"><a href="class_i4017.html#a03716526d0002f3a093d027f9dfd326a">I4017::SetDigito</a></div><div class="ttdeci">void SetDigito(void)</div><div class="ttdoc">Función de cambio en el barrido.</div><div class="ttdef"><b>Definition</b> I4017.cpp:72</div></div>
 <div class="ttc" id="aclass_i4017_html_a0cf539466a31c1e38fb3c290a2d4b984"><div class="ttname"><a href="class_i4017.html#a0cf539466a31c1e38fb3c290a2d4b984">I4017::SetClock</a></div><div class="ttdeci">void SetClock(void)</div><div class="ttdoc">Enciende la pata clock.</div><div class="ttdef"><b>Definition</b> I4017.cpp:59</div></div>
-<div class="ttc" id="aclass_i4017_html_a49b92c0109ebecf4d1155e983f1f320b"><div class="ttname"><a href="class_i4017.html#a49b92c0109ebecf4d1155e983f1f320b">I4017::Inicializar</a></div><div class="ttdeci">void Inicializar(void)</div><div class="ttdoc">Función de Inicialización del I4017.</div><div class="ttdef"><b>Definition</b> I4017.cpp:86</div></div>
+<div class="ttc" id="aclass_i4017_html_a21f3de366a7a38deb69fe209142b10d4"><div class="ttname"><a href="class_i4017.html#a21f3de366a7a38deb69fe209142b10d4">I4017::Initialize</a></div><div class="ttdeci">void Initialize(void) override</div><div class="ttdoc">Función de Inicialización del I4017.</div><div class="ttdef"><b>Definition</b> I4017.cpp:86</div></div>
 <div class="ttc" id="aclass_i4017_html_a856597bb8a3162d8dda7ff0680b67cb6"><div class="ttname"><a href="class_i4017.html#a856597bb8a3162d8dda7ff0680b67cb6">I4017::SetReset</a></div><div class="ttdeci">void SetReset(void)</div><div class="ttdoc">Resetea el I4017.</div><div class="ttdef"><b>Definition</b> I4017.cpp:47</div></div>
 <div class="ttc" id="aclass_i4017_html_ab05d7c7180f54dab5727d45b2ce9e00d"><div class="ttname"><a href="class_i4017.html#ab05d7c7180f54dab5727d45b2ce9e00d">I4017::I4017</a></div><div class="ttdeci">I4017(const vector&lt; gpio * &gt; &amp;pins4017, uint8_t maxsalidas)</div><div class="ttdef"><b>Definition</b> I4017.h:58</div></div>
+<div class="ttc" id="aclass_i4017_html_ab4876ff5b2e8387026e339d26aa7e984"><div class="ttname"><a href="class_i4017.html#ab4876ff5b2e8387026e339d26aa7e984">I4017::SetDigito</a></div><div class="ttdeci">void SetDigito(void) override</div><div class="ttdoc">Función de cambio en el barrido.</div><div class="ttdef"><b>Definition</b> I4017.cpp:72</div></div>
 <div class="ttc" id="agpio_8h_html"><div class="ttname"><a href="gpio_8h.html">gpio.h</a></div><div class="ttdoc">Módulo con clase de manejo de GPIO.</div></div>
+<div class="ttc" id="atipos_8h_html_aba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></div><div class="ttdeci">unsigned char uint8_t</div><div class="ttdef"><b>Definition</b> tipos.h:41</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

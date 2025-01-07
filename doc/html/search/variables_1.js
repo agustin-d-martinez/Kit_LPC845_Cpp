@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['iocon_5findex_5fpio0_0',['IOCON_INDEX_PIO0',['../group___drivers.html#ga16a7876a14c399435b2e39a6a17b706e',1,'Pin.h']]],
-  ['iocon_5findex_5fpio1_1',['IOCON_INDEX_PIO1',['../group___drivers.html#ga385e9f350e5fda53b8db675da440c670',1,'Pin.h']]]
+  ['b_0',['B',['../struct_g_p_i_o___type.html#ab2ef480a4c67d8b70d0b933d60ec92be',1,'GPIO_Type']]],
+  ['bias_1',['BIAS',['../struct_d_a_c__t.html#a05b63105e28c13bd2a65838e3c2c8e4a',1,'DAC_t']]],
+  ['bodctrl_2',['BODCTRL',['../struct_s_y_s_c_o_n___type.html#a2f095d8f57b2e96b6ad809021c1949d3',1,'SYSCON_Type']]],
+  ['brg_3',['BRG',['../struct_u_s_a_r_t___type.html#aa44225faa681d5f3507b0ea33fea4ffd',1,'USART_Type']]]
 ];

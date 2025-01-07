@@ -1,9 +1,12 @@
 /*******************************************************************************************************************************//**
  *
  * @file		HCSR04.h
- * @brief		Clase del sensor ultrasónico HCSR04
+ * @brief		Clase del sensor ultrasónico HCSR04.
+ * @details
+ *
  * @date		22 jun. 2022
- * @author		Técnico. Martinez Agustin
+ * @version		1.0
+ * @author     	Técnico. Martinez Agustin (masteragus365@gmail.com)
  *
  **********************************************************************************************************************************/
 #ifndef HCSR04_H_
@@ -61,11 +64,11 @@ class HC_SR04 : protected distancia
 
 	public:
 					HC_SR04( PWM_Reader* &rx , Pwm* &tx );
-		void 		Inicializar( void );
-		uint32_t 	GetDistancia( void );
+		void 		Initialize( void );
+		uint32_t 	GetDistancia( void ) override;
 		void 		Off( void );
 		void 		On( void );
-		bool 		operator==( const uint32_t a);
+		bool 		operator==( const uint32_t a) override;
 		bool 		operator<=( const uint32_t a );
 		bool 		operator>=( const uint32_t a );
 		bool 		operator<( const uint32_t a );

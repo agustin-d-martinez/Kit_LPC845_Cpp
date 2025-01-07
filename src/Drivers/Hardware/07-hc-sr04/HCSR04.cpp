@@ -1,12 +1,14 @@
 /*******************************************************************************************************************************//**
  *
- * @file		HCSR04.h
- * @brief		Clase del sensor ultrasónico HCSR04
+ * @file		HCSR04.cpp
+ * @brief		Clase del sensor ultrasónico HCSR04.
+ * @details
+ *
  * @date		22 jun. 2022
- * @author		Técnico. Martinez Agustin
+ * @version		1.0
+ * @author     	Técnico. Martinez Agustin (masteragus365@gmail.com)
  *
  **********************************************************************************************************************************/
-
 /***********************************************************************************************************************************
  *** INCLUDES
  **********************************************************************************************************************************/
@@ -49,14 +51,14 @@
 HC_SR04::HC_SR04( PWM_Reader*  &rx , Pwm* &tx ) : m_rx(rx) , m_tx(tx) , m_distancia(0) , m_stop(true)
 { }
 /**
-	\fn void HC_SR04::Inicializar(void)
+	\fn void HC_SR04::Initialize(void)
 	\brief Inicializa todas las patas del ultrasónico.
  	\details Inicializa el PWM con el valor correspondiente y el contador de ancho ancho de pulso.
 */
-void HC_SR04::Inicializar(void)
+void HC_SR04::Initialize(void)
 {
-	m_rx->Inicializar();
-	m_tx->Inicializar( 10 , (PERIODO * 1000 - 10) , Pwm::MICRO_SEG );
+	m_rx->Initialize();
+	m_tx->Initialize( 10 , (PERIODO * 1000 - 10) , Pwm::MICRO_SEG );
 }
 /**
 	\fn uint32_t HC_SR04::GetDistancia(void)

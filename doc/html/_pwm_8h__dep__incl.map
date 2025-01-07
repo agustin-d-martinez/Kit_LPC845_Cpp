@@ -1,0 +1,25 @@
+<map id="Pwm.h" name="Pwm.h">
+<area shape="rect" id="Node000001" title="Generador de PWM sin interrupción." alt="" coords="247,5,309,32"/>
+<area shape="rect" id="Node000002" href="$_drivers_8h.html" title="Archivo Master con todos los includes de perifericos del Kit." alt="" coords="161,155,235,181"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="255,45,226,81,210,120,202,155,197,154,205,119,221,79,250,41"/>
+<area shape="rect" id="Node000009" href="$_h_c_s_r04_8h.html" title="Clase del sensor ultrasónico HCSR04." alt="" coords="235,80,321,107"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="281,48,281,80,275,80,275,48"/>
+<area shape="rect" id="Node000011" href="$_pwm_8cpp.html" title="Generador de PWM sin interrupción." alt="" coords="345,80,422,107"/>
+<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="310,39,366,77,363,82,307,43"/>
+<area shape="rect" id="Node000003" href="$_comunicacion_8h.html" title="Clase máquina de estados de comunicación del proyecto." alt="" coords="78,229,193,256"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="179,195,148,231,144,227,175,192"/>
+<area shape="rect" id="Node000007" href="$_semaforo_8h.html" title="Clases semaforo de ejemplo utilizando led tricolor propio de la placa." alt="" coords="216,229,305,256"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="221,192,252,227,248,231,217,195"/>
+<area shape="rect" id="Node000004" href="$_comunicacion_8cpp.html" title="Clase máquina de estados de comunicación del proyecto." alt="" coords="5,304,135,331"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="116,269,83,305,79,302,112,266"/>
+<area shape="rect" id="Node000005" href="$inicializar_8h.html" title="Archivo inicializador de la placa." alt="" coords="159,304,245,331"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="159,266,192,302,189,305,155,269"/>
+<area shape="rect" id="Node000006" href="$inicializar_8cpp.html" title="Archivo inicializador de la placa." alt="" coords="152,379,252,405"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="205,346,205,378,199,378,199,346"/>
+<area shape="poly" id="edge8_Node000007_Node000005" title=" " alt="" coords="243,270,214,305,210,302,239,267"/>
+<area shape="rect" id="Node000008" href="$_semaforo_8cpp.html" title="Clases semaforo de ejemplo utilizando led tricolor propio de la placa." alt="" coords="270,304,372,331"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="283,266,312,302,308,305,279,270"/>
+<area shape="poly" id="edge10_Node000009_Node000002" title=" " alt="" coords="255,119,214,156,210,152,251,115"/>
+<area shape="rect" id="Node000010" href="$_h_c_s_r04_8cpp.html" title="Clase del sensor ultrasónico HCSR04." alt="" coords="259,155,358,181"/>
+<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="292,120,306,153,301,155,287,122"/>
+</map>

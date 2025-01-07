@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>KITLPC845-C++: E:/Agustin/Escritorio/MCUexpresso/KitLPC845-C++/src/Drivers/Perifericos/02-Gpio/gpio.h Source File</title>
+<title>LPC845-C++: gpio.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -18,6 +18,11 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,10 +32,22 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">KITLPC845-C++<span id="projectnumber">&#160;2.0</span>
+   <div id="projectname">LPC845-C++<span id="projectnumber">&#160;2.0</span>
    </div>
-   <div id="projectbrief">KitdelibreriascustomenC++paralaplacadedesarrolloLPC845</div>
+   <div id="projectbrief">Kit de librerias propias de la placa de desarrollo LPC845</div>
   </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -47,17 +64,6 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 $(function() { codefold.init(0); });
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('',true,false,'search.php','Search',true);
-  $(function() { init_search(); });
-});
-/* @license-end */
-</script>
-<div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -111,7 +117,7 @@ $(function(){initNavTree('gpio_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">/***********************************************************************************************************************************</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> *** INCLUDES GLOBALES</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> **********************************************************************************************************************************/</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;LPC845.h&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;<a class="code" href="_l_p_c845_8h.html">LPC845.h</a>&gt;</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;<a class="code" href="_pin_8h.html">Perifericos/01-Pin/Pin.h</a>&gt;</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;<a class="code" href="_in_out_8h.html">Perifericos/02-Gpio/InOut.h</a>&gt;</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
@@ -150,17 +156,17 @@ $(function(){initNavTree('gpio_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="classgpio.html#ac6259c170adf14b17c72d65fd388921b">   66</a></span>        <span class="keyword">const</span> <a class="code hl_enumeration" href="classgpio.html#a37b1bf950dfcff8f5a81431da1f690fa">activity_t</a> <a class="code hl_variable" href="classgpio.html#ac6259c170adf14b17c72d65fd388921b">m_activity</a> ;   </div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <a class="code hl_function" href="classgpio.html#a91d8a585757112ada21e8c8b7570171a">gpio</a> ( <a class="code hl_enumeration" href="class_pin.html#a02483eba92e68e4230f8aa883e0a25fe">port_t</a> port , uint8_t bit , <a class="code hl_enumeration" href="classgpio.html#aa105bc05ba99ed1b45a9cd8576d6c0ab">mode_t</a> mode , <a class="code hl_enumeration" href="classgpio.html#abc2ecf3fc05b2faa58254aaaa7cbc5d5">direction_t</a> direction , <a class="code hl_enumeration" href="classgpio.html#a37b1bf950dfcff8f5a81431da1f690fa">activity_t</a> activity = high );</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <a class="code hl_function" href="classgpio.html#a91d8a585757112ada21e8c8b7570171a">gpio</a> ( <a class="code hl_enumeration" href="class_pin.html#a02483eba92e68e4230f8aa883e0a25fe">port_t</a> port , <a class="code hl_typedef" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> bit , <a class="code hl_enumeration" href="classgpio.html#aa105bc05ba99ed1b45a9cd8576d6c0ab">mode_t</a> mode , <a class="code hl_enumeration" href="classgpio.html#abc2ecf3fc05b2faa58254aaaa7cbc5d5">direction_t</a> direction , <a class="code hl_enumeration" href="classgpio.html#a37b1bf950dfcff8f5a81431da1f690fa">activity_t</a> activity = high );</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        uint8_t <a class="code hl_function" href="classgpio.html#abababed56790f941ce7c449c2bb0585f">SetPin</a> ( <span class="keywordtype">void</span> ) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        uint8_t <a class="code hl_function" href="classgpio.html#a7db0e2fb53f026b00943b1960114efcd">ClrPin</a> ( <span class="keywordtype">void</span> ) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        uint8_t <a class="code hl_function" href="classgpio.html#a9c89224e21dcd66520f400981a6714c5">SetTogglePin</a> ( <span class="keywordtype">void</span> ) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        uint8_t <a class="code hl_function" href="classgpio.html#a00191106112b46d6a81161bad09774d9">SetDir</a> ( <span class="keywordtype">void</span> ) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        uint8_t <a class="code hl_function" href="classgpio.html#a75dbe3d751fdd5c577cd8cf9b2e7cc1a">SetToggleDir</a> ( <span class="keywordtype">void</span> ) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        uint8_t <a class="code hl_function" href="classgpio.html#a053408949f14088921e56ffb85c2efc3">GetPin</a> ( <span class="keywordtype">void</span> ) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        uint8_t <a class="code hl_function" href="classgpio.html#a5307bd248fcf6487491ba93c7e3ec9d7">SetPinMode</a> ( <span class="keywordtype">void</span> ) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        uint8_t <a class="code hl_function" href="classgpio.html#a834f570ae01fd90ae9128a2a00f34552">SetPinResistor</a> ( <span class="keywordtype">void</span> ) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <a class="code hl_function" href="classgpio.html#a91d8a585757112ada21e8c8b7570171a">gpio</a>&amp;   <a class="code hl_function" href="classgpio.html#a0e9fcb8c59eba9f0a28091cac7a34ba2">operator= </a>( uint8_t a );</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <a class="code hl_typedef" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> <a class="code hl_function" href="classgpio.html#abababed56790f941ce7c449c2bb0585f">SetPin</a> ( <span class="keywordtype">void</span> ) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <a class="code hl_typedef" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> <a class="code hl_function" href="classgpio.html#a7db0e2fb53f026b00943b1960114efcd">ClrPin</a> ( <span class="keywordtype">void</span> ) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <a class="code hl_typedef" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> <a class="code hl_function" href="classgpio.html#a9c89224e21dcd66520f400981a6714c5">SetTogglePin</a> ( <span class="keywordtype">void</span> ) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <a class="code hl_typedef" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> <a class="code hl_function" href="classgpio.html#a00191106112b46d6a81161bad09774d9">SetDir</a> ( <span class="keywordtype">void</span> ) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <a class="code hl_typedef" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> <a class="code hl_function" href="classgpio.html#a75dbe3d751fdd5c577cd8cf9b2e7cc1a">SetToggleDir</a> ( <span class="keywordtype">void</span> ) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <a class="code hl_typedef" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> <a class="code hl_function" href="classgpio.html#a053408949f14088921e56ffb85c2efc3">GetPin</a> ( <span class="keywordtype">void</span> ) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <a class="code hl_typedef" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> <a class="code hl_function" href="classgpio.html#a5307bd248fcf6487491ba93c7e3ec9d7">SetPinMode</a> ( <span class="keywordtype">void</span> ) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <a class="code hl_typedef" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> <a class="code hl_function" href="classgpio.html#a834f570ae01fd90ae9128a2a00f34552">SetPinResistor</a> ( <span class="keywordtype">void</span> ) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <a class="code hl_function" href="classgpio.html#a91d8a585757112ada21e8c8b7570171a">gpio</a>&amp;   <a class="code hl_function" href="classgpio.html#a0e9fcb8c59eba9f0a28091cac7a34ba2">operator= </a>( <a class="code hl_typedef" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> a );</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="classgpio.html#a115befd0ad74a2f911420b8673415bca">   81</a></span>        <span class="keyword">virtual</span> <a class="code hl_function" href="classgpio.html#a115befd0ad74a2f911420b8673415bca">~gpio</a>() = <span class="keywordflow">default</span>;     </div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>};</div>
@@ -168,10 +174,11 @@ $(function(){initNavTree('gpio_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="preprocessor">#endif </span><span class="comment">/* GPIO_H_ */</span><span class="preprocessor"></span><span class="preprocessor"></span></div>
 <div class="ttc" id="a_in_out_8h_html"><div class="ttname"><a href="_in_out_8h.html">InOut.h</a></div><div class="ttdoc">Clase Abstracta Pura de las GPIO.</div></div>
+<div class="ttc" id="a_l_p_c845_8h_html"><div class="ttname"><a href="_l_p_c845_8h.html">LPC845.h</a></div><div class="ttdoc">Registros del LPC845.</div></div>
 <div class="ttc" id="a_pin_8h_html"><div class="ttname"><a href="_pin_8h.html">Pin.h</a></div><div class="ttdoc">Clase Abstracta de cualquier pin del microcontrolador.</div></div>
 <div class="ttc" id="aclass_in_out_html_a1d549347d4bd7f354066d984c2dace58"><div class="ttname"><a href="class_in_out.html#a1d549347d4bd7f354066d984c2dace58">InOut::InOut</a></div><div class="ttdeci">InOut()=default</div></div>
-<div class="ttc" id="aclass_pin_html_a02483eba92e68e4230f8aa883e0a25fe"><div class="ttname"><a href="class_pin.html#a02483eba92e68e4230f8aa883e0a25fe">Pin::port_t</a></div><div class="ttdeci">port_t</div><div class="ttdef"><b>Definition</b> Pin.h:56</div></div>
-<div class="ttc" id="aclass_pin_html_a063b07c7607e031318ca024b75a6f0cf"><div class="ttname"><a href="class_pin.html#a063b07c7607e031318ca024b75a6f0cf">Pin::Pin</a></div><div class="ttdeci">Pin(port_t port, uint8_t bit)</div><div class="ttdoc">Constructor de clase PIN.</div><div class="ttdef"><b>Definition</b> Pin.cpp:49</div></div>
+<div class="ttc" id="aclass_pin_html_a02483eba92e68e4230f8aa883e0a25fe"><div class="ttname"><a href="class_pin.html#a02483eba92e68e4230f8aa883e0a25fe">Pin::port_t</a></div><div class="ttdeci">port_t</div><div class="ttdef"><b>Definition</b> Pin.h:58</div></div>
+<div class="ttc" id="aclass_pin_html_a063b07c7607e031318ca024b75a6f0cf"><div class="ttname"><a href="class_pin.html#a063b07c7607e031318ca024b75a6f0cf">Pin::Pin</a></div><div class="ttdeci">Pin(port_t port, uint8_t bit)</div><div class="ttdoc">Constructor de clase PIN.</div><div class="ttdef"><b>Definition</b> Pin.cpp:51</div></div>
 <div class="ttc" id="aclassgpio_html_a00191106112b46d6a81161bad09774d9"><div class="ttname"><a href="classgpio.html#a00191106112b46d6a81161bad09774d9">gpio::SetDir</a></div><div class="ttdeci">uint8_t SetDir(void) override</div><div class="ttdoc">Setea la direccion.</div><div class="ttdef"><b>Definition</b> gpio.cpp:111</div></div>
 <div class="ttc" id="aclassgpio_html_a053408949f14088921e56ffb85c2efc3"><div class="ttname"><a href="classgpio.html#a053408949f14088921e56ffb85c2efc3">gpio::GetPin</a></div><div class="ttdeci">uint8_t GetPin(void) override</div><div class="ttdoc">Devuelve el valor del pin.</div><div class="ttdef"><b>Definition</b> gpio.cpp:147</div></div>
 <div class="ttc" id="aclassgpio_html_a0e9fcb8c59eba9f0a28091cac7a34ba2"><div class="ttname"><a href="classgpio.html#a0e9fcb8c59eba9f0a28091cac7a34ba2">gpio::operator=</a></div><div class="ttdeci">gpio &amp; operator=(uint8_t a)</div><div class="ttdoc">Sobrecarga del operador =.</div><div class="ttdef"><b>Definition</b> gpio.cpp:204</div></div>
@@ -191,6 +198,7 @@ $(function(){initNavTree('gpio_8h_source.html',''); initResizable(true); });
 <div class="ttc" id="aclassgpio_html_abc2ecf3fc05b2faa58254aaaa7cbc5d5"><div class="ttname"><a href="classgpio.html#abc2ecf3fc05b2faa58254aaaa7cbc5d5">gpio::direction_t</a></div><div class="ttdeci">direction_t</div><div class="ttdoc">Enumeracion de input/output.</div><div class="ttdef"><b>Definition</b> gpio.h:55</div></div>
 <div class="ttc" id="aclassgpio_html_ac4def73bdbedc9163facaf784f9b29bd"><div class="ttname"><a href="classgpio.html#ac4def73bdbedc9163facaf784f9b29bd">gpio::m_direction</a></div><div class="ttdeci">direction_t m_direction</div><div class="ttdef"><b>Definition</b> gpio.h:65</div></div>
 <div class="ttc" id="aclassgpio_html_ac6259c170adf14b17c72d65fd388921b"><div class="ttname"><a href="classgpio.html#ac6259c170adf14b17c72d65fd388921b">gpio::m_activity</a></div><div class="ttdeci">const activity_t m_activity</div><div class="ttdef"><b>Definition</b> gpio.h:66</div></div>
+<div class="ttc" id="atipos_8h_html_aba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></div><div class="ttdeci">unsigned char uint8_t</div><div class="ttdef"><b>Definition</b> tipos.h:41</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

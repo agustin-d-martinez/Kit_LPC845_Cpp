@@ -1,5 +1,5 @@
 var classsegmentos =
 [
-    [ "Inicializar", "classsegmentos.html#a4c7ecb94555c52a927c63e6b48d4f543", null ],
+    [ "Initialize", "classsegmentos.html#a20fa6f6a55f299add7fbe93d42728514", null ],
     [ "SetSegmentos", "classsegmentos.html#a871b7f7a682627a416a389567981a858", null ]
 ];

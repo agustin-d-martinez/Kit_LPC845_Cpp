@@ -1,0 +1,9 @@
+<map id="SCtimer.cpp" name="SCtimer.cpp">
+<area shape="rect" id="Node000001" title="Modulo de Salida autonoma temporizada." alt="" coords="37,5,132,32"/>
+<area shape="rect" id="Node000002" href="$_s_ctimer_8h.html" title="Modulo de Salida autonoma temporizada." alt="" coords="5,80,164,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="87,32,87,65,82,65,82,32"/>
+<area shape="rect" id="Node000003" href="$_l_p_c845_8h.html" title="Registros del LPC845." alt="" coords="45,171,124,197"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="87,123,87,155,82,155,82,123"/>
+<area shape="rect" id="Node000004" href="$tipos_8h.html" title="Definiciones de tipos de variables." alt="" coords="54,245,115,272"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="87,198,87,230,82,230,82,198"/>
+</map>

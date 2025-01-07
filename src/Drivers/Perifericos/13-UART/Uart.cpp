@@ -1,7 +1,7 @@
 /*******************************************************************************************************************************//**
  *
  * @file		Uart.cpp
- * @brief		Descripcion del modulo
+ * @brief		Funciones miembro de Uart.
  * @date		5 oct. 2022
  * @author		Ing. Marcelo Trujillo
  *
@@ -145,12 +145,12 @@ uint8_t Uart::popTx (uint8_t * dato )
 	return 0;
 }
 /**
- * \fn void Uart::Transmit ( const char * msg)
+ * \fn void Uart::Write ( const char * msg)
  * \brief Transmite el mensaje indicado.
  * \details Coloca el mensaje indicado en el buffer. Importante, el mensaje debe terminar en \0 (String).
  * \param [in] msg: Mensaje a transmitir.
 */
-void Uart::Transmit ( const char * msg)
+void Uart::Write ( const char * msg)
 {
 	while ( *msg )
 	{
@@ -165,13 +165,13 @@ void Uart::Transmit ( const char * msg)
 	}
 }
 /**
- * \fn void Uart::Transmit ( const void * msg , uint32_t n )
+ * \fn void Uart::Write ( const void * msg , uint32_t n )
  * \brief Transmite el mensaje indicado.
  * \details Coloca n caracteres del mensaje indicado en el buffer.
  * \param [in] msg: Mensaje a transmitir.
  * \param [in] n: Cantidad de caracteres a enviar.
 */
-void Uart::Transmit ( const void * msg , uint32_t n )
+void Uart::Write ( const void * msg , uint32_t n )
 {
 	for ( uint32_t i = 0 ; i < n ; i++ )
 	{
@@ -185,14 +185,14 @@ void Uart::Transmit ( const void * msg , uint32_t n )
 	}
 }
 /**
- * \fn void* Uart::Message ( void * msg , uint32_t n )
+ * \fn void* Uart::Read ( void * msg , uint32_t n )
  * \brief Devuelve el mensaje recibido.
  * \details Lee del buffer de recepcion n caracteres y los guarda en el mensaje.
  * \param [in] msg: puntero donde devolverá el dato.
  * \param [in] n: Cantidad de caracteres a leer.
  * \return Mensaje de error. nullptr = no hay nada para leer.
 */
-void* Uart::Message ( void * msg , uint32_t n )
+void* Uart::Read ( void * msg , uint32_t n )
 {
 	uint8_t dato;
 	static uint32_t cont = 0;

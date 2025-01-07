@@ -1,0 +1,5 @@
+<map id="ADC" name="ADC">
+<area shape="rect" id="Node000001" title="Clase del objeto ADC FUNCIONAMIENTO: La clase ADC utiliza el ADCGroup para poder ser manejada de form..." alt="" coords="5,80,56,107"/>
+<area shape="rect" id="Node000002" href="$class_pin.html" title="Clase del objeto Pin." alt="" coords="10,5,51,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="33,48,33,80,28,80,28,48"/>
+</map>

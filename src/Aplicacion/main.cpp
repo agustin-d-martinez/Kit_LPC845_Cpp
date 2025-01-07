@@ -12,10 +12,10 @@ int main(void)
 {
 	inicializarApp(  );
 
-	Pin* sda = new Pin(Pin::port0, 11);
-	Pin* scl = new Pin(Pin::port0, 10);
-	I2CMaster comunicacion_i2c(I2C0, sda, scl);
-	comunicacion_i2c.Initialize(400);
+	Pin* sda = new Pin(Pin::port0, 8);
+	Pin* scl = new Pin(Pin::port0, 9);
+	I2CMaster comunicacion_i2c(I2C1, sda, scl);
+	comunicacion_i2c.Initialize(100);
 
 	int8_t mensaje[13] = "Hola mundo!\n";
 
@@ -27,4 +27,3 @@ int main(void)
 			comunicacion_i2c.Write(4, mensaje);
 	}
 }
-

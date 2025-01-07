@@ -24,7 +24,7 @@
 */
 var NAVTREE =
 [
-  [ "KITLPC845-C++", "index.html", [
+  [ "LPC845-C++", "index.html", [
     [ "Topics", "topics.html", "topics" ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
@@ -33,7 +33,7 @@ var NAVTREE =
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", "functions_dup" ],
         [ "Functions", "functions_func.html", "functions_func" ],
-        [ "Variables", "functions_vars.html", null ],
+        [ "Variables", "functions_vars.html", "functions_vars" ],
         [ "Typedefs", "functions_type.html", null ],
         [ "Enumerations", "functions_enum.html", null ],
         [ "Related Symbols", "functions_rela.html", null ]
@@ -42,11 +42,11 @@ var NAVTREE =
     [ "Files", "files.html", [
       [ "File List", "files.html", "files_dup" ],
       [ "File Members", "globals.html", [
-        [ "All", "globals.html", null ],
+        [ "All", "globals.html", "globals_dup" ],
         [ "Functions", "globals_func.html", null ],
         [ "Variables", "globals_vars.html", null ],
         [ "Typedefs", "globals_type.html", null ],
-        [ "Macros", "globals_defs.html", null ]
+        [ "Macros", "globals_defs.html", "globals_defs" ]
       ] ]
     ] ]
   ] ]
@@ -56,7 +56,9 @@ var NAVTREEINDEX =
 [
 "_a_d_c_8cpp.html",
 "class_i2_c.html#a8471212350221fb2a58a3cfbc469c67a",
-"classdigito.html#a9ca4533ad058f09c87644f3eb8b497a8a36b4a66d64684235bc3014ee279e257b"
+"classteclado.html#a594c40ca5bf638ad536a061ce74b47a2",
+"group___a_d_c___register___masks.html#gaf9831982d2d97f8e14db4908f8b1a31b",
+"struct_n_v_i_c___type.html#aed564fbf596d2dbf92c6d5aea8f946e7"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

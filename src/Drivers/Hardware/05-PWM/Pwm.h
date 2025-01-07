@@ -2,8 +2,11 @@
  *
  * @file		Pwm.h
  * @brief		Generador de PWM sin interrupción
+ * @details     Proporciona métodos para inicializar un PWM.
+ *
  * @date		7 oct. 2022
- * @author		Técnico Martinez Agustin
+ * @version		1.0
+ * @author     	Técnico. Martinez Agustin (masteragus365@gmail.com)
  *
  **********************************************************************************************************************************/
 
@@ -60,7 +63,7 @@ protected:
 
 public:
 			Pwm( port_t puerto , uint8_t bit , uint8_t actividad , pwm_channel_t number );
-	void 	Inicializar( uint32_t ton , uint32_t toff , pwm_time_unit_t t = MICRO_SEG );
+	void 	Initialize( uint32_t ton , uint32_t toff , pwm_time_unit_t t = MICRO_SEG );
 	void 	SetTon( uint32_t time , pwm_time_unit_t t = MICRO_SEG );
 	void 	SetPeriod( uint32_t time , pwm_time_unit_t t = MICRO_SEG );
 	void 	On();

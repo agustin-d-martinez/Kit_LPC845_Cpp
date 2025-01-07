@@ -1,0 +1,13 @@
+<map id="ADC.h" name="ADC.h">
+<area shape="rect" id="Node000001" title="Modulo de ADC." alt="" coords="106,5,168,32"/>
+<area shape="rect" id="Node000002" href="$_a_d_c_group_8h_source.html" title=" " alt="" coords="5,80,157,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="130,34,106,69,102,66,126,31"/>
+<area shape="rect" id="Node000005" href="$_pin_8h.html" title="Clase Abstracta de cualquier pin del microcontrolador." alt="" coords="144,171,268,213"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="147,31,171,79,199,155,194,157,167,81,142,34"/>
+<area shape="rect" id="Node000003" href="$tipos_8h.html" title="Definiciones de tipos de variables." alt="" coords="51,261,111,288"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="62,125,45,146,32,172,27,192,31,212,42,232,57,249,53,253,38,235,27,214,22,192,26,170,40,143,57,121"/>
+<area shape="rect" id="Node000004" href="$_l_p_c845_8h.html" title="Registros del LPC845." alt="" coords="41,179,121,205"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="84,123,84,163,78,163,78,123"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="84,206,84,246,78,246,78,206"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="175,216,115,255,112,250,173,212"/>
+</map>

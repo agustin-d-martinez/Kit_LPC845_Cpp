@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>KITLPC845-C++: E:/Agustin/Escritorio/MCUexpresso/KitLPC845-C++/src/Drivers/Hardware/02-Displays/7Segmentos/B-Segmentos/I4511.h Source File</title>
+<title>LPC845-C++: I4511.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -18,6 +18,11 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,10 +32,22 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">KITLPC845-C++<span id="projectnumber">&#160;2.0</span>
+   <div id="projectname">LPC845-C++<span id="projectnumber">&#160;2.0</span>
    </div>
-   <div id="projectbrief">KitdelibreriascustomenC++paralaplacadedesarrolloLPC845</div>
+   <div id="projectbrief">Kit de librerias propias de la placa de desarrollo LPC845</div>
   </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -47,17 +64,6 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 $(function() { codefold.init(0); });
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('',true,false,'search.php','Search',true);
-  $(function() { init_search(); });
-});
-/* @license-end */
-</script>
-<div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -143,8 +149,8 @@ $(function(){initNavTree('_i4511_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="comment">// tiene que recibir los gpio BCD</span></div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_i4511.html#a2d4d5f3c8cc3a270e2cc542e1c043049">   58</a></span>        <a class="code hl_function" href="class_i4511.html#a2d4d5f3c8cc3a270e2cc542e1c043049">I4511</a>( <span class="keyword">const</span> vector &lt;gpio * &gt; &amp;bcd) :  m_bcd (bcd){}   </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_i4511.html#a724201f1a5023afc0470ed22a49a6247">SetSegmentos</a> ( uint16_t ) ;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_i4511.html#a731e8085d9f8784ecca32e567ef86b0b">Inicializar</a> ( <span class="keywordtype">void</span> );</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_i4511.html#a9702f83ec22160692bfb71b3f983d2e2">SetSegmentos</a> ( <a class="code hl_typedef" href="tipos_8h.html#ad097ffa75536dc17a0039dfb3781d705">uint16_t</a> ) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_i4511.html#a41bc1c262476f0b2a5d61204a3bd15a4">Initialize</a> ( <span class="keywordtype">void</span> ) <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keyword">virtual</span> <a class="code hl_class" href="class_i4511.html">~I4511</a>() {};          </div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>};</div>
 </div>
@@ -153,9 +159,10 @@ $(function(){initNavTree('_i4511_8h_source.html',''); initResizable(true); });
 <div class="ttc" id="a_segmentos_8h_html"><div class="ttname"><a href="_segmentos_8h.html">Segmentos.h</a></div><div class="ttdoc">Clase abstracta de manejo de segmentos binarios.</div></div>
 <div class="ttc" id="aclass_i4511_html"><div class="ttname"><a href="class_i4511.html">I4511</a></div><div class="ttdoc">Clase del objeto I4511 El objeto I4511 permite el control del integrado del mismo nombre....</div><div class="ttdef"><b>Definition</b> I4511.h:53</div></div>
 <div class="ttc" id="aclass_i4511_html_a2d4d5f3c8cc3a270e2cc542e1c043049"><div class="ttname"><a href="class_i4511.html#a2d4d5f3c8cc3a270e2cc542e1c043049">I4511::I4511</a></div><div class="ttdeci">I4511(const vector&lt; gpio * &gt; &amp;bcd)</div><div class="ttdef"><b>Definition</b> I4511.h:58</div></div>
-<div class="ttc" id="aclass_i4511_html_a724201f1a5023afc0470ed22a49a6247"><div class="ttname"><a href="class_i4511.html#a724201f1a5023afc0470ed22a49a6247">I4511::SetSegmentos</a></div><div class="ttdeci">void SetSegmentos(uint16_t)</div><div class="ttdoc">Función de escritura del segmento.</div><div class="ttdef"><b>Definition</b> I4511.cpp:48</div></div>
-<div class="ttc" id="aclass_i4511_html_a731e8085d9f8784ecca32e567ef86b0b"><div class="ttname"><a href="class_i4511.html#a731e8085d9f8784ecca32e567ef86b0b">I4511::Inicializar</a></div><div class="ttdeci">void Inicializar(void)</div><div class="ttdoc">Función de Inicialización del I4511.</div><div class="ttdef"><b>Definition</b> I4511.cpp:75</div></div>
+<div class="ttc" id="aclass_i4511_html_a41bc1c262476f0b2a5d61204a3bd15a4"><div class="ttname"><a href="class_i4511.html#a41bc1c262476f0b2a5d61204a3bd15a4">I4511::Initialize</a></div><div class="ttdeci">void Initialize(void) override</div><div class="ttdoc">Función de Inicialización del I4511.</div><div class="ttdef"><b>Definition</b> I4511.cpp:75</div></div>
+<div class="ttc" id="aclass_i4511_html_a9702f83ec22160692bfb71b3f983d2e2"><div class="ttname"><a href="class_i4511.html#a9702f83ec22160692bfb71b3f983d2e2">I4511::SetSegmentos</a></div><div class="ttdeci">void SetSegmentos(uint16_t) override</div><div class="ttdoc">Función de escritura del segmento.</div><div class="ttdef"><b>Definition</b> I4511.cpp:48</div></div>
 <div class="ttc" id="agpio_8h_html"><div class="ttname"><a href="gpio_8h.html">gpio.h</a></div><div class="ttdoc">Módulo con clase de manejo de GPIO.</div></div>
+<div class="ttc" id="atipos_8h_html_ad097ffa75536dc17a0039dfb3781d705"><div class="ttname"><a href="tipos_8h.html#ad097ffa75536dc17a0039dfb3781d705">uint16_t</a></div><div class="ttdeci">short unsigned int uint16_t</div><div class="ttdef"><b>Definition</b> tipos.h:43</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -1,0 +1,25 @@
+<map id="PWMReader.h" name="PWMReader.h">
+<area shape="rect" id="Node000001" title="Pata que lee tamaños de pulsos de entrada." alt="" coords="159,5,266,32"/>
+<area shape="rect" id="Node000002" href="$_m_r_thandler_8h.html" title="Handler del timer MRT." alt="" coords="5,171,223,213"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="208,34,136,159,131,156,203,31"/>
+<area shape="rect" id="Node000006" href="$_pininterrupt_8h.html" title="Clase para entradas con interrupciones por flanco." alt="" coords="200,80,372,123"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="226,31,259,67,255,70,222,34"/>
+<area shape="rect" id="Node000003" href="$tipos_8h.html" title="Definiciones de tipos de variables." alt="" coords="204,443,264,469"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="109,214,99,256,98,280,103,303,123,342,150,377,207,431,203,435,146,381,119,345,98,305,93,281,94,256,103,213"/>
+<area shape="rect" id="Node000004" href="$_l_p_c845_8h.html" title="Registros del LPC845." alt="" coords="194,269,274,296"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="143,212,206,258,203,262,140,216"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="113,269,171,296"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="123,213,136,254,131,255,118,215"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="237,296,237,427,231,427,231,296"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="283,124,244,255,239,254,277,122"/>
+<area shape="rect" id="Node000007" href="$_pin_8h.html" title="Clase Abstracta de cualquier pin del microcontrolador." alt="" coords="285,352,410,395"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="293,122,342,336,337,337,288,124"/>
+<area shape="rect" id="Node000008" href="$gpio_8h.html" title="Módulo con clase de manejo de GPIO." alt="" coords="349,171,482,213"/>
+<area shape="poly" id="edge10_Node000006_Node000008" title=" " alt="" coords="317,121,374,159,371,164,314,125"/>
+<area shape="poly" id="edge9_Node000007_Node000003" title=" " alt="" coords="320,397,266,436,263,431,317,393"/>
+<area shape="poly" id="edge11_Node000008_Node000004" title=" " alt="" coords="374,216,275,265,272,260,372,212"/>
+<area shape="poly" id="edge12_Node000008_Node000007" title=" " alt="" coords="409,214,390,262,362,339,357,337,385,260,404,212"/>
+<area shape="rect" id="Node000009" href="$_in_out_8h.html" title="Clase Abstracta Pura de las GPIO." alt="" coords="400,261,532,304"/>
+<area shape="poly" id="edge13_Node000008_Node000009" title=" " alt="" coords="429,212,449,246,444,249,425,215"/>
+<area shape="poly" id="edge14_Node000009_Node000007" title=" " alt="" coords="440,307,389,344,386,340,437,302"/>
+</map>

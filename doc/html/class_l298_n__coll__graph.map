@@ -1,0 +1,5 @@
+<map id="L298N" name="L298N">
+<area shape="rect" id="Node000001" title="Clase del objeto L298N El objeto L298N realiza las acciones de control de dos motores controlados por..." alt="" coords="15,80,75,107"/>
+<area shape="rect" id="Node000002" href="$class_puente___h.html" title="Clase del objeto Puente_H El objeto Puente_H es la interfaz abstracta pura de cualquier puente H que ..." alt="" coords="5,5,85,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="48,48,48,80,42,80,42,48"/>
+</map>

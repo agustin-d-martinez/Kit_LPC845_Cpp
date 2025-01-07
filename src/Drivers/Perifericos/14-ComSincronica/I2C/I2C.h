@@ -1,15 +1,8 @@
 /*******************************************************************************************************************************//**
  *
  * @file		I2C.h
- * @brief		Breve descripción del objetivo del Módulo
- * @date		5 oct. 2022
- * @author		Técnico Martinez Agustin
- *
- **********************************************************************************************************************************/
-
-/**
- * USO:
- * Se crea y se inicializa. Posee 2 modos: Master y Slave.
+ * @brief		Modulo de comunicacion I2C.
+ * @details		USO: Se crea y se inicializa. Posee 2 modos: Master y Slave.
  * MASTER:
  * Start(): Inicia la comunicacion con Start en accion de read/write.
  * Solo puede llamarse a start si el I2C está en idle o pendiente de lectura.
@@ -32,7 +25,12 @@
  * Solo funcionara si el I2C esta en slvst_tx.
  *
  * ACK(): Cuando se recibe un dato, se debe reconocer la llegada del mismo.
- */
+ *
+ * @date		3 ene. 2025
+ * @version		1.0
+ * @author     	Técnico. Martinez Agustin (masteragus365@gmail.com)
+ *
+ **********************************************************************************************************************************/
 
 /***********************************************************************************************************************************
  *** MODULO
@@ -108,6 +106,8 @@ public:
 private:
 			I2C_Type* 	m_I2C_register ;		/**< Registro a leer para configurar I2C. */
 	const 	Pin* 		m_sda;					/**< Pin de transmision de informacion. */
+	const 	Pin* 		m_scl;					/**< Pin de Clock. Debe existir en toda comunicacion sincronica*/
+
 			I2C_mode_t 	m_mode ;				/**< Modo del I2C. */
 	const 	uint8_t 	m_slv_addr;				/**< Address del I2C (solo util en modo slave). */
 
@@ -124,6 +124,8 @@ public:
 	void 			Write 		( uint8_t data ) override;
 	I2C& 			operator= 	( uint8_t data );		//Sobrecarga de escritura
 	int8_t 			Read 		( uint8_t* data , bool continue_reading );
+	int8_t 			Read 		( uint8_t* data ) override;
+	void			Continue	( void );
 
 	void			ACK			( bool a );
 	bool			ACKaddr		( void );

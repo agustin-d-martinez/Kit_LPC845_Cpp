@@ -1,0 +1,17 @@
+<map id="Callback.cpp" name="Callback.cpp">
+<area shape="rect" id="Node000001" title="funciones miembro de la clase Callback." alt="" coords="57,5,155,32"/>
+<area shape="rect" id="Node000002" href="$_callback_8h.html" title="Clase virtual pura. Esta clase debe ser heredada por las clases que se tienen que enganchar del Systi..." alt="" coords="28,80,184,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,32,109,65,103,65,103,32"/>
+<area shape="rect" id="Node000003" href="$_l_p_c845_8h.html" title="Registros del LPC845." alt="" coords="141,245,220,272"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="126,121,158,169,170,200,178,230,173,231,165,202,153,172,121,124"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="5,245,63,272"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="90,124,74,147,59,172,48,202,41,231,36,230,43,200,54,170,69,144,86,121"/>
+<area shape="rect" id="Node000006" href="$systick_8h.html" title="Firmware del systick." alt="" coords="69,171,143,197"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="101,123,100,155,95,155,95,123"/>
+<area shape="rect" id="Node000004" href="$tipos_8h.html" title="Definiciones de tipos de variables." alt="" coords="112,320,172,347"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="176,274,158,308,153,305,172,271"/>
+<area shape="poly" id="edge8_Node000006_Node000002" title=" " alt="" coords="110,170,112,138,118,139,115,170"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="121,196,159,233,155,237,117,200"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="112,197,138,304,133,306,106,198"/>
+<area shape="poly" id="edge9_Node000006_Node000005" title=" " alt="" coords="95,200,59,236,55,232,92,196"/>
+</map>

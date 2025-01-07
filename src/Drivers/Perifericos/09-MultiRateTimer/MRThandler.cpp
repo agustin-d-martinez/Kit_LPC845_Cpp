@@ -1,12 +1,14 @@
 /*******************************************************************************************************************************//**
  *
  * @file		MRThandler.cpp
- * @brief		Handler del timer MRT
+ * @brief		Handler del timer MRT.
+ * @details
+ *
  * @date		2 sep. 2022
- * @author		Técnico Martinez Agustin
+ * @version		1.0
+ * @author     	Técnico. Martinez Agustin (masteragus365@gmail.com)
  *
  **********************************************************************************************************************************/
-
 /***********************************************************************************************************************************
  *** INCLUDES
  **********************************************************************************************************************************/
@@ -162,6 +164,6 @@ void MRThandler::MRT_Inicializar (  MRT_timer_channels timer , MRT_MODES mode  )
 void MRT_IRQHandler(void)
 {
 	for (MRThandler* q : g_MRThandler )
-		q->Handler();
+		q->MRTHandler();
 }
 /** \endcond */

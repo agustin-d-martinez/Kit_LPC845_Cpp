@@ -1,0 +1,10 @@
+<map id="MRThandler.h" name="MRThandler.h">
+<area shape="rect" id="Node000001" title="Handler del timer MRT." alt="" coords="23,5,125,32"/>
+<area shape="rect" id="Node000002" href="$tipos_8h.html" title="Definiciones de tipos de variables." alt="" coords="5,155,66,181"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="60,34,40,55,25,81,21,111,27,140,22,141,16,111,20,79,36,51,57,31"/>
+<area shape="rect" id="Node000003" href="$_l_p_c845_8h.html" title="Registros del LPC845." alt="" coords="34,80,114,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="77,33,77,64,72,64,72,33"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="138,80,195,107"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="92,30,140,68,137,73,89,35"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="70,108,52,142,47,140,65,106"/>
+</map>

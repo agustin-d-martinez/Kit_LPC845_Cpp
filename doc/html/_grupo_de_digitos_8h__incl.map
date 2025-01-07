@@ -1,0 +1,8 @@
+<map id="GrupoDeDigitos.h" name="GrupoDeDigitos.h">
+<area shape="rect" id="Node000001" title="Clase para la agrupación de dígitos." alt="" coords="81,5,207,32"/>
+<area shape="rect" id="Node000002" href="$_digito_8h.html" title="Objeto dígito genérico para implementaciones posteriores." alt="" coords="5,80,166,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,34,115,68,111,65,134,31"/>
+<area shape="rect" id="Node000003" href="$tipos_8h.html" title="Definiciones de tipos de variables." alt="" coords="114,187,174,213"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="156,31,169,53,180,79,185,109,180,139,164,175,159,172,175,138,180,109,175,81,165,55,151,34"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="107,138,130,172,125,175,102,140"/>
+</map>

@@ -2,8 +2,10 @@
  *
  * @file		Display.h
  * @brief		Clase base para objetos del tipo pantallas/displays
- * @date		22 jun. 2022
- * @author		Técnico. Martinez Agustin
+ * @details     Proporciona métodos para inicializar y enviar datos al LCD. Diseñada para facilitar la integración en proyectos embebidos.
+ *
+ * @date       	22 jun. 2022
+ * @author     	Técnico. Martinez Agustin (masteragus365@gmail.com)
  *
  **********************************************************************************************************************************/
 /***********************************************************************************************************************************

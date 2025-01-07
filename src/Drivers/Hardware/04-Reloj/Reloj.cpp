@@ -1,9 +1,12 @@
 /*******************************************************************************************************************************//**
  *
- * @file		Reloj.h
+ * @file		Reloj.cpp
  * @brief		Objeto que guardará el tiempo desde que se creo
+ * @details     Proporciona métodos para inicializar un reloj.
+ *
  * @date		27 nov. 2022
- * @author		Técnico Martinez Agustin
+ * @version		1.0
+ * @author     	Técnico. Martinez Agustin (masteragus365@gmail.com)
  *
  **********************************************************************************************************************************/
 
@@ -111,14 +114,14 @@ void Reloj::SetTime ( const int32_t _hour , const int32_t _min , const int32_t _
 		m_minutos = _min;
 	if ( _seg > 0 )
 		m_segundos = _seg;
-	Actualizar();
+	Update();
 }
 /**
-	\fn void Reloj::Actualizar ( void )
+	\fn void Reloj::Update ( void )
 	\brief Controla las variables del reloj.
  	\details Controla el overflow lógico de las horas, minutos y segundos.
 */
-void Reloj::Actualizar ( void )
+void Reloj::Update ( void )
 {
 	if( m_segundos == 60 )
 	{
@@ -144,6 +147,6 @@ void Reloj::SWhandler ( void )
 	{
 		m_cont = 0;
 		m_segundos++;
-		Actualizar();
+		Update();
 	}
 }

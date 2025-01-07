@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>KITLPC845-C++: I2C Class Reference</title>
+<title>LPC845-C++: I2C Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -18,6 +18,11 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,10 +32,22 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">KITLPC845-C++<span id="projectnumber">&#160;2.0</span>
+   <div id="projectname">LPC845-C++<span id="projectnumber">&#160;2.0</span>
    </div>
-   <div id="projectbrief">KitdelibreriascustomenC++paralaplacadedesarrolloLPC845</div>
+   <div id="projectbrief">Kit de librerias propias de la placa de desarrollo LPC845</div>
   </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -47,17 +64,6 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 $(function() { codefold.init(0); });
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('',true,false,'search.php','Search',true);
-  $(function() { init_search(); });
-});
-/* @license-end */
-</script>
-<div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -113,48 +119,43 @@ $(function(){initNavTree('class_i2_c.html',''); initResizable(true); });
 Inheritance diagram for I2C:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_i2_c__inherit__graph.png" border="0" usemap="#a_i2_c_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_i2_c_inherit__map" id="a_i2_c_inherit__map">
+<area shape="rect" title="Clase del objeto I2C El objeto I2C genera una comunicación sincrónica de tipo I2C...." alt="" coords="67,80,109,107"/>
+<area shape="rect" href="class_i2_c_master.html" title="Clase del objeto I2CMaster El objeto I2CMaster genera una comunicación tipo master de I2C utilizando ..." alt="" coords="47,155,129,181"/>
+<area shape="poly" title=" " alt="" coords="91,122,91,154,85,154,85,122"/>
+<area shape="rect" href="class_comunicacion_sincronica.html" title="Clase del objeto ComunicacionAsincronica Clase abstracta pura para la generación de comunicaciones si..." alt="" coords="5,5,171,32"/>
+<area shape="poly" title=" " alt="" coords="91,48,91,80,85,80,85,48"/>
+</map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for I2C:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_i2_c__coll__graph.png" border="0" usemap="#a_i2_c_coll__map" alt="Collaboration graph"/></div>
+<map name="a_i2_c_coll__map" id="a_i2_c_coll__map">
+<area shape="rect" title="Clase del objeto I2C El objeto I2C genera una comunicación sincrónica de tipo I2C...." alt="" coords="67,80,109,107"/>
+<area shape="rect" href="class_comunicacion_sincronica.html" title="Clase del objeto ComunicacionAsincronica Clase abstracta pura para la generación de comunicaciones si..." alt="" coords="5,5,171,32"/>
+<area shape="poly" title=" " alt="" coords="91,48,91,80,85,80,85,48"/>
+</map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a338cf62e8394d98481d5c646750902fd" id="r_a338cf62e8394d98481d5c646750902fd"><td class="memItemLeft" align="right" valign="top"><a id="a338cf62e8394d98481d5c646750902fd" name="a338cf62e8394d98481d5c646750902fd"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a338cf62e8394d98481d5c646750902fd">I2C_mode_t</a> { <b>master</b> = 1
-, <b>slave</b> = 2
- }</td></tr>
+<tr class="memitem:a338cf62e8394d98481d5c646750902fd" id="r_a338cf62e8394d98481d5c646750902fd"><td class="memItemLeft" align="right" valign="top"><a id="a338cf62e8394d98481d5c646750902fd" name="a338cf62e8394d98481d5c646750902fd"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a338cf62e8394d98481d5c646750902fd">I2C_mode_t</a> </td></tr>
 <tr class="memdesc:a338cf62e8394d98481d5c646750902fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeracion. Modo del <a class="el" href="class_i2_c.html" title="Clase del objeto I2C El objeto I2C genera una comunicación sincrónica de tipo I2C....">I2C</a>. Puede ser master o slave. <br /></td></tr>
 <tr class="separator:a338cf62e8394d98481d5c646750902fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5c17ddab3b8696527f355def36e1d07" id="r_ac5c17ddab3b8696527f355def36e1d07"><td class="memItemLeft" align="right" valign="top"><a id="ac5c17ddab3b8696527f355def36e1d07" name="ac5c17ddab3b8696527f355def36e1d07"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5c17ddab3b8696527f355def36e1d07">I2C_action_t</a> { <b>write</b> = 0
-, <b>read</b> = 1
- }</td></tr>
+<tr class="memitem:ac5c17ddab3b8696527f355def36e1d07" id="r_ac5c17ddab3b8696527f355def36e1d07"><td class="memItemLeft" align="right" valign="top"><a id="ac5c17ddab3b8696527f355def36e1d07" name="ac5c17ddab3b8696527f355def36e1d07"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5c17ddab3b8696527f355def36e1d07">I2C_action_t</a> </td></tr>
 <tr class="memdesc:ac5c17ddab3b8696527f355def36e1d07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeracion. Acciones del <a class="el" href="class_i2_c.html" title="Clase del objeto I2C El objeto I2C genera una comunicación sincrónica de tipo I2C....">I2C</a>. Pueden ser leer o escribir (write o read). <br /></td></tr>
 <tr class="separator:ac5c17ddab3b8696527f355def36e1d07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a927222878c117a4278938c82da47e2e6" id="r_a927222878c117a4278938c82da47e2e6"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a927222878c117a4278938c82da47e2e6">I2C_states_t</a> { <br />
-&#160;&#160;<b>idle</b> = 0
-, <b>rx_data</b> = 1
-, <b>tx_ready</b>
-, <b>NACK_addr</b>
-, <br />
-&#160;&#160;<b>NACK_tx</b>
-, <b>slvst_addr</b> = 0
-, <b>slvst_rx</b>
-, <b>slvst_tx</b>
-, <br />
-&#160;&#160;<b>busy</b> = 10
-<br />
- }</td></tr>
+<tr class="memitem:a927222878c117a4278938c82da47e2e6" id="r_a927222878c117a4278938c82da47e2e6"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a927222878c117a4278938c82da47e2e6">I2C_states_t</a> </td></tr>
 <tr class="memdesc:a927222878c117a4278938c82da47e2e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeracion. Estados del <a class="el" href="class_i2_c.html" title="Clase del objeto I2C El objeto I2C genera una comunicación sincrónica de tipo I2C....">I2C</a>.  <a href="#a927222878c117a4278938c82da47e2e6">More...</a><br /></td></tr>
 <tr class="separator:a927222878c117a4278938c82da47e2e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3f31d647484dfd3cad1aab0be0a5d94b" id="r_a3f31d647484dfd3cad1aab0be0a5d94b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f31d647484dfd3cad1aab0be0a5d94b">I2C</a> (I2C_Type *I2C_register, <a class="el" href="class_pin.html">Pin</a> *sda, <a class="el" href="class_pin.html">Pin</a> *scl, <a class="el" href="#a338cf62e8394d98481d5c646750902fd">I2C_mode_t</a> mode=master, uint8_t slv_addr=0)</td></tr>
+<tr class="memitem:a3f31d647484dfd3cad1aab0be0a5d94b" id="r_a3f31d647484dfd3cad1aab0be0a5d94b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f31d647484dfd3cad1aab0be0a5d94b">I2C</a> (<a class="el" href="struct_i2_c___type.html">I2C_Type</a> *I2C_register, <a class="el" href="class_pin.html">Pin</a> *sda, <a class="el" href="class_pin.html">Pin</a> *scl, <a class="el" href="#a338cf62e8394d98481d5c646750902fd">I2C_mode_t</a> mode=master, <a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> slv_addr=0)</td></tr>
 <tr class="memdesc:a3f31d647484dfd3cad1aab0be0a5d94b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor de la clase <a class="el" href="class_i2_c.html" title="Clase del objeto I2C El objeto I2C genera una comunicación sincrónica de tipo I2C....">I2C</a>.  <br /></td></tr>
 <tr class="separator:a3f31d647484dfd3cad1aab0be0a5d94b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acdae33cb48da5060e31d28e6610c6eb1" id="r_acdae33cb48da5060e31d28e6610c6eb1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acdae33cb48da5060e31d28e6610c6eb1">Initialize</a> (uint32_t clk_freq)</td></tr>
+<tr class="memitem:acdae33cb48da5060e31d28e6610c6eb1" id="r_acdae33cb48da5060e31d28e6610c6eb1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acdae33cb48da5060e31d28e6610c6eb1">Initialize</a> (<a class="el" href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> clk_freq)</td></tr>
 <tr class="memdesc:acdae33cb48da5060e31d28e6610c6eb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicializa el <a class="el" href="class_i2_c.html" title="Clase del objeto I2C El objeto I2C genera una comunicación sincrónica de tipo I2C....">I2C</a>.  <br /></td></tr>
 <tr class="separator:acdae33cb48da5060e31d28e6610c6eb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d2d734fcdce3d81f6ddab30d2e53a43" id="r_a1d2d734fcdce3d81f6ddab30d2e53a43"><td class="memItemLeft" align="right" valign="top"><a id="a1d2d734fcdce3d81f6ddab30d2e53a43" name="a1d2d734fcdce3d81f6ddab30d2e53a43"></a>
@@ -165,21 +166,27 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>EnableInterupt</b> (v
 void&#160;</td><td class="memItemRight" valign="bottom"><b>DisableInterupt</b> (void)</td></tr>
 <tr class="memdesc:aaef51594d197af2a031592e890b6daba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deshabilita la interrupcion. <br /></td></tr>
 <tr class="separator:aaef51594d197af2a031592e890b6daba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2dc26ca2bde6fa9896cbe31d3909412e" id="r_a2dc26ca2bde6fa9896cbe31d3909412e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2dc26ca2bde6fa9896cbe31d3909412e">Start</a> (uint8_t addr, <a class="el" href="#ac5c17ddab3b8696527f355def36e1d07">I2C_action_t</a> action)</td></tr>
+<tr class="memitem:a2dc26ca2bde6fa9896cbe31d3909412e" id="r_a2dc26ca2bde6fa9896cbe31d3909412e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2dc26ca2bde6fa9896cbe31d3909412e">Start</a> (<a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> addr, <a class="el" href="#ac5c17ddab3b8696527f355def36e1d07">I2C_action_t</a> action)</td></tr>
 <tr class="memdesc:a2dc26ca2bde6fa9896cbe31d3909412e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicia una comunicacion <a class="el" href="class_i2_c.html" title="Clase del objeto I2C El objeto I2C genera una comunicación sincrónica de tipo I2C....">I2C</a>.  <br /></td></tr>
 <tr class="separator:a2dc26ca2bde6fa9896cbe31d3909412e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d3e0b1de395932284e2e010a0160b5f" id="r_a5d3e0b1de395932284e2e010a0160b5f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d3e0b1de395932284e2e010a0160b5f">Stop</a> (void)</td></tr>
 <tr class="memdesc:a5d3e0b1de395932284e2e010a0160b5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detiene la comunicacion.  <br /></td></tr>
 <tr class="separator:a5d3e0b1de395932284e2e010a0160b5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01998f88940804c81ca1c528b724a365" id="r_a01998f88940804c81ca1c528b724a365"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01998f88940804c81ca1c528b724a365">Write</a> (uint8_t data) override</td></tr>
+<tr class="memitem:a01998f88940804c81ca1c528b724a365" id="r_a01998f88940804c81ca1c528b724a365"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01998f88940804c81ca1c528b724a365">Write</a> (<a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> data) override</td></tr>
 <tr class="memdesc:a01998f88940804c81ca1c528b724a365"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escribe un valor a un slave.  <br /></td></tr>
 <tr class="separator:a01998f88940804c81ca1c528b724a365"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8471212350221fb2a58a3cfbc469c67a" id="r_a8471212350221fb2a58a3cfbc469c67a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_i2_c.html">I2C</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8471212350221fb2a58a3cfbc469c67a">operator=</a> (uint8_t data)</td></tr>
+<tr class="memitem:a8471212350221fb2a58a3cfbc469c67a" id="r_a8471212350221fb2a58a3cfbc469c67a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_i2_c.html">I2C</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8471212350221fb2a58a3cfbc469c67a">operator=</a> (<a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> data)</td></tr>
 <tr class="memdesc:a8471212350221fb2a58a3cfbc469c67a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga del operador = (igual).  <br /></td></tr>
 <tr class="separator:a8471212350221fb2a58a3cfbc469c67a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e56aa888fba64968af2ab08382c76af" id="r_a2e56aa888fba64968af2ab08382c76af"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e56aa888fba64968af2ab08382c76af">Read</a> (uint8_t *data, bool continue_reading)</td></tr>
+<tr class="memitem:a2e56aa888fba64968af2ab08382c76af" id="r_a2e56aa888fba64968af2ab08382c76af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tipos_8h.html#ad566f6541e98b74246db1a3a3a85ad49">int8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e56aa888fba64968af2ab08382c76af">Read</a> (<a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *data, bool continue_reading)</td></tr>
 <tr class="memdesc:a2e56aa888fba64968af2ab08382c76af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lee un valor recibido.  <br /></td></tr>
 <tr class="separator:a2e56aa888fba64968af2ab08382c76af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6237b3824536fa20e5dd3a3596f939e3" id="r_a6237b3824536fa20e5dd3a3596f939e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tipos_8h.html#ad566f6541e98b74246db1a3a3a85ad49">int8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6237b3824536fa20e5dd3a3596f939e3">Read</a> (<a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *data) override</td></tr>
+<tr class="memdesc:a6237b3824536fa20e5dd3a3596f939e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lee un valor recibido.  <br /></td></tr>
+<tr class="separator:a6237b3824536fa20e5dd3a3596f939e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e49eeee7c9f988439385721ec7aad5a" id="r_a5e49eeee7c9f988439385721ec7aad5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e49eeee7c9f988439385721ec7aad5a">Continue</a> (void)</td></tr>
+<tr class="memdesc:a5e49eeee7c9f988439385721ec7aad5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Envia una señal para continuar.  <br /></td></tr>
+<tr class="separator:a5e49eeee7c9f988439385721ec7aad5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11319f49316d58882041059ce765f5e5" id="r_a11319f49316d58882041059ce765f5e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11319f49316d58882041059ce765f5e5">ACK</a> (bool a)</td></tr>
 <tr class="memdesc:a11319f49316d58882041059ce765f5e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Envia un Acknowledge.  <br /></td></tr>
 <tr class="separator:a11319f49316d58882041059ce765f5e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -222,7 +229,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>DisableInterupt</b> (
         <tr>
           <td class="memname">I2C::I2C </td>
           <td>(</td>
-          <td class="paramtype">I2C_Type *</td>          <td class="paramname"><span class="paramname"><em>I2C_register</em></span>, </td>
+          <td class="paramtype"><a class="el" href="struct_i2_c___type.html">I2C_Type</a> *</td>          <td class="paramname"><span class="paramname"><em>I2C_register</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -242,7 +249,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>DisableInterupt</b> (
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>slv_addr</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></td>          <td class="paramname"><span class="paramname"><em>slv_addr</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -307,6 +314,26 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>DisableInterupt</b> (
 
 </div>
 </div>
+<a id="a5e49eeee7c9f988439385721ec7aad5a" name="a5e49eeee7c9f988439385721ec7aad5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e49eeee7c9f988439385721ec7aad5a">&#9670;&#160;</a></span>Continue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void I2C::Continue </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Envia una señal para continuar. </p>
+<p>Carga el registro de continuar. Debe hacerse al usarse la funcion <a class="el" href="#a2e56aa888fba64968af2ab08382c76af" title="Lee un valor recibido.">Read()</a> sin continue_reading. </p>
+
+</div>
+</div>
 <a id="ab4d30ac9140fb1959ba849f437b6eacc" name="ab4d30ac9140fb1959ba849f437b6eacc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab4d30ac9140fb1959ba849f437b6eacc">&#9670;&#160;</a></span>GetState()</h2>
 
@@ -362,7 +389,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>DisableInterupt</b> (
         <tr>
           <td class="memname">void I2C::Initialize </td>
           <td>(</td>
-          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>clk_freq</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></td>          <td class="paramname"><span class="paramname"><em>clk_freq</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -387,7 +414,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>DisableInterupt</b> (
         <tr>
           <td class="memname"><a class="el" href="class_i2_c.html">I2C</a> &amp; I2C::operator= </td>
           <td>(</td>
-          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>data</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></td>          <td class="paramname"><span class="paramname"><em>data</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -404,16 +431,52 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>DisableInterupt</b> (
 
 </div>
 </div>
+<a id="a6237b3824536fa20e5dd3a3596f939e3" name="a6237b3824536fa20e5dd3a3596f939e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6237b3824536fa20e5dd3a3596f939e3">&#9670;&#160;</a></span>Read() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="tipos_8h.html#ad566f6541e98b74246db1a3a3a85ad49">int8_t</a> I2C::Read </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *</td>          <td class="paramname"><span class="paramname"><em>data</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Lee un valor recibido. </p>
+<p>Lee el valor recibido por un slave. Solo puede ser llamado por un master que previamente haya pedido recibir y o un slave al que le llego un valor. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>puntero a char donde se guardara el valor recibido. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="tipos_8h.html#ad566f6541e98b74246db1a3a3a85ad49">int8_t</a>: valor de error. 0 no hubo problemas. -1 no se puede leer aun. </dd></dl>
+
+<p>Implements <a class="el" href="class_comunicacion_sincronica.html#aea33d4761b4e3c57157387d9f9e90a01">ComunicacionSincronica</a>.</p>
+
+</div>
+</div>
 <a id="a2e56aa888fba64968af2ab08382c76af" name="a2e56aa888fba64968af2ab08382c76af"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2e56aa888fba64968af2ab08382c76af">&#9670;&#160;</a></span>Read()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e56aa888fba64968af2ab08382c76af">&#9670;&#160;</a></span>Read() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int8_t I2C::Read </td>
+          <td class="memname"><a class="el" href="tipos_8h.html#ad566f6541e98b74246db1a3a3a85ad49">int8_t</a> I2C::Read </td>
           <td>(</td>
-          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+          <td class="paramtype"><a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -431,7 +494,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>DisableInterupt</b> (
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>int8_t: valor de error. 0 no hubo problemas. -1 no se puede leer aun. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="tipos_8h.html#ad566f6541e98b74246db1a3a3a85ad49">int8_t</a>: valor de error. 0 no hubo problemas. -1 no se puede leer aun. </dd></dl>
 
 </div>
 </div>
@@ -444,7 +507,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>DisableInterupt</b> (
         <tr>
           <td class="memname">void I2C::Start </td>
           <td>(</td>
-          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>addr</em></span>, </td>
+          <td class="paramtype"><a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></td>          <td class="paramname"><span class="paramname"><em>addr</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -497,7 +560,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>DisableInterupt</b> (
         <tr>
           <td class="memname">void I2C::Write </td>
           <td>(</td>
-          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>data</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></td>          <td class="paramname"><span class="paramname"><em>data</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -521,8 +584,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>DisableInterupt</b> (
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>E:/Agustin/Escritorio/MCUexpresso/KitLPC845-C++/src/Drivers/Perifericos/14-ComSincronica/I2C/<a class="el" href="_i2_c_8h_source.html">I2C.h</a></li>
-<li>E:/Agustin/Escritorio/MCUexpresso/KitLPC845-C++/src/Drivers/Perifericos/14-ComSincronica/I2C/<a class="el" href="_i2_c_8cpp.html">I2C.cpp</a></li>
+<li><a class="el" href="_i2_c_8h_source.html">I2C.h</a></li>
+<li><a class="el" href="_i2_c_8cpp.html">I2C.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

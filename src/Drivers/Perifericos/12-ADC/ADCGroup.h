@@ -1,7 +1,7 @@
 /*******************************************************************************************************************************//**
  *
  * @file		ADCGroup.cpp
- * @brief		Objeto DAC
+ * @brief		Modulo de grupo de ADC.
  * @date		13 nov. 2022
  * @author		Federico
  *

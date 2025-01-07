@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>KITLPC845-C++: E:/Agustin/Escritorio/MCUexpresso/KitLPC845-C++/src/Drivers/Hardware/07-hc-sr04/HCSR04.h Source File</title>
+<title>LPC845-C++: HCSR04.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -18,6 +18,11 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,10 +32,22 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">KITLPC845-C++<span id="projectnumber">&#160;2.0</span>
+   <div id="projectname">LPC845-C++<span id="projectnumber">&#160;2.0</span>
    </div>
-   <div id="projectbrief">KitdelibreriascustomenC++paralaplacadedesarrolloLPC845</div>
+   <div id="projectbrief">Kit de librerias propias de la placa de desarrollo LPC845</div>
   </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -47,17 +64,6 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 $(function() { codefold.init(0); });
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('',true,false,'search.php','Search',true);
-  $(function() { init_search(); });
-});
-/* @license-end */
-</script>
-<div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -101,77 +107,78 @@ $(function(){initNavTree('_h_c_s_r04_8h_source.html',''); initResizable(true); }
 </div><!--header-->
 <div class="contents">
 <a href="_h_c_s_r04_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*******************************************************************************************************************************/</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef HCSR04_H_</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define HCSR04_H_</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">/***********************************************************************************************************************************</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> *** INCLUDES GLOBALES</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> **********************************************************************************************************************************/</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;<a class="code" href="_pwm_8h.html">Hardware/05-PWM/Pwm.h</a>&gt;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;<a class="code" href="_p_w_m_reader_8h.html">Hardware/06-PWM_Reader/PWMReader.h</a>&gt;</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;<a class="code" href="distancia_8h.html">Hardware/07-hc-sr04/distancia.h</a>&gt;</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/***********************************************************************************************************************************</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> *** DEFINES GLOBALES</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment"> **********************************************************************************************************************************/</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">/***********************************************************************************************************************************</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment"> *** MACROS GLOBALES</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment"> **********************************************************************************************************************************/</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">/***********************************************************************************************************************************</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment"> *** TIPO DE DATOS GLOBALES</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment"> **********************************************************************************************************************************/</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">/***********************************************************************************************************************************</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment"> *** IMPLANTACION DE LA CLASE</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment"> **********************************************************************************************************************************/</span></div>
-<div class="foldopen" id="foldopen00046" data-start="{" data-end="};">
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_h_c___s_r04.html">   46</a></span><span class="keyword">class </span><a class="code hl_function" href="class_h_c___s_r04.html#a03ff682e07bbbc9f5554790e98a59473">HC_SR04</a> : <span class="keyword">protected</span> <a class="code hl_function" href="classdistancia.html#a4ae7408c3108977cd1c092eb6c0556b0">distancia</a></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>{</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="_h_c_s_r04_8h.html#a3085f4877388c18954b353865f58cd56">   50</a></span><span class="preprocessor">        #define PERIODO                 80</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="_h_c_s_r04_8h.html#a7a22f21fd74e935394618272508e0319">   52</a></span><span class="preprocessor">        #define CALC_DISTANCIA(a)       ( ((a)*164) / 10000 )</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="_h_c_s_r04_8h.html#a24f7f73d11f36cab5d17951df5ed5e83">   55</a></span><span class="preprocessor">        #define DISTANCIA_MAX   400</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <a class="code hl_class" href="class_p_w_m___reader.html">PWM_Reader</a>*       &amp;m_rx;          </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <a class="code hl_class" href="class_pwm.html">Pwm</a>*             &amp;m_tx;          </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        uint32_t        m_distancia;    </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keywordtype">bool</span>            m_stop;         </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                    <a class="code hl_function" href="class_h_c___s_r04.html#a03ff682e07bbbc9f5554790e98a59473">HC_SR04</a>( <a class="code hl_class" href="class_p_w_m___reader.html">PWM_Reader</a>* &amp;rx , <a class="code hl_class" href="class_pwm.html">Pwm</a>* &amp;tx );</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keywordtype">void</span>        <a class="code hl_function" href="class_h_c___s_r04.html#a2d1eabe8372f65cc01ff78029940b151">Inicializar</a>( <span class="keywordtype">void</span> );</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        uint32_t    <a class="code hl_function" href="class_h_c___s_r04.html#ab6e8079457c420f2d403c0921eea8e50">GetDistancia</a>( <span class="keywordtype">void</span> );</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keywordtype">void</span>        <a class="code hl_function" href="class_h_c___s_r04.html#a8a2b0436db85de19f08c9500aaf87ca2">Off</a>( <span class="keywordtype">void</span> );</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keywordtype">void</span>        <a class="code hl_function" href="class_h_c___s_r04.html#aa336ccf5e2ef45edbfe94e6900f32ccf">On</a>( <span class="keywordtype">void</span> );</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keywordtype">bool</span>        <a class="code hl_function" href="class_h_c___s_r04.html#ab01d798e50daf71f0f89164bdf962060">operator==</a>( <span class="keyword">const</span> uint32_t a);</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keywordtype">bool</span>        <a class="code hl_function" href="class_h_c___s_r04.html#ae8f126feaff97d82e44f45ca7b874751">operator&lt;=</a>( <span class="keyword">const</span> uint32_t a );</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="keywordtype">bool</span>        <a class="code hl_function" href="class_h_c___s_r04.html#ac74ee13b7df279a78e1cab13cb99e8ed">operator&gt;=</a>( <span class="keyword">const</span> uint32_t a );</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="keywordtype">bool</span>        <a class="code hl_function" href="class_h_c___s_r04.html#a5630dff5e0dee0fc86f04951d7a602a5">operator&lt;</a>( <span class="keyword">const</span> uint32_t a );</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keywordtype">bool</span>        <a class="code hl_function" href="class_h_c___s_r04.html#a0efaa0b7f1d1f65ea900fe4578c0e3fa">operator&gt;</a>( <span class="keyword">const</span> uint32_t a );</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keyword">virtual</span>     <a class="code hl_class" href="class_h_c___s_r04.html">~HC_SR04</a>(){};       </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>};</div>
-</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#ifndef HCSR04_H_</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#define HCSR04_H_</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">/***********************************************************************************************************************************</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> *** INCLUDES GLOBALES</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> **********************************************************************************************************************************/</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;<a class="code" href="_pwm_8h.html">Hardware/05-PWM/Pwm.h</a>&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;<a class="code" href="_p_w_m_reader_8h.html">Hardware/06-PWM_Reader/PWMReader.h</a>&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;<a class="code" href="distancia_8h.html">Hardware/07-hc-sr04/distancia.h</a>&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">/***********************************************************************************************************************************</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment"> *** DEFINES GLOBALES</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment"> **********************************************************************************************************************************/</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">/***********************************************************************************************************************************</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment"> *** MACROS GLOBALES</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment"> **********************************************************************************************************************************/</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">/***********************************************************************************************************************************</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment"> *** TIPO DE DATOS GLOBALES</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment"> **********************************************************************************************************************************/</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">/***********************************************************************************************************************************</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment"> *** IMPLANTACION DE LA CLASE</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment"> **********************************************************************************************************************************/</span></div>
+<div class="foldopen" id="foldopen00049" data-start="{" data-end="};">
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_h_c___s_r04.html">   49</a></span><span class="keyword">class </span><a class="code hl_function" href="class_h_c___s_r04.html#a03ff682e07bbbc9f5554790e98a59473">HC_SR04</a> : <span class="keyword">protected</span> <a class="code hl_function" href="classdistancia.html#a4ae7408c3108977cd1c092eb6c0556b0">distancia</a></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>{</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="_h_c_s_r04_8h.html#a3085f4877388c18954b353865f58cd56">   53</a></span><span class="preprocessor">        #define PERIODO                 80</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="_h_c_s_r04_8h.html#a7a22f21fd74e935394618272508e0319">   55</a></span><span class="preprocessor">        #define CALC_DISTANCIA(a)       ( ((a)*164) / 10000 )</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="_h_c_s_r04_8h.html#a24f7f73d11f36cab5d17951df5ed5e83">   58</a></span><span class="preprocessor">        #define DISTANCIA_MAX   400</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <a class="code hl_class" href="class_p_w_m___reader.html">PWM_Reader</a>*       &amp;m_rx;          </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <a class="code hl_class" href="class_pwm.html">Pwm</a>*             &amp;m_tx;          </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <a class="code hl_typedef" href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>        m_distancia;    </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keywordtype">bool</span>            m_stop;         </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                    <a class="code hl_function" href="class_h_c___s_r04.html#a03ff682e07bbbc9f5554790e98a59473">HC_SR04</a>( <a class="code hl_class" href="class_p_w_m___reader.html">PWM_Reader</a>* &amp;rx , <a class="code hl_class" href="class_pwm.html">Pwm</a>* &amp;tx );</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keywordtype">void</span>        <a class="code hl_function" href="class_h_c___s_r04.html#ae793df78644cabff55007e7156229955">Initialize</a>( <span class="keywordtype">void</span> );</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <a class="code hl_typedef" href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>    <a class="code hl_function" href="class_h_c___s_r04.html#a782a2696465877beb8193ded5388fd71">GetDistancia</a>( <span class="keywordtype">void</span> ) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keywordtype">void</span>        <a class="code hl_function" href="class_h_c___s_r04.html#a8a2b0436db85de19f08c9500aaf87ca2">Off</a>( <span class="keywordtype">void</span> );</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="keywordtype">void</span>        <a class="code hl_function" href="class_h_c___s_r04.html#aa336ccf5e2ef45edbfe94e6900f32ccf">On</a>( <span class="keywordtype">void</span> );</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="keywordtype">bool</span>        <a class="code hl_function" href="class_h_c___s_r04.html#ae88a6c5b2e4ab1dd2ed9561b59d9b4f9">operator==</a>( <span class="keyword">const</span> <a class="code hl_typedef" href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> a) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keywordtype">bool</span>        <a class="code hl_function" href="class_h_c___s_r04.html#ae8f126feaff97d82e44f45ca7b874751">operator&lt;=</a>( <span class="keyword">const</span> <a class="code hl_typedef" href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> a );</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="keywordtype">bool</span>        <a class="code hl_function" href="class_h_c___s_r04.html#ac74ee13b7df279a78e1cab13cb99e8ed">operator&gt;=</a>( <span class="keyword">const</span> <a class="code hl_typedef" href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> a );</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keywordtype">bool</span>        <a class="code hl_function" href="class_h_c___s_r04.html#a5630dff5e0dee0fc86f04951d7a602a5">operator&lt;</a>( <span class="keyword">const</span> <a class="code hl_typedef" href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> a );</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keywordtype">bool</span>        <a class="code hl_function" href="class_h_c___s_r04.html#a0efaa0b7f1d1f65ea900fe4578c0e3fa">operator&gt;</a>( <span class="keyword">const</span> <a class="code hl_typedef" href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> a );</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="preprocessor">#endif </span><span class="comment">/* HCSR04_H_ */</span><span class="preprocessor"></span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <span class="keyword">virtual</span>     <a class="code hl_class" href="class_h_c___s_r04.html">~HC_SR04</a>(){};       </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>};</div>
+</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="preprocessor">#endif </span><span class="comment">/* HCSR04_H_ */</span><span class="preprocessor"></span><span class="preprocessor"></span></div>
 <div class="ttc" id="a_p_w_m_reader_8h_html"><div class="ttname"><a href="_p_w_m_reader_8h.html">PWMReader.h</a></div><div class="ttdoc">Pata que lee tamaños de pulsos de entrada.</div></div>
 <div class="ttc" id="a_pwm_8h_html"><div class="ttname"><a href="_pwm_8h.html">Pwm.h</a></div><div class="ttdoc">Generador de PWM sin interrupción.</div></div>
-<div class="ttc" id="aclass_h_c___s_r04_html"><div class="ttname"><a href="class_h_c___s_r04.html">HC_SR04</a></div><div class="ttdoc">Clase del objeto HC_SR04 El objeto HC_SR04 Mide distancia mediante el uso de un ultrasónico....</div><div class="ttdef"><b>Definition</b> HCSR04.h:47</div></div>
-<div class="ttc" id="aclass_h_c___s_r04_html_a03ff682e07bbbc9f5554790e98a59473"><div class="ttname"><a href="class_h_c___s_r04.html#a03ff682e07bbbc9f5554790e98a59473">HC_SR04::HC_SR04</a></div><div class="ttdeci">HC_SR04(PWM_Reader *&amp;rx, Pwm *&amp;tx)</div><div class="ttdoc">Constructor de clase HC_SR04.</div><div class="ttdef"><b>Definition</b> HCSR04.cpp:49</div></div>
-<div class="ttc" id="aclass_h_c___s_r04_html_a0efaa0b7f1d1f65ea900fe4578c0e3fa"><div class="ttname"><a href="class_h_c___s_r04.html#a0efaa0b7f1d1f65ea900fe4578c0e3fa">HC_SR04::operator&gt;</a></div><div class="ttdeci">bool operator&gt;(const uint32_t a)</div><div class="ttdoc">Verifica si la distancia es mayor que a.</div><div class="ttdef"><b>Definition</b> HCSR04.cpp:150</div></div>
-<div class="ttc" id="aclass_h_c___s_r04_html_a2d1eabe8372f65cc01ff78029940b151"><div class="ttname"><a href="class_h_c___s_r04.html#a2d1eabe8372f65cc01ff78029940b151">HC_SR04::Inicializar</a></div><div class="ttdeci">void Inicializar(void)</div><div class="ttdoc">Inicializa todas las patas del ultrasónico.</div><div class="ttdef"><b>Definition</b> HCSR04.cpp:56</div></div>
-<div class="ttc" id="aclass_h_c___s_r04_html_a5630dff5e0dee0fc86f04951d7a602a5"><div class="ttname"><a href="class_h_c___s_r04.html#a5630dff5e0dee0fc86f04951d7a602a5">HC_SR04::operator&lt;</a></div><div class="ttdeci">bool operator&lt;(const uint32_t a)</div><div class="ttdoc">Verifica si la distancia es menor que a.</div><div class="ttdef"><b>Definition</b> HCSR04.cpp:134</div></div>
-<div class="ttc" id="aclass_h_c___s_r04_html_a8a2b0436db85de19f08c9500aaf87ca2"><div class="ttname"><a href="class_h_c___s_r04.html#a8a2b0436db85de19f08c9500aaf87ca2">HC_SR04::Off</a></div><div class="ttdeci">void Off(void)</div><div class="ttdoc">Apago las patas del ultrasonico.</div><div class="ttdef"><b>Definition</b> HCSR04.cpp:164</div></div>
-<div class="ttc" id="aclass_h_c___s_r04_html_aa336ccf5e2ef45edbfe94e6900f32ccf"><div class="ttname"><a href="class_h_c___s_r04.html#aa336ccf5e2ef45edbfe94e6900f32ccf">HC_SR04::On</a></div><div class="ttdeci">void On(void)</div><div class="ttdoc">Enciendo las patas del ultrasonico.</div><div class="ttdef"><b>Definition</b> HCSR04.cpp:176</div></div>
-<div class="ttc" id="aclass_h_c___s_r04_html_ab01d798e50daf71f0f89164bdf962060"><div class="ttname"><a href="class_h_c___s_r04.html#ab01d798e50daf71f0f89164bdf962060">HC_SR04::operator==</a></div><div class="ttdeci">bool operator==(const uint32_t a)</div><div class="ttdoc">Operador ==.</div><div class="ttdef"><b>Definition</b> HCSR04.cpp:86</div></div>
-<div class="ttc" id="aclass_h_c___s_r04_html_ab6e8079457c420f2d403c0921eea8e50"><div class="ttname"><a href="class_h_c___s_r04.html#ab6e8079457c420f2d403c0921eea8e50">HC_SR04::GetDistancia</a></div><div class="ttdeci">uint32_t GetDistancia(void)</div><div class="ttdoc">Devuelve la distancia.</div><div class="ttdef"><b>Definition</b> HCSR04.cpp:67</div></div>
-<div class="ttc" id="aclass_h_c___s_r04_html_ac74ee13b7df279a78e1cab13cb99e8ed"><div class="ttname"><a href="class_h_c___s_r04.html#ac74ee13b7df279a78e1cab13cb99e8ed">HC_SR04::operator&gt;=</a></div><div class="ttdeci">bool operator&gt;=(const uint32_t a)</div><div class="ttdoc">Verifica si la distancia es mayor o igual que a.</div><div class="ttdef"><b>Definition</b> HCSR04.cpp:118</div></div>
-<div class="ttc" id="aclass_h_c___s_r04_html_ae8f126feaff97d82e44f45ca7b874751"><div class="ttname"><a href="class_h_c___s_r04.html#ae8f126feaff97d82e44f45ca7b874751">HC_SR04::operator&lt;=</a></div><div class="ttdeci">bool operator&lt;=(const uint32_t a)</div><div class="ttdoc">Verifica si la distancia es menor o igual que a.</div><div class="ttdef"><b>Definition</b> HCSR04.cpp:102</div></div>
-<div class="ttc" id="aclass_p_w_m___reader_html"><div class="ttname"><a href="class_p_w_m___reader.html">PWM_Reader</a></div><div class="ttdoc">Clase del objeto PWM_Reader.</div><div class="ttdef"><b>Definition</b> PWMReader.h:57</div></div>
-<div class="ttc" id="aclass_pwm_html"><div class="ttname"><a href="class_pwm.html">Pwm</a></div><div class="ttdoc">Clase del objeto Pwm.</div><div class="ttdef"><b>Definition</b> Pwm.h:46</div></div>
+<div class="ttc" id="aclass_h_c___s_r04_html"><div class="ttname"><a href="class_h_c___s_r04.html">HC_SR04</a></div><div class="ttdoc">Clase del objeto HC_SR04 El objeto HC_SR04 Mide distancia mediante el uso de un ultrasónico....</div><div class="ttdef"><b>Definition</b> HCSR04.h:50</div></div>
+<div class="ttc" id="aclass_h_c___s_r04_html_a03ff682e07bbbc9f5554790e98a59473"><div class="ttname"><a href="class_h_c___s_r04.html#a03ff682e07bbbc9f5554790e98a59473">HC_SR04::HC_SR04</a></div><div class="ttdeci">HC_SR04(PWM_Reader *&amp;rx, Pwm *&amp;tx)</div><div class="ttdoc">Constructor de clase HC_SR04.</div><div class="ttdef"><b>Definition</b> HCSR04.cpp:51</div></div>
+<div class="ttc" id="aclass_h_c___s_r04_html_a0efaa0b7f1d1f65ea900fe4578c0e3fa"><div class="ttname"><a href="class_h_c___s_r04.html#a0efaa0b7f1d1f65ea900fe4578c0e3fa">HC_SR04::operator&gt;</a></div><div class="ttdeci">bool operator&gt;(const uint32_t a)</div><div class="ttdoc">Verifica si la distancia es mayor que a.</div><div class="ttdef"><b>Definition</b> HCSR04.cpp:152</div></div>
+<div class="ttc" id="aclass_h_c___s_r04_html_a5630dff5e0dee0fc86f04951d7a602a5"><div class="ttname"><a href="class_h_c___s_r04.html#a5630dff5e0dee0fc86f04951d7a602a5">HC_SR04::operator&lt;</a></div><div class="ttdeci">bool operator&lt;(const uint32_t a)</div><div class="ttdoc">Verifica si la distancia es menor que a.</div><div class="ttdef"><b>Definition</b> HCSR04.cpp:136</div></div>
+<div class="ttc" id="aclass_h_c___s_r04_html_a782a2696465877beb8193ded5388fd71"><div class="ttname"><a href="class_h_c___s_r04.html#a782a2696465877beb8193ded5388fd71">HC_SR04::GetDistancia</a></div><div class="ttdeci">uint32_t GetDistancia(void) override</div><div class="ttdoc">Devuelve la distancia.</div><div class="ttdef"><b>Definition</b> HCSR04.cpp:69</div></div>
+<div class="ttc" id="aclass_h_c___s_r04_html_a8a2b0436db85de19f08c9500aaf87ca2"><div class="ttname"><a href="class_h_c___s_r04.html#a8a2b0436db85de19f08c9500aaf87ca2">HC_SR04::Off</a></div><div class="ttdeci">void Off(void)</div><div class="ttdoc">Apago las patas del ultrasonico.</div><div class="ttdef"><b>Definition</b> HCSR04.cpp:166</div></div>
+<div class="ttc" id="aclass_h_c___s_r04_html_aa336ccf5e2ef45edbfe94e6900f32ccf"><div class="ttname"><a href="class_h_c___s_r04.html#aa336ccf5e2ef45edbfe94e6900f32ccf">HC_SR04::On</a></div><div class="ttdeci">void On(void)</div><div class="ttdoc">Enciendo las patas del ultrasonico.</div><div class="ttdef"><b>Definition</b> HCSR04.cpp:178</div></div>
+<div class="ttc" id="aclass_h_c___s_r04_html_ac74ee13b7df279a78e1cab13cb99e8ed"><div class="ttname"><a href="class_h_c___s_r04.html#ac74ee13b7df279a78e1cab13cb99e8ed">HC_SR04::operator&gt;=</a></div><div class="ttdeci">bool operator&gt;=(const uint32_t a)</div><div class="ttdoc">Verifica si la distancia es mayor o igual que a.</div><div class="ttdef"><b>Definition</b> HCSR04.cpp:120</div></div>
+<div class="ttc" id="aclass_h_c___s_r04_html_ae793df78644cabff55007e7156229955"><div class="ttname"><a href="class_h_c___s_r04.html#ae793df78644cabff55007e7156229955">HC_SR04::Initialize</a></div><div class="ttdeci">void Initialize(void)</div><div class="ttdoc">Inicializa todas las patas del ultrasónico.</div><div class="ttdef"><b>Definition</b> HCSR04.cpp:58</div></div>
+<div class="ttc" id="aclass_h_c___s_r04_html_ae88a6c5b2e4ab1dd2ed9561b59d9b4f9"><div class="ttname"><a href="class_h_c___s_r04.html#ae88a6c5b2e4ab1dd2ed9561b59d9b4f9">HC_SR04::operator==</a></div><div class="ttdeci">bool operator==(const uint32_t a) override</div><div class="ttdoc">Operador ==.</div><div class="ttdef"><b>Definition</b> HCSR04.cpp:88</div></div>
+<div class="ttc" id="aclass_h_c___s_r04_html_ae8f126feaff97d82e44f45ca7b874751"><div class="ttname"><a href="class_h_c___s_r04.html#ae8f126feaff97d82e44f45ca7b874751">HC_SR04::operator&lt;=</a></div><div class="ttdeci">bool operator&lt;=(const uint32_t a)</div><div class="ttdoc">Verifica si la distancia es menor o igual que a.</div><div class="ttdef"><b>Definition</b> HCSR04.cpp:104</div></div>
+<div class="ttc" id="aclass_p_w_m___reader_html"><div class="ttname"><a href="class_p_w_m___reader.html">PWM_Reader</a></div><div class="ttdoc">Clase del objeto PWM_Reader.</div><div class="ttdef"><b>Definition</b> PWMReader.h:59</div></div>
+<div class="ttc" id="aclass_pwm_html"><div class="ttname"><a href="class_pwm.html">Pwm</a></div><div class="ttdoc">Clase del objeto Pwm.</div><div class="ttdef"><b>Definition</b> Pwm.h:49</div></div>
 <div class="ttc" id="aclassdistancia_html_a4ae7408c3108977cd1c092eb6c0556b0"><div class="ttname"><a href="classdistancia.html#a4ae7408c3108977cd1c092eb6c0556b0">distancia::distancia</a></div><div class="ttdeci">distancia()=default</div></div>
 <div class="ttc" id="adistancia_8h_html"><div class="ttname"><a href="distancia_8h.html">distancia.h</a></div><div class="ttdoc">Clase base para objetos medidores de distancias.</div></div>
+<div class="ttc" id="atipos_8h_html_a435d1572bf3f880d55459d9805097f62"><div class="ttname"><a href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></div><div class="ttdeci">unsigned int uint32_t</div><div class="ttdef"><b>Definition</b> tipos.h:45</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

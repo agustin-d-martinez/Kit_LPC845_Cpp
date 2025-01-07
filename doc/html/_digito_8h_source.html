@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>KITLPC845-C++: E:/Agustin/Escritorio/MCUexpresso/KitLPC845-C++/src/Drivers/Hardware/02-Displays/7Segmentos/C-Display/Digito.h Source File</title>
+<title>LPC845-C++: Digito.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -18,6 +18,11 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,10 +32,22 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">KITLPC845-C++<span id="projectnumber">&#160;2.0</span>
+   <div id="projectname">LPC845-C++<span id="projectnumber">&#160;2.0</span>
    </div>
-   <div id="projectbrief">KitdelibreriascustomenC++paralaplacadedesarrolloLPC845</div>
+   <div id="projectbrief">Kit de librerias propias de la placa de desarrollo LPC845</div>
   </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -47,17 +64,6 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 $(function() { codefold.init(0); });
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('',true,false,'search.php','Search',true);
-  $(function() { init_search(); });
-});
-/* @license-end */
-</script>
-<div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -110,7 +116,7 @@ $(function(){initNavTree('_digito_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">/***********************************************************************************************************************************</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> *** INCLUDES GLOBALES</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> **********************************************************************************************************************************/</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;tipos.h&quot;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;<a class="code" href="tipos_8h.html">tipos.h</a>&quot;</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">/***********************************************************************************************************************************</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment"> *** DEFINES GLOBALES</span></div>
@@ -140,15 +146,15 @@ $(function(){initNavTree('_digito_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="classdigito.html#a9ca4533ad058f09c87644f3eb8b497a8">   56</a></span>        <span class="keyword">typedef</span> <span class="keyword">enum</span> { menos = 10 ,  a , b , c , d , e , f , g , h , n , o , p , r, t , u } <a class="code hl_enumeration" href="classdigito.html#a9ca4533ad058f09c87644f3eb8b497a8">SIMBOLOS</a>;</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        uint16_t m_Valor;           </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <a class="code hl_typedef" href="tipos_8h.html#ad097ffa75536dc17a0039dfb3781d705">uint16_t</a> m_Valor;           </div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keyword">const</span> <a class="code hl_enumeration" href="classdigito.html#a8302b770b9c2c86edb02394fd9ffc4f9">codigo_t</a> m_Sistema;   </div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classdigito.html#ad87b6a6ef9b67e0ec9d16ef093f1eff0">   64</a></span>        <a class="code hl_function" href="classdigito.html#ad87b6a6ef9b67e0ec9d16ef093f1eff0">digito</a>( <a class="code hl_enumeration" href="classdigito.html#a8302b770b9c2c86edb02394fd9ffc4f9">codigo_t</a> Sistema = BCD , uint8_t Valor = APAGAR ) : m_Valor( Valor ) , m_Sistema ( Sistema ){};</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classdigito.html#ad87b6a6ef9b67e0ec9d16ef093f1eff0">   64</a></span>        <a class="code hl_function" href="classdigito.html#ad87b6a6ef9b67e0ec9d16ef093f1eff0">digito</a>( <a class="code hl_enumeration" href="classdigito.html#a8302b770b9c2c86edb02394fd9ffc4f9">codigo_t</a> Sistema = BCD , <a class="code hl_typedef" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> Valor = APAGAR ) : m_Valor( Valor ) , m_Sistema ( Sistema ){};</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="classdigito.html#af66378ee328c8e5b756b72c348080c16">Set</a>(uint16_t valor);</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        uint8_t <a class="code hl_function" href="classdigito.html#a1147bec264cc1a971f6247d96dc7066b">Get</a>( <span class="keywordtype">void</span> );</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classdigito.html#a0c040b3ea2fe853a71a835656f21bb68">Clr</a>( <span class="keywordtype">void</span> );</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="classdigito.html#af66378ee328c8e5b756b72c348080c16">Set</a>(<a class="code hl_typedef" href="tipos_8h.html#ad097ffa75536dc17a0039dfb3781d705">uint16_t</a> valor);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <a class="code hl_typedef" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> <a class="code hl_function" href="classdigito.html#a1147bec264cc1a971f6247d96dc7066b">Get</a>( <span class="keywordtype">void</span> );</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classdigito.html#ab25ebd80d1009bd3350ea39bdad5ce70">Clear</a>( <span class="keywordtype">void</span> );</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="keyword">virtual</span> <a class="code hl_class" href="classdigito.html">~digito</a>() {};        </div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>};</div>
@@ -156,13 +162,16 @@ $(function(){initNavTree('_digito_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="preprocessor">#endif </span><span class="comment">/* DIGITO_H_ */</span><span class="preprocessor"></span><span class="preprocessor"></span></div>
 <div class="ttc" id="aclassdigito_html"><div class="ttname"><a href="classdigito.html">digito</a></div><div class="ttdoc">Clase del objeto digito El objeto digito posee todas las funcionalidades y propiedades de forma que p...</div><div class="ttdef"><b>Definition</b> Digito.h:49</div></div>
-<div class="ttc" id="aclassdigito_html_a0c040b3ea2fe853a71a835656f21bb68"><div class="ttname"><a href="classdigito.html#a0c040b3ea2fe853a71a835656f21bb68">digito::Clr</a></div><div class="ttdeci">void Clr(void)</div><div class="ttdoc">Función de limpieza del dígito.</div><div class="ttdef"><b>Definition</b> Digito.cpp:106</div></div>
 <div class="ttc" id="aclassdigito_html_a1147bec264cc1a971f6247d96dc7066b"><div class="ttname"><a href="classdigito.html#a1147bec264cc1a971f6247d96dc7066b">digito::Get</a></div><div class="ttdeci">uint8_t Get(void)</div><div class="ttdoc">Devuelve el valor del dígito.</div><div class="ttdef"><b>Definition</b> Digito.cpp:97</div></div>
 <div class="ttc" id="aclassdigito_html_a8302b770b9c2c86edb02394fd9ffc4f9"><div class="ttname"><a href="classdigito.html#a8302b770b9c2c86edb02394fd9ffc4f9">digito::codigo_t</a></div><div class="ttdeci">codigo_t</div><div class="ttdef"><b>Definition</b> Digito.h:52</div></div>
 <div class="ttc" id="aclassdigito_html_a9ca4533ad058f09c87644f3eb8b497a8"><div class="ttname"><a href="classdigito.html#a9ca4533ad058f09c87644f3eb8b497a8">digito::SIMBOLOS</a></div><div class="ttdeci">SIMBOLOS</div><div class="ttdef"><b>Definition</b> Digito.h:56</div></div>
+<div class="ttc" id="aclassdigito_html_ab25ebd80d1009bd3350ea39bdad5ce70"><div class="ttname"><a href="classdigito.html#ab25ebd80d1009bd3350ea39bdad5ce70">digito::Clear</a></div><div class="ttdeci">void Clear(void)</div><div class="ttdoc">Función de limpieza del dígito.</div><div class="ttdef"><b>Definition</b> Digito.cpp:106</div></div>
 <div class="ttc" id="aclassdigito_html_ad87b6a6ef9b67e0ec9d16ef093f1eff0"><div class="ttname"><a href="classdigito.html#ad87b6a6ef9b67e0ec9d16ef093f1eff0">digito::digito</a></div><div class="ttdeci">digito(codigo_t Sistema=BCD, uint8_t Valor=APAGAR)</div><div class="ttdef"><b>Definition</b> Digito.h:64</div></div>
 <div class="ttc" id="aclassdigito_html_ae1fa2c32b396542633f1bac557e56fb0"><div class="ttname"><a href="classdigito.html#ae1fa2c32b396542633f1bac557e56fb0">digito::modo_t</a></div><div class="ttdeci">modo_t</div><div class="ttdef"><b>Definition</b> Digito.h:54</div></div>
 <div class="ttc" id="aclassdigito_html_af66378ee328c8e5b756b72c348080c16"><div class="ttname"><a href="classdigito.html#af66378ee328c8e5b756b72c348080c16">digito::Set</a></div><div class="ttdeci">bool Set(uint16_t valor)</div><div class="ttdoc">Función de escritura del dígito.</div><div class="ttdef"><b>Definition</b> Digito.cpp:63</div></div>
+<div class="ttc" id="atipos_8h_html"><div class="ttname"><a href="tipos_8h.html">tipos.h</a></div><div class="ttdoc">Definiciones de tipos de variables.</div></div>
+<div class="ttc" id="atipos_8h_html_aba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></div><div class="ttdeci">unsigned char uint8_t</div><div class="ttdef"><b>Definition</b> tipos.h:41</div></div>
+<div class="ttc" id="atipos_8h_html_ad097ffa75536dc17a0039dfb3781d705"><div class="ttname"><a href="tipos_8h.html#ad097ffa75536dc17a0039dfb3781d705">uint16_t</a></div><div class="ttdeci">short unsigned int uint16_t</div><div class="ttdef"><b>Definition</b> tipos.h:43</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

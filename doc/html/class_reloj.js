@@ -6,5 +6,5 @@ var class_reloj =
     [ "GetSeg", "class_reloj.html#a04d950713551b9cd294392430a545022", null ],
     [ "Reset", "class_reloj.html#a3c4d56c2bfe85821f33849888e04e891", null ],
     [ "SetTime", "class_reloj.html#af88aa19fbc3a9421e2a89fd5402d0cb7", null ],
-    [ "SWhandler", "class_reloj.html#a3d22e857ddd53a5da2217b8282cba209", null ]
+    [ "SWhandler", "class_reloj.html#ab135f03ad7bafd2d8683284cf6cc85c2", null ]
 ];

@@ -1,0 +1,9 @@
+<map id="Comunicacion.h" name="Comunicacion.h">
+<area shape="rect" id="Node000001" title="Clase máquina de estados de comunicación del proyecto." alt="" coords="78,5,193,32"/>
+<area shape="rect" id="Node000002" href="$_comunicacion_8cpp.html" title="Clase máquina de estados de comunicación del proyecto." alt="" coords="5,80,135,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,45,83,81,79,78,112,42"/>
+<area shape="rect" id="Node000003" href="$inicializar_8h.html" title="Archivo inicializador de la placa." alt="" coords="159,80,245,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="159,42,192,78,189,81,155,45"/>
+<area shape="rect" id="Node000004" href="$inicializar_8cpp.html" title="Archivo inicializador de la placa." alt="" coords="152,155,252,181"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="205,122,205,154,199,154,199,122"/>
+</map>

@@ -1,0 +1,44 @@
+<map id="Display7Segmentos.cpp" name="Display7Segmentos.cpp">
+<area shape="rect" id="Node000001" title="Clase para la creación de displays de 7 segmentos." alt="" coords="424,5,588,32"/>
+<area shape="rect" id="Node000002" href="$_display7_segmentos_8h.html" title="Clase para la creación de displays de 7 segmentos." alt="" coords="426,80,586,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="509,33,509,64,504,64,504,33"/>
+<area shape="rect" id="Node000003" href="$_barrido_8h.html" title="Clase abstracta de manejo barridos de datos." alt="" coords="5,187,162,245"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="426,131,181,189,177,190,176,185,180,184,425,126"/>
+<area shape="rect" id="Node000004" href="$_segmentos_8h.html" title="Clase abstracta de manejo de segmentos binarios." alt="" coords="973,293,1154,352"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="587,115,683,125,790,140,887,160,926,171,956,184,983,204,1007,228,1043,278,1039,282,1003,232,979,208,953,189,925,176,886,165,789,145,682,130,587,120"/>
+<area shape="rect" id="Node000006" href="$_digito_8h.html" title="Objeto dígito genérico para implementaciones posteriores." alt="" coords="119,293,280,352"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="426,125,309,151,259,168,227,189,213,208,205,231,199,278,194,277,200,230,209,206,223,185,256,164,307,146,425,120"/>
+<area shape="rect" id="Node000007" href="$_grupo_de_digitos_8h.html" title="Clase para la agrupación de dígitos." alt="" coords="237,187,397,245"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="456,141,383,182,380,177,453,137"/>
+<area shape="rect" id="Node000008" href="$_display_8h.html" title="Clase base para objetos del tipo pantallas/displays." alt="" coords="354,400,504,443"/>
+<area shape="poly" id="edge10_Node000002_Node000008" title=" " alt="" coords="498,140,483,187,457,296,438,386,433,385,452,294,478,186,493,139"/>
+<area shape="rect" id="Node000009" href="$gpio_8h.html" title="Módulo con clase de manejo de GPIO." alt="" coords="493,195,626,237"/>
+<area shape="poly" id="edge12_Node000002_Node000009" title=" " alt="" coords="523,138,545,180,540,182,518,140"/>
+<area shape="rect" id="Node000013" href="$_callback_8h.html" title="Clase virtual pura. Esta clase debe ser heredada por las clases que se tienen que enganchar del Systi..." alt="" coords="732,195,888,237"/>
+<area shape="poly" id="edge19_Node000002_Node000013" title=" " alt="" coords="588,136,737,187,735,192,586,141"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="856,408,914,435"/>
+<area shape="poly" id="edge27_Node000002_Node000014" title=" " alt="" coords="587,112,674,119,769,133,851,154,882,168,903,185,918,210,926,237,929,266,928,295,916,350,900,395,895,393,911,349,922,294,924,266,921,238,913,212,899,188,879,173,849,159,767,138,674,125,586,117"/>
+<area shape="rect" id="Node000005" href="$tipos_8h.html" title="Definiciones de tipos de variables." alt="" coords="560,491,620,517"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="1041,354,992,402,961,426,927,445,850,474,770,491,696,501,636,505,636,499,696,496,769,486,849,468,925,440,958,421,989,398,1037,350"/>
+<area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="217,351,251,398,274,421,300,440,362,469,428,487,492,496,545,500,544,505,491,501,427,492,360,474,297,445,270,425,247,401,213,354"/>
+<area shape="poly" id="edge9_Node000007_Node000005" title=" " alt="" coords="313,246,308,289,308,341,318,395,329,419,344,441,357,451,377,460,430,476,545,495,544,500,428,481,375,465,354,456,340,445,324,422,313,396,302,342,303,289,308,246"/>
+<area shape="poly" id="edge8_Node000007_Node000006" title=" " alt="" coords="287,248,245,285,241,281,283,244"/>
+<area shape="poly" id="edge11_Node000008_Node000005" title=" " alt="" coords="472,441,553,481,550,486,469,446"/>
+<area shape="rect" id="Node000010" href="$_l_p_c845_8h.html" title="Registros del LPC845." alt="" coords="685,408,764,435"/>
+<area shape="poly" id="edge13_Node000009_Node000010" title=" " alt="" coords="595,236,629,260,662,292,695,343,718,392,713,394,691,346,657,295,626,264,592,240"/>
+<area shape="rect" id="Node000011" href="$_pin_8h.html" title="Clase Abstracta de cualquier pin del microcontrolador." alt="" coords="528,400,652,443"/>
+<area shape="poly" id="edge15_Node000009_Node000011" title=" " alt="" coords="540,239,520,264,505,294,497,323,505,351,519,372,539,389,535,393,515,375,500,353,492,323,500,292,516,261,536,236"/>
+<area shape="rect" id="Node000012" href="$_in_out_8h.html" title="Clase Abstracta Pura de las GPIO." alt="" coords="515,301,647,344"/>
+<area shape="poly" id="edge17_Node000009_Node000012" title=" " alt="" coords="566,237,576,285,571,286,561,238"/>
+<area shape="poly" id="edge14_Node000010_Node000005" title=" " alt="" coords="705,437,625,485,623,480,702,433"/>
+<area shape="poly" id="edge16_Node000011_Node000005" title=" " alt="" coords="593,443,593,475,588,475,588,443"/>
+<area shape="poly" id="edge18_Node000012_Node000011" title=" " alt="" coords="585,344,589,384,584,385,580,345"/>
+<area shape="poly" id="edge20_Node000013_Node000010" title=" " alt="" coords="797,239,763,294,745,346,733,393,728,392,740,344,758,292,792,236"/>
+<area shape="poly" id="edge21_Node000013_Node000014" title=" " alt="" coords="828,236,846,262,862,292,877,345,885,392,880,393,872,346,857,294,842,265,824,239"/>
+<area shape="rect" id="Node000015" href="$systick_8h.html" title="Firmware del systick." alt="" coords="773,309,847,336"/>
+<area shape="poly" id="edge22_Node000013_Node000015" title=" " alt="" coords="805,238,805,294,799,294,800,238"/>
+<area shape="poly" id="edge24_Node000015_Node000005" title=" " alt="" coords="813,337,807,388,796,418,779,444,747,469,709,486,671,497,637,503,636,497,670,492,708,481,744,465,775,441,792,416,802,387,808,336"/>
+<area shape="poly" id="edge23_Node000015_Node000010" title=" " alt="" coords="801,338,748,398,744,395,797,335"/>
+<area shape="poly" id="edge25_Node000015_Node000013" title=" " alt="" coords="814,309,816,253,821,253,819,309"/>
+<area shape="poly" id="edge26_Node000015_Node000014" title=" " alt="" coords="822,335,868,394,864,398,818,338"/>
+</map>

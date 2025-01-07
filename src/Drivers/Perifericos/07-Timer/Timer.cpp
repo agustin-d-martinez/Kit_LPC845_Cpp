@@ -1,7 +1,7 @@
 /*******************************************************************************************************************************//**
  *
  * @file		Timers.cpp
- * @brief		funciones miembro de la clase timers
+ * @brief		funciones miembro de la clase timers.
  * @date		27 may. 2022
  * @author		Ing. Marcelo Trujillo
  *

@@ -99,11 +99,11 @@ uint8_t digito::Get( void )
 	return m_Valor;
 }
 /**
- * \fn void digito::Clr( void )
+ * \fn void digito::Clear( void )
  * \brief Función de limpieza del dígito.
  * \details Deja el dígito apagado del todo. No confundir con escribir un 0, apagado representa sin energía
 */
-void digito::Clr( void )
+void digito::Clear( void )
 {
 	m_Valor = APAGAR;
 }

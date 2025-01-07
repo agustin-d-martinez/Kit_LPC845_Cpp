@@ -1,0 +1,5 @@
+<map id="I2C" name="I2C">
+<area shape="rect" id="Node000001" title="Clase del objeto I2C El objeto I2C genera una comunicación sincrónica de tipo I2C...." alt="" coords="67,80,109,107"/>
+<area shape="rect" id="Node000002" href="$class_comunicacion_sincronica.html" title="Clase del objeto ComunicacionAsincronica Clase abstracta pura para la generación de comunicaciones si..." alt="" coords="5,5,171,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="91,48,91,80,85,80,85,48"/>
+</map>

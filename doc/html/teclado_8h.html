@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>KITLPC845-C++: E:/Agustin/Escritorio/MCUexpresso/KitLPC845-C++/src/Drivers/Hardware/01-Teclado/teclado.h File Reference</title>
+<title>LPC845-C++: teclado.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -18,6 +18,11 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,10 +32,22 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">KITLPC845-C++<span id="projectnumber">&#160;2.0</span>
+   <div id="projectname">LPC845-C++<span id="projectnumber">&#160;2.0</span>
    </div>
-   <div id="projectbrief">KitdelibreriascustomenC++paralaplacadedesarrolloLPC845</div>
+   <div id="projectbrief">Kit de librerias propias de la placa de desarrollo LPC845</div>
   </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -47,17 +64,6 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 $(function() { codefold.init(0); });
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('',true,false,'search.php','Search',true);
-  $(function() { init_search(); });
-});
-/* @license-end */
-</script>
-<div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -104,7 +110,7 @@ $(function(){initNavTree('teclado_8h.html',''); initResizable(true); });
 </div><!--header-->
 <div class="contents">
 
-<p>Breve descripción del objetivo del Módulo.  
+<p>Modulo de teclado matricial.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;<a class="el" href="gpio_8h_source.html">Perifericos/02-Gpio/gpio.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="_callback_8h_source.html">Perifericos/06-Callback/Callback.h</a>&gt;</code><br />
@@ -112,12 +118,59 @@ $(function(){initNavTree('teclado_8h.html',''); initResizable(true); });
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for teclado.h:</div>
 <div class="dyncontent">
-<div class="center"><img src="teclado_8h__incl.png" border="0" usemap="#a_e_1_2_agustin_2_escritorio_2_m_c_uexpresso_2_kit_l_p_c845-_c_09_09_2src_2_drivers_2_hardware_201-_teclado_2teclado_8h" alt=""/></div>
+<div class="center"><img src="teclado_8h__incl.png" border="0" usemap="#ateclado_8h" alt=""/></div>
+<map name="ateclado_8h" id="ateclado_8h">
+<area shape="rect" title="Modulo de teclado matricial." alt="" coords="75,5,149,32"/>
+<area shape="rect" href="gpio_8h.html" title="Módulo con clase de manejo de GPIO." alt="" coords="218,80,350,123"/>
+<area shape="poly" title=" " alt="" coords="140,30,227,71,225,75,138,35"/>
+<area shape="rect" href="_callback_8h.html" title="Clase virtual pura. Esta clase debe ser heredada por las clases que se tienen que enganchar del Systi..." alt="" coords="34,80,190,123"/>
+<area shape="poly" title=" " alt="" coords="115,32,115,65,109,65,109,32"/>
+<area shape="rect" title=" " alt="" coords="9,269,66,296"/>
+<area shape="poly" title=" " alt="" coords="80,35,48,54,35,66,24,81,15,103,10,126,10,173,18,218,29,254,24,256,13,219,5,174,5,125,10,101,19,79,31,63,45,49,77,30"/>
+<area shape="rect" href="_l_p_c845_8h.html" title="Registros del LPC845." alt="" coords="148,269,228,296"/>
+<area shape="poly" title=" " alt="" coords="275,124,204,257,200,254,271,122"/>
+<area shape="rect" href="_pin_8h.html" title="Clase Abstracta de cualquier pin del microcontrolador." alt="" coords="251,261,376,304"/>
+<area shape="poly" title=" " alt="" coords="290,123,310,246,305,247,285,124"/>
+<area shape="rect" href="_in_out_8h.html" title="Clase Abstracta Pura de las GPIO." alt="" coords="326,171,458,213"/>
+<area shape="poly" title=" " alt="" coords="311,121,357,159,353,163,307,125"/>
+<area shape="rect" href="tipos_8h.html" title="Definiciones de tipos de variables." alt="" coords="158,352,218,379"/>
+<area shape="poly" title=" " alt="" coords="191,296,191,337,185,337,185,296"/>
+<area shape="poly" title=" " alt="" coords="283,307,222,346,219,341,280,302"/>
+<area shape="poly" title=" " alt="" coords="376,216,344,251,340,248,372,212"/>
+<area shape="poly" title=" " alt="" coords="132,121,149,144,164,170,179,213,187,253,182,254,174,214,159,172,144,146,128,124"/>
+<area shape="poly" title=" " alt="" coords="96,125,79,147,65,172,51,214,43,254,38,253,46,213,60,170,75,144,92,122"/>
+<area shape="rect" href="systick_8h.html" title="Firmware del systick." alt="" coords="75,179,149,205"/>
+<area shape="poly" title=" " alt="" coords="107,123,106,163,101,163,102,123"/>
+<area shape="poly" title=" " alt="" coords="125,204,169,255,165,259,121,208"/>
+<area shape="poly" title=" " alt="" coords="115,206,121,250,128,277,138,303,165,339,161,343,134,305,123,279,116,251,110,206"/>
+<area shape="poly" title=" " alt="" coords="116,178,118,138,124,138,121,178"/>
+<area shape="poly" title=" " alt="" coords="103,208,60,259,56,255,99,204"/>
+</map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="teclado_8h__dep__incl.png" border="0" usemap="#a_e_1_2_agustin_2_escritorio_2_m_c_uexpresso_2_kit_l_p_c845-_c_09_09_2src_2_drivers_2_hardware_201-_teclado_2teclado_8hdep" alt=""/></div>
+<div class="center"><img src="teclado_8h__dep__incl.png" border="0" usemap="#ateclado_8hdep" alt=""/></div>
+<map name="ateclado_8hdep" id="ateclado_8hdep">
+<area shape="rect" title="Modulo de teclado matricial." alt="" coords="213,5,287,32"/>
+<area shape="rect" href="_drivers_8h.html" title="Archivo Master con todos los includes de perifericos del Kit." alt="" coords="161,80,235,107"/>
+<area shape="poly" title=" " alt="" coords="234,46,209,81,205,78,230,43"/>
+<area shape="rect" href="teclado_8cpp.html" title="Modulo de teclado matricial." alt="" coords="259,80,348,107"/>
+<area shape="poly" title=" " alt="" coords="270,43,296,78,292,81,266,46"/>
+<area shape="rect" href="_comunicacion_8h.html" title="Clase máquina de estados de comunicación del proyecto." alt="" coords="78,155,193,181"/>
+<area shape="poly" title=" " alt="" coords="179,120,148,156,144,153,175,117"/>
+<area shape="rect" href="_semaforo_8h.html" title="Clases semaforo de ejemplo utilizando led tricolor propio de la placa." alt="" coords="216,155,305,181"/>
+<area shape="poly" title=" " alt="" coords="221,117,252,153,248,156,217,120"/>
+<area shape="rect" href="_comunicacion_8cpp.html" title="Clase máquina de estados de comunicación del proyecto." alt="" coords="5,229,135,256"/>
+<area shape="poly" title=" " alt="" coords="116,195,83,231,79,227,112,191"/>
+<area shape="rect" href="inicializar_8h.html" title="Archivo inicializador de la placa." alt="" coords="159,229,245,256"/>
+<area shape="poly" title=" " alt="" coords="159,191,192,227,189,231,155,195"/>
+<area shape="rect" href="inicializar_8cpp.html" title="Archivo inicializador de la placa." alt="" coords="152,304,252,331"/>
+<area shape="poly" title=" " alt="" coords="205,272,205,304,199,304,199,272"/>
+<area shape="poly" title=" " alt="" coords="243,195,214,231,210,227,239,192"/>
+<area shape="rect" href="_semaforo_8cpp.html" title="Clases semaforo de ejemplo utilizando led tricolor propio de la placa." alt="" coords="270,229,372,256"/>
+<area shape="poly" title=" " alt="" coords="283,192,312,227,308,231,279,195"/>
+</map>
 </div>
 </div>
 <p><a href="teclado_8h_source.html">Go to the source code of this file.</a></p>
@@ -134,7 +187,7 @@ Macros</h2></td></tr>
 <tr class="separator:ae6b1e771ae3afc297ec85b5137b1bfb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Breve descripción del objetivo del Módulo. </p>
+<div class="textblock"><p>Modulo de teclado matricial. </p>
 <dl class="section date"><dt>Date</dt><dd>24 jul. 2022 </dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Ing. Marcelo Trujillo </dd></dl>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>

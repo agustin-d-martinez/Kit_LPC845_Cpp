@@ -2,11 +2,13 @@
  *
  * @file		PWMReader.h
  * @brief		Pata que lee tamaños de pulsos de entrada
+ * @details
+ *
  * @date		22 jun. 2022
- * @author		Técnico. Martinez Agustin
+ * @version		1.0
+ * @author     	Técnico. Martinez Agustin (masteragus365@gmail.com)
  *
  **********************************************************************************************************************************/
-
 /***********************************************************************************************************************************
  *** MODULO
  **********************************************************************************************************************************/
@@ -61,13 +63,13 @@ class PWM_Reader : protected PinInterrupt , protected MRThandler
 	public:
 					PWM_Reader( port_t puerto , uint8_t bit , mode_t modo ,
 							activity_t activity , MRT_timer_channels timer_channel );
-		void 		Inicializar( void );
+		void 		Initialize( void );
 		uint32_t 	GetPulseOn( void ) const;
 		void 		Off( void );
 		void 		On( void );
 		virtual 	~PWM_Reader(){};		/**< Destructor por defecto */
 	protected:
-		void 		GpioHandler( void );
+		void 		GpioHandler( void ) override;
 };
 
 #endif /* PWM_READER_H_ */

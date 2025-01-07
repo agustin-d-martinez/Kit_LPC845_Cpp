@@ -1,0 +1,5 @@
+<map id="teclado" name="teclado">
+<area shape="rect" id="Node000001" title="Clase del objeto teclado FUNCIONAMIENTO: Este objeto permite controlar teclados matriciales cableados..." alt="" coords="10,80,73,107"/>
+<area shape="rect" id="Node000002" href="$class_callback.html" title="Clase del objeto Callback." alt="" coords="5,5,78,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="44,48,44,80,39,80,39,48"/>
+</map>

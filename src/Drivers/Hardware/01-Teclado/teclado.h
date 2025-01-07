@@ -1,7 +1,7 @@
 /*******************************************************************************************************************************//**
  *
  * @file		teclado.h
- * @brief		Breve descripción del objetivo del Módulo
+ * @brief		Modulo de teclado matricial.
  * @date		24 jul. 2022
  * @author		Ing. Marcelo Trujillo
  *
@@ -65,15 +65,15 @@ class teclado : public Callback
 		const uint32_t 	m_RebotesHold ;				/**< Máxima cantidad de lecturas para considerar tecla mantenida presionada */
 
 	public:
-		teclado ( vector <gpio *> &s , vector <gpio *> &r);
-		void SWhandler ( void );
-		void Inicializar ( void );
+				teclado ( vector <gpio *> &s , vector <gpio *> &r);
+		void 	SWhandler ( void ) override;
+		void 	Initialize ( void );
 		uint8_t	Get( void );
 		virtual ~teclado();		/**< Destructor por defecto */
 
 	private:
 		uint8_t TecladoHW ( void );
-		void TecladoSW ( uint8_t TeclaEstadoActual );
+		void 	TecladoSW ( uint8_t TeclaEstadoActual );
 };
 
 #endif /* TECLADO_H_ */

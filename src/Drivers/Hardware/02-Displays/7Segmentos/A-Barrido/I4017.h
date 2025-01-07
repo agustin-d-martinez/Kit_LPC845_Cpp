@@ -57,10 +57,10 @@ class I4017 : public barrido
 	// tiene que recibir los gpio clk y reset
 		I4017( const vector <gpio * > &pins4017 , uint8_t maxsalidas ) : m_indice (0) , m_pins4017 (pins4017 ) , m_maxsalidas ( (maxsalidas <= 10 ) ? maxsalidas:10) {} /**< constructor por defecto */
 
-		void SetDigito ( void );
+		void SetDigito ( void ) override;
 		void SetReset( void );
 		void SetClock( void );
-		void Inicializar ( void );
+		void Initialize ( void ) override;
 		virtual ~I4017() {};			/**< destructor por defecto */
 };
 

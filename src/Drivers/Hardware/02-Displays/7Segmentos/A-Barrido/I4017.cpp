@@ -79,11 +79,11 @@ void I4017::SetDigito( void )
 	m_indice++;
 }
 /**
- * \fn void I4017::Inicializar ( void )
+ * \fn void I4017::Initialize ( void )
  * \brief Función de Inicialización del I4017.
  * \details
 */
-void I4017::Inicializar ( void )
+void I4017::Initialize ( void )
 {
 	for ( uint8_t j = 0 ; j < m_pins4017.size() ; j++)
 		m_pins4017[j]->SetDir( ) ;

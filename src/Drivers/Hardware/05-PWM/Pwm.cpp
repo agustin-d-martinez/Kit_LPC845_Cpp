@@ -1,9 +1,12 @@
-/**********************************************************************************************************************************
+/*******************************************************************************************************************************//**
  *
  * @file		Pwm.cpp
  * @brief		Generador de PWM sin interrupción
+ * @details     Proporciona métodos para inicializar un PWM.
+ *
  * @date		7 oct. 2022
- * @author		Técnico. Martinez Agustin
+ * @version		1.0
+ * @author     	Técnico. Martinez Agustin (masteragus365@gmail.com)
  *
  **********************************************************************************************************************************/
 
@@ -89,14 +92,14 @@ void Pwm::SetPeriod( uint32_t time , pwm_time_unit_t t)
 	SetTime((m_ton + m_toff) * (FREQ_PRINCIPAL / 1000000), 0);
 }
 /**
-	\fn void Pwm::Inicializar( uint32_t ton , uint32_t toff , pwm_time_unit_t t )
+	\fn void Pwm::Initialize( uint32_t ton , uint32_t toff , pwm_time_unit_t t )
 	\brief Inicializo el PWM.
  	\details Utilizando los regristros configuro todo para la utilizacion del PWM.
  	\param	[in] ton: Tiempo de encendido.
  	\param	[in] toff: Tiempo de apagado (no es el periodo. El periodo es la suma de ambos).
  	\param	[in] t: Unidad de medida de los tiempos de encendido y apagado.
 */
-void Pwm::Inicializar( uint32_t ton , uint32_t toff , pwm_time_unit_t t )
+void Pwm::Initialize( uint32_t ton , uint32_t toff , pwm_time_unit_t t )
 {
 	SetSwitchMatrizSCTOUT( m_bit , m_port , m_pwm_channel - 1 );
 

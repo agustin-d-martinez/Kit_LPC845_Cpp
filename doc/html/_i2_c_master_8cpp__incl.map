@@ -1,0 +1,18 @@
+<map id="I2CMaster.cpp" name="I2CMaster.cpp">
+<area shape="rect" id="Node000001" title="Modulo para master I2C." alt="" coords="71,5,179,32"/>
+<area shape="rect" id="Node000002" href="$_i2_c_master_8h.html" title="Modulo para master I2C." alt="" coords="28,80,222,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="128,32,128,65,122,65,122,32"/>
+<area shape="rect" id="Node000003" href="$_i2_c_8h.html" title="Modulo de comunicacion I2C." alt="" coords="28,171,222,213"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="128,123,128,155,122,155,122,123"/>
+<area shape="rect" id="Node000004" href="$_pin_8h.html" title="Clase Abstracta de cualquier pin del microcontrolador." alt="" coords="108,352,232,395"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="132,213,153,303,162,337,157,338,148,305,127,214"/>
+<area shape="rect" id="Node000006" href="$_l_p_c845_8h.html" title="Registros del LPC845." alt="" coords="5,360,85,387"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="118,215,59,347,54,345,113,213"/>
+<area shape="rect" id="Node000007" href="$_comunicacion_sincronica_8h.html" title="Objeto base para la creacion de comunicaciones sincrónicas." alt="" coords="162,261,357,304"/>
+<area shape="poly" id="edge7_Node000003_Node000007" title=" " alt="" coords="158,212,217,250,214,255,155,216"/>
+<area shape="rect" id="Node000005" href="$tipos_8h.html" title="Definiciones de tipos de variables." alt="" coords="140,443,200,469"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="173,395,173,427,168,427,168,395"/>
+<area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="66,385,140,432,137,436,63,389"/>
+<area shape="poly" id="edge8_Node000007_Node000004" title=" " alt="" coords="241,306,204,343,200,339,237,303"/>
+<area shape="poly" id="edge9_Node000007_Node000005" title=" " alt="" coords="264,305,262,348,257,373,247,396,230,418,209,436,205,432,226,415,243,393,252,371,257,347,259,304"/>
+</map>

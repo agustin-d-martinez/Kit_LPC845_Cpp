@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>KITLPC845-C++: InOut Class Reference</title>
+<title>LPC845-C++: InOut Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -18,6 +18,11 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,10 +32,22 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">KITLPC845-C++<span id="projectnumber">&#160;2.0</span>
+   <div id="projectname">LPC845-C++<span id="projectnumber">&#160;2.0</span>
    </div>
-   <div id="projectbrief">KitdelibreriascustomenC++paralaplacadedesarrolloLPC845</div>
+   <div id="projectbrief">Kit de librerias propias de la placa de desarrollo LPC845</div>
   </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -47,17 +64,6 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 $(function() { codefold.init(0); });
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('',true,false,'search.php','Search',true);
-  $(function() { init_search(); });
-});
-/* @license-end */
-</script>
-<div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -112,27 +118,40 @@ $(function(){initNavTree('class_in_out.html',''); initResizable(true); });
 Inheritance diagram for InOut:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_in_out__inherit__graph.png" border="0" usemap="#a_in_out_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_in_out_inherit__map" id="a_in_out_inherit__map">
+<area shape="rect" title="Clase del objeto InOut." alt="" coords="84,5,137,32"/>
+<area shape="rect" href="classgpio.html" title="Clase del objeto gpio." alt="" coords="88,80,133,107"/>
+<area shape="poly" title=" " alt="" coords="113,48,113,80,108,80,108,48"/>
+<area shape="rect" href="class_input.html" title="Clase del objeto Input." alt="" coords="5,155,56,181"/>
+<area shape="poly" title=" " alt="" coords="87,119,46,156,42,152,84,115"/>
+<area shape="rect" href="class_output.html" title="Clase del objeto outputs." alt="" coords="80,155,141,181"/>
+<area shape="poly" title=" " alt="" coords="113,122,113,154,108,154,108,122"/>
+<area shape="rect" href="class_pin_interrupt.html" title="Clase del objeto Pin_interrupt El objeto Pin_interrupt debe ser heredado por cualquier objeto que des..." alt="" coords="165,155,253,181"/>
+<area shape="poly" title=" " alt="" coords="141,114,194,152,191,156,138,118"/>
+<area shape="rect" href="class_p_w_m___reader.html" title="Clase del objeto PWM_Reader." alt="" coords="158,229,261,256"/>
+<area shape="poly" title=" " alt="" coords="212,197,212,229,206,229,206,197"/>
+</map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a1d549347d4bd7f354066d984c2dace58" id="r_a1d549347d4bd7f354066d984c2dace58"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d549347d4bd7f354066d984c2dace58">InOut</a> ()=default</td></tr>
 <tr class="separator:a1d549347d4bd7f354066d984c2dace58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9ba3b4eebf4fbc3d8af15da3d62f4a4" id="r_ab9ba3b4eebf4fbc3d8af15da3d62f4a4"><td class="memItemLeft" align="right" valign="top">virtual uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9ba3b4eebf4fbc3d8af15da3d62f4a4">SetPin</a> (void)=0</td></tr>
+<tr class="memitem:ab9ba3b4eebf4fbc3d8af15da3d62f4a4" id="r_ab9ba3b4eebf4fbc3d8af15da3d62f4a4"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9ba3b4eebf4fbc3d8af15da3d62f4a4">SetPin</a> (void)=0</td></tr>
 <tr class="separator:ab9ba3b4eebf4fbc3d8af15da3d62f4a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4db90619ce419d8228e77ad72188948d" id="r_a4db90619ce419d8228e77ad72188948d"><td class="memItemLeft" align="right" valign="top">virtual uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4db90619ce419d8228e77ad72188948d">ClrPin</a> (void)=0</td></tr>
+<tr class="memitem:a4db90619ce419d8228e77ad72188948d" id="r_a4db90619ce419d8228e77ad72188948d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4db90619ce419d8228e77ad72188948d">ClrPin</a> (void)=0</td></tr>
 <tr class="separator:a4db90619ce419d8228e77ad72188948d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a333b2af8d3b2df84f53b8b4eeac02841" id="r_a333b2af8d3b2df84f53b8b4eeac02841"><td class="memItemLeft" align="right" valign="top">virtual uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a333b2af8d3b2df84f53b8b4eeac02841">SetTogglePin</a> (void)=0</td></tr>
+<tr class="memitem:a333b2af8d3b2df84f53b8b4eeac02841" id="r_a333b2af8d3b2df84f53b8b4eeac02841"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a333b2af8d3b2df84f53b8b4eeac02841">SetTogglePin</a> (void)=0</td></tr>
 <tr class="separator:a333b2af8d3b2df84f53b8b4eeac02841"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae51ca98866d8a80d41073ac87be5aa57" id="r_ae51ca98866d8a80d41073ac87be5aa57"><td class="memItemLeft" align="right" valign="top">virtual uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae51ca98866d8a80d41073ac87be5aa57">SetDir</a> (void)=0</td></tr>
+<tr class="memitem:ae51ca98866d8a80d41073ac87be5aa57" id="r_ae51ca98866d8a80d41073ac87be5aa57"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae51ca98866d8a80d41073ac87be5aa57">SetDir</a> (void)=0</td></tr>
 <tr class="separator:ae51ca98866d8a80d41073ac87be5aa57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf2c02f298e2a2367e48ba1036409dd7" id="r_aaf2c02f298e2a2367e48ba1036409dd7"><td class="memItemLeft" align="right" valign="top">virtual uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf2c02f298e2a2367e48ba1036409dd7">SetToggleDir</a> (void)=0</td></tr>
+<tr class="memitem:aaf2c02f298e2a2367e48ba1036409dd7" id="r_aaf2c02f298e2a2367e48ba1036409dd7"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf2c02f298e2a2367e48ba1036409dd7">SetToggleDir</a> (void)=0</td></tr>
 <tr class="separator:aaf2c02f298e2a2367e48ba1036409dd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a610b9ee8c4c095e783f3a3a25d1613" id="r_a6a610b9ee8c4c095e783f3a3a25d1613"><td class="memItemLeft" align="right" valign="top">virtual uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a610b9ee8c4c095e783f3a3a25d1613">GetPin</a> (void)=0</td></tr>
+<tr class="memitem:a6a610b9ee8c4c095e783f3a3a25d1613" id="r_a6a610b9ee8c4c095e783f3a3a25d1613"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a610b9ee8c4c095e783f3a3a25d1613">GetPin</a> (void)=0</td></tr>
 <tr class="separator:a6a610b9ee8c4c095e783f3a3a25d1613"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ddb767a0ccd2d3ff1c4ad7b3dfec3a9" id="r_a3ddb767a0ccd2d3ff1c4ad7b3dfec3a9"><td class="memItemLeft" align="right" valign="top">virtual uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ddb767a0ccd2d3ff1c4ad7b3dfec3a9">SetPinMode</a> (void)=0</td></tr>
+<tr class="memitem:a3ddb767a0ccd2d3ff1c4ad7b3dfec3a9" id="r_a3ddb767a0ccd2d3ff1c4ad7b3dfec3a9"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ddb767a0ccd2d3ff1c4ad7b3dfec3a9">SetPinMode</a> (void)=0</td></tr>
 <tr class="separator:a3ddb767a0ccd2d3ff1c4ad7b3dfec3a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a673b92237fa3727ace4b20dd4784c46c" id="r_a673b92237fa3727ace4b20dd4784c46c"><td class="memItemLeft" align="right" valign="top">virtual uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a673b92237fa3727ace4b20dd4784c46c">SetPinResistor</a> (void)=0</td></tr>
+<tr class="memitem:a673b92237fa3727ace4b20dd4784c46c" id="r_a673b92237fa3727ace4b20dd4784c46c"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a673b92237fa3727ace4b20dd4784c46c">SetPinResistor</a> (void)=0</td></tr>
 <tr class="separator:a673b92237fa3727ace4b20dd4784c46c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ecba0f8b6ccbc538a5aa7b52429bc7f" id="r_a9ecba0f8b6ccbc538a5aa7b52429bc7f"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ecba0f8b6ccbc538a5aa7b52429bc7f">~InOut</a> ()=default</td></tr>
 <tr class="separator:a9ecba0f8b6ccbc538a5aa7b52429bc7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -204,7 +223,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual uint8_t InOut::ClrPin </td>
+          <td class="memname">virtual <a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> InOut::ClrPin </td>
           <td>(</td>
           <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -232,7 +251,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual uint8_t InOut::GetPin </td>
+          <td class="memname">virtual <a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> InOut::GetPin </td>
           <td>(</td>
           <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -260,7 +279,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual uint8_t InOut::SetDir </td>
+          <td class="memname">virtual <a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> InOut::SetDir </td>
           <td>(</td>
           <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -288,7 +307,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual uint8_t InOut::SetPin </td>
+          <td class="memname">virtual <a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> InOut::SetPin </td>
           <td>(</td>
           <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -316,7 +335,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual uint8_t InOut::SetPinMode </td>
+          <td class="memname">virtual <a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> InOut::SetPinMode </td>
           <td>(</td>
           <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -344,7 +363,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual uint8_t InOut::SetPinResistor </td>
+          <td class="memname">virtual <a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> InOut::SetPinResistor </td>
           <td>(</td>
           <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -372,7 +391,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual uint8_t InOut::SetToggleDir </td>
+          <td class="memname">virtual <a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> InOut::SetToggleDir </td>
           <td>(</td>
           <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -400,7 +419,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual uint8_t InOut::SetTogglePin </td>
+          <td class="memname">virtual <a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> InOut::SetTogglePin </td>
           <td>(</td>
           <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -419,7 +438,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>E:/Agustin/Escritorio/MCUexpresso/KitLPC845-C++/src/Drivers/Perifericos/02-Gpio/<a class="el" href="_in_out_8h_source.html">InOut.h</a></li>
+<li><a class="el" href="_in_out_8h_source.html">InOut.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

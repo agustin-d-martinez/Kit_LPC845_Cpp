@@ -1,7 +1,7 @@
 /*******************************************************************************************************************************//**
  *
  * @file		InOut.h
- * @brief		Clase Abstracta Pura de las GPIO
+ * @brief		Clase Abstracta Pura de las GPIO.
  * @date		22 jun. 2022
  * @author		Ing. Marcelo Trujillo
  *

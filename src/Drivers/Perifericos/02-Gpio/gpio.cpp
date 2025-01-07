@@ -1,7 +1,7 @@
 /*******************************************************************************************************************************//**
  *
  * @file		gpio.cpp
- * @brief		Módulo con clase de manejo de GPIO
+ * @brief		Módulo con clase de manejo de GPIO.
  * @date		22 jun. 2022
  * @author		Ing. Marcelo Trujillo
  *

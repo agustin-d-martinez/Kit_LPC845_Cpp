@@ -1,0 +1,143 @@
+<map id="Semaforo.cpp" name="Semaforo.cpp">
+<area shape="rect" id="Node000001" title="Clases semaforo de ejemplo utilizando led tricolor propio de la placa." alt="" coords="936,5,1038,32"/>
+<area shape="rect" id="Node000002" href="$_semaforo_8h.html" title="Clases semaforo de ejemplo utilizando led tricolor propio de la placa." alt="" coords="942,80,1031,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="989,33,989,64,984,64,984,33"/>
+<area shape="rect" id="Node000003" href="$_drivers_8h.html" title="Archivo Master con todos los includes de perifericos del Kit." alt="" coords="1492,155,1566,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="1031,98,1477,157,1477,162,1031,103"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="869,747,926,773"/>
+<area shape="poly" id="edge99_Node000002_Node000011" title=" " alt="" coords="943,102,821,117,671,146,602,166,545,190,523,204,507,218,497,233,493,250,493,343,491,412,498,439,518,468,541,486,563,495,586,497,609,497,659,496,685,501,714,515,754,554,802,614,883,732,879,735,798,617,750,557,710,520,684,506,658,501,609,502,585,503,562,500,538,490,514,471,493,441,486,412,488,343,488,249,492,231,503,215,520,199,543,186,601,161,670,141,820,112,942,96"/>
+<area shape="rect" id="Node000004" href="$teclado_8h.html" title="Modulo de teclado matricial." alt="" coords="901,419,1046,461"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="1492,172,1391,174,1262,182,1198,190,1139,200,1091,214,1058,232,1039,249,1024,269,1001,315,986,363,979,404,974,403,981,361,996,313,1019,266,1035,245,1054,227,1089,209,1138,195,1197,185,1262,177,1391,169,1492,167"/>
+<area shape="rect" id="Node000013" href="$_display7_segmentos_8h.html" title="Clase para la creación de displays de 7 segmentos." alt="" coords="293,411,454,469"/>
+<area shape="poly" id="edge20_Node000003_Node000013" title=" " alt="" coords="1492,171,1381,171,1221,178,1036,196,942,212,850,232,733,269,619,315,518,363,438,405,435,400,516,358,617,310,731,264,849,227,941,206,1035,191,1221,173,1381,166,1492,166"/>
+<area shape="rect" id="Node000019" href="$_l_c_d_8h.html" title="Clase para manejar un LCD con comunicación de 4 patas (solo escritura)." alt="" coords="726,419,876,461"/>
+<area shape="poly" id="edge34_Node000003_Node000019" title=" " alt="" coords="1492,173,1385,178,1246,189,1110,206,1055,218,1014,232,955,269,902,317,858,365,826,407,821,404,854,362,898,313,951,265,1012,227,1053,213,1109,201,1245,183,1385,173,1492,168"/>
+<area shape="rect" id="Node000020" href="$_l298_n_8h.html" title="Clase del módulo de puente H LN298N." alt="" coords="1660,419,1801,461"/>
+<area shape="poly" id="edge39_Node000003_Node000020" title=" " alt="" coords="1541,180,1577,228,1709,405,1704,408,1573,231,1537,183"/>
+<area shape="rect" id="Node000022" href="$_reloj_8h.html" title="Objeto que guardará el tiempo desde que se creo." alt="" coords="528,427,702,453"/>
+<area shape="poly" id="edge43_Node000003_Node000022" title=" " alt="" coords="1492,174,1215,192,1058,209,994,220,946,232,899,251,853,273,766,325,693,377,641,419,638,415,690,373,763,321,851,268,897,246,945,227,993,214,1058,203,1214,186,1492,168"/>
+<area shape="rect" id="Node000023" href="$_pwm_8h.html" title="Generador de PWM sin interrupción." alt="" coords="2125,328,2302,355"/>
+<area shape="poly" id="edge46_Node000003_Node000023" title=" " alt="" coords="1567,166,1693,167,1861,174,1947,182,2026,192,2093,207,2141,227,2164,245,2182,267,2206,312,2201,315,2177,270,2160,249,2139,232,2091,212,2026,198,1947,187,1861,180,1692,172,1567,172"/>
+<area shape="rect" id="Node000025" href="$_p_w_m_reader_8h.html" title="Pata que lee tamaños de pulsos de entrada." alt="" coords="1868,320,2049,363"/>
+<area shape="poly" id="edge50_Node000003_Node000025" title=" " alt="" coords="1567,167,1624,170,1697,179,1775,197,1814,210,1851,227,1876,244,1900,264,1938,306,1934,309,1896,268,1873,248,1848,232,1812,215,1774,202,1696,184,1624,175,1567,172"/>
+<area shape="rect" id="Node000028" href="$_h_c_s_r04_8h.html" title="Clase del sensor ultrasónico HCSR04." alt="" coords="1986,229,2128,272"/>
+<area shape="poly" id="edge59_Node000003_Node000028" title=" " alt="" coords="1567,172,1939,227,1971,232,1970,237,1938,232,1566,177"/>
+<area shape="rect" id="Node000030" href="$_e_s_p8266_8h.html" title="Modulo de comunicacion WIFI con ESP8266." alt="" coords="1342,328,1538,355"/>
+<area shape="poly" id="edge64_Node000003_Node000030" title=" " alt="" coords="1525,183,1456,315,1451,313,1521,180"/>
+<area shape="rect" id="Node000031" href="$_uart_8h.html" title="Modulo de Comunicacion Uart." alt="" coords="1762,632,1891,675"/>
+<area shape="poly" id="edge91_Node000003_Node000031" title=" " alt="" coords="1557,180,1614,212,1687,262,1724,293,1759,328,1791,367,1816,410,1834,464,1841,521,1840,574,1835,617,1830,617,1835,573,1835,521,1828,465,1811,412,1786,370,1756,332,1721,297,1684,266,1611,216,1554,184"/>
+<area shape="rect" id="Node000033" href="$_timer_8h.html" title="Clase para creacion de temporizadores." alt="" coords="1070,419,1208,461"/>
+<area shape="poly" id="edge79_Node000003_Node000033" title=" " alt="" coords="1492,181,1431,201,1365,232,1305,274,1250,322,1167,409,1163,406,1247,318,1302,270,1363,227,1429,196,1491,176"/>
+<area shape="rect" id="Node000034" href="$_input_8h.html" title="funciones miembro de la clase Input." alt="" coords="1401,419,1535,461"/>
+<area shape="poly" id="edge73_Node000003_Node000034" title=" " alt="" coords="1537,181,1549,214,1561,260,1564,312,1561,339,1553,364,1537,390,1515,411,1511,407,1532,386,1548,362,1556,337,1559,312,1556,261,1544,215,1532,183"/>
+<area shape="rect" id="Node000035" href="$_output_8h.html" title="Clase del tipo Output o salida digital." alt="" coords="1232,419,1376,461"/>
+<area shape="poly" id="edge76_Node000003_Node000035" title=" " alt="" coords="1503,184,1464,205,1417,236,1370,275,1332,321,1315,362,1308,404,1302,403,1310,361,1327,319,1367,271,1414,231,1461,201,1501,180"/>
+<area shape="rect" id="Node000036" href="$_timers_8h.html" title="Modulo para crear conjuntos de Timer." alt="" coords="1067,229,1213,272"/>
+<area shape="poly" id="edge80_Node000003_Node000036" title=" " alt="" coords="1492,179,1234,232,1228,233,1227,228,1233,227,1491,174"/>
+<area shape="rect" id="Node000037" href="$_d_a_c_8h.html" title="Objeto DAC." alt="" coords="2552,632,2685,675"/>
+<area shape="poly" id="edge82_Node000003_Node000037" title=" " alt="" coords="1567,168,1812,184,1984,198,2165,216,2337,239,2482,266,2539,282,2583,300,2611,318,2619,329,2621,340,2621,441,2621,617,2616,617,2616,441,2616,340,2614,331,2607,322,2580,304,2537,287,2481,272,2336,244,2164,221,1984,203,1812,189,1567,174"/>
+<area shape="rect" id="Node000038" href="$_a_d_c_8h.html" title="Modulo de ADC." alt="" coords="2448,525,2582,568"/>
+<area shape="poly" id="edge86_Node000003_Node000038" title=" " alt="" coords="1567,168,1697,173,1875,183,2052,201,2125,213,2180,227,2234,251,2286,284,2333,322,2377,362,2448,444,2496,510,2491,514,2444,447,2373,366,2330,326,2283,288,2232,256,2178,232,2124,218,2052,206,1875,189,1697,178,1567,173"/>
+<area shape="rect" id="Node000040" href="$_i2_c_master_8h.html" title="Modulo para master I2C." alt="" coords="2656,229,2850,272"/>
+<area shape="poly" id="edge92_Node000003_Node000040" title=" " alt="" coords="1567,167,1735,171,1998,180,2314,198,2638,227,2641,227,2640,232,2637,232,2313,203,1998,185,1735,176,1567,172"/>
+<area shape="rect" id="Node000005" href="$gpio_8h.html" title="Módulo con clase de manejo de GPIO." alt="" coords="1402,525,1534,568"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="1033,459,1058,467,1233,505,1387,531,1386,536,1232,510,1057,472,1031,465"/>
+<area shape="rect" id="Node000010" href="$_callback_8h.html" title="Clase virtual pura. Esta clase debe ser heredada por las clases que se tienen que enganchar del Systi..." alt="" coords="935,525,1092,568"/>
+<area shape="poly" id="edge11_Node000004_Node000010" title=" " alt="" coords="984,461,1003,510,998,512,979,463"/>
+<area shape="poly" id="edge19_Node000004_Node000011" title=" " alt="" coords="958,463,940,489,925,518,910,576,902,635,899,731,893,731,896,634,904,575,920,516,935,486,954,460"/>
+<area shape="rect" id="Node000006" href="$_l_p_c845_8h.html" title="Registros del LPC845." alt="" coords="1486,747,1565,773"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="1476,568,1520,731,1515,732,1471,569"/>
+<area shape="rect" id="Node000008" href="$_pin_8h.html" title="Clase Abstracta de cualquier pin del microcontrolador." alt="" coords="2376,739,2501,781"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="1535,546,1705,551,1924,563,2035,573,2137,585,2223,602,2288,622,2326,643,2361,670,2415,725,2412,729,2358,674,2323,647,2286,626,2222,607,2136,591,2034,578,1924,568,1705,556,1535,552"/>
+<area shape="rect" id="Node000009" href="$_in_out_8h.html" title="Clase Abstracta Pura de las GPIO." alt="" coords="2142,632,2274,675"/>
+<area shape="poly" id="edge9_Node000005_Node000009" title=" " alt="" coords="1535,548,1649,555,1798,568,1965,589,2131,621,2142,624,2141,629,2130,627,1964,595,1797,573,1648,560,1535,553"/>
+<area shape="rect" id="Node000007" href="$tipos_8h.html" title="Definiciones de tipos de variables." alt="" coords="1296,837,1357,864"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="1498,776,1370,833,1368,828,1496,772"/>
+<area shape="poly" id="edge8_Node000008_Node000007" title=" " alt="" coords="2376,769,1373,848,1372,843,2376,764"/>
+<area shape="poly" id="edge10_Node000009_Node000008" title=" " alt="" coords="2255,673,2380,729,2378,734,2252,678"/>
+<area shape="poly" id="edge12_Node000010_Node000006" title=" " alt="" coords="1092,551,1154,560,1224,573,1297,594,1367,622,1409,647,1447,677,1506,733,1503,737,1444,681,1406,651,1364,626,1295,599,1223,579,1153,565,1092,557"/>
+<area shape="poly" id="edge13_Node000010_Node000011" title=" " alt="" coords="1004,570,914,734,909,732,1000,567"/>
+<area shape="rect" id="Node000012" href="$systick_8h.html" title="Firmware del systick." alt="" coords="986,640,1060,667"/>
+<area shape="poly" id="edge14_Node000010_Node000012" title=" " alt="" coords="1010,568,1015,624,1009,625,1005,569"/>
+<area shape="poly" id="edge15_Node000012_Node000006" title=" " alt="" coords="1061,664,1125,680,1217,695,1290,701,1363,709,1455,728,1485,738,1483,743,1454,733,1362,714,1290,706,1216,700,1123,685,1060,669"/>
+<area shape="poly" id="edge16_Node000012_Node000007" title=" " alt="" coords="1027,667,1031,692,1041,725,1057,759,1080,787,1103,804,1128,817,1181,835,1235,844,1281,847,1281,853,1234,850,1180,840,1126,822,1100,808,1077,791,1052,762,1036,727,1026,694,1021,668"/>
+<area shape="poly" id="edge17_Node000012_Node000010" title=" " alt="" coords="1025,639,1022,583,1028,583,1030,639"/>
+<area shape="poly" id="edge18_Node000012_Node000011" title=" " alt="" coords="1009,669,926,738,923,734,1006,665"/>
+<area shape="poly" id="edge31_Node000013_Node000005" title=" " alt="" coords="454,456,516,467,1387,536,1386,542,516,472,453,461"/>
+<area shape="poly" id="edge32_Node000013_Node000010" title=" " alt="" coords="454,455,516,467,920,530,919,535,516,472,453,460"/>
+<area shape="poly" id="edge33_Node000013_Node000011" title=" " alt="" coords="455,462,473,467,530,477,576,480,620,489,645,499,671,515,694,535,710,554,729,595,747,637,760,658,779,681,818,712,859,737,856,741,815,717,775,685,756,662,742,639,724,597,705,557,690,538,668,519,642,504,619,494,575,485,529,482,471,472,453,467"/>
+<area shape="rect" id="Node000014" href="$_barrido_8h.html" title="Clase abstracta de manejo barridos de datos." alt="" coords="327,517,484,576"/>
+<area shape="poly" id="edge21_Node000013_Node000014" title=" " alt="" coords="385,469,395,502,390,503,380,471"/>
+<area shape="rect" id="Node000015" href="$_segmentos_8h.html" title="Clase abstracta de manejo de segmentos binarios." alt="" coords="5,731,187,789"/>
+<area shape="poly" id="edge22_Node000013_Node000015" title=" " alt="" coords="293,445,247,451,199,464,154,486,134,501,117,519,102,541,92,565,82,618,83,670,89,715,83,716,77,670,77,617,87,564,98,538,113,516,130,497,151,482,197,459,246,446,293,439"/>
+<area shape="rect" id="Node000016" href="$_digito_8h.html" title="Objeto dígito genérico para implementaciones posteriores." alt="" coords="142,624,303,683"/>
+<area shape="poly" id="edge24_Node000013_Node000016" title=" " alt="" coords="293,446,250,453,206,466,165,488,133,519,125,533,123,545,133,575,146,595,163,612,159,616,142,598,128,577,118,546,120,531,129,516,162,483,204,461,249,448,292,441"/>
+<area shape="rect" id="Node000017" href="$_grupo_de_digitos_8h.html" title="Clase para la agrupación de dígitos." alt="" coords="142,517,303,576"/>
+<area shape="poly" id="edge26_Node000013_Node000017" title=" " alt="" coords="334,472,278,511,275,506,331,468"/>
+<area shape="rect" id="Node000018" href="$_display_8h.html" title="Clase base para objetos del tipo pantallas/displays." alt="" coords="508,525,658,568"/>
+<area shape="poly" id="edge29_Node000013_Node000018" title=" " alt="" coords="432,467,529,516,527,520,429,472"/>
+<area shape="poly" id="edge23_Node000015_Node000007" title=" " alt="" coords="187,769,370,787,905,824,1281,844,1281,850,905,829,369,792,187,774"/>
+<area shape="poly" id="edge25_Node000016_Node000007" title=" " alt="" coords="269,681,374,737,438,765,503,787,573,800,666,812,891,830,1117,840,1281,846,1281,851,1116,846,891,835,666,817,572,806,502,792,436,770,372,742,267,686"/>
+<area shape="poly" id="edge28_Node000017_Node000007" title=" " alt="" coords="263,574,334,623,431,682,544,740,603,766,663,787,718,799,790,810,967,827,1281,845,1281,850,966,832,790,815,717,804,662,792,602,771,542,745,428,687,331,627,260,579"/>
+<area shape="poly" id="edge27_Node000017_Node000016" title=" " alt="" coords="225,576,225,608,220,608,220,576"/>
+<area shape="poly" id="edge30_Node000018_Node000007" title=" " alt="" coords="591,568,606,615,634,676,674,738,699,765,728,787,773,806,835,821,910,832,992,839,1155,846,1281,847,1281,853,1155,852,992,845,909,837,834,826,771,811,725,792,696,769,670,741,629,678,601,617,586,569"/>
+<area shape="poly" id="edge36_Node000019_Node000005" title=" " alt="" coords="862,459,890,467,1025,493,1161,513,1386,537,1386,542,1161,518,1024,498,889,472,860,464"/>
+<area shape="poly" id="edge37_Node000019_Node000010" title=" " alt="" coords="844,459,959,516,957,521,842,464"/>
+<area shape="poly" id="edge38_Node000019_Node000011" title=" " alt="" coords="810,461,892,731,887,733,805,462"/>
+<area shape="poly" id="edge35_Node000019_Node000018" title=" " alt="" coords="759,464,641,521,638,516,757,459"/>
+<area shape="poly" id="edge42_Node000020_Node000005" title=" " alt="" coords="1680,464,1535,522,1533,517,1678,459"/>
+<area shape="rect" id="Node000021" href="$_puente_h_8h.html" title="Clase base para objetos del tipo Puente H." alt="" coords="1302,739,1442,781"/>
+<area shape="poly" id="edge40_Node000020_Node000021" title=" " alt="" coords="1692,464,1649,489,1606,519,1404,729,1400,725,1602,515,1646,484,1689,459"/>
+<area shape="poly" id="edge41_Node000021_Node000007" title=" " alt="" coords="1364,783,1342,825,1338,822,1359,781"/>
+<area shape="poly" id="edge45_Node000022_Node000007" title=" " alt="" coords="626,452,672,516,699,559,719,599,750,669,766,700,788,730,817,759,857,787,891,802,938,814,1057,831,1182,841,1282,846,1281,851,1181,846,1056,836,937,819,890,807,855,792,814,763,784,733,762,703,745,671,714,601,694,562,667,519,621,455"/>
+<area shape="poly" id="edge44_Node000022_Node000010" title=" " alt="" coords="660,451,715,467,921,520,919,525,714,472,658,457"/>
+<area shape="poly" id="edge49_Node000023_Node000008" title=" " alt="" coords="2225,353,2299,461,2348,540,2393,623,2415,675,2431,723,2426,724,2410,677,2388,625,2343,542,2295,464,2220,357"/>
+<area shape="rect" id="Node000024" href="$_s_ctimer_8h.html" title="Modulo de Salida autonoma temporizada." alt="" coords="1529,632,1687,675"/>
+<area shape="poly" id="edge47_Node000023_Node000024" title=" " alt="" coords="2203,357,2145,410,2106,443,2063,472,1967,523,1868,566,1774,602,1693,629,1692,624,1772,597,1866,561,1965,518,2060,467,2102,438,2142,406,2200,353"/>
+<area shape="poly" id="edge48_Node000024_Node000006" title=" " alt="" coords="1594,677,1547,736,1543,733,1590,674"/>
+<area shape="rect" id="Node000026" href="$_m_r_thandler_8h.html" title="Handler del timer MRT." alt="" coords="1135,632,1353,675"/>
+<area shape="poly" id="edge51_Node000025_Node000026" title=" " alt="" coords="1868,358,1761,379,1704,394,1649,413,1620,427,1599,441,1577,456,1548,472,1503,487,1467,493,1432,501,1391,520,1356,543,1324,570,1272,622,1269,618,1320,566,1353,539,1388,515,1430,496,1466,488,1502,481,1546,467,1574,452,1596,437,1617,423,1647,408,1703,389,1760,374,1867,352"/>
+<area shape="rect" id="Node000027" href="$_pininterrupt_8h.html" title="Clase para entradas con interrupciones por flanco." alt="" coords="1876,419,2049,461"/>
+<area shape="poly" id="edge55_Node000025_Node000027" title=" " alt="" coords="1962,363,1964,403,1959,403,1957,363"/>
+<area shape="poly" id="edge53_Node000026_Node000006" title=" " alt="" coords="1304,673,1456,728,1481,738,1479,743,1454,733,1302,678"/>
+<area shape="poly" id="edge52_Node000026_Node000007" title=" " alt="" coords="1252,675,1268,727,1292,788,1312,823,1307,826,1287,790,1263,729,1247,676"/>
+<area shape="poly" id="edge54_Node000026_Node000011" title=" " alt="" coords="1176,678,942,748,940,743,1175,673"/>
+<area shape="poly" id="edge58_Node000027_Node000005" title=" " alt="" coords="1876,462,1550,531,1549,526,1875,457"/>
+<area shape="poly" id="edge56_Node000027_Node000006" title=" " alt="" coords="1938,464,1854,534,1753,626,1728,657,1717,670,1700,685,1668,703,1641,713,1613,720,1578,733,1562,741,1559,737,1576,728,1611,715,1639,707,1666,698,1697,680,1713,667,1724,653,1749,622,1850,530,1935,460"/>
+<area shape="poly" id="edge57_Node000027_Node000008" title=" " alt="" coords="2033,459,2103,485,2186,520,2270,566,2348,622,2372,646,2393,672,2424,724,2420,726,2389,675,2368,649,2345,626,2268,570,2183,525,2101,490,2031,464"/>
+<area shape="poly" id="edge60_Node000028_Node000023" title=" " alt="" coords="2095,270,2179,318,2176,322,2093,275"/>
+<area shape="poly" id="edge61_Node000028_Node000025" title=" " alt="" coords="2036,274,1995,311,1991,307,2033,270"/>
+<area shape="rect" id="Node000029" href="$distancia_8h.html" title="Clase base para objetos medidores de distancias." alt="" coords="1858,739,2000,781"/>
+<area shape="poly" id="edge62_Node000028_Node000029" title=" " alt="" coords="2065,272,2071,310,2075,359,2074,415,2064,470,2053,497,2041,518,2013,549,1983,580,1970,600,1957,625,1942,676,1935,724,1929,723,1937,675,1952,623,1965,597,1979,577,2009,546,2037,515,2049,495,2059,469,2069,414,2070,360,2065,310,2059,273"/>
+<area shape="poly" id="edge63_Node000029_Node000007" title=" " alt="" coords="1874,785,1847,792,1713,817,1579,834,1372,850,1372,845,1578,828,1712,811,1846,787,1873,779"/>
+<area shape="poly" id="edge65_Node000030_Node000031" title=" " alt="" coords="1463,353,1548,409,1689,523,1796,620,1793,624,1685,527,1545,413,1460,357"/>
+<area shape="poly" id="edge70_Node000030_Node000033" title=" " alt="" coords="1398,358,1221,413,1213,416,1211,411,1219,408,1397,353"/>
+<area shape="poly" id="edge68_Node000031_Node000006" title=" " alt="" coords="1767,678,1743,685,1660,707,1624,717,1578,733,1560,742,1558,737,1576,728,1622,712,1658,702,1742,680,1765,673"/>
+<area shape="poly" id="edge69_Node000031_Node000008" title=" " alt="" coords="1892,667,1955,680,2176,718,2362,745,2361,751,2175,723,1954,685,1891,672"/>
+<area shape="rect" id="Node000032" href="$_comunicacion_asincronica_8h.html" title="Objeto base para la creacion de comunicaciones asincrónicas." alt="" coords="1589,739,1835,781"/>
+<area shape="poly" id="edge66_Node000031_Node000032" title=" " alt="" coords="1806,677,1747,730,1744,726,1802,673"/>
+<area shape="poly" id="edge67_Node000032_Node000007" title=" " alt="" coords="1622,785,1373,842,1371,836,1621,779"/>
+<area shape="poly" id="edge72_Node000033_Node000007" title=" " alt="" coords="1134,463,1121,505,1111,561,1111,623,1116,653,1126,682,1141,707,1158,730,1201,771,1246,804,1287,827,1284,832,1243,808,1197,775,1154,734,1136,710,1122,684,1111,654,1105,623,1106,560,1116,504,1128,461"/>
+<area shape="poly" id="edge71_Node000033_Node000010" title=" " alt="" coords="1116,464,1051,517,1048,513,1112,460"/>
+<area shape="poly" id="edge74_Node000034_Node000005" title=" " alt="" coords="1471,462,1471,510,1465,510,1465,462"/>
+<area shape="poly" id="edge75_Node000034_Node000010" title=" " alt="" coords="1413,464,1389,472,1241,507,1107,533,1106,527,1240,502,1387,467,1412,459"/>
+<area shape="poly" id="edge77_Node000035_Node000005" title=" " alt="" coords="1338,460,1424,514,1421,519,1335,464"/>
+<area shape="poly" id="edge78_Node000035_Node000010" title=" " alt="" coords="1247,464,1086,522,1084,517,1246,459"/>
+<area shape="poly" id="edge81_Node000036_Node000033" title=" " alt="" coords="1143,272,1142,403,1136,403,1137,272"/>
+<area shape="poly" id="edge84_Node000037_Node000006" title=" " alt="" coords="2552,664,2331,685,2165,692,1952,697,1740,708,1650,719,1578,733,1558,741,1556,736,1577,728,1649,713,1739,703,1952,692,2165,687,2330,680,2552,659"/>
+<area shape="poly" id="edge85_Node000037_Node000007" title=" " alt="" coords="2612,676,2597,704,2576,736,2548,767,2515,792,2487,801,2444,810,2321,824,2162,834,1982,842,1623,850,1372,852,1372,847,1623,844,1981,836,2161,829,2320,818,2443,805,2485,796,2512,787,2545,763,2572,733,2593,701,2607,674"/>
+<area shape="poly" id="edge83_Node000037_Node000008" title=" " alt="" coords="2584,678,2489,733,2486,728,2582,673"/>
+<area shape="poly" id="edge90_Node000038_Node000008" title=" " alt="" coords="2514,569,2504,622,2485,684,2463,726,2458,724,2480,682,2499,621,2509,568"/>
+<area shape="rect" id="Node000039" href="$_a_d_c_group_8h_source.html" title=" " alt="" coords="1967,632,2118,675"/>
+<area shape="poly" id="edge87_Node000038_Node000039" title=" " alt="" coords="2447,561,2301,588,2130,627,2119,630,2117,624,2129,621,2300,583,2446,556"/>
+<area shape="poly" id="edge89_Node000039_Node000006" title=" " alt="" coords="1967,673,1904,685,1812,697,1739,701,1667,710,1578,733,1559,741,1557,737,1576,728,1666,705,1738,696,1811,692,1904,680,1966,668"/>
+<area shape="poly" id="edge88_Node000039_Node000007" title=" " alt="" coords="2047,675,2048,702,2044,733,2034,765,2014,791,1977,806,1913,818,1729,836,1527,846,1372,851,1372,846,1526,841,1728,831,1912,813,1976,801,2010,787,2029,762,2039,732,2042,702,2042,675"/>
+<area shape="rect" id="Node000041" href="$_i2_c_8h.html" title="Modulo de comunicacion I2C." alt="" coords="2656,525,2850,568"/>
+<area shape="poly" id="edge93_Node000040_Node000041" title=" " alt="" coords="2756,273,2756,510,2751,510,2751,273"/>
+<area shape="poly" id="edge95_Node000041_Node000006" title=" " alt="" coords="2698,571,2517,630,2403,661,2287,685,2180,700,2087,704,1929,697,1853,694,1773,697,1683,708,1578,733,1558,741,1556,736,1577,728,1682,703,1772,691,1853,689,1929,692,2087,698,2179,694,2286,680,2402,655,2515,625,2696,566"/>
+<area shape="poly" id="edge94_Node000041_Node000008" title=" " alt="" coords="2753,569,2737,626,2721,658,2699,685,2657,714,2610,734,2562,748,2517,756,2516,751,2561,743,2608,729,2655,709,2696,681,2717,655,2732,624,2748,568"/>
+<area shape="rect" id="Node000042" href="$_comunicacion_sincronica_8h.html" title="Objeto base para la creacion de comunicaciones sincrónicas." alt="" coords="2760,632,2954,675"/>
+<area shape="poly" id="edge96_Node000041_Node000042" title=" " alt="" coords="2776,567,2828,619,2824,623,2772,570"/>
+<area shape="poly" id="edge98_Node000042_Node000007" title=" " alt="" coords="2825,677,2712,737,2639,768,2563,792,2453,811,2306,825,2135,836,1953,843,1607,851,1372,852,1372,847,1607,845,1953,838,2135,831,2306,820,2452,806,2562,787,2637,763,2710,732,2823,673"/>
+<area shape="poly" id="edge97_Node000042_Node000008" title=" " alt="" coords="2775,678,2517,742,2515,737,2774,673"/>
+</map>

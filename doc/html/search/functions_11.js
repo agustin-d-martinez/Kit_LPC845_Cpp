@@ -19,5 +19,6 @@ var searchData=
   ['_7epwm_16',['~Pwm',['../class_pwm.html#ac97d5b9a021ea218147206706e368a22',1,'Pwm']]],
   ['_7esctimer_17',['~SCtimer',['../class_s_ctimer.html#a19690fbdec00d7270bcd76279da2768a',1,'SCtimer']]],
   ['_7eteclado_18',['~teclado',['../classteclado.html#a5aa8aeef81f4256f6850e8d6d866fdc0',1,'teclado']]],
-  ['_7etimers_19',['~timers',['../classtimers.html#a4a72aa0e2bf928ae296538e120507fc7',1,'timers']]]
+  ['_7etimers_19',['~timers',['../classtimers.html#a4a72aa0e2bf928ae296538e120507fc7',1,'timers']]],
+  ['_7euart_20',['~Uart',['../class_uart.html#a4199a240d764fc664ac44b9c170032b3',1,'Uart']]]
 ];

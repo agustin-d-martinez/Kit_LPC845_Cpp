@@ -1,7 +1,7 @@
 /*******************************************************************************************************************************//**
  *
  * @file		Output.h
- * @brief		Clase del tipo Output o salida digital
+ * @brief		Clase del tipo Output o salida digital.
  * @date		12 jul. 2022
  * @author		Ing. Marcelo Trujillo
  *
@@ -54,7 +54,7 @@ class Output : protected gpio , public Callback
 		Output( port_t puerto , uint8_t bit , mode_t modo , activity_t actividad = high , uint8_t estado = on );
 		int8_t On ( void );
 		int8_t Off ( void );
-		int8_t SetUp( void );
+		int8_t Initialize( void );
 
 		Output& operator= ( uint8_t estado );
 		bool operator== ( uint8_t a );

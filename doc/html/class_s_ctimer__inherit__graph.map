@@ -1,0 +1,5 @@
+<map id="SCtimer" name="SCtimer">
+<area shape="rect" id="Node000001" title="Clase del objeto SCtimer El objeto SCtimer debe ser heredado por quienes desen utilizar las interrucp..." alt="" coords="5,5,75,32"/>
+<area shape="rect" id="Node000002" href="$class_pwm.html" title="Clase del objeto Pwm." alt="" coords="14,80,66,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="43,48,43,80,37,80,37,48"/>
+</map>

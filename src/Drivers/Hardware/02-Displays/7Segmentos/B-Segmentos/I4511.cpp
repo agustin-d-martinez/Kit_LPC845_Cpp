@@ -68,11 +68,11 @@ void I4511::SetSegmentos( uint16_t valor )
 		m_bcd[ 3 ]->SetPin();
 }
 /**
- * \fn void I4511::Inicializar ( void )
+ * \fn void I4511::Initialize ( void )
  * \brief Función de Inicialización del I4511.
  * \details
 */
-void I4511::Inicializar ( void )
+void I4511::Initialize ( void )
 {
 	for ( uint8_t j = 0 ; j < m_bcd.size() ; j++)
 		m_bcd[j]->SetDir( ) ;

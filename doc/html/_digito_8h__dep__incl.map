@@ -1,0 +1,27 @@
+<map id="Digito.h" name="Digito.h">
+<area shape="rect" id="Node000001" title="Objeto dígito genérico para implementaciones posteriores." alt="" coords="90,5,156,32"/>
+<area shape="rect" id="Node000002" href="$_digito_8cpp.html" title="Objeto dígito genérico para implementaciones posteriores." alt="" coords="5,80,86,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="100,45,61,82,57,78,96,41"/>
+<area shape="rect" id="Node000003" href="$_display7_segmentos_8h.html" title="Clase para la creación de displays de 7 segmentos." alt="" coords="98,155,247,181"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="133,46,151,106,169,153,164,155,146,108,127,48"/>
+<area shape="rect" id="Node000012" href="$_grupo_de_digitos_8h.html" title="Clase para la agrupación de dígitos." alt="" coords="160,80,286,107"/>
+<area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="154,39,207,77,204,82,151,43"/>
+<area shape="rect" id="Node000004" href="$_display7_segmentos_8cpp.html" title="Clase para la creación de displays de 7 segmentos." alt="" coords="20,229,183,256"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="151,194,116,231,112,227,147,191"/>
+<area shape="rect" id="Node000005" href="$_drivers_8h.html" title="Archivo Master con todos los includes de perifericos del Kit." alt="" coords="207,229,281,256"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="197,191,234,227,230,231,194,194"/>
+<area shape="rect" id="Node000006" href="$_comunicacion_8h.html" title="Clase máquina de estados de comunicación del proyecto." alt="" coords="124,304,239,331"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="225,270,194,305,190,302,221,266"/>
+<area shape="rect" id="Node000010" href="$_semaforo_8h.html" title="Clases semaforo de ejemplo utilizando led tricolor propio de la placa." alt="" coords="263,304,351,331"/>
+<area shape="poly" id="edge9_Node000005_Node000010" title=" " alt="" coords="267,266,298,302,294,305,263,270"/>
+<area shape="rect" id="Node000007" href="$_comunicacion_8cpp.html" title="Clase máquina de estados de comunicación del proyecto." alt="" coords="52,379,181,405"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="162,344,129,380,125,376,158,340"/>
+<area shape="rect" id="Node000008" href="$inicializar_8h.html" title="Archivo inicializador de la placa." alt="" coords="205,379,291,405"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="205,340,239,376,235,380,201,344"/>
+<area shape="rect" id="Node000009" href="$inicializar_8cpp.html" title="Archivo inicializador de la placa." alt="" coords="198,453,298,480"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="251,421,251,453,246,453,246,421"/>
+<area shape="poly" id="edge11_Node000010_Node000008" title=" " alt="" coords="289,345,260,380,256,377,285,341"/>
+<area shape="rect" id="Node000011" href="$_semaforo_8cpp.html" title="Clases semaforo de ejemplo utilizando led tricolor propio de la placa." alt="" coords="316,379,418,405"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="329,341,359,377,354,380,325,344"/>
+<area shape="poly" id="edge13_Node000012_Node000003" title=" " alt="" coords="208,121,183,156,179,153,203,118"/>
+</map>

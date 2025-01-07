@@ -1,13 +1,14 @@
 /*******************************************************************************************************************************//**
  *
  * @file		ADC.cpp
- * @brief		Breve descripcion del modulo
+ * @brief		Funciones miembro de ADC.
+ * @details
+ *
  * @date		22 feb. 2023
- * @author		Técnico Martinez Agustín
- * @version		v1.0
+ * @version		1.0
+ * @author     	Técnico. Martinez Agustin (masteragus365@gmail.com)
  *
  **********************************************************************************************************************************/
-
 /***********************************************************************************************************************************
  *** INCLUDES
  **********************************************************************************************************************************/
@@ -62,11 +63,11 @@ ADC::ADC( uint8_t _channel , uint32_t _clk_freq , uint32_t _sample_rate ) : Pin(
 	m_channel = _channel;
 }
 /**
- * 	\fn  void ADC::Inicializar( void )
+ * 	\fn  void ADC::Initialize( void )
  * 	\brief Inicializador del ADC.
  * 	\details Agrega el canal al barrido de lecturas del ADC.
  */
-void ADC::Inicializar( void )
+void ADC::Initialize( void )
 {
 	m_global_adc->InitADCChanel(m_channel);
 }

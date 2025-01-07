@@ -47,7 +47,7 @@ class barrido
 	public:
 		barrido(){};					/**< constructor por defecto */
 		virtual void SetDigito ( void ) = 0;		/**< Funcion de encendido del barrido */
-		virtual void Inicializar ( void ) = 0;		/**< Funcion de inicializacion */
+		virtual void Initialize ( void ) = 0;		/**< Funcion de inicializacion */
 		virtual ~barrido(){};			/**< destructor por defecto */
 };
 

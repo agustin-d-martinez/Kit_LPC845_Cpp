@@ -1,9 +1,12 @@
 /*******************************************************************************************************************************//**
  *
  * @file		Drivers.h
- * @brief		Archivo Master con todos los includes de perifericos del Kit
+ * @brief		Archivo Master con todos los includes de perifericos del Kit.
+ * @details
+ *
  * @date		29 dic. 2024
- * @author		Técnico. Martinez Agustin
+ * @version		2.0
+ * @author     	Técnico. Martinez Agustin (masteragus365@gmail.com)
  *
  **********************************************************************************************************************************/
 #ifndef DRIVERS_H_

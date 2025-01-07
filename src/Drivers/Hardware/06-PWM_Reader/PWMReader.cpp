@@ -1,12 +1,14 @@
-/**********************************************************************************************************************************
+/*******************************************************************************************************************************//**
  *
- * @file		PWMReader.h
+ * @file		PWMReader.cpp
  * @brief		Pata que lee tamaños de pulsos de entrada
+ * @details
+ *
  * @date		22 jun. 2022
- * @author		Técnico. Martinez Agustin
+ * @version		1.0
+ * @author     	Técnico. Martinez Agustin (masteragus365@gmail.com)
  *
  **********************************************************************************************************************************/
-
 /***********************************************************************************************************************************
  *** INCLUDES
  **********************************************************************************************************************************/
@@ -53,11 +55,11 @@ PWM_Reader::PWM_Reader( port_t puerto , uint8_t bit , mode_t modo , activity_t a
 m_pulse_on(2000000000)
 { }
 /**
-	\fn void PWM_Reader::Inicializar(void)
+	\fn void PWM_Reader::Initialize(void)
 	\brief Inicializo el PWM_In.
  	\details Seteo dirección resistencia y habilito la interrupción por flancos.
 */
-void PWM_Reader::Inicializar(void)
+void PWM_Reader::Initialize(void)
 {
 	PinInterrupt_Inicializar();
 	SetDir();

@@ -1,15 +1,8 @@
 /*******************************************************************************************************************************//**
  *
  * @file		I2CMaster.h
- * @brief		Breve descripción del objetivo del Módulo
- * @date		5 oct. 2022
- * @author		Técnico Martinez Agustin
- *
- **********************************************************************************************************************************/
-
-/**
- * USO:
- * Se crea y se inicializa.
+ * @brief		Modulo para master I2C.
+ * @details		USO: Se crea y se inicializa.
  * Se envia informacion con Write() y se pide lectura con RequestRead(). Solo se pueden ejecutar si el I2C esta en idle.
  * Write(): Escribe el string en el buffer y lo envia continuamente por interrupcion.
  * RequestRead(): Pide una lectura continua de n bytes que se guardan en un buffer por interrupcion.
@@ -17,7 +10,12 @@
  * isIdle(): Indica si el I2C esta en reposo. Solo cuando esto sea cierto se podra leer y escribir al slave.
  *
  * Aun no soporta timeout, ni NACKs recibidos. I2C posee los metodos para agregar la funcion de NACK.
- */
+ *
+ * @date		3 ene. 2025
+ * @version		1.0
+ * @author     	Técnico. Martinez Agustin (masteragus365@gmail.com)
+ *
+ **********************************************************************************************************************************/
 
 /***********************************************************************************************************************************
  *** MODULO

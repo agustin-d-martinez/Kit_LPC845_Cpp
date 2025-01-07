@@ -1,7 +1,7 @@
 /*******************************************************************************************************************************//**
  *
  * @file		Callback.cpp
- * @brief		funciones miembro de la clase Callback
+ * @brief		funciones miembro de la clase Callback.
  * @date		04 ene. 2025
  * @author		Tecnico Martinez Agustin
  *

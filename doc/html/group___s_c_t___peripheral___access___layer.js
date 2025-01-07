@@ -1,0 +1,38 @@
+var group___s_c_t___peripheral___access___layer =
+[
+    [ "SCT_t", "struct_s_c_t__t.html", [
+      [ "CAP", "struct_s_c_t__t.html#a8fbd910b579b6766c5f8cd65d81043b7", null ],
+      [ "CAPCTRL", "struct_s_c_t__t.html#a778395d201900660b3229e442284737e", null ],
+      [ "CLR", "struct_s_c_t__t.html#a3bbfaef382150f853a4945efb57c75b1", null ],
+      [ "CONEN", "struct_s_c_t__t.html#a59811349d55baf238850b46e3eb62e17", null ],
+      [ "CONFIG", "struct_s_c_t__t.html#a26237c397e70026a52705bca1e46c7b6", null ],
+      [ "CONFLAG", "struct_s_c_t__t.html#a84a570311713f62faa1e0d7487379949", null ],
+      [ "COUNT", "struct_s_c_t__t.html#a4414bcf82a93f694f9843b0f6c9b44d0", null ],
+      [ "CTRL", "struct_s_c_t__t.html#aea76954b9bbaae34dfeac75d89453ae5", null ],
+      [ "DMAREQ0", "struct_s_c_t__t.html#aa1efe7b01ec37d905e0a022125e600a5", null ],
+      [ "DMAREQ1", "struct_s_c_t__t.html#a890f93deba7d6ce28dda4364cfacef05", null ],
+      [ "EV", "struct_s_c_t__t.html#a67199969478f781a505e6786edc9793a", null ],
+      [ "EVEN", "struct_s_c_t__t.html#afb439c036e103e4cd01f894ceb431958", null ],
+      [ "EVFLAG", "struct_s_c_t__t.html#ab598fde8478bcc4c241e6d3d2ded63b2", null ],
+      [ "HALT", "struct_s_c_t__t.html#aa1849ddfa131ee5e05e535f716b305d5", null ],
+      [ "INPUT", "struct_s_c_t__t.html#a207018f93f0c5e61c115c8edd7e5d658", null ],
+      [ "LIMIT", "struct_s_c_t__t.html#ae5c7966bf8651162a1a49b03b7434fd1", null ],
+      [ "MATCH", "struct_s_c_t__t.html#a24cb24927b87aafbe63df30f332e36bc", null ],
+      [ "MATCHREL", "struct_s_c_t__t.html#ae48d011e7d3a8080f85b088a7eb80391", null ],
+      [ "OUT", "struct_s_c_t__t.html#a0215aa6ba132d9f51ab2cc65905555e7", null ],
+      [ "OUTPUT", "struct_s_c_t__t.html#a6fdd3be97e6770e62755b8eefe0e5ea1", null ],
+      [ "OUTPUTDIRCTRL", "struct_s_c_t__t.html#a931c03453cbdb00cf7bb877f082b477f", null ],
+      [ "REGMODE", "struct_s_c_t__t.html#a91c0ec8dad264ea6fc484089274e2e57", null ],
+      [ "RES", "struct_s_c_t__t.html#a35f8477c6fab5376b470fbf12febb66f", null ],
+      [ "RESERVED_0", "struct_s_c_t__t.html#a3f4f35f83d444b0e47977cb7446b9e5f", null ],
+      [ "RESERVED_1", "struct_s_c_t__t.html#af42398ada2c41e7f5c67b24b253aef9e", null ],
+      [ "RESERVED_2", "struct_s_c_t__t.html#a18ece80c6019d14f6404b720adc4f0b6", null ],
+      [ "RESERVED_3", "struct_s_c_t__t.html#acf7fb8d811a0f7461f93bb52bd3a13b4", null ],
+      [ "RESERVED_4", "struct_s_c_t__t.html#a1b46886b49cc5523b9775642164b8c49", null ],
+      [ "SET", "struct_s_c_t__t.html#a7740e64ed15f021b2c966968bba6ef65", null ],
+      [ "START", "struct_s_c_t__t.html#a52998f497942ae987f8c2ca0b9605d42", null ],
+      [ "STATE", "struct_s_c_t__t.html#a709fabc40960cc1b81accfad1573b1a5", null ],
+      [ "STOP", "struct_s_c_t__t.html#abe04b7fe812e84974e27ac3638c0b604", null ]
+    ] ],
+    [ "SCT", "group___s_c_t___peripheral___access___layer.html#ga203a2b55ca15f781c003fc99124c8f70", null ]
+];

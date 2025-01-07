@@ -1,0 +1,27 @@
+var group___s_p_i___register___masks =
+[
+    [ "SPI_CFG_CPHA", "group___s_p_i___register___masks.html#ga25afc7284c6223ef3f35b3682d43fcdb", null ],
+    [ "SPI_CFG_CPOL", "group___s_p_i___register___masks.html#ga97e15afb5909c02995088d82f9f9b4c5", null ],
+    [ "SPI_CFG_ENABLE", "group___s_p_i___register___masks.html#ga8c48460ffdeae04876da9d619dbf3277", null ],
+    [ "SPI_CFG_LOOP", "group___s_p_i___register___masks.html#ga967dbbaf280feacbcff9be8536c5c15c", null ],
+    [ "SPI_CFG_LSBF", "group___s_p_i___register___masks.html#ga4afa5fcb69c0e83c96e51c223cd2e18c", null ],
+    [ "SPI_CFG_MASTER", "group___s_p_i___register___masks.html#ga5729eb2cbd8469d5cb0f24f3f1e09324", null ],
+    [ "SPI_CFG_SPOL0", "group___s_p_i___register___masks.html#ga0fc35d05de7821011203f23cd096a030", null ],
+    [ "SPI_CFG_SPOL1", "group___s_p_i___register___masks.html#gaa8fa45a1b30bddf054598f20ec6326d5", null ],
+    [ "SPI_CFG_SPOL2", "group___s_p_i___register___masks.html#ga9d5a3de9afaeb7458e8b7409a66caf5c", null ],
+    [ "SPI_CFG_SPOL3", "group___s_p_i___register___masks.html#gadcc579a55794b8487c6b3ebe493b7b1a", null ],
+    [ "SPI_INTENSET_RXOVEN", "group___s_p_i___register___masks.html#ga33215cf4c138a7f539b9164492690f62", null ],
+    [ "SPI_INTENSET_RXRDYEN", "group___s_p_i___register___masks.html#gaa2880b881998e9f3abbe06bf16c9efd2", null ],
+    [ "SPI_INTENSET_SSAEN", "group___s_p_i___register___masks.html#ga00fcb6f43eb5d8a32690863a6b8f56ce", null ],
+    [ "SPI_INTENSET_SSDEN", "group___s_p_i___register___masks.html#gab8d30712d37bbbd1e4298865bc264353", null ],
+    [ "SPI_INTENSET_TXRDYEN", "group___s_p_i___register___masks.html#ga555196afee5a53c84fb7fb0cdb8c7ad5", null ],
+    [ "SPI_INTENSET_TXUREN", "group___s_p_i___register___masks.html#ga5b9f69c516698a00f088e207ed9f6d65", null ],
+    [ "SPI_TXDATCTL_EOF", "group___s_p_i___register___masks.html#ga8e16f7ff0e62e2a5e7e30dc8f04581a7", null ],
+    [ "SPI_TXDATCTL_EOT", "group___s_p_i___register___masks.html#ga7b513ba4d456652eea112df18fa0d5ca", null ],
+    [ "SPI_TXDATCTL_LEN", "group___s_p_i___register___masks.html#gac889ddfbcbf3137a9717249706142164", null ],
+    [ "SPI_TXDATCTL_RXIGNORE", "group___s_p_i___register___masks.html#ga2ff696a0eca4c2bf5e7ec153b4385654", null ],
+    [ "SPI_TXDATCTL_TXSSEL0_N", "group___s_p_i___register___masks.html#ga9e2f5891b470c0d14a05a461b947a62e", null ],
+    [ "SPI_TXDATCTL_TXSSEL1_N", "group___s_p_i___register___masks.html#gaaffcfd2156dfc58a03421d26d908827b", null ],
+    [ "SPI_TXDATCTL_TXSSEL2_N", "group___s_p_i___register___masks.html#ga63c5b1c0d7946942687848357d39c760", null ],
+    [ "SPI_TXDATCTL_TXSSEL3_N", "group___s_p_i___register___masks.html#ga3ffed67aba8db0b9e92d810323caf50d", null ]
+];

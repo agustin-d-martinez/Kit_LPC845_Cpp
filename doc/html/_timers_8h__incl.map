@@ -1,0 +1,20 @@
+<map id="Timers.h" name="Timers.h">
+<area shape="rect" id="Node000001" title="Modulo para crear conjuntos de Timer." alt="" coords="143,5,216,32"/>
+<area shape="rect" id="Node000002" href="$_timer_8h.html" title="Clase para creacion de temporizadores." alt="" coords="110,80,248,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="182,32,182,65,177,65,177,32"/>
+<area shape="rect" id="Node000003" href="$_callback_8h.html" title="Clase virtual pura. Esta clase debe ser heredada por las clases que se tienen que enganchar del Systi..." alt="" coords="28,171,184,213"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="164,125,135,160,131,157,160,121"/>
+<area shape="rect" id="Node000005" href="$tipos_8h.html" title="Definiciones de tipos de variables." alt="" coords="149,411,210,437"/>
+<area shape="poly" id="edge11_Node000002_Node000005" title=" " alt="" coords="193,122,214,166,234,227,241,261,244,295,242,330,234,364,222,384,208,402,204,399,218,381,229,362,237,329,239,295,236,261,229,228,209,168,188,124"/>
+<area shape="rect" id="Node000004" href="$_l_p_c845_8h.html" title="Registros del LPC845." alt="" coords="140,336,219,363"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="126,212,158,260,169,291,177,320,172,322,164,292,153,263,121,215"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="5,336,63,363"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="90,215,74,237,59,262,48,292,41,322,36,320,43,291,54,260,69,234,86,212"/>
+<area shape="rect" id="Node000007" href="$systick_8h.html" title="Firmware del systick." alt="" coords="69,261,143,288"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="101,214,100,246,95,246,95,214"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="182,363,182,395,177,395,177,363"/>
+<area shape="poly" id="edge9_Node000007_Node000003" title=" " alt="" coords="110,261,112,229,118,229,115,261"/>
+<area shape="poly" id="edge7_Node000007_Node000004" title=" " alt="" coords="121,287,158,323,154,327,117,290"/>
+<area shape="poly" id="edge8_Node000007_Node000005" title=" " alt="" coords="110,288,116,322,130,361,157,398,153,401,125,364,111,324,105,289"/>
+<area shape="poly" id="edge10_Node000007_Node000006" title=" " alt="" coords="95,290,59,327,55,323,92,287"/>
+</map>

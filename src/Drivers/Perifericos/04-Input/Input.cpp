@@ -1,7 +1,7 @@
 /*******************************************************************************************************************************//**
  *
  * @file		Input.cpp
- * @brief		funciones miembro de la clase Input
+ * @brief		funciones miembro de la clase Input.
  * @date		27 may. 2022
  * @author		Ing. Marcelo Trujillo
  *
@@ -81,11 +81,11 @@ void Input::SWhandler ( void )
 		m_CountBounce = 0 ;
 }
 /**
- * \fn void Input::Inicializar( void )
+ * \fn void Input::Initialize( void )
  * \brief Inicializa la entrada.
  * \details Configura el GPIO y el buffer.
 */
-void Input::Inicializar ( void )
+void Input::Initialize ( void )
 {
 	SetDir();
 	SetPinResistor( );

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>KITLPC845-C++: E:/Agustin/Escritorio/MCUexpresso/KitLPC845-C++/src/Drivers/Hardware/02-Displays/7Segmentos/C-Display/Display7Segmentos.h Source File</title>
+<title>LPC845-C++: Display7Segmentos.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -18,6 +18,11 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,10 +32,22 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">KITLPC845-C++<span id="projectnumber">&#160;2.0</span>
+   <div id="projectname">LPC845-C++<span id="projectnumber">&#160;2.0</span>
    </div>
-   <div id="projectbrief">KitdelibreriascustomenC++paralaplacadedesarrolloLPC845</div>
+   <div id="projectbrief">Kit de librerias propias de la placa de desarrollo LPC845</div>
   </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -47,17 +64,6 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 $(function() { codefold.init(0); });
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('',true,false,'search.php','Search',true);
-  $(function() { init_search(); });
-});
-/* @license-end */
-</script>
-<div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -159,23 +165,23 @@ $(function(){initNavTree('_display7_segmentos_8h_source.html',''); initResizable
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        vector &lt; gruposdedigitos* &gt; m_grupos;       </div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <a class="code hl_class" href="classsegmentos.html">segmentos</a>                  *m_seg ;        </div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <a class="code hl_class" href="classbarrido.html">barrido</a>                  *m_dig ;        </div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        uint8_t                     m_maxdigitos;   </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        uint8_t                     m_inx;          </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        uint8_t                     m_ticks;        </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <a class="code hl_typedef" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>                  m_maxdigitos;   </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <a class="code hl_typedef" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>                  m_inx;          </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <a class="code hl_typedef" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>                  m_ticks;        </div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        vector &lt;digito *&gt;           m_bufferdisplay ;   </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keyword">const</span> uint8_t*              m_PosicionRelativa; </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keyword">const</span> <a class="code hl_typedef" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>*               m_PosicionRelativa; </div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="keyword">const</span> <a class="code hl_enumeration" href="classdigito.html#a8302b770b9c2c86edb02394fd9ffc4f9">digito::codigo_t</a>      m_sistema;          </div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                <a class="code hl_function" href="classdisplay7_segmentos.html#a1a84b5b549795a0c7494ac9a3b02e71e">display7Segmentos</a>( vector &lt;gruposdedigitos * &gt; g ,</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                                <a class="code hl_class" href="classsegmentos.html">segmentos</a> * s , <a class="code hl_class" href="classbarrido.html">barrido</a> * b ,</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                                <span class="keyword">const</span> uint8_t *PosicionRelativa ,</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                                <span class="keyword">const</span> <a class="code hl_typedef" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *PosicionRelativa ,</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                                <span class="keyword">const</span> <a class="code hl_enumeration" href="classdigito.html#a8302b770b9c2c86edb02394fd9ffc4f9">digito::codigo_t</a>  sistema);</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="keywordtype">void</span>    <a class="code hl_function" href="classdisplay7_segmentos.html#a3af25f77c2b4f39be26235c55517541c">SWhandler</a> ( <span class="keywordtype">void</span> );</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <span class="keywordtype">void</span>    <a class="code hl_function" href="classdisplay7_segmentos.html#a8b17fe70b4141fa20bc36164a24008ff">Set</a>( uint32_t valor , uint8_t dsp );</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="keywordtype">void</span>    <a class="code hl_function" href="classdisplay7_segmentos.html#a05c04f8a8d96fbb9ccf7b7a09f052c36">Write</a> ( <span class="keyword">const</span> uint32_t n );</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="keywordtype">void</span>    <a class="code hl_function" href="classdisplay7_segmentos.html#a2a5bc10ea0ef8cc9d8ad981da04fb94c">Clear</a> ( <span class="keywordtype">void</span> );</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="keywordtype">void</span>    <a class="code hl_function" href="classdisplay7_segmentos.html#a345a2510c38ef8438bf22bf93906dd89">SWhandler</a> ( <span class="keywordtype">void</span> ) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <span class="keywordtype">void</span>    <a class="code hl_function" href="classdisplay7_segmentos.html#a8b17fe70b4141fa20bc36164a24008ff">Set</a>( <a class="code hl_typedef" href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> valor , <a class="code hl_typedef" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> dsp );</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="keywordtype">void</span>    <a class="code hl_function" href="classdisplay7_segmentos.html#ac3e94eb5b2271d462dabd4be9451c4a0">Write</a> ( <span class="keyword">const</span> <a class="code hl_typedef" href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> n ) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="keywordtype">void</span>    <a class="code hl_function" href="classdisplay7_segmentos.html#ad8af8da91ab70f44f4cee3afae333e32">Clear</a> ( <span class="keywordtype">void</span> ) <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="keyword">virtual</span> <a class="code hl_function" href="classdisplay7_segmentos.html#a46b8d9464fe2c62790ca9b522f322c1a">~display7Segmentos</a>();     </div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>};</div>
@@ -191,14 +197,16 @@ $(function(){initNavTree('_display7_segmentos_8h_source.html',''); initResizable
 <div class="ttc" id="aclass_display_html_a46094310ba411f6fea561f799c4d0754"><div class="ttname"><a href="class_display.html#a46094310ba411f6fea561f799c4d0754">Display::Display</a></div><div class="ttdeci">Display()=default</div></div>
 <div class="ttc" id="aclassbarrido_html"><div class="ttname"><a href="classbarrido.html">barrido</a></div><div class="ttdoc">Clase del objeto barrido Clase abstracta pura para la generación de barridos.</div><div class="ttdef"><b>Definition</b> Barrido.h:46</div></div>
 <div class="ttc" id="aclassdigito_html_a8302b770b9c2c86edb02394fd9ffc4f9"><div class="ttname"><a href="classdigito.html#a8302b770b9c2c86edb02394fd9ffc4f9">digito::codigo_t</a></div><div class="ttdeci">codigo_t</div><div class="ttdef"><b>Definition</b> Digito.h:52</div></div>
-<div class="ttc" id="aclassdisplay7_segmentos_html_a05c04f8a8d96fbb9ccf7b7a09f052c36"><div class="ttname"><a href="classdisplay7_segmentos.html#a05c04f8a8d96fbb9ccf7b7a09f052c36">display7Segmentos::Write</a></div><div class="ttdeci">void Write(const uint32_t n)</div><div class="ttdoc">Función de escritura del display de 7 segmentos.</div><div class="ttdef"><b>Definition</b> Display7Segmentos.cpp:113</div></div>
 <div class="ttc" id="aclassdisplay7_segmentos_html_a1a84b5b549795a0c7494ac9a3b02e71e"><div class="ttname"><a href="classdisplay7_segmentos.html#a1a84b5b549795a0c7494ac9a3b02e71e">display7Segmentos::display7Segmentos</a></div><div class="ttdeci">display7Segmentos(vector&lt; gruposdedigitos * &gt; g, segmentos *s, barrido *b, const uint8_t *PosicionRelativa, const digito::codigo_t sistema)</div><div class="ttdoc">Objeto del tipo display7Segmentos.</div><div class="ttdef"><b>Definition</b> Display7Segmentos.cpp:52</div></div>
-<div class="ttc" id="aclassdisplay7_segmentos_html_a2a5bc10ea0ef8cc9d8ad981da04fb94c"><div class="ttname"><a href="classdisplay7_segmentos.html#a2a5bc10ea0ef8cc9d8ad981da04fb94c">display7Segmentos::Clear</a></div><div class="ttdeci">void Clear(void)</div><div class="ttdoc">Función de limpieza del display de 7 segmentos.</div><div class="ttdef"><b>Definition</b> Display7Segmentos.cpp:122</div></div>
-<div class="ttc" id="aclassdisplay7_segmentos_html_a3af25f77c2b4f39be26235c55517541c"><div class="ttname"><a href="classdisplay7_segmentos.html#a3af25f77c2b4f39be26235c55517541c">display7Segmentos::SWhandler</a></div><div class="ttdeci">void SWhandler(void)</div><div class="ttdoc">Handler del display de 7 segmentos.</div><div class="ttdef"><b>Definition</b> Display7Segmentos.cpp:78</div></div>
+<div class="ttc" id="aclassdisplay7_segmentos_html_a345a2510c38ef8438bf22bf93906dd89"><div class="ttname"><a href="classdisplay7_segmentos.html#a345a2510c38ef8438bf22bf93906dd89">display7Segmentos::SWhandler</a></div><div class="ttdeci">void SWhandler(void) override</div><div class="ttdoc">Handler del display de 7 segmentos.</div><div class="ttdef"><b>Definition</b> Display7Segmentos.cpp:78</div></div>
 <div class="ttc" id="aclassdisplay7_segmentos_html_a46b8d9464fe2c62790ca9b522f322c1a"><div class="ttname"><a href="classdisplay7_segmentos.html#a46b8d9464fe2c62790ca9b522f322c1a">display7Segmentos::~display7Segmentos</a></div><div class="ttdeci">virtual ~display7Segmentos()</div><div class="ttdef"><b>Definition</b> Display7Segmentos.cpp:69</div></div>
 <div class="ttc" id="aclassdisplay7_segmentos_html_a8b17fe70b4141fa20bc36164a24008ff"><div class="ttname"><a href="classdisplay7_segmentos.html#a8b17fe70b4141fa20bc36164a24008ff">display7Segmentos::Set</a></div><div class="ttdeci">void Set(uint32_t valor, uint8_t dsp)</div><div class="ttdoc">Función de escritura del display de 7 segmentos.</div><div class="ttdef"><b>Definition</b> Display7Segmentos.cpp:97</div></div>
+<div class="ttc" id="aclassdisplay7_segmentos_html_ac3e94eb5b2271d462dabd4be9451c4a0"><div class="ttname"><a href="classdisplay7_segmentos.html#ac3e94eb5b2271d462dabd4be9451c4a0">display7Segmentos::Write</a></div><div class="ttdeci">void Write(const uint32_t n) override</div><div class="ttdoc">Función de escritura del display de 7 segmentos.</div><div class="ttdef"><b>Definition</b> Display7Segmentos.cpp:113</div></div>
+<div class="ttc" id="aclassdisplay7_segmentos_html_ad8af8da91ab70f44f4cee3afae333e32"><div class="ttname"><a href="classdisplay7_segmentos.html#ad8af8da91ab70f44f4cee3afae333e32">display7Segmentos::Clear</a></div><div class="ttdeci">void Clear(void) override</div><div class="ttdoc">Función de limpieza del display de 7 segmentos.</div><div class="ttdef"><b>Definition</b> Display7Segmentos.cpp:122</div></div>
 <div class="ttc" id="aclasssegmentos_html"><div class="ttname"><a href="classsegmentos.html">segmentos</a></div><div class="ttdoc">Clase del objeto segmentos Clase abstracta pura para la generación de segmentos.</div><div class="ttdef"><b>Definition</b> Segmentos.h:49</div></div>
 <div class="ttc" id="agpio_8h_html"><div class="ttname"><a href="gpio_8h.html">gpio.h</a></div><div class="ttdoc">Módulo con clase de manejo de GPIO.</div></div>
+<div class="ttc" id="atipos_8h_html_a435d1572bf3f880d55459d9805097f62"><div class="ttname"><a href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></div><div class="ttdeci">unsigned int uint32_t</div><div class="ttdef"><b>Definition</b> tipos.h:45</div></div>
+<div class="ttc" id="atipos_8h_html_aba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></div><div class="ttdeci">unsigned char uint8_t</div><div class="ttdef"><b>Definition</b> tipos.h:41</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

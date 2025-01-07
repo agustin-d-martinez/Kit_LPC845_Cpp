@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>KITLPC845-C++: E:/Agustin/Escritorio/MCUexpresso/KitLPC845-C++/src/Drivers/Perifericos/07-Timer/Timer.h File Reference</title>
+<title>LPC845-C++: Timer.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -18,6 +18,11 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,10 +32,22 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">KITLPC845-C++<span id="projectnumber">&#160;2.0</span>
+   <div id="projectname">LPC845-C++<span id="projectnumber">&#160;2.0</span>
    </div>
-   <div id="projectbrief">KitdelibreriascustomenC++paralaplacadedesarrolloLPC845</div>
+   <div id="projectbrief">Kit de librerias propias de la placa de desarrollo LPC845</div>
   </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -47,17 +64,6 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 $(function() { codefold.init(0); });
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('',true,false,'search.php','Search',true);
-  $(function() { init_search(); });
-});
-/* @license-end */
-</script>
-<div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -107,16 +113,63 @@ $(function(){initNavTree('_timer_8h.html',''); initResizable(true); });
 <p>Clase para creacion de temporizadores.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;<a class="el" href="_callback_8h_source.html">Perifericos/06-Callback/Callback.h</a>&gt;</code><br />
-<code>#include &quot;tipos.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="tipos_8h_source.html">tipos.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for Timer.h:</div>
 <div class="dyncontent">
-<div class="center"><img src="_timer_8h__incl.png" border="0" usemap="#a_e_1_2_agustin_2_escritorio_2_m_c_uexpresso_2_kit_l_p_c845-_c_09_09_2src_2_drivers_2_perifericos_207-_timer_2_timer_8h" alt=""/></div>
+<div class="center"><img src="_timer_8h__incl.png" border="0" usemap="#a_timer_8h" alt=""/></div>
+<map name="a_timer_8h" id="a_timer_8h">
+<area shape="rect" title="Clase para creacion de temporizadores." alt="" coords="147,5,212,32"/>
+<area shape="rect" href="_callback_8h.html" title="Clase virtual pura. Esta clase debe ser heredada por las clases que se tienen que enganchar del Systi..." alt="" coords="28,80,184,123"/>
+<area shape="poly" title=" " alt="" coords="170,34,137,70,133,67,166,31"/>
+<area shape="rect" href="tipos_8h.html" title="Definiciones de tipos de variables." alt="" coords="149,320,210,347"/>
+<area shape="poly" title=" " alt="" coords="189,31,210,72,232,132,240,167,244,202,242,238,234,273,222,294,208,311,204,308,218,291,229,271,237,238,239,203,235,168,227,134,205,74,184,34"/>
+<area shape="rect" href="_l_p_c845_8h.html" title="Registros del LPC845." alt="" coords="140,245,219,272"/>
+<area shape="poly" title=" " alt="" coords="126,121,158,169,169,200,177,230,172,231,164,202,153,172,121,124"/>
+<area shape="rect" title=" " alt="" coords="5,245,63,272"/>
+<area shape="poly" title=" " alt="" coords="90,124,74,147,59,172,48,202,41,231,36,230,43,200,54,170,69,144,86,121"/>
+<area shape="rect" href="systick_8h.html" title="Firmware del systick." alt="" coords="69,171,143,197"/>
+<area shape="poly" title=" " alt="" coords="101,123,100,155,95,155,95,123"/>
+<area shape="poly" title=" " alt="" coords="182,273,182,304,177,304,177,273"/>
+<area shape="poly" title=" " alt="" coords="110,170,112,138,118,139,115,170"/>
+<area shape="poly" title=" " alt="" coords="121,196,158,232,154,236,117,200"/>
+<area shape="poly" title=" " alt="" coords="110,197,116,232,130,271,157,307,153,311,125,273,111,233,105,198"/>
+<area shape="poly" title=" " alt="" coords="95,200,59,236,55,232,92,196"/>
+</map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="_timer_8h__dep__incl.png" border="0" usemap="#a_e_1_2_agustin_2_escritorio_2_m_c_uexpresso_2_kit_l_p_c845-_c_09_09_2src_2_drivers_2_perifericos_207-_timer_2_timer_8hdep" alt=""/></div>
+<div class="center"><img src="_timer_8h__dep__incl.png" border="0" usemap="#a_timer_8hdep" alt=""/></div>
+<map name="a_timer_8hdep" id="a_timer_8hdep">
+<area shape="rect" title="Clase para creacion de temporizadores." alt="" coords="215,5,280,32"/>
+<area shape="rect" href="_drivers_8h.html" title="Archivo Master con todos los includes de perifericos del Kit." alt="" coords="218,155,293,181"/>
+<area shape="poly" title=" " alt="" coords="252,47,257,154,252,154,246,48"/>
+<area shape="rect" href="_e_s_p8266_8h.html" title="Modulo de comunicacion WIFI con ESP8266." alt="" coords="114,80,202,107"/>
+<area shape="poly" title=" " alt="" coords="222,44,175,82,172,78,218,40"/>
+<area shape="rect" href="_timers_8h.html" title="Modulo para crear conjuntos de Timer." alt="" coords="285,80,357,107"/>
+<area shape="poly" title=" " alt="" coords="273,41,310,78,306,82,269,45"/>
+<area shape="rect" href="_comunicacion_8h.html" title="Clase máquina de estados de comunicación del proyecto." alt="" coords="223,229,338,256"/>
+<area shape="poly" title=" " alt="" coords="267,195,279,228,274,230,262,197"/>
+<area shape="rect" href="_semaforo_8h.html" title="Clases semaforo de ejemplo utilizando led tricolor propio de la placa." alt="" coords="111,229,200,256"/>
+<area shape="poly" title=" " alt="" coords="227,193,175,231,171,227,224,189"/>
+<area shape="rect" href="_comunicacion_8cpp.html" title="Clase máquina de estados de comunicación del proyecto." alt="" coords="250,304,379,331"/>
+<area shape="poly" title=" " alt="" coords="295,269,311,302,306,305,291,271"/>
+<area shape="rect" href="inicializar_8h.html" title="Archivo inicializador de la placa." alt="" coords="12,304,99,331"/>
+<area shape="poly" title=" " alt="" coords="228,264,96,306,94,301,227,259"/>
+<area shape="rect" href="inicializar_8cpp.html" title="Archivo inicializador de la placa." alt="" coords="5,379,106,405"/>
+<area shape="poly" title=" " alt="" coords="58,346,58,378,53,378,53,346"/>
+<area shape="poly" title=" " alt="" coords="127,267,75,306,71,301,124,263"/>
+<area shape="rect" href="_semaforo_8cpp.html" title="Clases semaforo de ejemplo utilizando led tricolor propio de la placa." alt="" coords="123,304,225,331"/>
+<area shape="poly" title=" " alt="" coords="165,270,174,303,168,304,160,272"/>
+<area shape="poly" title=" " alt="" coords="189,114,240,152,237,156,186,118"/>
+<area shape="poly" title=" " alt="" coords="123,117,101,134,83,156,67,195,59,237,57,304,52,304,53,237,62,194,79,153,97,131,119,113"/>
+<area shape="rect" href="_e_s_p8266_8cpp.html" title="Modulo de comunicacion WIFI con ESP8266." alt="" coords="93,155,194,181"/>
+<area shape="poly" title=" " alt="" coords="155,123,149,155,143,154,150,122"/>
+<area shape="poly" title=" " alt="" coords="301,120,269,156,265,152,297,116"/>
+<area shape="rect" href="_timers_8cpp.html" title="funciones miembro de la clase timers." alt="" coords="316,155,403,181"/>
+<area shape="poly" title=" " alt="" coords="337,119,355,153,350,156,332,122"/>
+</map>
 </div>
 </div>
 <p><a href="_timer_8h_source.html">Go to the source code of this file.</a></p>

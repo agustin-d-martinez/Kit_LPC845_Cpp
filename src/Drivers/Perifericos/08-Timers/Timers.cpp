@@ -1,7 +1,7 @@
 /*******************************************************************************************************************************//**
  *
  * @file		timers.cpp
- * @brief		Descripcion del modulo
+ * @brief		Modulo para crear conjuntos de Timer.
  * @date		10 jul. 2022
  * @author		Ing. Marcelo Trujillo
  *

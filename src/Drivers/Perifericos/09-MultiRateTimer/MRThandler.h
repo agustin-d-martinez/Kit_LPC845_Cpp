@@ -1,12 +1,14 @@
 /*******************************************************************************************************************************//**
  *
- * @file		MRThandler.cpp
- * @brief		Handler del timer MRT
+ * @file		MRThandler.h
+ * @brief		Handler del timer MRT.
+ * @details
+ *
  * @date		2 sep. 2022
- * @author		Técnico Martinez Agustin
+ * @version		1.0
+ * @author     	Técnico. Martinez Agustin (masteragus365@gmail.com)
  *
  **********************************************************************************************************************************/
-
 /***********************************************************************************************************************************
  *** MODULO
  **********************************************************************************************************************************/
@@ -34,8 +36,10 @@
  **********************************************************************************************************************************/
 namespace type_MRT
 {
-	typedef enum { CHANNEL_0 = 0, CHANNEL_1, CHANNEL_2, CHANNEL_3 } MRT_timer_channels;		/**< Canales del MRT*/
-	typedef enum { REPEAT = 0, ONE_SHOT, ONE_SHOT_BUS, COUNTER } MRT_MODES ;				/**< Modos del MRT*/
+	/** Canales del MRT*/
+	typedef enum { CHANNEL_0 = 0, CHANNEL_1, CHANNEL_2, CHANNEL_3 } MRT_timer_channels;
+	/** Modos del MRT*/
+	typedef enum { REPEAT = 0, ONE_SHOT, ONE_SHOT_BUS, COUNTER } MRT_MODES ;
 	/** Cantidad de canales del MRT*/
 	#define MAX_MRT_CHANNEL		4
 }
@@ -69,7 +73,7 @@ class MRThandler
 		/** Este método debe ser implementado por las clases
 			derivadas cada una resolverá que hacer con su irq
 			enganchada al  systick del sistema	*/
-		virtual void 	Handler ( void ) = 0;
+		virtual void 	MRTHandler ( void ) = 0;
 		void 			EneableInterrupt ( void );
 		void 			DisableInterrupt ( void );
 

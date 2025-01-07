@@ -7,6 +7,6 @@ var class_puente___h =
     [ "Girar", "class_puente___h.html#ab1368aabff7b8756e7538dc96e0fa72a", null ],
     [ "GirarDer", "class_puente___h.html#a9e5e72418427f0c212623ee0cd2eeed8", null ],
     [ "GirarIzq", "class_puente___h.html#a83036fbcc553763f5b1fa8953345518e", null ],
-    [ "Inicializar", "class_puente___h.html#a5d4f34a1327223d982a83c8cd3c95dda", null ],
+    [ "Initialize", "class_puente___h.html#a143a239cf296e89f4d67f1dfe97d56e4", null ],
     [ "Retroceder", "class_puente___h.html#a854c7a3b85fecbc02740c2175d498b49", null ]
 ];

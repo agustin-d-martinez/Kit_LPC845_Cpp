@@ -1,13 +1,14 @@
 /*******************************************************************************************************************************//**
  *
  * @file		ESP8266.cpp
- * @brief		Breve descripcion del modulo
+ * @brief		Modulo de comunicacion WIFI con ESP8266.
+ * @details		Modulo de comunicacion WIFI con el ESP8266 utilizando comandos AT por puerto serie.
+ *
  * @date		2 mar. 2023
- * @author		Técnico Martinez Agustín
- * @version		v1.0
+ * @version		1.0
+ * @author     	Técnico. Martinez Agustin (masteragus365@gmail.com)
  *
  **********************************************************************************************************************************/
-
 /***********************************************************************************************************************************
  *** INCLUDES
  **********************************************************************************************************************************/
@@ -55,24 +56,24 @@ Uart(_portTx, _pinTx, _portRx, _pinRx, usart, DEFAULT_ESP01_BAUDRATE, Uart::ocho
 	m_aux = 0;
 }
 /**
- * 	\fn  void ESP8266::Inicializar( void )
+ * 	\fn  void ESP8266::Initialize( void )
  * 	\brief Inicializa el ESP8266/ ESP01 con comandos AT en modo cliente
  * 	\details Configura los baudios y modo del dispositivo. FUNCION BLOQUEANTE
  */
-void ESP8266::Inicializar( void )
+void ESP8266::Initialize( void )
 {
-	Uart::Transmit( "\r\n" ,2);
-	Uart::Transmit( "AT\r\n" ,4);					//Verificación inicial
+	Uart::Write( "\r\n" ,2);
+	Uart::Write( "AT\r\n" ,4);					//Verificación inicial
 	while( !LeerOk() ) {}
 
-	Uart::Transmit("AT+CIOBAUD=");			//Pone los baudios
-	Uart::Transmit(toString( m_baudrate ));
-	Uart::Transmit("\r\n");
+	Uart::Write("AT+CIOBAUD=");			//Pone los baudios
+	Uart::Write(toString( m_baudrate ));
+	Uart::Write("\r\n");
 	while( !LeerOk() ) {}
 
 	SetBaudRate(m_baudrate);				//Me coloco en los baudios nuevos
 
-	Uart::Transmit("AT+CWMODE=1\r\n");		//Pone en modo cliente
+	Uart::Write("AT+CWMODE=1\r\n");		//Pone en modo cliente
 	while( !LeerOk() ) {}
 	m_status = INITIALIZED;
 }
@@ -99,11 +100,11 @@ ESP8266::status_type ESP8266::ConnectToWifi( const int8_t * wifi_address , const
 		m_address[Strlen(wifi_address)] = '\0';
 		m_password[Strlen(wifi_address)] = '\0';
 
-		Uart::Transmit("AT+CWJAP=\"",10);		//Conecto a la red wifi
-		Uart::Transmit(m_address);
-		Uart::Transmit("\",\"");
-		Uart::Transmit(m_password);
-		Uart::Transmit("\"\r\n");
+		Uart::Write("AT+CWJAP=\"",10);		//Conecto a la red wifi
+		Uart::Write(m_address);
+		Uart::Write("\",\"");
+		Uart::Write(m_password);
+		Uart::Write("\"\r\n");
 
 		Timer timeout(Timer::SEG);
 		timeout.TimerStart(seg_timeout);		//Tiene 20 segundos para realizar la operacion
@@ -114,7 +115,7 @@ ESP8266::status_type ESP8266::ConnectToWifi( const int8_t * wifi_address , const
 
 		timeout.TimerStop();
 
-		Uart::Transmit("AT+CIPMUX=0\r\n");	//desactivo las multiples conexiones
+		Uart::Write("AT+CIPMUX=0\r\n");	//desactivo las multiples conexiones
 		while( !LeerOk() ) {}
 
 		m_status = CONNECT_TO_WIFI;
@@ -131,7 +132,7 @@ ESP8266::status_type ESP8266::ConnectToWifi( const int8_t * wifi_address , const
 bool ESP8266::LeerOk ( void )
 {
 	int8_t letra;
-	if ( Uart::Message(&letra, 1) != nullptr )
+	if ( Uart::Read(&letra, 1) != nullptr )
 	{
 		switch(m_aux)
 		{
@@ -173,8 +174,8 @@ void ESP8266::SetIP( int8_t *ip )
 	m_IP = ip;
 	if ( m_status == INITIALIZED )
 	{
-		Uart::Transmit("AT+CIPSTA=");
-		Uart::Transmit(m_IP);
+		Uart::Write("AT+CIPSTA=");
+		Uart::Write(m_IP);
 		while( !LeerOk() ) {}
 	}
 }
@@ -204,15 +205,15 @@ bool ESP8266::ConnectToServer ( conection_type _mode , const int8_t* server_ip ,
 	bool aux;
 	if ( m_status == CONNECT_TO_WIFI )
 	{
-		Uart::Transmit("AT+CIPSTART=");
+		Uart::Write("AT+CIPSTART=");
 		if ( _mode == TCP )
-			Uart::Transmit("TCP,");
+			Uart::Write("TCP,");
 		else if ( _mode == UDP )
-			Uart::Transmit("UDP,");
-		Uart::Transmit(server_ip);
-		Uart::Transmit(",");
-		Uart::Transmit(server_port);
-		Uart::Transmit("\r\n");
+			Uart::Write("UDP,");
+		Uart::Write(server_ip);
+		Uart::Write(",");
+		Uart::Write(server_port);
+		Uart::Write("\r\n");
 
 		timeout.TimerStart(seg_timeout);
 		while( !LeerOk() || timeout.GetTmrEvent() ) {}	//Espero a que logre o se acabe el tiempo
@@ -238,7 +239,7 @@ void ESP8266::DisconnectToServer ( void )
 {
 	if ( m_status == CONNECT_TO_SERVER )
 	{
-		Uart::Transmit("AT+CIPCLOSE\r\n");
+		Uart::Write("AT+CIPCLOSE\r\n");
 		while( !LeerOk() ) {}
 		m_status = CONNECT_TO_WIFI;
 	}
@@ -254,7 +255,7 @@ void ESP8266::DisconnectToWifi ( void )
 		DisconnectToServer();
 	if ( m_status == CONNECT_TO_WIFI )
 	{
-		Uart::Transmit("AT+CWQAP\r\n");
+		Uart::Write("AT+CWQAP\r\n");
 		while( !LeerOk() ) {}
 		m_status = INITIALIZED;
 	}
@@ -323,40 +324,40 @@ uint32_t ESP8266::Strlen ( const int8_t * a )
 	return len;
 }
 /**
- * 	\fn  void ESP8266::Transmit ( const char * msg)
+ * 	\fn  void ESP8266::Write ( const char * msg)
  * 	\brief Sobrecarga de Transmit de UART
  * 	\details
  * 	\param [in] msg: Mensaje a enviar.
  */
-void ESP8266::Transmit ( const char * msg)
+void ESP8266::Write ( const char * msg)
 {
 	if ( m_status == CONNECT_TO_SERVER )
-		Uart::Transmit(msg);
+		Uart::Write(msg);
 }
 /**
- * 	\fn  void ESP8266::Transmit ( const void * msg , uint32_t n )
+ * 	\fn  void ESP8266::Write ( const void * msg , uint32_t n )
  * 	\brief Sobrecarga de Transmit de UART
  * 	\details
  * 	\param [in] msg: Mensaje a enviar.
  * 	\param [in] n: cantidad de caracteres a enviar.
  */
-void ESP8266::Transmit ( const void * msg , uint32_t n )
+void ESP8266::Write ( const void * msg , uint32_t n )
 {
 	if ( m_status == CONNECT_TO_SERVER )
-		Uart::Transmit(msg , n);
+		Uart::Write(msg , n);
 }
 /**
- * 	\fn  void* ESP8266::Message ( void * msg , uint32_t n )
+ * 	\fn  void* ESP8266::Read ( void * msg , uint32_t n )
  * 	\brief Sobrecarga de message de UART
  * 	\details
  * 	\param [in] msg: Mensaje a leer.
  * 	\param [in] n: cantidad de caracteres a leer.
  * 	\return void*: puntero al mensaje a leer.
  */
-void* ESP8266::Message ( void * msg , uint32_t n )
+void* ESP8266::Read ( void * msg , uint32_t n )
 {
 	if ( m_status == CONNECT_TO_SERVER )
-		return Uart::Message(msg, n);
+		return Uart::Read(msg, n);
 	else
 		return nullptr;
 }

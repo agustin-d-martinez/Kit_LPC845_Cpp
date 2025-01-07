@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>KITLPC845-C++: Class Members</title>
+<title>LPC845-C++: Class Members</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -18,6 +18,11 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,10 +32,22 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">KITLPC845-C++<span id="projectnumber">&#160;2.0</span>
+   <div id="projectname">LPC845-C++<span id="projectnumber">&#160;2.0</span>
    </div>
-   <div id="projectbrief">KitdelibreriascustomenC++paralaplacadedesarrolloLPC845</div>
+   <div id="projectbrief">Kit de librerias propias de la placa de desarrollo LPC845</div>
   </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -47,17 +64,6 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 $(function() { codefold.init(0); });
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('',true,false,'search.php','Search',true);
-  $(function() { init_search(); });
-});
-/* @license-end */
-</script>
-<div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -100,16 +106,38 @@ $(function(){initNavTree('functions_c.html',''); initResizable(true); });
 <div class="textblock">Here is a list of all documented class members with links to the class documentation for each member:</div>
 
 <h3><a id="index_c" name="index_c"></a>- c -</h3><ul>
-<li>Clear()&#160;:&#160;<a class="el" href="classdisplay7_segmentos.html#a2a5bc10ea0ef8cc9d8ad981da04fb94c">display7Segmentos</a>, <a class="el" href="class_display.html#a90489617ce2fcbc4828f2a8e12af893e">Display</a>, <a class="el" href="class_l_c_d.html#ac362e2901387f2688cc6dc7b34bc7a79">LCD</a></li>
-<li>Clr()&#160;:&#160;<a class="el" href="classdigito.html#a0c040b3ea2fe853a71a835656f21bb68">digito</a></li>
+<li>CALIB&#160;:&#160;<a class="el" href="struct_sys_tick__t.html#a95ea1f5181024024cb1d007b234f7be8">SysTick_t</a></li>
+<li>CAP&#160;:&#160;<a class="el" href="struct_s_c_t__t.html#a8fbd910b579b6766c5f8cd65d81043b7">SCT_t</a></li>
+<li>CAPCTRL&#160;:&#160;<a class="el" href="struct_s_c_t__t.html#a778395d201900660b3229e442284737e">SCT_t</a></li>
+<li>CAPTCLKSEL&#160;:&#160;<a class="el" href="struct_s_y_s_c_o_n___type.html#a27b8975159208ac449a171fbef854ba6">SYSCON_Type</a></li>
+<li>CFG&#160;:&#160;<a class="el" href="struct_i2_c___type.html#a16632c58232ad2346d9185949ac1faeb">I2C_Type</a>, <a class="el" href="struct_s_p_i___type.html#addf5c890d5d68e6096b4f7265ddc518e">SPI_Type</a>, <a class="el" href="struct_u_s_a_r_t___type.html#af6c9aaff4de0c08b83639a6c42705a52">USART_Type</a></li>
+<li>CHAN_THRSEL&#160;:&#160;<a class="el" href="struct_a_d_c___type.html#af8c2344766b535b987e42cc1b762abc4">ADC_Type</a></li>
+<li>CIENF&#160;:&#160;<a class="el" href="struct_p_i_n___i_n_t_e_r_r_u_p_t__t.html#a5272555db3b4895120eaa738d33554a2">PIN_INTERRUPT_t</a></li>
+<li>CIENR&#160;:&#160;<a class="el" href="struct_p_i_n___i_n_t_e_r_r_u_p_t__t.html#a09ceec1910a0778ae033921ffca1b850">PIN_INTERRUPT_t</a></li>
+<li>Clear()&#160;:&#160;<a class="el" href="classdigito.html#ab25ebd80d1009bd3350ea39bdad5ce70">digito</a>, <a class="el" href="classdisplay7_segmentos.html#ad8af8da91ab70f44f4cee3afae333e32">display7Segmentos</a>, <a class="el" href="class_display.html#a90489617ce2fcbc4828f2a8e12af893e">Display</a>, <a class="el" href="class_l_c_d.html#aae7a6fc1a5e3fef5a43fb048c36e3193">LCD</a></li>
+<li>CLKDIV&#160;:&#160;<a class="el" href="struct_i2_c___type.html#a400c62160239f793337735a79d2de1bd">I2C_Type</a></li>
+<li>CLKOUTDIV&#160;:&#160;<a class="el" href="struct_s_y_s_c_o_n___type.html#aa8806dfc602e7c099c5760ea8dcace34">SYSCON_Type</a></li>
+<li>CLKOUTSEL&#160;:&#160;<a class="el" href="struct_s_y_s_c_o_n___type.html#ab1e2a7ecfeb04a37d093ca89a2be309e">SYSCON_Type</a></li>
+<li>CLR&#160;:&#160;<a class="el" href="struct_g_p_i_o___type.html#a963b29f8e9bbb8d6bd9d1f97314943f9">GPIO_Type</a>, <a class="el" href="struct_s_c_t__t.html#a3bbfaef382150f853a4945efb57c75b1">SCT_t</a></li>
 <li>ClrPin()&#160;:&#160;<a class="el" href="classgpio.html#a7db0e2fb53f026b00943b1960114efcd">gpio</a>, <a class="el" href="class_in_out.html#a4db90619ce419d8228e77ad72188948d">InOut</a></li>
 <li>ClrTmrEvent()&#160;:&#160;<a class="el" href="class_timer.html#a18a28d253b6bc7190c5e133290120c22">Timer</a></li>
+<li>CNT_ENA&#160;:&#160;<a class="el" href="struct_d_a_c__t.html#a2753cc63884c11c077ff0546240ca90a">DAC_t</a></li>
+<li>CNTVAL&#160;:&#160;<a class="el" href="struct_d_a_c__t.html#acbe5141cfba9dd74261c533990800e0d">DAC_t</a></li>
 <li>codigo_t&#160;:&#160;<a class="el" href="classdigito.html#a8302b770b9c2c86edb02394fd9ffc4f9">digito</a></li>
 <li>ComunicacionAsincronica()&#160;:&#160;<a class="el" href="class_comunicacion_asincronica.html#a711e7bb16713a4ebfd7f71044090531a">ComunicacionAsincronica</a></li>
 <li>ComunicacionSincronica()&#160;:&#160;<a class="el" href="class_comunicacion_sincronica.html#a2466717eadf1a0415f3ea369502620b1">ComunicacionSincronica</a></li>
 <li>conection_type&#160;:&#160;<a class="el" href="class_e_s_p8266.html#a93e1ea93fcb65ce8799a0f8a2285f65a">ESP8266</a></li>
+<li>CONEN&#160;:&#160;<a class="el" href="struct_s_c_t__t.html#a59811349d55baf238850b46e3eb62e17">SCT_t</a></li>
+<li>CONFIG&#160;:&#160;<a class="el" href="struct_s_c_t__t.html#a26237c397e70026a52705bca1e46c7b6">SCT_t</a></li>
+<li>CONFLAG&#160;:&#160;<a class="el" href="struct_s_c_t__t.html#a84a570311713f62faa1e0d7487379949">SCT_t</a></li>
 <li>ConnectToServer()&#160;:&#160;<a class="el" href="class_e_s_p8266.html#a293dc206de0a2b9187a472d38cd16d65">ESP8266</a></li>
 <li>ConnectToWifi()&#160;:&#160;<a class="el" href="class_e_s_p8266.html#a2e2829adf335c4ae3e224f84ac97c015">ESP8266</a></li>
+<li>Continue()&#160;:&#160;<a class="el" href="class_i2_c.html#a5e49eeee7c9f988439385721ec7aad5a">I2C</a></li>
+<li>COUNT&#160;:&#160;<a class="el" href="struct_s_c_t__t.html#a4414bcf82a93f694f9843b0f6c9b44d0">SCT_t</a></li>
+<li>CR&#160;:&#160;<a class="el" href="struct_d_a_c__t.html#aede1b7343430665cfe197e7dbe912d0e">DAC_t</a></li>
+<li>CTL&#160;:&#160;<a class="el" href="struct_u_s_a_r_t___type.html#a12acb1bc737df4bc88864057caf7b679">USART_Type</a></li>
+<li>CTRL&#160;:&#160;<a class="el" href="struct_a_d_c___type.html#adb639e3bcad9ad8b279a99ba8e9467ce">ADC_Type</a>, <a class="el" href="struct_d_a_c__t.html#aa20cd203e2391f2fc01ad0c181f6e5a0">DAC_t</a>, <a class="el" href="struct_s_c_t__t.html#aea76954b9bbaae34dfeac75d89453ae5">SCT_t</a>, <a class="el" href="struct_sys_tick__t.html#a3f12911d2e41dc782e3841f9059aae81">SysTick_t</a></li>
+<li>CURR&#160;:&#160;<a class="el" href="struct_sys_tick__t.html#adf1a20eef2d5cfa26bff2f248955d1a7">SysTick_t</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>KITLPC845-C++: E:/Agustin/Escritorio/MCUexpresso/KitLPC845-C++/src/Drivers/Perifericos/13-UART/Uart.h Source File</title>
+<title>LPC845-C++: Uart.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -18,6 +18,11 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,10 +32,22 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">KITLPC845-C++<span id="projectnumber">&#160;2.0</span>
+   <div id="projectname">LPC845-C++<span id="projectnumber">&#160;2.0</span>
    </div>
-   <div id="projectbrief">KitdelibreriascustomenC++paralaplacadedesarrolloLPC845</div>
+   <div id="projectbrief">Kit de librerias propias de la placa de desarrollo LPC845</div>
   </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -47,17 +64,6 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 $(function() { codefold.init(0); });
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('',true,false,'search.php','Search',true);
-  $(function() { init_search(); });
-});
-/* @license-end */
-</script>
-<div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -112,7 +118,7 @@ $(function(){initNavTree('_uart_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> *** INCLUDES GLOBALES</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> **********************************************************************************************************************************/</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;<a class="code" href="_comunicacion_asincronica_8h.html">Drivers/Perifericos/13-UART/ComunicacionAsincronica.h</a>&gt;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;LPC845.h&quot;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;<a class="code" href="_l_p_c845_8h.html">LPC845.h</a>&quot;</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;<a class="code" href="_pin_8h.html">Drivers/Perifericos/01-Pin/Pin.h</a>&gt;</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">/***********************************************************************************************************************************</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment"> *** DEFINES GLOBALES</span></div>
@@ -164,51 +170,55 @@ $(function(){initNavTree('_uart_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keyword">const</span> <a class="code hl_class" href="class_pin.html">Pin</a> m_tx;</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="keyword">const</span> <a class="code hl_class" href="class_pin.html">Pin</a> m_rx;</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        USART_Type* m_usart;                </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        uint8_t*    m_bufferRX;             </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        uint32_t    m_inxRxIn , m_inxRxOut , m_maxRx;     </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        uint8_t*    m_bufferTX;             </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        uint32_t    m_inxTxIn , m_inxTxOut , m_maxTx;     </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <a class="code hl_struct" href="struct_u_s_a_r_t___type.html">USART_Type</a>*   m_usart;                </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <a class="code hl_typedef" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>* m_bufferRX;             </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <a class="code hl_typedef" href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>    m_inxRxIn , m_inxRxOut , m_maxRx;     </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <a class="code hl_typedef" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>* m_bufferTX;             </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <a class="code hl_typedef" href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>    m_inxTxIn , m_inxTxOut , m_maxTx;     </div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <span class="keywordtype">bool</span>        m_flagTx;               </div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <a class="code hl_function" href="class_uart.html#afaef668de5b233cf011335741f26d6d3">Uart</a>( <a class="code hl_enumeration" href="class_pin.html#a02483eba92e68e4230f8aa883e0a25fe">Pin::port_t</a> portTx , uint8_t pinTx , <a class="code hl_enumeration" href="class_pin.html#a02483eba92e68e4230f8aa883e0a25fe">Pin::port_t</a> portRx , uint8_t pinRx ,</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                USART_Type * usart , uint32_t baudrate , <a class="code hl_enumeration" href="class_uart.html#abe66c064727dbf25d0761c7e317a91e1">bits_de_datos</a> BitsDeDatos, <a class="code hl_enumeration" href="class_uart.html#a3dc1591dc4992045e0f14d8ac3ec4e48">paridad_t</a> paridad ,</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                uint32_t maxRx , uint32_t maxTx);</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_uart.html#a7620a6c08f6cb73c38aa2510ac8e21e8">Transmit</a> ( <span class="keyword">const</span> <span class="keywordtype">char</span> * msg) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_uart.html#a7620a6c08f6cb73c38aa2510ac8e21e8">Transmit</a> ( <span class="keyword">const</span> <span class="keywordtype">void</span> * msg , uint32_t n ) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keywordtype">void</span>* <a class="code hl_function" href="class_uart.html#a9839f4adce7570038475de7a872d681e">Message</a> ( <span class="keywordtype">void</span> * msg , uint32_t n ) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_uart.html#aaba51d089c78ba71333e2ce332434423">SetBaudRate</a> ( uint32_t baudrate );</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                <a class="code hl_function" href="class_uart.html#afaef668de5b233cf011335741f26d6d3">Uart</a>( <a class="code hl_enumeration" href="class_pin.html#a02483eba92e68e4230f8aa883e0a25fe">Pin::port_t</a> portTx , <a class="code hl_typedef" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> pinTx , <a class="code hl_enumeration" href="class_pin.html#a02483eba92e68e4230f8aa883e0a25fe">Pin::port_t</a> portRx , <a class="code hl_typedef" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> pinRx ,</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                        <a class="code hl_struct" href="struct_u_s_a_r_t___type.html">USART_Type</a> * usart , <a class="code hl_typedef" href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> baudrate , <a class="code hl_enumeration" href="class_uart.html#abe66c064727dbf25d0761c7e317a91e1">bits_de_datos</a> BitsDeDatos, <a class="code hl_enumeration" href="class_uart.html#a3dc1591dc4992045e0f14d8ac3ec4e48">paridad_t</a> paridad ,</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                        <a class="code hl_typedef" href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> maxRx , <a class="code hl_typedef" href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> maxTx);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="keywordtype">void</span>    <a class="code hl_function" href="class_uart.html#a723faac7d90252ba2c4e05fc1fd5689d">Write</a> ( <span class="keyword">const</span> <span class="keywordtype">char</span> * msg) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <span class="keywordtype">void</span>    <a class="code hl_function" href="class_uart.html#a723faac7d90252ba2c4e05fc1fd5689d">Write</a> ( <span class="keyword">const</span> <span class="keywordtype">void</span> * msg , <a class="code hl_typedef" href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> n ) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keywordtype">void</span>*   <a class="code hl_function" href="class_uart.html#a58e6ada71f8c76984211466ba457f5e5">Read</a> ( <span class="keywordtype">void</span> * msg , <a class="code hl_typedef" href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> n ) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <span class="keywordtype">void</span>    <a class="code hl_function" href="class_uart.html#aaba51d089c78ba71333e2ce332434423">SetBaudRate</a> ( <a class="code hl_typedef" href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> baudrate );</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <a class="code hl_class" href="class_uart.html">~Uart</a>() { };       </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="class_uart.html#a4199a240d764fc664ac44b9c170032b3">  100</a></span>                <a class="code hl_function" href="class_uart.html#a4199a240d764fc664ac44b9c170032b3">~Uart</a>() = <span class="keywordflow">default</span>;     </div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <span class="keywordtype">void</span> EnableSW ( <span class="keywordtype">void</span> );</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <span class="keywordtype">void</span> EnableClock ( <span class="keywordtype">void</span> );</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        <span class="keywordtype">void</span> Config ( uint32_t baudrate , <a class="code hl_enumeration" href="class_uart.html#abe66c064727dbf25d0761c7e317a91e1">bits_de_datos</a> BitsDeDatos , <a class="code hl_enumeration" href="class_uart.html#a3dc1591dc4992045e0f14d8ac3ec4e48">paridad_t</a> paridad );</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <span class="keywordtype">void</span> UART_IRQHandler ( <span class="keywordtype">void</span> ) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <span class="keywordtype">void</span>    EnableSW ( <span class="keywordtype">void</span> );</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <span class="keywordtype">void</span>    EnableClock ( <span class="keywordtype">void</span> );</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        <span class="keywordtype">void</span>    Config ( <a class="code hl_typedef" href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> baudrate , <a class="code hl_enumeration" href="class_uart.html#abe66c064727dbf25d0761c7e317a91e1">bits_de_datos</a> BitsDeDatos , <a class="code hl_enumeration" href="class_uart.html#a3dc1591dc4992045e0f14d8ac3ec4e48">paridad_t</a> paridad );</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <span class="keywordtype">void</span>    UART_IRQHandler ( <span class="keywordtype">void</span> ) <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <span class="keywordtype">void</span> pushRx ( uint8_t dato ) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        uint8_t popRx ( uint8_t * dato ) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <span class="keywordtype">void</span> pushTx ( uint8_t dato ) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        uint8_t popTx ( uint8_t * dato ) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        <span class="keywordtype">void</span> EnableInterupt ( <span class="keywordtype">void</span> );</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <span class="keywordtype">void</span> DisableInterupt ( <span class="keywordtype">void</span> );</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <span class="keywordtype">void</span>    pushRx ( <a class="code hl_typedef" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> dato ) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        <a class="code hl_typedef" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> popRx ( <a class="code hl_typedef" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> * dato ) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <span class="keywordtype">void</span>    pushTx ( <a class="code hl_typedef" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> dato ) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <a class="code hl_typedef" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> popTx ( <a class="code hl_typedef" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> * dato ) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        <span class="keywordtype">void</span>    EnableInterupt ( <span class="keywordtype">void</span> );</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <span class="keywordtype">void</span>    DisableInterupt ( <span class="keywordtype">void</span> );</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>};</div>
 </div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="preprocessor">#endif </span><span class="comment">/* UART_H_ */</span><span class="preprocessor"></span><span class="preprocessor"></span></div>
 <div class="ttc" id="a_comunicacion_asincronica_8h_html"><div class="ttname"><a href="_comunicacion_asincronica_8h.html">ComunicacionAsincronica.h</a></div><div class="ttdoc">Objeto base para la creacion de comunicaciones asincrónicas.</div></div>
+<div class="ttc" id="a_l_p_c845_8h_html"><div class="ttname"><a href="_l_p_c845_8h.html">LPC845.h</a></div><div class="ttdoc">Registros del LPC845.</div></div>
 <div class="ttc" id="a_pin_8h_html"><div class="ttname"><a href="_pin_8h.html">Pin.h</a></div><div class="ttdoc">Clase Abstracta de cualquier pin del microcontrolador.</div></div>
 <div class="ttc" id="aclass_comunicacion_asincronica_html_a711e7bb16713a4ebfd7f71044090531a"><div class="ttname"><a href="class_comunicacion_asincronica.html#a711e7bb16713a4ebfd7f71044090531a">ComunicacionAsincronica::ComunicacionAsincronica</a></div><div class="ttdeci">ComunicacionAsincronica()=default</div></div>
-<div class="ttc" id="aclass_pin_html"><div class="ttname"><a href="class_pin.html">Pin</a></div><div class="ttdoc">Clase del objeto Pin.</div><div class="ttdef"><b>Definition</b> Pin.h:53</div></div>
-<div class="ttc" id="aclass_pin_html_a02483eba92e68e4230f8aa883e0a25fe"><div class="ttname"><a href="class_pin.html#a02483eba92e68e4230f8aa883e0a25fe">Pin::port_t</a></div><div class="ttdeci">port_t</div><div class="ttdef"><b>Definition</b> Pin.h:56</div></div>
-<div class="ttc" id="aclass_uart_html"><div class="ttname"><a href="class_uart.html">Uart</a></div><div class="ttdoc">Clase del objeto uart El objeto uart genera una comunicación asincrónica de tipo UART.</div><div class="ttdef"><b>Definition</b> Uart.h:66</div></div>
+<div class="ttc" id="aclass_pin_html"><div class="ttname"><a href="class_pin.html">Pin</a></div><div class="ttdoc">Clase del objeto Pin.</div><div class="ttdef"><b>Definition</b> Pin.h:55</div></div>
+<div class="ttc" id="aclass_pin_html_a02483eba92e68e4230f8aa883e0a25fe"><div class="ttname"><a href="class_pin.html#a02483eba92e68e4230f8aa883e0a25fe">Pin::port_t</a></div><div class="ttdeci">port_t</div><div class="ttdef"><b>Definition</b> Pin.h:58</div></div>
 <div class="ttc" id="aclass_uart_html_a3dc1591dc4992045e0f14d8ac3ec4e48"><div class="ttname"><a href="class_uart.html#a3dc1591dc4992045e0f14d8ac3ec4e48">Uart::paridad_t</a></div><div class="ttdeci">paridad_t</div><div class="ttdef"><b>Definition</b> Uart.h:69</div></div>
-<div class="ttc" id="aclass_uart_html_a7620a6c08f6cb73c38aa2510ac8e21e8"><div class="ttname"><a href="class_uart.html#a7620a6c08f6cb73c38aa2510ac8e21e8">Uart::Transmit</a></div><div class="ttdeci">void Transmit(const char *msg) override</div><div class="ttdoc">Transmite el mensaje indicado.</div><div class="ttdef"><b>Definition</b> Uart.cpp:153</div></div>
-<div class="ttc" id="aclass_uart_html_a9839f4adce7570038475de7a872d681e"><div class="ttname"><a href="class_uart.html#a9839f4adce7570038475de7a872d681e">Uart::Message</a></div><div class="ttdeci">void * Message(void *msg, uint32_t n) override</div><div class="ttdoc">Devuelve el mensaje recibido.</div><div class="ttdef"><b>Definition</b> Uart.cpp:195</div></div>
+<div class="ttc" id="aclass_uart_html_a4199a240d764fc664ac44b9c170032b3"><div class="ttname"><a href="class_uart.html#a4199a240d764fc664ac44b9c170032b3">Uart::~Uart</a></div><div class="ttdeci">~Uart()=default</div></div>
+<div class="ttc" id="aclass_uart_html_a58e6ada71f8c76984211466ba457f5e5"><div class="ttname"><a href="class_uart.html#a58e6ada71f8c76984211466ba457f5e5">Uart::Read</a></div><div class="ttdeci">void * Read(void *msg, uint32_t n) override</div><div class="ttdoc">Devuelve el mensaje recibido.</div><div class="ttdef"><b>Definition</b> Uart.cpp:195</div></div>
+<div class="ttc" id="aclass_uart_html_a723faac7d90252ba2c4e05fc1fd5689d"><div class="ttname"><a href="class_uart.html#a723faac7d90252ba2c4e05fc1fd5689d">Uart::Write</a></div><div class="ttdeci">void Write(const char *msg) override</div><div class="ttdoc">Transmite el mensaje indicado.</div><div class="ttdef"><b>Definition</b> Uart.cpp:153</div></div>
 <div class="ttc" id="aclass_uart_html_aaba51d089c78ba71333e2ce332434423"><div class="ttname"><a href="class_uart.html#aaba51d089c78ba71333e2ce332434423">Uart::SetBaudRate</a></div><div class="ttdeci">void SetBaudRate(uint32_t baudrate)</div><div class="ttdoc">Modifica el baudrate al vuelo.</div><div class="ttdef"><b>Definition</b> Uart.cpp:305</div></div>
 <div class="ttc" id="aclass_uart_html_abe66c064727dbf25d0761c7e317a91e1"><div class="ttname"><a href="class_uart.html#abe66c064727dbf25d0761c7e317a91e1">Uart::bits_de_datos</a></div><div class="ttdeci">bits_de_datos</div><div class="ttdef"><b>Definition</b> Uart.h:71</div></div>
 <div class="ttc" id="aclass_uart_html_afaef668de5b233cf011335741f26d6d3"><div class="ttname"><a href="class_uart.html#afaef668de5b233cf011335741f26d6d3">Uart::Uart</a></div><div class="ttdeci">Uart(Pin::port_t portTx, uint8_t pinTx, Pin::port_t portRx, uint8_t pinRx, USART_Type *usart, uint32_t baudrate, bits_de_datos BitsDeDatos, paridad_t paridad, uint32_t maxRx, uint32_t maxTx)</div><div class="ttdoc">Constructor de la clase uart.</div><div class="ttdef"><b>Definition</b> Uart.cpp:60</div></div>
+<div class="ttc" id="astruct_u_s_a_r_t___type_html"><div class="ttname"><a href="struct_u_s_a_r_t___type.html">USART_Type</a></div><div class="ttdoc">Structure type to access the Universal Serial Asincronical Reciver Transmitter (USART).</div><div class="ttdef"><b>Definition</b> LPC845.h:425</div></div>
+<div class="ttc" id="atipos_8h_html_a435d1572bf3f880d55459d9805097f62"><div class="ttname"><a href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></div><div class="ttdeci">unsigned int uint32_t</div><div class="ttdef"><b>Definition</b> tipos.h:45</div></div>
+<div class="ttc" id="atipos_8h_html_aba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></div><div class="ttdeci">unsigned char uint8_t</div><div class="ttdef"><b>Definition</b> tipos.h:41</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

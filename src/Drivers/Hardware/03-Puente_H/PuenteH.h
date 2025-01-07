@@ -2,11 +2,13 @@
  *
  * @file		PuenteH.h
  * @brief		Clase base para objetos del tipo Puente H
+ * @details
+ *
  * @date		25 sep. 2022
- * @author		Técnico. Martinez Agustin
+ * @version		1.0
+ * @author     	Técnico. Martinez Agustin (masteragus365@gmail.com)
  *
  **********************************************************************************************************************************/
-
 #ifndef PUENTEH_H_
 #define PUENTEH_H_
 /** \addtogroup Clase Abstracta
@@ -42,7 +44,7 @@ class Puente_H
 		enum { IZQUIERDA = 0 , DERECHA};
 	public:
 						Puente_H( ) = default;				/**< Constructor por defecto */
-		virtual void 	Inicializar(void) = 0;				/**< Inicializa el Puente H */
+		virtual void 	Initialize(void) = 0;				/**< Inicializa el Puente H */
 		virtual void 	GirarIzq(void) = 0;					/**< Gira a la izquierda */
 		virtual void 	GirarDer(void) = 0;					/**< Gira a la derecha */
 		virtual void 	Girar ( uint8_t direccion ) = 0;	/**< Gira los motores */

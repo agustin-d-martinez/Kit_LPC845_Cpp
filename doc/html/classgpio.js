@@ -3,33 +3,11 @@ var classgpio =
     [ "activity_t", "classgpio.html#ace0f4d73975aa25a7629d7a719e3bda8", null ],
     [ "direction_t", "classgpio.html#aa7b9347bb89381a3296ac65d97179a73", null ],
     [ "mode_t", "classgpio.html#a47824ce7b5b807417ba04e2262324d21", null ],
-    [ "activity_t", "classgpio.html#a37b1bf950dfcff8f5a81431da1f690fa", [
-      [ "low", "classgpio.html#a37b1bf950dfcff8f5a81431da1f690faad4844ed7391a008a25919cc33ce34050", null ],
-      [ "high", "classgpio.html#a37b1bf950dfcff8f5a81431da1f690faa71650c118c0101c0bca436293386c719", null ]
-    ] ],
-    [ "direction_t", "classgpio.html#abc2ecf3fc05b2faa58254aaaa7cbc5d5", [
-      [ "input", "classgpio.html#abc2ecf3fc05b2faa58254aaaa7cbc5d5acd31836a02206e93f91d75e7a6aa3462", null ],
-      [ "output", "classgpio.html#abc2ecf3fc05b2faa58254aaaa7cbc5d5a836c329075f496dc51bd5c208e2ffb49", null ]
-    ] ],
-    [ "interrupt_mode_t", "classgpio.html#a448130a00845ab7b4edda7ec12b35432", [
-      [ "rising_edge", "classgpio.html#a448130a00845ab7b4edda7ec12b35432aa92395fbe68bd4e0e39ff45531e02732", null ],
-      [ "falling_edge", "classgpio.html#a448130a00845ab7b4edda7ec12b35432ad30bbfa0715e588368393d33c393215f", null ],
-      [ "rising_falling_edge", "classgpio.html#a448130a00845ab7b4edda7ec12b35432a6060f615de1311f9d9707089ab1bfaac", null ],
-      [ "low_level", "classgpio.html#a448130a00845ab7b4edda7ec12b35432a2245dff9835821ecd829fc04babc79b2", null ],
-      [ "high_level", "classgpio.html#a448130a00845ab7b4edda7ec12b35432a15064993047adbcc3465831338968445", null ]
-    ] ],
-    [ "mode_t", "classgpio.html#aa105bc05ba99ed1b45a9cd8576d6c0ab", [
-      [ "pushpull", "classgpio.html#aa105bc05ba99ed1b45a9cd8576d6c0aba6f4002cc72e5fe884e3918e7ca707df5", null ],
-      [ "opencolector", "classgpio.html#aa105bc05ba99ed1b45a9cd8576d6c0aba10642f4650e1c357c55ad74705e01634", null ],
-      [ "inactive", "classgpio.html#aa105bc05ba99ed1b45a9cd8576d6c0aba6ab55225d051694dd436b222529089ce", null ],
-      [ "pulldown", "classgpio.html#aa105bc05ba99ed1b45a9cd8576d6c0aba749ac31640afd132193776bb22b8de0d", null ],
-      [ "pullup", "classgpio.html#aa105bc05ba99ed1b45a9cd8576d6c0aba8b6c8eff1eb03649d65a38afda042fa3", null ],
-      [ "repeater", "classgpio.html#aa105bc05ba99ed1b45a9cd8576d6c0abafc068fd18d08b0cd1ad9a411e7aadedf", null ]
-    ] ],
-    [ "power_t", "classgpio.html#a28000a49c5f635993116c68752fe6b4b", [
-      [ "off", "classgpio.html#a28000a49c5f635993116c68752fe6b4baedc660d67d8e858ee7d3be420ebe88f8", null ],
-      [ "on", "classgpio.html#a28000a49c5f635993116c68752fe6b4ba8f7773338aee192231fb04c1b4d381f4", null ]
-    ] ],
+    [ "activity_t", "classgpio.html#a37b1bf950dfcff8f5a81431da1f690fa", null ],
+    [ "direction_t", "classgpio.html#abc2ecf3fc05b2faa58254aaaa7cbc5d5", null ],
+    [ "interrupt_mode_t", "classgpio.html#a448130a00845ab7b4edda7ec12b35432", null ],
+    [ "mode_t", "classgpio.html#aa105bc05ba99ed1b45a9cd8576d6c0ab", null ],
+    [ "power_t", "classgpio.html#a28000a49c5f635993116c68752fe6b4b", null ],
     [ "gpio", "classgpio.html#a91d8a585757112ada21e8c8b7570171a", null ],
     [ "~gpio", "classgpio.html#a115befd0ad74a2f911420b8673415bca", null ],
     [ "ClrPin", "classgpio.html#a7db0e2fb53f026b00943b1960114efcd", null ],

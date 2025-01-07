@@ -1,7 +1,7 @@
 /*******************************************************************************************************************************//**
  *
  * @file		Timer.h
- * @brief		Clase para creacion de temporizadores
+ * @brief		Clase para creacion de temporizadores.
  * @date		4 may. 2022
  * @author		Ing. Marcelo Trujillo
  *
@@ -91,8 +91,8 @@ class Timer : public Callback
 		*/
 		friend bool 	operator==( uint32_t t , Timer &T );
 		// Implementacion de funcion virtual pura heredada
-		void 			SWhandler( void );
-		int8_t TmrEvent ( void );
+		void 			SWhandler( void ) override;
+		int8_t 			TmrEvent ( void );
 
 		virtual 		~Timer();
 };

@@ -2,8 +2,11 @@
  *
  * @file		L298N.h
  * @brief		Clase del módulo de puente H LN298N
+ * @details     Proporciona métodos para inicializar y enviar datos al puente H LN298N.
+ *
  * @date		25 sep. 2022
- * @author		Técnico. Martinez Agustin
+ * @version		1.0
+ * @author     	Técnico. Martinez Agustin (masteragus365@gmail.com)
  *
  **********************************************************************************************************************************/
 
@@ -46,13 +49,13 @@ class L298N : protected Puente_H
 		gpio* 	&m_motor2_b;		/**< GPIO del motor izquierdo B*/
 	public:
 				L298N( gpio* &_motorDer_a , gpio* &_motorDer_b , gpio* &_motorIzq_a , gpio* &_motorIzq_b );
-		void 	Inicializar( void );
-		void 	GirarIzq ( void );
-		void 	GirarDer ( void );
-		void 	Girar ( const uint8_t direccion );
-		void 	Frenar ( void );
-		void 	Avanzar ( void );
-		void 	Retroceder ( void );
+		void 	Initialize( void ) override;
+		void 	GirarIzq ( void ) override;
+		void 	GirarDer ( void ) override;
+		void 	Girar ( const uint8_t direccion ) override;
+		void 	Frenar ( void ) override;
+		void 	Avanzar ( void ) override;
+		void 	Retroceder ( void ) override;
 		virtual ~L298N();	/**< Destructor por defecto */
 };
 

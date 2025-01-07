@@ -56,7 +56,7 @@ Comunicacion::Comunicacion( Uart * _com , vector <uint32_t > &msg ) : m_com(_com
 }
 void Comunicacion::ByteInicio( void )
 {
-	if ( m_com->Message(&m_letra_recibida, 1) != nullptr )
+	if ( m_com->Read(&m_letra_recibida, 1) != nullptr )
 	{//SI ME LLEGO ALGO
 		m_cont = 0;
 
@@ -66,7 +66,7 @@ void Comunicacion::ByteInicio( void )
 }
 void Comunicacion::Letras( void )
 {
-	if ( m_com->Message(&m_letra_recibida, 1) != nullptr )
+	if ( m_com->Read(&m_letra_recibida, 1) != nullptr )
 	{//SI ME LLEGO ALGO
 		if ( (strchr( LETRAS_VALIDAS , m_letra_recibida ) == NULL && m_letra_recibida != m_byte_final && m_letra_recibida != m_byte_inicio )
 				|| (m_cont > MAX_MENSAJE) )
@@ -193,27 +193,27 @@ void Comunicacion::EnviarPedidos( void )
 	if ( m_msg[POS_TIEMPO_MANUAL] != 0 )
 	{
 		int8_t buf = '\0';
-		m_com->Transmit("<L\0");
+		m_com->Write("<L\0");
 		buf = m_msg[POS_TIEMPO_MANUAL]/1000 + '0';
-		m_com->Transmit(&buf , 1);
+		m_com->Write(&buf , 1);
 		buf = (m_msg[POS_TIEMPO_MANUAL]%1000)/100  + '0';
-		m_com->Transmit(&buf , 1);
+		m_com->Write(&buf , 1);
 		buf = (m_msg[POS_TIEMPO_MANUAL]%100)/10  + '0';
-		m_com->Transmit(&buf , 1);
+		m_com->Write(&buf , 1);
 		buf = (m_msg[POS_TIEMPO_MANUAL]%10) + '0';
-		m_com->Transmit(&buf , 1);
-		m_com->Transmit(">");
+		m_com->Write(&buf , 1);
+		m_com->Write(">");
 		m_msg[POS_TIEMPO_MANUAL] = 0;
 	}
 }
 
 void Comunicacion::Transmitir ( char * text )
 {	//En caso de tener que transmitir desde afuera de la máquina
-	m_com->Transmit(text);
+	m_com->Write(text);
 }
 void Comunicacion::Transmitir ( char * text , int32_t n)
 {	//En caso de tener que transmitir desde afuera de la máquina
-	m_com->Transmit(text, n);
+	m_com->Write(text, n);
 }
 void Comunicacion::Toggle ( uint8_t pos )
 {

@@ -1,7 +1,7 @@
 /*******************************************************************************************************************************//**
  *
  * @file		timers.h
- * @brief		Breve descripción del objetivo del Módulo
+ * @brief		Modulo para crear conjuntos de Timer.
  * @date		10 jul. 2022
  * @author		Ing. Marcelo Trujillo
  *

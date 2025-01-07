@@ -1,0 +1,17 @@
+<map id="REGISTERS Peripheral Access Layer" name="REGISTERS Peripheral Access Layer">
+<area shape="rect" id="Node000012" href="$group___a_d_c___peripheral___access___layer.html" title=" " alt="" coords="229,5,388,48"/>
+<area shape="rect" id="Node000013" href="$group___d_a_c___peripheral___access___layer.html" title=" " alt="" coords="229,72,388,115"/>
+<area shape="rect" id="Node000003" href="$group___g_p_i_o___peripheral___access___layer.html" title=" " alt="" coords="227,139,390,181"/>
+<area shape="rect" id="Node000014" href="$group___i2_c___peripheral___access___layer.html" title=" " alt="" coords="233,205,384,248"/>
+<area shape="rect" id="Node000004" href="$group___i_o_c_o_n___peripheral___access___layer.html" title=" " alt="" coords="221,272,396,315"/>
+<area shape="rect" id="Node000006" href="$group___m_r_t___peripheral___access___layer.html" title=" " alt="" coords="229,339,388,381"/>
+<area shape="rect" id="Node000007" href="$group___n_v_i_c___peripheral___access___layer.html" title=" " alt="" coords="227,405,390,448"/>
+<area shape="rect" id="Node000008" href="$group___p_i_n___i_n_t___peripheral___access___layer.html" title=" " alt="" coords="241,472,376,515"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,439,167,481"/>
+<area shape="rect" id="Node000009" href="$group___s_c_t___peripheral___access___layer.html" title=" " alt="" coords="230,539,387,581"/>
+<area shape="rect" id="Node000015" href="$group___s_p_i___peripheral___access___layer.html" title=" " alt="" coords="232,605,384,648"/>
+<area shape="rect" id="Node000011" href="$group___s_w_m___peripheral___access___layer.html" title=" " alt="" coords="227,672,390,715"/>
+<area shape="rect" id="Node000002" href="$group___s_y_s_c_o_n___peripheral___access___layer.html" title=" " alt="" coords="215,739,402,781"/>
+<area shape="rect" id="Node000005" href="$group___s_y_s_t_i_c_k___peripheral___access___layer.html" title=" " alt="" coords="238,805,379,848"/>
+<area shape="rect" id="Node000010" href="$group___u_s_a_r_t___peripheral___access___layer.html" title=" " alt="" coords="221,872,396,915"/>
+</map>

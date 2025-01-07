@@ -1,6 +1,6 @@
 var class_i4511 =
 [
     [ "I4511", "class_i4511.html#a2d4d5f3c8cc3a270e2cc542e1c043049", null ],
-    [ "Inicializar", "class_i4511.html#a731e8085d9f8784ecca32e567ef86b0b", null ],
-    [ "SetSegmentos", "class_i4511.html#a724201f1a5023afc0470ed22a49a6247", null ]
+    [ "Initialize", "class_i4511.html#a41bc1c262476f0b2a5d61204a3bd15a4", null ],
+    [ "SetSegmentos", "class_i4511.html#a9702f83ec22160692bfb71b3f983d2e2", null ]
 ];

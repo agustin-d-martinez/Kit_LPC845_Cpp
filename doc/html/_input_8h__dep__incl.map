@@ -1,0 +1,20 @@
+<map id="Input.h" name="Input.h">
+<area shape="rect" id="Node000001" title="funciones miembro de la clase Input." alt="" coords="217,5,278,32"/>
+<area shape="rect" id="Node000002" href="$_drivers_8h.html" title="Archivo Master con todos los includes de perifericos del Kit." alt="" coords="161,80,235,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="232,47,209,81,204,78,228,44"/>
+<area shape="rect" id="Node000009" href="$_input_8cpp.html" title="funciones miembro de la clase Input." alt="" coords="259,80,334,107"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="267,44,290,78,286,81,262,47"/>
+<area shape="rect" id="Node000003" href="$_comunicacion_8h.html" title="Clase máquina de estados de comunicación del proyecto." alt="" coords="78,155,193,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="179,120,148,156,144,153,175,117"/>
+<area shape="rect" id="Node000007" href="$_semaforo_8h.html" title="Clases semaforo de ejemplo utilizando led tricolor propio de la placa." alt="" coords="216,155,305,181"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="221,117,252,153,248,156,217,120"/>
+<area shape="rect" id="Node000004" href="$_comunicacion_8cpp.html" title="Clase máquina de estados de comunicación del proyecto." alt="" coords="5,229,135,256"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="116,195,83,231,79,227,112,191"/>
+<area shape="rect" id="Node000005" href="$inicializar_8h.html" title="Archivo inicializador de la placa." alt="" coords="159,229,245,256"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="159,191,192,227,189,231,155,195"/>
+<area shape="rect" id="Node000006" href="$inicializar_8cpp.html" title="Archivo inicializador de la placa." alt="" coords="152,304,252,331"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="205,272,205,304,199,304,199,272"/>
+<area shape="poly" id="edge8_Node000007_Node000005" title=" " alt="" coords="243,195,214,231,210,227,239,192"/>
+<area shape="rect" id="Node000008" href="$_semaforo_8cpp.html" title="Clases semaforo de ejemplo utilizando led tricolor propio de la placa." alt="" coords="270,229,372,256"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="283,192,312,227,308,231,279,195"/>
+</map>

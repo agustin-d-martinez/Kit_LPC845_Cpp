@@ -1,9 +1,11 @@
 /*******************************************************************************************************************************//**
  *
- * @file		LCD.h
- * @brief		Clase para un LCD con comunicación de 4 patas, solo escritura
- * @date		22 jun. 2022
- * @author		Técnico. Martinez Agustin
+ * @file       LCD.h
+ * @brief      Clase para manejar un LCD con comunicación de 4 patas (solo escritura).
+ * @details    Proporciona métodos para inicializar y enviar datos al LCD. Diseñada para facilitar la integración en proyectos embebidos.
+ *
+ * @date       22 jun. 2022
+ * @author     Técnico. Martinez Agustin (masteragus365@gmail.com)
  *
  **********************************************************************************************************************************/
 
@@ -85,17 +87,17 @@ class LCD : public Display, Callback
 
 	public:
 		LCD( vector<gpio*> &salidas );
-		void Inicializar( const uint8_t filas , const uint8_t columnas );
+		void Initialize( const uint8_t filas , const uint8_t columnas );
 		void Write ( const char *s );
-		void Write ( const int32_t n );
+		void Write ( const int32_t n ) ;
 		LCD& operator= ( const char *s );
 		void WriteAt( const int8_t *a , const uint8_t fila , const uint8_t columna );
 		void WriteAt ( const int32_t n , const uint8_t fila , const uint8_t columna);
-		void Clear( void );
+		void Clear( void ) override;
 		virtual ~LCD();
 
 	protected:
-		void SWhandler ( void );
+		void SWhandler ( void ) override;
 
 	private:
 		void WriteInstruction( const uint8_t data , const uint8_t mode );

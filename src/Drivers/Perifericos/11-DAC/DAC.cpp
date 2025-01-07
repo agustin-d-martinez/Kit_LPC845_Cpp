@@ -1,12 +1,14 @@
 /*******************************************************************************************************************************//**
  *
- * @file		gpio.cpp
- * @brief		Objeto DAC
+ * @file		DAC.cpp
+ * @brief		Objeto DAC.
+ * @details
+ *
  * @date		12 ene. 2023
- * @author		Técnico Martinez Agustin
+ * @version		1.0
+ * @author     	Técnico. Martinez Agustin (masteragus365@gmail.com)
  *
  **********************************************************************************************************************************/
-
 /***********************************************************************************************************************************
  *** INCLUDES
  **********************************************************************************************************************************/
@@ -53,12 +55,12 @@ m_dac_channel ( channel ) , m_buffer( 0 ) , m_max_range(max_range) , m_error(OK)
 		m_error = ERROR;
 }
 /**
-	\fn DAC::dac_error DAC::Inicializar ( void )
+	\fn DAC::dac_error DAC::Initialize ( void )
 	\brief Inicializa el DAC
 	\details Configura todos los registros de dicho DAC
 	\return Código de error
 */
-DAC::dac_error DAC::Inicializar ( void )
+DAC::dac_error DAC::Initialize ( void )
 {
 	if ( m_error == OK )
 	{

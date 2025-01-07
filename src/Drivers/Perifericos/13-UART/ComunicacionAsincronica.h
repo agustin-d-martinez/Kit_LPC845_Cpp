@@ -1,7 +1,7 @@
 /*******************************************************************************************************************************//**
  *
  * @file		ComunicacionAsincronica.h
- * @brief		Objeto base para la creacion de comunicaciones asincrónicas
+ * @brief		Objeto base para la creacion de comunicaciones asincrónicas.
  * @date		5 oct. 2022
  * @author		Ing. Marcelo Trujillo
  *
@@ -49,9 +49,9 @@ class ComunicacionAsincronica
 {
 	public:	
 						ComunicacionAsincronica() = default;			/**< Constructor por defecto */
-		virtual void 	Transmit ( const char * msg) = 0;				/**< Funcion de transmitir */
-		virtual void 	Transmit ( const void * msg , uint32_t n ) = 0;	/**< Funcion de transmitir */
-		virtual void* 	Message ( void * msg , uint32_t n ) = 0;		/**< Funcion de lectura */
+		virtual void 	Write ( const char * msg) = 0;					/**< Funcion de transmitir */
+		virtual void 	Write ( const void * msg , uint32_t n ) = 0;	/**< Funcion de transmitir */
+		virtual void* 	Read ( void * msg , uint32_t n ) = 0;			/**< Funcion de lectura */
 		virtual void 	UART_IRQHandler (void) = 0;						/**< Funcion de interrupcion */
 		virtual 		~ComunicacionAsincronica() = default;			/**< Destructor por defecto */
 	protected:

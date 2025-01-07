@@ -1,0 +1,7 @@
+<map id="LCD" name="LCD">
+<area shape="rect" id="Node000001" title="Clase del objeto lcd El objeto lcd permite el manejo de displays digitales mediante comunicación de 4..." alt="" coords="60,80,109,107"/>
+<area shape="rect" id="Node000002" href="$class_display.html" title="Clase del objeto display Clase abstracta pura para la generación de displays." alt="" coords="5,5,71,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="57,44,79,78,74,81,52,47"/>
+<area shape="rect" id="Node000003" href="$class_callback.html" title="Clase del objeto Callback." alt="" coords="95,5,168,32"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="117,47,95,81,90,78,113,44"/>
+</map>

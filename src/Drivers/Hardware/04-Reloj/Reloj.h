@@ -2,8 +2,11 @@
  *
  * @file		Reloj.h
  * @brief		Objeto que guardará el tiempo desde que se creo
+ * @details     Proporciona métodos para inicializar un reloj.
+ *
  * @date		27 nov. 2022
- * @author		Técnico Martinez Agustin
+ * @version		1.0
+ * @author     	Técnico. Martinez Agustin (masteragus365@gmail.com)
  *
  **********************************************************************************************************************************/
 
@@ -64,10 +67,10 @@ class Reloj : public Callback
 		virtual ~Reloj();
 
 	private:
-		void 	Actualizar( void );
+		void 	Update( void );
 
 	protected:
-		void 	SWhandler ( void );
+		void 	SWhandler ( void ) override;
 };
 
 #endif /* RELOJ_H_ */

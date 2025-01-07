@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>KITLPC845-C++: barrido Class Reference</title>
+<title>LPC845-C++: barrido Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -18,6 +18,11 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,10 +32,22 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">KITLPC845-C++<span id="projectnumber">&#160;2.0</span>
+   <div id="projectname">LPC845-C++<span id="projectnumber">&#160;2.0</span>
    </div>
-   <div id="projectbrief">KitdelibreriascustomenC++paralaplacadedesarrolloLPC845</div>
+   <div id="projectbrief">Kit de librerias propias de la placa de desarrollo LPC845</div>
   </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -47,17 +64,6 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 $(function() { codefold.init(0); });
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('',true,false,'search.php','Search',true);
-  $(function() { init_search(); });
-});
-/* @license-end */
-</script>
-<div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -112,20 +118,25 @@ $(function(){initNavTree('classbarrido.html',''); initResizable(true); });
 Inheritance diagram for barrido:</div>
 <div class="dyncontent">
 <div class="center"><img src="classbarrido__inherit__graph.png" border="0" usemap="#abarrido_inherit__map" alt="Inheritance graph"/></div>
+<map name="abarrido_inherit__map" id="abarrido_inherit__map">
+<area shape="rect" title="Clase del objeto barrido Clase abstracta pura para la generación de barridos." alt="" coords="5,5,66,32"/>
+<area shape="rect" href="class_i4017.html" title="Clase del objeto I4017 El objeto I4017 permite el control del integrado del mismo nombre...." alt="" coords="9,80,62,107"/>
+<area shape="poly" title=" " alt="" coords="38,48,38,80,33,80,33,48"/>
+</map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ad2fe464d7237752f1403c6bee9aa755e" id="r_ad2fe464d7237752f1403c6bee9aa755e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad2fe464d7237752f1403c6bee9aa755e">SetDigito</a> (void)=0</td></tr>
 <tr class="separator:ad2fe464d7237752f1403c6bee9aa755e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeea8bd45cd9f31760ffd8190c78f2030" id="r_aeea8bd45cd9f31760ffd8190c78f2030"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeea8bd45cd9f31760ffd8190c78f2030">Inicializar</a> (void)=0</td></tr>
-<tr class="separator:aeea8bd45cd9f31760ffd8190c78f2030"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f8a4bf08810cedafe952186b4795dba" id="r_a8f8a4bf08810cedafe952186b4795dba"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f8a4bf08810cedafe952186b4795dba">Initialize</a> (void)=0</td></tr>
+<tr class="separator:a8f8a4bf08810cedafe952186b4795dba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Clase del objeto barrido Clase abstracta pura para la generación de barridos. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="aeea8bd45cd9f31760ffd8190c78f2030" name="aeea8bd45cd9f31760ffd8190c78f2030"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeea8bd45cd9f31760ffd8190c78f2030">&#9670;&#160;</a></span>Inicializar()</h2>
+<a id="a8f8a4bf08810cedafe952186b4795dba" name="a8f8a4bf08810cedafe952186b4795dba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f8a4bf08810cedafe952186b4795dba">&#9670;&#160;</a></span>Initialize()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -134,7 +145,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void barrido::Inicializar </td>
+          <td class="memname">virtual void barrido::Initialize </td>
           <td>(</td>
           <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -148,7 +159,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Funcion de inicializacion </p>
 
-<p>Implemented in <a class="el" href="class_i4017.html#a49b92c0109ebecf4d1155e983f1f320b">I4017</a>.</p>
+<p>Implemented in <a class="el" href="class_i4017.html#a21f3de366a7a38deb69fe209142b10d4">I4017</a>.</p>
 
 </div>
 </div>
@@ -176,12 +187,12 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>constructor por defecto Funcion de encendido del barrido </p>
 
-<p>Implemented in <a class="el" href="class_i4017.html#a03716526d0002f3a093d027f9dfd326a">I4017</a>.</p>
+<p>Implemented in <a class="el" href="class_i4017.html#ab4876ff5b2e8387026e339d26aa7e984">I4017</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>E:/Agustin/Escritorio/MCUexpresso/KitLPC845-C++/src/Drivers/Hardware/02-Displays/7Segmentos/A-Barrido/<a class="el" href="_barrido_8h_source.html">Barrido.h</a></li>
+<li><a class="el" href="_barrido_8h_source.html">Barrido.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

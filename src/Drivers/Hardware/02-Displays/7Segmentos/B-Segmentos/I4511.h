@@ -56,8 +56,8 @@ class I4511 : public segmentos
 	public:
 		// tiene que recibir los gpio BCD
 		I4511( const vector <gpio * > &bcd) :  m_bcd (bcd){}	/**< constructor por defecto */
-		void SetSegmentos ( uint16_t ) ;
-		void Inicializar ( void );
+		void SetSegmentos ( uint16_t ) override;
+		void Initialize ( void ) override;
 		virtual ~I4511() {};			/**< destructor por defecto */
 };
 

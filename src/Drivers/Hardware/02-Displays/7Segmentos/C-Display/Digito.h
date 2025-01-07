@@ -65,7 +65,7 @@ class digito
 
 		bool Set(uint16_t valor);
 		uint8_t Get( void );
-		void Clr( void );
+		void Clear( void );
 
 		virtual ~digito() {};		/**< destructor por defecto */
 };

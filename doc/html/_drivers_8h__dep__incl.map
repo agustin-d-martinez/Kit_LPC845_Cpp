@@ -1,0 +1,16 @@
+<map id="Drivers.h" name="Drivers.h">
+<area shape="rect" id="Node000001" title="Archivo Master con todos los includes de perifericos del Kit." alt="" coords="161,5,235,32"/>
+<area shape="rect" id="Node000002" href="$_comunicacion_8h.html" title="Clase máquina de estados de comunicación del proyecto." alt="" coords="78,80,193,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,46,148,81,144,78,175,42"/>
+<area shape="rect" id="Node000006" href="$_semaforo_8h.html" title="Clases semaforo de ejemplo utilizando led tricolor propio de la placa." alt="" coords="216,80,305,107"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="221,42,252,78,248,81,217,46"/>
+<area shape="rect" id="Node000003" href="$_comunicacion_8cpp.html" title="Clase máquina de estados de comunicación del proyecto." alt="" coords="5,155,135,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="116,120,83,156,79,152,112,116"/>
+<area shape="rect" id="Node000004" href="$inicializar_8h.html" title="Archivo inicializador de la placa." alt="" coords="159,155,245,181"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="159,116,192,152,189,156,155,120"/>
+<area shape="rect" id="Node000005" href="$inicializar_8cpp.html" title="Archivo inicializador de la placa." alt="" coords="152,229,252,256"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="205,197,205,229,199,229,199,197"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="243,121,214,156,210,153,239,117"/>
+<area shape="rect" id="Node000007" href="$_semaforo_8cpp.html" title="Clases semaforo de ejemplo utilizando led tricolor propio de la placa." alt="" coords="270,155,372,181"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="283,117,312,153,308,156,279,120"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="distancia" name="distancia">
+<area shape="rect" id="Node000001" title="Clase del objeto distancia Clase abstracta pura para la generación de HCS&#45;R04." alt="" coords="9,5,83,32"/>
+<area shape="rect" id="Node000002" href="$class_h_c___s_r04.html" title="Clase del objeto HC_SR04 El objeto HC_SR04 Mide distancia mediante el uso de un ultrasónico...." alt="" coords="5,80,87,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="49,48,49,80,43,80,43,48"/>
+</map>

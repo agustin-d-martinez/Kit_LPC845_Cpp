@@ -1,9 +1,12 @@
 /*******************************************************************************************************************************//**
  *
- * @file		systick.h
- * @brief		Firmware del systick
+ * @file		systick.cpp
+ * @brief		Firmware del systick.
+ * @details
+ *
  * @date		20 abr. 2022
- * @author		Marcelo
+ * @version		2.0
+ * @author     	Marcelo y Técnico. Martinez Agustin (masteragus365@gmail.com)
  *
  **********************************************************************************************************************************/
 
@@ -18,6 +21,7 @@
 /***********************************************************************************************************************************
  *** MACROS PRIVADAS AL MODULO
  **********************************************************************************************************************************/
+/** MAX ticks of SYSTICK clock. */
 #define MAX_TICKS 	0xffffff
 /***********************************************************************************************************************************
  *** TIPOS DE DATOS PRIVADOS AL MODULO
@@ -41,7 +45,6 @@ uint32_t g_systick_freq = 0;
 /**
 	\fn void SysTick_Handler( void )
 	\brief Funcion handler de todos los systick
-	\return void
 */
 void SysTick_Handler( void )
 {
@@ -52,9 +55,9 @@ void SysTick_Handler( void )
 	}
 }
 /**
-	\fn uint32_t Inicializar_SysTick( uint32_t ticks )
-	\brief Inicializa el systick en la frecuencia asignada
-	\param  [in] freq: ticks por segundo
+	\fn uint32_t Inicializar_SysTick( uint32_t freq )
+	\brief Inicializa el systick en la frecuencia asignada.
+	\param  [in] freq: ticks por segundo.
 	\return mensaje de error
 */
 uint32_t Inicializar_SysTick( uint32_t freq )

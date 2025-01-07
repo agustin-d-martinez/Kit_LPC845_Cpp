@@ -1,3 +1,12 @@
+/*******************************************************************************************************************************//**
+ *
+ * @file		inicializar.cpp
+ * @brief		Archivo inicializador de la placa.
+ * @date		26 ene. 2023
+ * @author		Técnico Martinez Agustín
+ * @version		v1.0
+ *
+ **********************************************************************************************************************************/
 /***********************************************************************************************************************************
  *** INCLUDES
  **********************************************************************************************************************************/
@@ -41,9 +50,9 @@ void inicializarApp ( void )
 	led_am = new Output(gpio::port1, 1, gpio::pushpull , gpio::low);
 	led_roj = new Output(gpio::port1, 2, gpio::pushpull, gpio::low);
 	led_ver = new Output(gpio::port1, 0, gpio::pushpull, gpio::low);
-	led_am->SetUp();
-	led_ver->SetUp();
-	led_roj->SetUp();
+	led_am->Initialize();
+	led_ver->Initialize();
+	led_roj->Initialize();
 	Semaforo1 = new Semaforo(led_ver, led_am, led_roj, msg);
 
 	uart0 = new Uart( PORT_TX_USB , PIN_TX_USB, PORT_RX_USB, PIN_RX_USB, USART_USB , 9600 , Uart::ocho_bits , Uart::NoParidad , 64 , 64 );	//Ejemplo de uso con el USB de debbug

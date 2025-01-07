@@ -2,11 +2,13 @@
  *
  * @file		DAC.h
  * @brief		Objeto DAC
+ * @details
+ *
  * @date		12 ene. 2023
- * @author		Técnico Martinez Agustin
+ * @version		1.0
+ * @author     	Técnico. Martinez Agustin (masteragus365@gmail.com)
  *
  **********************************************************************************************************************************/
-
 /***********************************************************************************************************************************
  *** MODULO
  **********************************************************************************************************************************/
@@ -73,7 +75,7 @@ class DAC : protected Pin
 
 	public:
 		DAC( dac_channel channel , uint32_t max_range = MAX_DAC_VALUE );
-		DAC::dac_error Inicializar ( void );
+		DAC::dac_error Initialize ( void );
 		void Set ( uint32_t val );
 		uint32_t Get ( void ) const;
 

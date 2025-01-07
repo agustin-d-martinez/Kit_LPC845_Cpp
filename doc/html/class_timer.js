@@ -1,20 +1,9 @@
 var class_timer =
 [
     [ "bases_t", "class_timer.html#acdc55034d21f5b88115abf0cc17b6773", null ],
-    [ "bases_t", "class_timer.html#a9cec0a44d98f2898630bb03951269195", [
-      [ "DEC", "class_timer.html#a9cec0a44d98f2898630bb03951269195a69e7733d38b3bf598fcda6d265f82863", null ],
-      [ "SEG", "class_timer.html#a9cec0a44d98f2898630bb03951269195aff198ec8bfa0fc6c7200017bab37af9d", null ],
-      [ "MIN", "class_timer.html#a9cec0a44d98f2898630bb03951269195a5937bfa75a19955c104317aa01434622", null ],
-      [ "HOR", "class_timer.html#a9cec0a44d98f2898630bb03951269195a32a7ab27c56566790706d1403c6e00eb", null ]
-    ] ],
-    [ "erroresTimers_t", "class_timer.html#aa7b50436c0c7f6f9b16d7f456af91f25", [
-      [ "errorTimer", "class_timer.html#aa7b50436c0c7f6f9b16d7f456af91f25aea7cd2bb12b8c99c7d65c5d08fa27a0a", null ],
-      [ "OKtimers", "class_timer.html#aa7b50436c0c7f6f9b16d7f456af91f25a25984ca44d4aea11de7561fad832b79b", null ]
-    ] ],
-    [ "standby_t", "class_timer.html#a83c5a2b9f40a5207f619f42dff3fc80d", [
-      [ "RUN", "class_timer.html#a83c5a2b9f40a5207f619f42dff3fc80dac50961728bb11af376ebe525bbaf8a95", null ],
-      [ "PAUSE", "class_timer.html#a83c5a2b9f40a5207f619f42dff3fc80da23fe083db961e48532504a40c8a46322", null ]
-    ] ],
+    [ "bases_t", "class_timer.html#a9cec0a44d98f2898630bb03951269195", null ],
+    [ "erroresTimers_t", "class_timer.html#aa7b50436c0c7f6f9b16d7f456af91f25", null ],
+    [ "standby_t", "class_timer.html#a83c5a2b9f40a5207f619f42dff3fc80d", null ],
     [ "Timer", "class_timer.html#a5f16e8da27d2a5a5242dead46de05d97", null ],
     [ "Timer", "class_timer.html#a2682e0c8a8bbc50b22fbceda92903eb7", null ],
     [ "ClrTmrEvent", "class_timer.html#a18a28d253b6bc7190c5e133290120c22", null ],
@@ -32,7 +21,7 @@ var class_timer =
     [ "SetTmrEvent", "class_timer.html#a7528e58c272cf861d7cf86651c7eb3e5", null ],
     [ "SetTmrHandler", "class_timer.html#a2d1ff5791164f492ceb0efe4873bcc37", null ],
     [ "StandByTimer", "class_timer.html#a17c2200e5ebceab3cb70f53dea2da135", null ],
-    [ "SWhandler", "class_timer.html#ab1b056629435b57ae6d31323507b9330", null ],
+    [ "SWhandler", "class_timer.html#a25c56f1181fb355efd16b0d6825b09d7", null ],
     [ "TimerStart", "class_timer.html#a6f687e19b52d89e602030ed046ed5212", null ],
     [ "TimerStart", "class_timer.html#a4de6cf13b879de73abc9421fd9fab60d", null ],
     [ "TimerStop", "class_timer.html#a4a8fdd11e028684a8b770dd375278462", null ],

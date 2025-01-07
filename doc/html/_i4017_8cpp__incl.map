@@ -1,0 +1,21 @@
+<map id="I4017.cpp" name="I4017.cpp">
+<area shape="rect" id="Node000001" title="Objeto de control del integrado I4017." alt="" coords="212,5,291,32"/>
+<area shape="rect" id="Node000002" href="$_i4017_8h.html" title="Objeto de control del integrado I4017." alt="" coords="173,80,330,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="254,33,254,64,249,64,249,33"/>
+<area shape="rect" id="Node000003" href="$_barrido_8h.html" title="Clase abstracta de manejo barridos de datos." alt="" coords="5,187,162,245"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="207,141,143,181,141,176,204,137"/>
+<area shape="rect" id="Node000004" href="$gpio_8h.html" title="Módulo con clase de manejo de GPIO." alt="" coords="185,195,318,237"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="254,139,254,180,249,180,249,139"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="342,203,399,229"/>
+<area shape="poly" id="edge10_Node000002_Node000009" title=" " alt="" coords="286,137,347,190,343,194,282,141"/>
+<area shape="rect" id="Node000005" href="$_l_p_c845_8h.html" title="Registros del LPC845." alt="" coords="161,392,240,419"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="249,238,211,378,206,376,243,237"/>
+<area shape="rect" id="Node000007" href="$_pin_8h.html" title="Clase Abstracta de cualquier pin del microcontrolador." alt="" coords="264,384,388,427"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="256,237,263,283,279,335,301,370,296,373,274,337,258,284,251,238"/>
+<area shape="rect" id="Node000008" href="$_in_out_8h.html" title="Clase Abstracta Pura de las GPIO." alt="" coords="289,293,422,336"/>
+<area shape="poly" id="edge8_Node000004_Node000008" title=" " alt="" coords="275,236,324,281,320,284,272,240"/>
+<area shape="rect" id="Node000006" href="$tipos_8h.html" title="Definiciones de tipos de variables." alt="" coords="233,475,294,501"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="213,418,247,461,243,464,209,421"/>
+<area shape="poly" id="edge7_Node000007_Node000006" title=" " alt="" coords="312,429,285,464,281,461,308,426"/>
+<area shape="poly" id="edge9_Node000008_Node000007" title=" " alt="" coords="351,337,340,370,335,368,346,336"/>
+</map>

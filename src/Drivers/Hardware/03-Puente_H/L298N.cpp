@@ -1,9 +1,12 @@
 /*******************************************************************************************************************************//**
  *
- * @file		L298N.h
+ * @file		L298N.cpp
  * @brief		Clase del módulo de puente H LN298N
+ * @details     Proporciona métodos para inicializar y enviar datos al puente H LN298N.
+ *
  * @date		25 sep. 2022
- * @author		Técnico. Martinez Agustin
+ * @version		1.0
+ * @author     	Técnico. Martinez Agustin (masteragus365@gmail.com)
  *
  **********************************************************************************************************************************/
 
@@ -52,11 +55,11 @@ L298N::L298N( gpio* &_motorDer_a , gpio* &_motorDer_b , gpio* &_motorIzq_a , gpi
 	m_motor1_a(_motorDer_a) , m_motor1_b(_motorDer_b) , m_motor2_a(_motorIzq_a) , m_motor2_b(_motorIzq_b)
 { }
 /**
-	\fn void L298N::Inicializar( void )
+	\fn void L298N::Initialize( void )
 	\brief Inicializa todas las salidas GPIO.
  	\details Setea la dirección y apaga todas las GPIO que posee.
 */
-void L298N::Inicializar( void )
+void L298N::Initialize( void )
 {
 	m_motor1_a->SetDir();
 	m_motor1_a->ClrPin();

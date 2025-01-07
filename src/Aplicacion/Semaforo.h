@@ -1,7 +1,7 @@
 /*******************************************************************************************************************************//**
  *
  * @file		Semaforo.h
- * @brief		Breve descripción del Módulo
+ * @brief		Clases semaforo de ejemplo utilizando led tricolor propio de la placa.
  * @date		26 ene. 2023
  * @author		Técnico Martinez Agustín
  * @version		v1.0

@@ -1,0 +1,9 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$class_comunicacion_sincronica.html" title="Clase del objeto ComunicacionAsincronica Clase abstracta pura para la generación de comunicaciones si..." alt="" coords="5,31,171,57"/>
+<area shape="rect" id="Node000001" href="$class_i2_c.html" title="Clase del objeto I2C El objeto I2C genera una comunicación sincrónica de tipo I2C...." alt="" coords="219,5,262,32"/>
+<area shape="poly" id="edge24_Node000000_Node000001" title=" " alt="" coords="185,25,218,19,219,25,186,30"/>
+<area shape="rect" id="Node000003" href="$class_s_p_i.html" title="Clase del objeto SPI." alt="" coords="219,56,262,83"/>
+<area shape="poly" id="edge26_Node000000_Node000003" title=" " alt="" coords="187,58,219,63,218,68,186,63"/>
+<area shape="rect" id="Node000002" href="$class_i2_c_master.html" title="Clase del objeto I2CMaster El objeto I2CMaster genera una comunicación tipo master de I2C utilizando ..." alt="" coords="310,5,392,32"/>
+<area shape="poly" id="edge25_Node000001_Node000002" title=" " alt="" coords="277,16,309,16,309,21,277,21"/>
+</map>

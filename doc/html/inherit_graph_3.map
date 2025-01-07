@@ -1,0 +1,41 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$class_callback.html" title="Clase del objeto Callback." alt="" coords="123,208,195,235"/>
+<area shape="rect" id="Node000001" href="$class_input.html" title="Clase del objeto Input." alt="" coords="286,157,336,184"/>
+<area shape="poly" id="edge2_Node000000_Node000001" title=" " alt="" coords="209,202,284,176,286,181,211,207"/>
+<area shape="rect" id="Node000013" href="$class_l_c_d.html" title="Clase del objeto lcd El objeto lcd permite el manejo de displays digitales mediante comunicación de 4..." alt="" coords="286,411,335,437"/>
+<area shape="poly" id="edge3_Node000000_Node000013" title=" " alt="" coords="197,244,197,245,209,267,216,287,219,325,223,361,231,378,245,397,265,410,287,418,285,423,262,415,241,401,226,381,218,362,214,325,211,288,205,269,193,248,192,247"/>
+<area shape="rect" id="Node000003" href="$class_output.html" title="Clase del objeto outputs." alt="" coords="280,107,341,133"/>
+<area shape="poly" id="edge4_Node000000_Node000003" title=" " alt="" coords="180,195,208,168,242,143,279,126,282,131,244,148,211,172,184,199"/>
+<area shape="rect" id="Node000016" href="$class_reloj.html" title="Clase del objeto Reloj." alt="" coords="285,208,336,235"/>
+<area shape="poly" id="edge5_Node000000_Node000016" title=" " alt="" coords="211,219,284,219,284,224,211,224"/>
+<area shape="rect" id="Node000017" href="$class_timer.html" title="Clase del objeto timer." alt="" coords="284,259,338,285"/>
+<area shape="poly" id="edge6_Node000000_Node000017" title=" " alt="" coords="211,236,284,261,282,266,209,241"/>
+<area shape="rect" id="Node000015" href="$classdisplay7_segmentos.html" title="Clase del objeto display7Segmentos El objeto display7Segmentos permite el control de un display con d..." alt="" coords="243,360,378,387"/>
+<area shape="poly" id="edge7_Node000000_Node000015" title=" " alt="" coords="196,243,197,245,213,273,220,298,227,322,245,346,261,357,258,362,241,350,222,324,215,300,208,275,193,248,192,247"/>
+<area shape="rect" id="Node000018" href="$classteclado.html" title="Clase del objeto teclado FUNCIONAMIENTO: Este objeto permite controlar teclados matriciales cableados..." alt="" coords="279,309,342,336"/>
+<area shape="poly" id="edge8_Node000000_Node000018" title=" " alt="" coords="194,242,197,245,220,271,230,283,244,295,280,312,278,317,242,300,226,287,216,275,193,249,191,246"/>
+<area shape="rect" id="Node000014" href="$class_display.html" title="Clase del objeto display Clase abstracta pura para la generación de displays." alt="" coords="126,411,192,437"/>
+<area shape="poly" id="edge9_Node000014_Node000013" title=" " alt="" coords="207,421,286,421,286,427,207,427"/>
+<area shape="poly" id="edge10_Node000014_Node000015" title=" " alt="" coords="206,406,267,385,269,390,207,411"/>
+<area shape="rect" id="Node000007" href="$class_in_out.html" title="Clase del objeto InOut." alt="" coords="13,132,67,159"/>
+<area shape="rect" id="Node000002" href="$classgpio.html" title="Clase del objeto gpio." alt="" coords="136,132,182,159"/>
+<area shape="poly" id="edge11_Node000007_Node000002" title=" " alt="" coords="82,143,136,143,136,148,82,148"/>
+<area shape="poly" id="edge12_Node000002_Node000001" title=" " alt="" coords="197,149,285,164,285,169,196,154"/>
+<area shape="poly" id="edge13_Node000002_Node000003" title=" " alt="" coords="196,137,280,122,281,128,197,142"/>
+<area shape="rect" id="Node000004" href="$class_pin_interrupt.html" title="Clase del objeto Pin_interrupt El objeto Pin_interrupt debe ser heredado por cualquier objeto que des..." alt="" coords="266,56,355,83"/>
+<area shape="poly" id="edge14_Node000002_Node000004" title=" " alt="" coords="192,121,242,92,268,81,270,86,244,97,194,126"/>
+<area shape="rect" id="Node000005" href="$class_p_w_m___reader.html" title="Clase del objeto PWM_Reader." alt="" coords="426,31,530,57"/>
+<area shape="poly" id="edge15_Node000004_Node000005" title=" " alt="" coords="370,58,426,49,427,54,371,63"/>
+<area shape="rect" id="Node000006" href="$class_m_r_thandler.html" title="Clase del objeto MRThandler El objeto MRThandler debe ser heredado por cualquier objeto que desee est..." alt="" coords="265,5,356,32"/>
+<area shape="poly" id="edge16_Node000006_Node000005" title=" " alt="" coords="372,25,426,34,426,39,372,31"/>
+<area shape="rect" id="Node000008" href="$class_pin.html" title="Clase del objeto Pin." alt="" coords="20,284,60,311"/>
+<area shape="poly" id="edge20_Node000008_Node000002" title=" " alt="" coords="59,270,145,157,149,161,63,273"/>
+<area shape="rect" id="Node000009" href="$class_a_d_c.html" title="Clase del objeto ADC FUNCIONAMIENTO: La clase ADC utiliza el ADCGroup para poder ser manejada de form..." alt="" coords="134,259,184,285"/>
+<area shape="poly" id="edge17_Node000008_Node000009" title=" " alt="" coords="75,287,132,275,134,280,76,292"/>
+<area shape="rect" id="Node000010" href="$class_d_a_c.html" title="Clase del objeto DAC FUNCIONAMIENTO: Realiza una conversion digital&#45;&gt;analógica en un rango desde 0 ha..." alt="" coords="134,309,184,336"/>
+<area shape="poly" id="edge18_Node000008_Node000010" title=" " alt="" coords="76,302,134,315,132,320,75,307"/>
+<area shape="rect" id="Node000011" href="$class_pwm.html" title="Clase del objeto Pwm." alt="" coords="133,360,184,387"/>
+<area shape="poly" id="edge19_Node000008_Node000011" title=" " alt="" coords="74,316,138,357,135,362,71,320"/>
+<area shape="rect" id="Node000012" href="$class_s_ctimer.html" title="Clase del objeto SCtimer El objeto SCtimer debe ser heredado por quienes desen utilizar las interrucp..." alt="" coords="5,360,75,387"/>
+<area shape="poly" id="edge21_Node000012_Node000011" title=" " alt="" coords="90,371,133,371,133,376,90,376"/>
+</map>

@@ -1,9 +1,11 @@
 /*******************************************************************************************************************************//**
  *
- * @file		LCD.h
- * @brief		Clase para un LCD con comunicación de 4 patas, solo escritura
- * @date		22 jun. 2022
- * @author		Técnico. Martinez Agustin
+ * @file       LCD.cpp
+ * @brief      Clase para manejar un LCD con comunicación de 4 patas (solo escritura).
+ * @details    Proporciona métodos para inicializar y enviar datos al LCD. Diseñada para facilitar la integración en proyectos embebidos.
+ *
+ * @date       22 jun. 2022
+ * @author     Técnico. Martinez Agustin (masteragus365@gmail.com)
  *
  **********************************************************************************************************************************/
 /***********************************************************************************************************************************
@@ -56,13 +58,13 @@ LCD::~LCD()
 	UnSetInterrupt();
 }
 /**
-	\fn void LCD::Inicializar( const uint8_t filas , const uint8_t columnas )
+	\fn void LCD::Initialize( const uint8_t filas , const uint8_t columnas )
 	\brief Inicializa el LCD.
  	\details Crea el buffer y comienza a setear todas las salidas para comenzar a funcionar
  	\param [in] filas: Cantidad de filas del LCD.
  	\param [in] columnas: Cantidad de columnas del LCD.
 */
-void LCD::Inicializar( const uint8_t filas , const uint8_t columnas )
+void LCD::Initialize( const uint8_t filas , const uint8_t columnas )
 {
 	for ( uint8_t i = 0 ; (i < m_salidas.size()) && (m_error == gpio::ok) ; i++ )
 		m_error = m_salidas[i]->SetDir();

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>KITLPC845-C++: E:/Agustin/Escritorio/MCUexpresso/KitLPC845-C++/src/Drivers/Perifericos/07-Timer/Timer.h Source File</title>
+<title>LPC845-C++: Timer.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -18,6 +18,11 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,10 +32,22 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">KITLPC845-C++<span id="projectnumber">&#160;2.0</span>
+   <div id="projectname">LPC845-C++<span id="projectnumber">&#160;2.0</span>
    </div>
-   <div id="projectbrief">KitdelibreriascustomenC++paralaplacadedesarrolloLPC845</div>
+   <div id="projectbrief">Kit de librerias propias de la placa de desarrollo LPC845</div>
   </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -47,17 +64,6 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 $(function() { codefold.init(0); });
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('',true,false,'search.php','Search',true);
-  $(function() { init_search(); });
-});
-/* @license-end */
-</script>
-<div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -107,7 +113,7 @@ $(function(){initNavTree('_timer_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> *** INCLUDES GLOBALES</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> **********************************************************************************************************************************/</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;<a class="code" href="_callback_8h.html">Perifericos/06-Callback/Callback.h</a>&gt;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;tipos.h&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;<a class="code" href="tipos_8h.html">tipos.h</a>&quot;</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/***********************************************************************************************************************************</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> *** DEFINES GLOBALES</span></div>
@@ -136,7 +142,7 @@ $(function(){initNavTree('_timer_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_timer.html#a83c5a2b9f40a5207f619f42dff3fc80d">   50</a></span>        <span class="keyword">enum</span>        <a class="code hl_enumeration" href="class_timer.html#a83c5a2b9f40a5207f619f42dff3fc80d">standby_t</a>          { RUN , PAUSE };</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_timer.html#a2dd85f439d172418dc50d36a1ead5fda">   53</a></span>        <span class="keyword">volatile</span> uint32_t   <a class="code hl_variable" href="class_timer.html#a2dd85f439d172418dc50d36a1ead5fda">m_TmrRun</a>;               </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_timer.html#a2dd85f439d172418dc50d36a1ead5fda">   53</a></span>        <span class="keyword">volatile</span> <a class="code hl_typedef" href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>   <a class="code hl_variable" href="class_timer.html#a2dd85f439d172418dc50d36a1ead5fda">m_TmrRun</a>;               </div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_timer.html#a4d3f6474c67de284a77c4f69fb36067d">   54</a></span>        <span class="keyword">volatile</span> <span class="keywordtype">bool</span>       <a class="code hl_variable" href="class_timer.html#a4d3f6474c67de284a77c4f69fb36067d">m_TmrEvent</a>;               </div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="class_timer.html#ab4db941b5d3a3ecde10d9302e6db0edc">   55</a></span>        void        (* <a class="code hl_variable" href="class_timer.html#ab4db941b5d3a3ecde10d9302e6db0edc">m_TmrHandler</a> ) (void);       </div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="class_timer.html#a8b6f6f49d9eba6daea47132c8a314e5b">   56</a></span>        <span class="keyword">volatile</span> <span class="keywordtype">bool</span>       <a class="code hl_variable" href="class_timer.html#a8b6f6f49d9eba6daea47132c8a314e5b">m_TmrStandBy</a> ;          </div>
@@ -145,34 +151,34 @@ $(function(){initNavTree('_timer_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <a class="code hl_function" href="class_timer.html#a5f16e8da27d2a5a5242dead46de05d97">Timer</a>( ) ;</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <a class="code hl_function" href="class_timer.html#a5f16e8da27d2a5a5242dead46de05d97">Timer</a> ( <span class="keyword">const</span> <a class="code hl_enumeration" href="class_timer.html#a9cec0a44d98f2898630bb03951269195">bases_t</a> base , <span class="keyword">const</span> <a class="code hl_typedef" href="group___drivers.html#gad8c2afd48cc8eb5c42aacf5d7b9f38dc">Timer_Handler</a> handler = <span class="keyword">nullptr</span> );</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keywordtype">void</span>        <a class="code hl_function" href="class_timer.html#a4de6cf13b879de73abc9421fd9fab60d">TimerStart</a> ( uint32_t time, <span class="keyword">const</span> <a class="code hl_typedef" href="group___drivers.html#gad8c2afd48cc8eb5c42aacf5d7b9f38dc">Timer_Handler</a> handler , <span class="keyword">const</span> <a class="code hl_enumeration" href="class_timer.html#a9cec0a44d98f2898630bb03951269195">bases_t</a> base );</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keywordtype">void</span>        <a class="code hl_function" href="class_timer.html#a84b5908afad064ed57c12707da8143b7">SetTimer</a>(  uint32_t time );</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        uint32_t    <a class="code hl_function" href="class_timer.html#a02d39c7351bc4960e1538c1610746c7b">GetTimer</a>( <span class="keywordtype">void</span> ) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keywordtype">void</span>        <a class="code hl_function" href="class_timer.html#a17c2200e5ebceab3cb70f53dea2da135">StandByTimer</a>( <span class="keyword">const</span> uint8_t accion );</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keywordtype">void</span>        <a class="code hl_function" href="class_timer.html#a4de6cf13b879de73abc9421fd9fab60d">TimerStart</a> ( <a class="code hl_typedef" href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> time, <span class="keyword">const</span> <a class="code hl_typedef" href="group___drivers.html#gad8c2afd48cc8eb5c42aacf5d7b9f38dc">Timer_Handler</a> handler , <span class="keyword">const</span> <a class="code hl_enumeration" href="class_timer.html#a9cec0a44d98f2898630bb03951269195">bases_t</a> base );</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keywordtype">void</span>        <a class="code hl_function" href="class_timer.html#a84b5908afad064ed57c12707da8143b7">SetTimer</a>(  <a class="code hl_typedef" href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> time );</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <a class="code hl_typedef" href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>    <a class="code hl_function" href="class_timer.html#a02d39c7351bc4960e1538c1610746c7b">GetTimer</a>( <span class="keywordtype">void</span> ) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keywordtype">void</span>        <a class="code hl_function" href="class_timer.html#a17c2200e5ebceab3cb70f53dea2da135">StandByTimer</a>( <span class="keyword">const</span> <a class="code hl_typedef" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> accion );</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keywordtype">void</span>        <a class="code hl_function" href="class_timer.html#a4d6351689c2a827edcd3ed3a1bb4f971">SetTimerBase</a>( <span class="keyword">const</span> <a class="code hl_enumeration" href="class_timer.html#a9cec0a44d98f2898630bb03951269195">bases_t</a> base );</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keywordtype">void</span>        <a class="code hl_function" href="class_timer.html#a4a8fdd11e028684a8b770dd375278462">TimerStop</a>( <span class="keywordtype">void</span> );</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        uint32_t    <a class="code hl_function" href="class_timer.html#a64b2ce2e82d2595ce35556cfccf478b5">GetTmrRun</a>( <span class="keywordtype">void</span> );</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <a class="code hl_typedef" href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>    <a class="code hl_function" href="class_timer.html#a64b2ce2e82d2595ce35556cfccf478b5">GetTmrRun</a>( <span class="keywordtype">void</span> );</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keywordtype">void</span>        <a class="code hl_function" href="class_timer.html#a7528e58c272cf861d7cf86651c7eb3e5">SetTmrEvent</a>( <span class="keywordtype">void</span> );</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="keywordtype">void</span>        <a class="code hl_function" href="class_timer.html#a18a28d253b6bc7190c5e133290120c22">ClrTmrEvent</a>( <span class="keywordtype">void</span> );</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="keywordtype">bool</span>        <a class="code hl_function" href="class_timer.html#ad4586720d311f0c66b400c2a40bab248">GetTmrEvent</a>( <span class="keywordtype">void</span> );</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keywordtype">bool</span>        <a class="code hl_function" href="class_timer.html#a3446cbde556eec707810feeb61575571">GetmrStandBy</a>( <span class="keywordtype">void</span> );</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="keywordtype">void</span>        <a class="code hl_function" href="class_timer.html#a3a01861fc3c838d08d4c783970ae299d">SetmrStandBy</a>( uint8_t accion);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="keywordtype">void</span>        <a class="code hl_function" href="class_timer.html#a3a01861fc3c838d08d4c783970ae299d">SetmrStandBy</a>( <a class="code hl_typedef" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> accion);</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keywordtype">void</span>        <a class="code hl_function" href="class_timer.html#a2d1ff5791164f492ceb0efe4873bcc37">SetTmrHandler</a>( <span class="keywordtype">void</span> );</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keywordtype">void</span>        <a class="code hl_function" href="class_timer.html#a4de6cf13b879de73abc9421fd9fab60d">TimerStart</a>( uint32_t time );</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keywordtype">void</span>        <a class="code hl_function" href="class_timer.html#a4de6cf13b879de73abc9421fd9fab60d">TimerStart</a>( <a class="code hl_typedef" href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> time );</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <a class="code hl_function" href="class_timer.html#a5f16e8da27d2a5a5242dead46de05d97">Timer</a>&amp;         <a class="code hl_function" href="class_timer.html#a1f49f895454389919e813ce5bef0d31b">operator=</a>( uint32_t t );</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <a class="code hl_function" href="class_timer.html#a5f16e8da27d2a5a5242dead46de05d97">Timer</a>&amp;         <a class="code hl_function" href="class_timer.html#a1f49f895454389919e813ce5bef0d31b">operator=</a>( <a class="code hl_typedef" href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> t );</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="keywordtype">bool</span>        <a class="code hl_function" href="class_timer.html#abe02ae6e11a3e5946da7cb7c29cec971">operator!</a>( );</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="keyword">explicit</span>    <span class="keyword">operator</span> bool () ;</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keywordtype">bool</span>        <a class="code hl_function" href="class_timer.html#a4fc62c4a640fe2f1a93029fedcd64ca7">operator==</a>( uint32_t t );</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keywordtype">bool</span>        <a class="code hl_function" href="class_timer.html#a4fc62c4a640fe2f1a93029fedcd64ca7">operator==</a>( <a class="code hl_typedef" href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> t );</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="comment">// por el hecho de haber convertido el operador bool como explicit</span></div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="comment">// me obligo a realizar las funciones amigas del operador==</span></div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="comment">// con sus dos prototipos, porque dejo de aceptar</span></div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="comment">// la promocion automatica de tipos</span></div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="keyword">friend</span> <span class="keywordtype">bool</span>     <a class="code hl_function" href="class_timer.html#a4fc62c4a640fe2f1a93029fedcd64ca7">operator==</a>( uint32_t t , <a class="code hl_function" href="class_timer.html#a5f16e8da27d2a5a5242dead46de05d97">Timer</a> &amp;T );</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="keyword">friend</span> <span class="keywordtype">bool</span>     <a class="code hl_function" href="class_timer.html#a4fc62c4a640fe2f1a93029fedcd64ca7">operator==</a>( <a class="code hl_typedef" href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> t , <a class="code hl_function" href="class_timer.html#a5f16e8da27d2a5a5242dead46de05d97">Timer</a> &amp;T );</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="comment">// Implementacion de funcion virtual pura heredada</span></div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <span class="keywordtype">void</span>            <a class="code hl_function" href="class_timer.html#ab1b056629435b57ae6d31323507b9330">SWhandler</a>( <span class="keywordtype">void</span> );</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        int8_t <a class="code hl_function" href="class_timer.html#ae6215d19df6293b3ed67ee8e796e9724">TmrEvent</a> ( <span class="keywordtype">void</span> );</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <span class="keywordtype">void</span>            <a class="code hl_function" href="class_timer.html#a25c56f1181fb355efd16b0d6825b09d7">SWhandler</a>( <span class="keywordtype">void</span> ) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <a class="code hl_typedef" href="tipos_8h.html#ad566f6541e98b74246db1a3a3a85ad49">int8_t</a>            <a class="code hl_function" href="class_timer.html#ae6215d19df6293b3ed67ee8e796e9724">TmrEvent</a> ( <span class="keywordtype">void</span> );</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keyword">virtual</span>         <a class="code hl_function" href="class_timer.html#a5f16e8da27d2a5a5242dead46de05d97">~Timer</a>();</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>};</div>
@@ -184,6 +190,7 @@ $(function(){initNavTree('_timer_8h_source.html',''); initResizable(true); });
 <div class="ttc" id="aclass_timer_html_a17c2200e5ebceab3cb70f53dea2da135"><div class="ttname"><a href="class_timer.html#a17c2200e5ebceab3cb70f53dea2da135">Timer::StandByTimer</a></div><div class="ttdeci">void StandByTimer(const uint8_t accion)</div><div class="ttdoc">Detiene/Arranca el timer, NO lo resetea.</div><div class="ttdef"><b>Definition</b> Timer.cpp:249</div></div>
 <div class="ttc" id="aclass_timer_html_a18a28d253b6bc7190c5e133290120c22"><div class="ttname"><a href="class_timer.html#a18a28d253b6bc7190c5e133290120c22">Timer::ClrTmrEvent</a></div><div class="ttdeci">void ClrTmrEvent(void)</div><div class="ttdoc">Limpia el evento del timer.</div><div class="ttdef"><b>Definition</b> Timer.cpp:397</div></div>
 <div class="ttc" id="aclass_timer_html_a1f49f895454389919e813ce5bef0d31b"><div class="ttname"><a href="class_timer.html#a1f49f895454389919e813ce5bef0d31b">Timer::operator=</a></div><div class="ttdeci">Timer &amp; operator=(uint32_t t)</div><div class="ttdoc">Sobrecarga de del operador de asignacion.</div><div class="ttdef"><b>Definition</b> Timer.cpp:322</div></div>
+<div class="ttc" id="aclass_timer_html_a25c56f1181fb355efd16b0d6825b09d7"><div class="ttname"><a href="class_timer.html#a25c56f1181fb355efd16b0d6825b09d7">Timer::SWhandler</a></div><div class="ttdeci">void SWhandler(void) override</div><div class="ttdoc">Decremento periodico del timer. Debe ser llamada periodicamente con la base de tiempos.</div><div class="ttdef"><b>Definition</b> Timer.cpp:274</div></div>
 <div class="ttc" id="aclass_timer_html_a2d1ff5791164f492ceb0efe4873bcc37"><div class="ttname"><a href="class_timer.html#a2d1ff5791164f492ceb0efe4873bcc37">Timer::SetTmrHandler</a></div><div class="ttdeci">void SetTmrHandler(void)</div><div class="ttdoc">Ejecuta el timer Handler.</div><div class="ttdef"><b>Definition</b> Timer.cpp:89</div></div>
 <div class="ttc" id="aclass_timer_html_a2dd85f439d172418dc50d36a1ead5fda"><div class="ttname"><a href="class_timer.html#a2dd85f439d172418dc50d36a1ead5fda">Timer::m_TmrRun</a></div><div class="ttdeci">volatile uint32_t m_TmrRun</div><div class="ttdef"><b>Definition</b> Timer.h:53</div></div>
 <div class="ttc" id="aclass_timer_html_a3446cbde556eec707810feeb61575571"><div class="ttname"><a href="class_timer.html#a3446cbde556eec707810feeb61575571">Timer::GetmrStandBy</a></div><div class="ttdeci">bool GetmrStandBy(void)</div><div class="ttdoc">Informa si el timer está detenido o no.</div><div class="ttdef"><b>Definition</b> Timer.cpp:417</div></div>
@@ -201,13 +208,16 @@ $(function(){initNavTree('_timer_8h_source.html',''); initResizable(true); });
 <div class="ttc" id="aclass_timer_html_a8b6f6f49d9eba6daea47132c8a314e5b"><div class="ttname"><a href="class_timer.html#a8b6f6f49d9eba6daea47132c8a314e5b">Timer::m_TmrStandBy</a></div><div class="ttdeci">volatile bool m_TmrStandBy</div><div class="ttdef"><b>Definition</b> Timer.h:56</div></div>
 <div class="ttc" id="aclass_timer_html_a9cec0a44d98f2898630bb03951269195"><div class="ttname"><a href="class_timer.html#a9cec0a44d98f2898630bb03951269195">Timer::bases_t</a></div><div class="ttdeci">bases_t</div><div class="ttdef"><b>Definition</b> Timer.h:48</div></div>
 <div class="ttc" id="aclass_timer_html_aa7b50436c0c7f6f9b16d7f456af91f25"><div class="ttname"><a href="class_timer.html#aa7b50436c0c7f6f9b16d7f456af91f25">Timer::erroresTimers_t</a></div><div class="ttdeci">erroresTimers_t</div><div class="ttdoc">Enumeración de error del timer.</div><div class="ttdef"><b>Definition</b> Timer.h:49</div></div>
-<div class="ttc" id="aclass_timer_html_ab1b056629435b57ae6d31323507b9330"><div class="ttname"><a href="class_timer.html#ab1b056629435b57ae6d31323507b9330">Timer::SWhandler</a></div><div class="ttdeci">void SWhandler(void)</div><div class="ttdoc">Decremento periodico del timer. Debe ser llamada periodicamente con la base de tiempos.</div><div class="ttdef"><b>Definition</b> Timer.cpp:274</div></div>
 <div class="ttc" id="aclass_timer_html_ab4db941b5d3a3ecde10d9302e6db0edc"><div class="ttname"><a href="class_timer.html#ab4db941b5d3a3ecde10d9302e6db0edc">Timer::m_TmrHandler</a></div><div class="ttdeci">void(* m_TmrHandler)(void)</div><div class="ttdef"><b>Definition</b> Timer.h:55</div></div>
 <div class="ttc" id="aclass_timer_html_abe02ae6e11a3e5946da7cb7c29cec971"><div class="ttname"><a href="class_timer.html#abe02ae6e11a3e5946da7cb7c29cec971">Timer::operator!</a></div><div class="ttdeci">bool operator!()</div><div class="ttdoc">Sobrecarga de del operador de negacion.</div><div class="ttdef"><b>Definition</b> Timer.cpp:340</div></div>
 <div class="ttc" id="aclass_timer_html_ac615667eecadfa52523f296c6b197553"><div class="ttname"><a href="class_timer.html#ac615667eecadfa52523f296c6b197553">Timer::m_TmrBase</a></div><div class="ttdeci">volatile bases_t m_TmrBase</div><div class="ttdef"><b>Definition</b> Timer.h:57</div></div>
 <div class="ttc" id="aclass_timer_html_ad4586720d311f0c66b400c2a40bab248"><div class="ttname"><a href="class_timer.html#ad4586720d311f0c66b400c2a40bab248">Timer::GetTmrEvent</a></div><div class="ttdeci">bool GetTmrEvent(void)</div><div class="ttdoc">Indica si el timer venció o no.</div><div class="ttdef"><b>Definition</b> Timer.cpp:407</div></div>
 <div class="ttc" id="aclass_timer_html_ae6215d19df6293b3ed67ee8e796e9724"><div class="ttname"><a href="class_timer.html#ae6215d19df6293b3ed67ee8e796e9724">Timer::TmrEvent</a></div><div class="ttdeci">int8_t TmrEvent(void)</div><div class="ttdoc">Función encargada de revisar si los timer vencieron y ejecuta automáticamente su función asignada.</div><div class="ttdef"><b>Definition</b> Timer.cpp:360</div></div>
 <div class="ttc" id="agroup___drivers_html_gad8c2afd48cc8eb5c42aacf5d7b9f38dc"><div class="ttname"><a href="group___drivers.html#gad8c2afd48cc8eb5c42aacf5d7b9f38dc">Timer_Handler</a></div><div class="ttdeci">void(* Timer_Handler)(void)</div><div class="ttdef"><b>Definition</b> Timer.h:31</div></div>
+<div class="ttc" id="atipos_8h_html"><div class="ttname"><a href="tipos_8h.html">tipos.h</a></div><div class="ttdoc">Definiciones de tipos de variables.</div></div>
+<div class="ttc" id="atipos_8h_html_a435d1572bf3f880d55459d9805097f62"><div class="ttname"><a href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></div><div class="ttdeci">unsigned int uint32_t</div><div class="ttdef"><b>Definition</b> tipos.h:45</div></div>
+<div class="ttc" id="atipos_8h_html_aba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></div><div class="ttdeci">unsigned char uint8_t</div><div class="ttdef"><b>Definition</b> tipos.h:41</div></div>
+<div class="ttc" id="atipos_8h_html_ad566f6541e98b74246db1a3a3a85ad49"><div class="ttname"><a href="tipos_8h.html#ad566f6541e98b74246db1a3a3a85ad49">int8_t</a></div><div class="ttdeci">char int8_t</div><div class="ttdef"><b>Definition</b> tipos.h:42</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -1,0 +1,14 @@
+<map id="I2C.h" name="I2C.h">
+<area shape="rect" id="Node000001" title="Modulo de comunicacion I2C." alt="" coords="98,5,152,32"/>
+<area shape="rect" id="Node000002" href="$_pin_8h.html" title="Clase Abstracta de cualquier pin del microcontrolador." alt="" coords="108,171,232,213"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="130,31,153,122,162,155,157,157,148,123,125,33"/>
+<area shape="rect" id="Node000004" href="$_l_p_c845_8h.html" title="Registros del LPC845." alt="" coords="5,179,85,205"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="122,33,60,166,55,163,117,31"/>
+<area shape="rect" id="Node000005" href="$_comunicacion_sincronica_8h.html" title="Objeto base para la creacion de comunicaciones sincrónicas." alt="" coords="162,80,357,123"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="147,30,214,70,211,74,145,35"/>
+<area shape="rect" id="Node000003" href="$tipos_8h.html" title="Definiciones de tipos de variables." alt="" coords="140,261,200,288"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="173,214,173,245,168,245,168,214"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="66,204,140,251,137,255,63,208"/>
+<area shape="poly" id="edge6_Node000005_Node000002" title=" " alt="" coords="241,125,204,162,200,158,237,121"/>
+<area shape="poly" id="edge7_Node000005_Node000003" title=" " alt="" coords="264,123,262,167,257,191,247,215,230,237,209,255,205,250,226,233,243,212,252,190,257,166,259,123"/>
+</map>

@@ -87,10 +87,10 @@ class display7Segmentos : public Display, Callback
 								segmentos * s , barrido * b ,
 								const uint8_t *PosicionRelativa ,
 								const digito::codigo_t  sistema);
-		void 	SWhandler ( void );
+		void 	SWhandler ( void ) override;
 		void 	Set( uint32_t valor , uint8_t dsp );
-		void 	Write ( const uint32_t n );
-		void 	Clear ( void );
+		void 	Write ( const uint32_t n ) override;
+		void 	Clear ( void ) override;
 
 		virtual ~display7Segmentos();		/**< destructor por defecto */
 };

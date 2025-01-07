@@ -1,0 +1,10 @@
+<map id="ADCGroup.cpp" name="ADCGroup.cpp">
+<area shape="rect" id="Node000001" title="Funciones miembro de ADCGroup." alt="" coords="26,5,136,32"/>
+<area shape="rect" id="Node000002" href="$_a_d_c_group_8h_source.html" title=" " alt="" coords="5,80,157,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="84,32,84,65,78,65,78,32"/>
+<area shape="rect" id="Node000003" href="$tipos_8h.html" title="Definiciones de tipos de variables." alt="" coords="51,245,111,272"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="78,124,71,158,70,197,76,230,71,231,65,198,66,158,72,123"/>
+<area shape="rect" id="Node000004" href="$_l_p_c845_8h.html" title="Registros del LPC845." alt="" coords="80,171,159,197"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="93,122,109,155,105,157,89,124"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="115,199,97,233,92,230,111,197"/>
+</map>

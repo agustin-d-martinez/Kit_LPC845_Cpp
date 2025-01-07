@@ -1,12 +1,14 @@
 /*******************************************************************************************************************************//**
  *
  * @file		ComunicacionSincronica.h
- * @brief		Objeto base para la creacion de comunicaciones sincrónicas
- * @date		5 oct. 2022
- * @author		Tecnico Martinez Agustin
+ * @brief		Objeto base para la creacion de comunicaciones sincrónicas.
+ * @details
+ *
+ * @date		3 ene. 2025
+ * @version		1.0
+ * @author     	Técnico. Martinez Agustin (masteragus365@gmail.com)
  *
  **********************************************************************************************************************************/
-
 /***********************************************************************************************************************************
  *** MODULO
  **********************************************************************************************************************************/
@@ -48,13 +50,10 @@
 */
 class ComunicacionSincronica
 {
-	protected:
-		const 	Pin* 	m_scl;		/**< Pin de Clock. Debe existir en toda comunicacion sincronica*/
-
 	public:
 		ComunicacionSincronica() = default;					/**< Constructor por defecto */
 		virtual void Write ( uint8_t data) = 0;				/**< Funcion de escritura */
-//		virtual uint8_t* Read ( const uint8_t data ) = 0;			/**< Funcion de lectura */
+		virtual int8_t Read ( uint8_t* data ) = 0;			/**< Funcion de lectura */
 		virtual ~ComunicacionSincronica() = default;		/**< Destructor por defecto */
 };
 

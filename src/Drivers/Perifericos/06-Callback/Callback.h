@@ -1,7 +1,7 @@
 /*******************************************************************************************************************************//**
  *
  * @file		Callback.h
- * @brief		Clase virtual pura. Esta clase debe ser heredada por las clases que se tienen que enganchar del Systick Timer
+ * @brief		Clase virtual pura. Esta clase debe ser heredada por las clases que se tienen que enganchar del Systick Timer.
  * @date		4 may. 2022
  * @author		Ing. Marcelo Trujillo
  *

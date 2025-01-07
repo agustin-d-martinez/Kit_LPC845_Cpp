@@ -1,9 +1,8 @@
 var searchData=
 [
-  ['max_5fbounce_0',['MAX_BOUNCE',['../_input_8h.html#a7ccdd4b2547aa72e5d4b9beabdcbe35c',1,'Input.h']]],
-  ['max_5fdac_5fchannel_1',['MAX_DAC_CHANNEL',['../_d_a_c_8h.html#a63c0ef3037f78e6dd05190afde80f30e',1,'DAC.h']]],
-  ['max_5fdac_5fvalue_2',['MAX_DAC_VALUE',['../_d_a_c_8h.html#ae191bd669b0350508de8f1066229c809',1,'DAC.h']]],
-  ['max_5fic2_3',['MAX_IC2',['../_i2_c_8cpp.html#ad7aca8dce3c5ed3a05a47adb44c69c5c',1,'I2C.cpp']]],
-  ['max_5fpininterrupt_4',['MAX_PININTERRUPT',['../_pininterrupt_8h.html#a9e2d3900a33f4d5dc6a7eeb510d42f4f',1,'Pininterrupt.h']]],
-  ['max_5fspi_5',['MAX_SPI',['../_s_p_i_8cpp.html#ae4250b12c1840abeaf61b709aaf60d48',1,'SPI.cpp']]]
+  ['i2c_5fmax_5ffreq_0',['I2C_MAX_FREQ',['../_i2_c_8h.html#a28dc0b1e56baa85f9937e6e83f890b93',1,'I2C.h']]],
+  ['int32_5fmax_1',['INT32_MAX',['../tipos_8h.html#a181807730d4a375f848ba139813ce04f',1,'tipos.h']]],
+  ['int32_5fmin_2',['INT32_MIN',['../tipos_8h.html#a688eb21a22db27c2b2bd5836943cdcbe',1,'tipos.h']]],
+  ['int8_5fmax_3',['INT8_MAX',['../tipos_8h.html#aaf7f29f45f1a513b4748a4e5014ddf6a',1,'tipos.h']]],
+  ['int8_5fmin_4',['INT8_MIN',['../tipos_8h.html#aadcf2a81af243df333b31efa6461ab8e',1,'tipos.h']]]
 ];

@@ -2,11 +2,13 @@
  *
  * @file		LPC845.h
  * @brief		Registros del LPC845
+ * @details
+ *
  * @date		10 ene. 2022
- * @author		Técnico Martinez Agustin
+ * @version		1.0
+ * @author     	Técnico. Martinez Agustin (masteragus365@gmail.com)
  *
  **********************************************************************************************************************************/
-
 /***********************************************************************************************************************************
  *** MODULO
  **********************************************************************************************************************************/
@@ -37,7 +39,7 @@
 #define FCLKIN 		(12000000UL)	/**< Frecuencia base, 12 MHz */
 
 /** Frecuencia principal del LPC845*/
-#define FREQ_PRINCIPAL	24000000UL	//En Hz. Puede ser 24 MHz o 48 MHz
+#define FREQ_PRINCIPAL	48000000UL	//En Hz. Puede ser 24 MHz o 48 MHz
 
 /*!
  * @addtogroup SYSCON_Peripheral_Access_Layer SYSCON Peripheral Access Layer
@@ -1311,24 +1313,24 @@ typedef struct {
 
 /** I2C - Register Layout Typedef */
 typedef struct {
-	__RW uint32_t CFG;                               /**< Configuration for shared functions., offset: 0x0 */
-	__RW uint32_t STAT;                              /**< Status register for Master, Slave, and Monitor functions., offset: 0x4 */
-	__RW uint32_t INTENSET;                          /**< Interrupt Enable Set and read register., offset: 0x8 */
-	__W  uint32_t INTENCLR;                          /**< Interrupt Enable Clear register., offset: 0xC */
-	__RW uint32_t TIMEOUT;                           /**< Time-out value register., offset: 0x10 */
-	__RW uint32_t CLKDIV;                            /**< Clock pre-divider for the entire I2C interface. This determines what time increments are used for the MSTTIME register, and controls some timing of the Slave function., offset: 0x14 */
-	__R  uint32_t INTSTAT;                           /**< Interrupt Status register for Master, Slave, and Monitor functions., offset: 0x18 */
-    uint8_t RESERVED_0[4];
-    __RW uint32_t MSTCTL;                            /**< Master control register., offset: 0x20 */
-    __RW uint32_t MSTTIME;                           /**< Master timing configuration., offset: 0x24 */
-    __RW uint32_t MSTDAT;                            /**< Combined Master receiver and transmitter data register., offset: 0x28 */
-    uint8_t RESERVED_1[20];
-    __RW uint32_t SLVCTL;                            /**< Slave control register., offset: 0x40 */
-    __RW uint32_t SLVDAT;                            /**< Combined Slave receiver and transmitter data register., offset: 0x44 */
-    __RW uint32_t SLVADR[4];                         /**< Slave address register., array offset: 0x48, array step: 0x4 */
-    __RW uint32_t SLVQUAL0;                          /**< Slave Qualification for address 0., offset: 0x58 */
-    uint8_t RESERVED_2[36];
-    __R  uint32_t MONRXDAT;                          /**< Monitor receiver data register., offset: 0x80 */
+	__RW uint32_t CFG;                              /**< Configuration for shared functions., offset: 0x0 */
+	__RW uint32_t STAT;                             /**< Status register for Master, Slave, and Monitor functions., offset: 0x4 */
+	__RW uint32_t INTENSET;                         /**< Interrupt Enable Set and read register., offset: 0x8 */
+	__W  uint32_t INTENCLR;                         /**< Interrupt Enable Clear register., offset: 0xC */
+	__RW uint32_t TIMEOUT;                          /**< Time-out value register., offset: 0x10 */
+	__RW uint32_t CLKDIV;                           /**< Clock pre-divider for the entire I2C interface. This determines what time increments are used for the MSTTIME register, and controls some timing of the Slave function., offset: 0x14 */
+	__R  uint32_t INTSTAT;                          /**< Interrupt Status register for Master, Slave, and Monitor functions., offset: 0x18 */
+    uint8_t RESERVED_0[4];							/**< RESERVERD. */
+    __RW uint32_t MSTCTL;                           /**< Master control register., offset: 0x20 */
+    __RW uint32_t MSTTIME;                          /**< Master timing configuration., offset: 0x24 */
+    __RW uint32_t MSTDAT;                           /**< Combined Master receiver and transmitter data register., offset: 0x28 */
+    uint8_t RESERVED_1[20];							/**< RESERVERD. */
+    __RW uint32_t SLVCTL;                         	/**< Slave control register., offset: 0x40 */
+    __RW uint32_t SLVDAT;                           /**< Combined Slave receiver and transmitter data register., offset: 0x44 */
+    __RW uint32_t SLVADR[4];                        /**< Slave address register., array offset: 0x48, array step: 0x4 */
+    __RW uint32_t SLVQUAL0;                         /**< Slave Qualification for address 0., offset: 0x58 */
+    uint8_t RESERVED_2[36];							/**< RESERVERD. */
+    __R  uint32_t MONRXDAT;                         /**< Monitor receiver data register., offset: 0x80 */
 } I2C_Type;
 
 /* ----------------------------------------------------------------------------
@@ -2377,6 +2379,5 @@ typedef struct {
  * @}
  */ /* end of group SPI_Peripheral_Access_Layer */
 
-/*! @} */
 /*! @} */
 #endif /* LPC845_H_ */

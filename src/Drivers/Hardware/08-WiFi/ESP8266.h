@@ -1,13 +1,14 @@
 /*******************************************************************************************************************************//**
  *
  * @file		ESP8266.h
- * @brief		Breve descripción del Módulo
+ * @brief		Modulo de comunicacion WIFI con ESP8266.
+ * @details		Modulo de comunicacion WIFI con el ESP8266 utilizando comandos AT por puerto serie.
+ *
  * @date		2 mar. 2023
- * @author		Técnico Martinez Agustín
- * @version		v1.0
- * 
+ * @version		1.0
+ * @author     	Técnico. Martinez Agustin (masteragus365@gmail.com)
+ *
  **********************************************************************************************************************************/
-
 /***********************************************************************************************************************************
  *** MODULO
  **********************************************************************************************************************************/
@@ -69,27 +70,28 @@ private:
 	uint8_t 		m_aux;			/**< Contador auxiliar que indica las respuestas a los comandos AT */
 
 public:
-	ESP8266( Pin::port_t _portTx , uint8_t _pinTx , Pin::port_t _portRx , uint8_t _pinRx , USART_Type * usart , uint32_t baudrate );
-	void Inicializar( void );
+				ESP8266( Pin::port_t _portTx , uint8_t _pinTx , Pin::port_t _portRx , uint8_t _pinRx ,
+						USART_Type * usart , uint32_t baudrate );
+	void 		Initialize( void );
 	status_type ConnectToWifi ( const int8_t * wifi_address , const int8_t * wifi_password , uint32_t seg_timeout = SEG_ESP01_TIMEOUT );
-	void DisconnectToWifi ( void );
-	void SetIP ( int8_t *ip );
-	int8_t* GetIP( void ) const;
-	bool ConnectToServer ( conection_type _mode , const int8_t* server_ip , const int8_t* server_port , uint32_t seg_timeout = SEG_ESP01_TIMEOUT );
-	void DisconnectToServer ( void );
-	void Transmit ( const char * msg) ;
-	void Transmit ( const void * msg , uint32_t n );
-	void* Message ( void * msg , uint32_t n );
+	void 		DisconnectToWifi ( void );
+	void 		SetIP ( int8_t *ip );
+	int8_t* 	GetIP( void ) const;
+	bool 		ConnectToServer ( conection_type _mode , const int8_t* server_ip , const int8_t* server_port , uint32_t seg_timeout = SEG_ESP01_TIMEOUT );
+	void 		DisconnectToServer ( void );
+	void 		Write ( const char * msg) ;
+	void 		Write ( const void * msg , uint32_t n );
+	void* 		Read ( void * msg , uint32_t n );
 	status_type GetStatus ( void ) const;
-	bool IsConnectedToWifi( void ) const;
-	bool IsConnectedToServer( void ) const;
-	virtual ~ESP8266();
+	bool 		IsConnectedToWifi( void ) const;
+	bool 		IsConnectedToServer( void ) const;
+	virtual 	~ESP8266();
 
 private:
-	bool LeerOk ( void );
-	int8_t* toString ( const uint32_t n );
-	uint32_t Strlen ( const int8_t * a );
-	uint32_t pow ( uint32_t num , uint32_t exp );
+	bool 		LeerOk ( void );
+	int8_t* 	toString ( const uint32_t n );
+	uint32_t 	Strlen ( const int8_t * a );
+	uint32_t 	pow ( uint32_t num , uint32_t exp );
 };
 
 #endif /* ESP8266_H_ */

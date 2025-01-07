@@ -1,9 +1,12 @@
 /*******************************************************************************************************************************//**
  *
  * @file		distancia.h
- * @brief		Clase base para objetos medidores de distancias
+ * @brief		Clase base para objetos medidores de distancias.
+ * @details
+ *
  * @date		22 jun. 2022
- * @author		Técnico. Martinez Agustin
+ * @version		1.0
+ * @author     	Técnico. Martinez Agustin (masteragus365@gmail.com)
  *
  **********************************************************************************************************************************/
 #ifndef DISTANCIA_H_

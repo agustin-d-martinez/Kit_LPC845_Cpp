@@ -1,7 +1,7 @@
 /*******************************************************************************************************************************//**
  *
  * @file		Uart.h
- * @brief		Breve descripción del objetivo del Módulo
+ * @brief		Modulo de Comunicacion Uart.
  * @date		5 oct. 2022
  * @author		Ing. Marcelo Trujillo
  *
@@ -89,27 +89,27 @@ class Uart : public ComunicacionAsincronica
 		bool 		m_flagTx;				/**< error en el envio de datos. Buffer sobrepasado */
 
 	public:
-		Uart( Pin::port_t portTx , uint8_t pinTx , Pin::port_t portRx , uint8_t pinRx ,
-				USART_Type * usart , uint32_t baudrate , bits_de_datos BitsDeDatos, paridad_t paridad ,
-				uint32_t maxRx , uint32_t maxTx);
-		void Transmit ( const char * msg) override;
-		void Transmit ( const void * msg , uint32_t n ) override;
-		void* Message ( void * msg , uint32_t n ) override;
-		void SetBaudRate ( uint32_t baudrate );
+				Uart( Pin::port_t portTx , uint8_t pinTx , Pin::port_t portRx , uint8_t pinRx ,
+						USART_Type * usart , uint32_t baudrate , bits_de_datos BitsDeDatos, paridad_t paridad ,
+						uint32_t maxRx , uint32_t maxTx);
+		void 	Write ( const char * msg) override;
+		void 	Write ( const void * msg , uint32_t n ) override;
+		void* 	Read ( void * msg , uint32_t n ) override;
+		void 	SetBaudRate ( uint32_t baudrate );
 
-		~Uart() { };		/**< Destructor por defecto */
+				~Uart() = default;		/**< Destructor por defecto */
 	private:
-		void EnableSW ( void );
-		void EnableClock ( void );
-		void Config ( uint32_t baudrate , bits_de_datos BitsDeDatos , paridad_t paridad );
-		void UART_IRQHandler ( void ) override;
+		void 	EnableSW ( void );
+		void 	EnableClock ( void );
+		void 	Config ( uint32_t baudrate , bits_de_datos BitsDeDatos , paridad_t paridad );
+		void 	UART_IRQHandler ( void ) override;
 
-		void pushRx ( uint8_t dato ) override;
+		void 	pushRx ( uint8_t dato ) override;
 		uint8_t popRx ( uint8_t * dato ) override;
-		void pushTx ( uint8_t dato ) override;
+		void 	pushTx ( uint8_t dato ) override;
 		uint8_t popTx ( uint8_t * dato ) override;
-		void EnableInterupt ( void );
-		void DisableInterupt ( void );
+		void 	EnableInterupt ( void );
+		void 	DisableInterupt ( void );
 };
 
 #endif /* UART_H_ */

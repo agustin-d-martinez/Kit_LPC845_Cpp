@@ -1,11 +1,11 @@
 var group___clase =
 [
     [ "barrido", "classbarrido.html", [
-      [ "Inicializar", "classbarrido.html#aeea8bd45cd9f31760ffd8190c78f2030", null ],
+      [ "Initialize", "classbarrido.html#a8f8a4bf08810cedafe952186b4795dba", null ],
       [ "SetDigito", "classbarrido.html#ad2fe464d7237752f1403c6bee9aa755e", null ]
     ] ],
     [ "segmentos", "classsegmentos.html", [
-      [ "Inicializar", "classsegmentos.html#a4c7ecb94555c52a927c63e6b48d4f543", null ],
+      [ "Initialize", "classsegmentos.html#a20fa6f6a55f299add7fbe93d42728514", null ],
       [ "SetSegmentos", "classsegmentos.html#a871b7f7a682627a416a389567981a858", null ]
     ] ],
     [ "Display", "class_display.html", [
@@ -22,7 +22,7 @@ var group___clase =
       [ "Girar", "class_puente___h.html#ab1368aabff7b8756e7538dc96e0fa72a", null ],
       [ "GirarDer", "class_puente___h.html#a9e5e72418427f0c212623ee0cd2eeed8", null ],
       [ "GirarIzq", "class_puente___h.html#a83036fbcc553763f5b1fa8953345518e", null ],
-      [ "Inicializar", "class_puente___h.html#a5d4f34a1327223d982a83c8cd3c95dda", null ],
+      [ "Initialize", "class_puente___h.html#a143a239cf296e89f4d67f1dfe97d56e4", null ],
       [ "Retroceder", "class_puente___h.html#a854c7a3b85fecbc02740c2175d498b49", null ]
     ] ],
     [ "distancia", "classdistancia.html", [
@@ -46,19 +46,19 @@ var group___clase =
     [ "ComunicacionAsincronica", "class_comunicacion_asincronica.html", [
       [ "ComunicacionAsincronica", "class_comunicacion_asincronica.html#a711e7bb16713a4ebfd7f71044090531a", null ],
       [ "~ComunicacionAsincronica", "class_comunicacion_asincronica.html#a96a3fc01767f456da0b5b177751a02f3", null ],
-      [ "Message", "class_comunicacion_asincronica.html#af260972f1da109c6ab2c2e8d3ef1c559", null ],
       [ "popRx", "class_comunicacion_asincronica.html#a91b0600c6c99e3034d06ad2912594bf2", null ],
       [ "popTx", "class_comunicacion_asincronica.html#aef7119239e6601ca6d88d8226ec53f2f", null ],
       [ "pushRx", "class_comunicacion_asincronica.html#a01a00859cfa12a971645325e7cfea6d1", null ],
       [ "pushTx", "class_comunicacion_asincronica.html#af981e1ede12e7af2334eb6ae08948fbf", null ],
-      [ "Transmit", "class_comunicacion_asincronica.html#a9d55be4bd6519f1e8b8d6954c75d45e1", null ],
-      [ "Transmit", "class_comunicacion_asincronica.html#a506361dd86d7300792b5cded1159506e", null ],
-      [ "UART_IRQHandler", "class_comunicacion_asincronica.html#a03334adab3bab229a1709c721d25cde7", null ]
+      [ "Read", "class_comunicacion_asincronica.html#a64e4dad4f58c045a8192d2a4f94f80fc", null ],
+      [ "UART_IRQHandler", "class_comunicacion_asincronica.html#a03334adab3bab229a1709c721d25cde7", null ],
+      [ "Write", "class_comunicacion_asincronica.html#a1edc50c8c7a50da0c73a58812c632590", null ],
+      [ "Write", "class_comunicacion_asincronica.html#ada76403f78db8f4ef709651662c754d3", null ]
     ] ],
     [ "ComunicacionSincronica", "class_comunicacion_sincronica.html", [
       [ "ComunicacionSincronica", "class_comunicacion_sincronica.html#a2466717eadf1a0415f3ea369502620b1", null ],
       [ "~ComunicacionSincronica", "class_comunicacion_sincronica.html#a4a557f4ff51a3d3298687750fb479aa6", null ],
-      [ "Write", "class_comunicacion_sincronica.html#add9b9c73ccac230a5a88b2031d546c34", null ],
-      [ "m_scl", "class_comunicacion_sincronica.html#a3a40f691cf66fa819a2b3e1c9c1f9240", null ]
+      [ "Read", "class_comunicacion_sincronica.html#aea33d4761b4e3c57157387d9f9e90a01", null ],
+      [ "Write", "class_comunicacion_sincronica.html#add9b9c73ccac230a5a88b2031d546c34", null ]
     ] ]
 ];

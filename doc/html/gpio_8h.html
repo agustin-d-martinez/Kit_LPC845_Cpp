@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>KITLPC845-C++: E:/Agustin/Escritorio/MCUexpresso/KitLPC845-C++/src/Drivers/Perifericos/02-Gpio/gpio.h File Reference</title>
+<title>LPC845-C++: gpio.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -18,6 +18,11 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,10 +32,22 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">KITLPC845-C++<span id="projectnumber">&#160;2.0</span>
+   <div id="projectname">LPC845-C++<span id="projectnumber">&#160;2.0</span>
    </div>
-   <div id="projectbrief">KitdelibreriascustomenC++paralaplacadedesarrolloLPC845</div>
+   <div id="projectbrief">Kit de librerias propias de la placa de desarrollo LPC845</div>
   </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -47,17 +64,6 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 $(function() { codefold.init(0); });
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('',true,false,'search.php','Search',true);
-  $(function() { init_search(); });
-});
-/* @license-end */
-</script>
-<div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -105,18 +111,102 @@ $(function(){initNavTree('gpio_8h.html',''); initResizable(true); });
 
 <p>Módulo con clase de manejo de GPIO.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;LPC845.h&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="_l_p_c845_8h_source.html">LPC845.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="_pin_8h_source.html">Perifericos/01-Pin/Pin.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="_in_out_8h_source.html">Perifericos/02-Gpio/InOut.h</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for gpio.h:</div>
 <div class="dyncontent">
-<div class="center"><img src="gpio_8h__incl.png" border="0" usemap="#a_e_1_2_agustin_2_escritorio_2_m_c_uexpresso_2_kit_l_p_c845-_c_09_09_2src_2_drivers_2_perifericos_202-_gpio_2gpio_8h" alt=""/></div>
+<div class="center"><img src="gpio_8h__incl.png" border="0" usemap="#agpio_8h" alt=""/></div>
+<map name="agpio_8h" id="agpio_8h">
+<area shape="rect" title="Módulo con clase de manejo de GPIO." alt="" coords="68,5,124,32"/>
+<area shape="rect" href="_l_p_c845_8h.html" title="Registros del LPC845." alt="" coords="5,179,85,205"/>
+<area shape="poly" title=" " alt="" coords="94,33,80,81,55,165,50,163,74,79,89,32"/>
+<area shape="rect" href="_pin_8h.html" title="Clase Abstracta de cualquier pin del microcontrolador." alt="" coords="108,171,232,213"/>
+<area shape="poly" title=" " alt="" coords="100,32,107,73,123,122,146,157,141,160,119,124,102,74,95,33"/>
+<area shape="rect" href="_in_out_8h.html" title="Clase Abstracta Pura de las GPIO." alt="" coords="134,80,266,123"/>
+<area shape="poly" title=" " alt="" coords="114,30,163,68,159,72,110,35"/>
+<area shape="rect" href="tipos_8h.html" title="Definiciones de tipos de variables." alt="" coords="78,261,138,288"/>
+<area shape="poly" title=" " alt="" coords="57,204,91,248,87,251,53,207"/>
+<area shape="poly" title=" " alt="" coords="156,216,129,250,125,247,152,212"/>
+<area shape="poly" title=" " alt="" coords="195,124,184,157,179,155,190,122"/>
+</map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="gpio_8h__dep__incl.png" border="0" usemap="#a_e_1_2_agustin_2_escritorio_2_m_c_uexpresso_2_kit_l_p_c845-_c_09_09_2src_2_drivers_2_perifericos_202-_gpio_2gpio_8hdep" alt=""/></div>
+<div class="center"><img src="gpio_8h__dep__incl.png" border="0" usemap="#agpio_8hdep" alt=""/></div>
+<map name="agpio_8hdep" id="agpio_8hdep">
+<area shape="rect" title="Módulo con clase de manejo de GPIO." alt="" coords="716,5,773,32"/>
+<area shape="rect" href="_display7_segmentos_8h.html" title="Clase para la creación de displays de 7 segmentos." alt="" coords="492,80,642,107"/>
+<area shape="poly" title=" " alt="" coords="703,40,599,82,597,77,701,35"/>
+<area shape="rect" href="_i4017_8h.html" title="Objeto de control del integrado I4017." alt="" coords="32,80,97,107"/>
+<area shape="poly" title=" " alt="" coords="701,26,465,48,147,83,97,90,97,84,147,77,464,43,701,21"/>
+<area shape="rect" href="_i4511_8h.html" title="Objeto de control del integrado I4511." alt="" coords="160,80,223,107"/>
+<area shape="poly" title=" " alt="" coords="701,27,507,49,256,83,223,88,223,83,255,77,507,43,700,22"/>
+<area shape="rect" href="_input_8h.html" title="funciones miembro de la clase Input." alt="" coords="762,80,823,107"/>
+<area shape="poly" title=" " alt="" coords="763,44,786,78,782,81,759,47"/>
+<area shape="rect" href="_l298_n_8h.html" title="Clase del módulo de puente H LN298N." alt="" coords="267,80,337,107"/>
+<area shape="poly" title=" " alt="" coords="701,30,338,89,337,84,700,24"/>
+<area shape="rect" href="_l_c_d_8h.html" title="Clase para manejar un LCD con comunicación de 4 patas (solo escritura)." alt="" coords="666,80,725,107"/>
+<area shape="poly" title=" " alt="" coords="729,47,706,81,701,78,725,44"/>
+<area shape="rect" href="_output_8h.html" title="Clase del tipo Output o salida digital." alt="" coords="882,80,954,107"/>
+<area shape="poly" title=" " alt="" coords="788,35,888,77,886,82,786,40"/>
+<area shape="rect" href="_pininterrupt_8h.html" title="Clase para entradas con interrupciones por flanco." alt="" coords="1234,80,1332,107"/>
+<area shape="poly" title=" " alt="" coords="789,23,1234,83,1233,88,788,28"/>
+<area shape="rect" href="gpio_8cpp.html" title="Módulo con clase de manejo de GPIO." alt="" coords="1108,80,1178,107"/>
+<area shape="poly" title=" " alt="" coords="788,24,926,45,1097,77,1108,80,1107,85,1096,83,925,51,788,29"/>
+<area shape="rect" href="teclado_8h.html" title="Modulo de teclado matricial." alt="" coords="1010,80,1084,107"/>
+<area shape="poly" title=" " alt="" coords="788,28,1010,80,1009,86,787,33"/>
+<area shape="rect" href="_display7_segmentos_8cpp.html" title="Clase para la creación de displays de 7 segmentos." alt="" coords="368,155,532,181"/>
+<area shape="poly" title=" " alt="" coords="536,117,472,156,469,152,533,113"/>
+<area shape="rect" href="_drivers_8h.html" title="Archivo Master con todos los includes de perifericos del Kit." alt="" coords="855,304,930,331"/>
+<area shape="poly" title=" " alt="" coords="581,119,620,187,649,223,683,254,726,277,772,294,817,304,855,310,855,316,816,310,771,299,724,282,680,258,645,227,616,190,576,122"/>
+<area shape="rect" href="_comunicacion_8h.html" title="Clase máquina de estados de comunicación del proyecto." alt="" coords="772,379,888,405"/>
+<area shape="poly" title=" " alt="" coords="874,344,843,380,839,377,870,341"/>
+<area shape="rect" href="_semaforo_8h.html" title="Clases semaforo de ejemplo utilizando led tricolor propio de la placa." alt="" coords="911,379,999,405"/>
+<area shape="poly" title=" " alt="" coords="915,341,946,377,942,380,911,344"/>
+<area shape="rect" href="_comunicacion_8cpp.html" title="Clase máquina de estados de comunicación del proyecto." alt="" coords="700,453,829,480"/>
+<area shape="poly" title=" " alt="" coords="810,419,778,455,774,451,806,415"/>
+<area shape="rect" href="inicializar_8h.html" title="Archivo inicializador de la placa." alt="" coords="853,453,940,480"/>
+<area shape="poly" title=" " alt="" coords="854,415,887,451,883,455,850,419"/>
+<area shape="rect" href="inicializar_8cpp.html" title="Archivo inicializador de la placa." alt="" coords="846,528,947,555"/>
+<area shape="poly" title=" " alt="" coords="899,496,899,528,894,528,894,496"/>
+<area shape="poly" title=" " alt="" coords="937,419,909,455,905,451,933,416"/>
+<area shape="rect" href="_semaforo_8cpp.html" title="Clases semaforo de ejemplo utilizando led tricolor propio de la placa." alt="" coords="964,453,1066,480"/>
+<area shape="poly" title=" " alt="" coords="977,416,1007,451,1003,455,973,419"/>
+<area shape="rect" href="_i4017_8cpp.html" title="Objeto de control del integrado I4017." alt="" coords="5,155,84,181"/>
+<area shape="poly" title=" " alt="" coords="60,122,51,155,45,154,54,121"/>
+<area shape="rect" href="_i4511_8cpp.html" title="Objeto de control del integrado I4511." alt="" coords="107,155,184,181"/>
+<area shape="poly" title=" " alt="" coords="177,122,156,156,151,153,173,119"/>
+<area shape="poly" title=" " alt="" coords="817,116,844,153,863,195,877,237,893,303,888,304,872,239,858,197,840,156,813,120"/>
+<area shape="rect" href="_input_8cpp.html" title="funciones miembro de la clase Input." alt="" coords="755,155,830,181"/>
+<area shape="poly" title=" " alt="" coords="795,122,795,154,790,154,790,122"/>
+<area shape="poly" title=" " alt="" coords="274,119,259,133,248,149,244,165,249,180,267,196,292,212,358,239,441,261,533,278,718,301,855,311,855,317,718,307,533,284,440,266,356,244,289,217,264,201,245,183,238,165,243,147,255,130,270,115"/>
+<area shape="rect" href="_l298_n_8cpp.html" title="Clase del módulo de puente H LN298N." alt="" coords="260,155,344,181"/>
+<area shape="poly" title=" " alt="" coords="304,122,304,154,299,154,299,122"/>
+<area shape="poly" title=" " alt="" coords="670,119,648,149,644,165,648,180,668,206,691,229,747,266,805,291,856,306,854,311,804,296,745,271,688,234,664,210,643,182,639,165,643,147,666,116"/>
+<area shape="rect" href="_l_c_d_8cpp.html" title="Clase para manejar un LCD con comunicación de 4 patas (solo escritura)." alt="" coords="657,155,730,181"/>
+<area shape="poly" title=" " alt="" coords="697,123,697,154,691,154,692,122"/>
+<area shape="poly" title=" " alt="" coords="917,122,897,304,891,303,912,122"/>
+<area shape="rect" href="_output_8cpp.html" title="Clase del tipo Output o salida digital." alt="" coords="955,155,1040,181"/>
+<area shape="poly" title=" " alt="" coords="945,115,986,152,982,156,941,119"/>
+<area shape="rect" href="_p_w_m_reader_8h.html" title="Pata que lee tamaños de pulsos de entrada." alt="" coords="1363,155,1470,181"/>
+<area shape="poly" title=" " alt="" coords="1321,112,1394,152,1392,156,1318,117"/>
+<area shape="rect" href="_pininterrupt_8cpp.html" title="Clase para entradas con interrupciones por flanco." alt="" coords="1227,155,1339,181"/>
+<area shape="poly" title=" " alt="" coords="1286,122,1286,154,1280,154,1280,122"/>
+<area shape="poly" title=" " alt="" coords="1358,189,931,308,929,303,1356,183"/>
+<area shape="rect" href="_h_c_s_r04_8h.html" title="Clase del sensor ultrasónico HCSR04." alt="" coords="1374,229,1459,256"/>
+<area shape="poly" title=" " alt="" coords="1419,197,1419,229,1414,229,1414,197"/>
+<area shape="rect" href="_p_w_m_reader_8cpp.html" title="Pata que lee tamaños de pulsos de entrada." alt="" coords="1228,229,1349,256"/>
+<area shape="poly" title=" " alt="" coords="1382,192,1312,231,1310,226,1380,187"/>
+<area shape="poly" title=" " alt="" coords="1359,259,1111,295,930,315,929,310,1110,289,1359,254"/>
+<area shape="rect" href="_h_c_s_r04_8cpp.html" title="Clase del sensor ultrasónico HCSR04." alt="" coords="1367,304,1466,331"/>
+<area shape="poly" title=" " alt="" coords="1419,272,1419,304,1414,304,1414,272"/>
+<area shape="poly" title=" " alt="" coords="1058,121,1061,151,1055,182,1027,224,991,259,953,287,920,306,917,301,950,282,988,255,1023,221,1050,180,1056,151,1053,122"/>
+<area shape="rect" href="teclado_8cpp.html" title="Modulo de teclado matricial." alt="" coords="1115,155,1203,181"/>
+<area shape="poly" title=" " alt="" coords="1081,113,1141,152,1138,156,1078,118"/>
+</map>
 </div>
 </div>
 <p><a href="gpio_8h_source.html">Go to the source code of this file.</a></p>

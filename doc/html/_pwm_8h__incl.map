@@ -1,0 +1,12 @@
+<map id="Pwm.h" name="Pwm.h">
+<area shape="rect" id="Node000001" title="Generador de PWM sin interrupción." alt="" coords="113,5,176,32"/>
+<area shape="rect" id="Node000002" href="$_s_ctimer_8h.html" title="Modulo de Salida autonoma temporizada." alt="" coords="5,80,164,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="137,34,111,69,107,66,133,31"/>
+<area shape="rect" id="Node000005" href="$_pin_8h.html" title="Clase Abstracta de cualquier pin del microcontrolador." alt="" coords="145,171,269,213"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="154,31,178,79,201,155,196,156,173,81,149,34"/>
+<area shape="rect" id="Node000003" href="$_l_p_c845_8h.html" title="Registros del LPC845." alt="" coords="42,179,122,205"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="87,123,85,163,80,163,81,123"/>
+<area shape="rect" id="Node000004" href="$tipos_8h.html" title="Definiciones de tipos de variables." alt="" coords="114,261,175,288"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="94,204,128,248,124,251,90,207"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="193,216,166,250,162,247,189,212"/>
+</map>

@@ -1,0 +1,29 @@
+<map id="ESP8266.h" name="ESP8266.h">
+<area shape="rect" id="Node000001" title="Modulo de comunicacion WIFI con ESP8266." alt="" coords="410,5,498,32"/>
+<area shape="rect" id="Node000002" href="$_uart_8h.html" title="Modulo de Comunicacion Uart." alt="" coords="260,261,389,304"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="450,34,344,249,339,246,445,31"/>
+<area shape="rect" id="Node000007" href="$_timer_8h.html" title="Clase para creacion de temporizadores." alt="" coords="474,80,612,123"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="470,31,511,68,508,72,466,34"/>
+<area shape="rect" id="Node000003" href="$_comunicacion_asincronica_8h.html" title="Objeto base para la creacion de comunicaciones asincrónicas." alt="" coords="159,352,405,395"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="317,306,301,339,296,337,312,303"/>
+<area shape="rect" id="Node000005" href="$_l_p_c845_8h.html" title="Registros del LPC845." alt="" coords="429,360,508,387"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="360,302,437,349,434,354,357,307"/>
+<area shape="rect" id="Node000006" href="$_pin_8h.html" title="Clase Abstracta de cualquier pin del microcontrolador." alt="" coords="5,352,135,395"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="266,307,145,349,143,344,264,302"/>
+<area shape="rect" id="Node000004" href="$tipos_8h.html" title="Definiciones de tipos de variables." alt="" coords="438,443,499,469"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="331,393,426,434,424,439,329,398"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="471,387,471,427,466,427,466,387"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="136,389,148,392,299,422,423,445,422,450,298,428,147,397,135,394"/>
+<area shape="poly" id="edge17_Node000007_Node000004" title=" " alt="" coords="586,121,613,142,636,169,669,230,680,258,687,284,689,311,685,338,674,367,656,396,626,424,590,442,551,452,515,457,514,451,550,447,588,437,623,420,652,393,670,364,680,337,684,311,682,285,675,259,664,232,632,172,610,146,582,125"/>
+<area shape="rect" id="Node000008" href="$_callback_8h.html" title="Clase virtual pura. Esta clase debe ser heredada por las clases que se tienen que enganchar del Systi..." alt="" coords="465,171,622,213"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="546,123,546,155,541,155,541,123"/>
+<area shape="poly" id="edge10_Node000008_Node000005" title=" " alt="" coords="527,216,511,237,496,262,482,305,474,345,469,344,477,304,492,260,506,235,523,212"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="584,360,641,387"/>
+<area shape="poly" id="edge11_Node000008_Node000009" title=" " alt="" coords="564,212,581,234,595,260,608,304,614,344,608,345,603,305,590,262,576,237,560,215"/>
+<area shape="rect" id="Node000010" href="$systick_8h.html" title="Firmware del systick." alt="" coords="506,269,580,296"/>
+<area shape="poly" id="edge12_Node000008_Node000010" title=" " alt="" coords="538,214,538,254,532,254,533,214"/>
+<area shape="poly" id="edge14_Node000010_Node000004" title=" " alt="" coords="545,297,540,342,533,369,523,396,496,433,491,430,518,393,528,368,535,341,540,296"/>
+<area shape="poly" id="edge13_Node000010_Node000005" title=" " alt="" coords="535,298,491,350,487,346,531,295"/>
+<area shape="poly" id="edge15_Node000010_Node000008" title=" " alt="" coords="547,269,550,229,555,229,552,269"/>
+<area shape="poly" id="edge16_Node000010_Node000009" title=" " alt="" coords="555,295,595,346,591,349,551,298"/>
+</map>

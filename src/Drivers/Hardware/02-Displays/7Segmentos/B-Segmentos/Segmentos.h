@@ -50,7 +50,7 @@ class segmentos
 	public:
 		segmentos() {};						/**< constructor por defecto */
 		virtual void SetSegmentos ( uint16_t ) = 0;		/**< Funcion set del segmento */
-		virtual void Inicializar ( void ) = 0;			/**< Funcion de inicializacion */
+		virtual void Initialize ( void ) = 0;			/**< Funcion de inicializacion */
 		virtual ~segmentos() {};			/**< destructor por defecto */
 };
 

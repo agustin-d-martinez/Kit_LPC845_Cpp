@@ -1,0 +1,5 @@
+<map id="ComunicacionSincronica" name="ComunicacionSincronica">
+<area shape="rect" id="Node000001" title="Clase del objeto ComunicacionAsincronica Clase abstracta pura para la generación de comunicaciones si..." alt="" coords="5,96,171,123"/>
+<area shape="rect" id="Node000002" href="$class_pin.html" title="Clase del objeto Pin." alt="" coords="68,5,108,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="91,48,91,95,85,95,85,48"/>
+</map>

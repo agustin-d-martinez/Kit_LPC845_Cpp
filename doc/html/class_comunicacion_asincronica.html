@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>KITLPC845-C++: ComunicacionAsincronica Class Reference</title>
+<title>LPC845-C++: ComunicacionAsincronica Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -18,6 +18,11 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,10 +32,22 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">KITLPC845-C++<span id="projectnumber">&#160;2.0</span>
+   <div id="projectname">LPC845-C++<span id="projectnumber">&#160;2.0</span>
    </div>
-   <div id="projectbrief">KitdelibreriascustomenC++paralaplacadedesarrolloLPC845</div>
+   <div id="projectbrief">Kit de librerias propias de la placa de desarrollo LPC845</div>
   </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -47,17 +64,6 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 $(function() { codefold.init(0); });
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('',true,false,'search.php','Search',true);
-  $(function() { init_search(); });
-});
-/* @license-end */
-</script>
-<div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -113,18 +119,25 @@ $(function(){initNavTree('class_comunicacion_asincronica.html',''); initResizabl
 Inheritance diagram for ComunicacionAsincronica:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_comunicacion_asincronica__inherit__graph.png" border="0" usemap="#a_comunicacion_asincronica_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_comunicacion_asincronica_inherit__map" id="a_comunicacion_asincronica_inherit__map">
+<area shape="rect" title="Clase del objeto ComunicacionAsincronica Clase abstracta pura para la generación de UART." alt="" coords="5,5,178,32"/>
+<area shape="rect" href="class_uart.html" title="Clase del objeto uart El objeto uart genera una comunicación asincrónica de tipo UART." alt="" coords="68,80,115,107"/>
+<area shape="poly" title=" " alt="" coords="94,48,94,80,89,80,89,48"/>
+<area shape="rect" href="class_e_s_p8266.html" title="Clase del objeto ESP8266 El objeto ESP8266 permite la simple utilización del módulo arduino ESP8266 y..." alt="" coords="53,155,130,181"/>
+<area shape="poly" title=" " alt="" coords="94,122,94,154,89,154,89,122"/>
+</map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a711e7bb16713a4ebfd7f71044090531a" id="r_a711e7bb16713a4ebfd7f71044090531a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a711e7bb16713a4ebfd7f71044090531a">ComunicacionAsincronica</a> ()=default</td></tr>
 <tr class="separator:a711e7bb16713a4ebfd7f71044090531a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d55be4bd6519f1e8b8d6954c75d45e1" id="r_a9d55be4bd6519f1e8b8d6954c75d45e1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d55be4bd6519f1e8b8d6954c75d45e1">Transmit</a> (const char *msg)=0</td></tr>
-<tr class="separator:a9d55be4bd6519f1e8b8d6954c75d45e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a506361dd86d7300792b5cded1159506e" id="r_a506361dd86d7300792b5cded1159506e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a506361dd86d7300792b5cded1159506e">Transmit</a> (const void *msg, uint32_t n)=0</td></tr>
-<tr class="separator:a506361dd86d7300792b5cded1159506e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af260972f1da109c6ab2c2e8d3ef1c559" id="r_af260972f1da109c6ab2c2e8d3ef1c559"><td class="memItemLeft" align="right" valign="top">virtual void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af260972f1da109c6ab2c2e8d3ef1c559">Message</a> (void *msg, uint32_t n)=0</td></tr>
-<tr class="separator:af260972f1da109c6ab2c2e8d3ef1c559"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1edc50c8c7a50da0c73a58812c632590" id="r_a1edc50c8c7a50da0c73a58812c632590"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1edc50c8c7a50da0c73a58812c632590">Write</a> (const char *msg)=0</td></tr>
+<tr class="separator:a1edc50c8c7a50da0c73a58812c632590"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada76403f78db8f4ef709651662c754d3" id="r_ada76403f78db8f4ef709651662c754d3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada76403f78db8f4ef709651662c754d3">Write</a> (const void *msg, <a class="el" href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> n)=0</td></tr>
+<tr class="separator:ada76403f78db8f4ef709651662c754d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64e4dad4f58c045a8192d2a4f94f80fc" id="r_a64e4dad4f58c045a8192d2a4f94f80fc"><td class="memItemLeft" align="right" valign="top">virtual void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64e4dad4f58c045a8192d2a4f94f80fc">Read</a> (void *msg, <a class="el" href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> n)=0</td></tr>
+<tr class="separator:a64e4dad4f58c045a8192d2a4f94f80fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03334adab3bab229a1709c721d25cde7" id="r_a03334adab3bab229a1709c721d25cde7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a03334adab3bab229a1709c721d25cde7">UART_IRQHandler</a> (void)=0</td></tr>
 <tr class="separator:a03334adab3bab229a1709c721d25cde7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96a3fc01767f456da0b5b177751a02f3" id="r_a96a3fc01767f456da0b5b177751a02f3"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a96a3fc01767f456da0b5b177751a02f3">~ComunicacionAsincronica</a> ()=default</td></tr>
@@ -132,13 +145,13 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a01a00859cfa12a971645325e7cfea6d1" id="r_a01a00859cfa12a971645325e7cfea6d1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01a00859cfa12a971645325e7cfea6d1">pushRx</a> (uint8_t dato)=0</td></tr>
+<tr class="memitem:a01a00859cfa12a971645325e7cfea6d1" id="r_a01a00859cfa12a971645325e7cfea6d1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01a00859cfa12a971645325e7cfea6d1">pushRx</a> (<a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> dato)=0</td></tr>
 <tr class="separator:a01a00859cfa12a971645325e7cfea6d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91b0600c6c99e3034d06ad2912594bf2" id="r_a91b0600c6c99e3034d06ad2912594bf2"><td class="memItemLeft" align="right" valign="top">virtual uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a91b0600c6c99e3034d06ad2912594bf2">popRx</a> (uint8_t *dato)=0</td></tr>
+<tr class="memitem:a91b0600c6c99e3034d06ad2912594bf2" id="r_a91b0600c6c99e3034d06ad2912594bf2"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a91b0600c6c99e3034d06ad2912594bf2">popRx</a> (<a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *dato)=0</td></tr>
 <tr class="separator:a91b0600c6c99e3034d06ad2912594bf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af981e1ede12e7af2334eb6ae08948fbf" id="r_af981e1ede12e7af2334eb6ae08948fbf"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af981e1ede12e7af2334eb6ae08948fbf">pushTx</a> (uint8_t dato)=0</td></tr>
+<tr class="memitem:af981e1ede12e7af2334eb6ae08948fbf" id="r_af981e1ede12e7af2334eb6ae08948fbf"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af981e1ede12e7af2334eb6ae08948fbf">pushTx</a> (<a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> dato)=0</td></tr>
 <tr class="separator:af981e1ede12e7af2334eb6ae08948fbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef7119239e6601ca6d88d8226ec53f2f" id="r_aef7119239e6601ca6d88d8226ec53f2f"><td class="memItemLeft" align="right" valign="top">virtual uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aef7119239e6601ca6d88d8226ec53f2f">popTx</a> (uint8_t *dato)=0</td></tr>
+<tr class="memitem:aef7119239e6601ca6d88d8226ec53f2f" id="r_aef7119239e6601ca6d88d8226ec53f2f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aef7119239e6601ca6d88d8226ec53f2f">popTx</a> (<a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *dato)=0</td></tr>
 <tr class="separator:aef7119239e6601ca6d88d8226ec53f2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -197,38 +210,6 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="af260972f1da109c6ab2c2e8d3ef1c559" name="af260972f1da109c6ab2c2e8d3ef1c559"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af260972f1da109c6ab2c2e8d3ef1c559">&#9670;&#160;</a></span>Message()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void * ComunicacionAsincronica::Message </td>
-          <td>(</td>
-          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>msg</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>n</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Funcion de lectura </p>
-
-<p>Implemented in <a class="el" href="class_e_s_p8266.html#a23180eda65a9e0d03adb197ba75b72b7">ESP8266</a>, and <a class="el" href="class_uart.html#a9839f4adce7570038475de7a872d681e">Uart</a>.</p>
-
-</div>
-</div>
 <a id="a91b0600c6c99e3034d06ad2912594bf2" name="a91b0600c6c99e3034d06ad2912594bf2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a91b0600c6c99e3034d06ad2912594bf2">&#9670;&#160;</a></span>popRx()</h2>
 
@@ -239,9 +220,9 @@ Protected Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual uint8_t ComunicacionAsincronica::popRx </td>
+          <td class="memname">virtual <a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> ComunicacionAsincronica::popRx </td>
           <td>(</td>
-          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>dato</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *</td>          <td class="paramname"><span class="paramname"><em>dato</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -265,9 +246,9 @@ Protected Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual uint8_t ComunicacionAsincronica::popTx </td>
+          <td class="memname">virtual <a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> ComunicacionAsincronica::popTx </td>
           <td>(</td>
-          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>dato</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *</td>          <td class="paramname"><span class="paramname"><em>dato</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -293,7 +274,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual void ComunicacionAsincronica::pushRx </td>
           <td>(</td>
-          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>dato</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></td>          <td class="paramname"><span class="paramname"><em>dato</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -319,7 +300,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual void ComunicacionAsincronica::pushTx </td>
           <td>(</td>
-          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>dato</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></td>          <td class="paramname"><span class="paramname"><em>dato</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -333,8 +314,8 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a9d55be4bd6519f1e8b8d6954c75d45e1" name="a9d55be4bd6519f1e8b8d6954c75d45e1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9d55be4bd6519f1e8b8d6954c75d45e1">&#9670;&#160;</a></span>Transmit() <span class="overload">[1/2]</span></h2>
+<a id="a64e4dad4f58c045a8192d2a4f94f80fc" name="a64e4dad4f58c045a8192d2a4f94f80fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64e4dad4f58c045a8192d2a4f94f80fc">&#9670;&#160;</a></span>Read()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -343,42 +324,14 @@ Protected Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void ComunicacionAsincronica::Transmit </td>
+          <td class="memname">virtual void * ComunicacionAsincronica::Read </td>
           <td>(</td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>msg</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Funcion de transmitir </p>
-
-<p>Implemented in <a class="el" href="class_e_s_p8266.html#a4c62aa1edf1bd6638d181fa62123f852">ESP8266</a>, and <a class="el" href="class_uart.html#a7620a6c08f6cb73c38aa2510ac8e21e8">Uart</a>.</p>
-
-</div>
-</div>
-<a id="a506361dd86d7300792b5cded1159506e" name="a506361dd86d7300792b5cded1159506e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a506361dd86d7300792b5cded1159506e">&#9670;&#160;</a></span>Transmit() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void ComunicacionAsincronica::Transmit </td>
-          <td>(</td>
-          <td class="paramtype">const void *</td>          <td class="paramname"><span class="paramname"><em>msg</em></span>, </td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>msg</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>n</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></td>          <td class="paramname"><span class="paramname"><em>n</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -387,9 +340,9 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Funcion de transmitir </p>
+<p>Funcion de lectura </p>
 
-<p>Implemented in <a class="el" href="class_e_s_p8266.html#a77592436422707ace296d13fe5c262b9">ESP8266</a>, and <a class="el" href="class_uart.html#a57580732de50eed46114d06d0cf35859">Uart</a>.</p>
+<p>Implemented in <a class="el" href="class_e_s_p8266.html#a2b2430594de3bbf3ec473bc9d7c5fbeb">ESP8266</a>, and <a class="el" href="class_uart.html#a58e6ada71f8c76984211466ba457f5e5">Uart</a>.</p>
 
 </div>
 </div>
@@ -419,8 +372,68 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a1edc50c8c7a50da0c73a58812c632590" name="a1edc50c8c7a50da0c73a58812c632590"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1edc50c8c7a50da0c73a58812c632590">&#9670;&#160;</a></span>Write() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ComunicacionAsincronica::Write </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>msg</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Funcion de transmitir </p>
+
+<p>Implemented in <a class="el" href="class_e_s_p8266.html#a20d4d2376c5cfc5b0d5bc22ebfac6ff9">ESP8266</a>, and <a class="el" href="class_uart.html#a723faac7d90252ba2c4e05fc1fd5689d">Uart</a>.</p>
+
+</div>
+</div>
+<a id="ada76403f78db8f4ef709651662c754d3" name="ada76403f78db8f4ef709651662c754d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada76403f78db8f4ef709651662c754d3">&#9670;&#160;</a></span>Write() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ComunicacionAsincronica::Write </td>
+          <td>(</td>
+          <td class="paramtype">const void *</td>          <td class="paramname"><span class="paramname"><em>msg</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></td>          <td class="paramname"><span class="paramname"><em>n</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Funcion de transmitir </p>
+
+<p>Implemented in <a class="el" href="class_e_s_p8266.html#aef0f9b73b8dfee6f0c6f539cc06e8eb4">ESP8266</a>, and <a class="el" href="class_uart.html#a1c3c9ecf7b9b19c6f0929328ab25f5cf">Uart</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>E:/Agustin/Escritorio/MCUexpresso/KitLPC845-C++/src/Drivers/Perifericos/13-UART/<a class="el" href="_comunicacion_asincronica_8h_source.html">ComunicacionAsincronica.h</a></li>
+<li><a class="el" href="_comunicacion_asincronica_8h_source.html">ComunicacionAsincronica.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

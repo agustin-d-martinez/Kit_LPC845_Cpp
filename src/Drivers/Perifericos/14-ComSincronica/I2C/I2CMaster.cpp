@@ -1,9 +1,12 @@
 /*******************************************************************************************************************************//**
  *
- * @file		I2C.cpp
- * @brief		Descripcion del modulo
- * @date		5 oct. 2022
- * @author		Martinez Agustin
+ * @file		I2CMaster.cpp
+ * @brief		Modulo para master I2C.
+ * @details
+ *
+ * @date		3 ene. 2025
+ * @version		1.0
+ * @author     	Técnico. Martinez Agustin (masteragus365@gmail.com)
  *
  **********************************************************************************************************************************/
 

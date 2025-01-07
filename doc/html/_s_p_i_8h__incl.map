@@ -1,0 +1,16 @@
+<map id="SPI.h" name="SPI.h">
+<area shape="rect" id="Node000001" title="Modulo de comunicacion SPI." alt="" coords="164,5,219,32"/>
+<area shape="rect" id="Node000002" href="$_pin_8h.html" title="Clase Abstracta de cualquier pin del microcontrolador." alt="" coords="108,171,232,213"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="182,34,166,55,153,81,150,100,150,119,158,156,153,157,145,120,144,99,148,79,161,52,177,31"/>
+<area shape="rect" id="Node000004" href="$_l_p_c845_8h.html" title="Registros del LPC845." alt="" coords="5,179,85,205"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="183,34,68,168,64,165,179,31"/>
+<area shape="rect" id="Node000005" href="$_comunicacion_sincronica_8h.html" title="Objeto base para la creacion de comunicaciones sincrónicas." alt="" coords="162,80,357,123"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="204,31,235,67,231,70,200,34"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="380,88,438,115"/>
+<area shape="poly" id="edge8_Node000001_Node000006" title=" " alt="" coords="220,25,289,47,370,78,373,79,370,84,368,82,287,52,218,31"/>
+<area shape="rect" id="Node000003" href="$tipos_8h.html" title="Definiciones de tipos de variables." alt="" coords="140,261,200,288"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="173,214,173,245,168,245,168,214"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="66,204,140,251,137,255,63,208"/>
+<area shape="poly" id="edge6_Node000005_Node000002" title=" " alt="" coords="241,125,204,162,200,158,237,121"/>
+<area shape="poly" id="edge7_Node000005_Node000003" title=" " alt="" coords="264,123,262,167,257,191,247,215,230,237,209,255,205,250,226,233,243,212,252,190,257,166,259,123"/>
+</map>

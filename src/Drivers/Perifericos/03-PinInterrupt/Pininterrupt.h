@@ -2,8 +2,11 @@
  *
  * @file		PinInterrupt.h
  * @brief		Clase para entradas con interrupciones por flanco.
+ * @details
+ *
  * @date		17 sep. 2022
- * @author		Grupo 4
+ * @version		1.0
+ * @author     	Técnico. Martinez Agustin (masteragus365@gmail.com)
  *
  **********************************************************************************************************************************/
 #ifndef PININTERRUPT_H_
