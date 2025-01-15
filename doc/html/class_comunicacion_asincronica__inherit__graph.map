@@ -1,7 +1,0 @@
-<map id="ComunicacionAsincronica" name="ComunicacionAsincronica">
-<area shape="rect" id="Node000001" title="Clase del objeto ComunicacionAsincronica Clase abstracta pura para la generación de UART." alt="" coords="5,5,178,32"/>
-<area shape="rect" id="Node000002" href="$class_uart.html" title="Clase del objeto uart El objeto uart genera una comunicación asincrónica de tipo UART." alt="" coords="68,80,115,107"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="94,48,94,80,89,80,89,48"/>
-<area shape="rect" id="Node000003" href="$class_e_s_p8266.html" title="Clase del objeto ESP8266 El objeto ESP8266 permite la simple utilización del módulo arduino ESP8266 y..." alt="" coords="53,155,130,181"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="94,122,94,154,89,154,89,122"/>
-</map>

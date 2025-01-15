@@ -1273,7 +1273,7 @@ typedef struct {
 	union {
 		struct{
 			__RW uint32_t RESERVED0	:6;				/**< RESERVATED. NOT USED */
-			__RW uint32_t VALUE		:10;			/**< After the selected settling time after this field is written with a new VALUE, the voltage on the DAC_OUT pin (with respect to VSSA) is VALUE  ((VREFP)/1024)*/
+			__RW uint32_t VALUE		:10;			/**< After the selected settling time after this field is written with a new VALUE, the voltage on the DAC_OUT pin (with respect to VSSA) is VALUE = ((VREFP)/1024)*/
 			__RW uint32_t BIAS		:1;				/**< The settling times noted in the description of the BIAS bit are valid for a capacitance load on the DAC_OUT pin not exceeding 100 pF*/
 			__RW uint32_t RESERVED1	:15;			/**< RESERVATED. NOT USED */
 		};

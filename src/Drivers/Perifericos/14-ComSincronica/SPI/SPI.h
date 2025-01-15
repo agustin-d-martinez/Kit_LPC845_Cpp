@@ -1,18 +1,27 @@
-/*******************************************************************************************************************************//**
+/*********************************************************************************************************************************************//**
  *
  * @file		SPI.h
  * @brief		Modulo de comunicacion SPI.
+ * @details		USO: Se crea, se inicializa y se agregan los slaves correspondientes AddSSEL().
+ * Posee 2 modos: Master y Slave.
+ * MASTER:
+ * SetSSEL(): Setea el Slave correspondiente.
+ * SetEOF() o SetEOT(): Configura el dato a transmitir como unico o como el primero de una cadena. Se debe setear si se desean enviar varios de corrido.
+ * isTxReady(): Verifica que se puede iniciar una transmision.
+ * Write(): Escribe el byte.
+ *
+ * isRxReady(): Si luego de escribir llego un dato, se verifica con esta funcion.
+ * Read(): Luego de una escritura, se lee lo que llegó.
+ *
+ * SLAVE:
+ * Not fully implemented.
+ * Necesita isSSELAsserted( slv )
+ *
  * @date		3 ene. 2025
- * @author		Técnico Martinez Agustin
- * @version		v1.0
+ * @version		1.0
+ * @author     	Técnico. Martinez Agustin (masteragus365@gmail.com)
  *
  **********************************************************************************************************************************/
-
-/**
- * USO:
- * Se crea y se inicializa. Posee 2 modos: Master y Slave.
- */
-
 /***********************************************************************************************************************************
  *** MODULO
  **********************************************************************************************************************************/
@@ -22,15 +31,12 @@
 /** \addtogroup Drivers
  *  @{
  */
-
 /***********************************************************************************************************************************
  *** INCLUDES GLOBALES
  **********************************************************************************************************************************/
 #include <Perifericos/01-Pin/Pin.h>
 #include "LPC845.h"
 #include <Perifericos/14-ComSincronica/ComunicacionSincronica.h>
-#include <vector>
-using namespace std;
 /***********************************************************************************************************************************
  *** DEFINES GLOBALES
  **********************************************************************************************************************************/
@@ -59,39 +65,71 @@ using namespace std;
  **********************************************************************************************************************************/
 /**
  * \class SPI
- * \brief Clase del objeto SPI
- *
+ * \brief Clase del objeto SPI.
+ * \details Crea un objeto SPI. Maneja los registros correspondientes del SPI.
  */
 
 class SPI: ComunicacionSincronica
-{		//La I2C1 a I2C3 no van a mas de 400khz
+{
 public:
-	/** Posiciones del buffer*/
-	enum { SCLK = 0 , MOSI , MISO , SSEL0 , SSEL1 , SSEL2 , SSEL3 };
 	/** Enumeracion. Modo del SPI. Puede ser master o slave. */
-	typedef enum {master = 1 , slave = 2} SPI_mode_t;
+	typedef enum {master = 1 , slave = 2} SPI_role_t;
+	/** Modo de comunicacion del SPI. Puede ser MODE0, MODE1, MODE2 o MODE3. */
+	typedef enum {
+		SPI_MODE_0 = 0 ,		/**< CPOL=0 y CPHA = 0. Change + Low clock rest.   */
+		SPI_MODE_1 ,			/**< CPOL=0 y CPHA = 1	Capture + Low clock rest.  */
+		SPI_MODE_2 ,			/**< CPOL=1 y CPHA = 0	Change + High clock rest.  */
+		SPI_MODE_3				/**< CPOL=1 y CPHA = 1	Capture + High clock rest. */
+	} SPI_mode_t;
+/** Maxima cantidad de chip selects del SPI0 */
+#define MAX_SSEL_SPI0		4
+/** Maxima cantidad de chip selects del SPI1 */
+#define MAX_SSEL_SPI1		2
 
 private:
-	SPI_Type*			m_SPI_register;
-	const vector<Pin*> 	m_pines;
-	SPI_mode_t			m_mode;
+static const uint8_t SPI0_PINASSIGN_IDX[] ;		/**< Indice de PinAssign del SPI. Usado para la Switch Matrix. */
+static const uint8_t SPI0_SSEL_OFFSET_IDX[] ;	/**< Indice del offset del SWM del SPI. Usado para la Switch Matrix. */
+static const uint8_t SPI1_PINASSIGN_IDX[] ;		/**< Indice de PinAssign del SPI. Usado para la Switch Matrix. */
+static const uint8_t SPI1_SSEL_OFFSET_IDX[] ;	/**< Indice del offset del SWM del SPI. Usado para la Switch Matrix. */
+
+protected:
+	SPI_Type*	m_SPI_register;	/**< Registro a leer para configurar I2C. Protegido ya que se puede acceder por herencia. */
+
+private:
+	const Pin* 	m_miso;								/**< Pin de recepcion del master. */
+	const Pin*	m_mosi;								/**< Pin de transmision del master. */
+	Pin*		m_ssel[MAX_SSEL_SPI0] = {nullptr};	/**< Vector con pines del Chip Select. */
+	SPI_role_t	m_role;								/**< Rol del SPI. Puede ser master o slave. */
 
 public:
-			SPI				( SPI_Type* SPI_register , vector<Pin*> &pines , SPI_mode_t mode);
-	void 	Initialize 		( uint32_t clk_freq );
+			SPI				( SPI_Type* SPI_register , Pin* miso , Pin* mosi , Pin* clk , SPI_role_t role = master );
+	void 	Initialize 		( uint32_t clk_freq , SPI_mode_t mode = SPI_MODE_0 );
 	void 	EnableInterupt 	( void );
 	void 	DisableInterupt ( void );
 
-	void 			Write 		( uint8_t data );
-	int8_t 			Read 		( uint8_t* data );
 
-	virtual void 	SPI_IRQHandler ( void ) { }		/**< Handler generico de interrupcion I2C. No hace nada, debe heredarse y sobreescribirse. */
-	virtual 		~SPI();
+	int8_t			AddSSEL ( Pin* ssel , uint8_t slave_number );
+	void			RemoveSSEL ( uint8_t slave_number );
+	void 			SetSSEL ( uint8_t slave_number );
+	void 			ClearSSEL ( uint8_t slave_number );
+
+	void			ClearEOT ( void );
+	void			SetEOT ( void );
+	void			ClearEOF ( void );
+	void			SetEOF ( void );
+	void			forceFinish();
+	void 			Write ( uint8_t data );
+	int8_t 			Read ( uint8_t* data );
+	bool 			isTxReady( void );
+	bool			isRxReady( void );
+
+	virtual void 	SPI_IRQHandler ( void )	{}
+	virtual 		~SPI() = default;		/**< Destructor por default. */
 
 private:
-	void 	config 			( uint32_t clk_freq );
-	void 	EnableSWM 		( void );
-	void 	ConfigClock 	( void );
+	void 			config ( uint32_t clk_freq , SPI_mode_t mode );
+	void 			EnableSWM ( void );
+	void 			ConfigClock ( void );
 };
 
 #endif /* SPI_H_ */

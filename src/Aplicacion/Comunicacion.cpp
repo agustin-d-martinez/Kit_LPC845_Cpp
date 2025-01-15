@@ -18,13 +18,7 @@
 /***********************************************************************************************************************************
  *** MACROS PRIVADAS AL MODULO
  **********************************************************************************************************************************/
-enum{ 	POS_MENSAJE_ARRIBA = 0,
-		POS_MENSAJE_ABAJO ,
-		POS_MENSAJE_IZQ ,
-		POS_MENSAJE_DER ,
-		POS_TIEMPO_ASPIRADO ,
-		POS_TIEMPO_MANUAL
-};
+
 /***********************************************************************************************************************************
  *** TIPOS DE DATOS PRIVADOS AL MODULO
  **********************************************************************************************************************************/
@@ -45,167 +39,103 @@ using namespace std;
 /***********************************************************************************************************************************
  *** IMPLEMENTACION DE LOS METODODS DE LA CLASE
  **********************************************************************************************************************************/
-Comunicacion::Comunicacion( Uart * _com , vector <uint32_t > &msg ) : m_com(_com) ,  m_msg(msg)
+Comunicacion::Comunicacion( UART * _com , vector <uint32_t > &msg ) : m_com(_com) ,  m_msg(msg) , m_ultimo_msg(1)
 {
-	m_cont = 0;
-	m_byte_final = BYTE_FINAL;
-	m_byte_inicio = BYTE_INICIO;
-	m_maquina[ 0 ] = &Comunicacion::ByteInicio;
-	m_maquina[ 1 ] = &Comunicacion::Letras;
-	m_maquina[ 2 ] = &Comunicacion::ByteFinal;
+	m_maquina[ E_VERDE ] = &Comunicacion::Verde;
+	m_maquina[ E_AMARILLO ] = &Comunicacion::Amarillo;
+	m_maquina[ E_ROJO ] = &Comunicacion::Rojo;
+	m_maquina[ E_NADA ] = &Comunicacion::Nada;
+	m_msg[1] = 1;
 }
-void Comunicacion::ByteInicio( void )
+void Comunicacion::Verde( void )
 {
-	if ( m_com->Read(&m_letra_recibida, 1) != nullptr )
-	{//SI ME LLEGO ALGO
-		m_cont = 0;
+	intToStr(m_reloj.GetSeg(), m_hora);
+	m_reloj.Reset();
 
-		if( m_letra_recibida == m_byte_inicio)
-			m_Estado = E_LETRAS;
-	}
+	m_com->Write(m_hora);
+	m_com->Write("s en Amarillo >Pasamos a Verde\n");
+	m_Estado = E_NADA;
 }
-void Comunicacion::Letras( void )
+void Comunicacion::Amarillo( void )
 {
-	if ( m_com->Read(&m_letra_recibida, 1) != nullptr )
-	{//SI ME LLEGO ALGO
-		if ( (strchr( LETRAS_VALIDAS , m_letra_recibida ) == NULL && m_letra_recibida != m_byte_final && m_letra_recibida != m_byte_inicio )
-				|| (m_cont > MAX_MENSAJE) )
-		{	//SI HAY ERROR O ME PASO DEL LARGO VUELVO
-			m_buffer[0] = '\0';
-			m_Estado = E_BYTE_INICIO;
-			return;
-		}
-		if ( m_letra_recibida == m_byte_inicio )
-		{	//SI ME LLEGAN 2 BYTE_INICIO SEGUIDOS
-			m_buffer[0] = '\0';
-			m_cont = 0;
-			return;
-		}
-		if ( m_letra_recibida == m_byte_final && m_cont <= MAX_MENSAJE )
-		{	//SI TERMINE DE GUARDAR ME VOY
-			m_buffer[m_cont] = '\0';
-			m_Estado = E_BYTE_FINAL;
-			return;
-		}
-		m_buffer[m_cont] = m_letra_recibida;	//Si no entró a los anteriores es porque es valido
-		m_cont++;
-	}
-}
-void Comunicacion::ByteFinal( void )
-{	//ANALIZO EL MENSAJE
-	if( strcmp(m_buffer  , "CU") == 0 )	//Caso ir arriba
-	{
-		Toggle(POS_MENSAJE_ARRIBA);
-		m_msg[POS_MENSAJE_ABAJO] = 0;
-		m_msg[POS_MENSAJE_DER] = 0;
-		m_msg[POS_MENSAJE_IZQ] = 0;
-	}
-	if( strcmp(m_buffer  , "CL") == 0)	//Caso ir izquierda
-	{
-		Toggle(POS_MENSAJE_IZQ);
-		m_msg[POS_MENSAJE_ABAJO] = 0;
-		m_msg[POS_MENSAJE_DER] = 0;
-		m_msg[POS_MENSAJE_ARRIBA] = 0;
-	}
-	if( strcmp(m_buffer  , "CR") == 0)	//Caso ir derecha
-	{
-		Toggle(POS_MENSAJE_DER);
-		m_msg[POS_MENSAJE_ABAJO] = 0;
-		m_msg[POS_MENSAJE_ARRIBA] = 0;
-		m_msg[POS_MENSAJE_IZQ] = 0;
-	}
-	if( strcmp(m_buffer  , "CD") == 0 )	//Caso ir abajo
-	{
-		Toggle(POS_MENSAJE_ABAJO);
-		m_msg[POS_MENSAJE_ARRIBA] = 0;
-		m_msg[POS_MENSAJE_DER] = 0;
-		m_msg[POS_MENSAJE_IZQ] = 0;
-	}
+	intToStr(m_reloj.GetSeg(), m_hora);
+	m_reloj.Reset();
 
-	if( strlen(m_buffer) == 5 && m_buffer[0] == 'L' && IsNumber( 1 , 4 ))
-	{	//Si el pedido se realiza ahora guardo el pedido con inicio en 0mins
-		m_buffer[0] = ' ';
-		m_lista_pedidos.push_back(0);
-		m_tiempos_aspirado.push_back( atoi(m_buffer) );
-	}
-	if( strlen(m_buffer) == 10 && m_buffer[0] == 'P' && IsNumber( 1 , 4 ) && IsNumber(6, 9))
-	{	//Si el pedido se realiza dentro de un rato guardo el pedido y su tiempo de inicio
-		m_buffer[0] = ' ';
-		m_tiempos_aspirado.push_back( atoi(m_buffer) );
-		for ( uint8_t i = 1 ; i < 6 ; i++ )
-			m_buffer[i] = ' ';
-		m_lista_pedidos.push_back(atoi(m_buffer));
-	}
+	m_com->Write(m_hora);
+	m_com->Write("s En Rojo. >Pasamos a Amarillo\n");
+	m_Estado = E_NADA;
+}
+void Comunicacion::Rojo( void )
+{
+	intToStr(m_reloj.GetSeg(), m_hora);
+	m_reloj.Reset();
 
-	//Regreso al inicio
-	m_cont = 0;
-	m_buffer[0] = '\0';
-	m_Estado = E_BYTE_INICIO;
+	m_com->Write(m_hora);
+	m_com->Write("s en Verde >Pasamos a Rojo\n");
+	m_Estado = E_NADA;
 }
-void Comunicacion::SetBitInicio ( int8_t &a )
+void Comunicacion::Nada()
 {
-	m_byte_inicio = a;
-}
-void Comunicacion::SetBitFin ( int8_t &a )
-{
-	m_byte_final = a;
+	if (m_msg[0] == 1 && m_ultimo_msg != 1)
+		m_Estado = E_VERDE;
+	else if (m_msg[0] == 2 && m_ultimo_msg != 2)
+		m_Estado = E_ROJO;
+	else if (m_msg[0] == 3 && m_ultimo_msg != 3)
+		m_Estado = E_AMARILLO;
+	m_ultimo_msg = m_msg[0];
 }
 void Comunicacion::MaquinaDeEstados ( void )
 {
-	if ( m_Estado > E_BYTE_FINAL )
-		m_Estado = E_BYTE_INICIO ;
+	revisarRx();
+
+	if ( m_Estado > E_NADA )
+		m_Estado = E_NADA ;
 	( this->*m_maquina[m_Estado] )( );	//Reviso la comunicacion
-
-	EnviarPedidos();
-
-	AnalizarPedidos();	//Reviso que no haya pedidos pendientes
-	ActualizarTiempo();	//Actualizo el tiempo de los pedidos
 }
-void Comunicacion::AnalizarPedidos( void )
+
+void Comunicacion::revisarRx()
 {
-	for ( auto& a: m_lista_pedidos )
+	int8_t tmp;
+	if ( m_com->Read(&tmp) )
 	{
-		if ( m_lista_pedidos[a] == 0 )
-		{	//Si alguno se debe ejecutar ahora, lo borro de la lista y le paso el mensaje a la aspiradora
-			m_msg[POS_TIEMPO_ASPIRADO] = m_tiempos_aspirado[a];
-			m_tiempos_aspirado.erase(m_tiempos_aspirado.begin() + a);
-			m_lista_pedidos.erase(m_lista_pedidos.begin() + a);
-		}
-	}
-}
-void Comunicacion::ActualizarTiempo( void )
-{	//Resto el tiempo transcurrido a la lista de pedidos
-	uint32_t mins = m_reloj.GetMin();
-	if ( mins != 0 )
-	{
-		for ( auto& a: m_lista_pedidos )
+		if (tmp == '1')
 		{
-			if ( m_lista_pedidos[a] <= mins )
-				m_lista_pedidos[a] = 0;
-			else
-				m_lista_pedidos[a] -= mins;
+			m_msg[1] = 1;
+			m_com->Write("Encendido\n");
 		}
-		m_reloj.Reset();
+		if (tmp == '0')
+		{
+			m_msg[1] = 0;
+			m_com->Write("Apagado\n");
+		}
 	}
 }
-void Comunicacion::EnviarPedidos( void )
+void Comunicacion::intToStr(int32_t num, int8_t* str)
 {
-	if ( m_msg[POS_TIEMPO_MANUAL] != 0 )
-	{
-		int8_t buf = '\0';
-		m_com->Write("<L\0");
-		buf = m_msg[POS_TIEMPO_MANUAL]/1000 + '0';
-		m_com->Write(&buf , 1);
-		buf = (m_msg[POS_TIEMPO_MANUAL]%1000)/100  + '0';
-		m_com->Write(&buf , 1);
-		buf = (m_msg[POS_TIEMPO_MANUAL]%100)/10  + '0';
-		m_com->Write(&buf , 1);
-		buf = (m_msg[POS_TIEMPO_MANUAL]%10) + '0';
-		m_com->Write(&buf , 1);
-		m_com->Write(">");
-		m_msg[POS_TIEMPO_MANUAL] = 0;
-	}
+    int i = 0;
+    bool isNegative = false;
+
+    if (num < 0) {
+        isNegative = true;
+        num = -num;
+    }
+
+    do {
+        str[i++] = (num % 10) + '0';
+        num /= 10;
+    } while (num);
+
+    if (isNegative) str[i++] = '-';
+    str[i] = '\0';
+
+    // Invertir el string
+    for (int j = 0; j < i / 2; j++) {
+        int8_t temp = str[j];
+        str[j] = str[i - j - 1];
+        str[i - j - 1] = temp;
+    }
 }
+
 
 void Comunicacion::Transmitir ( char * text )
 {	//En caso de tener que transmitir desde afuera de la máquina
@@ -214,24 +144,5 @@ void Comunicacion::Transmitir ( char * text )
 void Comunicacion::Transmitir ( char * text , int32_t n)
 {	//En caso de tener que transmitir desde afuera de la máquina
 	m_com->Write(text, n);
-}
-void Comunicacion::Toggle ( uint8_t pos )
-{
-	if ( m_msg[pos] == 1 )
-		m_msg[pos] = 0;
-	else
-		m_msg[pos] = 1;
-}
-bool Comunicacion::IsNumber( uint8_t ini , uint8_t fin )
-{	//Verifica que sean números los valores entre inicio y fin del string m_buffer
-	bool res = false;
-	uint8_t a = ini;
-	while( m_buffer[a] != '\0' && a < fin )
-	{
-		if ( m_buffer[a] >= '0' && m_buffer[a] <= '9' )
-			res = true;
-		a++;
-	}
-	return res;
 }
 Comunicacion::~Comunicacion(){}

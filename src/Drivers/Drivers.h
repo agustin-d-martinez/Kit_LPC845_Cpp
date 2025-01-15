@@ -28,8 +28,9 @@
 #include <Perifericos/08-Timers/Timers.h>											/**< Grupo de timers */
 #include <Perifericos/11-DAC/DAC.h>													/**< DAC */
 #include <Perifericos/12-ADC/ADC.h>													/**< ADC */
-#include <Perifericos/13-UART/Uart.h>												/**< UART */
+#include <Perifericos/13-UART/UART.h>												/**< UART */
 #include <Perifericos/14-ComSincronica/I2C/I2CMaster.h>								/**< I2C */
+#include <Perifericos/14-ComSincronica/SPI/SPIMaster.h>								/**< SPI */
 
 
 #endif /* DRIVERS_H_ */

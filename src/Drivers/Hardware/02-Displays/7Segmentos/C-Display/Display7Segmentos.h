@@ -89,7 +89,7 @@ class display7Segmentos : public Display, Callback
 								const digito::codigo_t  sistema);
 		void 	SWhandler ( void ) override;
 		void 	Set( uint32_t valor , uint8_t dsp );
-		void 	Write ( const uint32_t n ) override;
+		void 	Write ( const int32_t n ) override;
 		void 	Clear ( void ) override;
 
 		virtual ~display7Segmentos();		/**< destructor por defecto */

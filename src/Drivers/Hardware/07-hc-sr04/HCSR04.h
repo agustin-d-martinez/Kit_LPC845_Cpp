@@ -51,7 +51,7 @@ class HC_SR04 : protected distancia
 	private:
 		/** Perido del PWM En milisegundos */
 		#define PERIODO					80
-		/** Fórmula de cálculo tiempo->distancia */
+		/** Fórmula de cálculo tiempo a distancia */
 		#define CALC_DISTANCIA(a)		( ((a)*164) / 10000 )
 	public:
 		/** Distancia máxima en centimetros */

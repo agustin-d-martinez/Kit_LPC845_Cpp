@@ -5,6 +5,7 @@ var annotated_dup =
     [ "ADC_Type", "struct_a_d_c___type.html", "struct_a_d_c___type" ],
     [ "barrido", "classbarrido.html", "classbarrido" ],
     [ "Callback", "class_callback.html", "class_callback" ],
+    [ "CircularBuffer", "class_circular_buffer.html", "class_circular_buffer" ],
     [ "ComunicacionAsincronica", "class_comunicacion_asincronica.html", "class_comunicacion_asincronica" ],
     [ "ComunicacionSincronica", "class_comunicacion_sincronica.html", "class_comunicacion_sincronica" ],
     [ "DAC", "class_d_a_c.html", "class_d_a_c" ],
@@ -44,12 +45,13 @@ var annotated_dup =
     [ "segmentos", "classsegmentos.html", "classsegmentos" ],
     [ "SPI", "class_s_p_i.html", "class_s_p_i" ],
     [ "SPI_Type", "struct_s_p_i___type.html", "struct_s_p_i___type" ],
+    [ "SPIMaster", "class_s_p_i_master.html", "class_s_p_i_master" ],
     [ "SWM_t", "struct_s_w_m__t.html", "struct_s_w_m__t" ],
     [ "SYSCON_Type", "struct_s_y_s_c_o_n___type.html", "struct_s_y_s_c_o_n___type" ],
     [ "SysTick_t", "struct_sys_tick__t.html", "struct_sys_tick__t" ],
     [ "teclado", "classteclado.html", "classteclado" ],
     [ "Timer", "class_timer.html", "class_timer" ],
     [ "timers", "classtimers.html", "classtimers" ],
-    [ "Uart", "class_uart.html", "class_uart" ],
+    [ "Uart", "class_uart.html", null ],
     [ "USART_Type", "struct_u_s_a_r_t___type.html", "struct_u_s_a_r_t___type" ]
 ];

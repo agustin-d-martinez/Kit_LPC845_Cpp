@@ -40,12 +40,8 @@
  * \param [in] maxTx: Valor maximo del registro de transmision. Por default 15.
 */
 I2CMaster::I2CMaster(I2C_Type *I2C_register, Pin *sda, Pin *scl, uint32_t maxRx, uint32_t maxTx) :
-		I2C(I2C_register, sda, scl, I2C::master, 0), m_maxRx(maxRx), m_maxTx(maxTx)
+		I2C(I2C_register, sda, scl, I2C::master, 0), m_bufferRx(maxRx), m_bufferTx(maxTx)
 {
-	m_bufferRX = new uint8_t[m_maxRx];
-	m_bufferTX = new uint8_t[m_maxTx];
-	m_idxRxIn = m_idxRxOut = 0;
-	m_idxTxIn = m_idxTxOut = 0;
 	m_cant_rw = 0;
 	m_action = write;	//Only for initialization. Doesn't do anything.
 }
@@ -53,7 +49,7 @@ I2CMaster::I2CMaster(I2C_Type *I2C_register, Pin *sda, Pin *scl, uint32_t maxRx,
  * \fn void I2CMaster::Initialize(uint32_t clk_freq)
  * \brief Inicializa el I2C.
  * \details Configura todos los registros para el uso del I2C. Configura los clocks, resetea, configura la SWM, configura los registros y las interrupciones.
- * \param clk_freq: frecuencia del clock de transmision a utilizar.
+ * \param [in] clk_freq: frecuencia del clock de transmision a utilizar.
 */
 void I2CMaster::Initialize(uint32_t clk_freq)
 {
@@ -72,7 +68,7 @@ void I2CMaster::Write(uint8_t addr, const char *msg)
 	{
 		while (*msg)
 		{
-			pushTx(*msg++);
+			m_bufferTx.push(*msg++);
 			m_cant_rw++;
 		}
 		m_action = write;
@@ -94,7 +90,7 @@ void I2CMaster::Write(uint8_t addr, const void *msg , uint32_t length)
 	{
 		for (uint32_t i = 0; i < length; i++)
 		{
-			pushTx(((uint8_t*) msg)[i]);
+			m_bufferTx.push(((uint8_t*)msg)[ i ]);
 		}
 		m_cant_rw = length;
 		m_action = write;
@@ -131,10 +127,9 @@ void* I2CMaster::Read(void *msg, uint32_t length)
 	static uint32_t cont = 0;
 	uint8_t *p = (uint8_t*) msg;
 
-	if (popRx(&dato))
+	while ( m_bufferRx.pop(&dato) )
 	{
 		p[cont++] = dato;
-
 		if (cont >= length || p[cont] == '\n')
 		{
 			cont = 0;
@@ -142,6 +137,10 @@ void* I2CMaster::Read(void *msg, uint32_t length)
 		}
 	}
 	return nullptr;
+}
+bool I2CMaster::hasData ( void )
+{
+	return (!m_bufferRx.isFull());
 }
 /**
  * \fn bool I2CMaster::isIdle ( void )
@@ -155,97 +154,39 @@ bool I2CMaster::isIdle ( void )
 	return ( aux == idle) ;
 }
 /**
- * \fn void I2CMaster::pushRx ( uint8_t dato )
- * \brief Agrega al buffer de recepcion.
- * \details Agrega el dato al buffer de recepcion en el valor de índice actual.
- * \param [in] dato: Byte a agregar.
- * \return void
-*/
-void I2CMaster::pushRx(uint8_t dato)
-{
-	m_bufferRX[m_idxRxIn++] = dato;
-	m_idxRxIn %= m_maxRx;
-}
-/**
- * \fn uint8_t I2CMaster::popRx (uint8_t * dato )
- * \brief Elimina un dato del buffer de recepcion.
- * \details Devuelve el dato del buffer de recepcion en el valor de índice actual y lo elimina (lo deja como despreciable).
- * \param [in] dato: puntero donde devolverá el dato.
- * \return Mensaje de error. 1 exito, 0 error.
-*/
-uint8_t I2CMaster::popRx(uint8_t *dato)
-{
-	if (m_idxRxIn != m_idxRxOut)
-	{
-		*dato = m_bufferRX[m_idxRxOut++];
-		m_idxRxOut %= m_maxRx;
-		return 1;
-	}
-	return 0;
-}
-/**
- * \fn void I2CMaster::pushTx ( uint8_t dato )
- * \brief Agrega al buffer de transmision.
- * \details Agrega el dato al buffer de transmision en el valor de índice actual.
- * \param [in] dato: Dato a agregar.
- * \return void
-*/
-void I2CMaster::pushTx(uint8_t dato)
-{
-	m_bufferTX[m_idxTxIn++] = dato;
-	m_idxTxIn %= m_maxTx;
-
-}
-/**
- * \fn uint8_t I2CMaster::popTx (uint8_t * dato )
- * \brief Elimina un dato del buffer de transmision.
- * \details Devuelve el dato del buffer de transmision en el valor de índice actual y lo elimina (lo deja como despreciable).
- * \param [in] dato: puntero donde devolverá el dato.
- * \return Mensaje de error. 1 exito, 0 error
-*/
-uint8_t I2CMaster::popTx(uint8_t *dato)
-{
-	if (m_idxTxIn != m_idxTxOut)
-	{
-		*dato = m_bufferTX[m_idxTxOut++];
-		m_idxTxOut %= m_maxTx;
-		return 1;
-	}
-	return 0;
-}
-/**
  * \fn void I2CMaster::I2C_IRQHandler ( void )
  * \brief Funcion de interrupcion de la I2C
  * \details Se fija si debe leer o escribir y envia la siguiente instruccion de comunicacion. Si no hay nada que hacer, envia un stop.
- * \return void
 */
 void I2CMaster::I2C_IRQHandler ( void )
 {
+	I2C_states_t state = GetState();
 	uint8_t aux = '\0';
-	if ( m_cant_rw == 0 )
+	if ( m_cant_rw == 0 || state == NACK_addr || state == NACK_tx )
 	{
+		m_cant_rw = 0;
 		I2C::Stop();
 		I2C::DisableInterupt();
 		return;
 	}
+	m_cant_rw--;
+
 	if ( m_action == write )
 	{
-		popTx(&aux);
+		m_bufferTx.pop(&aux);
 		I2C::Write(aux);
 	}
 	else
 	{
-		I2C::Read(&aux, (m_cant_rw-1));		//0 equals FALSE, other value equals TRUE
-		pushRx(aux);
-		if ( m_cant_rw == 1 )
+		I2C::Read(&aux, (m_cant_rw));		//0 equals FALSE, other value equals TRUE
+		m_bufferRx.push(aux);
+		if ( m_cant_rw == 0 )
 		{
 			I2C::Stop();
 			I2C::DisableInterupt();
 		}
 	}
-	m_cant_rw--;
 }
-
 
 I2CMaster::~I2CMaster()
 {

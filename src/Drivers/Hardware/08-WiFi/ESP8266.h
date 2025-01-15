@@ -18,8 +18,8 @@
 /***********************************************************************************************************************************
  *** INCLUDES GLOBALES
  **********************************************************************************************************************************/
-#include <Drivers/Perifericos/13-UART/Uart.h>
 #include <Perifericos/07-Timer/Timer.h>
+#include <Perifericos/13-UART/UART.h>
 /***********************************************************************************************************************************
  *** DEFINES GLOBALES
  **********************************************************************************************************************************/
@@ -48,7 +48,7 @@
  * Por falta de material la clase no fue probada por completo. Sí se probó la inicialización y conección a internet, no se probó la conección a un servidor.
  * Todas sus funciones son bloqueantes o poseen un timeout, debe ser tenido en cuenta a la hora de utilizar este driver.
  * */
-class ESP8266 : protected Uart
+class ESP8266 : protected UART
 {
 public:
 	/** Tipo de conexión del cliente wifi */
@@ -81,7 +81,7 @@ public:
 	void 		DisconnectToServer ( void );
 	void 		Write ( const char * msg) ;
 	void 		Write ( const void * msg , uint32_t n );
-	void* 		Read ( void * msg , uint32_t n );
+	bool 		Read ( char * msg , uint32_t n );
 	status_type GetStatus ( void ) const;
 	bool 		IsConnectedToWifi( void ) const;
 	bool 		IsConnectedToServer( void ) const;

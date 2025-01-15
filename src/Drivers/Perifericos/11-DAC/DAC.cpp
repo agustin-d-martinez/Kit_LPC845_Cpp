@@ -44,7 +44,7 @@
 /**
 	\fn DAC::DAC( dac_channel channel , uint32_t max_range )
 	\brief Constructor de clase DAC
-	\details Crea un DAC con los parámetros correspondientes
+	\details Crea un DAC con los parámetros correspondientes.
 	\param [in] channel: Canal del DAC a utilizar.
 	\param [in] max_range: Rango máximo del usuario.
 */
@@ -56,9 +56,9 @@ m_dac_channel ( channel ) , m_buffer( 0 ) , m_max_range(max_range) , m_error(OK)
 }
 /**
 	\fn DAC::dac_error DAC::Initialize ( void )
-	\brief Inicializa el DAC
-	\details Configura todos los registros de dicho DAC
-	\return Código de error
+	\brief Inicializa el DAC.
+	\details Configura todos los registros de dicho DAC.
+	\return Código de error.
 */
 DAC::dac_error DAC::Initialize ( void )
 {
@@ -73,9 +73,9 @@ DAC::dac_error DAC::Initialize ( void )
 }
 /**
 	\fn void DAC::Set ( uint32_t val )
-	\brief Setea el valor del DAC
-	\details Enciende la salida analógica con el valor en rango real de voltaje
-	\param [in] val: Valor de seteo de la salida
+	\brief Setea el valor del DAC.
+	\details Enciende la salida analógica con el valor en rango real de voltaje.
+	\param [in] val: Valor de seteo de la salida.
 */
 void DAC::Set ( uint32_t val )
 {/*$$$$ PODRÍA HACERLO CON SYSTICK */
@@ -94,9 +94,9 @@ void DAC::Set ( uint32_t val )
 }
 /**
 	\fn uint32_t DAC::Get ( void ) const
-	\brief Devuelve el valor analógico del DAC
-	\details Devuelve el valor de la salida DAC de acuerdo al rango del usuario
-	\return valor del DAC
+	\brief Devuelve el valor analógico del DAC.
+	\details Devuelve el valor de la salida DAC de acuerdo al rango del usuario.
+	\return valor del DAC.
 */
 uint32_t DAC::Get ( void ) const
 {
@@ -104,9 +104,9 @@ uint32_t DAC::Get ( void ) const
 }
 /**
 	\fn void DAC::SetMaxRange ( uint32_t max_range )
-	\brief Setea el rango máximo
-	\details Setea el rango de valores a utilizar por el usuario
-	\param [in] max_range: Valor del rango
+	\brief Setea el rango máximo.
+	\details Setea el rango de valores a utilizar por el usuario.
+	\param [in] max_range: Valor del rango.
 */
 void DAC::SetMaxRange ( uint32_t max_range )
 {
@@ -117,9 +117,9 @@ void DAC::SetMaxRange ( uint32_t max_range )
 }
 /**
 	\fn uint32_t DAC::GetMaxRange ( void ) const
-	\brief Devuelve el rango máximo que posee el DAC
-	\details Devuelve el rango que el usuario se asignó para trabajar
-	\return rango máximo
+	\brief Devuelve el rango máximo que posee el DAC.
+	\details Devuelve el rango que el usuario se asignó para trabajar.
+	\return rango máximo.
 */
 uint32_t DAC::GetMaxRange ( void ) const
 {
@@ -127,10 +127,10 @@ uint32_t DAC::GetMaxRange ( void ) const
 }
 /**
 	\fn gpio& DAC::operator= ( uint8_t val )
-	\brief Sobrecarga del operador =
+	\brief Sobrecarga del operador =.
 	\details Fija el valor analógico del DAC a val.
-	\param [in] val: Valor de seteo del DAC
-	\return Referencia a si mismo
+	\param [in] val: Valor de seteo del DAC.
+	\return Referencia a si mismo.
 */
 DAC& DAC::operator= ( uint32_t val )
 {
@@ -139,10 +139,10 @@ DAC& DAC::operator= ( uint32_t val )
 }
 /**
 	\fn bool DAC::operator== ( uint32_t val ) const
-	\brief Sobrecarga del operador ==
-	\details Devuelve verdadero o falso si el DAC es igual a val
-	\param [in] val: Valor de comparacion con la salida
-	\return verdadero o falso
+	\brief Sobrecarga del operador ==.
+	\details Devuelve verdadero o falso si el DAC es igual a val.
+	\param [in] val: Valor de comparacion con la salida.
+	\return verdadero o falso.
 */
 bool DAC::operator== ( uint32_t val ) const
 {
@@ -150,10 +150,10 @@ bool DAC::operator== ( uint32_t val ) const
 }
 /**
 	\fn bool DAC::operator< ( uint32_t val ) const
-	\brief Sobrecarga del operador <
-	\details Devuelve verdadero o falso si el DAC es menor a val
-	\param [in] val: Valor de comparacion con la salida
-	\return verdadero o falso
+	\brief Sobrecarga del operador <.
+	\details Devuelve verdadero o falso si el DAC es menor a val.
+	\param [in] val: Valor de comparacion con la salida.
+	\return verdadero o falso.
 */
 bool DAC::operator< ( uint32_t val ) const
 {
@@ -161,10 +161,10 @@ bool DAC::operator< ( uint32_t val ) const
 }
 /**
 	\fn bool DAC::operator<= ( uint32_t val ) const
-	\brief Sobrecarga del operador <=
-	\details Devuelve verdadero o falso si el DAC es menor o igual a val
-	\param [in] val: Valor de comparacion con la salida
-	\return verdadero o falso
+	\brief Sobrecarga del operador <=.
+	\details Devuelve verdadero o falso si el DAC es menor o igual a val.
+	\param [in] val: Valor de comparacion con la salida.
+	\return verdadero o falso.
 */
 bool DAC::operator<= ( uint32_t val ) const
 {
@@ -172,10 +172,10 @@ bool DAC::operator<= ( uint32_t val ) const
 }
 /**
 	\fn bool DAC::operator> ( uint32_t val ) const
-	\brief Sobrecarga del operador >
-	\details Devuelve verdadero o falso si el DAC es mayor a val
-	\param [in] val: Valor de comparacion con la salida
-	\return verdadero o falso
+	\brief Sobrecarga del operador >.
+	\details Devuelve verdadero o falso si el DAC es mayor a val.
+	\param [in] val: Valor de comparacion con la salida.
+	\return verdadero o falso.
 */
 bool DAC::operator> ( uint32_t val ) const
 {
@@ -217,7 +217,6 @@ DAC::~DAC()
 	\fn gpio& DAC::PowerDAC( void )
 	\brief Enciende la alimentacion del el periférico
 	\details
-	\return void
 */
 void DAC::PowerDAC( void )
 {
@@ -227,7 +226,6 @@ void DAC::PowerDAC( void )
 	\fn gpio& DAC::EnableClock( void )
 	\brief Habilita el clock del periférico
 	\details
-	\return void
 */
 void DAC::EnableClock ( void )
 {

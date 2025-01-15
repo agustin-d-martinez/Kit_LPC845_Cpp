@@ -1,11 +1,13 @@
 /*******************************************************************************************************************************//**
  *
- * @file       LCD.h
- * @brief      Clase para manejar un LCD con comunicación de 4 patas (solo escritura).
- * @details    Proporciona métodos para inicializar y enviar datos al LCD. Diseñada para facilitar la integración en proyectos embebidos.
- *
- * @date       22 jun. 2022
- * @author     Técnico. Martinez Agustin (masteragus365@gmail.com)
+ * @file       	LCD.h
+ * @brief      	Clase para manejar un LCD con comunicación de 4 patas (solo escritura).
+ * @details    	Proporciona métodos para inicializar y enviar datos al LCD. Diseñada para facilitar la integración en proyectos embebidos.
+ *				El modulo evita utilizar librerias standar de C++ (como vector o string) para disminuir su espacio en memoria del embebido.
+ *				La comunicacion es de 4 bits en paralelo, sin blink ni cursor, ni shifteo.
+ * @date       	11 ene. 2025
+ * @version		2.0
+ * @author   	Técnico. Martinez Agustin (masteragus365@gmail.com)
  *
  **********************************************************************************************************************************/
 
@@ -23,7 +25,7 @@
 #include <Hardware/02-Displays/Display.h>
 #include <Perifericos/02-Gpio/gpio.h>
 #include <Perifericos/06-Callback/Callback.h>
-#include <vector>
+#include <CircularBuffer.h>
 /***********************************************************************************************************************************
  *** DEFINES GLOBALES
  **********************************************************************************************************************************/
@@ -51,57 +53,51 @@
 class LCD : public Display, Callback
 {
 	public:
-		/** Posiciones del buffer*/
-		enum { d7 = 0 ,  d6 , d5 , d4 , rs , enable };
+		/** Posiciones del buffer. */
+		enum { D4 = 0 ,  D5 , D6 , D7 , RS , ENA };
+		/** Cantidad de pines del LCD. */
+		#define MAX_PIN_COUNT	6
 
 	private:
-		/** Instruccion de limpieza del display */
-		#define CLEAR_DISPLAY			0b00000001
-		/** Instruccion de regreso a posición 0 del display */
-		#define RETURN_HOME				0b00000010
-		/** Instruccion de entrada de escritura del display */
-		#define ENTRY_MODE_SET			0b00000100	/** 1	I/D S*/
-		/** Instruccion de control del display */
-		#define DISPLAY_CONTROL			0b00001000	/** 1	D 	C 	B*/
-		/** Instruccion de cursor del display */
-		#define CURSOR_DISPLAY_SHIFT	0b00010000	/** 1	S/C R/L - 	-*/
-		/** Instruccion de modo de funcionamiento del display */
-		#define FUNCTION_SET			0b00100000	/** 1	DL 	N 	F 	- 	-*/
-		/** Instruccion de seteo de CGRAM del display */
-		#define SET_CGRAM				0b01000000	/** 1	ACG ACG ACG ACG ACG ACG*/
-		/** Instruccion de seteo de DDRAM del display */
-		#define SET_DDRAM				0b10000000	/** 1	ADD	ADD	ADD	ADD	ADD	ADD	ADD*/
-
+		/** Enumeracion. Tipo de mensaje a pushear al buffer. Puede ser un valor a escribir o una instruccion. */
+		typedef enum {instruction , data } msj_type_t;
+		/** Instruccion de 8 bits inicial para pasar al modo 4 bits */
+		#define	INSTRUCTION_8BITS			0b00000010
+		/** Instruccion de modo de funcionamiento del display. 1 seguido de DL (4 bits) , N (filas) , F (resolucion). */
+		#define INSTRUCTION_FUNC_SET		0b00100000	/** 1	DL 	N 	F 	- 	-*/
+		/** Instruccion de control del display. 1 seguido de D (display On), C (cursor On), B(blink). */
+		#define INSTRUCTION_DISP_CTRL		0b00001000	/** 1	D 	C 	B*/
+		/** Instruccion de entrada de escritura del display. 1, seguido de I/D (inc. puntero) y S (shift display) */
+		#define INSTRUCTION_ENTRY_MODE_SET	0b00000100	/** 1	I/D S*/
+		/** Instruccion de limpieza del display. */
+		#define INSTRUCTION_CLEAR_DISP		0b00000001
+		/** Instruccion de seteo de DDRAM del display. Cambia la posicion del display */
+		#define INSTRUCTION_SET_POS			0b10000000	/** 1	ADD	ADD	ADD	ADD	ADD	ADD	ADD*/
+		/** Offset de instruccion para indicar un cambio de renglon */
+		#define ROW_OFFSET				0x40
 	private:
-		const vector<gpio*> m_salidas;	/**< Vector de salidas GPIO */
-		uint8_t m_estado;				/**< Estado actual del display */
-		uint8_t *m_buffer;				/**< Buffer de escritura del display */
-		uint8_t m_filas;				/**< Cantidad de filas del display */
-		uint8_t m_columnas;				/**< Cantidad de columnas del display */
-		uint32_t m_delay;				/**< Delay de próxima instruccion del display */
-		uint8_t m_barrido;				/**< Posición de escritura del buffer */
-		uint8_t m_pos;					/**< Posición de escritura del usuario  */
-		uint8_t m_error;				/**< Error en la clase LCD  */
-
-		enum { s_eigth_bits = 0 , s_four_bits , s_config_display , s_config_cursor , s_clear , s_print , s_row };	/**< Estados inicializacion */
+		gpio* 					m_salidas[MAX_PIN_COUNT];	/**< Vector de salidas GPIO. */
+		CircularBuffer<uint8_t> m_buffer;					/**< Buffer de escritura del display. */
+		uint8_t 				m_Ymax , m_Ypos;			/**< Cantidad de filas del display. */ /**< Fila actual de escritura. */
+		uint8_t 				m_Xmax , m_Xpos;			/**< Cantidad de columnas del display. */ /**< Columna actual de escritura. */
+		uint32_t 				m_ticks;					/**< Delay de próxima instruccion del display. */
 
 	public:
-		LCD( vector<gpio*> &salidas );
-		void Initialize( const uint8_t filas , const uint8_t columnas );
+		LCD( gpio* salidas[MAX_PIN_COUNT] , const uint8_t filas , const uint8_t columnas );
+		void Initialize( void );
 		void Write ( const char *s );
 		void Write ( const int32_t n ) ;
 		LCD& operator= ( const char *s );
-		void WriteAt( const int8_t *a , const uint8_t fila , const uint8_t columna );
-		void WriteAt ( const int32_t n , const uint8_t fila , const uint8_t columna);
+		void WriteAt( const int8_t *a , const uint8_t columna, const uint8_t fila );
+		void WriteAt ( const int32_t n , const uint8_t columna, const uint8_t fila );
 		void Clear( void ) override;
 		virtual ~LCD();
 
 	protected:
 		void SWhandler ( void ) override;
-
 	private:
-		void WriteInstruction( const uint8_t data , const uint8_t mode );
-		uint32_t Pow ( uint32_t base , uint32_t exp );
+		void doublePush( uint8_t a , msj_type_t type );
+		void intToStr(int32_t num, int8_t* str);
 };
 
 #endif /* LCD_H_ */

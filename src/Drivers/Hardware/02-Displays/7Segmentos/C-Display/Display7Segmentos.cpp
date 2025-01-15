@@ -105,14 +105,15 @@ void display7Segmentos::Set( uint32_t valor , uint8_t dsp )
 		m_bufferdisplay[ m_PosicionRelativa[i + m_grupos[ dsp ]->m_comienzo ]]->Set( aux[ i ] );
 }
 /**
- * \fn void display7Segmentos::Write ( const uint32_t valor )
+ * \fn void display7Segmentos::Write ( const uint32_t n )
  * \brief Función de escritura del display de 7 segmentos.
  * \details Escribe el display 7 segmentos desde la posicion 0.
- * \param [in] valor: valor a escribir.
+ * \param [in] n: valor a escribir.
 */
-void display7Segmentos::Write ( const uint32_t valor )
+void display7Segmentos::Write ( const int32_t n )
 {
-	Set(valor, 0);
+
+	Set((uint32_t) n, 0);
 }
 /**
  * \fn void display7Segmentos::Clear ( void )

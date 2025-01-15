@@ -1,5 +1,0 @@
-<map id="Uart" name="Uart">
-<area shape="rect" id="Node000001" title="Clase del objeto uart El objeto uart genera una comunicación asincrónica de tipo UART." alt="" coords="68,80,115,107"/>
-<area shape="rect" id="Node000002" href="$class_comunicacion_asincronica.html" title="Clase del objeto ComunicacionAsincronica Clase abstracta pura para la generación de UART." alt="" coords="5,5,178,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="94,48,94,80,89,80,89,48"/>
-</map>

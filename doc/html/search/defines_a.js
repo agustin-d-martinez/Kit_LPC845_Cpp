@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['seg_5fesp01_5ftimeout_0',['SEG_ESP01_TIMEOUT',['../_e_s_p8266_8h.html#a2fb5dfd3c315ae17147472c4058abccf',1,'ESP8266.h']]],
-  ['set_5fcgram_1',['SET_CGRAM',['../_l_c_d_8h.html#ad0a3aded4141050ead112e000f32d604',1,'LCD.h']]],
-  ['set_5fddram_2',['SET_DDRAM',['../_l_c_d_8h.html#af4ff91b63c9e285a685f9beb393ee426',1,'LCD.h']]]
+  ['uint32_5fmax_0',['UINT32_MAX',['../tipos_8h.html#ab5eb23180f7cc12b7d6c04a8ec067fdd',1,'tipos.h']]],
+  ['uint8_5fmax_1',['UINT8_MAX',['../tipos_8h.html#aeb4e270a084ee26fe73e799861bd0252',1,'tipos.h']]],
+  ['update_5fticks_2',['UPDATE_TICKS',['../_display7_segmentos_8h.html#afb6bc7c46b97691b31a4b0430800aa2a',1,'Display7Segmentos.h']]]
 ];

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LPC845-C++: Main Page</title>
+<title>LPC845-C++: KITLPC845</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -102,10 +102,66 @@ $(function(){initNavTree('index.html',''); initResizable(true); });
 </div>
 </div>
 
-<div class="header">
-  <div class="headertitle"><div class="title">LPC845-C++ Documentation</div></div>
+<div><div class="header">
+  <div class="headertitle"><div class="title">KITLPC845 </div></div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><p><a class="anchor" id="md__e_1_2_agustin_2_escritorio_2_m_c_uexpresso_2_kit_l_p_c845-_c_09_09_2_r_e_a_d_m_e"></a></p>
+<p>Librerias propias comenzadas a realizar en Informatica II y continuadas de forma particular. Cubren la mayoria de los perifericos del Kit de desarrollo LPC845. No poseen implementaciones de DMA.</p>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Informacion:</h1>
+<p><img src="LPC845_BRK.png" alt="" class="inline" title="Descripción del Pinout"/>    </p>
+<p>EN CASO DE QUERER UTILIZAR ESTA PLAQUETA:</p><ul>
+<li>Nombre de la plaqueta: LPC845.</li>
+<li>Alimentación de 3,3V. (Para alimentar externamente GND en pin 20 y 3,3v en pin 40).</li>
+<li>Programada con "MCUexpresso".</li>
+<li>Lenguaje C++. </li>
+</ul>
+<h2><a class="anchor" id="autotoc_md3"></a>
+Drivers/Periféricos ya creados:</h2>
+<ul>
+<li><a class="el" href="class_input.html" title="Clase del objeto Input.">Input</a>.</li>
+<li><a class="el" href="class_output.html" title="Clase del objeto outputs.">Output</a>.</li>
+<li><a class="el" href="class_timer.html" title="Clase del objeto timer.">Timer</a>.</li>
+<li><a class="el" href="class_reloj.html" title="Clase del objeto Reloj.">Reloj</a>.</li>
+<li><a class="el" href="class_a_d_c.html" title="Clase del objeto ADC FUNCIONAMIENTO: La clase ADC utiliza el ADCGroup para poder ser manejada de form...">ADC</a>.</li>
+<li><a class="el" href="class_d_a_c.html" title="Clase del objeto DAC FUNCIONAMIENTO: Realiza una conversion digital-&gt;analógica en un rango desde 0 ha...">DAC</a>.</li>
+<li>PWM.</li>
+<li>Lector de ancho de pulso (<a class="el" href="class_p_w_m___reader.html" title="Clase del objeto PWM_Reader.">PWM_Reader</a>).</li>
+<li>UART (comunicación serie).</li>
+<li><a class="el" href="class_display.html" title="Clase del objeto display Clase abstracta pura para la generación de displays.">Display</a> de 7 segmentos.</li>
+<li><a class="el" href="class_display.html" title="Clase del objeto display Clase abstracta pura para la generación de displays.">Display</a> <a class="el" href="class_l_c_d.html" title="Clase del objeto lcd El objeto lcd permite el manejo de displays digitales mediante comunicación de 4...">LCD</a>.</li>
+<li>Teclado matricial.</li>
+<li>Puente H para motores.</li>
+<li>Ultrasónico.</li>
+<li>ESP01 (Wifi arduino con comandos AT). <br  />
+</li>
+<li><a class="el" href="class_i2_c.html" title="Clase del objeto I2C El objeto I2C genera una comunicación sincrónica de tipo I2C....">I2C</a>.</li>
+<li><a class="el" href="class_s_p_i.html" title="Clase del objeto SPI.">SPI</a>.</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md4"></a>
+Para crear un proyecto nuevo:</h2>
+<ul>
+<li>File.</li>
+<li>New.</li>
+<li>New C/C++ Proyect.</li>
+<li>(Se selecciona la plaqueta a utilizar) Next &gt;.</li>
+<li>C++ Proyect.</li>
+<li>(Se escribe el nombre del proyecto).</li>
+<li>Se toca "Next &gt;" hasta terminar.</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md5"></a>
+Para utilizar este proyecto:</h2>
+<ul>
+<li>Import proyect(s) from file system.</li>
+<li>(Se selecciona el archivo .zip o esta carpeta) Next &gt; .</li>
+<li>Finish.</li>
+<li>Se puede renombrar al proyecto con cualquier nombre. (Los includes se autoconfiguran para seguir funcionando). (Con la placa conectada)</li>
+<li>El "bicho azul" carga el programa la primera vez.</li>
+<li>El "bicho verde" carga el programa las veces siguientes.</li>
+</ul>
+<p>En caso de requerir los nombres de cada pata y su función, buscar hoja de datos en internet. </p>
+</div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"></a>
 </div><!-- contents -->
 </div><!-- doc-content -->

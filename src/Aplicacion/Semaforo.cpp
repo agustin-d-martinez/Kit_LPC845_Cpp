@@ -82,13 +82,23 @@ void Semaforo::MaquinaDeEstados ( void )
 	if ( m_estado > ROJO )		//Protección en caso de irse de los cases de la máquina de estado
 		m_estado = RESET ;		//Similar al default de un switch
 
-	if (m_msg[0] == 1)			//Demostración de comunicación entre máquinas mediante vector pasado por referencia
+	if (m_msg[1] == 0)			//Demostración de comunicación entre máquinas mediante vector pasado por referencia
 		m_encendido = false;	//La posición 0 responde a esta máquina y así se pueden levantar "flags" todas las máquinas a la vez
-	if (m_msg[0] == 0)
+	if (m_msg[1] == 1)
 		m_encendido = true;
 
 	if ( m_encendido )
 		( this->*m_maquina[m_estado] )( );	//Ejecuto la máquina de estados. Este sería el "Switch"
+	else
+	{
+		AMARILLO_OFF;
+		VERDE_OFF;
+		ROJO_OFF;
+		TIMER_AMARILLO_OFF;
+		TIMER_ROJO_OFF;
+		TIMER_VERDE_OFF;
+		m_estado = RESET;
+	}
 }
 void Semaforo::Reset ( void )		//Estado de reset. Siempre se debe tener uno. Solo coloca las CONDICIONES INICIALES
 {
@@ -108,6 +118,7 @@ void Semaforo::Verde ( void )		//Estado de la máquina: VERDE
 		VERDE_OFF;
 		ROJO_ON;
 		TIMER_ROJO_ON;
+		m_msg[0] = 2;
 		m_estado = ROJO;
 	}
 }
@@ -119,6 +130,7 @@ void Semaforo::Amarillo ( void )	//Estado de la máquina: AMARILLO
 		AMARILLO_OFF;
 		VERDE_ON;
 		TIMER_VERDE_ON;
+		m_msg[0] = 1;
 		m_estado = VERDE;
 	}
 }
@@ -130,6 +142,7 @@ void Semaforo::Rojo ( void )	//Estado de la máquina: ROJO
 		ROJO_OFF;
 		AMARILLO_ON;
 		TIMER_AMARILLO_ON;
+		m_msg[0] = 3;
 		m_estado = AMARILLO;
 	}
 }

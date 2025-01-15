@@ -1,11 +1,11 @@
 var _l_c_d_8h =
 [
-    [ "CLEAR_DISPLAY", "_l_c_d_8h.html#a221b02b65527a670a158a9b1387e877c", null ],
-    [ "CURSOR_DISPLAY_SHIFT", "_l_c_d_8h.html#aee44c28b3237b814efa557a2429023b8", null ],
-    [ "DISPLAY_CONTROL", "_l_c_d_8h.html#a74c80ace5656e5bdca4af4c7233921f5", null ],
-    [ "ENTRY_MODE_SET", "_l_c_d_8h.html#aa609aa58e71261c40627750bbaa1ca1c", null ],
-    [ "FUNCTION_SET", "_l_c_d_8h.html#a59f35c48e6411073b387a95fa81df8be", null ],
-    [ "RETURN_HOME", "_l_c_d_8h.html#a132a90af728916a595bcf5a52cfac21c", null ],
-    [ "SET_CGRAM", "_l_c_d_8h.html#ad0a3aded4141050ead112e000f32d604", null ],
-    [ "SET_DDRAM", "_l_c_d_8h.html#af4ff91b63c9e285a685f9beb393ee426", null ]
+    [ "INSTRUCTION_8BITS", "_l_c_d_8h.html#ad3d9f7caa8948b2b60cc5930ce71d8e7", null ],
+    [ "INSTRUCTION_CLEAR_DISP", "_l_c_d_8h.html#aa8aa03051f8784229ee0936c05a560ac", null ],
+    [ "INSTRUCTION_DISP_CTRL", "_l_c_d_8h.html#a5a3bfb8d3fdda1214208b502b4457657", null ],
+    [ "INSTRUCTION_ENTRY_MODE_SET", "_l_c_d_8h.html#a3f83bc724345f01beffe6dd31a155ae6", null ],
+    [ "INSTRUCTION_FUNC_SET", "_l_c_d_8h.html#ad0126a4f16ccb71b440d4e886e416151", null ],
+    [ "INSTRUCTION_SET_POS", "_l_c_d_8h.html#aab5280af68207e588294d91f1d0ad3b8", null ],
+    [ "MAX_PIN_COUNT", "_l_c_d_8h.html#aa3cddb87ae89790c078529cb8a560c2d", null ],
+    [ "ROW_OFFSET", "_l_c_d_8h.html#af48cf20915cdfd9ed3885e2eed697c12", null ]
 ];

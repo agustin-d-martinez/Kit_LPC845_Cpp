@@ -34,7 +34,7 @@ var group___drivers =
       [ "Clear", "classdisplay7_segmentos.html#ad8af8da91ab70f44f4cee3afae333e32", null ],
       [ "Set", "classdisplay7_segmentos.html#a8b17fe70b4141fa20bc36164a24008ff", null ],
       [ "SWhandler", "classdisplay7_segmentos.html#a345a2510c38ef8438bf22bf93906dd89", null ],
-      [ "Write", "classdisplay7_segmentos.html#ac3e94eb5b2271d462dabd4be9451c4a0", null ]
+      [ "Write", "classdisplay7_segmentos.html#a62780641428f18f1ef9919529ddbdd54", null ]
     ] ],
     [ "gruposdedigitos", "structgruposdedigitos.html", [
       [ "gruposdedigitos", "structgruposdedigitos.html#a1f30a2791bf70ca4b8043e97dbb4253f", null ],
@@ -42,15 +42,15 @@ var group___drivers =
       [ "m_comienzo", "structgruposdedigitos.html#a283917ba79ddef62d7283f420d0db2a8", null ]
     ] ],
     [ "LCD", "class_l_c_d.html", [
-      [ "LCD", "class_l_c_d.html#a82d2be39ae418a886021216a821e78bd", null ],
+      [ "LCD", "class_l_c_d.html#ad543a64fdd3344e9389910dfff645a78", null ],
       [ "Clear", "class_l_c_d.html#aae7a6fc1a5e3fef5a43fb048c36e3193", null ],
-      [ "Initialize", "class_l_c_d.html#afd3680eaccf7c5eeac7687d2941ebbe9", null ],
+      [ "Initialize", "class_l_c_d.html#a743e4e50466b7ce086ad7fb9cabdd93e", null ],
       [ "operator=", "class_l_c_d.html#ad170df02e0c3d282e0969237a27a0e24", null ],
       [ "SWhandler", "class_l_c_d.html#a2ab740ea8896c58ac342779d6a05383d", null ],
       [ "Write", "class_l_c_d.html#af0f5a396c7845c5b7d7578d71c0bdf2a", null ],
       [ "Write", "class_l_c_d.html#aaa2b2a69cf867a6bb5c69d700cb5e99a", null ],
-      [ "WriteAt", "class_l_c_d.html#aee6c227ea34c80d23ebaa08b28591add", null ],
-      [ "WriteAt", "class_l_c_d.html#a6390fd046beb94391ac3ed58eab235cf", null ]
+      [ "WriteAt", "class_l_c_d.html#acd30c913b5c7fd934ce3414a288b13d6", null ],
+      [ "WriteAt", "class_l_c_d.html#a2b4c8ec275b0fcc63e2b1bf033fbfc07", null ]
     ] ],
     [ "L298N", "class_l298_n.html", [
       [ "L298N", "class_l298_n.html#a34832eec84905e8c8169649b6474d50c", null ],
@@ -286,21 +286,11 @@ var group___drivers =
       [ "SetSampleRate", "class_a_d_c___group.html#a8671a7fca8e2a3d952ee76a03c1de994", null ],
       [ "TriggerStartSeqA", "class_a_d_c___group.html#a54ea07c288f761685e1fc694c54aac4a", null ]
     ] ],
-    [ "Uart", "class_uart.html", [
-      [ "bits_de_datos", "class_uart.html#abe66c064727dbf25d0761c7e317a91e1", null ],
-      [ "paridad_t", "class_uart.html#a3dc1591dc4992045e0f14d8ac3ec4e48", null ],
-      [ "Uart", "class_uart.html#afaef668de5b233cf011335741f26d6d3", null ],
-      [ "~Uart", "class_uart.html#a4199a240d764fc664ac44b9c170032b3", null ],
-      [ "Read", "class_uart.html#a58e6ada71f8c76984211466ba457f5e5", null ],
-      [ "SetBaudRate", "class_uart.html#aaba51d089c78ba71333e2ce332434423", null ],
-      [ "Write", "class_uart.html#a723faac7d90252ba2c4e05fc1fd5689d", null ],
-      [ "Write", "class_uart.html#a1c3c9ecf7b9b19c6f0929328ab25f5cf", null ]
-    ] ],
     [ "I2C", "class_i2_c.html", [
       [ "I2C_action_t", "class_i2_c.html#ac5c17ddab3b8696527f355def36e1d07", null ],
-      [ "I2C_mode_t", "class_i2_c.html#a338cf62e8394d98481d5c646750902fd", null ],
+      [ "I2C_role_t", "class_i2_c.html#a3cbbe2b9c128da61e4c494da4a979654", null ],
       [ "I2C_states_t", "class_i2_c.html#a927222878c117a4278938c82da47e2e6", null ],
-      [ "I2C", "class_i2_c.html#a3f31d647484dfd3cad1aab0be0a5d94b", null ],
+      [ "I2C", "class_i2_c.html#ab51efa3193aab033485175ce4bff0037", null ],
       [ "ACK", "class_i2_c.html#a11319f49316d58882041059ce765f5e5", null ],
       [ "ACKaddr", "class_i2_c.html#a23ed9d7e6162b81f42559767e7f668ca", null ],
       [ "Continue", "class_i2_c.html#a5e49eeee7c9f988439385721ec7aad5a", null ],
@@ -312,6 +302,7 @@ var group___drivers =
       [ "operator=", "class_i2_c.html#a8471212350221fb2a58a3cfbc469c67a", null ],
       [ "Read", "class_i2_c.html#a6237b3824536fa20e5dd3a3596f939e3", null ],
       [ "Read", "class_i2_c.html#a2e56aa888fba64968af2ab08382c76af", null ],
+      [ "SetTimeOut", "class_i2_c.html#a970675aed1f51ab8bd8fb7767edea896", null ],
       [ "Start", "class_i2_c.html#a2dc26ca2bde6fa9896cbe31d3909412e", null ],
       [ "Stop", "class_i2_c.html#a5d3e0b1de395932284e2e010a0160b5f", null ],
       [ "Write", "class_i2_c.html#a01998f88940804c81ca1c528b724a365", null ]
@@ -326,12 +317,45 @@ var group___drivers =
       [ "Write", "class_i2_c_master.html#a21fdb2737b7101948fded5c61afe3dfd", null ]
     ] ],
     [ "SPI", "class_s_p_i.html", [
-      [ "SPI_mode_t", "class_s_p_i.html#ae5fb0089b05c97b96d353aef5e6ddeb0", null ],
-      [ "SPI", "class_s_p_i.html#a564c0af6fa1680af1c5e4887cd7513bb", null ],
+      [ "SPI_mode_t", "class_s_p_i.html#ae5fb0089b05c97b96d353aef5e6ddeb0", [
+        [ "SPI_MODE_0", "class_s_p_i.html#ae5fb0089b05c97b96d353aef5e6ddeb0ae58fb1e4c91051bf066649c4898d5a31", null ],
+        [ "SPI_MODE_1", "class_s_p_i.html#ae5fb0089b05c97b96d353aef5e6ddeb0a20cee7b9985b0c5a69c7068be3101b4f", null ],
+        [ "SPI_MODE_2", "class_s_p_i.html#ae5fb0089b05c97b96d353aef5e6ddeb0a8016bbae180fa4c7b0728f874b28a6b1", null ],
+        [ "SPI_MODE_3", "class_s_p_i.html#ae5fb0089b05c97b96d353aef5e6ddeb0a9a19673ca3c558d50377e8fc843f7e15", null ]
+      ] ],
+      [ "SPI_role_t", "class_s_p_i.html#ace1a63d7f5adc00cb36f32c876ddb93c", null ],
+      [ "SPI", "class_s_p_i.html#a78b5dd69f2811da4c1ee9026c43b1d74", null ],
+      [ "~SPI", "class_s_p_i.html#affa2335530f6595cdcbf0d0a7697558c", null ],
+      [ "AddSSEL", "class_s_p_i.html#a7e9b548d0ecac47ff6d95770f99a72a6", null ],
+      [ "ClearEOF", "class_s_p_i.html#a14003c6222f6714b3b781463b7c191f7", null ],
+      [ "ClearEOT", "class_s_p_i.html#a34d441f5df01401aabeb6dbd8326ba23", null ],
+      [ "ClearSSEL", "class_s_p_i.html#a504411484102ac516aa9320d429b4524", null ],
+      [ "DisableInterupt", "class_s_p_i.html#a0f9b08f9ef207348c3d61c51b6e71ccf", null ],
+      [ "EnableInterupt", "class_s_p_i.html#ac6dd234eccf6ce78147fa6b0b4a29c54", null ],
+      [ "forceFinish", "class_s_p_i.html#aa346cc5673aa58540639a3a588853d8b", null ],
+      [ "Initialize", "class_s_p_i.html#a0cc8ea5f30e3c828dacca18ceaedd989", null ],
+      [ "isRxReady", "class_s_p_i.html#a842355c21b0544ad8f9dd1f9f9fea0ae", null ],
+      [ "isTxReady", "class_s_p_i.html#a671981170da637c69186934220aef3ee", null ],
       [ "Read", "class_s_p_i.html#a249e1cb714a55ee5d4c745772315b80b", null ],
-      [ "SPI_IRQHandler", "class_s_p_i.html#af706f05c4b2eeef9ecc40626dd406604", null ],
-      [ "Write", "class_s_p_i.html#afc606c541ea7f80a0ae7b74450d68a73", null ]
+      [ "RemoveSSEL", "class_s_p_i.html#acaacf4dd98225def21567d1a64a3b2a5", null ],
+      [ "SetEOT", "class_s_p_i.html#ac0211aabf046a0b6d1636759f3af9641", null ],
+      [ "SetSSEL", "class_s_p_i.html#aa4ec9f81ea3c8c757ef2fcf0b5b32979", null ],
+      [ "Write", "class_s_p_i.html#afc606c541ea7f80a0ae7b74450d68a73", null ],
+      [ "m_SPI_register", "class_s_p_i.html#ac1fd053b458cd6e21a02cfcc7c852ff5", null ]
     ] ],
+    [ "SPIMaster", "class_s_p_i_master.html", [
+      [ "SPIMaster", "class_s_p_i_master.html#a42eabd8db5c303ca57cedcb4931a61e8", null ],
+      [ "AddSSEL", "class_s_p_i_master.html#ab7c3da3a4ef122f3a9a836d676bd3d14", null ],
+      [ "hasData", "class_s_p_i_master.html#a56aab15d5f21e4ecf36518a15c323ede", null ],
+      [ "Initialize", "class_s_p_i_master.html#a4fec86b0e5330e34f179fd328cf5e50b", null ],
+      [ "IsIdle", "class_s_p_i_master.html#a78aae9156fba6cec7ed5b136cdac3a67", null ],
+      [ "Read", "class_s_p_i_master.html#a65e3ba77e96099065195c223c4b745ea", null ],
+      [ "RemoveSSEL", "class_s_p_i_master.html#a5db10c2045d837de8b272b73bb5cb85a", null ],
+      [ "RequestRead", "class_s_p_i_master.html#a49f5559c98b01a36d5e669720b531be7", null ],
+      [ "Write", "class_s_p_i_master.html#aa8a0c422a79911ac5dc3c2e68539c75e", null ],
+      [ "Write", "class_s_p_i_master.html#ae93536a3cddf94e2e4c7a531a16bef83", null ]
+    ] ],
+    [ "Uart", "class_uart.html", null ],
     [ "Timer_Handler", "group___drivers.html#gad8c2afd48cc8eb5c42aacf5d7b9f38dc", null ],
     [ "g_gpiohandler", "group___drivers.html#ga9de420664563e9b16b113a3bea4e967f", null ],
     [ "g_Handler", "group___drivers.html#ga59b1079176c0f4559cc0a70aebd6aab4", null ],

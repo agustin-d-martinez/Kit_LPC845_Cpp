@@ -11,8 +11,7 @@
 /***********************************************************************************************************************************
  *** INCLUDES
  **********************************************************************************************************************************/
-#include <Drivers/Hardware/02-Displays/LCD/LCD.h>
-#include <stdio.h>
+#include <Hardware/02-Displays/LCD/LCD.h>
 /***********************************************************************************************************************************
  *** DEFINES PRIVADOS AL MODULO
  **********************************************************************************************************************************/
@@ -41,14 +40,20 @@
  *** IMPLEMENTACION DE LOS METODODS DE LA CLASE
  **********************************************************************************************************************************/
 /**
-	\fn LCD::LCD( vector<gpio*> &salidas )
-	\brief Constructor de clase LCD
-	\details Crea LCD PIN con los parámetros correspondientes
-	\param [in] salidas: Vector de GPIO ordenado utilizadas para el LCD.
+ * 	\fn LCD::LCD( gpio* salidas[MAX_PIN_COUNT] , const uint8_t filas , const uint8_t columnas )
+ * 	\brief Constructor de clase LCD.
+ * 	\details Crea LCD PIN con los parámetros correspondientes
+ * 	\param [in] salidas: Vector de GPIO ordenado utilizadas para el LCD.
+ *  \param [in] filas: Cantidad de filas del display.
+ *  \param [in] columnas: Cantidad de columnas del display.
 */
-LCD::LCD( vector<gpio*> &salidas ) : m_salidas(salidas) , m_estado(s_eigth_bits) , m_barrido(0) , m_pos(0) , m_error(gpio::ok)
+LCD::LCD( gpio* salidas[MAX_PIN_COUNT] , const uint8_t filas , const uint8_t columnas ) :
+m_salidas() , m_buffer( 2 * filas * columnas + 20) , m_Ymax(filas) , m_Ypos(0) , m_Xmax(columnas) , m_Xpos(0)
 {
-	m_delay = TICK_MILISECONDS(200);
+	for (uint8_t i = 0 ; i < MAX_PIN_COUNT ; i++ )
+		m_salidas[i] = salidas[i];
+
+	m_ticks = TICK_MILISECONDS(5);
 	if ( g_systick_freq < 200 )
 		while (1) {} ;				// Frecuencia muy baja para poder manejar el Display LCD. (Posibles fallos en su funcionamiento)
 }
@@ -58,33 +63,47 @@ LCD::~LCD()
 	UnSetInterrupt();
 }
 /**
-	\fn void LCD::Initialize( const uint8_t filas , const uint8_t columnas )
+	\fn void LCD::Initialize( void )
 	\brief Inicializa el LCD.
  	\details Crea el buffer y comienza a setear todas las salidas para comenzar a funcionar
- 	\param [in] filas: Cantidad de filas del LCD.
- 	\param [in] columnas: Cantidad de columnas del LCD.
 */
-void LCD::Initialize( const uint8_t filas , const uint8_t columnas )
+void LCD::Initialize( void )
 {
-	for ( uint8_t i = 0 ; (i < m_salidas.size()) && (m_error == gpio::ok) ; i++ )
-		m_error = m_salidas[i]->SetDir();
+	uint8_t error = gpio::ok;
+	for ( uint8_t i = 0 ; (i < 6) && (error == gpio::ok) ; i++ )
+		error = m_salidas[i]->SetDir();
 
-	if ( m_error == gpio::ok )
-	{
-		*m_salidas[rs] = 0;
-		*m_salidas[d7] = 0;
-		*m_salidas[d6] = 0;
-		*m_salidas[d5] = 1;
-		*m_salidas[d4] = 0;
+	if ( error == gpio::error )
+		return;
 
-		m_filas = filas;
-		m_columnas = columnas;
-		m_buffer = new uint8_t[filas * columnas];
-		for ( uint8_t i = 0 ; i < m_filas * m_columnas ; i++)
-			m_buffer[i] = ' ';
+	/*Ejecuta la unica instruccion de 8bits*/
+	m_buffer.push(INSTRUCTION_8BITS);
 
-		SetInterrupt();
-	}
+	/*Configura 4bits*/
+	// DL = 0: 4 bits de datos
+	// N  = 1 : 2 lineas
+	// F  = 0 : 5x7 puntos
+	doublePush( INSTRUCTION_FUNC_SET | (0 << 4) | (1 << 3) | (0 << 2) , instruction );	/*DL	N	F*/
+
+	/*Indico el modo de dibujo*/
+	// D = 0 : display OFF
+	// C = 0 : Cursor OFF
+	// B = 0 : Blink OFF
+	doublePush( INSTRUCTION_DISP_CTRL | (0 << 2) | (0 << 1) | (0 << 0) , instruction ); /*D	C	B*/
+
+	/*Indico el desplazamiento*/
+	// I/D = 1 : Incrementa puntero
+	// S   = 0 : NO Shift Display
+	doublePush( INSTRUCTION_ENTRY_MODE_SET | (1 << 1) | (0 << 0) , instruction );	/*I/D	S*/
+
+	/* Activo el LCD. */
+	doublePush( INSTRUCTION_DISP_CTRL | (1 << 2) | (0 << 1) | (0 << 0), instruction );
+
+	/*Limpia si hay basura needs 200 ticks_per_miliseconds. all the other configs needs 5*/
+	doublePush( INSTRUCTION_CLEAR_DISP , instruction);
+
+	m_ticks = TICK_MILISECONDS(5);
+	SetInterrupt();
 }
 /**
 	\fn void LCD::SWhandler ( void  )
@@ -93,85 +112,24 @@ void LCD::Initialize( const uint8_t filas , const uint8_t columnas )
 */
 void LCD::SWhandler ( void )
 {
-	m_delay--;
-	if ( m_delay == 0 )
+	m_ticks--;
+	if ( !m_ticks )
 	{
-		switch (m_estado)
+		m_ticks = TICK_MILISECONDS(2);
+		uint8_t data;
+		if ( m_buffer.pop(&data) )
 		{
-		case s_print:				/*Imprime*/
-			WriteInstruction(m_buffer[m_barrido] , 1);
-			m_delay = TICK_MILISECONDS(1);
-			m_barrido++;
-			if( (m_barrido == m_columnas) || (m_barrido == (m_filas * m_columnas)) )
-				m_estado = s_row;
-			break;
-		case s_row:
-			if ( m_barrido == (m_filas * m_columnas) )
-			{
-				WriteInstruction( SET_DDRAM , 0 );
-				m_barrido = 0;
-			}
-			else
-				WriteInstruction( SET_DDRAM | 0x40 , 0 );
-			m_delay = TICK_MILISECONDS(1);
-			m_estado = s_print;
-			break;
+			*m_salidas[RS] = (data >> 7) & 1;
+			for ( uint8_t i = 0 ; i < 4 ; i++ )
+				*m_salidas[i] = (data >> i) & 1;
 
-		default:
-		case s_eigth_bits:			/*Ejecuta la unica instruccion de 8bits*/
-			*m_salidas[enable] = 1;
-			*m_salidas[enable] = 0;
-			m_delay = TICK_MILISECONDS(5);
-			m_estado = s_four_bits;
-			break;
-		case s_four_bits:			/*Configura 4bits*/
-			WriteInstruction( FUNCTION_SET | (0 << 4) | (1 << 3) | (0 << 2) , 0);	/*DL	N	F*/
-			m_delay = TICK_MILISECONDS(5);
-			m_estado = s_config_display;
-			break;
-		case s_config_display:		/*Indica el modo de dibujo*/
-			WriteInstruction( DISPLAY_CONTROL | (1 << 2) | (1 << 1) | (0 << 0) , 0 ); /*D	C	B*/
-			m_delay = TICK_MILISECONDS(5);
-			m_estado = s_config_cursor;
-			break;
-		case s_config_cursor:		/*Indica el desplazamiento*/
-			WriteInstruction( ENTRY_MODE_SET | (1 << 1) | (0 << 0) , 0 );	/*I/D	S*/
-			m_delay = TICK_MILISECONDS(5);
-			m_estado = s_clear;
-			break;
-		case s_clear:				/*Limpia si hay basura*/
-			WriteInstruction( CLEAR_DISPLAY , 0 );
-			m_delay = TICK_MILISECONDS(200);
-			m_estado = s_print;
-			break;
+			*m_salidas[ENA] = 1;
+			*m_salidas[ENA] = 1;
+
+			*m_salidas[ENA] = 0;
+			*m_salidas[ENA] = 0;
 		}
 	}
-}
-/**
-	\fn void LCD::WriteInstruction( const uint8_t data , const uint8_t mode )
-	\brief Escribe una instrucción en los pines del LCD.
- 	\details Envía la información a los pines correspondientes utilizando un modo de 4 bits.
- 	\param [in] data: Byte a escribir.
- 	\param [in] mode: Modo a escribir (0 = comando , 1 = letra).
-*/
-void LCD::WriteInstruction( const uint8_t data , const uint8_t mode )
-{
-	*m_salidas[rs] = mode;
-	*m_salidas[d7] = (data >> 7) & 1;
-	*m_salidas[d6] = (data >> 6) & 1;
-	*m_salidas[d5] = (data >> 5) & 1;
-	*m_salidas[d4] = (data >> 4) & 1;
-
-	*m_salidas[enable] = 1;
-	*m_salidas[enable] = 0;
-
-	*m_salidas[d7] = (data >> 3) & 1;
-	*m_salidas[d6] = (data >> 2) & 1;
-	*m_salidas[d5] = (data >> 1) & 1;
-	*m_salidas[d4] = (data >> 0) & 1;
-
-	*m_salidas[enable] = 1;
-	*m_salidas[enable] = 0;
 }
 /**
 	\fn void LCD::operator= ( const int8_t *s )
@@ -193,13 +151,18 @@ LCD& LCD::operator= ( const char *s )
 */
 void LCD::Write( const char *s )
 {
-	uint8_t i;
-	for ( i = m_pos; (i < m_filas * m_columnas) && (s[i - m_pos] != '\0') ; i++ )
-		m_buffer[i] = s[i - m_pos];
-	m_pos = i;
-
-	if ( m_pos >= (m_columnas * m_filas) )
-		m_pos = 0;
+	for (uint8_t i = 0; s[i] != '\0' ; i++ )	//TODO AGREGAR CAMBIO DE POSICION.
+	{
+		if ( m_Xpos == m_Xmax )
+		{
+			m_Xpos = 0;
+			m_Ypos++;
+			m_Xpos %= m_Ymax;
+			doublePush(INSTRUCTION_SET_POS | (m_Ypos * ROW_OFFSET) , instruction);
+		}
+		doublePush(s[i], data);
+		m_Xpos++;
+	}
 }
 /**
 	\fn void LCD::Write( const int32_t n )
@@ -210,9 +173,35 @@ void LCD::Write( const char *s )
 void LCD::Write( const int32_t n )
 {
 	char numero[12];				/*10 dígitos + signo menos + \0*/
-	snprintf(numero, 12, "%d", n);
+	intToStr(n, numero);
 	Write( numero );
 }
+void LCD::intToStr(int32_t num, int8_t* str)
+{
+    int i = 0;
+    bool isNegative = false;
+
+    if (num < 0) {
+        isNegative = true;
+        num = -num;
+    }
+
+    do {
+        str[i++] = (num % 10) + '0';
+        num /= 10;
+    } while (num);
+
+    if (isNegative) str[i++] = '-';
+    str[i] = '\0';
+
+    // Invertir el string
+    for (int j = 0; j < i / 2; j++) {
+        int8_t temp = str[j];
+        str[j] = str[i - j - 1];
+        str[i - j - 1] = temp;
+    }
+}
+
 
 /**
 	\fn void LCD::WriteAt( const int8_t *a , uint8_t fila , uint8_t columna )
@@ -222,12 +211,23 @@ void LCD::Write( const int32_t n )
  	\param [in] fila: Fila donde empezar a escribir.
  	\param [in] columna: Columna donde empezar a escribir.
 */
-void LCD::WriteAt( const int8_t *a , uint8_t fila , uint8_t columna )
+void LCD::WriteAt( const int8_t *a , const uint8_t columna, const uint8_t fila )
 {
-	if ( (m_columnas * fila) + columna <= m_columnas * m_filas )
+	m_Xpos = columna;
+	m_Ypos = fila;
+	doublePush(INSTRUCTION_SET_POS | (m_Ypos * ROW_OFFSET + m_Xpos) , instruction);
+
+	for (uint8_t i = 0; a[i] != '\0' ; i++ )	//TODO AGREGAR CAMBIO DE POSICION.
 	{
-		m_pos = (m_columnas * fila) + columna;
-		Write( a );
+		if ( m_Xpos == m_Xmax )
+		{
+			m_Xpos = 0;
+			m_Ypos++;
+			m_Ypos %= m_Ymax;
+			doublePush(INSTRUCTION_SET_POS | (m_Ypos * ROW_OFFSET) , instruction );
+		}
+		doublePush(a[i] , data );
+		m_Xpos++;
 	}
 }
 /**
@@ -238,13 +238,12 @@ void LCD::WriteAt( const int8_t *a , uint8_t fila , uint8_t columna )
  	\param [in] fila: Fila donde empezar a escribir.
  	\param [in] columna: Columna donde empezar a escribir.
 */
-void LCD::WriteAt ( const int32_t n , const uint8_t fila , const uint8_t columna)
+void LCD::WriteAt ( const int32_t n , const uint8_t columna , const uint8_t fila)
 {
-	if ( (m_columnas * fila) + columna <= m_columnas * m_filas )
-	{
-		m_pos = (m_columnas * fila) + columna;
-		Write( n );
-	}
+	m_Xpos = columna;
+	m_Ypos = fila;
+	doublePush(INSTRUCTION_SET_POS | (fila * ROW_OFFSET + columna) , instruction );	//Cambio la pos.
+	Write(n);
 }
 /**
 	\fn void LCD::Clear( void )
@@ -253,28 +252,11 @@ void LCD::WriteAt ( const int32_t n , const uint8_t fila , const uint8_t columna
 */
 void LCD::Clear( void )
 {
-	for ( uint8_t i = 0; i < (m_filas * m_columnas) ; i++ )
-			m_buffer[i] = ' ';
-	m_pos = 0;
+	doublePush(INSTRUCTION_CLEAR_DISP , instruction);
 }
-/**
-	\fn uint32_t LCD::Pow( uint32_t base , uint32_t exp )
-	\brief Realiza la operación de potencia (solo bases y exponentes positivos).
- 	\details Devuelve la base elevada al exponente indicado.
- 	\param [in] base: Base de la potencia.
- 	\param [in] exp: Exponente de la potencia.
-	\return Resultado de la cuenta o 0 por overflow.
-*/
-uint32_t LCD::Pow ( uint32_t base , uint32_t exp )
+void LCD::doublePush( uint8_t a , msj_type_t type )
 {
-	int32_t aux = 1;
-
-	for ( uint32_t i = 0 ; ( i < exp ) && ( aux != 0 ) ; i++ )
-	{
-		if ( aux >= UINT32_MAX/base )
-			aux = 0;
-		aux *= base;
-	}
-
-	return aux;
+	m_buffer.push( ((a>>4) & 0x0F) | (type << 7) );
+	m_buffer.push( (a & 0x0F) | (type << 7) );
 }
+

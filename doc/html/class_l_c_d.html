@@ -148,12 +148,12 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a82d2be39ae418a886021216a821e78bd" id="r_a82d2be39ae418a886021216a821e78bd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a82d2be39ae418a886021216a821e78bd">LCD</a> (vector&lt; <a class="el" href="classgpio.html">gpio</a> * &gt; &amp;salidas)</td></tr>
-<tr class="memdesc:a82d2be39ae418a886021216a821e78bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor de clase <a class="el" href="class_l_c_d.html" title="Clase del objeto lcd El objeto lcd permite el manejo de displays digitales mediante comunicación de 4...">LCD</a>.  <br /></td></tr>
-<tr class="separator:a82d2be39ae418a886021216a821e78bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd3680eaccf7c5eeac7687d2941ebbe9" id="r_afd3680eaccf7c5eeac7687d2941ebbe9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd3680eaccf7c5eeac7687d2941ebbe9">Initialize</a> (const <a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> filas, const <a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> columnas)</td></tr>
-<tr class="memdesc:afd3680eaccf7c5eeac7687d2941ebbe9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicializa el <a class="el" href="class_l_c_d.html" title="Clase del objeto lcd El objeto lcd permite el manejo de displays digitales mediante comunicación de 4...">LCD</a>.  <br /></td></tr>
-<tr class="separator:afd3680eaccf7c5eeac7687d2941ebbe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad543a64fdd3344e9389910dfff645a78" id="r_ad543a64fdd3344e9389910dfff645a78"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad543a64fdd3344e9389910dfff645a78">LCD</a> (<a class="el" href="classgpio.html">gpio</a> *salidas[<a class="el" href="_l_c_d_8h.html#aa3cddb87ae89790c078529cb8a560c2d">MAX_PIN_COUNT</a>], const <a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> filas, const <a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> columnas)</td></tr>
+<tr class="memdesc:ad543a64fdd3344e9389910dfff645a78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor de clase <a class="el" href="class_l_c_d.html" title="Clase del objeto lcd El objeto lcd permite el manejo de displays digitales mediante comunicación de 4...">LCD</a>.  <br /></td></tr>
+<tr class="separator:ad543a64fdd3344e9389910dfff645a78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a743e4e50466b7ce086ad7fb9cabdd93e" id="r_a743e4e50466b7ce086ad7fb9cabdd93e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a743e4e50466b7ce086ad7fb9cabdd93e">Initialize</a> (void)</td></tr>
+<tr class="memdesc:a743e4e50466b7ce086ad7fb9cabdd93e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicializa el <a class="el" href="class_l_c_d.html" title="Clase del objeto lcd El objeto lcd permite el manejo de displays digitales mediante comunicación de 4...">LCD</a>.  <br /></td></tr>
+<tr class="separator:a743e4e50466b7ce086ad7fb9cabdd93e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0f5a396c7845c5b7d7578d71c0bdf2a" id="r_af0f5a396c7845c5b7d7578d71c0bdf2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0f5a396c7845c5b7d7578d71c0bdf2a">Write</a> (const char *s)</td></tr>
 <tr class="memdesc:af0f5a396c7845c5b7d7578d71c0bdf2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escribe en el <a class="el" href="class_l_c_d.html" title="Clase del objeto lcd El objeto lcd permite el manejo de displays digitales mediante comunicación de 4...">LCD</a>.  <br /></td></tr>
 <tr class="separator:af0f5a396c7845c5b7d7578d71c0bdf2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -163,20 +163,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad170df02e0c3d282e0969237a27a0e24" id="r_ad170df02e0c3d282e0969237a27a0e24"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_l_c_d.html">LCD</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad170df02e0c3d282e0969237a27a0e24">operator=</a> (const char *s)</td></tr>
 <tr class="memdesc:ad170df02e0c3d282e0969237a27a0e24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escribe en el <a class="el" href="class_l_c_d.html" title="Clase del objeto lcd El objeto lcd permite el manejo de displays digitales mediante comunicación de 4...">LCD</a>. Sobrecarga del operador =.  <br /></td></tr>
 <tr class="separator:ad170df02e0c3d282e0969237a27a0e24"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6390fd046beb94391ac3ed58eab235cf" id="r_a6390fd046beb94391ac3ed58eab235cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6390fd046beb94391ac3ed58eab235cf">WriteAt</a> (const <a class="el" href="tipos_8h.html#ad566f6541e98b74246db1a3a3a85ad49">int8_t</a> *a, const <a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> fila, const <a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> columna)</td></tr>
-<tr class="memdesc:a6390fd046beb94391ac3ed58eab235cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escribe el <a class="el" href="class_l_c_d.html" title="Clase del objeto lcd El objeto lcd permite el manejo de displays digitales mediante comunicación de 4...">LCD</a>.  <br /></td></tr>
-<tr class="separator:a6390fd046beb94391ac3ed58eab235cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee6c227ea34c80d23ebaa08b28591add" id="r_aee6c227ea34c80d23ebaa08b28591add"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee6c227ea34c80d23ebaa08b28591add">WriteAt</a> (const <a class="el" href="tipos_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> n, const <a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> fila, const <a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> columna)</td></tr>
-<tr class="memdesc:aee6c227ea34c80d23ebaa08b28591add"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escribe el <a class="el" href="class_l_c_d.html" title="Clase del objeto lcd El objeto lcd permite el manejo de displays digitales mediante comunicación de 4...">LCD</a>.  <br /></td></tr>
-<tr class="separator:aee6c227ea34c80d23ebaa08b28591add"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b4c8ec275b0fcc63e2b1bf033fbfc07" id="r_a2b4c8ec275b0fcc63e2b1bf033fbfc07"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b4c8ec275b0fcc63e2b1bf033fbfc07">WriteAt</a> (const <a class="el" href="tipos_8h.html#ad566f6541e98b74246db1a3a3a85ad49">int8_t</a> *a, const <a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> columna, const <a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> fila)</td></tr>
+<tr class="memdesc:a2b4c8ec275b0fcc63e2b1bf033fbfc07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escribe el <a class="el" href="class_l_c_d.html" title="Clase del objeto lcd El objeto lcd permite el manejo de displays digitales mediante comunicación de 4...">LCD</a>.  <br /></td></tr>
+<tr class="separator:a2b4c8ec275b0fcc63e2b1bf033fbfc07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd30c913b5c7fd934ce3414a288b13d6" id="r_acd30c913b5c7fd934ce3414a288b13d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acd30c913b5c7fd934ce3414a288b13d6">WriteAt</a> (const <a class="el" href="tipos_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> n, const <a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> columna, const <a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> fila)</td></tr>
+<tr class="memdesc:acd30c913b5c7fd934ce3414a288b13d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escribe el <a class="el" href="class_l_c_d.html" title="Clase del objeto lcd El objeto lcd permite el manejo de displays digitales mediante comunicación de 4...">LCD</a>.  <br /></td></tr>
+<tr class="separator:acd30c913b5c7fd934ce3414a288b13d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae7a6fc1a5e3fef5a43fb048c36e3193" id="r_aae7a6fc1a5e3fef5a43fb048c36e3193"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae7a6fc1a5e3fef5a43fb048c36e3193">Clear</a> (void) override</td></tr>
 <tr class="memdesc:aae7a6fc1a5e3fef5a43fb048c36e3193"><td class="mdescLeft">&#160;</td><td class="mdescRight">Limpia el <a class="el" href="class_l_c_d.html" title="Clase del objeto lcd El objeto lcd permite el manejo de displays digitales mediante comunicación de 4...">LCD</a>.  <br /></td></tr>
 <tr class="separator:aae7a6fc1a5e3fef5a43fb048c36e3193"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_display"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_display')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_display.html">Display</a></td></tr>
 <tr class="memitem:a46094310ba411f6fea561f799c4d0754 inherit pub_methods_class_display" id="r_a46094310ba411f6fea561f799c4d0754"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_display.html#a46094310ba411f6fea561f799c4d0754">Display</a> ()=default</td></tr>
 <tr class="separator:a46094310ba411f6fea561f799c4d0754 inherit pub_methods_class_display"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2f2e09703379cc181fa298707542995 inherit pub_methods_class_display" id="r_ab2f2e09703379cc181fa298707542995"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_display.html#ab2f2e09703379cc181fa298707542995">Write</a> (const <a class="el" href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> n)=0</td></tr>
-<tr class="separator:ab2f2e09703379cc181fa298707542995 inherit pub_methods_class_display"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c364e5ed02f311a695e9502773d1c74 inherit pub_methods_class_display" id="r_a8c364e5ed02f311a695e9502773d1c74"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_display.html#a8c364e5ed02f311a695e9502773d1c74">~Display</a> ()=default</td></tr>
 <tr class="separator:a8c364e5ed02f311a695e9502773d1c74 inherit pub_methods_class_display"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -200,13 +198,13 @@ Protected Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Posiciones del buffer </p>
+<p>Posiciones del buffer. </p>
 
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a82d2be39ae418a886021216a821e78bd" name="a82d2be39ae418a886021216a821e78bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a82d2be39ae418a886021216a821e78bd">&#9670;&#160;</a></span>LCD()</h2>
+<a id="ad543a64fdd3344e9389910dfff645a78" name="ad543a64fdd3344e9389910dfff645a78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad543a64fdd3344e9389910dfff645a78">&#9670;&#160;</a></span>LCD()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -214,8 +212,17 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">LCD::LCD </td>
           <td>(</td>
-          <td class="paramtype">vector&lt; <a class="el" href="classgpio.html">gpio</a> * &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>salidas</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classgpio.html">gpio</a> *</td>          <td class="paramname"><span class="paramname"><em>salidas</em></span>[MAX_PIN_COUNT], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const <a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></td>          <td class="paramname"><span class="paramname"><em>filas</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></td>          <td class="paramname"><span class="paramname"><em>columnas</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -224,6 +231,8 @@ Protected Member Functions</h2></td></tr>
 <p>Crea <a class="el" href="class_l_c_d.html" title="Clase del objeto lcd El objeto lcd permite el manejo de displays digitales mediante comunicación de 4...">LCD</a> PIN con los parámetros correspondientes </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">salidas</td><td>Vector de GPIO ordenado utilizadas para el <a class="el" href="class_l_c_d.html" title="Clase del objeto lcd El objeto lcd permite el manejo de displays digitales mediante comunicación de 4...">LCD</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">filas</td><td>Cantidad de filas del display. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">columnas</td><td>Cantidad de columnas del display. </td></tr>
   </table>
   </dd>
 </dl>
@@ -261,8 +270,8 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="afd3680eaccf7c5eeac7687d2941ebbe9" name="afd3680eaccf7c5eeac7687d2941ebbe9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afd3680eaccf7c5eeac7687d2941ebbe9">&#9670;&#160;</a></span>Initialize()</h2>
+<a id="a743e4e50466b7ce086ad7fb9cabdd93e" name="a743e4e50466b7ce086ad7fb9cabdd93e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a743e4e50466b7ce086ad7fb9cabdd93e">&#9670;&#160;</a></span>Initialize()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -270,24 +279,14 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void LCD::Initialize </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></td>          <td class="paramname"><span class="paramname"><em>filas</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></td>          <td class="paramname"><span class="paramname"><em>columnas</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Inicializa el <a class="el" href="class_l_c_d.html" title="Clase del objeto lcd El objeto lcd permite el manejo de displays digitales mediante comunicación de 4...">LCD</a>. </p>
-<p>Crea el buffer y comienza a setear todas las salidas para comenzar a funcionar </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">filas</td><td>Cantidad de filas del <a class="el" href="class_l_c_d.html" title="Clase del objeto lcd El objeto lcd permite el manejo de displays digitales mediante comunicación de 4...">LCD</a>. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">columnas</td><td>Cantidad de columnas del <a class="el" href="class_l_c_d.html" title="Clase del objeto lcd El objeto lcd permite el manejo de displays digitales mediante comunicación de 4...">LCD</a>. </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Crea el buffer y comienza a setear todas las salidas para comenzar a funcionar </p>
 
 </div>
 </div>
@@ -377,6 +376,9 @@ Protected Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void LCD::Write </td>
@@ -385,6 +387,11 @@ Protected Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Escribe en el <a class="el" href="class_l_c_d.html" title="Clase del objeto lcd El objeto lcd permite el manejo de displays digitales mediante comunicación de 4...">LCD</a> un número. </p>
@@ -395,10 +402,12 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 
+<p>Implements <a class="el" href="class_display.html#a6b8ded3203c4c0d83a8820d410079479">Display</a>.</p>
+
 </div>
 </div>
-<a id="aee6c227ea34c80d23ebaa08b28591add" name="aee6c227ea34c80d23ebaa08b28591add"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aee6c227ea34c80d23ebaa08b28591add">&#9670;&#160;</a></span>WriteAt() <span class="overload">[1/2]</span></h2>
+<a id="acd30c913b5c7fd934ce3414a288b13d6" name="acd30c913b5c7fd934ce3414a288b13d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd30c913b5c7fd934ce3414a288b13d6">&#9670;&#160;</a></span>WriteAt() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -433,8 +442,8 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a6390fd046beb94391ac3ed58eab235cf" name="a6390fd046beb94391ac3ed58eab235cf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6390fd046beb94391ac3ed58eab235cf">&#9670;&#160;</a></span>WriteAt() <span class="overload">[2/2]</span></h2>
+<a id="a2b4c8ec275b0fcc63e2b1bf033fbfc07" name="a2b4c8ec275b0fcc63e2b1bf033fbfc07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b4c8ec275b0fcc63e2b1bf033fbfc07">&#9670;&#160;</a></span>WriteAt() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -447,12 +456,12 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></td>          <td class="paramname"><span class="paramname"><em>fila</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></td>          <td class="paramname"><span class="paramname"><em>columna</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></td>          <td class="paramname"><span class="paramname"><em>columna</em></span>&#160;)</td>
+          <td class="paramtype">const <a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></td>          <td class="paramname"><span class="paramname"><em>fila</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">

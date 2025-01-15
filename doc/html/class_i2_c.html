@@ -132,17 +132,19 @@ Collaboration diagram for I2C:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_i2_c__coll__graph.png" border="0" usemap="#a_i2_c_coll__map" alt="Collaboration graph"/></div>
 <map name="a_i2_c_coll__map" id="a_i2_c_coll__map">
-<area shape="rect" title="Clase del objeto I2C El objeto I2C genera una comunicación sincrónica de tipo I2C...." alt="" coords="67,80,109,107"/>
-<area shape="rect" href="class_comunicacion_sincronica.html" title="Clase del objeto ComunicacionAsincronica Clase abstracta pura para la generación de comunicaciones si..." alt="" coords="5,5,171,32"/>
-<area shape="poly" title=" " alt="" coords="91,48,91,80,85,80,85,48"/>
+<area shape="rect" title="Clase del objeto I2C El objeto I2C genera una comunicación sincrónica de tipo I2C...." alt="" coords="67,172,109,199"/>
+<area shape="rect" href="class_comunicacion_sincronica.html" title="Clase del objeto ComunicacionAsincronica Clase abstracta pura para la generación de comunicaciones si..." alt="" coords="5,96,171,123"/>
+<area shape="poly" title=" " alt="" coords="91,138,91,172,85,172,85,138"/>
+<area shape="rect" href="class_pin.html" title="Clase del objeto Pin." alt="" coords="68,5,108,32"/>
+<area shape="poly" title=" " alt="" coords="91,48,91,95,85,95,85,48"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a338cf62e8394d98481d5c646750902fd" id="r_a338cf62e8394d98481d5c646750902fd"><td class="memItemLeft" align="right" valign="top"><a id="a338cf62e8394d98481d5c646750902fd" name="a338cf62e8394d98481d5c646750902fd"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a338cf62e8394d98481d5c646750902fd">I2C_mode_t</a> </td></tr>
-<tr class="memdesc:a338cf62e8394d98481d5c646750902fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeracion. Modo del <a class="el" href="class_i2_c.html" title="Clase del objeto I2C El objeto I2C genera una comunicación sincrónica de tipo I2C....">I2C</a>. Puede ser master o slave. <br /></td></tr>
-<tr class="separator:a338cf62e8394d98481d5c646750902fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cbbe2b9c128da61e4c494da4a979654" id="r_a3cbbe2b9c128da61e4c494da4a979654"><td class="memItemLeft" align="right" valign="top"><a id="a3cbbe2b9c128da61e4c494da4a979654" name="a3cbbe2b9c128da61e4c494da4a979654"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3cbbe2b9c128da61e4c494da4a979654">I2C_role_t</a> </td></tr>
+<tr class="memdesc:a3cbbe2b9c128da61e4c494da4a979654"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeracion. Modo del <a class="el" href="class_i2_c.html" title="Clase del objeto I2C El objeto I2C genera una comunicación sincrónica de tipo I2C....">I2C</a>. Puede ser master o slave. <br /></td></tr>
+<tr class="separator:a3cbbe2b9c128da61e4c494da4a979654"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5c17ddab3b8696527f355def36e1d07" id="r_ac5c17ddab3b8696527f355def36e1d07"><td class="memItemLeft" align="right" valign="top"><a id="ac5c17ddab3b8696527f355def36e1d07" name="ac5c17ddab3b8696527f355def36e1d07"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5c17ddab3b8696527f355def36e1d07">I2C_action_t</a> </td></tr>
 <tr class="memdesc:ac5c17ddab3b8696527f355def36e1d07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeracion. Acciones del <a class="el" href="class_i2_c.html" title="Clase del objeto I2C El objeto I2C genera una comunicación sincrónica de tipo I2C....">I2C</a>. Pueden ser leer o escribir (write o read). <br /></td></tr>
 <tr class="separator:ac5c17ddab3b8696527f355def36e1d07"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -152,9 +154,9 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3f31d647484dfd3cad1aab0be0a5d94b" id="r_a3f31d647484dfd3cad1aab0be0a5d94b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f31d647484dfd3cad1aab0be0a5d94b">I2C</a> (<a class="el" href="struct_i2_c___type.html">I2C_Type</a> *I2C_register, <a class="el" href="class_pin.html">Pin</a> *sda, <a class="el" href="class_pin.html">Pin</a> *scl, <a class="el" href="#a338cf62e8394d98481d5c646750902fd">I2C_mode_t</a> mode=master, <a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> slv_addr=0)</td></tr>
-<tr class="memdesc:a3f31d647484dfd3cad1aab0be0a5d94b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor de la clase <a class="el" href="class_i2_c.html" title="Clase del objeto I2C El objeto I2C genera una comunicación sincrónica de tipo I2C....">I2C</a>.  <br /></td></tr>
-<tr class="separator:a3f31d647484dfd3cad1aab0be0a5d94b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab51efa3193aab033485175ce4bff0037" id="r_ab51efa3193aab033485175ce4bff0037"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab51efa3193aab033485175ce4bff0037">I2C</a> (<a class="el" href="struct_i2_c___type.html">I2C_Type</a> *I2C_register, <a class="el" href="class_pin.html">Pin</a> *sda, <a class="el" href="class_pin.html">Pin</a> *scl, <a class="el" href="#a3cbbe2b9c128da61e4c494da4a979654">I2C_role_t</a> mode=master, <a class="el" href="tipos_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> slv_addr=0)</td></tr>
+<tr class="memdesc:ab51efa3193aab033485175ce4bff0037"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor de la clase <a class="el" href="class_i2_c.html" title="Clase del objeto I2C El objeto I2C genera una comunicación sincrónica de tipo I2C....">I2C</a>.  <br /></td></tr>
+<tr class="separator:ab51efa3193aab033485175ce4bff0037"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdae33cb48da5060e31d28e6610c6eb1" id="r_acdae33cb48da5060e31d28e6610c6eb1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acdae33cb48da5060e31d28e6610c6eb1">Initialize</a> (<a class="el" href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> clk_freq)</td></tr>
 <tr class="memdesc:acdae33cb48da5060e31d28e6610c6eb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicializa el <a class="el" href="class_i2_c.html" title="Clase del objeto I2C El objeto I2C genera una comunicación sincrónica de tipo I2C....">I2C</a>.  <br /></td></tr>
 <tr class="separator:acdae33cb48da5060e31d28e6610c6eb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -196,6 +198,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>DisableInterupt</b> (
 <tr class="memitem:ab4d30ac9140fb1959ba849f437b6eacc" id="r_ab4d30ac9140fb1959ba849f437b6eacc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a927222878c117a4278938c82da47e2e6">I2C_states_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab4d30ac9140fb1959ba849f437b6eacc">GetState</a> (void)</td></tr>
 <tr class="memdesc:ab4d30ac9140fb1959ba849f437b6eacc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Regresa el estado del <a class="el" href="class_i2_c.html" title="Clase del objeto I2C El objeto I2C genera una comunicación sincrónica de tipo I2C....">I2C</a>.  <br /></td></tr>
 <tr class="separator:ab4d30ac9140fb1959ba849f437b6eacc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a970675aed1f51ab8bd8fb7767edea896" id="r_a970675aed1f51ab8bd8fb7767edea896"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a970675aed1f51ab8bd8fb7767edea896">SetTimeOut</a> (<a class="el" href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> clk_cycles)</td></tr>
+<tr class="memdesc:a970675aed1f51ab8bd8fb7767edea896"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coloca un valor de TimeOut al <a class="el" href="class_i2_c.html" title="Clase del objeto I2C El objeto I2C genera una comunicación sincrónica de tipo I2C....">I2C</a>.  <br /></td></tr>
+<tr class="separator:a970675aed1f51ab8bd8fb7767edea896"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1879bb8afe99b37e59256a575872a1a6" id="r_a1879bb8afe99b37e59256a575872a1a6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1879bb8afe99b37e59256a575872a1a6">I2C_IRQHandler</a> (void)</td></tr>
 <tr class="separator:a1879bb8afe99b37e59256a575872a1a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -220,8 +225,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>DisableInterupt</b> (
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a3f31d647484dfd3cad1aab0be0a5d94b" name="a3f31d647484dfd3cad1aab0be0a5d94b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f31d647484dfd3cad1aab0be0a5d94b">&#9670;&#160;</a></span>I2C()</h2>
+<a id="ab51efa3193aab033485175ce4bff0037" name="ab51efa3193aab033485175ce4bff0037"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab51efa3193aab033485175ce4bff0037">&#9670;&#160;</a></span>I2C()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -244,7 +249,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>DisableInterupt</b> (
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="#a338cf62e8394d98481d5c646750902fd">I2C_mode_t</a></td>          <td class="paramname"><span class="paramname"><em>mode</em></span><span class="paramdefsep"> = </span><span class="paramdefval">master</span>, </td>
+          <td class="paramtype"><a class="el" href="#a3cbbe2b9c128da61e4c494da4a979654">I2C_role_t</a></td>          <td class="paramname"><span class="paramname"><em>mode</em></span><span class="paramdefsep"> = </span><span class="paramdefval">master</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -461,7 +466,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>DisableInterupt</b> (
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="tipos_8h.html#ad566f6541e98b74246db1a3a3a85ad49">int8_t</a>: valor de error. 0 no hubo problemas. -1 no se puede leer aun. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="tipos_8h.html#ad566f6541e98b74246db1a3a3a85ad49">int8_t</a>: valor de error. 1 no hubo problemas. 0 no se puede leer aun. </dd></dl>
 
 <p>Implements <a class="el" href="class_comunicacion_sincronica.html#aea33d4761b4e3c57157387d9f9e90a01">ComunicacionSincronica</a>.</p>
 
@@ -489,12 +494,37 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>DisableInterupt</b> (
 <p>Lee un valor recibido. </p>
 <p>Lee el valor recibido por un slave. Solo puede ser llamado por un master que previamente haya pedido recibir y o un slave al que le llego un valor. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>puntero a char donde se guardara el valor recibido. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">data</td><td>puntero a char donde se guardara el valor recibido. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">continue_reading</td><td>bool que indica si se va a seguir leyendo o no. Si es true, se envia un "continue" y el slave volvera a transmitir informacion. Si es false no se realiza ninguna accion. Si el <a class="el" href="class_i2_c.html" title="Clase del objeto I2C El objeto I2C genera una comunicación sincrónica de tipo I2C....">I2C</a> es slave, continue_reading no tiene proposito. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="tipos_8h.html#ad566f6541e98b74246db1a3a3a85ad49">int8_t</a>: valor de error. 0 no hubo problemas. -1 no se puede leer aun. </dd></dl>
+
+</div>
+</div>
+<a id="a970675aed1f51ab8bd8fb7767edea896" name="a970675aed1f51ab8bd8fb7767edea896"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a970675aed1f51ab8bd8fb7767edea896">&#9670;&#160;</a></span>SetTimeOut()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void I2C::SetTimeOut </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tipos_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></td>          <td class="paramname"><span class="paramname"><em>clk_cycles</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Coloca un valor de TimeOut al <a class="el" href="class_i2_c.html" title="Clase del objeto I2C El objeto I2C genera una comunicación sincrónica de tipo I2C....">I2C</a>. </p>
+<p>Configura el TimeOut del <a class="el" href="class_i2_c.html" title="Clase del objeto I2C El objeto I2C genera una comunicación sincrónica de tipo I2C....">I2C</a>. Este siempre sera multiplo de 16 ya que se encuentra fijo en TOMIN. Por default el <a class="el" href="class_i2_c.html" title="Clase del objeto I2C El objeto I2C genera una comunicación sincrónica de tipo I2C....">I2C</a> amanece con 65 536 periodos de clock para un timeout (lo cual es el valor maximo). </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">clk_cycles</td><td>Ciclos de clock para el TimeOut. Se recomienda que sea multiplo de 16. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

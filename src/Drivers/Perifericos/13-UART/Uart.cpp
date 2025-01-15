@@ -10,7 +10,7 @@
 /***********************************************************************************************************************************
  *** INCLUDES
  **********************************************************************************************************************************/
-#include <Drivers/Perifericos/13-UART/Uart.h>
+#include <Perifericos/13-UART/UART.h>
 
 /***********************************************************************************************************************************
  *** DEFINES PRIVADOS AL MODULO
@@ -42,7 +42,7 @@ ComunicacionAsincronica *g_usart[ 5 ];
  *** IMPLEMENTACION DE LOS METODODS DE LA CLASE
  **********************************************************************************************************************************/
 /**
- * \fn Uart::Uart( uint8_t portTx , uint8_t pinTx , uint8_t portRx , uint8_t pinRx ,
+ * \fn UART::UART( uint8_t portTx , uint8_t pinTx , uint8_t portRx , uint8_t pinRx ,
  * USART_Type * usart , uint32_t baudrate , bits_de_datos BitsDeDatos , paridad_t paridad , uint32_t maxRx , uint32_t maxTx )
  * \brief Constructor de la clase uart
  * \details Genera un uart con los parametros indicados
@@ -57,7 +57,7 @@ ComunicacionAsincronica *g_usart[ 5 ];
  * \param [in] maxRx: Tamaño del buffer de recepcion
  * \param [in] maxTx: Tamaño del buffer de transmision
 */
-Uart::Uart(
+UART::UART(
 		Pin::port_t portTx ,			// Puerto en el queremos a la Tx
 		uint8_t pinTx ,				// Bit del puerto el queremos a la Tx
 		Pin::port_t portRx ,			// Puerto en el queremos a la Rx
@@ -68,93 +68,25 @@ Uart::Uart(
 		paridad_t paridad ,			// Tipo de paridad
 		uint32_t maxRx ,			// Tamaño del buffer de RX
 		uint32_t maxTx)				// Tamaño del buffer de RX
-: m_tx(Pin(portTx, pinTx)) , m_rx(Pin(portRx, pinRx)) , m_usart(usart)
+: m_tx(Pin(portTx, pinTx)) , m_rx(Pin(portRx, pinRx)) , m_usart(usart) , m_bufferRx(maxRx) , m_bufferTx(maxTx)
 {
-	m_bufferRX = new uint8_t[ maxRx ];	// buffer de Rx
-	m_inxRxIn = m_inxRxOut = 0;			// indices del bufer e Rx
-	m_maxRx = maxRx;					// tamaño del buffer de Rx
-
-	m_bufferTX = new uint8_t[maxTx];	// buffer de Tx
-	m_inxTxIn = m_inxTxOut = 0;			// indices del bufer e Tx
-	m_maxTx = maxTx;					// tamaño del buffer de Tx
-
 	m_flagTx = false ;					// flag de fin de Tx
 
 	EnableClock();
-
 	EnableSW();
-
 	Config( baudrate , BitsDeDatos , paridad );
 }
 /**
- * \fn void Uart::pushRx ( uint8_t dato )
- * \brief Agrega al buffer de recepcion
- * \details Agrega el dato al buffer de recepcion en el valor de índice actual
- * \param [in] dato: Dato a agregar
- * \return void
-*/
-void Uart::pushRx ( uint8_t dato )
-{
-	m_bufferRX[ m_inxRxIn++ ] = dato;
-	m_inxRxIn %= m_maxRx;
-}
-/**
- * \fn uint8_t Uart::popRx (uint8_t * dato )
- * \brief Elimina un dato del buffer de recepcion
- * \details Devuelve el dato del buffer de recepcion en el valor de índice actual y lo elimina (lo deja como despreciable)
- * \param [in] dato: puntero donde devolverá el dato
- * \return Mensaje de error. 1 exito, 0 error
-*/
-uint8_t Uart::popRx (uint8_t * dato )
-{
-	if ( m_inxRxIn != m_inxRxOut )
-	{
-		*dato = m_bufferRX[ m_inxRxOut++ ] ;
-		m_inxRxOut %= m_maxRx;
-		return 1;
-	}
-	return 0;
-}
-/**
- * \fn void Uart::pushTx ( uint8_t dato )
- * \brief Agrega al buffer de transmision
- * \details Agrega el dato al buffer de transmision en el valor de índice actual
- * \param [in] dato: Dato a agregar
- * \return void
-*/
-void Uart::pushTx ( uint8_t dato )
-{
-	m_bufferTX[ m_inxTxIn++ ] = dato;
-	m_inxTxIn %= m_maxTx;
-}
-/**
- * \fn uint8_t Uart::popTx (uint8_t * dato )
- * \brief Elimina un dato del buffer de transmision.
- * \details Devuelve el dato del buffer de transmision en el valor de índice actual y lo elimina (lo deja como despreciable).
- * \param [in] dato: puntero donde devolverá el dato.
- * \return Mensaje de error. 1 exito, 0 error.
-*/
-uint8_t Uart::popTx (uint8_t * dato )
-{
-	if ( m_inxTxIn != m_inxTxOut )
-	{
-		*dato = m_bufferTX[ m_inxTxOut++ ] ;
-		m_inxTxOut %= m_maxTx;
-		return 1;
-	}
-	return 0;
-}
-/**
- * \fn void Uart::Write ( const char * msg)
+ * \fn void UART::Write ( const char * msg)
  * \brief Transmite el mensaje indicado.
  * \details Coloca el mensaje indicado en el buffer. Importante, el mensaje debe terminar en \0 (String).
  * \param [in] msg: Mensaje a transmitir.
 */
-void Uart::Write ( const char * msg)
+void UART::Write ( const char * msg)
 {
 	while ( *msg )
 	{
-		pushTx ( *msg );
+		m_bufferTx.push(*msg);
 		msg++;
 
 		if ( m_flagTx == false )
@@ -165,17 +97,17 @@ void Uart::Write ( const char * msg)
 	}
 }
 /**
- * \fn void Uart::Write ( const void * msg , uint32_t n )
+ * \fn void UART::Write ( const void * msg , uint32_t n )
  * \brief Transmite el mensaje indicado.
  * \details Coloca n caracteres del mensaje indicado en el buffer.
  * \param [in] msg: Mensaje a transmitir.
  * \param [in] n: Cantidad de caracteres a enviar.
 */
-void Uart::Write ( const void * msg , uint32_t n )
+void UART::Write ( const void * msg , uint32_t n )
 {
 	for ( uint32_t i = 0 ; i < n ; i++ )
 	{
-		pushTx ( ((uint8_t*)msg)[ i ] );
+		m_bufferTx.push(((uint8_t*)msg)[ i ]);
 
 		if ( m_flagTx == 0 )
 		{
@@ -185,56 +117,71 @@ void Uart::Write ( const void * msg , uint32_t n )
 	}
 }
 /**
- * \fn void* Uart::Read ( void * msg , uint32_t n )
+ * \fn bool UART::Read ( char * msg , uint32_t n )
  * \brief Devuelve el mensaje recibido.
  * \details Lee del buffer de recepcion n caracteres y los guarda en el mensaje.
  * \param [in] msg: puntero donde devolverá el dato.
- * \param [in] n: Cantidad de caracteres a leer.
- * \return Mensaje de error. nullptr = no hay nada para leer.
+ * \param [in, out] n: Cantidad de caracteres a leer.
+ * \warning	La funcion esta pensada para strings. Automaticamente agregara el \0 al final. Si se quieren leer 3 caracteres, se debe pasar un vector de 4 Read(string,3)
+ * \return Mensaje de error. false si no leyo nada.
 */
-void* Uart::Read ( void * msg , uint32_t n )
-{
-	uint8_t dato;
-	static uint32_t cont = 0;
-	char * p = ( char *) msg;
-
-	if ( popRx ( &dato ) )
+bool UART::Read(char *msg, uint32_t n) {
+	uint8_t data;
+	static uint8_t cont = 0;
+	char *ptr = msg;
+	while (m_bufferRx.pop(&data))
 	{
-		p[ cont ] = dato ;
-		cont ++;
-
-		if ( cont >= n || p[ cont ] == '\n' )
-		{
+		ptr[cont++] = data;
+		if (cont >= n || (ptr[cont - 1] == '\r' || ptr[cont - 1] == '\n')) {
+			ptr[cont] = '\0';
 			cont = 0;
-			return (void*) p;
+			return true;
 		}
 	}
-	return nullptr;
+	return false;
 }
 /**
- * \fn void Uart::EnableInterupt ( void )
+ * \fn bool UART::Read (char* n)
+ * \brief Devuelve el mensaje recibido.
+ * \details Lee un caracter del buffer. No lo considera un string y no agrega ningun \0 adicional.
+ * \param [in, out] n: byte a leer.
+ * \return Mensaje de error. false si no leyo nada.
+*/
+bool UART::Read (char* n)
+{
+	uint8_t data;
+	if (m_bufferRx.pop(&data))
+	{
+		*n = data;
+		return true;
+	}
+	return false;
+}
+
+/**
+ * \fn void UART::EnableInterupt ( void )
  * \brief Habilita la interrupcion.
  * \details
 */
-void Uart::EnableInterupt ( void )
+void UART::EnableInterupt ( void )
 {
 	m_usart->INTENSET = (1 << 2); //enable int TX
 }
 /**
- * \fn void Uart::DisableInterupt ( void )
+ * \fn void UART::DisableInterupt ( void )
  * \brief Deshabilita la interrupcion.
  * \details
 */
-void Uart::DisableInterupt ( void )
+void UART::DisableInterupt ( void )
 {
 	m_usart->INTENCLR = (1 << 2); //disable int TX
 }
 /**
- * \fn void Uart::EnableSW ( void )
+ * \fn void UART::EnableSW ( void )
  * \brief Activa la switch matrix.
  * \details Configura todos los registros para el uso de la Usart segun la switch matrix.
 */
-void Uart::EnableSW ( void )
+void UART::EnableSW ( void )
 {
 	SYSCON->SYSAHBCLKCTRL0 |= (1 << 7);
 	if ( m_usart == USART0 )
@@ -257,14 +204,14 @@ void Uart::EnableSW ( void )
 	SYSCON->SYSAHBCLKCTRL0 &= ~(1 << 7);
 }
 /**
- * \fn void Uart::Config( uint32_t baudrate , bits_de_datos BitsDeDatos , paridad_t paridad )
+ * \fn void UART::Config( uint32_t baudrate , bits_de_datos BitsDeDatos , paridad_t paridad )
  * \brief Configura la UART.
  * \details Modifica los registros de la UART para configurar el tipo de comunicacion.
  * \param [in] baudrate: Bauldrate a utilizar.
  * \param [in] BitsDeDatos: Cantidad de bits por dato. 7 ó 8 bits.
  * \param [in] paridad: Tipo de paridad.
  * */
-void Uart::Config( uint32_t baudrate , bits_de_datos BitsDeDatos , paridad_t paridad )
+void UART::Config( uint32_t baudrate , bits_de_datos BitsDeDatos , paridad_t paridad )
 {
 	uint8_t iser = 0;
 	m_usart->CFG = ( 0 << 0 )					// 0= DISABLE 		1= ENABLE
@@ -297,24 +244,23 @@ void Uart::Config( uint32_t baudrate , bits_de_datos BitsDeDatos , paridad_t par
 	m_usart->CFG |= ( 1 << 0 );			// habilitamos USART
 }
 /**
- * \fn void Uart::SetBaudRate ( uint32_t baudrate )
+ * \fn void UART::SetBaudRate ( uint32_t baudrate )
  * \brief Modifica el baudrate al vuelo.
  * \details Cambia la velocidad de transmisión de una uart ya funcional. Verificar que se haya enviado toda la información antes de realizar este proceso
  * \param [in] baudrate: Bauldrate a utilizar
  * */
-void Uart::SetBaudRate ( uint32_t baudrate )
+void UART::SetBaudRate ( uint32_t baudrate )
 {
 	m_usart->CFG &= ~(1 << 0);		//	Disable UART
 	m_usart->BRG = (( FREQ_PRINCIPAL / baudrate ) / (m_usart->OSR + 1)) - 1;		//	Change baudrate
 	m_usart->CFG |= (1 << 0);		//	EnableUART
 }
-
 /**
- * \fn void Uart::EnableClock( void )
+ * \fn void UART::EnableClock( void )
  * \brief Activa el clock de la uart.
  * \details
 */
-void Uart::EnableClock( void )
+void UART::EnableClock( void )
 {
 	if ( m_usart == USART0 )
 	{
@@ -355,11 +301,11 @@ void Uart::EnableClock( void )
 		SYSCON->FCLKSEL[ 4 ] = 1;
 }
 /**
- * \fn void Uart::UART_IRQHandler ( void )
+ * \fn void UART::UART_IRQHandler ( void )
  * \brief Funcion de interrupcion de la uart.
  * \details Guarda los datos recibidos, envía los guardados y actualiza los buffers.
 */
-void Uart::UART_IRQHandler ( void )
+void UART::UART_IRQHandler ( void )
 {
 	uint8_t terminar ;
 	uint8_t dato ;
@@ -369,13 +315,13 @@ void Uart::UART_IRQHandler ( void )
 	{
 		// RX (me llegó algo)
 		dato = ( uint8_t ) m_usart->RXDAT ;
-		pushRx( dato );
+		m_bufferRx.push(dato);
 	}
 
 	if( stat & (1 << 2) )
 	{
 		//TX ( puedo leer )
-		terminar = popTx ( &dato );
+		terminar = m_bufferTx.pop(&dato);
 
 		if( terminar )
 			m_usart->TXDAT = ( uint8_t ) dato ;
@@ -386,7 +332,6 @@ void Uart::UART_IRQHandler ( void )
 		}
 	}
 }
-
 
 /* ----------------------------------
  * ----FUNCIONES INTERRUPCION------

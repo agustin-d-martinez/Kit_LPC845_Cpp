@@ -1,9 +1,9 @@
 var class_i2_c =
 [
     [ "I2C_action_t", "class_i2_c.html#ac5c17ddab3b8696527f355def36e1d07", null ],
-    [ "I2C_mode_t", "class_i2_c.html#a338cf62e8394d98481d5c646750902fd", null ],
+    [ "I2C_role_t", "class_i2_c.html#a3cbbe2b9c128da61e4c494da4a979654", null ],
     [ "I2C_states_t", "class_i2_c.html#a927222878c117a4278938c82da47e2e6", null ],
-    [ "I2C", "class_i2_c.html#a3f31d647484dfd3cad1aab0be0a5d94b", null ],
+    [ "I2C", "class_i2_c.html#ab51efa3193aab033485175ce4bff0037", null ],
     [ "ACK", "class_i2_c.html#a11319f49316d58882041059ce765f5e5", null ],
     [ "ACKaddr", "class_i2_c.html#a23ed9d7e6162b81f42559767e7f668ca", null ],
     [ "Continue", "class_i2_c.html#a5e49eeee7c9f988439385721ec7aad5a", null ],
@@ -15,6 +15,7 @@ var class_i2_c =
     [ "operator=", "class_i2_c.html#a8471212350221fb2a58a3cfbc469c67a", null ],
     [ "Read", "class_i2_c.html#a6237b3824536fa20e5dd3a3596f939e3", null ],
     [ "Read", "class_i2_c.html#a2e56aa888fba64968af2ab08382c76af", null ],
+    [ "SetTimeOut", "class_i2_c.html#a970675aed1f51ab8bd8fb7767edea896", null ],
     [ "Start", "class_i2_c.html#a2dc26ca2bde6fa9896cbe31d3909412e", null ],
     [ "Stop", "class_i2_c.html#a5d3e0b1de395932284e2e010a0160b5f", null ],
     [ "Write", "class_i2_c.html#a01998f88940804c81ca1c528b724a365", null ]

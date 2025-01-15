@@ -1,5 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$classsegmentos.html" title="Clase del objeto segmentos Clase abstracta pura para la generación de segmentos." alt="" coords="5,5,91,32"/>
-<area shape="rect" id="Node000001" href="$class_i4511.html" title="Clase del objeto I4511 El objeto I4511 permite el control del integrado del mismo nombre...." alt="" coords="139,5,191,32"/>
-<area shape="poly" id="edge29_Node000000_Node000001" title=" " alt="" coords="106,16,138,16,138,21,106,21"/>
+<area shape="rect" id="Node000000" href="$class_puente___h.html" title="Clase del objeto Puente_H El objeto Puente_H es la interfaz abstracta pura de cualquier puente H que ..." alt="" coords="5,5,85,32"/>
+<area shape="rect" id="Node000001" href="$class_l298_n.html" title="Clase del objeto L298N El objeto L298N realiza las acciones de control de dos motores controlados por..." alt="" coords="133,5,192,32"/>
+<area shape="poly" id="edge27_Node000000_Node000001" title=" " alt="" coords="100,16,132,16,132,21,100,21"/>
 </map>

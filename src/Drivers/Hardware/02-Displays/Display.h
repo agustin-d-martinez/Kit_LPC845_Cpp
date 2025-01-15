@@ -33,7 +33,7 @@ class Display
 {
 	public:
 						Display() = default;			/**< Constructor por defecto */
-		virtual void 	Write ( const uint32_t n ) = 0;	/**< Funcion de escritura genérica de un display */
+		virtual void 	Write ( const int32_t n ) = 0;	/**< Funcion de escritura genérica de un display */
 		virtual void 	Clear ( void ) = 0;				/**< Funcion de limpieza genérica de un display */
 		virtual			~Display() = default;			/**< destructor por defecto */
 };

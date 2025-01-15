@@ -1,0 +1,21 @@
+<map id="SPIMaster.cpp" name="SPIMaster.cpp">
+<area shape="rect" id="Node000001" title="Modulo de comunicacion SPIMaster." alt="" coords="244,5,352,32"/>
+<area shape="rect" id="Node000002" href="$_s_p_i_master_8h.html" title="Modulo de comunicacion SPIMaster." alt="" coords="201,80,396,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="301,32,301,65,296,65,296,32"/>
+<area shape="rect" id="Node000003" href="$_s_p_i_8h.html" title="Modulo de comunicacion SPI." alt="" coords="134,171,329,213"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="285,125,258,160,254,157,281,121"/>
+<area shape="rect" id="Node000008" href="$_circular_buffer_8h.html" title="Modulo de comunicacion CircularBuffer." alt="" coords="336,360,447,387"/>
+<area shape="poly" id="edge10_Node000002_Node000008" title=" " alt="" coords="316,122,343,170,361,217,374,265,390,344,385,345,369,266,356,218,339,172,311,124"/>
+<area shape="rect" id="Node000004" href="$_pin_8h.html" title="Clase Abstracta de cualquier pin del microcontrolador." alt="" coords="188,352,312,395"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="272,212,298,233,318,260,324,282,318,305,307,325,292,343,287,340,302,322,313,303,319,282,313,262,294,236,269,216"/>
+<area shape="rect" id="Node000006" href="$_l_p_c845_8h.html" title="Registros del LPC845." alt="" coords="5,269,85,296"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="189,216,87,265,84,260,187,212"/>
+<area shape="rect" id="Node000007" href="$_comunicacion_sincronica_8h.html" title="Objeto base para la creacion de comunicaciones sincrónicas." alt="" coords="109,261,304,304"/>
+<area shape="poly" id="edge7_Node000003_Node000007" title=" " alt="" coords="228,214,219,247,214,246,223,213"/>
+<area shape="rect" id="Node000005" href="$tipos_8h.html" title="Definiciones de tipos de variables." alt="" coords="170,443,230,469"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="240,397,218,431,213,428,235,394"/>
+<area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="58,294,180,429,176,433,54,298"/>
+<area shape="poly" id="edge8_Node000007_Node000004" title=" " alt="" coords="219,303,236,337,231,339,214,306"/>
+<area shape="poly" id="edge9_Node000007_Node000005" title=" " alt="" coords="197,306,186,328,178,353,175,373,178,394,189,428,184,429,173,395,170,373,173,351,181,326,192,304"/>
+<area shape="poly" id="edge11_Node000008_Node000005" title=" " alt="" coords="363,390,245,439,242,434,361,385"/>
+</map>

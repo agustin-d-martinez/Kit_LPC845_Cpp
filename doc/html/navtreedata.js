@@ -25,6 +25,7 @@
 var NAVTREE =
 [
   [ "LPC845-C++", "index.html", [
+    [ "KITLPC845", "index.html", "index" ],
     [ "Topics", "topics.html", "topics" ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
@@ -36,6 +37,7 @@ var NAVTREE =
         [ "Variables", "functions_vars.html", "functions_vars" ],
         [ "Typedefs", "functions_type.html", null ],
         [ "Enumerations", "functions_enum.html", null ],
+        [ "Enumerator", "functions_eval.html", null ],
         [ "Related Symbols", "functions_rela.html", null ]
       ] ]
     ] ],
@@ -55,10 +57,10 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_a_d_c_8cpp.html",
-"class_i2_c.html#a8471212350221fb2a58a3cfbc469c67a",
-"classteclado.html#a594c40ca5bf638ad536a061ce74b47a2",
-"group___a_d_c___register___masks.html#gaf9831982d2d97f8e14db4908f8b1a31b",
-"struct_n_v_i_c___type.html#aed564fbf596d2dbf92c6d5aea8f946e7"
+"class_i2_c.html#a11319f49316d58882041059ce765f5e5",
+"classdistancia.html",
+"group___a_d_c___register___masks.html#gaa68200e14e71e99b468551933b0ea3bf",
+"struct_g_p_i_o___type.html#ad1f00c5c3daf026dccfdaac3e89295d7"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

@@ -113,5 +113,6 @@ var searchData=
   ['adcclksel_110',['ADCCLKSEL',['../struct_s_y_s_c_o_n___type.html#aa012d5fe8f0b1472ad5e9e7b0fc3cec5',1,'SYSCON_Type']]],
   ['adcgroup_2ecpp_111',['ADCGroup.cpp',['../_a_d_c_group_8cpp.html',1,'']]],
   ['addr_112',['ADDR',['../struct_u_s_a_r_t___type.html#ae4d23357e1ebddc8a4aca8a37d6d7fb6',1,'USART_Type']]],
-  ['avanzar_113',['Avanzar',['../class_l298_n.html#ae7d49f0c984f3554fa31ca3e4fd96297',1,'L298N::Avanzar()'],['../class_puente___h.html#ad454ecc01a0b793104c88f83e34d2f86',1,'Puente_H::Avanzar()']]]
+  ['addssel_113',['AddSSEL',['../class_s_p_i.html#a7e9b548d0ecac47ff6d95770f99a72a6',1,'SPI::AddSSEL()'],['../class_s_p_i_master.html#ab7c3da3a4ef122f3a9a836d676bd3d14',1,'SPIMaster::AddSSEL()']]],
+  ['avanzar_114',['Avanzar',['../class_l298_n.html#ae7d49f0c984f3554fa31ca3e4fd96297',1,'L298N::Avanzar()'],['../class_puente___h.html#ad454ecc01a0b793104c88f83e34d2f86',1,'Puente_H::Avanzar()']]]
 ];

@@ -1,7 +1,9 @@
 <map id="I2CMaster" name="I2CMaster">
-<area shape="rect" id="Node000001" title="Clase del objeto I2CMaster El objeto I2CMaster genera una comunicación tipo master de I2C utilizando ..." alt="" coords="47,155,129,181"/>
-<area shape="rect" id="Node000002" href="$class_i2_c.html" title="Clase del objeto I2C El objeto I2C genera una comunicación sincrónica de tipo I2C...." alt="" coords="67,80,109,107"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="91,122,91,154,85,154,85,122"/>
-<area shape="rect" id="Node000003" href="$class_comunicacion_sincronica.html" title="Clase del objeto ComunicacionAsincronica Clase abstracta pura para la generación de comunicaciones si..." alt="" coords="5,5,171,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="91,48,91,80,85,80,85,48"/>
+<area shape="rect" id="Node000001" title="Clase del objeto I2CMaster El objeto I2CMaster genera una comunicación tipo master de I2C utilizando ..." alt="" coords="47,248,129,275"/>
+<area shape="rect" id="Node000002" href="$class_i2_c.html" title="Clase del objeto I2C El objeto I2C genera una comunicación sincrónica de tipo I2C...." alt="" coords="67,172,109,199"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="91,214,91,248,85,248,85,214"/>
+<area shape="rect" id="Node000003" href="$class_comunicacion_sincronica.html" title="Clase del objeto ComunicacionAsincronica Clase abstracta pura para la generación de comunicaciones si..." alt="" coords="5,96,171,123"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="91,138,91,172,85,172,85,138"/>
+<area shape="rect" id="Node000004" href="$class_pin.html" title="Clase del objeto Pin." alt="" coords="68,5,108,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="91,48,91,95,85,95,85,48"/>
 </map>

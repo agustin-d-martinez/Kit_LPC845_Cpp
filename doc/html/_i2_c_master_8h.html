@@ -112,25 +112,29 @@ $(function(){initNavTree('_i2_c_master_8h.html',''); initResizable(true); });
 <p>Modulo para master <a class="el" href="class_i2_c.html" title="Clase del objeto I2C El objeto I2C genera una comunicación sincrónica de tipo I2C....">I2C</a>.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;<a class="el" href="_i2_c_8h_source.html">Perifericos/14-ComSincronica/I2C/I2C.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="_circular_buffer_8h_source.html">CircularBuffer.h</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for I2CMaster.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="_i2_c_master_8h__incl.png" border="0" usemap="#a_i2_c_master_8h" alt=""/></div>
 <map name="a_i2_c_master_8h" id="a_i2_c_master_8h">
-<area shape="rect" title="Modulo para master I2C." alt="" coords="78,5,172,32"/>
-<area shape="rect" href="_i2_c_8h.html" title="Modulo de comunicacion I2C." alt="" coords="28,80,222,123"/>
-<area shape="poly" title=" " alt="" coords="128,32,128,65,122,65,122,32"/>
-<area shape="rect" href="_pin_8h.html" title="Clase Abstracta de cualquier pin del microcontrolador." alt="" coords="108,261,232,304"/>
-<area shape="poly" title=" " alt="" coords="132,123,153,213,162,246,157,247,148,214,127,124"/>
-<area shape="rect" href="_l_p_c845_8h.html" title="Registros del LPC845." alt="" coords="5,269,85,296"/>
-<area shape="poly" title=" " alt="" coords="118,124,59,256,54,254,113,122"/>
-<area shape="rect" href="_comunicacion_sincronica_8h.html" title="Objeto base para la creacion de comunicaciones sincrónicas." alt="" coords="162,171,357,213"/>
-<area shape="poly" title=" " alt="" coords="158,121,217,160,214,164,155,126"/>
-<area shape="rect" href="tipos_8h.html" title="Definiciones de tipos de variables." alt="" coords="140,352,200,379"/>
-<area shape="poly" title=" " alt="" coords="173,305,173,336,168,336,168,305"/>
-<area shape="poly" title=" " alt="" coords="66,294,140,341,137,346,63,299"/>
-<area shape="poly" title=" " alt="" coords="241,216,204,252,200,249,237,212"/>
-<area shape="poly" title=" " alt="" coords="264,214,262,257,257,282,247,305,230,328,209,345,205,341,226,324,243,303,252,281,257,257,259,214"/>
+<area shape="rect" title="Modulo para master I2C." alt="" coords="252,5,345,32"/>
+<area shape="rect" href="_i2_c_8h.html" title="Modulo de comunicacion I2C." alt="" coords="134,80,329,123"/>
+<area shape="poly" title=" " alt="" coords="290,34,260,70,256,67,286,31"/>
+<area shape="rect" href="_circular_buffer_8h.html" title="Modulo de comunicacion CircularBuffer." alt="" coords="336,269,447,296"/>
+<area shape="poly" title=" " alt="" coords="311,31,328,52,343,79,361,125,375,173,391,253,385,254,370,175,356,127,339,81,323,55,307,34"/>
+<area shape="rect" href="_pin_8h.html" title="Clase Abstracta de cualquier pin del microcontrolador." alt="" coords="188,261,312,304"/>
+<area shape="poly" title=" " alt="" coords="272,121,298,142,318,170,324,192,318,214,307,235,292,252,287,249,302,232,313,212,319,192,313,172,294,146,269,125"/>
+<area shape="rect" href="_l_p_c845_8h.html" title="Registros del LPC845." alt="" coords="5,179,85,205"/>
+<area shape="poly" title=" " alt="" coords="189,126,87,174,84,169,187,121"/>
+<area shape="rect" href="_comunicacion_sincronica_8h.html" title="Objeto base para la creacion de comunicaciones sincrónicas." alt="" coords="109,171,304,213"/>
+<area shape="poly" title=" " alt="" coords="228,124,219,157,214,155,223,122"/>
+<area shape="rect" href="tipos_8h.html" title="Definiciones de tipos de variables." alt="" coords="170,352,230,379"/>
+<area shape="poly" title=" " alt="" coords="240,306,218,340,213,337,235,303"/>
+<area shape="poly" title=" " alt="" coords="58,204,180,338,176,342,54,207"/>
+<area shape="poly" title=" " alt="" coords="219,213,236,246,231,249,214,215"/>
+<area shape="poly" title=" " alt="" coords="197,215,186,237,178,262,175,283,178,303,189,337,184,338,173,305,170,283,173,261,181,235,192,213"/>
+<area shape="poly" title=" " alt="" coords="363,299,245,348,242,343,361,294"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -170,7 +174,7 @@ Classes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Modulo para master <a class="el" href="class_i2_c.html" title="Clase del objeto I2C El objeto I2C genera una comunicación sincrónica de tipo I2C....">I2C</a>. </p>
 <p>USO: Se crea y se inicializa. Se envia informacion con Write() y se pide lectura con RequestRead(). Solo se pueden ejecutar si el <a class="el" href="class_i2_c.html" title="Clase del objeto I2C El objeto I2C genera una comunicación sincrónica de tipo I2C....">I2C</a> esta en idle. Write(): Escribe el string en el buffer y lo envia continuamente por interrupcion. RequestRead(): Pide una lectura continua de n bytes que se guardan en un buffer por interrupcion. Read(): Lee el buffer de recepcion. Puede leerse en cualquier momento y por partes. isIdle(): Indica si el <a class="el" href="class_i2_c.html" title="Clase del objeto I2C El objeto I2C genera una comunicación sincrónica de tipo I2C....">I2C</a> esta en reposo. Solo cuando esto sea cierto se podra leer y escribir al slave.</p>
-<p>Aun no soporta timeout, ni NACKs recibidos. <a class="el" href="class_i2_c.html" title="Clase del objeto I2C El objeto I2C genera una comunicación sincrónica de tipo I2C....">I2C</a> posee los metodos para agregar la funcion de NACK.</p>
+<p>Aun no soporta timeout recibidos. <a class="el" href="class_i2_c.html" title="Clase del objeto I2C El objeto I2C genera una comunicación sincrónica de tipo I2C....">I2C</a> posee los metodos para agregar dicha funcion al Handler.</p>
 <dl class="section date"><dt>Date</dt><dd>3 ene. 2025 </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Técnico. Martinez Agustin (<a href="#" onclick="location.href='mai'+'lto:'+'mas'+'te'+'rag'+'us'+'365'+'@g'+'mai'+'l.'+'com'; return false;">maste<span class="obfuscator">.nosp@m.</span>ragu<span class="obfuscator">.nosp@m.</span>s365@<span class="obfuscator">.nosp@m.</span>gmai<span class="obfuscator">.nosp@m.</span>l.com</a>) </dd></dl>

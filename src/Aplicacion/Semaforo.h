@@ -46,7 +46,7 @@ class Semaforo {
 		Output*		&m_amarillo;	//Periférico a usar
 		Output*		&m_rojo;		//Periférico a usar
 
-		vector <uint32_t > 			&m_msg;		//Vector por referencia donde se envian las comunicaciones entre distintas máquinas de estado
+		vector <uint32_t > 	&m_msg;		//Vector por referencia donde se envian las comunicaciones entre distintas máquinas de estado
 
 		Timer		m_timer_verde;
 		Timer		m_timer_amarillo;

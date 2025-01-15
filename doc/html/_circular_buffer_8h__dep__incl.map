@@ -1,0 +1,43 @@
+<map id="CircularBuffer.h" name="CircularBuffer.h">
+<area shape="rect" id="Node000001" title="Modulo de comunicacion CircularBuffer." alt="" coords="256,5,368,32"/>
+<area shape="rect" id="Node000002" href="$_i2_c_master_8h.html" title="Modulo para master I2C." alt="" coords="207,80,300,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="294,46,266,81,261,78,290,43"/>
+<area shape="rect" id="Node000011" href="$_l_c_d_8h.html" title="Clase para manejar un LCD con comunicación de 4 patas (solo escritura)." alt="" coords="32,80,91,107"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="255,39,92,86,91,81,253,34"/>
+<area shape="rect" id="Node000013" href="$_s_p_i_master_8h.html" title="Modulo de comunicacion SPIMaster." alt="" coords="324,80,418,107"/>
+<area shape="poly" id="edge14_Node000001_Node000013" title=" " alt="" coords="334,43,363,78,359,81,330,46"/>
+<area shape="rect" id="Node000015" href="$_u_a_r_t_8h.html" title="Modulo de Comunicacion Uart." alt="" coords="508,80,575,107"/>
+<area shape="poly" id="edge17_Node000001_Node000015" title=" " alt="" coords="367,34,508,79,506,84,365,40"/>
+<area shape="rect" id="Node000003" href="$_drivers_8h.html" title="Archivo Master con todos los includes de perifericos del Kit." alt="" coords="414,229,488,256"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="262,121,274,151,294,179,322,200,353,215,414,233,412,238,351,220,319,204,290,183,269,154,257,123"/>
+<area shape="rect" id="Node000010" href="$_i2_c_master_8cpp.html" title="Modulo para master I2C." alt="" coords="122,155,230,181"/>
+<area shape="poly" id="edge10_Node000002_Node000010" title=" " alt="" coords="231,119,191,156,188,152,227,116"/>
+<area shape="rect" id="Node000004" href="$_comunicacion_8h.html" title="Clase máquina de estados de comunicación del proyecto." alt="" coords="412,304,527,331"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="460,270,469,303,464,304,455,272"/>
+<area shape="rect" id="Node000008" href="$_semaforo_8h.html" title="Clases semaforo de ejemplo utilizando led tricolor propio de la placa." alt="" coords="300,304,388,331"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="421,267,364,306,361,301,418,263"/>
+<area shape="rect" id="Node000005" href="$_comunicacion_8cpp.html" title="Clase máquina de estados de comunicación del proyecto." alt="" coords="533,379,662,405"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="506,336,576,376,574,380,503,341"/>
+<area shape="rect" id="Node000006" href="$inicializar_8h.html" title="Archivo inicializador de la placa." alt="" coords="422,379,509,405"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="470,347,469,378,463,378,465,346"/>
+<area shape="rect" id="Node000007" href="$inicializar_8cpp.html" title="Archivo inicializador de la placa." alt="" coords="415,453,516,480"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="468,421,468,453,463,453,463,421"/>
+<area shape="poly" id="edge9_Node000008_Node000006" title=" " alt="" coords="380,337,445,376,443,380,377,341"/>
+<area shape="rect" id="Node000009" href="$_semaforo_8cpp.html" title="Clases semaforo de ejemplo utilizando led tricolor propio de la placa." alt="" coords="293,379,395,405"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="347,346,347,378,341,378,341,346"/>
+<area shape="poly" id="edge12_Node000011_Node000003" title=" " alt="" coords="36,119,22,134,12,150,8,165,14,180,41,199,84,214,137,225,196,232,317,239,413,240,413,245,317,244,196,237,136,230,82,219,39,204,10,183,3,166,7,148,18,130,32,115"/>
+<area shape="rect" id="Node000012" href="$_l_c_d_8cpp.html" title="Clase para manejar un LCD con comunicación de 4 patas (solo escritura)." alt="" coords="25,155,98,181"/>
+<area shape="poly" id="edge13_Node000011_Node000012" title=" " alt="" coords="64,122,64,154,59,154,59,122"/>
+<area shape="poly" id="edge15_Node000013_Node000003" title=" " alt="" coords="398,116,428,153,444,194,451,228,446,229,439,195,423,156,394,119"/>
+<area shape="rect" id="Node000014" href="$_s_p_i_master_8cpp.html" title="Modulo de comunicacion SPIMaster." alt="" coords="305,155,413,181"/>
+<area shape="poly" id="edge16_Node000013_Node000014" title=" " alt="" coords="369,123,363,155,358,154,364,122"/>
+<area shape="poly" id="edge18_Node000015_Node000003" title=" " alt="" coords="528,121,461,230,456,227,523,119"/>
+<area shape="rect" id="Node000016" href="$_e_s_p8266_8h.html" title="Modulo de comunicacion WIFI con ESP8266." alt="" coords="539,155,626,181"/>
+<area shape="poly" id="edge19_Node000015_Node000016" title=" " alt="" coords="558,119,578,153,573,156,554,122"/>
+<area shape="rect" id="Node000018" href="$_u_a_r_t_8cpp.html" title="Funciones miembro de Uart." alt="" coords="650,155,731,181"/>
+<area shape="poly" id="edge23_Node000015_Node000018" title=" " alt="" coords="582,111,666,152,663,156,580,116"/>
+<area shape="poly" id="edge20_Node000016_Node000003" title=" " alt="" coords="548,191,475,231,473,226,546,187"/>
+<area shape="poly" id="edge22_Node000016_Node000006" title=" " alt="" coords="583,197,571,261,559,298,541,332,516,360,489,380,486,376,512,356,537,329,554,296,566,260,578,196"/>
+<area shape="rect" id="Node000017" href="$_e_s_p8266_8cpp.html" title="Modulo de comunicacion WIFI con ESP8266." alt="" coords="601,229,703,256"/>
+<area shape="poly" id="edge21_Node000016_Node000017" title=" " alt="" coords="607,191,642,227,638,231,603,194"/>
+</map>

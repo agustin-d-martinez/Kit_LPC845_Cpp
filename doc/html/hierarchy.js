@@ -14,16 +14,16 @@ var hierarchy =
       [ "display7Segmentos", "classdisplay7_segmentos.html", null ],
       [ "teclado", "classteclado.html", null ]
     ] ],
-    [ "ComunicacionAsincronica", "class_comunicacion_asincronica.html", [
-      [ "Uart", "class_uart.html", [
-        [ "ESP8266", "class_e_s_p8266.html", null ]
-      ] ]
-    ] ],
+    [ "CircularBuffer< T >", "class_circular_buffer.html", null ],
+    [ "CircularBuffer< uint8_t >", "class_circular_buffer.html", null ],
+    [ "ComunicacionAsincronica", "class_comunicacion_asincronica.html", null ],
     [ "ComunicacionSincronica", "class_comunicacion_sincronica.html", [
       [ "I2C", "class_i2_c.html", [
         [ "I2CMaster", "class_i2_c_master.html", null ]
       ] ],
-      [ "SPI", "class_s_p_i.html", null ]
+      [ "SPI", "class_s_p_i.html", [
+        [ "SPIMaster", "class_s_p_i_master.html", null ]
+      ] ]
     ] ],
     [ "DAC_t", "struct_d_a_c__t.html", null ],
     [ "digito", "classdigito.html", null ],
@@ -74,5 +74,6 @@ var hierarchy =
     [ "SYSCON_Type", "struct_s_y_s_c_o_n___type.html", null ],
     [ "SysTick_t", "struct_sys_tick__t.html", null ],
     [ "timers", "classtimers.html", null ],
+    [ "Uart", "class_uart.html", null ],
     [ "USART_Type", "struct_u_s_a_r_t___type.html", null ]
 ];

@@ -50,9 +50,10 @@ I2C *g_i2c[ MAX_IC2 ];
  * \param [in] mode: Tipo de I2C. Puede ser master o slave.
  * \param [in] slv_addr: Address propio del I2C. Solo util cuando se lo configura como slave.
 */
-I2C::I2C( I2C_Type* I2C_register , Pin* sda , Pin* scl , I2C_mode_t mode , uint8_t slv_addr) :
-		m_I2C_register (I2C_register) , m_sda(sda) , m_scl(scl) , m_mode(mode) , m_slv_addr(slv_addr)
+I2C::I2C( I2C_Type* I2C_register , Pin* sda , Pin* scl , I2C_role_t mode , uint8_t slv_addr) :
+		m_I2C_register (I2C_register) , m_sda(sda) , m_role(mode) , m_slv_addr(slv_addr)
 {
+	m_scl = scl;
 	if ( I2C_register == I2C0 )
 		g_i2c[ 0 ] = this;		// El I2C0 solo puede colocarse en un lugar.
 	if ( I2C_register == I2C1 )
@@ -143,13 +144,13 @@ void I2C::Initialize ( uint32_t clk_freq )
  * \fn void I2C::config ( uint8_t& register_number )
  * \brief Configura el I2C.
  * \details Coloca al I2C en master o slave y le asigna el address correspondiente.
- * \return void
+ * \param [in] register_number: numero de registro del I2C seleccionado.
 */
 void I2C::config ( uint8_t& register_number )
 {
-	if ( m_mode == master )
+	if ( m_role == master )
 		m_I2C_register->CFG |= (1 << 0);	//Enable master mode
-	if ( m_mode == slave )
+	if ( m_role == slave )
 	{
 		m_I2C_register->CFG |= (1 << 1);	//Enable slave mode
 
@@ -191,7 +192,8 @@ void I2C::EnableSWM ( void )
  * \fn void I2C::ConfigClock ( uint8_t& clk_offset , uint8_t& rst_offset )
  * \brief Configura el clock del I2C.
  * \details Enciende el clock del I2C.
- * \return void
+ * \param [in] clk_offset: Offset del registro del clock.
+ * \param [in] rst_offset: Offset del registro de reset.
 */
 void I2C::ConfigClock ( uint8_t& clk_offset , uint8_t& rst_offset )
 {
@@ -230,9 +232,9 @@ void I2C::configBaudRate(uint32_t clk_freq)
 */
 void I2C::EnableInterupt(void)
 {
-	if (m_mode == master)
+	if (m_role == master)
 		m_I2C_register->INTENSET |= I2C_INTENSET_MSTPENDINGEN(1);// Interrupt de master
-	if (m_mode == slave)
+	if (m_role == slave)
 		m_I2C_register->INTENSET |= I2C_INTENSET_SLVPENDINGEN(1);// Interrupt de slave
 }
 /**
@@ -257,7 +259,9 @@ I2C::I2C_states_t I2C::GetState( void )
 {
 	I2C_states_t state ;
 	uint8_t aux;
-	if ( m_mode == master )
+	if ( (m_I2C_register->STAT & I2C_STAT_EVENTTIMEOUT_MASK) | (m_I2C_register->STAT & I2C_STAT_SCLTIMEOUT_MASK))
+		return timeout;
+	if ( m_role == master )
 	{
 		aux = (m_I2C_register->STAT >> I2C_STAT_MSTPENDING_SHIFT) & 0b1 ;
 		if ( aux == 0 )
@@ -277,6 +281,18 @@ I2C::I2C_states_t I2C::GetState( void )
 	return state;
 }
 /**
+ * \fn void I2C::SetTimeOut ( uint32_t clk_cycles )
+ * \brief Coloca un valor de TimeOut al I2C.
+ * \details Configura el TimeOut del I2C. Este siempre sera multiplo de 16 ya que se encuentra fijo en TOMIN.
+ * 			Por default el I2C amanece con 65 536 periodos de clock para un timeout (lo cual es el valor maximo).
+ * \param [in] clk_cycles: Ciclos de clock para el TimeOut. Se recomienda que sea multiplo de 16.
+*/
+void I2C::SetTimeOut ( uint32_t clk_cycles )
+{
+	m_I2C_register->TIMEOUT = I2C_TIMEOUT_TO(clk_cycles/16) | I2C_TIMEOUT_TOMIN(0xF);	//TOMIN = min value. TimeOut = TO * TOMIN
+}
+
+/**
  * \fn void I2C::Start	( uint8_t addr , I2C_action_t action )
  * \brief Inicia una comunicacion I2C.
  * \details Envia el start a un slave. La funcion solo puede ser llamada por un master si este no se encuentra ocupado.
@@ -286,7 +302,7 @@ I2C::I2C_states_t I2C::GetState( void )
 void I2C::Start	( uint8_t addr , I2C_action_t action )
 {
 	I2C_states_t state = GetState();
-	if (m_mode == master && state != busy)		//Si no esta trabajando
+	if (m_role == master && state != busy)		//Si no esta trabajando
 	{
 		m_I2C_register->MSTDAT &= ~(0xFF);		//Limpio el registro
 		m_I2C_register->MSTDAT = (uint8_t) ((addr << 1) | action);		//addr + bit de lectura/escritura
@@ -301,7 +317,7 @@ void I2C::Start	( uint8_t addr , I2C_action_t action )
 void I2C::Stop ( void )
 {
 	I2C_states_t state = GetState();
-	if (m_mode == master && state != busy)		//Si no esta trabajando
+	if (m_role == master && state != busy)		//Si no esta trabajando
 		m_I2C_register->MSTCTL = I2C_MSTCTL_MSTSTOP(1);	//arranco la comunicacion
 }
 /**
@@ -312,13 +328,12 @@ void I2C::Stop ( void )
 */
 void I2C::Write ( uint8_t data )
 {
-	I2C_states_t aux = GetState();
-	if (aux == tx_ready)
+	if (m_role == master)
 	{
 		m_I2C_register->MSTDAT = I2C_MSTDAT_DATA(data);
 		m_I2C_register->MSTCTL = I2C_MSTCTL_MSTCONTINUE(1);
 	}
-	else if(aux == slvst_tx)
+	else
 	{
 		m_I2C_register->SLVDAT = I2C_SLVDAT_DATA(data);
 		m_I2C_register->SLVCTL = I2C_SLVCTL_SLVCONTINUE(1);
@@ -328,7 +343,7 @@ void I2C::Write ( uint8_t data )
  * \fn int8_t I2C::Read (uint8_t* data , bool continue_reading )
  * \brief Lee un valor recibido.
  * \details Lee el valor recibido por un slave. Solo puede ser llamado por un master que previamente haya pedido recibir y o un slave al que le llego un valor.
- * \param [in] data: puntero a char donde se guardara el valor recibido.
+ * \param [in, out] data: puntero a char donde se guardara el valor recibido.
  * \param [in] continue_reading: bool que indica si se va a seguir leyendo o no.
  * 			Si es true, se envia un "continue" y el slave volvera a transmitir informacion. Si es false no se realiza ninguna accion.
  * 			Si el I2C es slave, continue_reading no tiene proposito.
@@ -346,22 +361,16 @@ int8_t I2C::Read (uint8_t* data , bool continue_reading )
  * \brief Lee un valor recibido.
  * \details Lee el valor recibido por un slave. Solo puede ser llamado por un master que previamente haya pedido recibir y o un slave al que le llego un valor.
  * \param [in] data: puntero a char donde se guardara el valor recibido.
- * \return int8_t: valor de error. 0 no hubo problemas. -1 no se puede leer aun.
+ * \return int8_t: valor de error. 1 no hubo problemas. 0 no se puede leer aun.
 */
 int8_t I2C::Read(uint8_t *data)
 {
-	I2C_states_t aux = GetState();
-	if (aux == rx_data)
-	{
-		*data = (uint8_t) (m_I2C_register->MSTDAT | 0xFF);
-		return 0;
-	}
-	else if (aux == slvst_rx)
-	{
-		*data = (uint8_t) (m_I2C_register->SLVDAT | 0xFF);
-		return 0;
-	}
-	return -1;
+	if (m_role == master)
+		*data = (uint8_t) (m_I2C_register->MSTDAT & 0xFF);
+	else
+		*data = (uint8_t) (m_I2C_register->SLVDAT & 0xFF);
+
+	return 1;
 }
 /**
  * \fn void I2C::Continue( void )
@@ -406,20 +415,18 @@ void I2C::ACK ( bool a )
 bool I2C::ACKaddr ( void )
 {
 	uint8_t recieved_addr;
-	if ( GetState() == slvst_addr )
+	recieved_addr = (uint8_t) (m_I2C_register->SLVDAT | 0x7F);
+	if ( recieved_addr == m_slv_addr )
 	{
-		recieved_addr = (uint8_t) (m_I2C_register->SLVDAT | 0x7F);
-		if ( recieved_addr == m_slv_addr )
-		{
-			ACK(true);
-			return true;
-		}
-		else
-		{
-			ACK(false);
-			return false;
-		}
+		ACK(true);
+		return true;
 	}
+	else
+	{
+		ACK(false);
+		return false;
+	}
+
 	return false;
 }
 

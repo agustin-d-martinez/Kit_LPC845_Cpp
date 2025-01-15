@@ -4,6 +4,8 @@
  No poseen implementaciones de DMA.
 
 # Informacion:
+![Descripción del Pinout](LPC845_BRK.png)
+
 EN CASO DE QUERER UTILIZAR ESTA PLAQUETA:
 - Nombre de la plaqueta: LPC845.
 - Alimentación de 3,3V. (Para alimentar externamente GND en pin 20 y 3,3v en pin 40).
@@ -26,6 +28,7 @@ EN CASO DE QUERER UTILIZAR ESTA PLAQUETA:
 - Ultrasónico.
 - ESP01 (Wifi arduino con comandos AT).  
 - I2C.
+- SPI.
 
 ## Para crear un proyecto nuevo:
 - File.

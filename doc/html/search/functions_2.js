@@ -3,7 +3,7 @@ var searchData=
   ['dac_0',['DAC',['../class_d_a_c.html#a45d6108230365ffdd146518ba44f224f',1,'DAC']]],
   ['digito_1',['digito',['../classdigito.html#ad87b6a6ef9b67e0ec9d16ef093f1eff0',1,'digito']]],
   ['disableinterrupt_2',['DisableInterrupt',['../class_m_r_thandler.html#a2f45f9123b8b9eb19ee4e676b545e304',1,'MRThandler']]],
-  ['disableinterupt_3',['DisableInterupt',['../class_pin_interrupt.html#aa8008149bcbe1427dfd8509eac856f01',1,'PinInterrupt::DisableInterupt()'],['../class_i2_c.html#aaef51594d197af2a031592e890b6daba',1,'I2C::DisableInterupt()']]],
+  ['disableinterupt_3',['DisableInterupt',['../class_pin_interrupt.html#aa8008149bcbe1427dfd8509eac856f01',1,'PinInterrupt::DisableInterupt()'],['../class_i2_c.html#aaef51594d197af2a031592e890b6daba',1,'I2C::DisableInterupt()'],['../class_s_p_i.html#a0f9b08f9ef207348c3d61c51b6e71ccf',1,'SPI::DisableInterupt()']]],
   ['disableirq_4',['DisableIrq',['../class_a_d_c___group.html#ae8b772223a466a4f5007905256d122cf',1,'ADC_Group']]],
   ['disconnecttoserver_5',['DisconnectToServer',['../class_e_s_p8266.html#a78b84f1f6e44faae9cca091530b9b7b5',1,'ESP8266']]],
   ['disconnecttowifi_6',['DisconnectToWifi',['../class_e_s_p8266.html#a2ea8ccb7701111d43ee21ebb7a830d2d',1,'ESP8266']]],

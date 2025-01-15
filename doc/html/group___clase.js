@@ -12,7 +12,7 @@ var group___clase =
       [ "Display", "class_display.html#a46094310ba411f6fea561f799c4d0754", null ],
       [ "~Display", "class_display.html#a8c364e5ed02f311a695e9502773d1c74", null ],
       [ "Clear", "class_display.html#a90489617ce2fcbc4828f2a8e12af893e", null ],
-      [ "Write", "class_display.html#ab2f2e09703379cc181fa298707542995", null ]
+      [ "Write", "class_display.html#a6b8ded3203c4c0d83a8820d410079479", null ]
     ] ],
     [ "Puente_H", "class_puente___h.html", [
       [ "Puente_H", "class_puente___h.html#aeb820ee4e2e819643634743249f9bb71", null ],
@@ -46,11 +46,7 @@ var group___clase =
     [ "ComunicacionAsincronica", "class_comunicacion_asincronica.html", [
       [ "ComunicacionAsincronica", "class_comunicacion_asincronica.html#a711e7bb16713a4ebfd7f71044090531a", null ],
       [ "~ComunicacionAsincronica", "class_comunicacion_asincronica.html#a96a3fc01767f456da0b5b177751a02f3", null ],
-      [ "popRx", "class_comunicacion_asincronica.html#a91b0600c6c99e3034d06ad2912594bf2", null ],
-      [ "popTx", "class_comunicacion_asincronica.html#aef7119239e6601ca6d88d8226ec53f2f", null ],
-      [ "pushRx", "class_comunicacion_asincronica.html#a01a00859cfa12a971645325e7cfea6d1", null ],
-      [ "pushTx", "class_comunicacion_asincronica.html#af981e1ede12e7af2334eb6ae08948fbf", null ],
-      [ "Read", "class_comunicacion_asincronica.html#a64e4dad4f58c045a8192d2a4f94f80fc", null ],
+      [ "Read", "class_comunicacion_asincronica.html#abc0fe3054bd942c2d8a99b97baf1c291", null ],
       [ "UART_IRQHandler", "class_comunicacion_asincronica.html#a03334adab3bab229a1709c721d25cde7", null ],
       [ "Write", "class_comunicacion_asincronica.html#a1edc50c8c7a50da0c73a58812c632590", null ],
       [ "Write", "class_comunicacion_asincronica.html#ada76403f78db8f4ef709651662c754d3", null ]
@@ -59,6 +55,7 @@ var group___clase =
       [ "ComunicacionSincronica", "class_comunicacion_sincronica.html#a2466717eadf1a0415f3ea369502620b1", null ],
       [ "~ComunicacionSincronica", "class_comunicacion_sincronica.html#a4a557f4ff51a3d3298687750fb479aa6", null ],
       [ "Read", "class_comunicacion_sincronica.html#aea33d4761b4e3c57157387d9f9e90a01", null ],
-      [ "Write", "class_comunicacion_sincronica.html#add9b9c73ccac230a5a88b2031d546c34", null ]
+      [ "Write", "class_comunicacion_sincronica.html#add9b9c73ccac230a5a88b2031d546c34", null ],
+      [ "m_scl", "class_comunicacion_sincronica.html#a3a40f691cf66fa819a2b3e1c9c1f9240", null ]
     ] ]
 ];

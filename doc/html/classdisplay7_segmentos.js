@@ -5,5 +5,5 @@ var classdisplay7_segmentos =
     [ "Clear", "classdisplay7_segmentos.html#ad8af8da91ab70f44f4cee3afae333e32", null ],
     [ "Set", "classdisplay7_segmentos.html#a8b17fe70b4141fa20bc36164a24008ff", null ],
     [ "SWhandler", "classdisplay7_segmentos.html#a345a2510c38ef8438bf22bf93906dd89", null ],
-    [ "Write", "classdisplay7_segmentos.html#ac3e94eb5b2271d462dabd4be9451c4a0", null ]
+    [ "Write", "classdisplay7_segmentos.html#a62780641428f18f1ef9919529ddbdd54", null ]
 ];

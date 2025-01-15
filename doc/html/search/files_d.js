@@ -7,6 +7,8 @@ var searchData=
   ['semaforo_2eh_4',['Semaforo.h',['../_semaforo_8h.html',1,'']]],
   ['spi_2ecpp_5',['SPI.cpp',['../_s_p_i_8cpp.html',1,'']]],
   ['spi_2eh_6',['SPI.h',['../_s_p_i_8h.html',1,'']]],
-  ['systick_2ecpp_7',['systick.cpp',['../systick_8cpp.html',1,'']]],
-  ['systick_2eh_8',['systick.h',['../systick_8h.html',1,'']]]
+  ['spimaster_2ecpp_7',['SPIMaster.cpp',['../_s_p_i_master_8cpp.html',1,'']]],
+  ['spimaster_2eh_8',['SPIMaster.h',['../_s_p_i_master_8h.html',1,'']]],
+  ['systick_2ecpp_9',['systick.cpp',['../systick_8cpp.html',1,'']]],
+  ['systick_2eh_10',['systick.h',['../systick_8h.html',1,'']]]
 ];

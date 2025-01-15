@@ -115,40 +115,42 @@ $(function(){initNavTree('_l_c_d_8h.html',''); initResizable(true); });
 <div class="textblock"><code>#include &lt;<a class="el" href="_display_8h_source.html">Hardware/02-Displays/Display.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="gpio_8h_source.html">Perifericos/02-Gpio/gpio.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="_callback_8h_source.html">Perifericos/06-Callback/Callback.h</a>&gt;</code><br />
-<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;<a class="el" href="_circular_buffer_8h_source.html">CircularBuffer.h</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for LCD.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="_l_c_d_8h__incl.png" border="0" usemap="#a_l_c_d_8h" alt=""/></div>
 <map name="a_l_c_d_8h" id="a_l_c_d_8h">
-<area shape="rect" title="Clase para manejar un LCD con comunicación de 4 patas (solo escritura)." alt="" coords="412,5,472,32"/>
-<area shape="rect" href="_display_8h.html" title="Clase base para objetos del tipo pantallas/displays." alt="" coords="5,171,156,213"/>
-<area shape="poly" title=" " alt="" coords="412,29,337,49,250,82,180,122,120,163,117,159,177,117,247,78,335,44,411,24"/>
-<area shape="rect" href="gpio_8h.html" title="Módulo con clase de manejo de GPIO." alt="" coords="261,80,393,123"/>
-<area shape="poly" title=" " alt="" coords="425,35,371,73,368,69,422,30"/>
-<area shape="rect" href="_callback_8h.html" title="Clase virtual pura. Esta clase debe ser heredada por las clases que se tienen que enganchar del Systi..." alt="" coords="448,80,604,123"/>
-<area shape="poly" title=" " alt="" coords="457,31,496,68,492,71,453,34"/>
-<area shape="rect" title=" " alt="" coords="572,269,629,296"/>
-<area shape="poly" title=" " alt="" coords="472,18,508,22,548,31,587,49,604,62,619,78,630,100,637,123,637,172,628,219,615,256,610,254,623,217,632,172,631,124,625,102,614,82,601,66,584,54,546,36,507,27,472,23"/>
-<area shape="rect" href="tipos_8h.html" title="Definiciones de tipos de variables." alt="" coords="332,352,392,379"/>
-<area shape="poly" title=" " alt="" coords="104,212,157,256,223,302,271,326,318,346,316,351,269,331,220,306,154,260,101,216"/>
-<area shape="rect" href="_l_p_c845_8h.html" title="Registros del LPC845." alt="" coords="389,269,468,296"/>
-<area shape="poly" title=" " alt="" coords="345,121,377,169,420,254,415,256,373,172,341,124"/>
-<area shape="rect" href="_pin_8h.html" title="Clase Abstracta de cualquier pin del microcontrolador." alt="" coords="234,261,359,304"/>
-<area shape="poly" title=" " alt="" coords="274,125,243,145,220,172,214,192,220,212,233,232,251,250,247,254,229,236,215,214,209,192,215,169,240,141,271,121"/>
-<area shape="rect" href="_in_out_8h.html" title="Clase Abstracta Pura de las GPIO." alt="" coords="230,171,363,213"/>
-<area shape="poly" title=" " alt="" coords="323,124,311,157,306,155,318,122"/>
-<area shape="poly" title=" " alt="" coords="420,298,384,342,380,339,416,295"/>
-<area shape="poly" title=" " alt="" coords="315,303,344,338,340,342,311,306"/>
-<area shape="poly" title=" " alt="" coords="299,214,299,246,294,246,294,214"/>
-<area shape="poly" title=" " alt="" coords="511,125,479,172,457,216,441,256,436,254,452,213,474,169,507,122"/>
-<area shape="poly" title=" " alt="" coords="546,122,563,144,578,170,592,213,600,253,595,254,587,214,573,172,558,147,542,125"/>
-<area shape="rect" href="systick_8h.html" title="Firmware del systick." alt="" coords="489,179,563,205"/>
-<area shape="poly" title=" " alt="" coords="521,123,520,163,515,163,515,123"/>
-<area shape="poly" title=" " alt="" coords="526,207,513,253,500,281,482,306,447,334,408,353,405,348,444,329,479,302,496,278,508,251,521,205"/>
-<area shape="poly" title=" " alt="" coords="514,208,455,261,452,257,510,204"/>
-<area shape="poly" title=" " alt="" coords="530,178,532,138,537,138,535,178"/>
-<area shape="poly" title=" " alt="" coords="539,204,582,255,578,259,534,208"/>
+<area shape="rect" title="Clase para manejar un LCD con comunicación de 4 patas (solo escritura)." alt="" coords="398,5,457,32"/>
+<area shape="rect" href="_display_8h.html" title="Clase base para objetos del tipo pantallas/displays." alt="" coords="524,171,675,213"/>
+<area shape="poly" title=" " alt="" coords="458,21,518,39,550,55,576,78,588,96,595,116,602,155,597,156,590,117,583,98,572,82,547,60,516,44,457,27"/>
+<area shape="rect" href="gpio_8h.html" title="Módulo con clase de manejo de GPIO." alt="" coords="112,80,244,123"/>
+<area shape="poly" title=" " alt="" coords="398,32,258,77,256,72,397,27"/>
+<area shape="rect" href="_callback_8h.html" title="Clase virtual pura. Esta clase debe ser heredada por las clases que se tienen que enganchar del Systi..." alt="" coords="271,80,427,123"/>
+<area shape="poly" title=" " alt="" coords="417,34,381,71,377,67,413,31"/>
+<area shape="rect" href="_circular_buffer_8h.html" title="Modulo de comunicacion CircularBuffer." alt="" coords="450,88,562,115"/>
+<area shape="poly" title=" " alt="" coords="442,31,486,75,482,79,438,34"/>
+<area shape="rect" href="tipos_8h.html" title="Definiciones de tipos de variables." alt="" coords="324,352,384,379"/>
+<area shape="poly" title=" " alt="" coords="589,216,555,261,533,285,508,306,454,336,400,355,399,350,452,331,505,302,529,281,551,257,585,212"/>
+<area shape="rect" href="_l_p_c845_8h.html" title="Registros del LPC845." alt="" coords="237,269,316,296"/>
+<area shape="poly" title=" " alt="" coords="192,122,265,254,260,257,187,124"/>
+<area shape="rect" href="_pin_8h.html" title="Clase Abstracta de cualquier pin del microcontrolador." alt="" coords="89,261,214,304"/>
+<area shape="poly" title=" " alt="" coords="178,124,159,247,154,246,172,123"/>
+<area shape="rect" href="_in_out_8h.html" title="Clase Abstracta Pura de las GPIO." alt="" coords="5,171,138,213"/>
+<area shape="poly" title=" " alt="" coords="155,125,110,163,106,159,152,121"/>
+<area shape="poly" title=" " alt="" coords="291,295,334,339,330,343,287,298"/>
+<area shape="poly" title=" " alt="" coords="205,302,311,344,309,349,203,307"/>
+<area shape="poly" title=" " alt="" coords="92,212,125,248,121,252,88,216"/>
+<area shape="poly" title=" " alt="" coords="334,124,318,147,305,172,291,214,283,254,278,253,285,213,300,170,314,144,330,121"/>
+<area shape="rect" title=" " alt="" coords="392,269,450,296"/>
+<area shape="poly" title=" " alt="" coords="371,121,388,143,403,170,416,213,422,253,417,254,411,214,398,172,384,146,366,125"/>
+<area shape="rect" href="systick_8h.html" title="Firmware del systick." alt="" coords="314,179,389,205"/>
+<area shape="poly" title=" " alt="" coords="344,123,345,163,340,163,339,123"/>
+<area shape="poly" title=" " alt="" coords="354,206,356,336,351,336,349,206"/>
+<area shape="poly" title=" " alt="" coords="343,208,299,259,295,255,339,204"/>
+<area shape="poly" title=" " alt="" coords="355,178,356,138,361,138,360,178"/>
+<area shape="poly" title=" " alt="" coords="364,204,404,255,399,258,359,208"/>
+<area shape="poly" title=" " alt="" coords="509,115,509,150,504,200,491,255,479,281,464,306,434,333,400,352,397,347,431,329,460,302,475,279,485,253,499,199,504,150,504,115"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -187,146 +189,146 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a221b02b65527a670a158a9b1387e877c" id="r_a221b02b65527a670a158a9b1387e877c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a221b02b65527a670a158a9b1387e877c">CLEAR_DISPLAY</a>&#160;&#160;&#160;0b00000001</td></tr>
-<tr class="separator:a221b02b65527a670a158a9b1387e877c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a132a90af728916a595bcf5a52cfac21c" id="r_a132a90af728916a595bcf5a52cfac21c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a132a90af728916a595bcf5a52cfac21c">RETURN_HOME</a>&#160;&#160;&#160;0b00000010</td></tr>
-<tr class="separator:a132a90af728916a595bcf5a52cfac21c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa609aa58e71261c40627750bbaa1ca1c" id="r_aa609aa58e71261c40627750bbaa1ca1c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa609aa58e71261c40627750bbaa1ca1c">ENTRY_MODE_SET</a>&#160;&#160;&#160;0b00000100	/** 1	I/D S*/</td></tr>
-<tr class="separator:aa609aa58e71261c40627750bbaa1ca1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74c80ace5656e5bdca4af4c7233921f5" id="r_a74c80ace5656e5bdca4af4c7233921f5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a74c80ace5656e5bdca4af4c7233921f5">DISPLAY_CONTROL</a>&#160;&#160;&#160;0b00001000	/** 1	D 	C 	B*/</td></tr>
-<tr class="separator:a74c80ace5656e5bdca4af4c7233921f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee44c28b3237b814efa557a2429023b8" id="r_aee44c28b3237b814efa557a2429023b8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee44c28b3237b814efa557a2429023b8">CURSOR_DISPLAY_SHIFT</a>&#160;&#160;&#160;0b00010000	/** 1	S/C R/L - 	-*/</td></tr>
-<tr class="separator:aee44c28b3237b814efa557a2429023b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59f35c48e6411073b387a95fa81df8be" id="r_a59f35c48e6411073b387a95fa81df8be"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59f35c48e6411073b387a95fa81df8be">FUNCTION_SET</a>&#160;&#160;&#160;0b00100000	/** 1	DL 	N 	F 	- 	-*/</td></tr>
-<tr class="separator:a59f35c48e6411073b387a95fa81df8be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0a3aded4141050ead112e000f32d604" id="r_ad0a3aded4141050ead112e000f32d604"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0a3aded4141050ead112e000f32d604">SET_CGRAM</a>&#160;&#160;&#160;0b01000000	/** 1	ACG ACG ACG ACG ACG ACG*/</td></tr>
-<tr class="separator:ad0a3aded4141050ead112e000f32d604"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4ff91b63c9e285a685f9beb393ee426" id="r_af4ff91b63c9e285a685f9beb393ee426"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af4ff91b63c9e285a685f9beb393ee426">SET_DDRAM</a>&#160;&#160;&#160;0b10000000	/** 1	ADD	ADD	ADD	ADD	ADD	ADD	ADD*/</td></tr>
-<tr class="separator:af4ff91b63c9e285a685f9beb393ee426"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3cddb87ae89790c078529cb8a560c2d" id="r_aa3cddb87ae89790c078529cb8a560c2d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa3cddb87ae89790c078529cb8a560c2d">MAX_PIN_COUNT</a>&#160;&#160;&#160;6</td></tr>
+<tr class="separator:aa3cddb87ae89790c078529cb8a560c2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3d9f7caa8948b2b60cc5930ce71d8e7" id="r_ad3d9f7caa8948b2b60cc5930ce71d8e7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad3d9f7caa8948b2b60cc5930ce71d8e7">INSTRUCTION_8BITS</a>&#160;&#160;&#160;0b00000010</td></tr>
+<tr class="separator:ad3d9f7caa8948b2b60cc5930ce71d8e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0126a4f16ccb71b440d4e886e416151" id="r_ad0126a4f16ccb71b440d4e886e416151"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0126a4f16ccb71b440d4e886e416151">INSTRUCTION_FUNC_SET</a>&#160;&#160;&#160;0b00100000	/** 1	DL 	N 	F 	- 	-*/</td></tr>
+<tr class="separator:ad0126a4f16ccb71b440d4e886e416151"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a3bfb8d3fdda1214208b502b4457657" id="r_a5a3bfb8d3fdda1214208b502b4457657"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a3bfb8d3fdda1214208b502b4457657">INSTRUCTION_DISP_CTRL</a>&#160;&#160;&#160;0b00001000	/** 1	D 	C 	B*/</td></tr>
+<tr class="separator:a5a3bfb8d3fdda1214208b502b4457657"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f83bc724345f01beffe6dd31a155ae6" id="r_a3f83bc724345f01beffe6dd31a155ae6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f83bc724345f01beffe6dd31a155ae6">INSTRUCTION_ENTRY_MODE_SET</a>&#160;&#160;&#160;0b00000100	/** 1	I/D S*/</td></tr>
+<tr class="separator:a3f83bc724345f01beffe6dd31a155ae6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8aa03051f8784229ee0936c05a560ac" id="r_aa8aa03051f8784229ee0936c05a560ac"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8aa03051f8784229ee0936c05a560ac">INSTRUCTION_CLEAR_DISP</a>&#160;&#160;&#160;0b00000001</td></tr>
+<tr class="separator:aa8aa03051f8784229ee0936c05a560ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab5280af68207e588294d91f1d0ad3b8" id="r_aab5280af68207e588294d91f1d0ad3b8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab5280af68207e588294d91f1d0ad3b8">INSTRUCTION_SET_POS</a>&#160;&#160;&#160;0b10000000	/** 1	ADD	ADD	ADD	ADD	ADD	ADD	ADD*/</td></tr>
+<tr class="separator:aab5280af68207e588294d91f1d0ad3b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af48cf20915cdfd9ed3885e2eed697c12" id="r_af48cf20915cdfd9ed3885e2eed697c12"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af48cf20915cdfd9ed3885e2eed697c12">ROW_OFFSET</a>&#160;&#160;&#160;0x40</td></tr>
+<tr class="separator:af48cf20915cdfd9ed3885e2eed697c12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Clase para manejar un <a class="el" href="class_l_c_d.html" title="Clase del objeto lcd El objeto lcd permite el manejo de displays digitales mediante comunicación de 4...">LCD</a> con comunicación de 4 patas (solo escritura). </p>
-<p>Proporciona métodos para inicializar y enviar datos al <a class="el" href="class_l_c_d.html" title="Clase del objeto lcd El objeto lcd permite el manejo de displays digitales mediante comunicación de 4...">LCD</a>. Diseñada para facilitar la integración en proyectos embebidos.</p>
-<dl class="section date"><dt>Date</dt><dd>22 jun. 2022 </dd></dl>
+<p>Proporciona métodos para inicializar y enviar datos al <a class="el" href="class_l_c_d.html" title="Clase del objeto lcd El objeto lcd permite el manejo de displays digitales mediante comunicación de 4...">LCD</a>. Diseñada para facilitar la integración en proyectos embebidos. El modulo evita utilizar librerias standar de C++ (como vector o string) para disminuir su espacio en memoria del embebido. La comunicacion es de 4 bits en paralelo, sin blink ni cursor, ni shifteo. </p><dl class="section date"><dt>Date</dt><dd>11 ene. 2025 </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>2.0 </dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Técnico. Martinez Agustin (<a href="#" onclick="location.href='mai'+'lto:'+'mas'+'te'+'rag'+'us'+'365'+'@g'+'mai'+'l.'+'com'; return false;">maste<span class="obfuscator">.nosp@m.</span>ragu<span class="obfuscator">.nosp@m.</span>s365@<span class="obfuscator">.nosp@m.</span>gmai<span class="obfuscator">.nosp@m.</span>l.com</a>) </dd></dl>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a221b02b65527a670a158a9b1387e877c" name="a221b02b65527a670a158a9b1387e877c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a221b02b65527a670a158a9b1387e877c">&#9670;&#160;</a></span>CLEAR_DISPLAY</h2>
+<a id="ad3d9f7caa8948b2b60cc5930ce71d8e7" name="ad3d9f7caa8948b2b60cc5930ce71d8e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3d9f7caa8948b2b60cc5930ce71d8e7">&#9670;&#160;</a></span>INSTRUCTION_8BITS</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define CLEAR_DISPLAY&#160;&#160;&#160;0b00000001</td>
+          <td class="memname">#define INSTRUCTION_8BITS&#160;&#160;&#160;0b00000010</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Instruccion de limpieza del display </p>
+<p>Instruccion de 8 bits inicial para pasar al modo 4 bits </p>
 
 </div>
 </div>
-<a id="aee44c28b3237b814efa557a2429023b8" name="aee44c28b3237b814efa557a2429023b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aee44c28b3237b814efa557a2429023b8">&#9670;&#160;</a></span>CURSOR_DISPLAY_SHIFT</h2>
+<a id="aa8aa03051f8784229ee0936c05a560ac" name="aa8aa03051f8784229ee0936c05a560ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8aa03051f8784229ee0936c05a560ac">&#9670;&#160;</a></span>INSTRUCTION_CLEAR_DISP</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define CURSOR_DISPLAY_SHIFT&#160;&#160;&#160;0b00010000	/** 1	S/C R/L - 	-*/</td>
+          <td class="memname">#define INSTRUCTION_CLEAR_DISP&#160;&#160;&#160;0b00000001</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Instruccion de cursor del display </p>
+<p>Instruccion de limpieza del display. </p>
 
 </div>
 </div>
-<a id="a74c80ace5656e5bdca4af4c7233921f5" name="a74c80ace5656e5bdca4af4c7233921f5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a74c80ace5656e5bdca4af4c7233921f5">&#9670;&#160;</a></span>DISPLAY_CONTROL</h2>
+<a id="a5a3bfb8d3fdda1214208b502b4457657" name="a5a3bfb8d3fdda1214208b502b4457657"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a3bfb8d3fdda1214208b502b4457657">&#9670;&#160;</a></span>INSTRUCTION_DISP_CTRL</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define DISPLAY_CONTROL&#160;&#160;&#160;0b00001000	/** 1	D 	C 	B*/</td>
+          <td class="memname">#define INSTRUCTION_DISP_CTRL&#160;&#160;&#160;0b00001000	/** 1	D 	C 	B*/</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Instruccion de control del display </p>
+<p>Instruccion de control del display. 1 seguido de D (display On), C (cursor On), B(blink). </p>
 
 </div>
 </div>
-<a id="aa609aa58e71261c40627750bbaa1ca1c" name="aa609aa58e71261c40627750bbaa1ca1c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa609aa58e71261c40627750bbaa1ca1c">&#9670;&#160;</a></span>ENTRY_MODE_SET</h2>
+<a id="a3f83bc724345f01beffe6dd31a155ae6" name="a3f83bc724345f01beffe6dd31a155ae6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f83bc724345f01beffe6dd31a155ae6">&#9670;&#160;</a></span>INSTRUCTION_ENTRY_MODE_SET</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define ENTRY_MODE_SET&#160;&#160;&#160;0b00000100	/** 1	I/D S*/</td>
+          <td class="memname">#define INSTRUCTION_ENTRY_MODE_SET&#160;&#160;&#160;0b00000100	/** 1	I/D S*/</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Instruccion de entrada de escritura del display </p>
+<p>Instruccion de entrada de escritura del display. 1, seguido de I/D (inc. puntero) y S (shift display) </p>
 
 </div>
 </div>
-<a id="a59f35c48e6411073b387a95fa81df8be" name="a59f35c48e6411073b387a95fa81df8be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a59f35c48e6411073b387a95fa81df8be">&#9670;&#160;</a></span>FUNCTION_SET</h2>
+<a id="ad0126a4f16ccb71b440d4e886e416151" name="ad0126a4f16ccb71b440d4e886e416151"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0126a4f16ccb71b440d4e886e416151">&#9670;&#160;</a></span>INSTRUCTION_FUNC_SET</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define FUNCTION_SET&#160;&#160;&#160;0b00100000	/** 1	DL 	N 	F 	- 	-*/</td>
+          <td class="memname">#define INSTRUCTION_FUNC_SET&#160;&#160;&#160;0b00100000	/** 1	DL 	N 	F 	- 	-*/</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Instruccion de modo de funcionamiento del display </p>
+<p>Instruccion de modo de funcionamiento del display. 1 seguido de DL (4 bits) , N (filas) , F (resolucion). </p>
 
 </div>
 </div>
-<a id="a132a90af728916a595bcf5a52cfac21c" name="a132a90af728916a595bcf5a52cfac21c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a132a90af728916a595bcf5a52cfac21c">&#9670;&#160;</a></span>RETURN_HOME</h2>
+<a id="aab5280af68207e588294d91f1d0ad3b8" name="aab5280af68207e588294d91f1d0ad3b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab5280af68207e588294d91f1d0ad3b8">&#9670;&#160;</a></span>INSTRUCTION_SET_POS</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define RETURN_HOME&#160;&#160;&#160;0b00000010</td>
+          <td class="memname">#define INSTRUCTION_SET_POS&#160;&#160;&#160;0b10000000	/** 1	ADD	ADD	ADD	ADD	ADD	ADD	ADD*/</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Instruccion de regreso a posición 0 del display </p>
+<p>Instruccion de seteo de DDRAM del display. Cambia la posicion del display </p>
 
 </div>
 </div>
-<a id="ad0a3aded4141050ead112e000f32d604" name="ad0a3aded4141050ead112e000f32d604"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad0a3aded4141050ead112e000f32d604">&#9670;&#160;</a></span>SET_CGRAM</h2>
+<a id="aa3cddb87ae89790c078529cb8a560c2d" name="aa3cddb87ae89790c078529cb8a560c2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3cddb87ae89790c078529cb8a560c2d">&#9670;&#160;</a></span>MAX_PIN_COUNT</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define SET_CGRAM&#160;&#160;&#160;0b01000000	/** 1	ACG ACG ACG ACG ACG ACG*/</td>
+          <td class="memname">#define MAX_PIN_COUNT&#160;&#160;&#160;6</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Instruccion de seteo de CGRAM del display </p>
+<p>Cantidad de pines del <a class="el" href="class_l_c_d.html" title="Clase del objeto lcd El objeto lcd permite el manejo de displays digitales mediante comunicación de 4...">LCD</a>. </p>
 
 </div>
 </div>
-<a id="af4ff91b63c9e285a685f9beb393ee426" name="af4ff91b63c9e285a685f9beb393ee426"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4ff91b63c9e285a685f9beb393ee426">&#9670;&#160;</a></span>SET_DDRAM</h2>
+<a id="af48cf20915cdfd9ed3885e2eed697c12" name="af48cf20915cdfd9ed3885e2eed697c12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af48cf20915cdfd9ed3885e2eed697c12">&#9670;&#160;</a></span>ROW_OFFSET</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define SET_DDRAM&#160;&#160;&#160;0b10000000	/** 1	ADD	ADD	ADD	ADD	ADD	ADD	ADD*/</td>
+          <td class="memname">#define ROW_OFFSET&#160;&#160;&#160;0x40</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Instruccion de seteo de DDRAM del display </p>
+<p>Offset de instruccion para indicar un cambio de renglon </p>
 
 </div>
 </div>

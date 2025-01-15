@@ -92,7 +92,7 @@ public:
 	/** Maxima frecuencia del I2C. Solo valida para I2C1 a I2C3 */
 	#define 	I2C_MAX_FREQ 	400
 	/** \brief Enumeracion. Modo del I2C. Puede ser master o slave. */
-	typedef enum {master = 1 , slave = 2} I2C_mode_t;
+	typedef enum {master = 1 , slave = 2} I2C_role_t;
 	/** \brief Enumeracion. Acciones del I2C. Pueden ser leer o escribir (write o read). */
 	typedef enum {write = 0 , read = 1 } I2C_action_t;
 	/** \brief Enumeracion. Estados del I2C.
@@ -101,20 +101,19 @@ public:
 	 * 			Todos los modos pueden estar en idle si no hacen nada o busy si estan en mitad de un procesamiento. */
 	typedef enum {idle = 0 , rx_data = 1 , tx_ready , NACK_addr , NACK_tx ,
 				slvst_addr = 0 , slvst_rx , slvst_tx ,
-				busy = 10} I2C_states_t;
+				busy = 10 , timeout} I2C_states_t;
 
 private:
 			I2C_Type* 	m_I2C_register ;		/**< Registro a leer para configurar I2C. */
 	const 	Pin* 		m_sda;					/**< Pin de transmision de informacion. */
-	const 	Pin* 		m_scl;					/**< Pin de Clock. Debe existir en toda comunicacion sincronica*/
 
-			I2C_mode_t 	m_mode ;				/**< Modo del I2C. */
+			I2C_role_t 	m_role ;				/**< Modo del I2C. */
 	const 	uint8_t 	m_slv_addr;				/**< Address del I2C (solo util en modo slave). */
 
 	static 	uint8_t 	m_cant_created;			/**< Cantidad de I2C creados. */
 
 public:
-			I2C				( I2C_Type* I2C_register , Pin* sda , Pin* scl , I2C_mode_t mode = master,  uint8_t slv_addr = 0);
+			I2C				( I2C_Type* I2C_register , Pin* sda , Pin* scl , I2C_role_t mode = master,  uint8_t slv_addr = 0);
 	void 	Initialize 		( uint32_t clk_freq );
 	void 	EnableInterupt 	( void );
 	void 	DisableInterupt ( void );
@@ -130,6 +129,8 @@ public:
 	void			ACK			( bool a );
 	bool			ACKaddr		( void );
 	I2C_states_t	GetState	( void );
+
+	void			SetTimeOut ( uint32_t clk_cycles );
 
 	virtual void 	I2C_IRQHandler ( void ) { }		/**< Handler generico de interrupcion I2C. No hace nada, debe heredarse y sobreescribirse. */
 	virtual 		~I2C();

@@ -50,11 +50,14 @@
 */
 class ComunicacionSincronica
 {
-	public:
-		ComunicacionSincronica() = default;					/**< Constructor por defecto */
-		virtual void Write ( uint8_t data) = 0;				/**< Funcion de escritura */
-		virtual int8_t Read ( uint8_t* data ) = 0;			/**< Funcion de lectura */
-		virtual ~ComunicacionSincronica() = default;		/**< Destructor por defecto */
+protected:
+	const 	Pin* 	m_scl;		/**< Pin de Clock. Debe existir en toda comunicacion sincronica*/
+
+public:
+					ComunicacionSincronica() = default;		/**< Constructor por defecto */
+	virtual void 	Write ( uint8_t data) = 0;				/**< Funcion de escritura */
+	virtual int8_t 	Read ( uint8_t* data ) = 0;				/**< Funcion de lectura */
+	virtual 		~ComunicacionSincronica() = default;	/**< Destructor por defecto */
 };
 
 #endif /* COMUNICACIONSINCRONICA_H_ */

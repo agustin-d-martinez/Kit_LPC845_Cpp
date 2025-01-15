@@ -1,9 +1,11 @@
 <map id="ComunicacionSincronica" name="ComunicacionSincronica">
-<area shape="rect" id="Node000001" title="Clase del objeto ComunicacionAsincronica Clase abstracta pura para la generación de comunicaciones si..." alt="" coords="5,5,171,32"/>
-<area shape="rect" id="Node000002" href="$class_i2_c.html" title="Clase del objeto I2C El objeto I2C genera una comunicación sincrónica de tipo I2C...." alt="" coords="34,80,76,107"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="78,47,63,81,58,78,73,45"/>
-<area shape="rect" id="Node000004" href="$class_s_p_i.html" title="Clase del objeto SPI." alt="" coords="100,80,143,107"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="103,45,118,78,113,81,98,47"/>
-<area shape="rect" id="Node000003" href="$class_i2_c_master.html" title="Clase del objeto I2CMaster El objeto I2CMaster genera una comunicación tipo master de I2C utilizando ..." alt="" coords="14,155,96,181"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="57,122,57,154,52,154,52,122"/>
+<area shape="rect" id="Node000001" title="Clase del objeto ComunicacionAsincronica Clase abstracta pura para la generación de comunicaciones si..." alt="" coords="16,5,181,32"/>
+<area shape="rect" id="Node000002" href="$class_i2_c.html" title="Clase del objeto I2C El objeto I2C genera una comunicación sincrónica de tipo I2C...." alt="" coords="35,80,77,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="86,47,65,81,61,78,81,44"/>
+<area shape="rect" id="Node000004" href="$class_s_p_i.html" title="Clase del objeto SPI." alt="" coords="121,80,164,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="116,44,137,78,133,81,112,47"/>
+<area shape="rect" id="Node000003" href="$class_i2_c_master.html" title="Clase del objeto I2CMaster El objeto I2CMaster genera una comunicación tipo master de I2C utilizando ..." alt="" coords="5,155,88,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="55,122,51,155,45,154,50,122"/>
+<area shape="rect" id="Node000005" href="$class_s_p_i_master.html" title="Clase del objeto SPIMaster." alt="" coords="112,155,195,181"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="149,122,154,154,149,155,144,122"/>
 </map>

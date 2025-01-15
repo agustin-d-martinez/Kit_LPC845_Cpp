@@ -13,7 +13,7 @@ var class_e_s_p8266 =
     [ "Initialize", "class_e_s_p8266.html#a3dd0e76fc18305e27273072a5646353b", null ],
     [ "IsConnectedToServer", "class_e_s_p8266.html#a67625b0dd27d38e7bf425b1c09614a6c", null ],
     [ "IsConnectedToWifi", "class_e_s_p8266.html#ad4e264f828be8b7c5ccbe4f02fe62325", null ],
-    [ "Read", "class_e_s_p8266.html#a2b2430594de3bbf3ec473bc9d7c5fbeb", null ],
+    [ "Read", "class_e_s_p8266.html#a0ba14902172f2594ed00309eb708c43a", null ],
     [ "SetIP", "class_e_s_p8266.html#a926693710d604d3edaf362087d164b6d", null ],
     [ "Write", "class_e_s_p8266.html#a20d4d2376c5cfc5b0d5bc22ebfac6ff9", null ],
     [ "Write", "class_e_s_p8266.html#aef0f9b73b8dfee6f0c6f539cc06e8eb4", null ]
